@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="58" font-family="Malgun Gothic,sans-serif" font-size="38" font-weight="bold" fill="#142435">기존 HMI 주소를 유지하는 구조 개선</text>
+<text x="45" y="101" font-family="Malgun Gothic,sans-serif" font-size="24" font-weight="normal" fill="#536273">구현되지 않은 설계 제안이며 별도 복사본과 시험에서 검토</text>
+<rect x="45" y="145" width="600" height="176" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">현장 입력 정규화</text>
+<text x="62" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">원시 I/O와 품질을 수집</text>
+<text x="62" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">스케일·필터·모순 상태 정의</text>
+<rect x="755" y="145" width="600" height="176" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">보호 및 운전 허가</text>
+<text x="772" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">조건별 허가와 거부 이유</text>
+<text x="772" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">전용 보호 회로 경계 확인</text>
+<rect x="45" y="400" width="600" height="190" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="442" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">장치별 기능 블록</text>
+<text x="62" y="483" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">모터 / 밸브 / 게이트 상태</text>
+<text x="62" y="517" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">명령 번호·완료·실패 원인</text>
+<text x="62" y="551" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">타임아웃과 Reset 정책</text>
+<rect x="755" y="400" width="600" height="190" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="442" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">공정 순서 상태 관리</text>
+<text x="772" y="483" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">진입 동작·완료 조건</text>
+<text x="772" y="517" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">제한 시간·실패 이유</text>
+<text x="772" y="551" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">준비 상태와 실제 피드백</text>
+<polyline points="350,321 350,400" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="350.0,400.0 344.3,387.2 355.7,387.2" fill="#536273"/>
+<polyline points="1050,321 1050,400" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="1050.0,400.0 1044.3,387.2 1055.7,387.2" fill="#536273"/>
+<polyline points="645,495 755,495" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="755.0,495.0 742.2,500.7 742.2,489.3" fill="#536273"/>
+<rect x="45" y="680" width="600" height="188" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="722" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">기존 HMI 호환 계층</text>
+<text x="62" y="763" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">기존 DB 오프셋 보존</text>
+<text x="62" y="797" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">새 구조에서 기존 주소로 변환</text>
+<text x="62" y="831" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">화면 태그 영향 검증</text>
+<rect x="755" y="680" width="600" height="188" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="722" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">진단과 이력 계층</text>
+<text x="772" y="763" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">명령과 결과의 사건 기록</text>
+<text x="772" y="797" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">첫 실패·알람·저장 상태</text>
+<text x="772" y="831" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">변경 이력과 시험 증거</text>
+<polyline points="350,590 350,680" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="350.0,680.0 344.3,667.2 355.7,667.2" fill="#536273"/>
+<polyline points="1050,590 1050,680" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="1050.0,680.0 1044.3,667.2 1055.7,667.2" fill="#536273"/>
+<text x="45" y="933" font-family="Malgun Gothic,sans-serif" font-size="23" font-weight="normal" fill="#536273">새 DB와 변환 블록을 검토한다. 기존 DB 멤버의 재배치·최적화 변경은 HMI 통신 주소와 함께 검증해야 한다.</text>
+</svg>

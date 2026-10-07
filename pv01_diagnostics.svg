@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="58" font-family="Malgun Gothic,sans-serif" font-size="38" font-weight="bold" fill="#142435">PV01 명령과 위치 피드백 진단</text>
+<text x="45" y="101" font-family="Malgun Gothic,sans-serif" font-size="24" font-weight="normal" fill="#536273">현재 신호 경로의 점검 항목과 두 번 실패 처리의 개선 제안</text>
+<rect x="45" y="145" width="390" height="218" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">명령과 허가</text>
+<text x="62" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">HMI 또는 자동 단계 요청</text>
+<text x="62" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">A / B와 열림 / 닫힘 구분</text>
+<text x="62" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">인터록과 현재 위치 확인</text>
+<rect x="505" y="145" width="390" height="218" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="522" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">출력과 현장 동작</text>
+<text x="522" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">A Q5.2 / B Q5.3 참조</text>
+<text x="522" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">밸브 전압과 실제 움직임</text>
+<text x="522" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">출력 극성은 추가 확인</text>
+<rect x="965" y="145" width="390" height="218" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="982" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">위치 피드백</text>
+<text x="982" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">A I8.6 / I8.7 참조</text>
+<text x="982" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">B I9.0 / I9.1 참조</text>
+<text x="982" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">원시 입력과 DB11 상태</text>
+<polyline points="435,250 505,250" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="505.0,250.0 492.2,255.7 492.2,244.3" fill="#536273"/>
+<polyline points="895,250 965,250" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="965.0,250.0 952.2,255.7 952.2,244.3" fill="#536273"/>
+<rect x="45" y="430" width="600" height="165" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="472" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">정상 완료</text>
+<text x="62" y="513" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">목표 리미트 안정 확인</text>
+<text x="62" y="547" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">명령 완료와 단계 진행</text>
+<rect x="755" y="430" width="600" height="165" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="472" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">현재 고장 판정 참조</text>
+<text x="772" y="513" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">A S5T#4s / B S5T#7s</text>
+<text x="772" y="547" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">정확한 조건은 LAD 확인</text>
+<polyline points="1150,363 1150,430" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="1150.0,430.0 1144.3,417.2 1155.7,417.2" fill="#536273"/>
+<rect x="45" y="660" width="600" height="188" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="702" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">개선 제안 첫 실패</text>
+<text x="62" y="743" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">명령당 한 번만 카운트</text>
+<text x="62" y="777" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">SafeHold와 다음 단계 보류</text>
+<text x="62" y="811" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">조건 확인 후 재시도 허가</text>
+<rect x="755" y="660" width="600" height="188" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="702" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">개선 제안 두 번째 실패</text>
+<text x="772" y="743" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">최종 알람과 동작 잠금</text>
+<text x="772" y="777" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">첫 실패부터 진단 기록</text>
+<text x="772" y="811" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">A/B 방향별 정책 정의</text>
+<polyline points="645,755 755,755" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="755.0,755.0 742.2,760.7 742.2,749.3" fill="#536273"/>
+<text x="45" y="913" font-family="Malgun Gothic,sans-serif" font-size="23" font-weight="normal" fill="#536273">실패를 PLC 스캔마다 세면 안 된다. 보호 정지·비상정지·가스·화염 관련 기능에 이 재시도 정책을 일괄 적용하지 않는다.</text>
+</svg>

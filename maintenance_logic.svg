@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1010" viewBox="0 0 1400 1010">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="58" font-family="Malgun Gothic,sans-serif" font-size="38" font-weight="bold" fill="#142435">유지보수 기간 제한 알람의 Set와 Reset</text>
+<text x="45" y="101" font-family="Malgun Gothic,sans-serif" font-size="24" font-weight="normal" fill="#536273">2월 프로젝트 Main Network 14와 15의 화면 확인을 바탕으로 설명</text>
+<rect x="45" y="145" width="600" height="185" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">Network 14의 코드 비교</text>
+<text x="62" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">DB1.DBW288과 비교 상수</text>
+<text x="62" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">일치하면 날짜 검사 건너뜀</text>
+<text x="62" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">불일치하면 CPU 날짜 읽기</text>
+<rect x="755" y="145" width="600" height="185" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">CPU 날짜 검사</text>
+<text x="772" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">RD_SYS_T → T_CONV</text>
+<text x="772" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">날짜 2026-01-01 이상</text>
+<text x="772" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">DB3.DBX7.6 Set</text>
+<polyline points="645,240 755,240" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="755.0,240.0 742.2,245.7 742.2,234.3" fill="#536273"/>
+<rect x="45" y="410" width="1310" height="184" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="452" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">Network 15의 Reset 경로</text>
+<text x="62" y="493" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">ON M0.0 + Flag.RESET_ALLARM DB2.DBX6.0 + 알람 DB3.DBX7.6</text>
+<text x="62" y="527" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">직렬 조건이 성립하면 같은 알람 비트를 Reset</text>
+<text x="62" y="561" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">HMI Reset 요청 DB2.DBX13.4는 내부 Reset과 구분</text>
+<polyline points="1050,330 1050,410" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="1050.0,410.0 1044.3,397.2 1055.7,397.2" fill="#536273"/>
+<rect x="45" y="680" width="600" height="186" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="722" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">원인 조건이 계속 남음</text>
+<text x="62" y="763" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Reset 요청이 끝난 뒤</text>
+<text x="62" y="797" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Network 14에서 다시 Set</text>
+<text x="62" y="831" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">09:15 복귀 후 1.11초 재발</text>
+<rect x="755" y="680" width="600" height="186" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="772" y="722" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">추가 확인</text>
+<text x="772" y="763" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">실제 CPU 날짜와 코드 값</text>
+<text x="772" y="797" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">HMI 항목 주소와 전달 경로</text>
+<text x="772" y="831" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">제작사 절차와 운전 영향</text>
+<polyline points="350,594 350,680" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="350.0,680.0 344.3,667.2 355.7,667.2" fill="#536273"/>
+<text x="45" y="943" font-family="Malgun Gothic,sans-serif" font-size="23" font-weight="normal" fill="#536273">CPU 시각이 기준이다. PC 시간을 바꾸거나 날짜 상수를 연장하는 작업은 이번 점검에서 수행하지 않았다.</text>
+</svg>

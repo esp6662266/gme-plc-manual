@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="58" font-family="Malgun Gothic,sans-serif" font-size="38" font-weight="bold" fill="#142435">HMI와 PLC 및 이력 저장 구성</text>
+<text x="45" y="101" font-family="Malgun Gothic,sans-serif" font-size="24" font-weight="normal" fill="#536273">현재 설정과 화면 및 백업에서 확인한 역할</text>
+<rect x="45" y="145" width="405" height="220" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">운전 PC의 HMI</text>
+<text x="62" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">InTouch WindowViewer</text>
+<text x="62" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">명령과 설정 요청</text>
+<text x="62" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">상태와 알람 표시</text>
+<rect x="495" y="145" width="405" height="220" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="512" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">운전 PC의 통신</text>
+<text x="512" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">PLC Access Name / Topic</text>
+<text x="512" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">SuiteLink → SIDIR</text>
+<text x="512" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">OI.SIDIR 드라이버</text>
+<rect x="945" y="145" width="410" height="220" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="962" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">물리 PLC</text>
+<text x="962" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">CPU 1515-2 PN 참조</text>
+<text x="962" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">190.168.200.230 : 102</text>
+<text x="962" y="296" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">설비 제어와 I/O 처리</text>
+<polyline points="450,245 495,245" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="495.0,245.0 482.2,250.7 482.2,239.3" fill="#536273"/>
+<polyline points="900,245 945,245" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="945.0,245.0 932.2,250.7 932.2,239.3" fill="#536273"/>
+<rect x="45" y="425" width="405" height="240" rx="10" fill="#e7f2ef" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="467" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">알람 이력 경로</text>
+<text x="62" y="508" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Alarm DB Logger</text>
+<text x="62" y="542" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">wwalmlogger.exe</text>
+<text x="62" y="576" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">WWALMDB → Historical Alarms</text>
+<rect x="495" y="425" width="405" height="240" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="512" y="467" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">태그 이력 경로</text>
+<text x="512" y="508" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">InTouch 트렌드 로그</text>
+<text x="512" y="542" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">HistData 접근</text>
+<text x="512" y="576" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">알람 DB와 다른 경로</text>
+<rect x="945" y="425" width="410" height="240" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="962" y="467" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">작업용 가상 PC</text>
+<text x="962" y="508" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">VMware GME_TIA</text>
+<text x="962" y="542" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">TIA Portal V18 / V19</text>
+<text x="962" y="576" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">프로젝트 열람과 편집</text>
+<polyline points="250,365 250,425" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="250.0,425.0 244.3,412.2 255.7,412.2" fill="#536273"/>
+<text x="45" y="783" font-family="Malgun Gothic,sans-serif" font-size="23" font-weight="normal" fill="#536273">구성 설명용 화살표다. PLC 온라인 프로그램 일치와 장치별 태그 품질은 추가 확인 대상이다. 10월 7일에는 유선 링크 단절이</text>
+<text x="45" y="815" font-family="Malgun Gothic,sans-serif" font-size="23" font-weight="normal" fill="#536273">관찰됐다.</text>
+</svg>
