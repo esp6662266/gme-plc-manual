@@ -1,0 +1,90 @@
+﻿블록명(색인 소문자),분류,언어,네트워크 수,제목/역할,인스턴스 설명,근거
+data_pid,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+db200,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+encoder pew336,DB 추정,,0,,data block derived from tipo dati 1,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+fill_unit1,DB 추정,,0,,data block derived from tipo dati 1,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hours motors,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+word_inputs,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+word_outputs,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+workdata,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi standard motors,FC 추정,lad,1,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi standard motorized valve,FC 추정,lad,1,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi pv_1gate,FC 추정,lad,1,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi pv_2gate,FC 추정,lad,1,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+output,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi output,FC 추정,lad,1,명령·출력 정보를 HMI 데이터와 연계합니다. 방향의 세부 의미는 네트워크에서 확인해야 합니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+recipesdb,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+recipes handler,FC 추정,scl,1,레시피 데이터 처리. SCL로 작성된 블록입니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+clock1s_simu,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+clock3s_simu,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+aux_inv_run,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+er_01_run_rit,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+min_ld_01,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ro03_min,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ro03_max,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+cyc_int4 ogni 200ms,OB 추정,lad,1,200ms 시험용 추세 네트워크. off 참조가 확인됩니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+startup only,OB 추정,lad,5,기동 시 On/Off 플래그와 DB 초기화·기본 모드 설정.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+motor/alarm client,FC 추정,lad,17,client motoprs and alarms,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+i/o_flt1,OB 추정,lad,1,"""i/o point fault""",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+mod_err,OB 추정,lad,1,"""module access error""",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+prog_err,OB 추정,lad,1,"""programming error""",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+tod_int0,OB 추정,lad,1,"""time of day interrupt""",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+flag,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+instance for fb12,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+kf_kt,FC 추정,stl,1,converion time kf=>kt - max. 9990 seconds,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+memory encoder,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+simulationdb,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+high_speed_counter,FB 추정,scl,0,to high_speed_counter,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+rack_flt,OB 추정,lad,1,"""loss of rack fault""",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+iec_timer_0_db,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+iec_timer_1_db,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+motors,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+allarm manager,FC 추정,lad,9,알람 통합·사이렌 및 확인/리셋 처리.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+time work motor,FC 추정,lad,55,모터 운전 시간 집계.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+inputs,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi inputs,FC 추정,lad,2,현장 입력을 Inputs 데이터와 연계하는 블록입니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+simulation,FC 추정,lad,14,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+data2,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid_mv_04,PID 인스턴스 DB,,0,,instance db of cont_s [fb42],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid_stechio,PID 인스턴스 DB,,0,,instance db of cont_c [fb41],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+t_reset_startup_pv1,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi,FC 추정,lad,43,현장 피드백과 알람을 HMI용 모터·밸브 상태로 모읍니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+allarms 2,FC 추정,lad,5,공정·장치 알람 판정. 구체적 항목은 아래 네트워크 목록을 참조하세요.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid-burner,PID 인스턴스 DB,,0,,instance db of cont_c [fb41],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+manage_tc1_2,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid_mv03,PID 인스턴스 DB,,0,,instance db of cont_s [fb42],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid_vt02,PID 인스턴스 DB,,0,,instance db of cont_c [fb41],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pidmv01,PID 인스턴스 DB,,0,,instance db of cont_s [fb42],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid_mv-02,PID 인스턴스 DB,,0,,instance db of cont_s [fb42],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+pid_mv05,PID 인스턴스 DB,,0,,instance db of cont_s [fb42],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+coeff,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+stechio,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+main,OB 추정,lad,15,"순환 실행의 진입부. HMI, 입출력 데이터, 알람, 설비와 출력 제어를 배치합니다.",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+data,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+mv06_encoder,HSC 인스턴스 DB,,0,,instance db of high_speed_counter [fb1150],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+mv05_encoder,HSC 인스턴스 DB,,0,,instance db of high_speed_counter [fb1150],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+mv02_encoder,HSC 인스턴스 DB,,0,,instance db of high_speed_counter [fb1150],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ton_1st_step_fn01,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ton_2nd_step_fn01,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ton_3rd_step_fn01,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ton_4th_step_fn01,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+ton_last_step_fn01,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+signal linearization,FC 추정,lad,2,signal linearization,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+iec_timer_0_db_1,DB 추정,,0,,data block derived from iec_timer,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+mv03_encoder,HSC 인스턴스 DB,,0,,instance db of high_speed_counter [fb1150],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+mv01_encoder,HSC 인스턴스 DB,,0,,instance db of high_speed_counter [fb1150],6월 백업 검색 색인; 현재 PLC와 일치 미확인
+hmi_db,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+analog output conversion,FC 추정,lad,15,설정값과 내부 제어값을 아날로그 출력에 연결합니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+allarm,DB 추정,,0,,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+valve control loop,FC 추정,lad,13,"MV01~MV06의 열림/닫힘, 자동/수동, 리미트 및 일부 엔코더 보정을 처리합니다.",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+cyc_int2 ogni 1s,OB 추정,lad,6,"온도 센서 선택, 버너 PID, 자동 순차 운전: 1초 주기 이름/주석 확인.",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+analog input conversion,FC 추정,lad,46,온도·압력·유량 등 아날로그 입력 변환.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+allarms 1,FC 추정,lad,45,모터 알람 판정.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+control_stechio,FC 추정,lad,7,"공기/가스 유량 비율과 이론 곡선, PID 보정으로 가스 출력을 계산합니다.",,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+auto start motors,FC 추정,lad,9,예열·생산·전체 정지 등 순차 운전과 운전/생산 카운터를 처리합니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+burner control,FC 추정,lad,24,버너 준비·기동·세정·화염·잠금과 자동/수동 출력을 처리합니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+filter,FC 추정,lad,23,필터 펄스/청소 운전 처리.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+r1 scraps gate 2,FC 추정,lad,15,R1 게이트·유압 피스톤 운전 처리.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+motors 1,FC 추정,lad,44,모터별 고장·허가·모드 조건을 받아 운전 명령을 생성합니다.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+allarms 3,FC 추정,lad,17,추가 장치·공정 알람 판정.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인
+cyc_int5 ogni 100ms,OB (주기 실행),lad,13,산소·압력·온도 PID와 공기/가스 비율 계산: 100ms 주기 이름/호출 확인.,,6월 백업 검색 색인; 현재 PLC와 일치 미확인

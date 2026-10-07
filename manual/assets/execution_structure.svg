@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="58" font-family="Malgun Gothic,sans-serif" font-size="38" font-weight="bold" fill="#142435">PLC 순환 실행과 주기 실행</text>
+<text x="45" y="101" font-family="Malgun Gothic,sans-serif" font-size="24" font-weight="normal" fill="#536273">백업의 Main 참조 순서와 TIA 화면의 OB 식별을 함께 정리</text>
+<rect x="45" y="145" width="655" height="177" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">Main OB1의 HMI 연계</text>
+<text x="62" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Simulation 참조</text>
+<text x="62" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Recipes / HMI / 입출력 워드</text>
+<polyline points="370,322 370,349" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="370.0,349.0 364.3,336.2 375.7,336.2" fill="#536273"/>
+<rect x="45" y="349" width="655" height="177" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="391" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">입력과 알람 판정</text>
+<text x="62" y="432" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Analog input conversion</text>
+<text x="62" y="466" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Allarms 1 / 2 / 3</text>
+<polyline points="370,526 370,553" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="370.0,553.0 364.3,540.2 375.7,540.2" fill="#536273"/>
+<rect x="45" y="553" width="655" height="177" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="595" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">장치와 출력 처리</text>
+<text x="62" y="636" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Motors / Filter / R1 / Burner</text>
+<text x="62" y="670" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Valve loop / Analog output</text>
+<polyline points="370,730 370,757" fill="none" stroke="#536273" stroke-width="3"/>
+<polygon points="370.0,757.0 364.3,744.2 375.7,744.2" fill="#536273"/>
+<rect x="45" y="757" width="655" height="177" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="62" y="799" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">알람과 유지보수</text>
+<text x="62" y="840" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Allarm manager / 시간 관리</text>
+<text x="62" y="874" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">Main Network 14 / 15</text>
+<rect x="770" y="145" width="585" height="202" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="787" y="187" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">OB32의 1초 처리</text>
+<text x="787" y="228" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">TC01 / TC02 선택과 버너 PID</text>
+<text x="787" y="262" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">자동 순차 운전 블록 호출</text>
+<rect x="770" y="390" width="585" height="236" rx="10" fill="#fff2dc" stroke="#b4c3d2" stroke-width="2"/>
+<text x="787" y="432" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">OB35의 100ms 처리</text>
+<text x="787" y="473" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">RO01 / PC01 / TC03 제어</text>
+<text x="787" y="507" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">MV05 / MV02 / MV01 / VT02</text>
+<text x="787" y="541" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">공기와 가스 비율 계산</text>
+<rect x="770" y="670" width="585" height="255" rx="10" fill="#eaf1f8" stroke="#b4c3d2" stroke-width="2"/>
+<text x="787" y="712" font-family="Malgun Gothic,sans-serif" font-size="30" font-weight="bold" fill="#193854">기동 및 이벤트 처리</text>
+<text x="787" y="753" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">OB100 기본 상태 초기화</text>
+<text x="787" y="787" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">OB34 200ms 시험 참조</text>
+<text x="787" y="821" font-family="Malgun Gothic,sans-serif" font-size="25" font-weight="normal" fill="#142435">OB82 / 86 / 121 / 122 / 10</text>
+<text x="45" y="1013" font-family="Malgun Gothic,sans-serif" font-size="23" font-weight="normal" fill="#536273">주기 OB는 Main과 별도로 실행된다. 실제 호출 조건, 주기와 우선순위는 원본 네트워크 및 OB 속성에서 확인한다.</text>
+</svg>
