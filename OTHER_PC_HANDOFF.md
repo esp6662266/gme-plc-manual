@@ -56,3 +56,7 @@ PROGRAM_STRUCTURE.md와 SIMULATION_PLAN.md를 읽고 PV01부터 독립 모델을
 ## 변경 기록
 
 수정 후 PROJECT_HISTORY.md와 매뉴얼 CHANGELOG.md에 근거·대상·검증 결과를 적고 Git 커밋을 남긴다. 백업 파일을 교체하면 파일명과 SHA-256, 프로젝트 버전과 출처도 갱신한다.
+
+## 등록 후 확인
+
+공개 저장소에서 실제 내려받아 250개 내부 파일의 해시 일치를 확인했다. ZIP 내부의 상태 기록은 자료 준비 시점이므로 GitHub 루트의 PUBLICATION_STATUS.md와 PROJECT_HISTORY.md를 우선 읽는다.

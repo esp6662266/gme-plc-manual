@@ -1,6 +1,13 @@
 {
   "date": "2026-10-07",
   "repository": "https://github.com/esp6662266/gme-plc-manual",
+  "initial_upload_commit": "75cc32cb38545115b8d248641c0722bf9fd07ca0",
+  "verified_at": "2026-10-07 14:19 UTC",
+  "verification": {
+    "root_file_count": 28,
+    "extracted_file_count": 250,
+    "sha256_match": true
+  },
   "files": [
     {
       "path": "blocks.csv",
@@ -84,8 +91,8 @@
     },
     {
       "path": "OTHER_PC_HANDOFF.md",
-      "bytes": 4564,
-      "sha256": "ef2254acbede0c7109529356c638edecbf4ddac82d4bfc9a9ffa09696bcf77c9"
+      "bytes": 4832,
+      "sha256": "9cbbe7b5df42f568b2e97e4e08358fe092d6fc482d247bfdddd28355b40bfff4"
     },
     {
       "path": "PROGRAM_STRUCTURE.md",
@@ -94,8 +101,8 @@
     },
     {
       "path": "PROJECT_HISTORY.md",
-      "bytes": 11575,
-      "sha256": "2c69ed7f0eb982aa3b20cd527ad6992d72b87de50b8807b32660d372b59b605a"
+      "bytes": 13190,
+      "sha256": "de4cfeed2c9d58a33e3e8b21af22954e21cb0f6f08105ba5461ca95a80c28bc8"
     },
     {
       "path": "PROJECT_OVERVIEW.md",
@@ -104,8 +111,8 @@
     },
     {
       "path": "PUBLICATION_STATUS.md",
-      "bytes": 1153,
-      "sha256": "fa450339aeee68f22bbff6bf4f651b82496727bee36587e28585b22a14867ce9"
+      "bytes": 2027,
+      "sha256": "93491ef7c20dba8340521c7c9b140f85b559e9adc243de704724c3cdbffb4377"
     },
     {
       "path": "pv01_diagnostics.png",
@@ -137,5 +144,6 @@
       "bytes": 1794,
       "sha256": "b55fa3ff36696043b64c94b6c04c3f4c9a6d6c388f4cabb1b04172f1afb7ce14"
     }
-  ]
+  ],
+  "verified_download_commit": "1e84f7a7dcdb5e361b32151b1756c39b60f445b0"
 }
