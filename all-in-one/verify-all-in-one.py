@@ -488,6 +488,7 @@ for profile in drawing['profiles']:
     assert profile['circuit']==expected_circuits.get(priority['plc_id'])
     assert not profile['identity_verified'] and not profile['field_verified']
     sheets=profile['sheets'];assert len({s['id'] for s in sheets})==len(sheets)
+    assert {s['kind'] for s in sheets}<={'OEM 전기','P&ID','시공·케이블','HMI 참고'},profile['key']
     assert [s['fg'] for s in sheets if s['kind']=='OEM 전기']==list(dict.fromkeys(device.get('circuit_fgs',[])+device.get('electrical_fgs',[])))
     assert [s['page'] for s in sheets if s['kind']=='시공·케이블']==device.get('construction_pages',[])
     for sheet in sheets:

@@ -2626,5 +2626,73 @@
     "simulator_actions": 0,
     "plc_changes": 0,
     "scope": "UI/reference integration; not current CPU/field recovery verification"
+  },
+  "drawing_types_photo_viewer": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "scope": "Current21 existing drawing kinds, full-window viewer UI; no source/PLC changes",
+    "categories": [
+      "OEM 전기",
+      "P&ID",
+      "시공·케이블",
+      "HMI 참고"
+    ],
+    "local_checks": [
+      "FN04 only selected kind, electrical2 construction4 PID1",
+      "last kind selection FG60 restored",
+      "dialog1280x720 fit/zoom/drag",
+      "previous next limited to same kind",
+      "keyboard/back route sync/Esc return focus",
+      "PID single image previous next disabled",
+      "original PID PDF1 path",
+      "P03 electrical/construction absent disabled; no new assignments"
+    ],
+    "drag": {
+      "before": [
+        83,
+        245
+      ],
+      "after": [
+        166,
+        315
+      ],
+      "zoom": "200%"
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "page": [
+        375,
+        375
+      ],
+      "library": [
+        341,
+        540
+      ],
+      "dialog": [
+        390,
+        390
+      ],
+      "fit_image": [
+        390,
+        276
+      ],
+      "zoom_stage": [
+        390,
+        585
+      ],
+      "temporary_emulation_cleared": true
+    },
+    "native_fullscreen": "In-app API request denied; fallback message and full-window dialog verified",
+    "review": {
+      "agent": "Sol Medium read only",
+      "route_sync_improvement_applied": true
+    },
+    "console_errors": 0,
+    "records_saved": 0,
+    "simulator_actions": 0,
+    "plc_changes": 0
   }
 }
