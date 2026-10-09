@@ -15,7 +15,7 @@ def load(path):return json.loads(source(path).read_text())
 def link(path,label):
     if path.split('#')[0] in {'index.html','requirements-audit.html','operator-guide.html'}:assert (ROOT/path.split('#')[0]).is_file()
     else:source(path.split('#')[0])
-    target=' target="_top"' if path.startswith('index.html#view=drawings&') else ''
+    target=' target="_top"' if path.startswith(('index.html#view=drawings&','index.html#view=repair&')) else ''
     return '<a href="'+esc(path,quote=True)+'"'+target+'>'+esc(str(label))+'</a>'
 def table(headers,rows):
     return '<div class="table-wrap"><table><thead><tr>'+''.join('<th>'+esc(h)+'</th>' for h in headers)+'</tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
@@ -189,7 +189,7 @@ guide='<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport
 guide_sections=[
  ('drawings','설비별 도면을 중심으로 확인','설비카드의 설비별 도면 작업실을 엽니다. 전기·제어/P&ID·공정/시공·케이블/HMI 종류를 선택하면 해당 목록만 표시됩니다. 전체 창으로 보기에서 도면을 화면에 맞추고 확대·드래그·같은 종류 이전/다음을 사용합니다. 닫기/Esc로 복귀하며 브라우저 전체화면이 허용되지 않으면 전체 창 보기로 유지합니다. 도면 넓게 보기는 목록과 근거를 접으며 근거 함께 보기로 복원합니다. 원본 페이지는 FG와 실제 PDF 페이지를 구분합니다. 관련 단자·PLC 원본·케이블·알람·수리와 미완료 기준을 연결하며 미확정 설비에 전용 회로를 임의 배정하지 않습니다. FN04 공유 인버터/C05와 BC01 SS01 심선 표기 차이는 현행 자료 확인 전입니다.',[('index.html#view=drawings&equipment=P01&scope=priority','BC01 도면 작업실'),('index.html#view=drawings&equipment=P02&scope=priority','FN04 도면 작업실')]),
  ('start','1. 설비를 찾고 대응부터 확인','우선23개 또는 전체248개 범위를 선택합니다. 태그명 일치·후보·미확정을 읽고, 실물 명판·제어반·도면 개정을 대조합니다. 대응 미확정 설비에 PLC 주소를 임의 배정하지 않습니다.',[('priority-guides/P01.html','BC01 대응 예시'),('priority-guides/P03.html','미확정 설비 예시')]),
- ('repair','2. 증상과 고장 근거를 비교','진단·수리 탭에서 증상을 고르고 요청·허가·출력·전기 전달·응답·알람을 순서대로 비교합니다. 원본 래더를 열어 반전 접점·분기·타이머를 확인합니다. 관찰하지 않은 값은 비워 둡니다.',[('procedures/BC01.html','BC01 증상별 절차'),('circuit-guides/BC01.html','BC01 회로'),('alarm-guides/BC01.html','BC01 알람·복구')]),
+ ('repair','2. 증상과 고장 근거를 비교','BC01·FN04의 진단·수리 작업실에서5개 증상 중 하나를 고르면 먼저 관찰·기록→원본과 비교→차이와 다음 판단이 표시됩니다. 요청·최종 출력·처리 응답을 구분하고 도면·래더·알람·세부 근거와 필요한 자료를 확인합니다. 선택한 증상은 새로고침과 같은 설비의 도면/기록 이동에서도 유지됩니다. 관찰 결과 기록 버튼은 기존 기록 양식을 열며 입력값·수리 완료를 자동으로 채우지 않습니다. 다른 설비는 기존 상세 작업지를 유지합니다.',[('index.html#view=repair&equipment=P01&scope=priority','BC01 진단·수리 작업실'),('index.html#view=repair&equipment=P02&scope=priority','FN04 진단·수리 작업실'),('repair-guides/P01.html','BC01 전체 진단 근거'),('alarm-guides/BC01.html','BC01 알람·복구')]),
  ('structure','3. 프로그램과 설정값 출처를 추적','호출·신호 구조에서 읽기/쓰기 위치와 다른 블록의 쓰기를 함께 봅니다. HMI 표시·편집·저장본·운전 적용값을 구분합니다. 백업 색인의 나열 순서를 현재 CPU 실행 순서로 판단하지 않습니다.',[('signal-trace.html','신호 전달'),('hmi-transfer.html','HMI 주소·전달'),('recipe-settings.html','레시피·설정'),('encoder-position.html','위치·방향 누적')]),
  ('records','4. 확인한 내용만 기록하고 다운로드','수리 기록에서 관찰값·원인 배제·조치·후속 확인을 작성하고 저장 후 다시 열어 확인합니다. 개선·작업 메모는 별도 저장입니다. 주소·포트·브라우저별 로컬 저장이며 다른 직원과 자동 공유되지 않습니다. 기록/메모 JSON 다운로드를 별도로 보관합니다. 현재 가져오기·병합·서버 동기화는 없습니다. 프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다.',[('index.html#view=repair-record&equipment=P01&scope=priority','BC01 수리 기록'),('ALL-IN-ONE.md','저장·충돌·설치 안내')]),
  ('pending','5. 미확정 근거와 개선 후보를 남기기','확인 대장·근거 검토에서 원본과 현재 값의 차이, 확인에 필요한 자료를 기록합니다. 18개 불일치의 해소나 복구 완료는 실제 근거가 있을 때 판정합니다. 개선 후보는 영향과 대안을 검토한 자료이며 실제 PLC에 적용하지 않았습니다.',[('index.html#view=review&equipment=P01&scope=priority','BC01 근거 검토'),('improvement-review.html','개선 후보6개'),('evidence-review.html','검토 목록')]),

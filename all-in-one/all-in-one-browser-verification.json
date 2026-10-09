@@ -2694,5 +2694,42 @@
     "records_saved": 0,
     "simulator_actions": 0,
     "plc_changes": 0
+  },
+  "repair_workspace": {
+    "date": "2026-10-09",
+    "scope": [
+      "P01",
+      "P02"
+    ],
+    "data_source": "unchanged existing repair-record-forms/electrical/drawing evidence",
+    "symptom_cases": 10,
+    "steps_per_symptom": 3,
+    "selected_symptom_url": "refresh/history/drawings/record preserved",
+    "observation_values_autofilled": false,
+    "record_writes": 0,
+    "storage_schema_changes": false,
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "page_width": [
+        390,
+        390
+      ],
+      "workspace_width": [
+        358,
+        358
+      ],
+      "source_details_opened": true
+    },
+    "preserved_other_views": [
+      "P12 AB01",
+      "P03 identity unresolved"
+    ],
+    "reviewer": "Sol Medium inventory; Sol High original review; parent original 17 ORef/RefId/name + 2 output addresses",
+    "simulator_work_and_behavior_tests": 0,
+    "plc_changes": 0,
+    "production_verification": "see latest external publication record"
   }
 }

@@ -18,6 +18,7 @@
   const noteStore = window.GMENoteStore;
   const repairRecords = window.GMERepairRecords;
   const repairRecordMap = new Map((data.repair_record_forms?.profiles || []).map(p=>[p.key,p]));
+  const repairWorkspaceKeys = new Set(['P01','P02']);
   const validNoteEquipment = new Set([...deviceMap.keys(),...priorityMap.keys()]);
   const base = new URL('./', location.href);
   const views = new Set(['overview','priority','summary','manual','repair','repair-record','io','spec','ladder','structure','drawings','simulator','tests','checks','conflicts','notes','resources','doc','review']);
@@ -26,7 +27,7 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:''};
   let lastRenderedRoute = null;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
   const DRAFT_KEY = 'gme-all-in-one-drafts-v1';
@@ -74,6 +75,7 @@
     const nextScope = selected === state.selected ? state.scope : (priorityMap.has(selected) ? 'priority' : 'all');
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
+    if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -94,6 +96,8 @@
     state.view = nextView;
     const key = params.get('equipment');
     state.selected = deviceMap.has(key) || priorityMap.has(key) ? key : 'P01';
+    const repairSchema=repairWorkspaceKeys.has(state.selected)?repairRecordMap.get(state.selected):null;
+    state.repairSymptom=repairSchema?.steps.find(s=>s.id===params.get('symptom'))?.id || (state.view==='repair' && repairSchema?repairSchema.steps[0]?.id:'') || '';
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
     state.drawing = params.get('drawing') || '';
     if (state.view === 'review' && reviewMap.has(params.get('review'))) {
@@ -461,13 +465,37 @@
       <div class="columns">${panel('메모 작성', `<form id="note-form" class="note-form"><input type="hidden" name="noteId" value="${esc(draft.noteId || '')}"><input type="hidden" name="base_note" value="${esc(draft.base_note || '')}"><input type="hidden" name="review_id" value="${esc(draft.review_id || '')}"><div class="form-row"><label>제목<input name="title" required maxlength="160" value="${esc(draft.title || '')}" placeholder="예: FN04 출력 주소 확인"></label><label>구분<select name="kind">${['확인 사항','수리·증상 기록','개선 후보','프로그램 분석'].map(v => `<option ${draft.kind === v ? 'selected' : ''}>${v}</option>`).join('')}</select></label></div><label>근거 위치<input name="references" maxlength="500" value="${esc(draft.references || '')}" placeholder="도면 FG, 래더 네트워크, I/O 주소"></label><label>내용<textarea name="text" required maxlength="30000" placeholder="관찰한 내용, 원인 후보, 확인할 작업과 결과를 기록합니다.">${esc(draft.text || '')}</textarea></label><div class="inline-actions"><button type="submit">브라우저에 저장</button><button type="button" data-export-notes>전체 메모 백업 (${notes.length})</button></div><p class="muted">작성 중 내용도 이 브라우저에 임시 보관합니다. 메모 저장은 시험 합격·수리 완료 처리가 아닙니다.</p></form>`)}
       ${panel(`저장된 메모 · ${own.length}건`, own.length ? own.map(n => `<article class="saved-note"><span class="badge">${esc(n.kind)}</span><h3>${esc(n.title)}</h3><small>${esc(n.updated)}${reviewMap.has(n.review_id) ? ' · 연결 검토 ' + esc(n.review_id) : ''}${n.references ? ' · '+esc(n.references) : ''}</small><p>${esc(n.text)}</p><button type="button" ${n.repair_observation?'data-edit-repair':'data-edit-note'}="${esc(n.id)}">${n.repair_observation?'이 수리 기록 수정':'이 메모 수정'}</button></article>`).join('') : '<div class="empty">이 설비에 저장된 메모가 없습니다.</div>')}</div>`;
   }
+  function renderRepairWorkspace() {
+    const schema=repairRecordMap.get(state.selected), step=schema?.steps.find(s=>s.id===state.repairSymptom);
+    if(!step)return unknownPanel();
+    const plan=schema.evidence_plan, evidence=plan?.steps.find(s=>s.step_id===step.id);
+    const drawing=drawingMap.get(state.selected);
+    const roles=[['requests','운전 요청'],['outputs','최종 PLC 출력'],['responses','처리된 응답']];
+    const links=(items=[])=>items.filter(x=>validDoc(x.path)).map(x=>docButton(x.label,x.path)).join('');
+    return `<div class="repair-workspace">
+      <div class="view-heading"><div><p class="eyebrow">REPAIR / SOURCE EVIDENCE</p><h2>${esc(schema.name)} · 진단·수리 작업실</h2><p>증상을 선택하고 점검 순서와 원본 근거를 확인하세요.</p></div>${button('도면 작업실','drawings')}</div>
+      <div class="notice info">기존 백업의 정적 근거를 연결한 점검 안내입니다. 실물 동일성·현재 CPU 동작·현장 복구 상태는 확인 전입니다.</div>
+      <section class="panel repair-selector"><h3>1. 현재 증상 선택</h3><div class="repair-symptoms" role="group" aria-label="진단 증상">${schema.steps.map((s,i)=>`<button type="button" data-repair-symptom="${esc(s.id)}" aria-pressed="${s.id===step.id}"><span class="repair-number">${i+1}</span><span>${esc(s.title)}</span></button>`).join('')}</div></section>
+      <div class="repair-columns"><div class="repair-main">
+      <section class="panel"><p class="eyebrow">선택한 증상의 점검 순서</p><h3 id="repair-step-title">${esc(step.title)}</h3><ol class="repair-steps">${[['먼저 관찰·기록',step.observe],['원본과 비교',step.compare],['차이와 다음 판단',step.next]].map(([title,text])=>`<li><h4>${esc(title)}</h4><p>${esc(text)}</p></li>`).join('')}</ol><div class="inline-actions">${docButton('이 증상의 상세 근거',schema.manual+'#'+step.common)}${button('관찰 결과 기록','repair-record',state.selected,'class="card-primary-action"')}</div></section>
+      <section class="panel"><h3>요청 → 출력 → 처리 응답</h3><p class="muted">아래 이름과 주소는 백업 참조입니다. 현재값은 관찰 후 기록하며, 처리 응답을 원시 센서 또는 실제 동작으로 간주하지 않습니다.</p><div class="repair-signals">${roles.map(([role,title])=>`<article><h4>${esc(title)}</h4>${schema.signals.filter(s=>s.role===role).map(s=>`<div class="repair-signal"><code>${esc(s.name)}</code><p>${esc(s.addresses.join(' / ') || 'DB/주소 추가 확인')}</p><details><summary>원본 참조 ${s.refs.length}개</summary><div class="repair-source-links">${s.refs.map(r=>docButton('LAD '+r.network+' · ORef '+r.oref,'networks/network-'+r.network+'.html')).join('')}</div></details></div>`).join('')}</article>`).join('')}</div>${button('I/O·HMI 참조 확인','io')}</section>
+      <section class="panel"><h3>추가로 확보할 자료</h3>${(evidence?.requirements || []).map(r=>`<div class="repair-requirement"><span class="badge">${esc(r.owner)}</span><p>${esc(r.work)}</p></div>`).join('') || '<p>기존 상세 작업지에서 필요한 자료를 확인하세요.</p>'}</section>
+      </div><aside class="repair-evidence">
+      <section class="panel"><h3>2. 관련 근거 열기</h3><div class="repair-primary-links">${button('관련 도면·단자·케이블','drawings')}${docButton('알람 발생·리셋·재기동','alarm-guides/'+schema.reference_plc_id+'.html')}${button('원본 래더 목록','ladder')}${docButton('전체 진단 작업지',schema.manual)}</div>${drawing?.circuit?`<p>${esc(drawing.circuit.equipment)}</p><p class="muted">${esc(drawing.circuit.distinction)}</p>`:''}${(drawing?.warnings || []).map(w=>`<div class="notice">${esc(w)}</div>`).join('')}<details><summary>선택 증상의 세부 근거 ${evidence?.source_links.length || 0}개</summary><div class="repair-source-links">${links(evidence?.source_links)}</div></details></section>
+      <section class="panel"><h3>점검 전 자료 확인</h3>${(plan?.preflight.requirements || []).map(r=>`<p><strong>${esc(r.owner)}</strong><br>${esc(r.work)}</p>`).join('')}<div class="inline-actions">${docButton('실물 대응·점검 작업지','priority-guides/'+schema.key+'.html')}${docButton('미완료 항목·완료 기준','requirements-audit.html#open-'+schema.key)}</div></section>
+      <section class="panel"><h3>관련 미확정 사항</h3><p class="muted">기존 확인 대장의 상태를 그대로 표시합니다.</p>${(evidence?.reviews || []).length?`<details><summary>확인 대기·불일치 ${evidence.reviews.length}항목</summary>${evidence.reviews.map(r=>`<article class="repair-review"><h4>${esc(r.title)}</h4><span class="badge pending">${esc(r.status)}</span><p>${esc(r.next_check)}</p><div class="repair-source-links">${links(r.links)}</div></article>`).join('')}</details>`:'<p>상세 작업지의 확인 대기를 참고하세요.</p>'}${button('근거 검토·확인 대장','review')}</section>
+      <section class="panel"><h3>3. 결과 기록과 복구 확인</h3><p>관찰값·시각·근거를 기존 기록 양식에 남깁니다. 원인 해소, 알람 해제, 기동 허가, 실제 응답과 연동 영향을 각각 확인합니다.</p>${button('수리 관찰 기록 열기','repair-record',state.selected,'class="card-primary-action"')}<p class="muted">증상 선택은 입력값을 채우거나 수리 완료를 처리하지 않습니다.</p></section>
+      </aside></div></div>`;
+  }
   function renderRepairRecord() {
     if (equipmentStatus(state.selected)?.status==='other_process_excluded_user_reported') return panel('현재 작업 대상에서 제외','<p>'+esc(equipmentStatus(state.selected).label)+' · 관련 조사·분석·보강 중단. 기존 기록 양식 데이터는 보존합니다.</p>');
     const schema=repairRecordMap.get(state.selected);
     if(!schema)return `<h2>수리 관찰 기록</h2><p>상세 기록 양식은 디코팅 우선23개에 연결되어 있습니다. 전체 목록의 기본 자료와 일반 작업 메모는 계속 사용할 수 있습니다.</p>${button('우선 설비 선택','priority')}${button('일반 작업 메모','notes')}`;
     const draft=drafts[repairRecords.keyFor(state.selected)] || {};
     const own=notes.filter(n=>n.equipment===state.selected && n.repair_observation).sort((a,b)=>b.updated.localeCompare(a.updated));
-    return (storageError?`<div class="notice">${esc(storageError)}</div>`:'')+repairRecords.render(schema,draft,own);
+    const step=repairWorkspaceKeys.has(state.selected)?schema.steps.find(s=>s.id===state.repairSymptom):null;
+    const context=step?`<div class="notice info repair-context"><p>진단에서 선택한 증상: <strong>${esc(step.title)}</strong></p><p>관찰한 값과 결과를 아래 양식에 직접 기록하세요.</p>${button('선택 증상의 점검 순서로 돌아가기','repair')}</div>`:'';
+    return context+(storageError?`<div class="notice">${esc(storageError)}</div>`:'')+repairRecords.render(schema,draft,own);
   }
   function renderResources() {
     const resources = [
@@ -541,7 +569,8 @@
     const host = $('workspace-content');
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
-    if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
+    if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();
+    else if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
     else if (state.view === 'tests' || state.view === 'checks') {
       host.innerHTML = `<h2>${state.view === 'tests' ? '시험 설계 · 577건 / 전체 검증 전' : '확인 대장 · 1,060건'}</h2><p class="muted">원본 대장의 상태를 그대로 표시합니다. 부분 가상 시험은 아래 별도 결과에서 확인합니다.</p>` + (state.view==='tests'?renderModelResults():'') + filterUI(state.view === 'tests' ? '시험' : '확인');
       renderRegister();
@@ -597,6 +626,7 @@
           const params=new URLSearchParams(url.hash.slice(1));
           if(params.get('view')==='drawings' && drawingMap.has(params.get('equipment'))){e.preventDefault();const requested=params.get('drawing');if(drawingMap.get(params.get('equipment')).sheets.some(s=>s.id===requested))state.drawing=requested;route('drawings',params.get('equipment'));return;}
           if(params.get('view')==='repair-record' && repairRecordMap.has(params.get('equipment'))){e.preventDefault();route('repair-record',params.get('equipment'));return;}
+          if(params.get('view')==='repair' && repairWorkspaceKeys.has(params.get('equipment'))){e.preventDefault();route('repair',params.get('equipment'));return;}
           if(params.get('view')==='review' && priorityMap.has(params.get('equipment'))){e.preventDefault();route('review',params.get('equipment'),'',params.get('review') || '');return;}
         }
         if (path.startsWith('index.html')) path = path.replace(/^index\.html/,'manual-catalog.html');
@@ -609,6 +639,11 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
+    if(b.dataset.repairSymptom) {
+      if(!repairWorkspaceKeys.has(state.selected) || !repairRecordMap.get(state.selected)?.steps.some(s=>s.id===b.dataset.repairSymptom))return;
+      state.repairSymptom=b.dataset.repairSymptom;route('repair');
+      document.querySelector(`[data-repair-symptom="${state.repairSymptom}"]`)?.focus({preventScroll:true});return;
+    }
     if(b.dataset.photo) {photoAction(b.dataset.photo);return;}
     if(b.hasAttribute('data-open-photo')) {openPhotoViewer();return;}
     if(b.dataset.drawingKind) {

@@ -39,6 +39,12 @@ for p,parser in parsers.items():
                 if profile and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope','drawing'} and ('drawing' not in params or params['drawing'] in [[s['id']] for s in profile['sheets']]):
                     assert "params.get('view')==='drawings'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
+            if target==(ROOT/'index.html').resolve() and params.get('view')==['repair']:
+                profiles=json.loads((ROOT/'registers/repair-record-forms.json').read_text())['profiles']
+                profile=next((r for r in profiles if r['key'] in ['P01','P02'] and params.get('equipment')==[r['key']]),None)
+                if profile and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope','symptom'} and ('symptom' not in params or params['symptom'] in [[s['id']] for s in profile['steps']]):
+                    assert "params.get('view')==='repair'" in (ROOT/'assets/all-in-one.js').read_text()
+                    continue
             if target==(ROOT/'index.html').resolve() and params.get('view') in [['repair-record'],['review']]:
                 profiles=json.loads((ROOT/'registers/repair-record-forms.json').read_text())['profiles']
                 if params.get('equipment') in [[r['key']] for r in profiles] and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope'}:
