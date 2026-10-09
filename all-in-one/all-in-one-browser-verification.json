@@ -2479,6 +2479,20 @@
       "assets/all-in-one.css": "fe2c024d256ca567c4c81a2ab720a40c3014e057d4c29dae59e7c5d68996547f",
       "build-all-in-one.py": "332fb61fd7d8fe9be2acb969d3111b0809c423473936083e6d53f7aff5b59411",
       "build-requirements-audit.py": "16528d7cde39aeaf0c5c21775438e7bc00704c52238dbde360e25f4ea8e5d6de"
+    },
+    "deployment_followup": {
+      "first_deploy": "6ac8472e391aa10008be1a50",
+      "first_deploy_issue": "legacy CSP applied to workspace; map inline layout blocked",
+      "fix": "deployment scripts/headers.mjs: workspace paths before legacy root fallback; explicit trailing slash",
+      "draft_deploy": "6ac8485be576cf1b52ade092",
+      "draft_csp_scope_verified": true,
+      "draft_card": "FN04",
+      "draft_nodes": 23,
+      "draft_desktop_document": [
+        1425,
+        1425
+      ],
+      "production_final": "see parent publication-verification record"
     }
   }
 }

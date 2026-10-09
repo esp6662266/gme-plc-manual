@@ -24,8 +24,9 @@ export async function buildHeaders(destination) {
   for(const file of oldFiles) { rules.add('/'+file); if(file.endsWith('.html')) rules.add('/'+file.slice(0,-5)); }
   const own="default-src 'self'; script-src 'self' "+[...hashes].sort().join(' ')+"; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'";
   let text='# Generated; legacy authentication documents retain their original CSP.\n';
+  // Put the dedicated workspace policy before the legacy root fallback.
+  for(const route of ['/all-in-one/','/all-in-one/*','/all-in-one']) text+=route+'\n  Content-Security-Policy: '+own+'\n  Cache-Control: no-cache\n\n';
   for(const route of [...rules].sort()) text+=route+'\n  Content-Security-Policy: '+legacy+'\n\n';
-  for(const route of ['/all-in-one','/all-in-one/*']) text+=route+'\n  Content-Security-Policy: '+own+'\n  Cache-Control: no-cache\n\n';
   await writeFile(join(destination,'_headers'),text);
   console.log(`CSP: ${hashes.size} exact inline script hashes; legacy policy retained`);
 }
