@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "requirements_audit_sha256": "4d2662bcf1eb02f6dbbabb4a4f71737d71ea26d93779e93a144f049fa31c1638",
-  "audit_html_sha256": "43fcb214a632c8d4be1a7b3029f2172ba7b0e4f8744d688dc611021ad3bd271f",
-  "operator_guide_sha256": "7b751fb6595994a80ef2d76d4783127aec09da266c6efbb239cf11413f285ec4",
-  "source_hashes_checked": 856,
+  "requirements_audit_sha256": "5aee946ffd2f33dca376cdea71fdc4b65bfdee36655ad67fca088f4299580fe0",
+  "audit_html_sha256": "cdf337a99503f92bf0b6b41ee3cdca7ce6271ecc70f51a4ecb4e8d10df2f5e2d",
+  "operator_guide_sha256": "057b5e9e1d9502237de8a2c341a8c10141aea02a5f455d96a6c4bb2c8f1276f7",
+  "source_hashes_checked": 880,
   "equipment_checked": 248,
   "priority_checked": 23,
   "detail_depth": {
@@ -44,5 +44,6 @@
   "simulator_behavior_tests": "not_rerun",
   "field_verified": false,
   "tia_verified": false,
-  "scope": "static document coverage; browser observations separate"
+  "scope": "static document coverage; browser observations separate",
+  "current_priority_open_work_checked": 21
 }

@@ -2499,5 +2499,60 @@
       "deployment_definition": "generated CSP block in netlify.toml; generated dist/_headers removed; same policies and 6 exact inline script hashes",
       "final_auto_verification": "see parent publication-verification record"
     }
+  },
+  "priority21_open_work_inventory": {
+    "checked_at_utc": "2026-10-09T02:40:32.669858+00:00",
+    "scope": "existing evidence/document inventory only; no new source logic analysis",
+    "rows": 21,
+    "expanded_rows_checked": 21,
+    "task_categories_per_row": 4,
+    "independent_review": "Sol Medium read-only;0confirmed changes",
+    "source_preservation_hashes": 781,
+    "existing_priority_rows": 23,
+    "existing_equipment_rows": 248,
+    "prior_counts_unchanged": true,
+    "csv_unchanged": true,
+    "desktop": {
+      "outer": [
+        1425,
+        1425
+      ],
+      "document": [
+        1078,
+        1078
+      ]
+    },
+    "mobile": {
+      "outer": [
+        375,
+        375
+      ],
+      "document": [
+        326,
+        326
+      ]
+    },
+    "navigation_checked": [
+      "FN04 shared evidence anchor",
+      "all-in-one document route",
+      "reload retains linked evidence document",
+      "P03 unknown/empty PLC identity",
+      "AB01 completed analysis retained",
+      "BODY07 excluded"
+    ],
+    "console_errors": 0,
+    "records_saved": 0,
+    "simulator_write_modify_execute": 0,
+    "plc_changes": 0,
+    "field_verified": false,
+    "screenshot": "../gme-priority21-inventory-20261009.png",
+    "browser_input_sha256": {
+      "assets/all-in-one.js": "13c427e865764727f9fb64b8c7ff250e2fde2cbdd2eb20771073e847a12edea0",
+      "assets/all-in-one.css": "fe2c024d256ca567c4c81a2ab720a40c3014e057d4c29dae59e7c5d68996547f",
+      "registers/body-manual.json": "3eace708ef3ed27e66df7e0daf2d9a6a53278011a25abca83e603e4fbe048b1a",
+      "registers/unresolved-identity.json": "82dbf1796a21554923bcc913c3deee1fa4597d4fcc70a9ea0e86fd9d2b9d1adc",
+      "registers/evidence-review.json": "dfbfbfef9f82c0e8c3f2251d139e4c3dc428f2b3781cd81ed66418ab5862e99f",
+      "requirements-audit.html": "cdf337a99503f92bf0b6b41ee3cdca7ce6271ecc70f51a4ecb4e8d10df2f5e2d"
+    }
   }
 }

@@ -78,10 +78,42 @@ assert len(csvrows)==248
 for cr,r in zip(csvrows,a['equipment']):
     for k,v in cr.items():assert v==str(r[k]),(r['id'],k)
 anchors=ids('requirements-audit.html')
+work=a['priority_open_work']
+assert [r['key'] for r in work]==['P'+str(i).zfill(2) for i in range(1,22)]
+assert Counter(r['lane'] for r in work)=={'현행 자료·관찰 보강':14,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
+assert {'priority-open-work'}|{'open-'+r['key'] for r in work}<=anchors
+identity={r['key']:r for r in load('registers/unresolved-identity.json')['profiles']}
+alarms={r['id']:r for r in load('registers/alarm-recovery.json')['profiles']}
+checks={r['id']:r for r in load('registers/body-manual.json')['checks']}
+reviews={r['id']:r for r in load('registers/evidence-review.json')['items']}
+for r,p in zip(work,a['priority'][:21]):
+    assert (r['key'],r['name'],r['plc_id'],r['match'])==(p['key'],p['name'],p['plc_id'],p['match'])
+    assert not r['identity_verified'] and not r['field_verified'] and not r['tia_verified'] and r['repairs_completed']==0
+    assert all(r[k] for k in ['document_work','additional_materials','field_work','completion_criterion'])
+    assert r['existing_pending']==(spec[r['plc_id']]['pending'] if r['plc_id'] else [])
+    for d in r['existing_documents']:
+        path,_,anchor=d['path'].partition('#')
+        assert (ROOT/path).is_file()
+        if anchor:assert anchor in ids(path),(r['key'],d)
+    for ref in r['evidence_references']:assert ref['path'] in a['inputs']
+    if not r['plc_id']:
+        assert r['additional_materials']==identity[r['key']]['needed']
+        assert r['boundary']==identity[r['key']]['excluded']
+        assert not identity[r['key']]['assigned_signals']
+    if r['plc_id'] in alarms:assert alarms[r['plc_id']]['note'] in r['existing_notes']
+    expected_checks={k for k,v in checks.items() if r['plc_id'] in v['equipment'] and not v['excluded_from_current_analysis']}
+    assert {v['id'] for v in r['body_checks']}==expected_checks
+    for v in r['body_checks']:assert v==checks[v['id']] and v['id']!='BODY-07' and not v['resolved']
+    for v in r['existing_review']:
+        assert all(value==reviews[v['id']][field] for field,value in v.items()) and r['key'] in v['priority_keys'] and not v['resolved']
+        assert not any(ex in v['title']+' '+v['source_id'] for ex in ['MV04','SC12','PV04'])
+        assert 'review-'+v['id'].replace(':','-') in ids('evidence-review.html')
+assert '완료한 AB01' in next(r for r in work if r['plc_id']=='AB01')['document_work']
 assert {'equipment-'+i for i in rows}|{'priority-'+p['key'] for p in priority}|{'R'+str(i).zfill(2) for i in range(1,15)}<=anchors
 assert {'start','repair','structure','records','pending','limits','install'}<=ids('operator-guide.html')
 for text in ['가져오기·병합·서버 동기화는 없습니다','프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다','577개 시험은 설계·미실행']:
     assert text in (ROOT/'operator-guide.html').read_text(),text
 result=dict(status='passed',requirements_audit_sha256=sha(ROOT/'registers/requirements-audit.json'),audit_html_sha256=sha(ROOT/'requirements-audit.html'),operator_guide_sha256=sha(ROOT/'operator-guide.html'),source_hashes_checked=len(a['inputs']),equipment_checked=248,priority_checked=23,detail_depth=c,simulator_files_unchanged=True,simulator_behavior_tests='not_rerun',field_verified=False,tia_verified=False,scope='static document coverage; browser observations separate')
+result['current_priority_open_work_checked']=len(work)
 (ROOT/'requirements-audit-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k!='detail_depth'},ensure_ascii=False))

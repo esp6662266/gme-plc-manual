@@ -503,6 +503,3527 @@
       "next_task": "다른 공정 · 사용자 제공. 관련 조사·분석·보강 중단; 기존 배치도 자료 보존"
     }
   ],
+  "priority_open_work": [
+    {
+      "key": "P01",
+      "name": "BC-01(벨트)",
+      "plc_id": "BC01",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "태그명 일치는 실제 설치·현재 CPU 대응의 확인을 뜻하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P01.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P01.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/BC01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/BC01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/BC01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/BC01.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/BC01.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P01"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "BC01"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "BC01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P01"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "1786 트립와이어 래치의 Reset에는 NOT Inputs.BC01 trip wire가 명시됩니다. 1785의 운전/인버터 고장 Reset에는 같은 원인 정상화 접점이 명시되지 않습니다. 트립와이어와 근접 운전 응답을 구분합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P01",
+          "source_id": "P01",
+          "title": "BC-01(벨트) · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P01"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P02",
+      "name": "FN-04 팬 모터",
+      "plc_id": "FN04",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "팬 본체와 모터의 관리 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P02.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P02.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/FN04.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/FN04.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/FN04.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "조절 FN04",
+          "path": "regulation-manual.html#loop-FN04"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/FN04.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/FN04.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P02"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "FN04"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "FN04"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P02"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "17초 감시의 운전 응답과 인버터 이상 분기는 같은 Tag_74를 읽습니다. 공동 인버터의 M31/M36 두 모터·90분 연관 정지·설정 제한/0 요청 해제를 별도로 확인합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:FN04",
+          "source_id": "FN04",
+          "title": "실구동 출력 및 제목",
+          "next_check": "사용처와 전기도면 기준 현재 채널 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P02"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "construction:C05",
+          "source_id": "C05",
+          "title": "시공 자료 C05",
+          "next_check": "OEM FG59의 M31/M36, 배치도, 양단 표찰·모터 명판을 별도로 대조합니다. PDF48 표기를 현장 ID로 채택하지 않습니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-06",
+          "source_id": "IMP-06",
+          "title": "FN04 · 원본 구조 개선 검토",
+          "next_check": "아날로그 출력 변환·모터 제어 블록의 호출 조건과 순서, HMI·자동 시퀀스의 동일 설정 쓰기를 확인",
+          "source_status": "원본 제한 쓰기·정지 읽기 확인 / 전체 실행 도달 조건 미확정",
+          "priority_keys": [
+            "P02"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P02",
+          "source_id": "P02",
+          "title": "FN-04 팬 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P02"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P03",
+      "name": "웨잉호퍼1",
+      "plc_id": "",
+      "match": "unknown",
+      "lane": "식별 자료 우선",
+      "boundary": "호퍼2 자료를 호퍼1의 직접 입력·알람·계량 로직으로 배정하지 않습니다. 전용 계량기 내부 순서·Reset·재기동은 확보 전입니다.",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P03.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P03.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "unresolved-identity.html#identity-P03",
+          "label": "식별 작업지"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P03"
+        },
+        {
+          "path": "registers/unresolved-identity.json",
+          "record": "P03"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P03"
+        }
+      ],
+      "existing_pending": [],
+      "existing_notes": [
+        "배치도 명칭은 호퍼1입니다. 제공 백업에는 명시적으로 WEIGHTING HOPPER 2FAULT 외부 입력과 client17 고장 래치가 있습니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "identity:P03",
+          "source_id": "P03",
+          "title": "웨잉호퍼1 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "PLC 대응 미확정",
+          "priority_keys": [
+            "P03"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 식별 작업지는 완료·보존. 명판/제어 주체/현행 연결 근거 확보 후에만 I/O·알람·수리 조건 연결; 후보 재작성·태그 임의 배정 금지",
+      "additional_materials": "호퍼 번호/명판·위치 사진, 로드셀·계량 표시기 모델, 계량 제어반/CPU, 투입·배출 전체 경로, 최신 단자/I/O/통신도.",
+      "field_work": "계량/배출 불능: 실물ID·시각 → 전용 계량기 최초 알람 → 로드셀·게이트·컨베이어 경계 → 확인된 연동의 요청/응답 → 전용 원본 대조.",
+      "completion_criterion": "명판·위치·제어반·현행 도면으로 동일성/제어 주체를 대조하고 확인된 I/O·연동 근거를 연결. 확인 전 PLC 태그 공란 유지",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P04",
+      "name": "웨잉호퍼배출컨베이어",
+      "plc_id": "",
+      "match": "unknown",
+      "lane": "식별 자료 우선",
+      "boundary": "일반 컨베이어 명칭과 425 제목의 bwf02만으로 CLIENT-CL18=BWF02=P04라고 확정하지 않습니다.",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P04.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P04.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "unresolved-identity.html#identity-P04",
+          "label": "식별 작업지"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P04"
+        },
+        {
+          "path": "registers/unresolved-identity.json",
+          "record": "P04"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P04"
+        }
+      ],
+      "existing_pending": [],
+      "existing_notes": [
+        "제공 백업의 HOPPER CONVEYOR 2FAULT는 client18 외부 고장 입력입니다. 별도 BWF01/02 원격기동 허가 출력 자료도 있습니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "identity:P04",
+          "source_id": "P04",
+          "title": "웨잉호퍼배출컨베이어 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "PLC 대응 미확정",
+          "priority_keys": [
+            "P04"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 식별 작업지는 완료·보존. 명판/제어 주체/현행 연결 근거 확보 후에만 I/O·알람·수리 조건 연결; 후보 재작성·태그 임의 배정 금지",
+      "additional_materials": "본체·모터·감속기 명판, 기동반/VFD 표시, 케이블번호·양단 단자, 상하류 연결 사진, 외부반 Ready/Run/Fault/허가의 주체·정상 극성.",
+      "field_work": "미기동: 실물ID → 자기 기동반/VFD 최초 상태 → 명령과 실제 Run 구분 → 상하류 허가/Fault 변화 → 확인된 케이블·단자 비교.",
+      "completion_criterion": "명판·위치·제어반·현행 도면으로 동일성/제어 주체를 대조하고 확인된 I/O·연동 근거를 연결. 확인 전 PLC 태그 공란 유지",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P05",
+      "name": "PV-01",
+      "plc_id": "PV01",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "태그명 일치는 실제 설치·현재 CPU 대응의 확인을 뜻하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P05.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P05.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/PV01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/PV01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/PV01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/PV01.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/PV01.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P05"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "PV01"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "PV01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P05"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "열림·닫힘 감시의 원본 설정은 A 게이트 4초, B 게이트 7초입니다. 감시는 실제 센서와 구분되는 MEM_OPEN/CLOSE를 읽습니다. 출력 0의 닫힘 감시·EV 직접 응답·처리 Inputs·startup 닫힘 기억을 각각 확인합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:PV01-LS02",
+          "source_id": "PV01-LS02",
+          "title": "닫힘 센서 예비 표기",
+          "next_check": "단자와 현재 입력 채널 실제 사용 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P05"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P05",
+          "source_id": "P05",
+          "title": "PV-01 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P05"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P06",
+      "name": "킬른",
+      "plc_id": "RD01",
+      "match": "candidate",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "킬른 본체와 RD01 구동 설비의 관계를 확인. 동일 설비로 병합하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P06.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P06.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/RD01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/RD01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/RD01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/RD01.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/RD01.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P06"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "RD01"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "RD01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P06"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "5초 감시는 RD01 구동부 참고입니다. 킬른 본체의 정상 상태나 원료 투입 허가, 별도 냉각팬의 응답으로 대신 판단하지 않습니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "construction:C04",
+          "source_id": "C04",
+          "title": "시공 자료 C04",
+          "next_check": "승인된 개정본과 실제 케이블·보호기기·모터 명판을 대조합니다. 이 매뉴얼에서 임의 규격을 확정하지 않습니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P06"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-04",
+          "source_id": "IMP-04",
+          "title": "FN06 · 원본 구조 개선 검토",
+          "next_check": "알람 Set·Reset, 내부 선언과 HMI 문구, 도면과 실제 팬을 대조",
+          "source_status": "원본 참조 확인 / 태그 의미 미확정",
+          "priority_keys": [
+            "P06",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P06",
+          "source_id": "P06",
+          "title": "킬른 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+          "priority_keys": [
+            "P06"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P07",
+      "name": "PV-02",
+      "plc_id": "PV02",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "태그명 일치는 실제 설치·현재 CPU 대응의 확인을 뜻하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P07.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P07.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/PV02.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/PV02.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/PV02.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/PV02.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/PV02.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P07"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "PV02"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "PV02"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P07"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정"
+      ],
+      "existing_notes": [
+        "열림·닫힘 감시의 원본 설정은 A·B 게이트 모두 7초입니다. 감시 입력은 MEM_OPEN/CLOSE이며 명령 반전의 닫힘 감시를 별도로 봅니다. MC04 응답·자동 허가와 실제 위치를 구분합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "construction:C06",
+          "source_id": "C06",
+          "title": "시공 자료 C06",
+          "next_check": "전체 케이블 식별자+페이지+FROM/TO로 대조하고 제작사 개정본에서 참조 순번을 확인합니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P07"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P07",
+          "source_id": "P07",
+          "title": "PV-02 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P07"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P08",
+      "name": "MC04",
+      "plc_id": "MC04",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "태그명 일치는 실제 설치·현재 CPU 대응의 확인을 뜻하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P08.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P08.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/MC04.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/MC04.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/MC04.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/MC04.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/MC04.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P08"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "MC04"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "MC04"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P08"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "5초 감시와 VS01 응답에 의한 요청 해제는 서로 다른 원본 경로입니다. Allarm.Maintenance_ON과 Flag.Maintenance_ON을 합치지 않습니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "construction:C07",
+          "source_id": "C07",
+          "title": "시공 자료 C07",
+          "next_check": "SS10·SS11 실물 위치, EXI1TB2 양단 단자와 OEM 회로도를 확인합니다. 이름만으로 소유 설비를 지정하지 않습니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P08"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-03",
+          "source_id": "IMP-03",
+          "title": "MC04 · 원본 구조 개선 검토",
+          "next_check": "DB 선언·주소·읽기·쓰기와 현재 HMI 모드 전달을 대조",
+          "source_status": "원본 신호 명칭 차이 확인 / 동일성 미확정",
+          "priority_keys": [
+            "P08",
+            "P09"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P08",
+          "source_id": "P08",
+          "title": "MC04 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P08"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P09",
+      "name": "VS01",
+      "plc_id": "VS01",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "태그명 일치는 실제 설치·현재 CPU 대응의 확인을 뜻하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P09.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P09.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/VS01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/VS01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/VS01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/VS01.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/VS01.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P09"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "VS01"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "VS01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P09"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "2초 감시는 공통 인버터 응답 자료입니다. 두 진동 모터의 실제 상태와 별도 브레이크 OFF 경로를 구분합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-03",
+          "source_id": "IMP-03",
+          "title": "MC04 · 원본 구조 개선 검토",
+          "next_check": "DB 선언·주소·읽기·쓰기와 현재 HMI 모드 전달을 대조",
+          "source_status": "원본 신호 명칭 차이 확인 / 동일성 미확정",
+          "priority_keys": [
+            "P08",
+            "P09"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P09",
+          "source_id": "P09",
+          "title": "VS01 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P09"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P10",
+      "name": "CC챔버",
+      "plc_id": "CC01",
+      "match": "candidate",
+      "lane": "본체·계측·제작사 자료",
+      "boundary": "투입·배출 챔버 구분과 실물 위치 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P10.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P10.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/CC01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/CC01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/CC01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "본체·증상·공정 경계",
+          "path": "body-manual.html#body-CC01"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P10"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "CC01"
+        },
+        {
+          "path": "registers/body-manual.json",
+          "record": "CC01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P10"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "직접 I/O 미식별: 상위 장치·로컬 계측·공통 기능 여부 확인",
+        "직접 HMI 설정 미식별: 표시용 가공 태그·상위 화면 여부 확인",
+        "직접 LAD 미식별: 실물/예비 상태 또는 상위 제어 연결 확인",
+        "자동·수동 모드 전환 및 우선순위 미확정",
+        "전용 타이머 또는 무지연 동작 여부 미확정",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정"
+      ],
+      "existing_notes": [],
+      "body_checks": [
+        {
+          "id": "BODY-01",
+          "equipment": [
+            "CC01",
+            "AB01"
+          ],
+          "title": "TC06 설치 위치·공정 설명",
+          "observation": "P&ID CC01 상부 표기·시공53/3_14 CC01·OEM FG78 OUTPUT AB01",
+          "next_check": "취출부·표찰·현재 P&ID 개정·IW278/환산/화면 경로 확인; 시공 TC/KX2S와 OEM +24V·4–20mA는 같은 구간으로 임의 연결하지 않고 소자–변환기–케이블 양단–입력을 확인",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-02",
+          "equipment": [
+            "CC01"
+          ],
+          "title": "RO04 설치 위치·공정 설명",
+          "observation": "P&ID CC01 상부/시공CC01·OEM FG81 OUTLET FN01·IW358",
+          "next_check": "소자/81RO04 변환기와 실제 취출부·원시/환산/표시 대조",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-08",
+          "equipment": [
+            "CC01",
+            "AB01",
+            "HE01"
+          ],
+          "title": "본체 기계 점검/교체/복구 기준",
+          "observation": "씰·내화재·열교환부 규격·허용값·주기/조임값 미확보",
+          "next_check": "최신 제작사 기계도·부품명세·승인된 점검/세정/복구 절차 확보",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        }
+      ],
+      "existing_review": [
+        {
+          "id": "construction:C02",
+          "source_id": "C02",
+          "title": "시공 자료 C02",
+          "next_check": "버너 전용 배선도와 양단 표찰·케이블 수를 확인합니다. 자동 중복 제거를 하지 않습니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P10",
+            "P11"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P10",
+          "source_id": "P10",
+          "title": "CC챔버 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+          "priority_keys": [
+            "P10"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "최신 본체 기계도·부품명세·제작사 점검/교체/복구 기준, 실제 계측 취출부·소자/변환기 양단·표찰 자료",
+      "field_work": "본체와 주변 모터·버너·계측 경계, 해당 본체 확인 항목의 현재 설치/표시와 관찰 결과 기록",
+      "completion_criterion": "해당 본체 확인 항목에 설치/제작사 근거와 관찰을 연결하고 미확정 사항 명시. 주변 태그를 본체 직접 출력으로 배정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P11",
+      "name": "BR01",
+      "plc_id": "BR01",
+      "match": "tag",
+      "lane": "전용 버너 자료·현행 연동",
+      "boundary": "버너 전용 도면과 연소 제어 경계 확인; 외부 연동 근거로 전용 버너 내부 안전 순서를 추정하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P11.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P11.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/BR01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/BR01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/BR01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "조절 BR01",
+          "path": "regulation-manual.html#loop-BR01"
+        },
+        {
+          "kind": "조절 STECHIO",
+          "path": "regulation-manual.html#loop-STECHIO"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/BR01.html"
+        },
+        {
+          "path": "burner-interface.html",
+          "label": "버너 외부 연동"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P11"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "BR01"
+        },
+        {
+          "path": "registers/burner-interface.json",
+          "record": "BR01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P11"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "두 Enable와 기동 요청·출력의 경계 · 현재 PLC·제작사 확인 대기",
+        "BURNER_START_FAULT 발생 조건 미확정 · 발생 쓰기 근거 추가 확인 대기",
+        "리셋 요청과 버너반 복구의 경계 · 현재 유지·호출 확인 대기",
+        "MV03 닫힘 요청과 세정 상태 전환 · MV03 입력 전달·현재 호출 확인 대기",
+        "점화 전환 도면 문구와 원본 타이머 · 현재 TIA·제작사 시간 확인 대기",
+        "22h/24h 제목과 실제 동작 시간 · 카운터·ON/OFF·현재 주기 확인 대기",
+        "표시 상태 번호와 실제 운전 순서 · 복수 쓰기·값 전달·상태 도달 확인 대기"
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:BR01",
+          "source_id": "BR01",
+          "title": "버너 상세 도면 경계",
+          "next_check": "제조사 버너 도면/안전 제어 순서 확보",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P11",
+            "P12",
+            "P17"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "construction:C02",
+          "source_id": "C02",
+          "title": "시공 자료 C02",
+          "next_check": "버너 전용 배선도와 양단 표찰·케이블 수를 확인합니다. 자동 중복 제거를 하지 않습니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P10",
+            "P11"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-01",
+          "source_id": "IMP-01",
+          "title": "FN03 · 원본 구조 개선 검토",
+          "next_check": "V18 TIA에서 펄스 접점과 두 SD 실행 순서·각 조건·온라인 타이머를 대조",
+          "source_status": "원본 구조 확인 / 활성 동작·수정 필요성 미확정",
+          "priority_keys": [
+            "P11",
+            "P17"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-05",
+          "source_id": "IMP-05",
+          "title": "BR01·MV03 · 원본 구조 개선 검토",
+          "next_check": "두 피연산자의 UID/RID·원본 접점과 TIA 표시, 단계·호출 문맥을 확인",
+          "source_status": "정적 경로 확인 / TIA에서 재확인 필요",
+          "priority_keys": [
+            "P11",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P11",
+          "source_id": "P11",
+          "title": "BR01 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P11"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진; 전용010-390 회로·버너/연소 제어기 모델·제작사 승인 운전/보호/복구 자료",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P12",
+      "name": "재연소로",
+      "plc_id": "AB01",
+      "match": "candidate",
+      "lane": "본체·계측·제작사 자료",
+      "boundary": "공정 역할을 기준으로 한 후보. 본체·버너·챔버 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P12.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P12.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/AB01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/AB01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/AB01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "본체·증상·공정 경계",
+          "path": "body-manual.html#body-AB01"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P12"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "AB01"
+        },
+        {
+          "path": "registers/body-manual.json",
+          "record": "AB01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P12"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "직접 HMI 설정 미식별: 표시용 가공 태그·상위 화면 여부 확인",
+        "직접 LAD 미식별: 실물/예비 상태 또는 상위 제어 연결 확인",
+        "자동·수동 모드 전환 및 우선순위 미확정",
+        "전용 타이머 또는 무지연 동작 여부 미확정",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정"
+      ],
+      "existing_notes": [],
+      "body_checks": [
+        {
+          "id": "BODY-01",
+          "equipment": [
+            "CC01",
+            "AB01"
+          ],
+          "title": "TC06 설치 위치·공정 설명",
+          "observation": "P&ID CC01 상부 표기·시공53/3_14 CC01·OEM FG78 OUTPUT AB01",
+          "next_check": "취출부·표찰·현재 P&ID 개정·IW278/환산/화면 경로 확인; 시공 TC/KX2S와 OEM +24V·4–20mA는 같은 구간으로 임의 연결하지 않고 소자–변환기–케이블 양단–입력을 확인",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-03",
+          "equipment": [
+            "AB01",
+            "HE01"
+          ],
+          "title": "TC01/TC02 구역과 공정 위치",
+          "observation": "OEM/백업 AB01 챔버·시공3/56 HE01 구역",
+          "next_check": "구역/접속함/취출부/센서 소유를 구분한 양단·현재 문서 확인; 시공 TC/KX2S와 OEM +24V·4–20mA 구간/변환기 위치를 별도 확인",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-04",
+          "equipment": [
+            "AB01",
+            "HE01"
+          ],
+          "title": "RO01/RO02 소자·변환기 경계",
+          "observation": "OEM OUTLET AB01·시공3 HE01·56/6_21–22 MV03 변환기→HE01 소자",
+          "next_check": "실제 소자와 변환기 표찰·설치 위치·아날로그 전달 확인",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-05",
+          "equipment": [
+            "AB01",
+            "HE01"
+          ],
+          "title": "TC07 SPARE와 시공 사용 표기",
+          "observation": "OEM FG78 SPARE·시공3 AB01 TC07/56 FLA TC07·백업 환산1743",
+          "next_check": "현재 설치·호출·표시·사용 여부를 확인;SPARE로 임의 제외하지 않음",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-08",
+          "equipment": [
+            "CC01",
+            "AB01",
+            "HE01"
+          ],
+          "title": "본체 기계 점검/교체/복구 기준",
+          "observation": "씰·내화재·열교환부 규격·허용값·주기/조임값 미확보",
+          "next_check": "최신 제작사 기계도·부품명세·승인된 점검/세정/복구 절차 확보",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        }
+      ],
+      "existing_review": [
+        {
+          "id": "source:BR01",
+          "source_id": "BR01",
+          "title": "버너 상세 도면 경계",
+          "next_check": "제조사 버너 도면/안전 제어 순서 확보",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P11",
+            "P12",
+            "P17"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P12",
+          "source_id": "P12",
+          "title": "재연소로 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+          "priority_keys": [
+            "P12"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "완료한 AB01 알람·근거표 분석 보존. 새 자료 또는 확인된 오류가 있을 때만 영향받는 항목 재검토",
+      "additional_materials": "최신 본체 기계도·부품명세·제작사 점검/교체/복구 기준, 실제 계측 취출부·소자/변환기 양단·표찰 자료",
+      "field_work": "본체와 주변 모터·버너·계측 경계, 해당 본체 확인 항목의 현재 설치/표시와 관찰 결과 기록",
+      "completion_criterion": "해당 본체 확인 항목에 설치/제작사 근거와 관찰을 연결하고 미확정 사항 명시. 주변 태그를 본체 직접 출력으로 배정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P13",
+      "name": "열교환기",
+      "plc_id": "HE01",
+      "match": "candidate",
+      "lane": "본체·계측·제작사 자료",
+      "boundary": "명판·P&ID·주변 연결로 동일성 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P13.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P13.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/HE01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/HE01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/HE01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "본체·증상·공정 경계",
+          "path": "body-manual.html#body-HE01"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P13"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "HE01"
+        },
+        {
+          "path": "registers/body-manual.json",
+          "record": "HE01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P13"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "직접 I/O 미식별: 상위 장치·로컬 계측·공통 기능 여부 확인",
+        "직접 HMI 설정 미식별: 표시용 가공 태그·상위 화면 여부 확인",
+        "직접 LAD 미식별: 실물/예비 상태 또는 상위 제어 연결 확인",
+        "자동·수동 모드 전환 및 우선순위 미확정",
+        "전용 타이머 또는 무지연 동작 여부 미확정",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정"
+      ],
+      "existing_notes": [],
+      "body_checks": [
+        {
+          "id": "BODY-03",
+          "equipment": [
+            "AB01",
+            "HE01"
+          ],
+          "title": "TC01/TC02 구역과 공정 위치",
+          "observation": "OEM/백업 AB01 챔버·시공3/56 HE01 구역",
+          "next_check": "구역/접속함/취출부/센서 소유를 구분한 양단·현재 문서 확인; 시공 TC/KX2S와 OEM +24V·4–20mA 구간/변환기 위치를 별도 확인",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-04",
+          "equipment": [
+            "AB01",
+            "HE01"
+          ],
+          "title": "RO01/RO02 소자·변환기 경계",
+          "observation": "OEM OUTLET AB01·시공3 HE01·56/6_21–22 MV03 변환기→HE01 소자",
+          "next_check": "실제 소자와 변환기 표찰·설치 위치·아날로그 전달 확인",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-05",
+          "equipment": [
+            "AB01",
+            "HE01"
+          ],
+          "title": "TC07 SPARE와 시공 사용 표기",
+          "observation": "OEM FG78 SPARE·시공3 AB01 TC07/56 FLA TC07·백업 환산1743",
+          "next_check": "현재 설치·호출·표시·사용 여부를 확인;SPARE로 임의 제외하지 않음",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-06",
+          "equipment": [
+            "HE01"
+          ],
+          "title": "열교환 성능·측정 지점",
+          "observation": "현재 HE01 입/출구 측정쌍·유량·효율 기준 자료 없음",
+          "next_check": "제작사 형식/매체/성능·현재 입출구 계측/유량·운전 조건 확보",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        },
+        {
+          "id": "BODY-08",
+          "equipment": [
+            "CC01",
+            "AB01",
+            "HE01"
+          ],
+          "title": "본체 기계 점검/교체/복구 기준",
+          "observation": "씰·내화재·열교환부 규격·허용값·주기/조임값 미확보",
+          "next_check": "최신 제작사 기계도·부품명세·승인된 점검/세정/복구 절차 확보",
+          "status": "확인 대기",
+          "resolved": false,
+          "field_verified": false,
+          "excluded_from_current_analysis": false
+        }
+      ],
+      "existing_review": [
+        {
+          "id": "identity:P13",
+          "source_id": "P13",
+          "title": "열교환기 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+          "priority_keys": [
+            "P13"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "최신 본체 기계도·부품명세·제작사 점검/교체/복구 기준, 실제 계측 취출부·소자/변환기 양단·표찰 자료",
+      "field_work": "본체와 주변 모터·버너·계측 경계, 해당 본체 확인 항목의 현재 설치/표시와 관찰 결과 기록",
+      "completion_criterion": "해당 본체 확인 항목에 설치/제작사 근거와 관찰을 연결하고 미확정 사항 명시. 주변 태그를 본체 직접 출력으로 배정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P14",
+      "name": "2사이클론",
+      "plc_id": "",
+      "match": "unknown",
+      "lane": "식별 자료 우선",
+      "boundary": "숫자2가 장치 번호인지 수량인지 미확정입니다. CY02·CY01+CY03 어느 쪽도 배정하지 않습니다. 주변 램프·버튼·질소박스·VR/SC/FN 구동을 본체의 전용 제어로 합치지 않습니다.",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P14.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P14.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "unresolved-identity.html#identity-P14",
+          "label": "식별 작업지"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P14"
+        },
+        {
+          "path": "registers/unresolved-identity.json",
+          "record": "P14"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P14"
+        }
+      ],
+      "existing_pending": [],
+      "existing_notes": [
+        "P&ID에는 HE01–FN01 사이 CY01/CY03 한 쌍과 별도 CY02/CY04/CY05–SC01 군이 있습니다. 시공31페이지 M21/VR01·M23/VR02와 CY02의 17HL1/6SB03을 구분합니다. 시공58페이지 8_16은 UC01 FLO4TB1→CY02 17HL1의 DC/CVV/3G/1.0 표기입니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "identity:P14",
+          "source_id": "P14",
+          "title": "2사이클론 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "PLC 대응 미확정",
+          "priority_keys": [
+            "P14"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 식별 작업지는 완료·보존. 명판/제어 주체/현행 연결 근거 확보 후에만 I/O·알람·수리 조건 연결; 후보 재작성·태그 임의 배정 금지",
+      "additional_materials": "원래 배치도에서 숫자2의 의미, 본체 명판/태그와 입출구·하부 배출 사진, 최신 P&ID/기계도, 주변 구동·센서 목록.",
+      "field_work": "분리/배출 이상: 실제 본체 식별 → 가스/고형물 유로·발생 위치 → 배출 구동·팬·계측 경계 → 제작사 기준 및 관련 장치 근거 비교.",
+      "completion_criterion": "명판·위치·제어반·현행 도면으로 동일성/제어 주체를 대조하고 확인된 I/O·연동 근거를 연결. 확인 전 PLC 태그 공란 유지",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P15",
+      "name": "FN-01 팬 모터",
+      "plc_id": "FN01",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "팬 본체와 모터의 관리 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P15.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P15.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/FN01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/FN01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/FN01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/FN01.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/FN01.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P15"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "FN01"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "FN01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P15"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "1798의2초 기동 감시와1950의1시간30분 예경보/Local Stop_Fan_FN01 경로를 구분합니다. 베어링·진동·VR01/VR02 상태와 보조 냉각팬은 별도 확인 대상입니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:FN01-FAN",
+          "source_id": "FN01-FAN",
+          "title": "냉각팬 삭제/예비",
+          "next_check": "현재 연결 및 필요성 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P15"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "source:TC05",
+          "source_id": "TC05",
+          "title": "베어링 채널·범위 문구",
+          "next_check": "전송기 범위와 AI 채널/환산 계수 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P15"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P15",
+          "source_id": "P15",
+          "title": "FN-01 팬 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P15"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P16",
+      "name": "FN-02 팬 모터",
+      "plc_id": "FN02",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "팬 본체와 모터의 관리 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P16.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P16.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/FN02.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/FN02.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/FN02.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "조절 VT02",
+          "path": "regulation-manual.html#loop-VT02"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/FN02.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/FN02.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P16"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "FN02"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "FN02"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P16"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "2초 감시와 풍량 설정0에 의한 요청 해제를 구분합니다. 제목이FN02인 변환 네트워크가 실제FN04 신호를 읽는 불일치도 함께 확인합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P16",
+          "source_id": "P16",
+          "title": "FN-02 팬 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P16"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P17",
+      "name": "FN-03 팬 모터",
+      "plc_id": "FN03",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "팬 본체와 모터의 관리 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P17.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P17.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/FN03.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/FN03.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/FN03.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/FN03.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/FN03.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P17"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "FN03"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "FN03"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P17"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "Tag_66에는35초 SD 두 곳이 있습니다. 운전/인버터 고장의Set은 다르며 인버터 고장Set에는Tag_66 접점이 없습니다. 펄스·Memo_M25_Running과TOR/RUN 전달을 함께 확인합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:BR01",
+          "source_id": "BR01",
+          "title": "버너 상세 도면 경계",
+          "next_check": "제조사 버너 도면/안전 제어 순서 확보",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P11",
+            "P12",
+            "P17"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-01",
+          "source_id": "IMP-01",
+          "title": "FN03 · 원본 구조 개선 검토",
+          "next_check": "V18 TIA에서 펄스 접점과 두 SD 실행 순서·각 조건·온라인 타이머를 대조",
+          "source_status": "원본 구조 확인 / 활성 동작·수정 필요성 미확정",
+          "priority_keys": [
+            "P11",
+            "P17"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P17",
+          "source_id": "P17",
+          "title": "FN-03 팬 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P17"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P18",
+      "name": "FN-06 팬 모터",
+      "plc_id": "FN06",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "팬 본체와 모터의 관리 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P18.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P18.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/FN06.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/FN06.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/FN06.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/FN06.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/FN06.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P18"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "FN06"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "FN06"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P18"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "2초 감시의 원본 래치 이름은 Allarm.MBVA01_FAULT입니다. FN06 별칭 관계는 확인 전이며 RD01 응답 상실에 의한 요청 해제와 구분합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "common:COM-03",
+          "source_id": "COM-03",
+          "title": "예열·생산 요청의 시작 주체",
+          "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-06",
+          "source_id": "COM-06",
+          "title": "비상 모듈 알람의 Set/Reset",
+          "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P08",
+            "P09",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-08",
+          "source_id": "COM-08",
+          "title": "BC01 요청과 출력 허가",
+          "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-10",
+          "source_id": "COM-10",
+          "title": "OFF 분기의 활성 여부·재기동",
+          "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P01",
+            "P02",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-04",
+          "source_id": "IMP-04",
+          "title": "FN06 · 원본 구조 개선 검토",
+          "next_check": "알람 Set·Reset, 내부 선언과 HMI 문구, 도면과 실제 팬을 대조",
+          "source_status": "원본 참조 확인 / 태그 의미 미확정",
+          "priority_keys": [
+            "P06",
+            "P18"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P18",
+          "source_id": "P18",
+          "title": "FN-06 팬 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P18"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P19",
+      "name": "MV-01",
+      "plc_id": "MV01",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "태그명 일치는 실제 설치·현재 CPU 대응의 확인을 뜻하지 않음",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P19.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P19.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/MV01.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/MV01.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/MV01.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "위치·교정",
+          "path": "encoder-position.html#position-MV01"
+        },
+        {
+          "kind": "조절 MV01",
+          "path": "regulation-manual.html#loop-MV01"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/MV01.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/MV01.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P19"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "MV01"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "MV01"
+        },
+        {
+          "path": "registers/encoder-position.json",
+          "record": "MV01"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P19"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "원본 1226의 방향 응답 감시(Tag_92, S5T#150mS)와 1714의 W33>2000 / W34<-2000은 같은 고장 래치를 Set합니다. 비교 후 오차값에 0을 쓰는 Move와 래치 Reset은 서로 다른 명령입니다. 수치의 물리 단위·현재 교정은 확인 전입니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:PID-TM",
+          "source_id": "PID-TM",
+          "title": "과거 위치 계측과 현재 엔코더",
+          "next_check": "실제 위치 계측 방식/보정 절차 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P19",
+            "P20",
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-07",
+          "source_id": "COM-07",
+          "title": "기동 초기화와 기억 상태",
+          "next_check": "startup only의 실제 OB 조건·미해석 Move 대상 범위·DB 유지 설정·게이트 닫힘 메모를 대조한다. 닫힘 메모는 실제 센서 응답과 별도로 기록한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P19",
+            "P20",
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P19",
+          "source_id": "P19",
+          "title": "MV-01 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P19"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진; 현재 TM/엔코더 채널·구동기 모델·리미트 명칭/극성·기계 기준·교정/유지 자료",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P20",
+      "name": "MV-03 댐퍼 모터",
+      "plc_id": "MV03",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "댐퍼 본체와 구동모터 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P20.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P20.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/MV03.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/MV03.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/MV03.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "위치·교정",
+          "path": "encoder-position.html#position-MV03"
+        },
+        {
+          "kind": "조절 MV03",
+          "path": "regulation-manual.html#loop-MV03"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/MV03.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/MV03.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P20"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "MV03"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "MV03"
+        },
+        {
+          "path": "registers/encoder-position.json",
+          "record": "MV03"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P20"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "원본 1226의 방향 응답 감시 Tag_94는 S5T#150S로, MV01·MV06의 150ms 표기와 다릅니다. 현재 TIA의 시간 설정과 제작사 의도를 확인합니다. 원본 1714의 W29>3400 / W30<-3400과 오차값 0 쓰기를 분리하고 버너 세정·기동 연동도 확인합니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:PID-TM",
+          "source_id": "PID-TM",
+          "title": "과거 위치 계측과 현재 엔코더",
+          "next_check": "실제 위치 계측 방식/보정 절차 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P19",
+            "P20",
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-07",
+          "source_id": "COM-07",
+          "title": "기동 초기화와 기억 상태",
+          "next_check": "startup only의 실제 OB 조건·미해석 Move 대상 범위·DB 유지 설정·게이트 닫힘 메모를 대조한다. 닫힘 메모는 실제 센서 응답과 별도로 기록한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P19",
+            "P20",
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-09",
+          "source_id": "COM-09",
+          "title": "버너 허가의 서로 다른 주소",
+          "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P02",
+            "P06",
+            "P11",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-05",
+          "source_id": "IMP-05",
+          "title": "BR01·MV03 · 원본 구조 개선 검토",
+          "next_check": "두 피연산자의 UID/RID·원본 접점과 TIA 표시, 단계·호출 문맥을 확인",
+          "source_status": "정적 경로 확인 / TIA에서 재확인 필요",
+          "priority_keys": [
+            "P11",
+            "P20"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P20",
+          "source_id": "P20",
+          "title": "MV-03 댐퍼 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P20"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진; 현재 TM/엔코더 채널·구동기 모델·리미트 명칭/극성·기계 기준·교정/유지 자료",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    },
+    {
+      "key": "P21",
+      "name": "MV-06 댐퍼 모터",
+      "plc_id": "MV06",
+      "match": "tag",
+      "lane": "현행 자료·관찰 보강",
+      "boundary": "댐퍼 본체와 구동모터 관계 확인",
+      "existing_documents": [
+        {
+          "path": "repair-guides/P21.html",
+          "label": "수리 판단"
+        },
+        {
+          "path": "priority-guides/P21.html",
+          "label": "설비 대응"
+        },
+        {
+          "path": "devices/MV06.html",
+          "label": "기본 매뉴얼"
+        },
+        {
+          "path": "control-specs/MV06.html",
+          "label": "제어 명세"
+        },
+        {
+          "path": "procedures/MV06.html",
+          "label": "수리 절차"
+        },
+        {
+          "kind": "위치·교정",
+          "path": "encoder-position.html#position-MV06"
+        },
+        {
+          "kind": "조절 MV06",
+          "path": "regulation-manual.html#loop-MV06"
+        },
+        {
+          "kind": "알람·복구",
+          "path": "alarm-guides/MV06.html"
+        },
+        {
+          "kind": "전기 회로",
+          "path": "circuit-guides/MV06.html"
+        }
+      ],
+      "evidence_references": [
+        {
+          "path": "registers/repair-decision.json",
+          "record": "P21"
+        },
+        {
+          "path": "registers/control-spec.json",
+          "record": "MV06"
+        },
+        {
+          "path": "registers/alarm-recovery.json",
+          "record": "MV06"
+        },
+        {
+          "path": "registers/encoder-position.json",
+          "record": "MV06"
+        },
+        {
+          "path": "registers/evidence-review.json",
+          "record": "P21"
+        }
+      ],
+      "existing_pending": [
+        "TIA 호출 조건·주기·중복 쓰기 순서와 전원 재시작 동작 확인",
+        "현재 PLC 프로그램·현장 설치·단자·정상 극성 및 실제 설정값 대조",
+        "시험 기대 결과 확정과 실행 증거 수집",
+        "상태 전환 순서 또는 단일 동작·수동 장치 여부 미확정",
+        "정적 조건에 미해석 참조·호출·타이머 출력 등이 있음"
+      ],
+      "existing_notes": [
+        "원본 1226의 방향 응답 감시(Tag_97, S5T#150MS)와 1714의 W19>2200 / W20<-2200을 구분합니다. 1711의 반전 ON 출력 조건·실물 리미트 명칭·TM 엔코더 주소는 확인 전입니다. 공유 래더의 다른 댐퍼를 이 설비에 배정하지 않습니다."
+      ],
+      "body_checks": [],
+      "existing_review": [
+        {
+          "id": "source:MV06-LS",
+          "source_id": "MV06-LS",
+          "title": "리미트 번호 변경",
+          "next_check": "변경 이력과 실제 센서/단자 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "source:PID-TM",
+          "source_id": "PID-TM",
+          "title": "과거 위치 계측과 현재 엔코더",
+          "next_check": "실제 위치 계측 방식/보정 절차 확인",
+          "source_status": "원인·해소 미확정",
+          "priority_keys": [
+            "P19",
+            "P20",
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "construction:C01",
+          "source_id": "C01",
+          "title": "시공 자료 C01",
+          "next_check": "제작사 수정본, 양단 케이블 표찰·접속함 단자 기록을 대조해 두 간선을 식별합니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "construction:C03",
+          "source_id": "C03",
+          "title": "시공 자료 C03",
+          "next_check": "MV05·MV06 실물 센서 표찰과 단자, 원본 회로도·PLC 심볼을 각각 확인합니다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "common:COM-07",
+          "source_id": "COM-07",
+          "title": "기동 초기화와 기억 상태",
+          "next_check": "startup only의 실제 OB 조건·미해석 Move 대상 범위·DB 유지 설정·게이트 닫힘 메모를 대조한다. 닫힘 메모는 실제 센서 응답과 별도로 기록한다.",
+          "source_status": "확인 대기",
+          "priority_keys": [
+            "P19",
+            "P20",
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "improvement:IMP-02",
+          "source_id": "IMP-02",
+          "title": "MV06 · 원본 구조 개선 검토",
+          "next_check": "ON(M0.0)의 쓰기와 호출, 다른 MV06 출력 쓰기, 현재 활성 네트워크를 확인",
+          "source_status": "원본 반전 접점 확인 / 오류 여부 미확정",
+          "priority_keys": [
+            "P21"
+          ],
+          "resolved": false
+        },
+        {
+          "id": "identity:P21",
+          "source_id": "P21",
+          "title": "MV-06 댐퍼 모터 · 동일성·제어 경계",
+          "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+          "source_status": "태그명 일치 / 실물 확인 전",
+          "priority_keys": [
+            "P21"
+          ],
+          "resolved": false
+        }
+      ],
+      "document_work": "기존 근거와 미확정 항목을 정리. 새 자료가 도착한 항목만 원본 대조 후 수리 절차에 반영; 완료 분석은 반복하지 않음",
+      "additional_materials": "현재 사용 백업의 버전·날짜, 현행 접속도·단자표, 설비/구동기/제어반 명판과 위치 사진; 현재 TM/엔코더 채널·구동기 모델·리미트 명칭/극성·기계 기준·교정/유지 자료",
+      "field_work": "동일 시각의 요청·허가·최종 출력·원시/처리 응답·최초 알람·리셋 전후 관찰과 실제 복구 결과. 관찰값은 확보 전 비워 둠",
+      "completion_criterion": "현재 버전·실물 대응과 요청→허가→출력→전기 전달→응답 관찰, 원인 해소/래치 해제/재기동/실제 복구를 구분해 기록. 단순 리셋을 수리 완료로 판정하지 않음",
+      "identity_verified": false,
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0
+    }
+  ],
   "equipment": [
     {
       "id": "BC01",
@@ -10802,6 +14323,9 @@
     "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
     "registers/evidence-review.json": "dfbfbfef9f82c0e8c3f2251d139e4c3dc428f2b3781cd81ed66418ab5862e99f",
     "registers/body-manual.json": "3eace708ef3ed27e66df7e0daf2d9a6a53278011a25abca83e603e4fbe048b1a",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/unresolved-identity.json": "82dbf1796a21554923bcc913c3deee1fa4597d4fcc70a9ea0e86fd9d2b9d1adc",
+    "registers/burner-interface.json": "f27c14a85d745fdb864b31864f6744ac58dac1d34b45c951042249c5f210fdfd",
     "registers/simulator-freeze.json": "1140f96a0b4a7a778778af37e8e8e41659430ee212b0068e4fcb882132b67c53",
     "registers/priority-equipment.csv": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba",
     "registers/simulation-tests.csv": "ed1ce783b0c7b7405e5e834a61e6e72a2e0a0fe5603c8408903d4730bd64f922",
@@ -11587,6 +15111,50 @@
     "devices/SYS-LEGACY.html": "9cb02faaf98248e50f15c2018138bbd1e6b020001e945d981faea74d9ab06f21",
     "control-specs/SYS-LEGACY.html": "fba87600018fb7dabf0954d91dbafb931a534f25cadb0faba1a05685e48c3d7f",
     "procedures/SYS-LEGACY.html": "7e18e2ab5860d3477faa74a82933e9828d2ab737bff5faf51b5e733c5c85896e",
+    "repair-guides/P01.html": "3803f4b4831aae61f43517ca12739249d0de78d8447576c446c8551593679735",
+    "priority-guides/P01.html": "e45cfc7c2b4db7aeecaa22d386463eb288084553404e7a9fdb29ca9e93046727",
+    "repair-guides/P02.html": "f0b73777a3505c558d688b596f162a3edc325601a467724e27b07a4b1b6e034a",
+    "priority-guides/P02.html": "3113e84c9ce56f7678ddfaed48a9f534001afccd96abdba981245e797ad4a409",
+    "repair-guides/P03.html": "36c80449b3d71170a915406f8fe42ae699e25b807bf195912de8eccc13f907fa",
+    "priority-guides/P03.html": "499d3dcd078bd21a2d6c78c41f0dd81e18b6f4ec2fdd43d02597b06a70c6916b",
+    "unresolved-identity.html": "7e27f86b57406c19f9607946252221f25d28ad2b64b5e754862171f7a9712642",
+    "repair-guides/P04.html": "e0d014fe76fd10c17e6c68b1aa6dab428e35e1b3796ab8b440d54b17b3707f69",
+    "priority-guides/P04.html": "c10f51a5652f00c5814caabcef40d46bf21e30e81ec1eb53b92d01bf465e9961",
+    "repair-guides/P05.html": "4d5d05a79497517c639151e5084927cb17fb138019479861c907f2bead64acf7",
+    "priority-guides/P05.html": "eab12914e1023d3232c5a1ecbfe33d1e2018a630e5804210a6c65664817ced28",
+    "repair-guides/P06.html": "570336cbbff2b9e80a4de5a4ae522dacc1b76942eda52c0e1213cada919af7ce",
+    "priority-guides/P06.html": "ed235fa88e40a4c860bfeb14001d1a7da8e732fcecb3aeb6a06e1723541eaaed",
+    "repair-guides/P07.html": "562289dd4ea97bdfe35c4a749efda177dda68e0f252315bce610e7b62601e559",
+    "priority-guides/P07.html": "364b5b525853b69ec74acbf0e7763776cac05fc70d35fc8f9f93bb9803029e10",
+    "repair-guides/P08.html": "173c12186aca88fbd5d3c2e9d323c0af5538987b119d9c9a837b77969e219b94",
+    "priority-guides/P08.html": "66d4f600e2a6601b7cef0c4e7c6d93a411a732f61508794a5e4d99a4719db322",
+    "repair-guides/P09.html": "2a521cff6b060caae94ede7a6afe2d7d669777b50186c3bf297b0c48bcaae5fd",
+    "priority-guides/P09.html": "1f4b835ebea4eb92291b1d85fb778ca93c5beeade110f8b6a15236198ee3825f",
+    "repair-guides/P10.html": "d688dbabeac8362642d9cb74b35bce53479775eb29730ba347f78531fa7d57f9",
+    "priority-guides/P10.html": "af899228bcbf134f360ec2fedbc8f1df1307fcfbf95d082c6e411b3d344a72fb",
+    "repair-guides/P11.html": "8e1a2e5ba9ffcdd98c6934b950f806c32b7eab264368c9596988d5e920b062a5",
+    "priority-guides/P11.html": "7862c3076ee4e608c8f39499c9e5ba950361465f9f5e0b4943493cff4f6ffcc3",
+    "burner-interface.html": "d3969991e7e963df7d19af9b1eea23ce0441c66331631c84d9cea6e3e44fc641",
+    "repair-guides/P12.html": "c9fc7a031e1bfbd1519076b20980c10d645dbf4f20ad11ac8f0c7adba7aa663a",
+    "priority-guides/P12.html": "b3a0604380404d8cc34631d5e3916798d2f2ffac12691b3c16af3a1cdc335cdd",
+    "repair-guides/P13.html": "c22507d1829e48dd00b3dc15f4ec634347e940385235b5a8c00592898a7b944a",
+    "priority-guides/P13.html": "ce50cd3ee3545773c3cf8a2bc223a6cd05aaead64067639cf8a32e847a02f8db",
+    "repair-guides/P14.html": "5c02215681eae295b4e4e699d0fa89cb11d69536c2cceec70a52b5815c6cf094",
+    "priority-guides/P14.html": "0fb78bbb179c79204ef5c6e2cbaf92c3af139221d6f9d78a218b0091aabe11e3",
+    "repair-guides/P15.html": "cee2398421cf617ec4e3a94499b30f5f151e50cea3bbd57494f15f2ebed00103",
+    "priority-guides/P15.html": "f4606fe08083302cca81006ed17482070753ad2a74fe3e66f887accc56b485d8",
+    "repair-guides/P16.html": "ebf3bd7796663b55aed79d54d767d9dd9ed00f8db51338aa34f1a2d362b5bd6b",
+    "priority-guides/P16.html": "afe5e4677d15a05f3fe90598fc2c986e4d7e0246aa0e4a3b52cacdf2c786f5e5",
+    "repair-guides/P17.html": "0b13a79cc2e81f5a267ae6db4bf2134bddec5fdcf6edcc77f1d4671eb475e4ae",
+    "priority-guides/P17.html": "9d420712ae2aa24767cca160960be092c5c90faee0502b43d7e351bafa08b143",
+    "repair-guides/P18.html": "b33adf11f05f80cc7c7a5920fa82cdef916cd16e0c31588ebdf85036474fb488",
+    "priority-guides/P18.html": "f77f198b929859b428a270227c0be73c81d9e0947f5eec153d94e2b577216b14",
+    "repair-guides/P19.html": "5db23581836e61251253c461fde7dc3c02c13289d87dbda142a273dabf46f6fa",
+    "priority-guides/P19.html": "4fe809644ffa1c2aedb760dd2d85e68cc89e1dc8a20edf017666585f358330a1",
+    "repair-guides/P20.html": "55b30954f41a26d310f89c87027b6fb514fc2aadce6330e6b87356d89af32348",
+    "priority-guides/P20.html": "aac0f36481cfdb97fd302d8d0bf7aaae64efe5729498d9761ab3e86f7369da6a",
+    "repair-guides/P21.html": "7e2a515835a41fb709cef246b668ba47ff1ab198106034f9aff60ef6e12d59ce",
+    "priority-guides/P21.html": "84574d9971feb5e34df96df582af85389a67cd698a174988dceb475db8b8a055",
     "ALL-IN-ONE.md": "b360c122f16a3ade829bb826a14186201c2336d27282d8c8b6034065bf273663",
     "manual-catalog.html": "a7ff75b1e79577a57a182776bb49f77ded51610e32087af5038ecfcd1eb54b8e",
     "repair-decision.html": "421bc137cb9b5dd766fc2793d62347cf35e8043982f1dc8f35c2721e9254a8c6",
@@ -11596,59 +15164,36 @@
     "recipe-settings.html": "a6075096ecf33daaf91d027d917f627bde7d2acf4b44b822e5f08613e964deb7",
     "evidence-review.html": "b7b5f47724919e9756c4a9fb57ab26f64d50aae42f3a92423625ff4f8469faab",
     "improvement-review.html": "5a4109ee2502c9ed4a6fac4a305de32ce0256a8faed900dd7c09426170aa6284",
-    "ACTIVE-WORK.md": "1eba68c0ff459a4082f943e0f00ecad51aad2f3b1d0f22752c39ac09a2ba65c8",
+    "ACTIVE-WORK.md": "189c70a6ed7016ed7e60e171eb6c9784da5f1705e6571c0d50aaa0ee918505e9",
     "PACKAGE-NOTES.md": "89c2107bbba775aad6d96cf5936298e1313b2ac506da65ec00a406fcd634084b",
-    "repair-guides/P01.html": "3803f4b4831aae61f43517ca12739249d0de78d8447576c446c8551593679735",
     "common-guides/P01.html": "197d30df8b42b33562ed9a8dccdd841a6d390feea51bf08cf950bf437c399b09",
-    "repair-guides/P02.html": "f0b73777a3505c558d688b596f162a3edc325601a467724e27b07a4b1b6e034a",
     "common-guides/P02.html": "5e8e4ec2f4a7fe6e9b78adb45940f8c820a34da8063f841023f10472d226fc8c",
-    "repair-guides/P03.html": "36c80449b3d71170a915406f8fe42ae699e25b807bf195912de8eccc13f907fa",
     "common-guides/P03.html": "8e5c0c294ad8bcd56022852a20a1605e5f56a60f78f4631d4de2dfe39fac44ce",
-    "repair-guides/P04.html": "e0d014fe76fd10c17e6c68b1aa6dab428e35e1b3796ab8b440d54b17b3707f69",
     "common-guides/P04.html": "0149e205d416342bcecc0ae4298a6fd17ea9f6304fc659cb6fbd43f0b249440d",
-    "repair-guides/P05.html": "4d5d05a79497517c639151e5084927cb17fb138019479861c907f2bead64acf7",
     "common-guides/P05.html": "d3c57b42c06352f26a821dd194aa33e0fd1db8ba3acdaeffbf2007729e6e9b0a",
-    "repair-guides/P06.html": "570336cbbff2b9e80a4de5a4ae522dacc1b76942eda52c0e1213cada919af7ce",
     "common-guides/P06.html": "5b688801c2c37779abba8ae544048043d87c8f19be130af0c3858bb541a4d151",
-    "repair-guides/P07.html": "562289dd4ea97bdfe35c4a749efda177dda68e0f252315bce610e7b62601e559",
     "common-guides/P07.html": "74df529255fbcd5e4d6895e24a087578918f7c7951a2521fe379aea9d0ac05b3",
-    "repair-guides/P08.html": "173c12186aca88fbd5d3c2e9d323c0af5538987b119d9c9a837b77969e219b94",
     "common-guides/P08.html": "2cbb01347c5a055f9d8900c6e84f8f96005969be209164fd5424a345a24cd3d4",
-    "repair-guides/P09.html": "2a521cff6b060caae94ede7a6afe2d7d669777b50186c3bf297b0c48bcaae5fd",
     "common-guides/P09.html": "862324217a98d02b54ad2f1e6ea6e3cfd759c6bb0e9e2151ae1747fc258ba272",
-    "repair-guides/P10.html": "d688dbabeac8362642d9cb74b35bce53479775eb29730ba347f78531fa7d57f9",
     "common-guides/P10.html": "4228fce4d20614126c9e0943a7f4c1fc347f212540f815bd14b3401c9d8f0292",
-    "repair-guides/P11.html": "8e1a2e5ba9ffcdd98c6934b950f806c32b7eab264368c9596988d5e920b062a5",
     "common-guides/P11.html": "0f9928f726c4531a1b1f390ad482a6774589c57277037c73d5cea72ef882a8dc",
-    "repair-guides/P12.html": "c9fc7a031e1bfbd1519076b20980c10d645dbf4f20ad11ac8f0c7adba7aa663a",
     "common-guides/P12.html": "775deb64671a98847f4222674f88cf165fe24f1e9f28dfaf89f551ce10b4f8f7",
-    "repair-guides/P13.html": "c22507d1829e48dd00b3dc15f4ec634347e940385235b5a8c00592898a7b944a",
     "common-guides/P13.html": "a3b78e58b18ccb3c6774de33674ced65c325e8430cb15753523f04b319005dd3",
-    "repair-guides/P14.html": "5c02215681eae295b4e4e699d0fa89cb11d69536c2cceec70a52b5815c6cf094",
     "common-guides/P14.html": "480311f42222fd855b988f43438126bf796f1ca1a3fab511f47bc744799b9540",
-    "repair-guides/P15.html": "cee2398421cf617ec4e3a94499b30f5f151e50cea3bbd57494f15f2ebed00103",
     "common-guides/P15.html": "ed4dc4cceefe1351790896d1388288efb7a76b9877cf6651c74b889c361236d1",
-    "repair-guides/P16.html": "ebf3bd7796663b55aed79d54d767d9dd9ed00f8db51338aa34f1a2d362b5bd6b",
     "common-guides/P16.html": "0f549af13b3f4f3509588544604eb2be1205bf0fd59b7972115effc164b09a58",
-    "repair-guides/P17.html": "0b13a79cc2e81f5a267ae6db4bf2134bddec5fdcf6edcc77f1d4671eb475e4ae",
     "common-guides/P17.html": "4b80b723af7f92414d542cce611fb1835975f47cd517825c02a869f8dedec950",
-    "repair-guides/P18.html": "b33adf11f05f80cc7c7a5920fa82cdef916cd16e0c31588ebdf85036474fb488",
     "common-guides/P18.html": "5a4e2307ce88d45b9d277f5ab59113f1a717221475693ea3c0b02ce70e01a33d",
-    "repair-guides/P19.html": "5db23581836e61251253c461fde7dc3c02c13289d87dbda142a273dabf46f6fa",
     "common-guides/P19.html": "e762fd44b19a93cd413f693d5ae274ef85cb6e2fabe55e843d9beb58bdfa4487",
-    "repair-guides/P20.html": "55b30954f41a26d310f89c87027b6fb514fc2aadce6330e6b87356d89af32348",
     "common-guides/P20.html": "18a9e92b7a538c9fe104fc4850985642419d678269e380b274fd370d0d5e03fb",
-    "repair-guides/P21.html": "7e2a515835a41fb709cef246b668ba47ff1ab198106034f9aff60ef6e12d59ce",
     "common-guides/P21.html": "8026abd54fdafbbe4e61866e94679cfc6dc9b763f6d5a147ac22fe3037e2c11a",
     "repair-guides/P22.html": "8d6803f8ed7ce0682c5f18f7333a05d1a2fd2c4ddf1be21092a30ea645b32bc2",
     "common-guides/P22.html": "1a1fe1da777ebfab6007fdc3390d9de68912ef7db0858018556dc8d028faceab",
     "repair-guides/P23.html": "fbf3ca1be04cae4dc3a18bf0c48e50f73d4dac876a34d4cd09b88c53aa84c347",
     "common-guides/P23.html": "ebfac89ae94c2b1a3da1404992656d57a17c8dd6f99146ecfb36320ece2baab0",
-    "priority-guides/P01.html": "e45cfc7c2b4db7aeecaa22d386463eb288084553404e7a9fdb29ca9e93046727",
-    "priority-guides/P03.html": "499d3dcd078bd21a2d6c78c41f0dd81e18b6f4ec2fdd43d02597b06a70c6916b",
     "hmi-transfer.html": "63262e95bfcbae38c35d185f2102476af10926984c1afe6df36af8d1e1da6b3a",
     "PROJECT-PURPOSE.md": "bef7955575346ecf524cf001c45e1cfbc9958cceb51f5ea802116a3e934163a7",
-    "build-requirements-audit.py": "16528d7cde39aeaf0c5c21775438e7bc00704c52238dbde360e25f4ea8e5d6de"
+    "build-requirements-audit.py": "809304eac9df8f962637c27b8915328c990f1d1c99d22ca7a8a14b0eb9396907"
   },
   "simulator_development": "stopped_by_user",
   "simulator_behavior_tests": "not_rerun",
