@@ -156,7 +156,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <a class="brand" href="#overview"><span class="brand-mark">G</span><span>GME <b>ALL-IN-ONE</b><small>설비 매뉴얼 · PLC 작업실</small></span></a>
 <nav class="primary-nav" aria-label="프로그램 메뉴">
 <button type="button" data-view="overview">통합 현황</button>
-<button type="button" data-view="priority">공정·우선 설비</button>
+<button type="button" data-view="priority">공정 배치도·설비카드</button>
 <button type="button" data-view="simulator">시뮬레이터 · 개발 중지</button>
 <button type="button" data-view="structure">PLC 호출·신호 구조</button>
 <button type="button" data-view="tests">시험·검증</button>

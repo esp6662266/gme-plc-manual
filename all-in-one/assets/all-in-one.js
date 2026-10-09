@@ -21,8 +21,9 @@
   const tabs = [['summary','설비 요약'],['manual','매뉴얼'],['repair','진단·수리'],['io','I/O·HMI'],['spec','제어 명세'],['ladder','래더'],['drawings','도면'],['simulator','시뮬레이터 · 개발 중지'],['tests','시험'],['checks','확인 대장']];
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
-  const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정·우선 설비'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', renderId:0};
+  const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0};
+  let lastRenderedRoute = null;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
   const DRAFT_KEY = 'gme-all-in-one-drafts-v1';
   const legacyAnchors = new Set(['purpose','equipment','scope','method','read','workflow','program','conflicts','drawing']);
@@ -71,14 +72,16 @@
     if (doc && validDoc(doc)) params.set('doc', doc);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
-    if (location.hash !== hash) location.hash = hash;
+    if (location.hash !== hash) { lastRenderedRoute = null; location.hash = hash; }
     readRoute();
   }
   function readRoute() {
     const raw = location.hash.slice(1);
+    if (raw === lastRenderedRoute) return;
+    lastRenderedRoute = raw;
     if (legacyAnchors.has(raw)) { route('doc', state.selected, 'manual-catalog.html#' + raw); return; }
     const params = new URLSearchParams(raw);
-    const nextView = views.has(params.get('view')) ? params.get('view') : 'overview';
+    const nextView = views.has(params.get('view')) ? params.get('view') : 'priority';
     if (nextView !== state.view || params.get('equipment') !== state.selected) {
       state.tableQuery = ''; state.tableDevice = '';
     }
@@ -141,11 +144,62 @@
       ${panel('보존한 시뮬레이터 · 개발 중지',`<p>원본 LAD 426개 중 ${data.program_counts?.executable || 0}개가 독립 네트워크 시험을 지원합니다. BC01·FN04는 가상 장치 응답과 고장 주입을 연결했습니다.</p><p>개발 중지 전 기록: 부분 행동 시험 ${data.virtual_results?.passed || 0}개 통과. 기존 모델과 결과를 보존하며 새 개발·행동 시험을 진행하지 않습니다.</p><div class="inline-actions">${button('기존 시험 기록','tests')}${button('프로그램 호출 구조','structure')}</div>`)}
       <div class="notice info">가상 메모리의 값은 시뮬레이터에서 확인합니다. 자료의 HMI 이미지와 SEJIN 상태는 현재 PLC 운전값이 아닙니다.</div>`;
   }
+  // The reference layout is navigation, never a live HMI or PLC model.
+  function layoutIcon(p) {
+    const id=p.plc_id || '';
+    const paths=id.startsWith('FN') ? '<circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="4"/><path d="M24 20c-16-17-22 4-5 5M28 24c17-16-4-22-5-5M24 28c16 17 22-4 5-5M20 24c-17 16 4 22 5 5"/>'
+      : id.startsWith('MV') || id.startsWith('PV') ? '<path d="M6 14l18 10L6 34V14zm36 0L24 24l18 10V14zM24 24V6m-8 0h16"/>'
+      : id==='RD01' ? '<rect x="4" y="14" width="40" height="20" rx="9"/><path d="M14 15v18m20-18v18M10 38h28"/>'
+      : id==='BC01' || p.key==='P04' ? '<rect x="4" y="18" width="40" height="13" rx="6"/><circle cx="12" cy="24" r="3"/><circle cx="36" cy="24" r="3"/><path d="M8 36h32m-25-4v4m18-4v4"/>'
+      : id==='BR01' || id==='AB01' ? '<path d="M24 4c3 12 14 14 14 26a14 14 0 01-28 0c0-8 6-11 8-18 0 9 4 8 6-8z"/>'
+      : id==='HE01' ? '<rect x="7" y="7" width="34" height="34" rx="4"/><path d="M16 11v26m8-26v26m8-26v26M2 17h5m34 14h5"/>'
+      : p.key==='P03' || p.key==='P14' ? '<path d="M9 5h30v16L27 36h-6L9 21V5zM21 36v7h6v-7M9 14h30"/>'
+      : '<rect x="7" y="9" width="34" height="30" rx="5"/><path d="M14 17h20m-20 8h20m-20 8h12"/>';
+    return `<svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
+  }
+  function layoutBadge(p) {
+    if (equipmentStatus(p.key)) return '현재 작업 제외';
+    return p.match==='unknown' ? '식별 자료 필요' : p.match==='candidate' ? 'PLC 대응 후보' : '태그 참고 · 실물 확인 전';
+  }
+  function renderEquipmentCard() {
+    const {p,d,name}=selection();
+    if(!p) return panel('우선 설비를 선택하세요','<p>배치도에서 현재 대상 설비를 선택하면 자료가 함께 연결됩니다.</p>');
+    const excluded=equipmentStatus(p.key) || equipmentStatus(d?.id);
+    const alarmDoc=d ? (resourceSet.has('alarm-guides/'+d.id+'.html') ? 'alarm-guides/'+d.id+'.html' : d.id==='BR01' ? 'burner-interface.html' : ['CC01','AB01','HE01'].includes(d.id) ? 'body-manual.html#body-'+d.id : 'control-specs/'+d.id+'.html#fault') : '';
+    const description=excluded ? '다른 공정으로 현재 상세 작업에서 제외합니다. 기존 자료는 보존합니다.' : d?.role || p.note;
+    return `<aside class="equipment-detail-card" aria-labelledby="layout-card-title">
+      <div class="card-topline"><span>선택 설비 · ${esc(p.key)}</span><span class="badge ${p.match==='unknown'?'pending':''}">${esc(layoutBadge(p))}</span></div>
+      <div class="card-identity"><span class="equipment-symbol">${layoutIcon(p)}</span><div><span class="eyebrow">${esc(p.phase)}</span><h2 id="layout-card-title" tabindex="-1">${esc(name)}</h2><span class="card-plc">${esc(d?.id ? '참고 PLC · '+d.id : 'PLC 태그 미확정')}</span></div></div>
+      <p class="card-description">${esc(description)}</p>
+      ${excluded ? '<div class="card-boundary">사용자 제공 제외 상태입니다. 상세 조사·새 매뉴얼 보강을 진행하지 않습니다.</div>'+button('제외 안내 보기','summary',p.key) : `<div class="card-boundary">${esc(matchText(p))}. 현재 운전값·알람 상태는 연결되어 있지 않습니다.</div>
+      <div class="card-metrics">${[[d?.inputs.length ?? '—','입력 참조'],[d?.outputs.length ?? '—','출력 참조'],[d?.networks.length ?? '—','원본 LAD'],[d?.hmi.length ?? '—','HMI 태그']].map(([n,label])=>`<div><strong>${n}</strong><span>${label}</span></div>`).join('')}</div>
+      <h3>점검·수리 시작</h3><div class="card-main-actions">${button(d?'증상별 수리':'식별·점검 작업지','repair',p.key,'class="card-primary-action"')}${d?docButton('알람·리셋',alarmDoc):docButton('필요한 식별 자료','unresolved-identity.html#identity-'+p.key)}</div>
+      <h3>이 설비의 자료</h3><div class="card-document-actions">${button('매뉴얼','manual',p.key)}${d?button('I/O·HMI','io',p.key)+button('제어 명세','spec',p.key)+button('원본 래더','ladder',p.key):''}${button('도면·HMI','drawings',p.key)}${button('수리 관찰 기록','repair-record',p.key)}</div>
+      ${['CC01','AB01','HE01'].includes(d?.id)?'<div class="card-body-link">'+docButton('본체·계측·증상별 근거','body-manual.html#body-'+d.id)+'</div>':''}
+      <details class="card-evidence-detail"><summary>근거와 추가 확인</summary><p>${esc(p.note || '태그명을 참고해 연결한 PLC 자료입니다. 명판·현행 배선·현재 프로그램과의 동일성을 확인해야 합니다.')}</p><p>전기도면 FG: ${esc(d?.electrical_fgs.join(', ') || '설비 대응 확인 후 연결')}</p>${docButton('작성 상태·다음 확인','requirements-audit.html#priority-'+p.key)}${button('설비 요약 전체 보기','summary',p.key)}</details>`}
+      <button type="button" class="card-return" data-layout-return>배치도·카드 목록으로 돌아가기</button>
+      <p class="card-footnote">원본 분석 · 현장 확인 · 실제 복구를 구분합니다.</p></aside>`;
+  }
   function renderPriority() {
-    return `<h2>디코팅 시안 · 우선 설비 23개</h2><p class="muted">2026-10-07 확인 · 원본 배치도 23개 설비 / 연결선 24개 / 공정 그룹 5개. 아래 묶음은 작업 순서이며, 원본 그룹 구성과 연결선을 변경하지 않습니다.</p>
-      <div class="notice">태그명 일치 14개, 공정 역할에 따른 대응 후보 4개, PLC 대응 미확정 5개입니다. 모든 실물 동일성은 확인 전입니다. 본체와 구동모터를 별도 관리합니다.</div>
-      <div class="inline-actions"><a href="${esc(data.priority_source.url)}" target="_blank" rel="noopener">SEJIN 원본 배치도 열기 ↗</a>${docButton('기존 기본 HMI','assets/HMI_DECOATER.png')}${docButton('P&ID 원본','sources/PID_1684n002I.pdf#page=1')}</div>
-      <div class="priority-grid" style="margin-top:20px">${data.priority.map(p => `<article class="priority-card ${p.phase === '첫 상세 사례' ? 'pilot' : ''}"><span class="number">${p.key} · ${esc(p.phase)}</span><h3>${esc(p.name)}</h3><span class="badge ${p.match === 'unknown' ? 'pending' : ''}">${esc(p.plc_id || '태그 확인 필요')}${p.match === 'candidate' ? ' · 후보' : ''}</span><p>${esc(p.note || '태그명으로 자료를 연결했습니다. 설비 ID·실물·제어 채널의 동일성을 확인합니다.')}</p>${button('설비 작업실 열기','summary',p.key)}${button('진단·대응 작업지','repair',p.key)}</article>`).join('')}</div>`;
+    const q=state.layoutQuery.trim().toLocaleLowerCase();
+    const shown=data.priority.filter(p=>!q || `${p.name} ${p.plc_id} ${p.key}`.toLocaleLowerCase().includes(q));
+    const node=p=>`<button type="button" class="layout-node ${state.selected===p.key?'selected':''} ${p.match==='unknown'?'unidentified':''} ${equipmentStatus(p.key)?'excluded':''}" data-layout-select="${esc(p.key)}" aria-label="${esc(p.name+' 설비카드')}" aria-pressed="${state.selected===p.key}" style="left:${Math.round((p.x-470)*0.47+25)}px;top:${Math.round((p.y-470)*0.47+42)}px"><span class="node-top">${esc(p.plc_id || p.key)}<span>${equipmentStatus(p.key)?'제외':p.match==='unknown'?'미확정':p.match==='candidate'?'후보':'참고'}</span></span><span class="node-main">${layoutIcon(p)}<strong>${esc(p.name)}</strong></span></button>`;
+    return `<section class="process-heading"><div><span class="eyebrow">DECOATING / EQUIPMENT WORKSPACE</span><h2>디코팅 설비 작업실</h2><p>설비를 눌러 수리 절차와 원본 근거를 확인하세요.</p></div><div class="process-count"><strong>21</strong> 현재 대상 <span>원래 목록 23 · 다른 공정 2 제외</span></div></section>
+      <div class="process-workspace"><section class="process-navigation" aria-label="디코팅 설비 배치도">
+      <div class="process-toolbar"><label class="layout-search"><span class="sr-only">배치도 설비 검색</span><input type="search" id="layout-search" placeholder="설비명 · PLC 태그 검색" value="${esc(state.layoutQuery)}"></label><div class="layout-mode-switch" role="group" aria-label="설비 보기 방식"><button type="button" data-layout-mode="map" aria-pressed="${state.layoutMode==='map'}">배치도</button><button type="button" data-layout-mode="cards" aria-pressed="${state.layoutMode==='cards'}">카드 목록</button></div></div>
+      <div class="layout-legend"><span><i></i>태그 참고</span><span><i class="candidate-dot"></i>대응 후보</span><span><i class="unknown-dot"></i>식별 필요</span><span><i class="excluded-dot"></i>다른 공정 제외</span></div>
+      ${state.layoutMode==='map'?`<div class="layout-map-controls"><span>배치도 안에서 좌우로 이동할 수 있습니다.</span><div><button type="button" data-layout-zoom="out" aria-label="배치도 축소">−</button><output id="layout-zoom-value">${Math.round(state.layoutZoom*100)}%</output><button type="button" data-layout-zoom="in" aria-label="배치도 확대">＋</button><button type="button" data-layout-zoom="fit">전체 보기</button></div></div>
+      <div class="layout-viewport" id="layout-viewport" tabindex="0" aria-label="설비 배치도 이동 영역"><div class="layout-scaled" style="width:${1220*state.layoutZoom}px;height:${660*state.layoutZoom}px"><div class="layout-canvas" style="transform:scale(${state.layoutZoom})"><span class="layout-zone zone-air">팬 · 댐퍼</span><span class="layout-zone zone-heat">연소 · 열회수</span><span class="layout-zone zone-material">원료 · 제품 이송</span>${shown.map(node).join('')}${shown.length?'':'<p class="layout-empty">검색 결과가 없습니다.</p>'}</div></div></div>`
+      :`<div class="equipment-card-grid">${shown.map(p=>`<button type="button" class="equipment-grid-card ${state.selected===p.key?'selected':''} ${equipmentStatus(p.key)?'excluded':''}" data-layout-select="${esc(p.key)}" aria-label="${esc(p.name+' 설비카드')}" aria-pressed="${state.selected===p.key}"><span class="grid-card-icon">${layoutIcon(p)}</span><span class="eyebrow">${esc(p.plc_id || p.key)}</span><strong>${esc(p.name)}</strong><small>${esc(layoutBadge(p))}</small></button>`).join('') || '<p>검색 결과가 없습니다.</p>'}</div>`}
+      <div class="layout-reference"><p>디코팅 시안의 위치를 참고한 탐색 화면입니다. 실제 배관·신호 연결은 P&ID와 전기도면에서 확인합니다.</p><a href="${esc(data.priority_source.url)}" target="_blank" rel="noopener">SEJIN 원본 배치도 ↗</a>${docButton('P&ID 원본','sources/PID_1684n002I.pdf#page=1')}${docButton('기본 HMI','assets/HMI_DECOATER.png')}</div></section>${renderEquipmentCard()}</div>`;
+  }
+  function rememberLayoutScroll() {
+    const viewport=$('layout-viewport');
+    if(viewport) state.layoutScroll=[viewport.scrollLeft,viewport.scrollTop];
+  }
+  function restoreLayoutScroll() {
+    const viewport=$('layout-viewport');
+    if(viewport) [viewport.scrollLeft,viewport.scrollTop]=state.layoutScroll;
   }
   function renderSummary() {
     const {p,d} = selection();
@@ -364,12 +418,13 @@
     $('workspace-content').onclick = null;
     $('workspace-content').onchange = null;
     state.renderId++;
+    document.body.dataset.view=state.view;
     renderContext();
     $('document-workspace').hidden = true;
     const host = $('workspace-content');
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
-    if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); }
+    if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
     else if (state.view === 'tests' || state.view === 'checks') {
       host.innerHTML = `<h2>${state.view === 'tests' ? '시험 설계 · 577건 / 전체 검증 전' : '확인 대장 · 1,060건'}</h2><p class="muted">원본 대장의 상태를 그대로 표시합니다. 부분 가상 시험은 아래 별도 결과에서 확인합니다.</p>` + (state.view==='tests'?renderModelResults():'') + filterUI(state.view === 'tests' ? '시험' : '확인');
       renderRegister();
@@ -436,7 +491,27 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
-    if (b.dataset.scope) {
+    if (b.dataset.layoutSelect) {
+      rememberLayoutScroll(); route('priority',b.dataset.layoutSelect);
+      if (window.matchMedia('(max-width:1100px)').matches) {
+        $('layout-card-title')?.focus({preventScroll:true});
+        document.querySelector('.equipment-detail-card')?.scrollIntoView({block:'start'});
+      } else document.querySelector(`[data-layout-select="${state.selected}"]`)?.focus({preventScroll:true});
+    } else if (b.hasAttribute('data-layout-return')) {
+      document.querySelector('.process-navigation')?.scrollIntoView({block:'start'});
+      document.querySelector(`[data-layout-select="${state.selected}"]`)?.focus({preventScroll:true});
+    } else if (b.dataset.layoutMode) {
+      const mode=b.dataset.layoutMode; state.layoutMode=mode; render();
+      document.querySelector(`[data-layout-mode="${mode}"]`)?.focus({preventScroll:true});
+    } else if (b.dataset.layoutZoom) {
+      const viewport=$('layout-viewport');
+      if(!viewport)return;
+      const old=state.layoutZoom;
+      const action=b.dataset.layoutZoom;
+      state.layoutZoom=action==='fit'?Math.max(0.15,Math.min(1,viewport.clientWidth/1220)):Math.max(0.2,Math.min(1.4,old+(action==='in'?0.15:-0.15)));
+      state.layoutScroll=action==='fit'?[0,0]:[viewport.scrollLeft*state.layoutZoom/old,viewport.scrollTop*state.layoutZoom/old];render();
+      document.querySelector(`[data-layout-zoom="${action}"]`)?.focus({preventScroll:true});
+    } else if (b.dataset.scope) {
       state.scope = b.dataset.scope; state.group = ''; state.listQuery = ''; $('equipment-search').value = ''; syncScope(); renderList();
       const params = new URLSearchParams({view:state.view,equipment:state.selected,scope:state.scope});
       if (state.doc) params.set('doc',state.doc);
@@ -490,7 +565,18 @@
     try { $('document-frame').contentWindow.focus(); $('document-frame').contentWindow.print(); }
     catch (_) { $('app-message').textContent = '자료 따로 열기에서 브라우저 인쇄를 사용해 주세요.'; }
   });
+  function updateLayoutSearch(input) {
+    const caret=input.selectionStart; state.layoutQuery=input.value; rememberLayoutScroll(); render();
+    const search=$('layout-search'); search.focus({preventScroll:true}); search.setSelectionRange(caret,caret);
+  }
+  document.addEventListener('compositionend', e => {
+    if(e.target.id==='layout-search') updateLayoutSearch(e.target);
+  });
   document.addEventListener('input', e => {
+    if(e.target.id==='layout-search') {
+      if(!e.isComposing) updateLayoutSearch(e.target);
+      return;
+    }
     if (e.target.id === 'table-search') { state.tableQuery = e.target.value; renderRegister(); }
     if (e.target.id === 'review-search') { clearReviewFocus(); state.tableQuery = e.target.value; renderReviewRows(); }
     const form=e.target.closest('#note-form, #repair-record-form');

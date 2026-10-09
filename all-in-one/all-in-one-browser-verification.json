@@ -37,7 +37,9 @@
     "assets/regulation-manual-preview.png",
     "assets/encoder-position-preview.png",
     "assets/hmi-transfer-preview.png",
-    "assets/recipe-settings-preview.png"
+    "assets/recipe-settings-preview.png",
+    "assets/ui-equipment-cards-preview.png",
+    "assets/ui-equipment-cards-mobile.png"
   ],
   "inspection_errors": [
     {
@@ -984,5 +986,1499 @@
     "screenshot": "assets/priority-first-preview.png",
     "simulator_behavior_tests": "not_rerun",
     "field_verified": false
+  },
+  "equipment_card_ui_followup": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "url": "http://127.0.0.1:8774/",
+    "selection_checks": [
+      {
+        "key": "P01",
+        "name": "BC-01(벨트)",
+        "passed": true
+      },
+      {
+        "key": "P02",
+        "name": "FN-04 팬 모터",
+        "passed": true
+      },
+      {
+        "key": "P03",
+        "name": "웨잉호퍼1",
+        "passed": true
+      },
+      {
+        "key": "P04",
+        "name": "웨잉호퍼배출컨베이어",
+        "passed": true
+      },
+      {
+        "key": "P05",
+        "name": "PV-01",
+        "passed": true
+      },
+      {
+        "key": "P06",
+        "name": "킬른",
+        "passed": true
+      },
+      {
+        "key": "P07",
+        "name": "PV-02",
+        "passed": true
+      },
+      {
+        "key": "P08",
+        "name": "MC04",
+        "passed": true
+      },
+      {
+        "key": "P09",
+        "name": "VS01",
+        "passed": true
+      },
+      {
+        "key": "P10",
+        "name": "CC챔버",
+        "passed": true
+      },
+      {
+        "key": "P11",
+        "name": "BR01",
+        "passed": true
+      },
+      {
+        "key": "P12",
+        "name": "재연소로",
+        "passed": true
+      },
+      {
+        "key": "P13",
+        "name": "열교환기",
+        "passed": true
+      },
+      {
+        "key": "P14",
+        "name": "2사이클론",
+        "passed": true
+      },
+      {
+        "key": "P15",
+        "name": "FN-01 팬 모터",
+        "passed": true
+      },
+      {
+        "key": "P16",
+        "name": "FN-02 팬 모터",
+        "passed": true
+      },
+      {
+        "key": "P17",
+        "name": "FN-03 팬 모터",
+        "passed": true
+      },
+      {
+        "key": "P18",
+        "name": "FN-06 팬 모터",
+        "passed": true
+      },
+      {
+        "key": "P19",
+        "name": "MV-01",
+        "passed": true
+      },
+      {
+        "key": "P20",
+        "name": "MV-03 댐퍼 모터",
+        "passed": true
+      },
+      {
+        "key": "P21",
+        "name": "MV-06 댐퍼 모터",
+        "passed": true
+      },
+      {
+        "key": "P22",
+        "name": "GSS",
+        "passed": true
+      },
+      {
+        "key": "P23",
+        "name": "85톤로(압연)",
+        "passed": true
+      }
+    ],
+    "card_links": [
+      {
+        "key": "P01",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/BC01.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P01",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P02",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/FN04.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P02",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P03",
+        "links": [
+          {
+            "doc": null,
+            "text": "식별·점검 작업지",
+            "view": "repair"
+          },
+          {
+            "doc": "unresolved-identity.html#identity-P03",
+            "text": "필요한 식별 자료",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P03",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P04",
+        "links": [
+          {
+            "doc": null,
+            "text": "식별·점검 작업지",
+            "view": "repair"
+          },
+          {
+            "doc": "unresolved-identity.html#identity-P04",
+            "text": "필요한 식별 자료",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P04",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P05",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/PV01.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P05",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P06",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/RD01.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P06",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P07",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/PV02.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P07",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P08",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/MC04.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P08",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P09",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/VS01.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P09",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P10",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "body-manual.html#body-CC01",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "body-manual.html#body-CC01",
+            "text": "본체·계측·증상별 근거",
+            "view": null
+          },
+          {
+            "doc": "requirements-audit.html#priority-P10",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P11",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "burner-interface.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P11",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P12",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "body-manual.html#body-AB01",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "body-manual.html#body-AB01",
+            "text": "본체·계측·증상별 근거",
+            "view": null
+          },
+          {
+            "doc": "requirements-audit.html#priority-P12",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P13",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "body-manual.html#body-HE01",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "body-manual.html#body-HE01",
+            "text": "본체·계측·증상별 근거",
+            "view": null
+          },
+          {
+            "doc": "requirements-audit.html#priority-P13",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P14",
+        "links": [
+          {
+            "doc": null,
+            "text": "식별·점검 작업지",
+            "view": "repair"
+          },
+          {
+            "doc": "unresolved-identity.html#identity-P14",
+            "text": "필요한 식별 자료",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P14",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P15",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/FN01.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P15",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P16",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/FN02.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P16",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P17",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/FN03.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P17",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P18",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/FN06.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P18",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P19",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/MV01.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P19",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P20",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/MV03.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P20",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P21",
+        "links": [
+          {
+            "doc": null,
+            "text": "증상별 수리",
+            "view": "repair"
+          },
+          {
+            "doc": "alarm-guides/MV06.html",
+            "text": "알람·리셋",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "매뉴얼",
+            "view": "manual"
+          },
+          {
+            "doc": null,
+            "text": "I/O·HMI",
+            "view": "io"
+          },
+          {
+            "doc": null,
+            "text": "제어 명세",
+            "view": "spec"
+          },
+          {
+            "doc": null,
+            "text": "원본 래더",
+            "view": "ladder"
+          },
+          {
+            "doc": null,
+            "text": "도면·HMI",
+            "view": "drawings"
+          },
+          {
+            "doc": null,
+            "text": "수리 관찰 기록",
+            "view": "repair-record"
+          },
+          {
+            "doc": "requirements-audit.html#priority-P21",
+            "text": "작성 상태·다음 확인",
+            "view": null
+          },
+          {
+            "doc": null,
+            "text": "설비 요약 전체 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P22",
+        "links": [
+          {
+            "doc": null,
+            "text": "제외 안내 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      },
+      {
+        "key": "P23",
+        "links": [
+          {
+            "doc": null,
+            "text": "제외 안내 보기",
+            "view": "summary"
+          },
+          {
+            "doc": null,
+            "text": "배치도·카드 목록으로 돌아가기",
+            "view": null
+          }
+        ]
+      }
+    ],
+    "fn04_actions": [
+      {
+        "action": "증상별 수리",
+        "frame": "http://127.0.0.1:8774/repair-guides/P02.html",
+        "hash": "#view=repair&equipment=P02&scope=priority",
+        "title": "진단·수리 · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "알람·리셋",
+        "frame": "http://127.0.0.1:8774/alarm-guides/FN04.html",
+        "hash": "#view=doc&equipment=P02&scope=priority&doc=alarm-guides%2FFN04.html",
+        "title": "자료 보기 · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "매뉴얼",
+        "frame": "http://127.0.0.1:8774/devices/FN04.html",
+        "hash": "#view=manual&equipment=P02&scope=priority",
+        "title": "매뉴얼 · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "I/O·HMI",
+        "frame": null,
+        "hash": "#view=io&equipment=P02&scope=priority",
+        "title": "I/O·HMI · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "제어 명세",
+        "frame": "http://127.0.0.1:8774/control-specs/FN04.html",
+        "hash": "#view=spec&equipment=P02&scope=priority",
+        "title": "제어 명세 · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "원본 래더",
+        "frame": null,
+        "hash": "#view=ladder&equipment=P02&scope=priority",
+        "title": "래더 · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "도면·HMI",
+        "frame": null,
+        "hash": "#view=drawings&equipment=P02&scope=priority",
+        "title": "도면 · FN-04 팬 모터 | GME 올인원"
+      },
+      {
+        "action": "수리 관찰 기록",
+        "frame": null,
+        "hash": "#view=repair-record&equipment=P02&scope=priority",
+        "title": "수리 기록 · FN-04 팬 모터 | GME 올인원"
+      }
+    ],
+    "alarm_routes_verified": [
+      "alarm-guides/FN04.html",
+      "body-manual.html#body-AB01",
+      "burner-interface.html"
+    ],
+    "desktop": {
+      "viewport": [
+        1440,
+        900
+      ],
+      "document": [
+        1425,
+        1425
+      ],
+      "map": [
+        753,
+        753
+      ],
+      "keyboard_focus_preserved": true
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "document": [
+        375,
+        375
+      ],
+      "fit_map": [
+        341,
+        341
+      ],
+      "selected_card_focus": "layout-card-title",
+      "return_node_focus": "P02"
+    },
+    "search": {
+      "korean_fill": "웨잉",
+      "results": 2,
+      "focus_preserved": true,
+      "ime_composition_guard": "source_reviewed; native_IME_not_exercised"
+    },
+    "reload_selection": "P02",
+    "back_navigation": true,
+    "console_errors": [],
+    "records_saved": 0,
+    "independent_review": "Sol Medium read-only; 3 UI issues and 1 route regression corrected; final no further findings",
+    "simulator_execution": 0,
+    "plc_changes": 0,
+    "sejin_changes": 0,
+    "screenshots": [
+      "assets/ui-equipment-cards-preview.png",
+      "assets/ui-equipment-cards-mobile.png"
+    ],
+    "input_sha256": {
+      "assets/all-in-one.js": "13c427e865764727f9fb64b8c7ff250e2fde2cbdd2eb20771073e847a12edea0",
+      "assets/all-in-one.css": "fe2c024d256ca567c4c81a2ab720a40c3014e057d4c29dae59e7c5d68996547f",
+      "build-all-in-one.py": "332fb61fd7d8fe9be2acb969d3111b0809c423473936083e6d53f7aff5b59411",
+      "build-requirements-audit.py": "16528d7cde39aeaf0c5c21775438e7bc00704c52238dbde360e25f4ea8e5d6de"
+    }
   }
 }
