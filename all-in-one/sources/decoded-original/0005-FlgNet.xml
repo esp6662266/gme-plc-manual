@@ -1,0 +1,28 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="23" RefId="65">
+      <CodeBlock UId="22" RefId="64" />
+    </CRef>
+    <ORef UId="25" RefId="66" />
+    <ORef UId="27" RefId="67" />
+    <ORef UId="29" RefId="42" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="23" PinName="en" />
+    </Wire>
+    <Wire UId="24">
+      <OCon UId="25" />
+      <PCon UId="23" PinName="KF" />
+    </Wire>
+    <Wire UId="26">
+      <OCon UId="27" />
+      <PCon UId="23" PinName="SEC" />
+    </Wire>
+    <Wire UId="28">
+      <PCon UId="23" PinName="KT" />
+      <OCon UId="29" />
+    </Wire>
+  </Wires>
+</FlgNet>

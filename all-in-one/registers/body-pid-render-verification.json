@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "date": "2026-10-08",
+  "pdf": "sources/PID_1684n002I.pdf",
+  "pdf_sha256": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+  "page": 1,
+  "renderer": "pdftoppm -singlefile -scale-to 3200 -png; counterclockwise90deg",
+  "reference": "assets/PID-landscape.png",
+  "reference_sha256": "1d5b65ce857f22821a897d0d95039cc3d36e7639527397c4aaeec85ac0fa722e",
+  "all_pixels_equal_fresh_pdf_render": true,
+  "size": [
+    3200,
+    2261
+  ],
+  "crops": [
+    {
+      "id": "CC01",
+      "file": "assets/body-pid/CC01.png",
+      "box": [
+        448,
+        927,
+        1568,
+        1650
+      ],
+      "sha256": "3c966dcd8b1b26b3c57768c5af745991d3ceaa2cf514e9bfdd78ea4561e753ba",
+      "pixels_equal_source_region": true
+    },
+    {
+      "id": "AB01",
+      "file": "assets/body-pid/AB01.png",
+      "box": [
+        576,
+        226,
+        1568,
+        1175
+      ],
+      "sha256": "1c9ff978248b49c10ea1aeb51397f5934699869ffb236071259790821b92851b",
+      "pixels_equal_source_region": true
+    },
+    {
+      "id": "HE01",
+      "file": "assets/body-pid/HE01.png",
+      "box": [
+        1056,
+        180,
+        2208,
+        949
+      ],
+      "sha256": "cd6be2ad9111167e97b9cb327f20533ad8c0a1a4d33f0e512fa990b55bb3dbe6",
+      "pixels_equal_source_region": true
+    }
+  ]
+}

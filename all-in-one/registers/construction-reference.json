@@ -1,0 +1,760 @@
+{
+  "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+  "source_name": "Can-Decoating_20241118.pdf",
+  "sha256": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+  "bytes": 4896074,
+  "pages": 64,
+  "source_role": "construction layout/conduit/cable schedule complement to OEM functional circuits",
+  "filename_date": "2024-11-18",
+  "titleblock_revision": "24.11.11 first draft design",
+  "cover_status": "FOR APPROVAL",
+  "pdf_metadata_date": "2024-11-19 18:00:21 +09:00",
+  "approved_as_built_verified": false,
+  "field_verified": 0,
+  "plc_changes": 0,
+  "simulator_changes": 0,
+  "visually_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    19,
+    21,
+    24,
+    33,
+    48,
+    50,
+    51,
+    52,
+    53,
+    55,
+    56,
+    57,
+    58,
+    59,
+    64
+  ],
+  "power_rows": 17,
+  "control_rows": 34,
+  "equipment_guides": 22,
+  "new_review_items": 7,
+  "original_conflicts_preserved": 18,
+  "masked_rows": [
+    {
+      "page": 52,
+      "rows": [
+        "2_5"
+      ],
+      "status": "visually masked; excluded from operative cable records"
+    },
+    {
+      "page": 53,
+      "rows": [
+        "3_5"
+      ],
+      "status": "visually masked; excluded from operative cable records"
+    },
+    {
+      "page": 56,
+      "rows": [
+        "6_7",
+        "6_8",
+        "6_9",
+        "6_10"
+      ],
+      "status": "visually masked; excluded from operative cable records"
+    },
+    {
+      "page": 58,
+      "rows": [
+        "8_5",
+        "8_7",
+        "8_8"
+      ],
+      "status": "visually masked; excluded from operative cable records"
+    }
+  ],
+  "masked_rows_known": 9,
+  "masked_review_complete": false,
+  "profiles": [
+    {
+      "id": "BC01",
+      "pages": [
+        4,
+        5,
+        6,
+        21,
+        51,
+        53
+      ],
+      "boundary": "ENT1TB1/2 → SS01·SSL01. 기동 직렬 회로와 PLC 감시 회로를 구분합니다.",
+      "power_rows": 1,
+      "control_rows": 2,
+      "review_ids": [],
+      "guide": "construction-guides/BC01.html",
+      "field_verified": false
+    },
+    {
+      "id": "FN04",
+      "pages": [
+        4,
+        6,
+        48,
+        52
+      ],
+      "boundary": "M31·M36 두 동력 분기와 공통 인버터. PDF48의 혼재 표기는 C05 확인 대기입니다.",
+      "power_rows": 2,
+      "control_rows": 0,
+      "review_ids": [
+        "C05"
+      ],
+      "guide": "construction-guides/FN04.html",
+      "field_verified": false
+    },
+    {
+      "id": "PV01",
+      "pages": [
+        5,
+        6,
+        21,
+        53
+      ],
+      "boundary": "ENT2TB1 → ENT2TB2/3 → LS01–08·EV01/02. LS 여덟 표기를 PLC 입력 여덟 개로 확정하지 않습니다. 기존 백업 입력6개·예비 및 도면 차이는 계속 확인합니다.",
+      "power_rows": 0,
+      "control_rows": 4,
+      "review_ids": [],
+      "guide": "construction-guides/PV01.html",
+      "field_verified": false
+    },
+    {
+      "id": "PV02",
+      "pages": [
+        5,
+        6,
+        24,
+        55
+      ],
+      "boundary": "ROT1TB1 → LS25–32·EV04/05, PB16. 공유 간선에 포함된 EV03은 별도 RD01 윤활 회로입니다.",
+      "power_rows": 0,
+      "control_rows": 4,
+      "review_ids": [
+        "C06"
+      ],
+      "guide": "construction-guides/PV02.html",
+      "field_verified": false
+    },
+    {
+      "id": "RD01",
+      "pages": [
+        4,
+        6,
+        24,
+        51,
+        55
+      ],
+      "boundary": "킬른 본체 대응은 후보입니다. M03 주 구동·M04 냉각팬·EV03 윤활 밸브를 별도 추적합니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [
+        "C04"
+      ],
+      "guide": "construction-guides/RD01.html",
+      "field_verified": false
+    },
+    {
+      "id": "MC04",
+      "pages": [
+        4,
+        5,
+        6,
+        51,
+        59
+      ],
+      "boundary": "M09 동력과 EXI1TB2의 SS10 감시를 분리합니다. SS11은 MC05 TO 표기와 차이가 있어 대기합니다.",
+      "power_rows": 1,
+      "control_rows": 2,
+      "review_ids": [
+        "C07"
+      ],
+      "guide": "construction-guides/MC04.html",
+      "field_verified": false
+    },
+    {
+      "id": "VS01",
+      "pages": [
+        4,
+        6,
+        51
+      ],
+      "boundary": "M06·M07 두 모터 케이블입니다. 공통 제어 신호로 개별 모터의 정상 회전을 보증하지 않습니다.",
+      "power_rows": 2,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/VS01.html",
+      "field_verified": false
+    },
+    {
+      "id": "CC01",
+      "pages": [
+        5,
+        6,
+        21,
+        53,
+        64
+      ],
+      "boundary": "본체 후보와 ENT2TB1 공유 접속함, BR01 간선을 구분합니다. 접속함 표기가 본체 전용 제어를 증명하지 않습니다.",
+      "power_rows": 0,
+      "control_rows": 0,
+      "review_ids": [
+        "C02"
+      ],
+      "guide": "construction-guides/CC01.html",
+      "field_verified": false
+    },
+    {
+      "id": "BR01",
+      "pages": [
+        6,
+        64
+      ],
+      "boundary": "CR → CC01 / BR01 간선 묶음. 버너 개별 핀·연소 안전·기동 순서는 전용 도면·원본 로직 확인 전입니다.",
+      "power_rows": 0,
+      "control_rows": 7,
+      "review_ids": [
+        "C02"
+      ],
+      "guide": "construction-guides/BR01.html",
+      "field_verified": false
+    },
+    {
+      "id": "AB01",
+      "pages": [
+        3,
+        6,
+        64
+      ],
+      "boundary": "재연소로 본체 대응은 후보입니다. 6SB2 케이블 표기는 전체 비상정지 기능·안전 등급을 증명하지 않습니다.",
+      "power_rows": 0,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/AB01.html",
+      "field_verified": false
+    },
+    {
+      "id": "HE01",
+      "pages": [
+        5,
+        6,
+        56,
+        57
+      ],
+      "boundary": "열교환기 본체 후보와 FLO1/FLO2 공유 접속함, 주변 댐퍼·센서의 소유를 구분합니다. 가려진 6_7–10은 채택하지 않습니다.",
+      "power_rows": 0,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/HE01.html",
+      "field_verified": false
+    },
+    {
+      "id": "FN01",
+      "pages": [
+        4,
+        5,
+        6,
+        33,
+        51,
+        58
+      ],
+      "boundary": "M22 주 팬, M29 냉각팬 예비 여부, TC04/05를 구분합니다. PDF58의 가려진 8_7/8과 실제 보이는 8_22/23을 혼용하지 않습니다.",
+      "power_rows": 1,
+      "control_rows": 2,
+      "review_ids": [],
+      "guide": "construction-guides/FN01.html",
+      "field_verified": false
+    },
+    {
+      "id": "FN02",
+      "pages": [
+        4,
+        6,
+        51
+      ],
+      "boundary": "M19 동력 케이블과 OEM FG42/43의 기동·응답 경로를 함께 확인합니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/FN02.html",
+      "field_verified": false
+    },
+    {
+      "id": "FN03",
+      "pages": [
+        4,
+        6,
+        21,
+        51
+      ],
+      "boundary": "M25 동력과 소프트스타터 TOR 응답은 별도 경로입니다. 시공도면 DAC 표기는 OEM FG51의 장치 종류를 대신 확정하지 않습니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/FN03.html",
+      "field_verified": false
+    },
+    {
+      "id": "FN06",
+      "pages": [
+        4,
+        6,
+        21,
+        51
+      ],
+      "boundary": "M26 동력과 OEM FG52 허가·응답을 함께 확인합니다. 경로의 분기 표기를 실제 배관과 대조합니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/FN06.html",
+      "field_verified": false
+    },
+    {
+      "id": "MV01",
+      "pages": [
+        4,
+        5,
+        6,
+        51,
+        57
+      ],
+      "boundary": "M20 동력, FLO2TB1 → LS23/24·ZT02를 구분합니다. 위치 정상값·환산은 현장 및 원본 확인 전입니다.",
+      "power_rows": 1,
+      "control_rows": 3,
+      "review_ids": [],
+      "guide": "construction-guides/MV01.html",
+      "field_verified": false
+    },
+    {
+      "id": "MV03",
+      "pages": [
+        4,
+        5,
+        6,
+        51,
+        56
+      ],
+      "boundary": "M17 동력, FLO1TB1 → LS19/20·ZT04. 공유 접속함의 다른 댐퍼·센서를 자동 귀속하지 않습니다.",
+      "power_rows": 1,
+      "control_rows": 3,
+      "review_ids": [],
+      "guide": "construction-guides/MV03.html",
+      "field_verified": false
+    },
+    {
+      "id": "MV06",
+      "pages": [
+        4,
+        5,
+        6,
+        33,
+        51,
+        58
+      ],
+      "boundary": "M14 동력, FLO4TB2 → LS34/35·ZT06. 중복 간선 식별자 C01은 페이지·행으로 분리합니다.",
+      "power_rows": 1,
+      "control_rows": 5,
+      "review_ids": [
+        "C01",
+        "C03"
+      ],
+      "guide": "construction-guides/MV06.html",
+      "field_verified": false
+    },
+    {
+      "id": "RD01-FAN",
+      "pages": [
+        4,
+        24,
+        51
+      ],
+      "boundary": "M04 냉각팬을 RD01 M03 주 구동과 별도로 유지합니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/RD01-FAN.html",
+      "field_verified": false
+    },
+    {
+      "id": "FN01-FAN",
+      "pages": [
+        4,
+        33,
+        51
+      ],
+      "boundary": "M29 냉각팬 케이블 기록과 OEM FG54 SPARE를 함께 확인합니다. 설치·사용 확정 전입니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/FN01-FAN.html",
+      "field_verified": false
+    },
+    {
+      "id": "EV03",
+      "pages": [
+        6,
+        24,
+        55
+      ],
+      "boundary": "ROT1TB1 → RD01 ROT1TB2 → EV03. PV02 밸브 EV04/05와 별도 회로입니다.",
+      "power_rows": 0,
+      "control_rows": 2,
+      "review_ids": [
+        "C06"
+      ],
+      "guide": "construction-guides/EV03.html",
+      "field_verified": false
+    },
+    {
+      "id": "SC01",
+      "pages": [
+        4,
+        6,
+        51
+      ],
+      "boundary": "M28 분진 스크루. FN04 인터록 관련 여부는 PLC 원본으로 확인하고 별도 설비 ID를 유지합니다.",
+      "power_rows": 1,
+      "control_rows": 0,
+      "review_ids": [],
+      "guide": "construction-guides/SC01.html",
+      "field_verified": false
+    }
+  ],
+  "priority": [
+    {
+      "key": "P01",
+      "name": "BC-01(벨트)",
+      "plc_id": "BC01",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/BC01.html",
+      "pages": [
+        4,
+        5,
+        6,
+        21,
+        51,
+        53
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P02",
+      "name": "FN-04 팬 모터",
+      "plc_id": "FN04",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/FN04.html",
+      "pages": [
+        4,
+        6,
+        48,
+        52
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P03",
+      "name": "웨잉호퍼1",
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "guide": "",
+      "pages": [],
+      "status": "PLC 대응 미확정 · 자동 연결 없음"
+    },
+    {
+      "key": "P04",
+      "name": "웨잉호퍼배출컨베이어",
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "guide": "",
+      "pages": [],
+      "status": "PLC 대응 미확정 · 자동 연결 없음"
+    },
+    {
+      "key": "P05",
+      "name": "PV-01",
+      "plc_id": "PV01",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/PV01.html",
+      "pages": [
+        5,
+        6,
+        21,
+        53
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P06",
+      "name": "킬른",
+      "plc_id": "RD01",
+      "match": "candidate",
+      "identity_verified": false,
+      "guide": "construction-guides/RD01.html",
+      "pages": [
+        4,
+        6,
+        24,
+        51,
+        55
+      ],
+      "status": "본체 대응 후보 · 실물 미확인"
+    },
+    {
+      "key": "P07",
+      "name": "PV-02",
+      "plc_id": "PV02",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/PV02.html",
+      "pages": [
+        5,
+        6,
+        24,
+        55
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P08",
+      "name": "MC04",
+      "plc_id": "MC04",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/MC04.html",
+      "pages": [
+        4,
+        5,
+        6,
+        51,
+        59
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P09",
+      "name": "VS01",
+      "plc_id": "VS01",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/VS01.html",
+      "pages": [
+        4,
+        6,
+        51
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P10",
+      "name": "CC챔버",
+      "plc_id": "CC01",
+      "match": "candidate",
+      "identity_verified": false,
+      "guide": "construction-guides/CC01.html",
+      "pages": [
+        5,
+        6,
+        21,
+        53,
+        64
+      ],
+      "status": "본체 대응 후보 · 실물 미확인"
+    },
+    {
+      "key": "P11",
+      "name": "BR01",
+      "plc_id": "BR01",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/BR01.html",
+      "pages": [
+        6,
+        64
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P12",
+      "name": "재연소로",
+      "plc_id": "AB01",
+      "match": "candidate",
+      "identity_verified": false,
+      "guide": "construction-guides/AB01.html",
+      "pages": [
+        3,
+        6,
+        64
+      ],
+      "status": "본체 대응 후보 · 실물 미확인"
+    },
+    {
+      "key": "P13",
+      "name": "열교환기",
+      "plc_id": "HE01",
+      "match": "candidate",
+      "identity_verified": false,
+      "guide": "construction-guides/HE01.html",
+      "pages": [
+        5,
+        6,
+        56,
+        57
+      ],
+      "status": "본체 대응 후보 · 실물 미확인"
+    },
+    {
+      "key": "P14",
+      "name": "2사이클론",
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "guide": "",
+      "pages": [],
+      "status": "PLC 대응 미확정 · 자동 연결 없음"
+    },
+    {
+      "key": "P15",
+      "name": "FN-01 팬 모터",
+      "plc_id": "FN01",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/FN01.html",
+      "pages": [
+        4,
+        5,
+        6,
+        33,
+        51,
+        58
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P16",
+      "name": "FN-02 팬 모터",
+      "plc_id": "FN02",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/FN02.html",
+      "pages": [
+        4,
+        6,
+        51
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P17",
+      "name": "FN-03 팬 모터",
+      "plc_id": "FN03",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/FN03.html",
+      "pages": [
+        4,
+        6,
+        21,
+        51
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P18",
+      "name": "FN-06 팬 모터",
+      "plc_id": "FN06",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/FN06.html",
+      "pages": [
+        4,
+        6,
+        21,
+        51
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P19",
+      "name": "MV-01",
+      "plc_id": "MV01",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/MV01.html",
+      "pages": [
+        4,
+        5,
+        6,
+        51,
+        57
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P20",
+      "name": "MV-03 댐퍼 모터",
+      "plc_id": "MV03",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/MV03.html",
+      "pages": [
+        4,
+        5,
+        6,
+        51,
+        56
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P21",
+      "name": "MV-06 댐퍼 모터",
+      "plc_id": "MV06",
+      "match": "tag",
+      "identity_verified": false,
+      "guide": "construction-guides/MV06.html",
+      "pages": [
+        4,
+        5,
+        6,
+        33,
+        51,
+        58
+      ],
+      "status": "태그 기준 참고 · 실물 대응 미확인"
+    },
+    {
+      "key": "P22",
+      "name": "GSS",
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "guide": "",
+      "pages": [],
+      "status": "PLC 대응 미확정 · 자동 연결 없음"
+    },
+    {
+      "key": "P23",
+      "name": "85톤로(압연)",
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "guide": "",
+      "pages": [],
+      "status": "PLC 대응 미확정 · 자동 연결 없음"
+    }
+  ]
+}

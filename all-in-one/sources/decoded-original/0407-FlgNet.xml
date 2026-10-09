@@ -1,0 +1,45 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="23" Gate="Contact" />
+    <Part UId="31" Gate="Coil" />
+    <Part UId="33" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="38" Gate="Coil" />
+    <ORef UId="24" RefId="159" />
+    <ORef UId="32" RefId="162" />
+    <ORef UId="35" RefId="159" />
+    <ORef UId="39" RefId="163" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="23" PinName="in" />
+      <PCon UId="33" PinName="in" />
+    </Wire>
+    <Wire UId="22">
+      <OCon UId="24" />
+      <PCon UId="23" PinName="operand" />
+    </Wire>
+    <Wire UId="29">
+      <PCon UId="23" PinName="out" />
+      <PCon UId="31" PinName="in" />
+    </Wire>
+    <Wire UId="30">
+      <OCon UId="32" />
+      <PCon UId="31" PinName="operand" />
+    </Wire>
+    <Wire UId="34">
+      <OCon UId="35" />
+      <PCon UId="33" PinName="operand" />
+    </Wire>
+    <Wire UId="36">
+      <PCon UId="33" PinName="out" />
+      <PCon UId="38" PinName="in" />
+    </Wire>
+    <Wire UId="37">
+      <OCon UId="39" />
+      <PCon UId="38" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

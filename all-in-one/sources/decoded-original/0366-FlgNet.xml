@@ -1,0 +1,83 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="22" RefId="639">
+      <CodeBlock UId="23" RefId="130" />
+    </CRef>
+    <ORef UId="24" RefId="697" />
+    <ORef UId="25" RefId="696" />
+    <ORef UId="26" RefId="192" />
+    <ORef UId="27" RefId="48" />
+    <ORef UId="28" RefId="20" />
+    <ORef UId="29" RefId="20" />
+    <ORef UId="30" RefId="20" />
+    <ORef UId="33" RefId="695" />
+    <ORef UId="34" RefId="694" />
+    <ORef UId="39" RefId="204" />
+    <ORef UId="40" RefId="205" />
+    <ORef UId="41" RefId="206" />
+    <ORef UId="42" RefId="207" />
+    <ORef UId="45" RefId="210" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="22" PinName="en" />
+    </Wire>
+    <Wire UId="47">
+      <OCon UId="24" />
+      <PCon UId="22" PinName="Ingresso_run_Opening" />
+    </Wire>
+    <Wire UId="48">
+      <OCon UId="25" />
+      <PCon UId="22" PinName="Ingresso_run_Closing" />
+    </Wire>
+    <Wire UId="49">
+      <OCon UId="26" />
+      <PCon UId="22" PinName="Allarme1" />
+    </Wire>
+    <Wire UId="50">
+      <OCon UId="27" />
+      <PCon UId="22" PinName="Allarme2" />
+    </Wire>
+    <Wire UId="51">
+      <OCon UId="28" />
+      <PCon UId="22" PinName="Allarme3" />
+    </Wire>
+    <Wire UId="52">
+      <OCon UId="29" />
+      <PCon UId="22" PinName="Allarme4" />
+    </Wire>
+    <Wire UId="53">
+      <OCon UId="30" />
+      <PCon UId="22" PinName="Allarme5" />
+    </Wire>
+    <Wire UId="56">
+      <OCon UId="33" />
+      <PCon UId="22" PinName="Limit_switch_Open" />
+    </Wire>
+    <Wire UId="57">
+      <OCon UId="34" />
+      <PCon UId="22" PinName="Limiti_Switch_Close" />
+    </Wire>
+    <Wire UId="62">
+      <PCon UId="22" PinName="Risposta_Opening" />
+      <OCon UId="39" />
+    </Wire>
+    <Wire UId="63">
+      <PCon UId="22" PinName="Risposta_Closing" />
+      <OCon UId="40" />
+    </Wire>
+    <Wire UId="64">
+      <PCon UId="22" PinName="Limit_Switch_Open_HMI" />
+      <OCon UId="41" />
+    </Wire>
+    <Wire UId="65">
+      <PCon UId="22" PinName="Limit_Switch_Close_HMI" />
+      <OCon UId="42" />
+    </Wire>
+    <Wire UId="68">
+      <PCon UId="22" PinName="Comulativo_allarmi" />
+      <OCon UId="45" />
+    </Wire>
+  </Wires>
+</FlgNet>

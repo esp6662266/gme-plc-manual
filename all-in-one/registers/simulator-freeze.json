@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-07",
+  "instruction": "현재 시뮬레이션까지만 마무리하고 추가 시뮬레이션 작성을 중지. 매뉴얼·수리·구조·개선을 우선 진행.",
+  "scope": "BC01/FN04 virtual motor baseline and supported isolated LAD subset; no new device/instruction/response/test scenarios until user requests resume",
+  "files": {
+    "registers/program-model.json": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+    "assets/program-model-data.js": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+    "assets/virtual-plc.js": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+    "assets/simulator-workspace.js": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+    "registers/virtual-plc-test-results.json": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64"
+  },
+  "development_status": "stopped_by_user",
+  "behavior_tests_status": "frozen_no_rerun",
+  "latest_instruction": "시뮬레이션은 내가 따로 작성하라고 하기전엔 작성하지마라.",
+  "resume_rule": "Only a separate explicit user request to author simulation permits resuming development, modification, expansion or behavior test reruns. Goal continuation does not resume simulation."
+}

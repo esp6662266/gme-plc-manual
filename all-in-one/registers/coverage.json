@@ -1,0 +1,48 @@
+{
+  "equipment_items": 248,
+  "main_chapters": 121,
+  "component_chapters": 127,
+  "categories": {
+    "원료 이송": 8,
+    "공정 본체": 5,
+    "연소·열회수": 9,
+    "집진·석회": 21,
+    "제어 밸브": 6,
+    "공압 밸브": 7,
+    "외부 연동": 20,
+    "계측": 33,
+    "하위 구성품": 47,
+    "필터 세정 밸브": 80,
+    "공통 시스템": 12
+  },
+  "plc_symbols": 789,
+  "physical_symbols": 437,
+  "hmi_settings": 782,
+  "indexed_blocks": 89,
+  "indexed_networks": 457,
+  "original_lad_networks": 426,
+  "lad_parts": 4117,
+  "lad_wires": 9176,
+  "static_action_paths": 1412,
+  "simulation_test_designs": 577,
+  "simulation_tests_executed": 0,
+  "verification_rows": 1060,
+  "source_conflicts": 18,
+  "unassigned_plc_symbols": 384,
+  "unassigned_hmi_settings": 557,
+  "decoded": {
+    "valid_xml_fragments": 695,
+    "roots": {
+      "FlgNet": 441,
+      "IdentXmlPart": 181,
+      "ICPayload": 31,
+      "XmlPartIdentMapping": 42
+    },
+    "indexed_lad_networks": 426,
+    "matched_networks": 426,
+    "unique_network_xml": 426,
+    "operands": 6061,
+    "resolved_operands": 5438,
+    "method": "read-only original PLF XML decompression; no TIA compile or execution"
+  }
+}

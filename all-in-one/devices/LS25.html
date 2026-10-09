@@ -1,0 +1,25 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LS25 · 밸브 위치 리미트 스위치</title><link rel="stylesheet" href="../assets/manual.css"></head><body><header><a href="../index.html">GME 전체 설비 매뉴얼</a><a href="../index.html#purpose">프로젝트 목적·작업 순서</a><span>v0.2 · 2026-10-07 · 자료 검토본</span></header><div class="layout"><aside class="toc"><a href="#source">도면·확인 범위</a><a href="#io">I/O·내부 심볼</a><a href="#hmi">HMI 설정</a><a href="#logic">원본 래더</a><a href="#alarm">알람·설정</a><a href="#work">운전·진단 절차</a><a href="#sim">시뮬레이터 시험</a><a href="#verify">확인 대장</a></aside><main><h1>LS25 · 밸브 위치 리미트 스위치</h1><p class="control-spec-link"><a href="../control-specs/LS25.html">설비 제어 명세: 입출력·동작 조건·순서·이상 처리·근거</a></p><div class="source"><strong>하위 구성품</strong> · P&amp;ID/전기/백업 번호 대조<br>개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.</div><p>상위 설비: <a href="PV02.html">PV02</a></p><h2 id="source">도면·식별과 현재 확인 범위</h2><p>P&ID <a href="../sources/PID_1684n002I.pdf#page=1">1684n002 Rev.I / 1페이지</a>. <a href="../sources/Electrical_Rev2.pdf#page=72">FG 71 / PDF 72</a>, <a href="../sources/Electrical_Rev2.pdf#page=73">FG 72 / PDF 73</a></p><p>관련 물리 I/O 1개, 내부 심볼 0개, HMI 설정 0개, 관련 래더 0개. 목록은 태그 참조를 연결한 자료이며 공유 신호·상위/하위 설비 참조도 포함한다. 채널의 독점 소유나 독립 설비 전용 블록 수를 뜻하지 않는다.</p><h2 id="io">물리 I/O와 내부 심볼</h2><div class="table-wrap"><table><thead><tr><th>구분</th><th>현재 백업 주소</th><th>원본 심볼</th><th>자료형</th><th>원본 설명 / 과거 주소</th><th>색인 근거</th></tr></thead><tbody><tr><td>물리 I/O</td><td><code>%I9.4</code></td><td>ev04_open</td><td>bool</td><td>e29.6 limit switch ls-25gate &quot;a&quot; open</td><td>_7ev / 1166</td></tr></tbody></table></div><p class="muted">위 주소는 백업 심볼의 Address 값이다. 옛 I/O 주소가 설명에 남아 있어 설명 문자열을 현재 주소로 사용하지 않는다. 단자·퓨즈·릴레이·모듈 배선 확정은 아래 전기 원문에서 별도로 수행한다.</p><h2 id="hmi">HMI 설정 주소와 표시 의미</h2><p>직접 태그 이름으로 일치하는 HMI 설정은 없다. 가공·통합 상태 또는 상위 설비 화면 참조를 별도 확인한다.</p><p class="muted">HMI 주소는 dde.cfg 설정값이며 PLC 물리 I/Q와 다를 수 있다. 표시색·입력값·알람 팝업은 화면 스크립트 및 온라인 값으로 추가 검증한다.</p><h2 id="logic">관련 PLC 원본 래더</h2><p>직접 참조하는 래더 네트워크는 식별되지 않았다. 이 항목의 현재 제어 역할 또는 로컬 계측 여부를 확인한다.</p><h2 id="alarm">알람·설정값 추적</h2><p>설비 이름으로 일치한 알람 전용 네트워크가 없다. 상위 설비 고장 및 일반 진단 블록의 참조를 확인한다.</p><p>관련 검색 코드의 시간 상수 후보: 직접 상수 없음 / 설정 DB 및 타이머 인스턴스 확인. 여러 설비를 포함한 공유 네트워크의 상수도 포함된다. 실제 적용 대상·접점 경로·설정 DB 값은 원본에서 확정한다.</p><h2 id="work">운전 확인과 고장 진단 절차</h2><p>아래는 설비 유형에 맞춘 점검 절차안이다. 원본에서 확정한 제어 논리와 현장 절차를 대조해 승인용 문서로 발전시킨다.</p><ol><li><strong>상위 장치 대조</strong> — 상위 설비 장의 운전·알람 조건을 먼저 확인하고 이 구성품의 물리 위치와 도면 번호를 대조한다.</li><li><strong>입출력 및 단자</strong> — 전원·중간 릴레이·센서·PLC 채널의 신호 방향과 단자를 한 경로씩 기록한다.</li><li><strong>상태 검증</strong> — 상위 설비의 정상 동작과 고장 상태에서 해당 구성품의 요청/피드백을 따로 수집한다.</li></ol><h2 id="sim">시뮬레이터 모델과 시험 설계</h2><p>시뮬레이터는 운전 요청, 허가, 출력, 지연 응답, 고장, Reset, 초기값을 각각 저장한다. 물리 입력과 내부/HMI 상태를 분리하며, 임의로 넣은 지연·관성·공정 계수는 교육용 가정으로 표시한다. 아래 시험은 아직 실행하지 않았다.</p><div class="table-wrap"><table><thead><tr><th>시험 ID</th><th>상황</th><th>주입 조건</th><th>확인할 결과</th><th>실행 상태</th></tr></thead><tbody><tr><td>LS25-SIM-01</td><td>정상/고장</td><td>상위 요청과 구성품 응답 변경</td><td>독립 또는 공통 I/O 경로와 상위 조건 확인</td><td>설계·미실행</td></tr></tbody></table></div><h2 id="verify">확인 대장과 작업 기록</h2><div class="table-wrap"><table><thead><tr><th>ID</th><th>항목</th><th>확인 작업</th><th>상태</th></tr></thead><tbody><tr><td>LS25-V-01</td><td>식별/실물</td><td>도면 태그·물리 위치·명판을 대조하고 현재 설치/사용 상태 확정</td><td>확인 대기</td></tr><tr><td>LS25-V-02</td><td>제어/데이터</td><td>원본 네트워크와 관련 설정·접점 극성·주소를 현재 프로젝트로 대조</td><td>확인 대기</td></tr><tr><td>LS25-V-03</td><td>시뮬레이션</td><td>위 시험안의 기대 결과를 원본 실행 결과로 확정하고 실행 증거 기록</td><td>확인 대기</td></tr><tr><td>LS25-V-04</td><td>전기 배선</td><td>현재 I/Q 주소·모듈·단자·전원·중간 릴레이를 현장 배선으로 검증</td><td>확인 대기</td></tr></tbody></table></div><p>작업 기록에는 장치 ID, 도면 FG/PDF 페이지, 원본 네트워크 문서 ID, 전/후 값, 실제 단자·코일·센서 확인, 증거 사진, 조치와 검증자·일시를 함께 남긴다.</p><details><summary>관련 전기 회로의 추출 원문</summary><p class="muted">PDF 텍스트 추출은 위치 순서가 바뀔 수 있다. 배선·교차참조는 원본 PDF 시각 확인을 기준으로 한다.</p><h3>FG 71 / PDF 72</h3><pre>LOAD DRUM CLAPPE VALVE PV-02
+71KA2A5.5141/12A F5x20
+71KA271/5
+EV-05143X1
+X1144
+A5.4141/1
+-0Vdc 10.673/0-0Vdc 10.669/9
+2A F5x2071KA1
+71KA171/3
+EV-04141X1
+X1142
+OPENING GATE &quot;B&quot;VALVE 110Vac 9.773/0110Vac 9.769/9
+0Vac 9.973/00Vac 9.969/9
+OPENING GATE &quot;A&quot;VALVE</pre><h3>FG 72 / PDF 73</h3><pre>LOAD DRUM CLAPPE VALVE PV-02
+PB16X1155X1154
+E10.1126/2
+E10.0126/2
+GATE &quot;B&quot;GATE &quot;A&quot;72SA1
+153X15x202A F
+PB1672SB1LS-30151X15x202A FE9.7125/7
+X1152LS-29149X15x202A FE9.6125/6
+X1150LS-26147X15x202A FE9.5125/5
+X1148LS-25
+LIMIT SWITCHGATE &quot;B&quot; CLOSELIMIT SWITCHGATE &quot;B&quot; OPENLIMIT SWITCHGATE &quot;A&quot; CLOSELIMIT SWITCHGATE &quot;A&quot; OPENOPENING GATE &quot;A&quot;/&quot;B&quot;SELECTION+24Vdc 10.770/9 +24Vdc 10.773/0145X15x202A FE9.4125/5
+X1146</pre></details></main></div><footer>원본 백업과 도면에 근거한 오프라인 검토본 · 현장 현재값 및 TIA 실행 결과와 구분</footer></body></html>

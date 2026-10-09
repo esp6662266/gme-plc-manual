@@ -1,0 +1,525 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BF01 · 백 필터</title><link rel="stylesheet" href="../assets/manual.css"></head><body><header><a href="../index.html">GME 전체 설비 매뉴얼</a><a href="../index.html#purpose">프로젝트 목적·작업 순서</a><span>v0.2 · 2026-10-07 · 자료 검토본</span></header><div class="layout"><aside class="toc"><a href="#source">도면·확인 범위</a><a href="#io">I/O·내부 심볼</a><a href="#hmi">HMI 설정</a><a href="#logic">원본 래더</a><a href="#alarm">알람·설정</a><a href="#work">운전·진단 절차</a><a href="#sim">시뮬레이터 시험</a><a href="#verify">확인 대장</a></aside><main><h1>BF01 · 백 필터</h1><p class="control-spec-link"><a href="../control-specs/BF01.html">설비 제어 명세: 입출력·동작 조건·순서·이상 처리·근거</a></p><div class="source"><strong>집진·석회</strong> · 자료에서 확인<br>DP 차압 감시, 분진 스크루·로터리 밸브, 펄스 세정 밸브가 연결되는 집진 장치.</div><p>공정/기능 연관 장치: <a href="DP01.html">DP01</a>, <a href="SC10.html">SC10</a>, <a href="VR04.html">VR04</a>, <a href="TC09.html">TC09</a>, <a href="PV14.html">PV14</a>, <a href="FN04.html">FN04</a>. 배관 또는 기능 관계이며 모든 장치 간 자동 인터록을 뜻하지 않는다.</p><h2 id="source">도면·식별과 현재 확인 범위</h2><p>P&ID <a href="../sources/PID_1684n002I.pdf#page=1">1684n002 Rev.I / 1페이지</a>. <a href="../sources/Electrical_Rev2.pdf#page=153">FG 152 / PDF 153</a>, <a href="../sources/Electrical_Rev2.pdf#page=154">FG 153 / PDF 154</a>, <a href="../sources/Electrical_Rev2.pdf#page=155">FG 154 / PDF 155</a>, <a href="../sources/Electrical_Rev2.pdf#page=156">FG 155 / PDF 156</a>, <a href="../sources/Electrical_Rev2.pdf#page=157">FG 156 / PDF 157</a>, <a href="../sources/Electrical_Rev2.pdf#page=158">FG 157 / PDF 158</a>, <a href="../sources/Electrical_Rev2.pdf#page=159">FG 158 / PDF 159</a>, <a href="../sources/Electrical_Rev2.pdf#page=160">FG 159 / PDF 160</a>, <a href="../sources/Electrical_Rev2.pdf#page=161">FG 160 / PDF 161</a>, <a href="../sources/Electrical_Rev2.pdf#page=162">FG 161 / PDF 162</a>, <a href="../sources/Electrical_Rev2.pdf#page=163">FG 162 / PDF 163</a>, <a href="../sources/Electrical_Rev2.pdf#page=164">FG 163 / PDF 164</a>, <a href="../sources/Electrical_Rev2.pdf#page=165">FG 164 / PDF 165</a>, <a href="../sources/Electrical_Rev2.pdf#page=166">FG 165 / PDF 166</a>, <a href="../sources/Electrical_Rev2.pdf#page=167">FG 166 / PDF 167</a>, <a href="../sources/Electrical_Rev2.pdf#page=168">FG 167 / PDF 168</a>, <a href="../sources/Electrical_Rev2.pdf#page=169">FG 168 / PDF 169</a>, <a href="../sources/Electrical_Rev2.pdf#page=170">FG 169 / PDF 170</a>, <a href="../sources/Electrical_Rev2.pdf#page=171">FG 170 / PDF 171</a>, <a href="../sources/Electrical_Rev2.pdf#page=172">FG 171 / PDF 172</a>, <a href="../sources/Electrical_Rev2.pdf#page=173">FG 172 / PDF 173</a>, <a href="../sources/Electrical_Rev2.pdf#page=174">FG 173 / PDF 174</a>, <a href="../sources/Electrical_Rev2.pdf#page=175">FG 174 / PDF 175</a>, <a href="../sources/Electrical_Rev2.pdf#page=176">FG 175 / PDF 176</a>, <a href="../sources/Electrical_Rev2.pdf#page=177">FG 176 / PDF 177</a>, <a href="../sources/Electrical_Rev2.pdf#page=178">FG 177 / PDF 178</a>, <a href="../sources/Electrical_Rev2.pdf#page=179">FG 178 / PDF 179</a>, <a href="../sources/Electrical_Rev2.pdf#page=180">FG 179 / PDF 180</a>, <a href="../sources/Electrical_Rev2.pdf#page=181">FG 180 / PDF 181</a>, <a href="../sources/Electrical_Rev2.pdf#page=182">FG 180A / PDF 182</a>, <a href="../sources/Electrical_Rev2.pdf#page=183">FG 180B / PDF 183</a></p><div class="note">병렬 필터 세정 원본 네트워크에 11~90 범위를 설정하는 참조와 두 필터 허가에 따라 출력을 교대시키는 비교기가 있다. EV 번호가 순서 변수 값과 항상 같다고 가정하지 않는다. </div><p>관련 물리 I/O 12개, 내부 심볼 1개, HMI 설정 1개, 관련 래더 11개. 목록은 태그 참조를 연결한 자료이며 공유 신호·상위/하위 설비 참조도 포함한다. 채널의 독점 소유나 독립 설비 전용 블록 수를 뜻하지 않는다.</p><h2 id="io">물리 I/O와 내부 심볼</h2><div class="table-wrap"><table><thead><tr><th>구분</th><th>현재 백업 주소</th><th>원본 심볼</th><th>자료형</th><th>원본 설명 / 과거 주소</th><th>색인 근거</th></tr></thead><tbody><tr><td>물리 I/O</td><td><code>%Q12.0</code></td><td>ev-11</td><td>bool</td><td>a0.0 filter 1 valve bf01first sector</td><td>_7ev / 791</td></tr><tr><td>물리 I/O</td><td><code>%Q13.0</code></td><td>ev-19</td><td>bool</td><td>a1.0 filter 1 valve bf01second sector</td><td>_7ev / 799</td></tr><tr><td>물리 I/O</td><td><code>%Q14.0</code></td><td>ev-27</td><td>bool</td><td>a2.0 filter 1 valve bf01third sector</td><td>_7ev / 806</td></tr><tr><td>물리 I/O</td><td><code>%Q15.0</code></td><td>ev-35</td><td>bool</td><td>a3.0 filter 1 valve bf01fourth sector</td><td>_7ev / 814</td></tr><tr><td>물리 I/O</td><td><code>%Q16.0</code></td><td>ev-43</td><td>bool</td><td>a4.0 filter 1 valve bf01fifth sector</td><td>_7ev / 822</td></tr><tr><td>물리 I/O</td><td><code>%Q19.0</code></td><td>ev-59</td><td>bool</td><td>a9.0 filter 1 valve bf02second sector</td><td>_7ev / 843</td></tr><tr><td>물리 I/O</td><td><code>%Q20.0</code></td><td>ev-67</td><td>bool</td><td>a10.0 filter 1 valve bf02third sector</td><td>_7ev / 850</td></tr><tr><td>물리 I/O</td><td><code>%Q21.0</code></td><td>ev-75</td><td>bool</td><td>a11.0 filter 1 valve bf02fourth sector</td><td>_7ev / 858</td></tr><tr><td>물리 I/O</td><td><code>%Q22.0</code></td><td>ev-83</td><td>bool</td><td>a12.0 filter 1 valve bf02fifth sector</td><td>_7ev / 866</td></tr><tr><td>물리 I/O</td><td><code>%Q18.0</code></td><td>ev-51</td><td>bool</td><td>a8.0 filter 1 valve bf02first sector</td><td>_7ev / 890</td></tr><tr><td>내부</td><td><code>%M180.3</code></td><td>bf01_run</td><td>bool</td><td></td><td>_7ev / 902</td></tr><tr><td>물리 I/O</td><td><code>%IW398</code></td><td>pr_bf01</td><td>int</td><td>differential pressure switchbags filter bf-01(4-20ma)</td><td>_7ev / 1523</td></tr><tr><td>물리 I/O</td><td><code>%IW386</code></td><td>tc09</td><td>int</td><td>temperature bf-01</td><td>_7ev / 1555</td></tr></tbody></table></div><p class="muted">위 주소는 백업 심볼의 Address 값이다. 옛 I/O 주소가 설명에 남아 있어 설명 문자열을 현재 주소로 사용하지 않는다. 단자·퓨즈·릴레이·모듈 배선 확정은 아래 전기 원문에서 별도로 수행한다.</p><h2 id="hmi">HMI 설정 주소와 표시 의미</h2><div class="table-wrap"><table><thead><tr><th>HMI 태그</th><th>설정 주소</th><th>Access Name</th><th>내부 ID</th></tr></thead><tbody><tr><td>BF01_RUN</td><td><code>MX180.3</code></td><td>PLC</td><td>00456</td></tr></tbody></table></div><p class="muted">HMI 주소는 dde.cfg 설정값이며 PLC 물리 I/Q와 다를 수 있다. 표시색·입력값·알람 팝업은 화면 스크립트 및 온라인 값으로 추가 검증한다.</p><h2 id="logic">관련 PLC 원본 래더</h2><div class="table-wrap"><table><thead><tr><th>블록 / 색인 순서</th><th>제목</th><th>원본 구조</th><th>태그 이름 해석</th><th>연결 자료</th></tr></thead><tbody><tr><td>analog input conversion / 43</td><td>dp-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1773.html">원본 연결 보기 #1773</a></td></tr><tr><td>filter / 5</td><td>enabling sleeve washing</td><td>15 Parts / 29 Wires</td><td>15/15</td><td><a href="../networks/network-1886.html">원본 연결 보기 #1886</a></td></tr><tr><td>filter / 6</td><td>work pause times for filter valves</td><td>10 Parts / 20 Wires</td><td>13/13</td><td><a href="../networks/network-1887.html">원본 연결 보기 #1887</a></td></tr><tr><td>filter / 10</td><td>a0.0 filter 1 valve bf01first sector</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1891.html">원본 연결 보기 #1891</a></td></tr><tr><td>filter / 11</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1892.html">원본 연결 보기 #1892</a></td></tr><tr><td>filter / 12</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1893.html">원본 연결 보기 #1893</a></td></tr><tr><td>filter / 13</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1894.html">원본 연결 보기 #1894</a></td></tr><tr><td>filter / 14</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1895.html">원본 연결 보기 #1895</a></td></tr><tr><td>filter / 15</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1896.html">원본 연결 보기 #1896</a></td></tr><tr><td>filter / 16</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1897.html">원본 연결 보기 #1897</a></td></tr><tr><td>filter / 17</td><td>wash filter</td><td>32 Parts / 65 Wires</td><td>42/42</td><td><a href="../networks/network-1898.html">원본 연결 보기 #1898</a></td></tr></tbody></table></div><details><summary>설비 제목이 일치하는 네트워크의 접점 조건 펼치기</summary><p class="muted">정적 읽기 보조 자료. 타이머·호출 블록·다중 쓰기 및 실제 실행 조건은 원본 연결과 TIA로 검증한다.</p><div class="table-wrap"><table><thead><tr><th>네트워크</th><th>동작</th><th>대상</th><th>조건식</th><th>내용</th></tr></thead><tbody><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-11</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 11]) AND Abilita_lavaggio_BF01)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-51</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 12]) AND Abilita_lavaggio_BF02)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-12</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 13]) AND Abilita_lavaggio_BF01)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-52</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 14]) AND Abilita_lavaggio_BF02)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-13</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 15]) AND Abilita_lavaggio_BF01)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-53</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 16]) AND Abilita_lavaggio_BF02)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-14</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 17]) AND Abilita_lavaggio_BF01)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-54</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 18]) AND Abilita_lavaggio_BF02)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-15</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 19]) AND Abilita_lavaggio_BF01)</td><td>조건에 따른 Coil 기록</td></tr><tr><td><a href="../networks/network-1891.html">#1891</a></td><td>Coil</td><td>EV-55</td><td>(((ON AND Tag_132) AND [Data.Ev_filter_on = 20]) AND Abilita_lavaggio_BF02)</td><td>조건에 따른 Coil 기록</td></tr></tbody></table></div></details><h2 id="alarm">알람·설정값 추적</h2><p>설비 이름으로 일치한 알람 전용 네트워크가 없다. 상위 설비 고장 및 일반 진단 블록의 참조를 확인한다.</p><p>관련 검색 코드의 시간 상수 후보: 직접 상수 없음 / 설정 DB 및 타이머 인스턴스 확인. 여러 설비를 포함한 공유 네트워크의 상수도 포함된다. 실제 적용 대상·접점 경로·설정 DB 값은 원본에서 확정한다.</p><h2 id="work">운전 확인과 고장 진단 절차</h2><p>아래는 설비 유형에 맞춘 점검 절차안이다. 원본에서 확정한 제어 논리와 현장 절차를 대조해 승인용 문서로 발전시킨다.</p><ol><li><strong>필터 운전 허가</strong> — 분진 스크루·로터리 밸브·BF_RUN 표시·차압 기준 및 강제 세정 조건을 원본 Filter 네트워크로 검토한다.</li><li><strong>세정 순서</strong> — EV11~50과 EV51~90을 구분하고 실제 순서 변수의 값 → 비교기 → 개별 출력 주소를 추적한다. 번호 범위만 보고 순서를 정하지 않는다.</li><li><strong>펄스/휴지 시간</strong> — 작업 시간·휴지 시간·차압 단계별 계수 및 시험 ON/OFF 조건을 기록한다.</li><li><strong>세정 불량</strong> — 출력 펄스 → 릴레이 → 전원/퓨즈 → 코일 → 압축공기 → 밸브 → 차압 변화 순으로 점검한다.</li><li><strong>온도·분진 배출</strong> — TC09/PV14, SC/VR 피드백과 필터 과온·차압 경보를 연결해 점검한다.</li></ol><h2>하위 구성품</h2><div class="table-wrap"><table><thead><tr><th>ID</th><th>이름</th><th>자료 상태</th></tr></thead><tbody><tr><td><a href="EV11.html">EV11</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV12.html">EV12</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV13.html">EV13</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV14.html">EV14</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV15.html">EV15</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV16.html">EV16</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV17.html">EV17</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV18.html">EV18</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV19.html">EV19</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV20.html">EV20</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV21.html">EV21</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV22.html">EV22</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV23.html">EV23</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV24.html">EV24</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV25.html">EV25</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV26.html">EV26</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV27.html">EV27</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV28.html">EV28</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV29.html">EV29</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV30.html">EV30</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV31.html">EV31</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV32.html">EV32</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV33.html">EV33</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV34.html">EV34</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV35.html">EV35</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV36.html">EV36</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV37.html">EV37</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV38.html">EV38</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV39.html">EV39</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV40.html">EV40</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV41.html">EV41</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV42.html">EV42</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV43.html">EV43</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV44.html">EV44</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV45.html">EV45</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV46.html">EV46</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV47.html">EV47</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV48.html">EV48</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV49.html">EV49</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr><tr><td><a href="EV50.html">EV50</a></td><td>필터 펄스 세정 밸브</td><td>자료에서 확인</td></tr></tbody></table></div><h2 id="sim">시뮬레이터 모델과 시험 설계</h2><p>시뮬레이터는 운전 요청, 허가, 출력, 지연 응답, 고장, Reset, 초기값을 각각 저장한다. 물리 입력과 내부/HMI 상태를 분리하며, 임의로 넣은 지연·관성·공정 계수는 교육용 가정으로 표시한다. 아래 시험은 아직 실행하지 않았다.</p><div class="table-wrap"><table><thead><tr><th>시험 ID</th><th>상황</th><th>주입 조건</th><th>확인할 결과</th><th>실행 상태</th></tr></thead><tbody><tr><td>BF01-SIM-01</td><td>세정 허가</td><td>SC/VR·차압·BF_RUN 변경</td><td>두 필터 허가를 각각 확인</td><td>설계·미실행</td></tr><tr><td>BF01-SIM-02</td><td>전체 펄스 순서</td><td>순서 변수 전 범위</td><td>80개 EV 출력과 비교기 상수 매핑 확인</td><td>설계·미실행</td></tr><tr><td>BF01-SIM-03</td><td>펄스/휴지</td><td>작업/휴지 설정 변경</td><td>단계·주기·중복 출력 검증</td><td>설계·미실행</td></tr><tr><td>BF01-SIM-04</td><td>차압 경계</td><td>DP 임계값 전후</td><td>허가·시간 계수의 실제 분기 확인</td><td>설계·미실행</td></tr><tr><td>BF01-SIM-05</td><td>온도/배출 고장</td><td>온도와 SC/VR 고장 입력 변경</td><td>PV14·정지/경보 경로 확인</td><td>설계·미실행</td></tr></tbody></table></div><h2 id="verify">확인 대장과 작업 기록</h2><div class="table-wrap"><table><thead><tr><th>ID</th><th>항목</th><th>확인 작업</th><th>상태</th></tr></thead><tbody><tr><td>BF01-V-01</td><td>식별/실물</td><td>도면 태그·물리 위치·명판을 대조하고 현재 설치/사용 상태 확정</td><td>확인 대기</td></tr><tr><td>BF01-V-02</td><td>제어/데이터</td><td>원본 네트워크와 관련 설정·접점 극성·주소를 현재 프로젝트로 대조</td><td>확인 대기</td></tr><tr><td>BF01-V-03</td><td>시뮬레이션</td><td>위 시험안의 기대 결과를 원본 실행 결과로 확정하고 실행 증거 기록</td><td>확인 대기</td></tr><tr><td>BF01-V-04</td><td>전기 배선</td><td>현재 I/Q 주소·모듈·단자·전원·중간 릴레이를 현장 배선으로 검증</td><td>확인 대기</td></tr><tr><td>BF01-V-05</td><td>HMI/통신</td><td>HMI 설정 주소·자료형·가공 상태를 온라인 PLC 값으로 검증</td><td>확인 대기</td></tr></tbody></table></div><p>작업 기록에는 장치 ID, 도면 FG/PDF 페이지, 원본 네트워크 문서 ID, 전/후 값, 실제 단자·코일·센서 확인, 증거 사진, 조치와 검증자·일시를 함께 남긴다.</p><details><summary>관련 전기 회로의 추출 원문</summary><p class="muted">PDF 텍스트 추출은 위치 순서가 바뀔 수 있다. 배선·교차참조는 원본 PDF 시각 확인을 기준으로 한다.</p><h3>FG 152 / PDF 153</h3><pre>SUPPLY 110Vac JB1 PLC MODULE
+110Vac 9.109/4110Vac 9.1160/60Vac 9.99/5
+152GD15A
+152QF16A 152QF42AX31X32 X33REDFAS17 1,5 mmqREDFAS17 1,5 mmq
+152.1152.2
+152QF24ABLUEFAS17 1,5 mmq-0Vdc 152.4153/0
++24Vdc 152.5153/0152EV1
+152QF31A
+5L7N3152TM1
+110Vac 152.8154/00Vac 9.9154/0
++24Vdc 152.559/9-0Vdc 152.460/9</pre><h3>FG 153 / PDF 154</h3><pre>CONFIGURATION PLC JB1 BOX
+6ES7155-5AA01-0AB0
+IM 155-5 PN ST6ES7155-5AA00-0AB0153IM155
++24Vdc 152.5+24Vdc 152.5-0Vdc 152.4154/0-0Vdc 152.4152/1
+POS.26ES7531-7KF00-0AB0
+AI 8xU/I/RTD/TC ST6ES7531-7KF00-0AB00AI 41 52 63 7
+P C
+153A1
+6ES7523-1BL01-0AB0
+DI/DQ 16x24VDC6ES7523-1BL00-0AA0a
+b
+.0.1.2.3.4.5.6.7
+.0.1.2.3.4.5.6.7
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7
+c
+d
+P
+P
+153A3
+POS.4POS.3
+DQ 32x24VDC/0.5A HF6ES7522-1BL01-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+P P
+153A2
+6ES7522-1BL01-0AB06ES7532-5HF00-0AB0
+AQ 8xU/I HS6ES7532-5HF00-0AB00AQ
+123
+P
+4567
+153A4
+POS.5</pre><h3>FG 154 / PDF 155</h3><pre>CLEAN BAGS VALVES COMMAND
+110Vac 152.8152/5 110Vac 152.8155/0
+-0Vdc 152.4153/2 -0Vdc 152.4155/00Vac 9.9152/5 0Vac 9.9155/0
+FILTER 1 VALVE BF01FIRST SECTOR
+X35
+4X3EV-11
+154KA1154/3
+154KA15x202A FA12.0173/1
+FILTER 2 VALVE BF01FIRST SECTOR
+X37
+6X3EV-12
+154KA2154/5
+5x202A FA12.1173/1154KA2
+FILTER 3 VALVE BF01FIRST SECTOR
+X39
+8X3EV-13
+154KA3154/8
+5x202A FA12.2173/1154KA3</pre><h3>FG 155 / PDF 156</h3><pre>CLEAN BAGS VALVES COMMAND
+155KA3A12.5173/12A F5x20
+155KA3155/8
+EV-1614X3
+X315
+FILTER 6 VALVE BF01FIRST SECTOR
+155KA2A12.4173/12A F5x20
+155KA2155/5
+EV-1512X3
+X313
+FILTER 5 VALVE BF01FIRST SECTOR
+A12.3173/12A F5x20155KA1
+155KA1155/3
+EV-1410X3
+X311
+FILTER 4 VALVE BF01FIRST SECTOR
+0Vac 9.9156/00Vac 9.9154/9 -0Vdc 152.4156/0-0Vdc 152.4154/9
+110Vac 152.8156/0110Vac 152.8154/9</pre><h3>FG 156 / PDF 157</h3><pre>110Vac 152.8155/9 110Vac 152.8157/0
+-0Vdc 152.4155/9 -0Vdc 152.4157/00Vac 9.9155/9 0Vac 9.9157/0
+FILTER 7 VALVE BF01FIRST SECTOR
+X317
+16X3EV-17
+156KA1156/3
+156KA15x202A FA12.6173/1
+FILTER 8 VALVE BF01FIRST SECTOR
+X319
+18X3EV-18
+156KA2156/5
+5x202A FA12.7173/1156KA2
+FILTER 1 VALVE BF01SECOND SECTOR
+X321
+20X3EV-19
+156KA3156/8
+5x202A FA13.0174/1156KA3
+CLEAN BAGS VALVES COMMAND</pre><h3>FG 157 / PDF 158</h3><pre>CLEAN BAGS VALVES COMMAND
+157KA3A13.3174/12A F5x20
+157KA3157/8
+EV-2226X3
+X327
+FILTER 4 VALVE BF01SECOND SECTOR
+157KA2A13.2174/12A F5x20
+157KA2157/5
+EV-2124X3
+X325
+FILTER 3 VALVE BF01SECOND SECTOR
+A13.1174/12A F5x20157KA1
+157KA1157/3
+EV-2022X3
+X323
+FILTER 2 VALVE BF01SECOND SECTOR
+0Vac 9.9158/00Vac 9.9156/9 -0Vdc 152.4158/0-0Vdc 152.4156/9
+110Vac 152.8158/0110Vac 152.8156/9</pre><h3>FG 158 / PDF 159</h3><pre>CLEAN BAGS VALVES COMMAND
+110Vac 152.8157/9 110Vac 152.8159/0
+-0Vdc 152.4157/9 -0Vdc 152.4159/00Vac 9.9157/9 0Vac 9.9159/0
+FILTER 5 VALVE BF01SECOND SECTOR
+X329
+28X3EV-23
+158KA1158/3
+158KA15x202A FA13.4174/1
+FILTER 6 VALVE BF01SECOND SECTOR
+X331
+30X3EV-24
+158KA2158/5
+5x202A FA13.5174/1158KA2
+FILTER 7 VALVE BF01SECOND SECTOR
+X333
+32X3EV-25
+158KA3158/8
+5x202A FA13.6174/1158KA3</pre><h3>FG 159 / PDF 160</h3><pre>CLEAN BAGS VALVES COMMAND
+159KA3A14.1175/12A F5x20
+159KA3159/8
+EV-2838X3
+X339
+FILTER 2 VALVE BF01THIRD SECTOR
+159KA2A14.0175/12A F5x20
+159KA2159/5
+EV-2736X3
+X337
+FILTER 1 VALVE BF01THIRD SECTOR
+A13.7174/12A F5x20159KA1
+159KA1159/3
+EV-2634X3
+X335
+FILTER 8 VALVE BF01SECOND SECTOR
+0Vac 9.9160/00Vac 9.9158/9 -0Vdc 152.4160/0-0Vdc 152.4158/9
+110Vac 152.8160/0110Vac 152.8158/9</pre><h3>FG 160 / PDF 161</h3><pre>CLEAN BAGS VALVES COMMAND
+110Vac 152.8159/9 110Vac 152.8161/0
+-0Vdc 152.4159/9 -0Vdc 152.4161/00Vac 9.9159/9 0Vac 9.9161/0
+FILTER 3 VALVE BF01THIRD SECTOR
+X341
+40X3EV-29
+160KA1160/3
+160KA15x202A FA14.2175/1
+FILTER 4 VALVE BF01THIRD SECTOR
+X343
+42X3EV-30
+160KA2160/5
+5x202A FA14.3175/1160KA2
+FILTER 5 VALVE BF01THIRD SECTOR
+X345
+44X3EV-31
+160KA3160/8
+5x202A FA14.4175/1160KA3</pre><h3>FG 161 / PDF 162</h3><pre>CLEAN BAGS VALVES COMMAND
+161KA3A14.7175/12A F5x20
+161KA3161/8
+EV-3450X3
+X351
+FILTER 8 VALVE BF01THIRD SECTOR
+161KA2A14.6175/12A F5x20
+161KA2161/5
+EV-3348X3
+X349
+FILTER 7 VALVE BF01THIRD SECTOR
+A14.5175/12A F5x20161KA1
+161KA1161/3
+EV-3246X3
+X347
+FILTER 6 VALVE BF01THIRD SECTOR
+0Vac 9.9162/00Vac 9.9160/9 -0Vdc 152.4162/0-0Vdc 152.4160/9
+110Vac 152.8162/0110Vac 152.8160/9</pre><h3>FG 162 / PDF 163</h3><pre>CLEAN BAGS VALVES COMMAND
+110Vac 152.8161/9 110Vac 152.8163/0
+-0Vdc 152.4161/9 -0Vdc 152.4163/00Vac 9.9161/9 0Vac 9.9163/0
+FILTER 1 VALVE BF01FOURTH SECTOR
+X353
+52X3EV-35
+162KA1162/3
+162KA15x202A FA15.0176/1
+FILTER 2 VALVE BF01FOURTH SECTOR
+X355
+54X3EV-36
+162KA2162/5
+5x202A FA15.1176/1162KA2
+FILTER 3 VALVE BF01FOURTH SECTOR
+X357
+56X3EV-37
+162KA3162/8
+5x202A FA15.2176/1162KA3</pre><h3>FG 163 / PDF 164</h3><pre>CLEAN BAGS VALVES COMMAND
+163KA3A15.5176/12A F5x20
+163KA3163/8
+EV-4062X3
+X363
+FILTER 6 VALVE BF01FOURTH SECTOR
+163KA2A15.4176/12A F5x20
+163KA2163/5
+EV-3960X3
+X361
+FILTER 5 VALVE BF01FOURTH SECTOR
+A15.3176/12A F5x20163KA1
+163KA1163/3
+EV-3858X3
+X359
+FILTER 4 VALVE BF01FOURTH SECTOR
+0Vac 9.9164/00Vac 9.9162/9 -0Vdc 152.4164/0-0Vdc 152.4162/9
+110Vac 152.8164/0110Vac 152.8162/9</pre><h3>FG 164 / PDF 165</h3><pre>CLEAN BAGS VALVES COMMAND
+110Vac 152.8163/9 110Vac 152.8165/0
+-0Vdc 152.4163/9 -0Vdc 152.4165/00Vac 9.9163/9 0Vac 9.9165/0
+FILTER 7 VALVE BF01FOURTH SECTOR
+X365
+64X3EV-41
+164KA1164/3
+164KA15x202A FA15.6176/1
+FILTER 8 VALVE BF01FOURTH SECTOR
+X367
+66X3EV-42
+164KA2164/5
+5x202A FA15.7176/1164KA2
+FILTER 1 VALVE BF01FIFTH SECTOR
+X369
+68X3EV-43
+164KA3164/8
+5x202A FA16.0179/1164KA3</pre><h3>FG 165 / PDF 166</h3><pre>CLEAN BAGS VALVES COMMAND
+165KA3A16.3179/12A F5x20
+165KA3165/8
+EV-4674X3
+X375
+FILTER 4 VALVE BF01FIFTH SECTOR
+165KA2A16.2179/12A F5x20
+165KA2165/5
+EV-4572X3
+X373
+FILTER 3 VALVE BF01FIFTH SECTOR
+A16.1179/12A F5x20165KA1
+165KA1165/3
+EV-4470X3
+X371
+FILTER 2 VALVE BF01FIFTH SECTOR
+0Vac 9.9166/00Vac 9.9164/9 -0Vdc 152.4166/0-0Vdc 152.4164/9
+110Vac 152.8166/0110Vac 152.8164/9</pre><h3>FG 166 / PDF 167</h3><pre>CLEAN BAGS VALVES COMMAND
+110Vac 152.8165/9 110Vac 152.8167/0
+-0Vdc 152.4165/9 -0Vdc 152.4167/00Vac 9.9165/9 0Vac 9.9167/0
+FILTER 5 VALVE BF01FIFTH SECTOR
+X377
+76X3EV-47
+166KA1166/3
+166KA15x202A FA16.4179/1
+FILTER 6 VALVE BF01FIFTH SECTOR
+X379
+78X3EV-48
+166KA2166/5
+5x202A FA16.5179/1166KA2
+FILTER 7 VALVE BF01FIFTH SECTOR
+X381
+80X3EV-49
+166KA3166/8
+5x202A FA16.6179/1166KA3</pre><h3>FG 167 / PDF 168</h3><pre>CLEAN BAGS VALVES COMMAND
+A16.7179/12A F5x20167KA1
+167KA1167/3
+EV-5082X3
+X383
+FILTER 8 VALVE BF01FIFTH SECTOR
+0Vac 9.9168/00Vac 9.9166/9 -0Vdc 152.4168/0-0Vdc 152.4166/9
+110Vac 152.8168/0110Vac 152.8166/9</pre><h3>FG 168 / PDF 169</h3><pre>PNEUMATIC VALVE
+110Vac 152.8167/9 110Vac 152.8169/0
+-0Vdc 152.4167/9 -0Vdc 152.4171/00Vac 9.9167/9 0Vac 9.9169/0
+INLET FRESH AIRFILTERS VALVE
+X385
+84X3PV-14
+168KA1168/3
+168KA15x202A FA17.0180/1
++24Vdc 152.5153/2 +24Vdc 152.5170/0VALVE PV-14OPENVALVE PV-14CLOSED
+ZS.OPV-1486X3E28.0177/2
+5x202A F
+X387ZS.CPV-1488X3E28.1177/2
+5x202A F
+X389</pre><h3>FG 169 / PDF 170</h3><pre>DIFFERENTIAL PRESSURE CONTROL
+2A F5x20
+DIFFERENTIAL PRESSURE SWITCHBAGS FILTER BF-01DIFFERENTIAL PRESSURE SWITCHBAGS FILTER BF-02110Vac 152.8170/0110Vac 152.8168/9 0Vac 9.9///0Vac 9.9168/9
++-110VacDP-01OUTPUT 4-20mA0/50 mbar
++PEW398172/4-PEW398172/4
+169SCH1172/390X3
+X392X393
+X394X391 2A F5x20
++-110VacDP-02OUTPUT 4-20mA0/50 mbar
++PEW400172/5-PEW400172/5
+169SCH2172/595X3
+X397X398
+X399X396</pre><h3>FG 170 / PDF 171</h3><pre>E28.5177/5
+LD-01 PB14
+110Vac 152.8///110Vac 152.8169/9
+0Vac 9.9///0Vac 9.981/9
+LIME CUTOUTLOCAL SELECTORLOW LEVELLD-01+24Vdc 152.5168/9 +24Vdc 152.5172/0109X3111X3
+X3110
+5x202A F5x202A F113X35x202A F
+LIMIT SWITCHINSPECTION DOOR
+170FC1E28.6177/6
+X3114
+115X35x202A FE28.7177/7
+X3116170SA1X3112
+LIME LEVEL INDICATOR LD-01</pre><h3>FG 171 / PDF 172</h3><pre>ANALOG INPUT MODULE
+-0Vdc 152.4172/0-0Vdc 152.4168/9
+PEW390
+TC-10 SPARE(4-20mA)
+PEW386
+TC-09 TEMPERATURE CONTROL BF-01(4-20mA)
+PEW388
+TC-09 TEMPERATURE CONTROL BF-01(4-20mA)
+PEW392
+TC-10 SPARE(4-20mA)
+TC-09
++PEW386-PEW386
++PEW388-PEW388X3100X3101X3102X3103X3104</pre><h3>FG 172 / PDF 173</h3><pre>+PEW39459/6-PEW39459/659SCH259/659SCH2180A/1
+-PEW400169/8
+-PEW398169/4
++PEW400169/8169SCH2169/8
++PEW398169/4169SCH1169/4
+-0Vdc 152.4173/0+24Vdc 152.5173/0+24Vdc 152.5170/9-0Vdc 152.4171/9
+PEW400
+DIFFERENTIAL PRESSURE SWITCHBAGS FILTER BF-02(4-20mA)
+PEW394
+MAIN ASPIRATOR FN-04 ABSORPTION(4-20mA)
+PEW396
+SPARE(4-20mA)
+PEW398
+DIFFERENTIAL PRESSURE SWITCHBAGS FILTER BF-01(4-20mA)
+500mA F5x20X224000
+ANALOG INPUT MODULE</pre><h3>FG 173 / PDF 174</h3><pre>DIGITAL OUTPUT MODULE
+A12.3155/3A12.2154/9A12.1154/6A12.0154/3
+4A F5x204001X22+24Vdc 152.5174/0+24Vdc 152.5172/9
+-0Vdc 152.4174/0-0Vdc 152.4172/9
+A12.7
+FILTER 8 VALVE BF01FIRST SECTOREV-18
+A12.6
+FILTER 7 VALVE BF01FIRST SECTOREV-17
+A12.5
+FILTER 6 VALVE BF01FIRST SECTOREV-16
+A12.3
+FILTER 4 VALVE BF01FIRST SECTOREV-14
+A12.2
+FILTER 3 VALVE BF01FIRST SECTOREV-13
+A12.1
+FILTER 2 VALVE BF01FIRST SECTOREV-12
+A12.0
+FILTER 1 VALVE BF01FIRST SECTOREV-11
+A12.4
+FILTER 5 VALVE BF01FIRST SECTOREV-15
+A12.4155/6A12.5155/9A12.6156/3A12.7156/6</pre><h3>FG 174 / PDF 175</h3><pre>DIGITAL OUTPUT MODULE
+A13.6158/9A13.7159/3
+A13.0156/9
+4002X225x204A F
++24Vdc 152.5173/9 +24Vdc 152.5175/0
+-0Vdc 152.4173/9 -0Vdc 152.4175/0
+A13.7
+FILTER 8 VALVE BF01SECOND SECTOREV-26
+A13.6
+FILTER 7 VALVE BF01SECOND SECTOREV-25
+A13.5
+FILTER 6 VALVE BF01SECOND SECTOREV-24
+A13.3
+FILTER 4 VALVE BF01SECOND SECTOREV-22
+A13.2
+FILTER 3 VALVE BF01SECOND SECTOREV-21
+A13.1
+FILTER 2 VALVE BF01SECOND SECTOREV-20
+A13.0
+FILTER 1 VALVE BF01SECOND SECTOREV-19
+A13.4
+FILTER 5 VALVE BF01SECOND SECTOREV-23
+A13.1157/3A13.2157/6A13.3157/9A13.4158/3A13.5158/6</pre><h3>FG 175 / PDF 176</h3><pre>DIGITAL OUTPUT MODULE
+A14.5161/3A14.3160/6A14.2160/3A14.1159/9A14.0159/6
+A14.7161/9A14.6161/6
+4A F5x204003X22+24Vdc 152.5176/0+24Vdc 152.5174/9
+-0Vdc 152.4176/0-0Vdc 152.4174/9
+A14.7
+FILTER 8 VALVE BF01THIRD SECTOREV-34
+A14.6
+FILTER 7 VALVE BF01THIRD SECTOREV-33
+A14.5
+FILTER 6 VALVE BF01THIRD SECTOREV-32
+A14.3
+FILTER 4 VALVE BF01THIRD SECTOREV-30
+A14.2
+FILTER 3 VALVE BF01THIRD SECTOREV-29
+A14.1
+FILTER 2 VALVE BF01THIRD SECTOREV-28
+A14.0
+FILTER 1 VALVE BF01THIRD SECTOREV-27
+A14.4
+FILTER 5 VALVE BF01THIRD SECTOREV-31
+A14.4160/9</pre><h3>FG 176 / PDF 177</h3><pre>DIGITAL OUTPUT MODULE
+A15.7164/6A15.6164/3A15.5163/9A15.4163/6A15.3163/3A15.2162/9A15.1162/6A15.0162/3
+4004X225x204A F
++24Vdc 152.5175/9 +24Vdc 152.5177/0
+-0Vdc 152.4175/9 -0Vdc 152.4178/0
+A15.7
+FILTER 8 VALVE BF01FOURTH SECTOREV-42
+A15.6
+FILTER 7 VALVE BF01FOURTH SECTOREV-41
+A15.5
+FILTER 6 VALVE BF01FOURTH SECTOREV-40
+A15.3
+FILTER 4 VALVE BF01FOURTH SECTOREV-38
+A15.2
+FILTER 3 VALVE BF01FOURTH SECTOREV-37
+A15.1
+FILTER 2 VALVE BF01FOURTH SECTOREV-36
+A15.0
+FILTER 1 VALVE BF01FOURTH SECTOREV-35
+A15.4
+FILTER 5 VALVE BF01FOURTH SECTOREV-39</pre><h3>FG 177 / PDF 178</h3><pre>177T1
+DIGITAL INPUT/OUTPUT MODULE
+E28.4
+THERMOSTATELECTRICALRESISTANCE ER-01
+E28.0
+LIMIT SWITCHPV-14 OPEN
+E28.1
+LIMIT SWITCHPV-14 CLOSED
+E28.2
+FEEDBACK MOTORASPIRATOR FN-04
+E28.3
+ALARM MOTORASPIRATOR FN-04
+E28.5
+LOW LEVEL LD-01
+E28.6
+LIMIT SWITCHINSPECTION DOOR170FC1
+E28.7
+LIME CUTOUTLOCAL SELECTOR170SA1
+E28.0168/4
+E28.1168/5
+X224005X224006X224007X224008X224009X224010
++24Vdc 152.5176/9 +24Vdc 152.5179/0
+E28.259/9
+E28.359/9
+E28.5170/2
+E28.6170/3
+E28.7170/5
+117X35x202A F
+X3118</pre><h3>FG 178 / PDF 179</h3><pre>DIGITAL INPUT/OUTPUT MODULE
+E29.4
+SPARE
+E29.0
+SPARE
+E29.1
+SPARE
+E29.2
+SPARE
+E29.3
+SPARE
+E29.5
+SPARE
+E29.6
+SPARE
+E29.7
+SPARE
+-0Vdc 152.4176/9 -0Vdc 152.4179/0
+X224011X224012X224013X224014X224015X224016X224017X224018</pre><h3>FG 179 / PDF 180</h3><pre>DIGITAL INPUT/OUTPUT MODULE
+A16.7A16.6
+A16.5
+FILTER 6 VALVE BF01FIFTH SECTOREV-48
+A16.0
+FILTER 1 VALVE BF01FIFTH SECTOREV-43
+A16.1
+FILTER 2 VALVE BF01FIFTH SECTOREV-44
+A16.2
+FILTER 3 VALVE BF01FIFTH SECTOREV-45
+A16.3
+FILTER 4 VALVE BF01FIFTH SECTOREV-46
+A16.4
+FILTER 5 VALVE BF01FIFTH SECTOREV-47
+A16.6
+FILTER 7 VALVE BF01FIFTH SECTOREV-49
+A16.7
+FILTER 8 VALVE BF01FIFTH SECTOREV-504019X225x204A IST.
++24Vdc 152.5177/9 +24Vdc 152.5180/0
+-0Vdc 152.4178/9 -0Vdc 152.4180/0
+A16.0164/9A16.1165/3A16.2165/6A16.3165/9A16.4166/3A16.5166/6</pre><h3>FG 180 / PDF 181</h3><pre>DIGITAL INPUT/OUTPUT MODULE
+-0Vdc 152.4180B/0-0Vdc 152.4179/9
++24Vdc 152.5180B/0+24Vdc 152.5179/9
+4A IST.5x204027X22
+A17.5
+SPARE
+A17.0
+INLET FRESH AIRFILTERS VALVEPV-14
+A17.1
+FN-04/FN-04A MOTORCOMMAND
+A17.2
+SPARE
+A17.3
+SPARE
+A17.4
+SPARE
+A17.6
+SPARE
+A17.7
+RESET ALARMINVERTER 59AS1MOTORS FN-04
+A17.0168/3 X224021X224022X224023X224024X224025X224026A17.160/2
+180KA1</pre><h3>FG 180A / PDF 182</h3><pre>+PAW33659/6-PAW33659/659SCH2172/1
+ANALOG OUTPUT MODULE
+PAW342
+SPARE
+PAW340
+SPARE
+PAW338
+SPARE
+PAW336
+ASPIRATION FAN FN-04(4-20mA)</pre><h3>FG 180B / PDF 183</h3><pre>ANALOG OUTPUT MODULE
+500mA F5x204028X22-0Vdc 152.4///-0Vdc 152.4180/9 +24Vdc 152.5///+24Vdc 152.5180/9
+PAW350
+SPARE
+PAW348
+SPARE
+PAW346
+SPARE
+PAW344
+SPARE</pre></details></main></div><footer>원본 백업과 도면에 근거한 오프라인 검토본 · 현장 현재값 및 TIA 실행 결과와 구분</footer></body></html>

@@ -1,0 +1,101 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="506" Gate="Contact" />
+    <Part UId="457" Gate="Lt">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="460" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="465" Gate="Gt">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="468" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="473" Gate="Mul">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <ORef UId="477" RefId="1" />
+    <ORef UId="478" RefId="49" />
+    <ORef UId="479" RefId="44" />
+    <ORef UId="480" RefId="44" />
+    <ORef UId="481" RefId="49" />
+    <ORef UId="482" RefId="49" />
+    <ORef UId="483" RefId="12" />
+    <ORef UId="484" RefId="12" />
+    <ORef UId="485" RefId="49" />
+    <ORef UId="486" RefId="49" />
+    <ORef UId="487" RefId="16" />
+    <ORef UId="488" RefId="53" />
+  </Parts>
+  <Wires>
+    <Wire UId="508">
+      <Powerrail />
+      <PCon UId="506" PinName="in" />
+    </Wire>
+    <Wire UId="489">
+      <OCon UId="477" />
+      <PCon UId="506" PinName="operand" />
+    </Wire>
+    <Wire UId="507">
+      <PCon UId="506" PinName="out" />
+      <PCon UId="457" PinName="pre" />
+      <PCon UId="465" PinName="pre" />
+      <PCon UId="473" PinName="en" />
+    </Wire>
+    <Wire UId="490">
+      <OCon UId="478" />
+      <PCon UId="457" PinName="in1" />
+    </Wire>
+    <Wire UId="491">
+      <OCon UId="479" />
+      <PCon UId="457" PinName="in2" />
+    </Wire>
+    <Wire UId="492">
+      <PCon UId="457" PinName="out" />
+      <PCon UId="460" PinName="en" />
+    </Wire>
+    <Wire UId="494">
+      <OCon UId="480" />
+      <PCon UId="460" PinName="in" />
+    </Wire>
+    <Wire UId="495">
+      <PCon UId="460" PinName="out1" />
+      <OCon UId="481" />
+    </Wire>
+    <Wire UId="496">
+      <OCon UId="482" />
+      <PCon UId="465" PinName="in1" />
+    </Wire>
+    <Wire UId="497">
+      <OCon UId="483" />
+      <PCon UId="465" PinName="in2" />
+    </Wire>
+    <Wire UId="498">
+      <PCon UId="465" PinName="out" />
+      <PCon UId="468" PinName="en" />
+    </Wire>
+    <Wire UId="500">
+      <OCon UId="484" />
+      <PCon UId="468" PinName="in" />
+    </Wire>
+    <Wire UId="501">
+      <PCon UId="468" PinName="out1" />
+      <OCon UId="485" />
+    </Wire>
+    <Wire UId="502">
+      <OCon UId="486" />
+      <PCon UId="473" PinName="in1" />
+    </Wire>
+    <Wire UId="503">
+      <OCon UId="487" />
+      <PCon UId="473" PinName="in2" />
+    </Wire>
+    <Wire UId="504">
+      <PCon UId="473" PinName="out" />
+      <OCon UId="488" />
+    </Wire>
+  </Wires>
+</FlgNet>

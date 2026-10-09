@@ -1,0 +1,73 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="23" RefId="752">
+      <CodeBlock UId="22" RefId="751" />
+    </CRef>
+    <ORef UId="25" RefId="753" />
+    <ORef UId="27" RefId="754" />
+    <ORef UId="29" RefId="755" />
+    <ORef UId="31" RefId="756" />
+    <ORef UId="33" RefId="757" />
+    <ORef UId="35" RefId="48" />
+    <ORef UId="37" RefId="48" />
+    <ORef UId="39" RefId="48" />
+    <ORef UId="41" RefId="758" />
+    <ORef UId="43" RefId="759" />
+    <ORef UId="45" RefId="760" />
+    <ORef UId="47" RefId="761" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="23" PinName="en" />
+    </Wire>
+    <Wire UId="24">
+      <OCon UId="25" />
+      <PCon UId="23" PinName="LS_Open" />
+    </Wire>
+    <Wire UId="26">
+      <OCon UId="27" />
+      <PCon UId="23" PinName="LS_Close" />
+    </Wire>
+    <Wire UId="28">
+      <OCon UId="29" />
+      <PCon UId="23" PinName="Selector" />
+    </Wire>
+    <Wire UId="30">
+      <OCon UId="31" />
+      <PCon UId="23" PinName="Allarm1" />
+    </Wire>
+    <Wire UId="32">
+      <OCon UId="33" />
+      <PCon UId="23" PinName="Allarm2" />
+    </Wire>
+    <Wire UId="34">
+      <OCon UId="35" />
+      <PCon UId="23" PinName="Allarm3" />
+    </Wire>
+    <Wire UId="36">
+      <OCon UId="37" />
+      <PCon UId="23" PinName="Allarm4" />
+    </Wire>
+    <Wire UId="38">
+      <OCon UId="39" />
+      <PCon UId="23" PinName="Allarm5" />
+    </Wire>
+    <Wire UId="40">
+      <PCon UId="23" PinName="HMI_LS_Open" />
+      <OCon UId="41" />
+    </Wire>
+    <Wire UId="42">
+      <PCon UId="23" PinName="HMI_LS_Close" />
+      <OCon UId="43" />
+    </Wire>
+    <Wire UId="44">
+      <PCon UId="23" PinName="Total_Allarms" />
+      <OCon UId="45" />
+    </Wire>
+    <Wire UId="46">
+      <PCon UId="23" PinName="HMI_Selectoor" />
+      <OCon UId="47" />
+    </Wire>
+  </Wires>
+</FlgNet>

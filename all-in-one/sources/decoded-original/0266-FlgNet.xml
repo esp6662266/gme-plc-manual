@@ -1,0 +1,53 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="1038" Gate="Contact" />
+    <Part UId="1040" Gate="Contact" />
+    <Part UId="1020" Gate="RCoil" />
+    <Part UId="1042" Gate="Contact" />
+    <Part UId="1024" Gate="Coil" />
+    <ORef UId="1025" RefId="1" />
+    <ORef UId="1026" RefId="175" />
+    <ORef UId="1027" RefId="176" />
+    <ORef UId="1028" RefId="176" />
+    <ORef UId="1029" RefId="177" />
+  </Parts>
+  <Wires>
+    <Wire UId="1044">
+      <Powerrail />
+      <PCon UId="1038" PinName="in" />
+    </Wire>
+    <Wire UId="1030">
+      <OCon UId="1025" />
+      <PCon UId="1038" PinName="operand" />
+    </Wire>
+    <Wire UId="1039">
+      <PCon UId="1038" PinName="out" />
+      <PCon UId="1040" PinName="in" />
+      <PCon UId="1042" PinName="in" />
+    </Wire>
+    <Wire UId="1031">
+      <OCon UId="1026" />
+      <PCon UId="1040" PinName="operand" />
+    </Wire>
+    <Wire UId="1041">
+      <PCon UId="1040" PinName="out" />
+      <PCon UId="1020" PinName="in" />
+    </Wire>
+    <Wire UId="1033">
+      <OCon UId="1027" />
+      <PCon UId="1020" PinName="operand" />
+    </Wire>
+    <Wire UId="1034">
+      <OCon UId="1028" />
+      <PCon UId="1042" PinName="operand" />
+    </Wire>
+    <Wire UId="1043">
+      <PCon UId="1042" PinName="out" />
+      <PCon UId="1024" PinName="in" />
+    </Wire>
+    <Wire UId="1036">
+      <OCon UId="1029" />
+      <PCon UId="1024" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

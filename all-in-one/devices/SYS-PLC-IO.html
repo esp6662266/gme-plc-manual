@@ -1,0 +1,1089 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SYS-PLC-IO · CPU·분산 I/O·신호 변환</title><link rel="stylesheet" href="../assets/manual.css"></head><body><header><a href="../index.html">GME 전체 설비 매뉴얼</a><a href="../index.html#purpose">프로젝트 목적·작업 순서</a><span>v0.2 · 2026-10-07 · 자료 검토본</span></header><div class="layout"><aside class="toc"><a href="#source">도면·확인 범위</a><a href="#io">I/O·내부 심볼</a><a href="#hmi">HMI 설정</a><a href="#logic">원본 래더</a><a href="#alarm">알람·설정</a><a href="#work">운전·진단 절차</a><a href="#sim">시뮬레이터 시험</a><a href="#verify">확인 대장</a></aside><main><h1>SYS-PLC-IO · CPU·분산 I/O·신호 변환</h1><p class="control-spec-link"><a href="../control-specs/SYS-PLC-IO.html">설비 제어 명세: 입출력·동작 조건·순서·이상 처리·근거</a></p><div class="source"><strong>공통 시스템</strong> · 자료에서 확인<br>CPU·I/O 구성, 원시 입력/출력, 단위 환산, 엔코더/TM 및 진단 상태를 관리한다.</div><h2 id="source">도면·식별과 현재 확인 범위</h2><p>PLC·전기 자료 기준 항목. <a href="../sources/Electrical_Rev2.pdf#page=103">FG 102 / PDF 103</a>, <a href="../sources/Electrical_Rev2.pdf#page=104">FG 103 / PDF 104</a>, <a href="../sources/Electrical_Rev2.pdf#page=105">FG 104 / PDF 105</a>, <a href="../sources/Electrical_Rev2.pdf#page=106">FG 105 / PDF 106</a>, <a href="../sources/Electrical_Rev2.pdf#page=107">FG 106 / PDF 107</a>, <a href="../sources/Electrical_Rev2.pdf#page=108">FG 107 / PDF 108</a>, <a href="../sources/Electrical_Rev2.pdf#page=109">FG 108 / PDF 109</a>, <a href="../sources/Electrical_Rev2.pdf#page=110">FG 109 / PDF 110</a>, <a href="../sources/Electrical_Rev2.pdf#page=111">FG 110 / PDF 111</a>, <a href="../sources/Electrical_Rev2.pdf#page=112">FG 111 / PDF 112</a>, <a href="../sources/Electrical_Rev2.pdf#page=113">FG 112 / PDF 113</a>, <a href="../sources/Electrical_Rev2.pdf#page=114">FG 113 / PDF 114</a>, <a href="../sources/Electrical_Rev2.pdf#page=115">FG 114 / PDF 115</a>, <a href="../sources/Electrical_Rev2.pdf#page=116">FG 115 / PDF 116</a>, <a href="../sources/Electrical_Rev2.pdf#page=117">FG 116 / PDF 117</a>, <a href="../sources/Electrical_Rev2.pdf#page=118">FG 117 / PDF 118</a>, <a href="../sources/Electrical_Rev2.pdf#page=119">FG 118 / PDF 119</a>, <a href="../sources/Electrical_Rev2.pdf#page=120">FG 119 / PDF 120</a>, <a href="../sources/Electrical_Rev2.pdf#page=121">FG 120 / PDF 121</a>, <a href="../sources/Electrical_Rev2.pdf#page=122">FG 121 / PDF 122</a>, <a href="../sources/Electrical_Rev2.pdf#page=123">FG 122 / PDF 123</a>, <a href="../sources/Electrical_Rev2.pdf#page=124">FG 123 / PDF 124</a>, <a href="../sources/Electrical_Rev2.pdf#page=125">FG 124 / PDF 125</a>, <a href="../sources/Electrical_Rev2.pdf#page=126">FG 125 / PDF 126</a>, <a href="../sources/Electrical_Rev2.pdf#page=127">FG 126 / PDF 127</a>, <a href="../sources/Electrical_Rev2.pdf#page=128">FG 127 / PDF 128</a>, <a href="../sources/Electrical_Rev2.pdf#page=129">FG 128 / PDF 129</a>, <a href="../sources/Electrical_Rev2.pdf#page=130">FG 129 / PDF 130</a>, <a href="../sources/Electrical_Rev2.pdf#page=131">FG 130 / PDF 131</a>, <a href="../sources/Electrical_Rev2.pdf#page=132">FG 131 / PDF 132</a>, <a href="../sources/Electrical_Rev2.pdf#page=133">FG 132 / PDF 133</a>, <a href="../sources/Electrical_Rev2.pdf#page=134">FG 133 / PDF 134</a>, <a href="../sources/Electrical_Rev2.pdf#page=135">FG 134 / PDF 135</a>, <a href="../sources/Electrical_Rev2.pdf#page=136">FG 135 / PDF 136</a>, <a href="../sources/Electrical_Rev2.pdf#page=137">FG 136 / PDF 137</a>, <a href="../sources/Electrical_Rev2.pdf#page=138">FG 137 / PDF 138</a>, <a href="../sources/Electrical_Rev2.pdf#page=139">FG 138 / PDF 139</a>, <a href="../sources/Electrical_Rev2.pdf#page=140">FG 139 / PDF 140</a>, <a href="../sources/Electrical_Rev2.pdf#page=141">FG 140 / PDF 141</a>, <a href="../sources/Electrical_Rev2.pdf#page=142">FG 141 / PDF 142</a>, <a href="../sources/Electrical_Rev2.pdf#page=143">FG 142 / PDF 143</a>, <a href="../sources/Electrical_Rev2.pdf#page=144">FG 143 / PDF 144</a>, <a href="../sources/Electrical_Rev2.pdf#page=145">FG 144 / PDF 145</a>, <a href="../sources/Electrical_Rev2.pdf#page=146">FG 145 / PDF 146</a>, <a href="../sources/Electrical_Rev2.pdf#page=147">FG 146 / PDF 147</a>, <a href="../sources/Electrical_Rev2.pdf#page=148">FG 147 / PDF 148</a>, <a href="../sources/Electrical_Rev2.pdf#page=149">FG 148 / PDF 149</a>, <a href="../sources/Electrical_Rev2.pdf#page=150">FG 149 / PDF 150</a>, <a href="../sources/Electrical_Rev2.pdf#page=154">FG 153 / PDF 154</a>, <a href="../sources/Electrical_Rev2.pdf#page=185">FG 182 / PDF 185</a></p><p>관련 물리 I/O 0개, 내부 심볼 0개, HMI 설정 0개, 관련 래더 84개. 목록은 태그 참조를 연결한 자료이며 공유 신호·상위/하위 설비 참조도 포함한다. 채널의 독점 소유나 독립 설비 전용 블록 수를 뜻하지 않는다.</p><h2 id="io">물리 I/O와 내부 심볼</h2><p>이 태그에 직접 연결되는 심볼 주소는 식별되지 않았다. 상위/연관 설비와 공정 조건으로 관리한다.</p><p class="muted">위 주소는 백업 심볼의 Address 값이다. 옛 I/O 주소가 설명에 남아 있어 설명 문자열을 현재 주소로 사용하지 않는다. 단자·퓨즈·릴레이·모듈 배선 확정은 아래 전기 원문에서 별도로 수행한다.</p><h2 id="hmi">HMI 설정 주소와 표시 의미</h2><p>직접 태그 이름으로 일치하는 HMI 설정은 없다. 가공·통합 상태 또는 상위 설비 화면 참조를 별도 확인한다.</p><p class="muted">HMI 주소는 dde.cfg 설정값이며 PLC 물리 I/Q와 다를 수 있다. 표시색·입력값·알람 팝업은 화면 스크립트 및 온라인 값으로 추가 검증한다.</p><h2 id="logic">관련 PLC 원본 래더</h2><div class="table-wrap"><table><thead><tr><th>블록 / 색인 순서</th><th>제목</th><th>원본 구조</th><th>태그 이름 해석</th><th>연결 자료</th></tr></thead><tbody><tr><td>hmi output / 1</td><td>(제목 없음)</td><td>12 Parts / 33 Wires</td><td>12/24</td><td><a href="../networks/network-356.html">원본 연결 보기 #356</a></td></tr><tr><td>i/o_flt1 / 1</td><td>(제목 없음)</td><td>2 Parts / 4 Wires</td><td>2/2</td><td><a href="../networks/network-434.html">원본 연결 보기 #434</a></td></tr><tr><td>mod_err / 1</td><td>(제목 없음)</td><td>2 Parts / 4 Wires</td><td>2/2</td><td><a href="../networks/network-439.html">원본 연결 보기 #439</a></td></tr><tr><td>prog_err / 1</td><td>(제목 없음)</td><td>2 Parts / 4 Wires</td><td>2/2</td><td><a href="../networks/network-444.html">원본 연결 보기 #444</a></td></tr><tr><td>rack_flt / 1</td><td>(제목 없음)</td><td>2 Parts / 4 Wires</td><td>2/2</td><td><a href="../networks/network-765.html">원본 연결 보기 #765</a></td></tr><tr><td>hmi inputs / 1</td><td>(제목 없음)</td><td>33 Parts / 62 Wires</td><td>31/42</td><td><a href="../networks/network-1070.html">원본 연결 보기 #1070</a></td></tr><tr><td>hmi inputs / 2</td><td>analog</td><td>28 Parts / 78 Wires</td><td>56/56</td><td><a href="../networks/network-1071.html">원본 연결 보기 #1071</a></td></tr><tr><td>main / 1</td><td>simulation</td><td>2 Parts / 3 Wires</td><td>1/1</td><td><a href="../networks/network-1612.html">원본 연결 보기 #1612</a></td></tr><tr><td>main / 2</td><td>(제목 없음)</td><td>5 Parts / 6 Wires</td><td>1/1</td><td><a href="../networks/network-1613.html">원본 연결 보기 #1613</a></td></tr><tr><td>main / 3</td><td>word input</td><td>4 Parts / 12 Wires</td><td>8/8</td><td><a href="../networks/network-1614.html">원본 연결 보기 #1614</a></td></tr><tr><td>main / 4</td><td>(제목 없음)</td><td>3 Parts / 9 Wires</td><td>6/6</td><td><a href="../networks/network-1615.html">원본 연결 보기 #1615</a></td></tr><tr><td>main / 5</td><td>word output</td><td>4 Parts / 12 Wires</td><td>8/8</td><td><a href="../networks/network-1616.html">원본 연결 보기 #1616</a></td></tr><tr><td>main / 6</td><td>(제목 없음)</td><td>4 Parts / 12 Wires</td><td>8/8</td><td><a href="../networks/network-1617.html">원본 연결 보기 #1617</a></td></tr><tr><td>main / 7</td><td>(제목 없음)</td><td>3 Parts / 9 Wires</td><td>6/6</td><td><a href="../networks/network-1618.html">원본 연결 보기 #1618</a></td></tr><tr><td>main / 8</td><td>analog conversion and allarms</td><td>5 Parts / 3 Wires</td><td>1/1</td><td><a href="../networks/network-1619.html">원본 연결 보기 #1619</a></td></tr><tr><td>main / 9</td><td>motors valve and burner</td><td>7 Parts / 3 Wires</td><td>1/1</td><td><a href="../networks/network-1620.html">원본 연결 보기 #1620</a></td></tr><tr><td>main / 10</td><td>motorized valve</td><td>3 Parts / 3 Wires</td><td>1/1</td><td><a href="../networks/network-1621.html">원본 연결 보기 #1621</a></td></tr><tr><td>main / 11</td><td>allarm manager and siren</td><td>2 Parts / 3 Wires</td><td>1/1</td><td><a href="../networks/network-1622.html">원본 연결 보기 #1622</a></td></tr><tr><td>main / 12</td><td>cpu clock</td><td>3 Parts / 7 Wires</td><td>5/5</td><td><a href="../networks/network-1623.html">원본 연결 보기 #1623</a></td></tr><tr><td>main / 13</td><td>trasfering bit of maintenance</td><td>3 Parts / 7 Wires</td><td>5/5</td><td><a href="../networks/network-1624.html">원본 연결 보기 #1624</a></td></tr><tr><td>main / 15</td><td>maintenance period limits</td><td>4 Parts / 8 Wires</td><td>4/4</td><td><a href="../networks/network-1626.html">원본 연결 보기 #1626</a></td></tr><tr><td>signal linearization / 1</td><td>(제목 없음)</td><td>15 Parts / 43 Wires</td><td>29/29</td><td><a href="../networks/network-1658.html">원본 연결 보기 #1658</a></td></tr><tr><td>signal linearization / 2</td><td>(제목 없음)</td><td>2 Parts / 5 Wires</td><td>3/3</td><td><a href="../networks/network-1659.html">원본 연결 보기 #1659</a></td></tr><tr><td>analog output conversion / 1</td><td>plant limits</td><td>21 Parts / 61 Wires</td><td>46/47</td><td><a href="../networks/network-1679.html">원본 연결 보기 #1679</a></td></tr><tr><td>analog output conversion / 2</td><td>bwf01 client feeder</td><td>5 Parts / 13 Wires</td><td>9/9</td><td><a href="../networks/network-1680.html">원본 연결 보기 #1680</a></td></tr><tr><td>analog output conversion / 3</td><td>bwf01 speed calculation</td><td>13 Parts / 39 Wires</td><td>30/30</td><td><a href="../networks/network-1681.html">원본 연결 보기 #1681</a></td></tr><tr><td>analog output conversion / 4</td><td>bwf02 client feeder</td><td>7 Parts / 18 Wires</td><td>13/13</td><td><a href="../networks/network-1682.html">원본 연결 보기 #1682</a></td></tr><tr><td>analog output conversion / 5</td><td>bwf02 speed calculation</td><td>8 Parts / 23 Wires</td><td>18/18</td><td><a href="../networks/network-1683.html">원본 연결 보기 #1683</a></td></tr><tr><td>analog output conversion / 6</td><td>rd-01 cylinder</td><td>6 Parts / 16 Wires</td><td>12/12</td><td><a href="../networks/network-1684.html">원본 연결 보기 #1684</a></td></tr><tr><td>analog output conversion / 7</td><td>fn-01 ventilator</td><td>6 Parts / 16 Wires</td><td>12/12</td><td><a href="../networks/network-1685.html">원본 연결 보기 #1685</a></td></tr><tr><td>analog output conversion / 8</td><td>br01 burner</td><td>8 Parts / 20 Wires</td><td>15/15</td><td><a href="../networks/network-1686.html">원본 연결 보기 #1686</a></td></tr><tr><td>analog output conversion / 9</td><td>br01 burner - gas</td><td>8 Parts / 21 Wires</td><td>15/15</td><td><a href="../networks/network-1687.html">원본 연결 보기 #1687</a></td></tr><tr><td>analog output conversion / 10</td><td>fn02 ventilation of secondary air</td><td>6 Parts / 16 Wires</td><td>12/12</td><td><a href="../networks/network-1688.html">원본 연결 보기 #1688</a></td></tr><tr><td>analog output conversion / 11</td><td>module aspirator fn-04</td><td>6 Parts / 16 Wires</td><td>12/12</td><td><a href="../networks/network-1689.html">원본 연결 보기 #1689</a></td></tr><tr><td>analog output conversion / 12</td><td>salt system</td><td>5 Parts / 12 Wires</td><td>8/8</td><td><a href="../networks/network-1690.html">원본 연결 보기 #1690</a></td></tr><tr><td>analog output conversion / 13</td><td>send output to perifery</td><td>4 Parts / 11 Wires</td><td>8/8</td><td><a href="../networks/network-1691.html">원본 연결 보기 #1691</a></td></tr><tr><td>analog output conversion / 14</td><td>bc01</td><td>6 Parts / 16 Wires</td><td>12/12</td><td><a href="../networks/network-1692.html">원본 연결 보기 #1692</a></td></tr><tr><td>analog output conversion / 15</td><td>mc04</td><td>6 Parts / 16 Wires</td><td>12/12</td><td><a href="../networks/network-1693.html">원본 연결 보기 #1693</a></td></tr><tr><td>analog input conversion / 1</td><td>tc04</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1731.html">원본 연결 보기 #1731</a></td></tr><tr><td>analog input conversion / 2</td><td>tc-05</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1732.html">원본 연결 보기 #1732</a></td></tr><tr><td>analog input conversion / 3</td><td>tc-09</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1733.html">원본 연결 보기 #1733</a></td></tr><tr><td>analog input conversion / 4</td><td>tc-10</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1734.html">원본 연결 보기 #1734</a></td></tr><tr><td>analog input conversion / 5</td><td>client 1 bwf01 flow rate</td><td>9 Parts / 26 Wires</td><td>19/19</td><td><a href="../networks/network-1735.html">원본 연결 보기 #1735</a></td></tr><tr><td>analog input conversion / 6</td><td>client 2 bwf02 flow rate</td><td>9 Parts / 26 Wires</td><td>19/19</td><td><a href="../networks/network-1736.html">원본 연결 보기 #1736</a></td></tr><tr><td>analog input conversion / 7</td><td>client 3 level indicator bwf01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1737.html">원본 연결 보기 #1737</a></td></tr><tr><td>analog input conversion / 8</td><td>client 4 level indicator bwf02</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1738.html">원본 연결 보기 #1738</a></td></tr><tr><td>analog input conversion / 9</td><td>tc-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1739.html">원본 연결 보기 #1739</a></td></tr><tr><td>analog input conversion / 10</td><td>tc-02</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1740.html">원본 연결 보기 #1740</a></td></tr><tr><td>analog input conversion / 11</td><td>tc-03</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1741.html">원본 연결 보기 #1741</a></td></tr><tr><td>analog input conversion / 12</td><td>tc-06</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1742.html">원본 연결 보기 #1742</a></td></tr><tr><td>analog input conversion / 13</td><td>tc-07</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1743.html">원본 연결 보기 #1743</a></td></tr><tr><td>analog input conversion / 14</td><td>zt-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1744.html">원본 연결 보기 #1744</a></td></tr><tr><td>analog input conversion / 15</td><td>psh-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1745.html">원본 연결 보기 #1745</a></td></tr><tr><td>analog input conversion / 16</td><td>psh-02</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1746.html">원본 연결 보기 #1746</a></td></tr><tr><td>analog input conversion / 17</td><td>psh-03</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1747.html">원본 연결 보기 #1747</a></td></tr><tr><td>analog input conversion / 18</td><td>r0-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1748.html">원본 연결 보기 #1748</a></td></tr><tr><td>analog input conversion / 19</td><td>r0-02</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1749.html">원본 연결 보기 #1749</a></td></tr><tr><td>analog input conversion / 20</td><td>r0-03</td><td>4 Parts / 14 Wires</td><td>11/11</td><td><a href="../networks/network-1750.html">원본 연결 보기 #1750</a></td></tr><tr><td>analog input conversion / 21</td><td>r0-04</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1751.html">원본 연결 보기 #1751</a></td></tr><tr><td>analog input conversion / 22</td><td>gas br-01 - position</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1752.html">원본 연결 보기 #1752</a></td></tr><tr><td>analog input conversion / 23</td><td>air br-01 - position</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1753.html">원본 연결 보기 #1753</a></td></tr><tr><td>analog input conversion / 24</td><td>max flow gas - flowmeter</td><td>4 Parts / 14 Wires</td><td>11/11</td><td><a href="../networks/network-1754.html">원본 연결 보기 #1754</a></td></tr><tr><td>analog input conversion / 25</td><td>max flow air - flowmeter</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1755.html">원본 연결 보기 #1755</a></td></tr><tr><td>analog input conversion / 26</td><td>reading encoder mv01</td><td>3 Parts / 28 Wires</td><td>6/25</td><td><a href="../networks/network-1756.html">원본 연결 보기 #1756</a></td></tr><tr><td>analog input conversion / 27</td><td>reading encoder mv02</td><td>3 Parts / 28 Wires</td><td>4/25</td><td><a href="../networks/network-1757.html">원본 연결 보기 #1757</a></td></tr><tr><td>analog input conversion / 28</td><td>reading encoder mv03</td><td>3 Parts / 28 Wires</td><td>4/25</td><td><a href="../networks/network-1758.html">원본 연결 보기 #1758</a></td></tr><tr><td>analog input conversion / 29</td><td>reading encoder mv05</td><td>3 Parts / 28 Wires</td><td>4/25</td><td><a href="../networks/network-1759.html">원본 연결 보기 #1759</a></td></tr><tr><td>analog input conversion / 30</td><td>reading encoder mv06</td><td>3 Parts / 28 Wires</td><td>4/25</td><td><a href="../networks/network-1760.html">원본 연결 보기 #1760</a></td></tr><tr><td>analog input conversion / 31</td><td>store current position value at power-off</td><td>6 Parts / 13 Wires</td><td>11/11</td><td><a href="../networks/network-1761.html">원본 연결 보기 #1761</a></td></tr><tr><td>analog input conversion / 32</td><td>data management mv01</td><td>10 Parts / 28 Wires</td><td>22/22</td><td><a href="../networks/network-1762.html">원본 연결 보기 #1762</a></td></tr><tr><td>analog input conversion / 33</td><td>data management mv02</td><td>10 Parts / 28 Wires</td><td>22/22</td><td><a href="../networks/network-1763.html">원본 연결 보기 #1763</a></td></tr><tr><td>analog input conversion / 34</td><td>mv03 data management</td><td>10 Parts / 28 Wires</td><td>22/22</td><td><a href="../networks/network-1764.html">원본 연결 보기 #1764</a></td></tr><tr><td>analog input conversion / 35</td><td>mv05 data management</td><td>10 Parts / 28 Wires</td><td>22/22</td><td><a href="../networks/network-1765.html">원본 연결 보기 #1765</a></td></tr><tr><td>analog input conversion / 36</td><td>mv06 data management</td><td>10 Parts / 28 Wires</td><td>22/22</td><td><a href="../networks/network-1766.html">원본 연결 보기 #1766</a></td></tr><tr><td>analog input conversion / 37</td><td>fn-02 fan</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1767.html">원본 연결 보기 #1767</a></td></tr><tr><td>analog input conversion / 38</td><td>bc-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1768.html">원본 연결 보기 #1768</a></td></tr><tr><td>analog input conversion / 39</td><td>mc04</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1769.html">원본 연결 보기 #1769</a></td></tr><tr><td>analog input conversion / 40</td><td>fn-02 aspirator</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1770.html">원본 연결 보기 #1770</a></td></tr><tr><td>analog input conversion / 41</td><td>rd-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1771.html">원본 연결 보기 #1771</a></td></tr><tr><td>analog input conversion / 42</td><td>fn-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1772.html">원본 연결 보기 #1772</a></td></tr><tr><td>analog input conversion / 43</td><td>dp-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1773.html">원본 연결 보기 #1773</a></td></tr><tr><td>analog input conversion / 44</td><td>dp-02</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1774.html">원본 연결 보기 #1774</a></td></tr><tr><td>analog input conversion / 45</td><td>pc-01</td><td>2 Parts / 9 Wires</td><td>7/7</td><td><a href="../networks/network-1775.html">원본 연결 보기 #1775</a></td></tr><tr><td>analog input conversion / 46</td><td>contactor ton passed in bwf</td><td>7 Parts / 17 Wires</td><td>11/11</td><td><a href="../networks/network-1776.html">원본 연결 보기 #1776</a></td></tr></tbody></table></div><h2 id="alarm">알람·설정값 추적</h2><p>설비 이름으로 일치한 알람 전용 네트워크가 없다. 상위 설비 고장 및 일반 진단 블록의 참조를 확인한다.</p><p>관련 검색 코드의 시간 상수 후보: s5t#15m. 여러 설비를 포함한 공유 네트워크의 상수도 포함된다. 실제 적용 대상·접점 경로·설정 DB 값은 원본에서 확정한다.</p><h2 id="work">운전 확인과 고장 진단 절차</h2><p>아래는 설비 유형에 맞춘 점검 절차안이다. 원본에서 확정한 제어 논리와 현장 절차를 대조해 승인용 문서로 발전시킨다.</p><ol><li><strong>논리 명칭 확인</strong> — 이 항목이 물리 계기인지 PLC 내부 공학값/루프 이름인지 확인한다.</li><li><strong>데이터 추적</strong> — 원시 입력→선택/환산→제어 루프→HMI 값을 네트워크와 DB 주소로 연결한다.</li></ol><h2 id="sim">시뮬레이터 모델과 시험 설계</h2><p>시뮬레이터는 운전 요청, 허가, 출력, 지연 응답, 고장, Reset, 초기값을 각각 저장한다. 물리 입력과 내부/HMI 상태를 분리하며, 임의로 넣은 지연·관성·공정 계수는 교육용 가정으로 표시한다. 아래 시험은 아직 실행하지 않았다.</p><div class="table-wrap"><table><thead><tr><th>시험 ID</th><th>상황</th><th>주입 조건</th><th>확인할 결과</th><th>실행 상태</th></tr></thead><tbody><tr><td>SYS-PLC-IO-SIM-01</td><td>데이터 추적</td><td>원시값 및 선택 조건 변경</td><td>논리 명칭의 입력/출력 관계 확인</td><td>설계·미실행</td></tr></tbody></table></div><h2 id="verify">확인 대장과 작업 기록</h2><div class="table-wrap"><table><thead><tr><th>ID</th><th>항목</th><th>확인 작업</th><th>상태</th></tr></thead><tbody><tr><td>SYS-PLC-IO-V-01</td><td>식별/실물</td><td>도면 태그·물리 위치·명판을 대조하고 현재 설치/사용 상태 확정</td><td>확인 대기</td></tr><tr><td>SYS-PLC-IO-V-02</td><td>제어/데이터</td><td>원본 네트워크와 관련 설정·접점 극성·주소를 현재 프로젝트로 대조</td><td>확인 대기</td></tr><tr><td>SYS-PLC-IO-V-03</td><td>시뮬레이션</td><td>위 시험안의 기대 결과를 원본 실행 결과로 확정하고 실행 증거 기록</td><td>확인 대기</td></tr></tbody></table></div><p>작업 기록에는 장치 ID, 도면 FG/PDF 페이지, 원본 네트워크 문서 ID, 전/후 값, 실제 단자·코일·센서 확인, 증거 사진, 조치와 검증자·일시를 함께 남긴다.</p><details><summary>관련 전기 회로의 추출 원문</summary><p class="muted">PDF 텍스트 추출은 위치 순서가 바뀔 수 있다. 배선·교차참조는 원본 PDF 시각 확인을 기준으로 한다.</p><h3>FG 102 / PDF 103</h3><pre>CONFIGURATION PLC
++24Vdc 10.10+24Vdc 10.10
+POS.9
+DI 32x24VDC HF6ES7521-1BL00-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+102A7
+6ES7521-1BL00-0AB0
+1515-2 PN
+SIMATICS7-1500
+ESCOK
+RUN
+102CPU
+6ES7954-8LE03-0AA06ES7515-2AN03-0AB0
+-0Vdc 10.6103/1-0Vdc 10.699/9
+LATO &quot;A&quot;LATO &quot;B&quot;RJ45RJ45PROFINET
+AI 8xU/I/RTD/TC ST6ES7531-7KF00-0AB00AI 41 52 63 7
+P C
+102A1
+6ES7531-7KF00-0AB0POS.2
+AI 8xU/I/RTD/TC ST6ES7531-7KF00-0AB00AI 41 52 63 7
+P C
+102A2
+6ES7531-7KF00-0AB0POS.3
+AI 8xU/I/RTD/TC ST6ES7531-7KF00-0AB00AI 41 52 63 7
+P C
+102A3
+6ES7531-7KF00-0AB0POS.4
+AI 8xU/I/RTD/TC ST6ES7531-7KF00-0AB00AI 41 52 63 7
+P C
+102A4
+6ES7531-7KF00-0AB0POS.5POS.6
+AQ 8xU/I HS6ES7532-5HF00-0AB00AQ
+123
+P
+4567
+102A5
+6ES7532-5HF00-0AB0POS.7
+AQ 8xU/I HS6ES7532-5HF00-0AB00AQ
+123
+P
+4567
+102A6
+6ES7532-5HF00-0AB0POS.8
+DI 32x24VDC HF6ES7521-1BL00-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+102A8
+6ES7521-1BL00-0AB0</pre><h3>FG 103 / PDF 104</h3><pre>POS.12
+DI 32x24VDC HF6ES7521-1BL00-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+103A3
+6ES7521-1BL00-0AB0POS.11
+DI 32x24VDC HF6ES7521-1BL00-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+103A2
+6ES7521-1BL00-0AB0POS.10
+DI 32x24VDC HF6ES7521-1BL00-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+103A1
+6ES7521-1BL00-0AB0
+CONFIGURATION PLC
+PS 25W 24VDC6ES7505-0KA00-0AB0103GD1
+6ES7505-0KA00-0AB0
+POS.13-0Vdc 10.6102/2-0Vdc 10.6104/0+24Vdc 10.10+24Vdc 10.10
+6ES7522-1BL01-0AB06ES7522-1BL01-0AB0
+DQ 32x24VDC/0.5A HF6ES7522-1BL01-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+P P
+103A4
+POS.14
+DQ 32x24VDC/0.5A HF6ES7522-1BL01-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+P P
+103A5
+POS.156ES7550-1AA01-0AB0POS.16
+TM COUNT 2x24V6ES7550-1AA00-0AB0A
++
+BN01201
+P
+CH0DI0DQ024VDCABN01201
+CH1DI1DQ1
+CH0
+CH1
+↑↓
+↑↓
+103A6
+6ES7550-1AA01-0AB0POS.17
+TM COUNT 2x24V6ES7550-1AA00-0AB0A
++
+BN01201
+P
+CH0DI0DQ024VDCABN01201
+CH1DI1DQ1
+CH0
+CH1
+↑↓
+↑↓
+103A7
+6ES7550-1AA01-0AB0POS.18
+TM COUNT 2x24V6ES7550-1AA00-0AB0A
++
+BN01201
+P
+CH0DI0DQ024VDCABN01201
+CH1DI1DQ1
+CH0
+CH1
+↑↓
+↑↓
+103A8</pre><h3>FG 104 / PDF 105</h3><pre>ANALOG INPUT MODULE
+PEW262
+PROBE SENSOR PT100 SUPPORTBEARING FN-01 (TC-05) -30...350°C(4-20mA)
+PEW258
+PROBE SENSOR PT100 SUPPORTBEARING FN-01 (TC-04) -30...250°C(4-20mA)
+PEW256
+PROBE SENSOR PT100 SUPPORTBEARING FN-01 (TC-04) -30...250°C(4-20mA)
+PEW260
+PROBE SENSOR PT100 SUPPORTBEARING FN-01 (TC-05) -30...350°C(4-20mA)
+-0Vdc 10.6103/3 -0Vdc 10.6105/0
++PEW25679/379SCH279/3
++PEW26079/779SCH479/7
+-PEW25679/3
+-PEW26079/7</pre><h3>FG 105 / PDF 106</h3><pre>ANALOG INPUT MODULE
+X2130005x20500mA F
+PEW268
+LEVEL BWF 01 (CLIENT MACHINE)(4-20mA)
+PEW266
+FLOW RATE BWF 02 (CLIENT MACHINE)(4-20mA)
+PEW264
+FLOW RATE BWF 01(CLIENT MACHINE)(4-20mA)
+PEW270
+LEVEL BWF 02 (CLIENT MACHINE)(4-20mA)
+85SCH585/1+PEW26485/0
+-0Vdc 10.6104/9+24Vdc 10.798/9 +24Vdc 10.7107/0-0Vdc 10.6106/0
+85SCH685/3+PEW26685/3
+85SCH785/6+PEW26885/5
+85SCH885/8+PEW27085/7
+-PEW26485/1
+-PEW26685/3
+-PEW26885/5
+-PEW27085/8</pre><h3>FG 106 / PDF 107</h3><pre>ANALOG INPUT MODULE78SCH178/2+PEW27878/2
+77SCH377/7+PEW27677/7
+-0Vdc 10.6107/0-0Vdc 10.6105/9
+PEW276
+TEMPERATURE CONTROL OUTPUTSMOKE (TC-03)(4-20mA)
+PEW272
+TEMPERATURE CONTROLCHAMBER AB-01 (TC-01)(4-20mA)
+PEW274
+SAFETY TEMPERATURE CONTROLCHAMBER AB-01 (TC-02)(4-20mA)
+PEW278
+TEMPERATURE CONTROL OUTPUTAB-01 (TC-06)(4-20mA)
+77SCH177/2+PEW27277/2
+77SCH277/5+PEW27477/5</pre><h3>FG 107 / PDF 108</h3><pre>ANALOG INPUT MODULE+PEW28675/575SCH275/5
++PEW28475/275SCH175/2
++PEW28282/282SCH182/2
+-0Vdc 10.6108/0+24Vdc 10.7109/0+24Vdc 10.7105/9-0Vdc 10.6106/9
++PEW28078/578SCH278/5
+PEW286
+PRESSURE CONTROL OUTPUTMV-03 (PSH-02)(4-20mA)
+PEW280
+TEMPERATURE CONTROL INPUTSMOKE (TC-07)(4-20mA)
+PEW282
+VIBRATION TRASMITTER BLOWER FN-01 (ZT-01)(4-20mA)
+PEW284
+PRESSURE CONTROL OUTPUTMV-02 (PSH-01)(4-20mA)
+500mA F5x20X213001
+SPARE</pre><h3>FG 108 / PDF 109</h3><pre>ANALOG INPUT MODULE
++PEW32276/276SCH176/2
++PEW32075/775SCH375/7
+PEW326
+MV-04 POSITION TRANSMITTER M18B(4-20mA)
+PEW322
+PRESSURE CONTROL (PC-01)(4-20mA)
+PEW320
+PRESSURE CONTROL (PSH-03)(4-20mA)
+PEW324
+MV-04 POSITION TRANSMITTER M18A(4-20mA)
+-0Vdc 10.6107/9 -0Vdc 10.6109/0
++PEW32441/241SCH141/3
++PEW32641/541SCH241/5SPARE</pre><h3>FG 109 / PDF 110</h3><pre>ANALOG INPUT MODULE
+X2130025x20500mA F
+PEW332
+ROTATING DRUM ABSORPTIONCURRENT RD-01(4-20mA)
+PEW330
+SPARE
+PEW328
+BLOWER FAN ABSORPTIONCURRENT FN-02(4-20mA)
+PEW334
+BLOWER FAN ABSORPTIONCURRENT FN-01(4-20mA)
++PEW32842/6
+-0Vdc 10.6108/9+24Vdc 10.7107/9 +24Vdc 10.7111/0-0Vdc 10.6110/0
++PEW33220/6
++PEW33447/6
+-PEW32842/6
+-PEW33220/6
+-PEW33447/642SCH242/642SCH2114/1
+20SCH220/620SCH2112/147SCH247/647SCH2112/1</pre><h3>FG 110 / PDF 111</h3><pre>ANALOG INPUT MODULE81SCH381/7+PEW35881/7
+81SCH181/3+PEW35681/3
+-0Vdc 10.6111/0-0Vdc 10.6109/9
+PEW356
+OXIGEN CONTROL TRASMITTER (R0-03)(4-20mA)
+PEW352
+OXIGEN CONTROL TRASMITTER (R0-01)(4-20mA)
+PEW354
+OXIGEN CONTROL TRASMITTER (R0-02)(4-20mA)
+PEW358
+OXIGEN CONTROL TRASMITTER (R0-04)(4-20mA)
+80SCH180/3+PEW35280/3
+80SCH380/7+PEW35480/7
+-PEW35280/3
+-PEW35480/7
+-PEW35681/3
+-PEW35881/7</pre><h3>FG 111 / PDF 112</h3><pre>ANALOG INPUT MODULE
+100SCH2114/1100SCH2100/4
+100SCH1114/1100SCH1100/2
++PEW366100/7
++PEW364100/6
++PEW362100/3
+-0Vdc 10.6113/0+24Vdc 10.7117/0+24Vdc 10.7109/9-0Vdc 10.6110/9
++PEW360100/0
+PEW366
+MASS FLOW METER AIROUTLET BR-01(4-20mA)
+PEW360
+RETRANSMISSION GASSERVOMOTOR BR-01(4-20mA)
+PEW362
+RETRANSMISSION AIRSERVOMOTOR BR-01(4-20mA)
+PEW364
+MASS FLOW METER GASOUTLET BR-01(4-20mA)
+500mA F5x20X213003
+-100.1114/1-100.1100/0
+-100.2100/3-100.2114/1100SCH3100/6
+100SCH4100/8-PEW364100/6
+-PEW366100/8</pre><h3>FG 112 / PDF 113</h3><pre>ANALOG OUTPUT MODULE
+PAW288
+FEEDING ROTATIONDRUM CONVEYOR BC-01(4-20mA)
+PAW290
+ROTATING DRUM RD-01(4-20mA)
+PAW292
+BLOWER FAN FN-01(4-20mA)
+PAW294
+METALLIC CONVEYOR MC-04(4-20mA)
++PAW29020/6-PAW29020/6+PAW29247/6-PAW29247/620SCH2109/4
+47SCH2109/5
++PAW28818/6-PAW28818/618SCH218/6
++PAW29424/6-PAW29424/624SCH224/6</pre><h3>FG 113 / PDF 114</h3><pre>ANALOG OUTPUT MODULE
+PAW296
+SPARE (CLIENT MACHINE)(4-20mA)
+PAW298
+FLOW RATE SPEED SET BWF 01(CLIENT MACHINE)(4-20mA)
+PAW300
+FLOW RATE SPEED SET BWF 02(CLIENT MACHINE)(4-20mA)
+PAW302
+SPEED SET LIW SYSTEM (CLIENT MACHINE)(4-20mA)
++24Vdc 10.910/6 +24Vdc 10.9115/0-0Vdc 10.6111/9 -0Vdc 10.6115/03004X215x20500mA F
+85SCH485/9
+85SCH385/6
+85SCH285/4
+85SCH185/2
+-PAW30285/9+PAW30285/9-PAW30085/6+PAW30085/6-PAW29885/4+PAW29885/4-PAW29685/2+PAW29685/2</pre><h3>FG 114 / PDF 115</h3><pre>ANALOG OUTPUT MODULE
+PAW310
+FLAME MODULATION AIRFLOATING MOTOR BR-01(4-20mA)
+PAW308
+FLAME MODULATION GASFLOATING MOTOR BR-01(4-20mA)
+PAW306
+BLOWER FAN FN-02(4-20mA)
+PAW304
+SPARE
++PAW30642/6-PAW30642/6+PAW308100/2-100.1111/2+PAW310100/5-100.2111/3
+42SCH2109/1
+100SCH1111/2
+100SCH2111/3</pre><h3>FG 115 / PDF 116</h3><pre>ANALOG OUTPUT MODULEANALOG OUTPUT MODULE
+500mA F5x203005X21-0Vdc 10.6117/0-0Vdc 10.6113/9 +24Vdc 10.9136/0+24Vdc 10.9113/9
+PAW318
+SPARE
+PAW316
+SPARE
+PAW314
+SPARE
+PAW312
+SPARE</pre><h3>FG 116 / PDF 117</h3><pre>DIGITAL INPUT MODULE
+E0.4
+FEEDBACKMOTOR RD-01F
+E0.0
+FEEDBACKMOTOR BC-01
+E0.1
+ALARMMOTOR BC-01
+E0.2
+FEEDBACKMOTOR RD-01
+E0.3
+ALARMMOTOR RD-01
+E0.5
+FEEDBACKSPARE MOTOR
+E0.6
+FEEDBACKMOTOR MC-04
+E0.7
+ALARMMOTOR-MC-04
+E0.018/7
+E0.118/7
+E0.220/7
+E0.320/7
+E0.422/6
+E0.523/6
+E0.624/7
+E0.724/7</pre><h3>FG 117 / PDF 118</h3><pre>DIGITAL INPUT MODULE
+E1.732/8
+E1.632/7
+E1.530/7
+E1.430/7
+E1.329/6
+E1.227/8
+E1.127/8
+E1.026/6
+E1.4
+FEEDBACK INVERTERSUPPLY MOTORSMV-02/MV-05/MV-06
+E1.0
+FEEDBACKMOTOR MC-05
+E1.1
+FEEDBACKMOTOR VS-01/VS-01A
+E1.2
+ALARMMOTOR VS-01/VS-01A
+E1.3
+FEEDBACKMOTOR SC-12
+E1.5
+ALARM INVERTERSUPPLY MOTORSMV-02/MV-05/MV-06
+E1.6
+FEEDBACK OPENINGMOTOR MV-06
+E1.7
+FEEDBACK CLOSINGMOTOR MV-06
++24Vdc 10.7111/9 +24Vdc 10.7119/0-0Vdc 10.6115/9 -0Vdc 10.6119/03006X215x202A IST.117.1
+SPARESPARE</pre><h3>FG 118 / PDF 119</h3><pre>DIGITAL INPUT MODULE
+E2.4
+FEEDBACK OPENINGMOTOR MV-03
+E2.0
+FEEDBACK OPENINGMOTOR MV-05
+E2.1
+FEEDBACK CLOSINGMOTOR MV-05
+E2.2
+FEEDBACK OPENINGMOTOR MV-02
+E2.3
+FEEDBACK CLOSINGMOTOR MV-02
+E2.5
+FEEDBACK CLOSINGMOTOR MV-03
+E2.6
+FEEDBACK OPENINGMOTOR MV-04
+E2.7
+FEEDBACK CLOSINGMOTOR MV-04
+E2.034/7
+E2.134/8
+E2.236/7
+E2.336/8
+E2.438/7
+E2.538/8
+E2.640/4
+E2.740/5SPARE</pre><h3>FG 119 / PDF 120</h3><pre>DIGITAL INPUT MODULE
+E3.749/6
+E3.647/7
+E3.547/7
+E3.446/6
+E3.344/8
+E3.244/7
+E3.142/7
+E3.042/7
++24Vdc 10.7117/9 +24Vdc 10.7121/0-0Vdc 10.6117/9 -0Vdc 10.6121/03007X215x202A IST.119.1
+E3.7
+FEEDBACKMOTOR VR-02
+E3.6
+ALARMMOTOR FN-01
+E3.5
+FEEDBACKMOTOR FN-01
+E3.3
+FEEDBACK CLOSINGMOTOR MV-01
+E3.2
+FEEDBACK OPENINGMOTOR MV-01
+E3.1
+ALARMMOTOR FN-02
+E3.0
+FEEDBACKMOTOR FN-02
+E3.4
+FEEDBACKMOTOR VR-01</pre><h3>FG 120 / PDF 121</h3><pre>DIGITAL INPUT MODULE
+E4.756/6
+E4.655/6
+E4.554/6
+E4.453/6
+E4.352/6
+E4.251/6
+E4.151/6
+E4.050/6
+E4.7
+FEEDBACKMOTOR-LD-01A
+E4.6
+FEEDBACKMOTOR LD-01
+E4.5
+FEEDBACKMOTOR FN-01
+E4.3
+FEEDBACKMOTOR FN-06
+E4.2
+ALARMMOTOR FN-03
+E4.1
+FEEDBACKMOTOR FN-03
+E4.0
+FEEDBACKMOTOR CH-01
+E4.4
+FEEDBACKMOTOR SC-01
+SPARE</pre><h3>FG 121 / PDF 122</h3><pre>DIGITAL INPUT MODULE
+121.12A IST.5x203008X21-0Vdc 10.6123/0-0Vdc 10.6119/9 +24Vdc 10.7123/0+24Vdc 10.7119/9
+E5.7
+FEEDBACKMOTOR VR-06
+E5.6
+FEEDBACKMOTOR VR-05
+E5.5
+FEEDBACKMOTOR VR-04
+E5.3
+SPARE
+E5.2
+SPARE
+E5.1
+FEEDBACKMOTOR SC-11
+E5.0
+FEEDBACKMOTOR SC-10
+E5.4
+FEEDBACKMOTOR VR-03
+E5.057/6
+E5.158/6
+E5.461/6
+E5.562/6
+E5.663/6
+E5.764/6X213043X213044</pre><h3>FG 122 / PDF 123</h3><pre>DIGITAL INPUT MODULE
+E6.733/5
+E6.626/7
+E6.525/3
+E6.423/7
+E6.319/4
+E6.219/3
+E6.166/6
+E6.065/6
+E6.7
+LIMIT SWITCHLS.40
+E6.6
+LIMIT SWITCHSS-11
+E6.5
+LIMIT SWITCHSS-10
+E6.3
+LIMIT SWITCHSSL-01
+E6.2
+LIMIT SWITCHSS-01
+E6.1
+FEEDBACK ER-01ELECTRICALRESISTANCE
+E6.0
+FEEDBACKMOTOR FN-05
+E6.4
+LIMIT SWITCHSS-09
+SPARESPARE</pre><h3>FG 123 / PDF 124</h3><pre>DIGITAL INPUT MODULE
+E7.4
+LIMIT SWITCHLS-18
+E7.0
+LIMIT SWITCHLS-41
+E7.1
+LIMIT SWITCHLS-15
+E7.2
+LIMIT SWITCHLS-16
+E7.3
+LIMIT SWITCHLS-17
+E7.5
+LIMIT SWITCHLS-19
+E7.6
+LIMIT SWITCHLS-20
+E7.7
+LIMIT SWITCHLS21A/LS21B
+123.12A IST.5x203009X21-0Vdc 10.6125/0-0Vdc 10.6121/9 +24Vdc 10.7125/0+24Vdc 10.7121/9
+E7.033/7
+E7.135/5
+E7.235/7
+E7.337/5
+E7.437/7
+E7.539/5
+E7.639/7
+E7.741/6SPARE</pre><h3>FG 124 / PDF 125</h3><pre>DIGITAL INPUT MODULE
+E8.4
+SPARE
+E8.0
+LIMIT SWITCHLS-22A/LS-22B
+E8.1
+LIMIT SWITCHLS-23
+E8.2
+LIMIT SWITCHLS-24
+E8.3
+SPARE
+E8.5
+SPARE
+E8.6
+LIMIT SWITCH LS-01GATE &quot;A&quot; OPENVALVE PV-01
+E8.7
+LIMIT SWITCH LS-02GATE &quot;A&quot; CLOSEDVALVE PV-01
+E8.041/7
+E8.145/5
+E8.245/7
+E8.770/3
+E8.670/1X213045X213046X213047SPARE</pre><h3>FG 125 / PDF 126</h3><pre>DIGITAL INPUT MODULE
+E9.772/5
+E9.672/4
+E9.572/3
+E9.472/1
+E9.370/7
+E9.270/6
+E9.170/5
+E9.070/4
+E9.4
+LIMIT SWITCH LS-25GATE &quot;A&quot; OPENVALVE PV-02
+E9.0
+LIMIT SWITCH LS-05GATE &quot;B&quot; OPENVALVE PV-01
+E9.1
+LIMIT SWITCH LS-06GATE &quot;B&quot; CLOSEDVALVE PV-01
+E9.2
+OPENING GATE &quot;A&quot;LOCAL SELECTORVALVE PV-01
+E9.3
+OPENING GATE &quot;B&quot;LOCAL SELECTORVALVE PV-01
+E9.5
+LIMIT SWITCH LS-26GATE &quot;A&quot; CLOSEDVALVE PV-02
+E9.6
+LIMIT SWITCH LS-29GATE &quot;B&quot; OPENVALVE PV-02
+E9.7
+LIMIT SWITCH LS-30GATE &quot;B&quot; CLOSEDVALVE PV-02
++24Vdc 10.7123/9 +24Vdc 10.7127/0-0Vdc 10.6123/9 -0Vdc 10.6127/03010X215x202A IST.125.1</pre><h3>FG 126 / PDF 127</h3><pre>DIGITAL INPUT MODULE
+E10.4
+73SA1 DEVIATOREV-06 SELECTOR
+E10.0
+OPENING GATE &quot;A&quot;LOCAL SELECTORVALVE PV-02
+E10.1
+OPENING GATE &quot;B&quot;LOCAL SELECTORVALVE PV-02
+E10.2
+LIMIT SWITCHLS-09
+E10.3
+LIMIT SWITCHLS-10
+E10.5
+LIMIT SWITCHLS-32
+E10.6
+LIMIT SWITCHLS-33
+E10.7
+74SB1 DEVIATOREV-07 SELECTOR
+E10.072/6
+E10.172/7
+E10.273/4
+E10.373/5
+E10.473/6
+E10.574/4
+E10.674/6
+E10.774/7SPARE</pre><h3>FG 127 / PDF 128</h3><pre>DIGITAL INPUT MODULE
+E11.787/3
+E11.687/1
+E11.586/7
+E11.486/6
+E11.386/4
+E11.286/3
+E11.186/1
+E11.076/4
++24Vdc 10.7125/9 +24Vdc 10.7129/0-0Vdc 10.6125/9 -0Vdc 10.6129/03011X215x202A IST.127.1
+E11.7
+BWF 02 RUN
+E11.6
+BWF 02 MANU STATUS
+E11.5
+BWF 01MAXIMUM LEVEL
+E11.3
+BWF 01 FAULT
+E11.2
+BWF 01 RUN
+E11.1
+BWF 01 MANU STATUS
+E11.0
+PSL-05 LOW AIRPRESSURE SWITCH
+E11.4
+BWF 01 MINIMUM LEVEL</pre><h3>FG 128 / PDF 129</h3><pre>DIGITAL INPUT MODULE
+E12.7
+AIR KNIFE RUN
+E12.6
+BELT CONVEYOR &quot;A&quot;RUN
+E12.5
+IMPACT VIBRATIONFEEDER RUN
+E12.3
+APRON CONVEYOR &quot;A&quot;RUN
+E12.2
+BWF 02MAXIMUM LEVEL
+E12.1
+BWF 02 MINIMUM LEVEL
+E12.0
+BWF 02 FAULT
+E12.4
+IMPACTOR RUN
+E12.087/4
+E12.187/6
+E12.287/7
+E12.388/1
+E12.488/3
+E12.588/4
+E12.688/6
+E12.788/7SPARE</pre><h3>FG 129 / PDF 130</h3><pre>DIGITAL INPUT MODULE
+129.12A IST.5x203012X21-0Vdc 10.6131/0-0Vdc 10.6127/9 +24Vdc 10.7131/0+24Vdc 10.7127/9
+E13.7
+BELT CONVEYOR &quot;D&quot;RUN
+E13.6
+SHREDDER 2 RUN
+E13.5
+APRON CONVEYOR &quot;B&quot;RUN
+E13.3
+BELT CONVEYOR &quot;C&quot;RUN
+E13.2
+SHREDDER VIBRATIONFEEDER RUN
+E13.1
+SHREDDER 1 RUN
+E13.0
+BELT CONVEYOR &quot;B&quot;RUN
+E13.4
+ROTEX SCREEN RUN
+E13.089/1
+E13.189/3
+E13.289/4
+E13.389/6
+E13.489/7
+E13.590/1
+E13.690/3
+E13.790/4SPARE</pre><h3>FG 130 / PDF 131</h3><pre>DIGITAL INPUT MODULE
+E14.792/1
+E14.691/7
+E14.591/6
+E14.491/4
+E14.391/3
+E14.291/1
+E14.190/7
+E14.090/6
+E14.7
+IMPACTOR FAULT
+E14.6
+APRON CONVEYOR &quot;A&quot;FAULT
+E14.5
+BWF 02 INVERTERHIGH SPEED
+E14.3
+CONSENTAVAILABLE
+E14.2
+PRIMARYSHREDDER RUN
+E14.1
+LIW SYSTEMAUTOREADER
+E14.0
+BELT CONVEYOR &quot;E&quot;RUN
+E14.4
+BWF 01 INVERTERHIGH SPEED
+SPARESPARE SPARE</pre><h3>FG 131 / PDF 132</h3><pre>DIGITAL INPUT MODULE
+E15.4
+SHREDDER 1 FAULT
+E15.0
+IMPACT VIBRATIONFEEDER FAULT
+E15.1
+BELT CONVEYOR &quot;A&quot;FAULT
+E15.2
+AIR KNIFE FAULT
+E15.3
+BELT CONVEYOR &quot;B&quot;FAULT
+E15.5
+SHREDDER VIBRATIONFEEDER FAULT
+E15.6
+BELT CONVEYOR &quot;C&quot;FAULT
+E15.7
+ROTEX SCREENFAULT
+131.12A IST.5x203013X21-0Vdc 10.6133/0-0Vdc 10.6129/9 +24Vdc 10.7133/0+24Vdc 10.7129/9
+E15.092/3
+E15.192/4
+E15.292/6
+E15.392/7
+E15.493/1
+E15.593/3
+E15.693/4
+E15.793/6SPARE</pre><h3>FG 132 / PDF 133</h3><pre>DIGITAL INPUT MODULE
+E16.796/8
+E16.695/1
+E16.594/7
+E16.494/6
+E16.394/4
+E16.294/3
+E16.194/1
+E16.093/7
+E16.4
+WEIGHTING HOPPER 2FAULT
+E16.0
+APRON CONVEYOR &quot;B&quot;FAULT
+E16.1
+SHREDDER 2FAULT
+E16.2
+BELT COVEYOR &quot;D&quot;FAULT
+E16.3
+BELT CONVEYOR &quot;E&quot;FAULT
+E16.5
+HOPPER CONVEYOR 2FAULT
+E16.6
+BELT CONVEYOR &quot;C&quot;FAULT
+E16.7
+NITROGEN TANKREADY
+SPARE SPARE</pre><h3>FG 133 / PDF 134</h3><pre>DIGITAL INPUT MODULE
+E17.798/2
+E17.698/1
+E17.597/7
+E17.497/6
+E17.397/5
+E17.297/3
+E17.197/2
+E17.097/1
+E17.4
+LIMIT SWITCH S4MAX PRESSURE GAS
+E17.0
+BURNER ON
+E17.1
+BURNER LOCKOUT
+E17.2
+BURNER INMODULATION
+E17.3
+LIMIT SWITCH S3MIN.PRESSURE GAS
+E17.5
+LIMIT SWITCH S3MIN.PRESSURE AIR
+E17.6
+LIMIT SWITCH S4MAX PRESSURE AIR
+E17.7
+HIGH FLAME GASVALVE INSERTED
++24Vdc 10.7131/9 +24Vdc 10.7135/0-0Vdc 10.6131/9 -0Vdc 10.6135/03014X215x202A IST.133.1</pre><h3>FG 134 / PDF 135</h3><pre>DIGITAL INPUT MODULE
+E18.4
+SPARE
+E18.0
+SPARE
+E18.1
+SPARE
+E18.2
+SPARE
+E18.3
+SPARE
+E18.5
+SPARE
+E18.6
+SPARE
+E18.7
+SPARE
+X213015X213016X213017X213018X213019X213020X213021X213022</pre><h3>FG 135 / PDF 136</h3><pre>DIGITAL INPUT MODULE
+E19.717/2
+E19.617/1
+E19.516/3
+E19.413/5
++24Vdc 10.7133/9 +24Vdc 10.7145/0-0Vdc 10.6133/9 -0Vdc 10.6136/03027X215x202A IST.135.1
+E19.7
+RESET ALARMSFAULT
+E19.6
+SILENTLYALARMS
+E19.5
+PRESENCE VOLTAGE110Vac AUXILIARY
+E19.3
+SPARE
+E19.2
+SPARE
+E19.1
+SPARE
+E19.0
+SPARE
+E19.4
+GENERAL EMERGENCYSAFETY MODULE OK
+X213023X213024X213025X213026</pre><h3>FG 136 / PDF 137</h3><pre>DIGITAL OUTPUT MODULE
+A0.729/4A0.628/2A0.526/4A0.425/2
+A0.4
+MC-04 MOTORCOMMAND
+A0.0
+BC-01 MOTORCOMMAND
+A0.1
+RD-01 MOTORCOMMAND
+A0.2
+RD-01F MOTORCOMMAND
+A0.3
+SPARE MOTORCOMMAND
+A0.5
+MC-05 MOTORCOMMAND
+A0.6
+VS-01/VS-01AMOTOR COMMAND
+A0.7
+SC-12 MOTORCOMMAND
+-0Vdc 10.6135/9 -0Vdc 10.6137/0
++24Vdc 10.9115/9 +24Vdc 10.9137/03028X215x204A F
+A0.019/2A0.121/2A0.222/4A0.323/4SPARESPARE</pre><h3>FG 137 / PDF 138</h3><pre>DIGITAL OUTPUT MODULE
+A1.536/4A1.434/6A1.334/4A1.232/6A1.132/4
+A1.4
+MV-05 CLOSINGMOTOR COMMAND
+A1.0
+MV-02/MV-05/MV-06GENERAL INVERTERCOMMAND
+A1.1
+MV-06 OPENINGMOTOR COMMAND
+A1.2
+MV-06 CLOSINGMOTOR COMMAND
+A1.3
+MV-05 OPENINGMOTOR COMMAND
+A1.5
+MV-02 OPENINGMOTOR COMMAND
+A1.6
+MV-02 CLOSINGMOTOR COMMAND
+A1.7
+MV-03 OPENINGMOTOR COMMAND
+-0Vdc 10.6138/0-0Vdc 10.6136/9
++24Vdc 10.9138/0+24Vdc 10.9136/9
+4A F5x203029X21
+A1.031/2
+A1.738/4A1.636/6</pre><h3>FG 138 / PDF 139</h3><pre>DIGITAL OUTPUT MODULE
+A2.444/4
+A2.4
+MV-01 OPENINGMOTOR COMMAND
+A2.0
+MV-03 CLOSINGMOTOR COMMAND
+A2.1
+MV-04 OPENINGMOTOR COMMAND
+A2.2
+MV-04 CLOSINGMOTOR COMMAND
+A2.3
+FN-02 MOTORCOMMAND
+A2.5
+MV-01 CLOSINGMOTOR COMMAND
+A2.6
+VR-01 MOTORCOMMAND
+A2.7
+FN-01 MOTORCOMMAND
+-0Vdc 10.6137/9 -0Vdc 10.6139/0
++24Vdc 10.9137/9 +24Vdc 10.9139/03030X215x204A F
+A2.646/4A2.748/2
+A2.038/6A2.140/2A2.240/3A2.343/2A2.544/6
+SPARE</pre><h3>FG 139 / PDF 140</h3><pre>DIGITAL OUTPUT MODULE
+A3.4
+SC-01 MOTORCOMMAND
+A3.0
+VR-02 MOTORCOMMAND
+A3.1
+CH-01 MOTORCOMMAND
+A3.2
+FN-03 MOTORCOMMAND
+A3.3
+FN-06 MOTORCOMMAND
+A3.5
+FN-01 MOTORCOMMAND
+A3.6
+LD-01 MOTORCOMMAND
+A3.7
+LD-01A MOTORCOMMAND
+-0Vdc 10.6140/0-0Vdc 10.6138/9
++24Vdc 10.9140/0+24Vdc 10.9138/9
+4A F5x203031X21
+A3.049/4A3.150/4A3.251/8A3.352/4A3.453/4A3.554/4A3.655/4A3.756/4SPARE</pre><h3>FG 140 / PDF 141</h3><pre>DIGITAL OUTPUT MODULE
+A4.361/4A4.158/4A4.057/4
+4A F5x203032X21+24Vdc 10.9141/0+24Vdc 10.9139/9
+-0Vdc 10.6141/0-0Vdc 10.6139/9
+A4.7
+FN-05 MOTORCOMMAND
+A4.6
+VR-06 MOTORCOMMAND
+A4.5
+VR-05 MOTORCOMMAND
+A4.3
+VR-03 MOTORCOMMAND
+A4.2
+SPARE
+A4.1
+SC-11 MOTORCOMMAND
+A4.0
+SC-10 MOTORCOMMAND
+A4.4
+VR-04 MOTORCOMMAND
+A4.462/4A4.563/4A4.664/4A4.765/4
+X213048</pre><h3>FG 141 / PDF 142</h3><pre>DIGITAL OUTPUT MODULE
+A5.673/3A5.774/3
+A5.066/4
+3033X215x204A F
++24Vdc 10.9140/9 +24Vdc 10.9142/0
+-0Vdc 10.6140/9 -0Vdc 10.6142/0
+A5.7
+EV-07 VALVECOMMAND
+A5.6
+EV-06 VALVECOMMAND
+A5.5
+EV-05 VALVECOMMAND
+A5.3
+EV-02 VALVECOMMAND
+A5.2
+EV-01 VALVECOMMAND
+A5.1
+EV-03 VALVECOMMAND
+A5.0
+ER-01 ELECTRICALRESISTANCE COMMAND
+A5.4
+EV-04 VALVECOMMAND
+A5.121/5A5.269/3A5.369/6A5.471/3A5.571/6SPARE</pre><h3>FG 142 / PDF 143</h3><pre>DIGITAL OUTPUT MODULE
+A6.599/1A6.384/6A6.284/4A6.184/3A6.084/1
+A6.799/4A6.699/3
+4A F5x203034X21+24Vdc 10.9///+24Vdc 10.9141/9
+-0Vdc 10.6143/0-0Vdc 10.6141/9
+A6.7
+RESET ALARMBURNER
+A6.6
+MAX.TEMPERATUREFILTER
+A6.5
+REMOTE START/STOPBURNER
+A6.3
+BWF 02 REMOTESTART
+A6.2
+BWF 01 REMOTESTART
+A6.1
+LIW FEEDERREMOTE START
+A6.0
+CHILLER REMOTESTART
+A6.4
+AUTOMATIC IMMISSIONMOTOR COMMANDNITROGEN START
+A6.496/9</pre><h3>FG 143 / PDF 144</h3><pre>DIGITAL OUTPUT MODULE
+A7.717/5A7.617/4
+A7.199/8A7.099/6
+3039X215x204A F
++24Vdc 10.810/4 +24Vdc 10.8///
+-0Vdc 10.6142/9 -0Vdc 10.6145/0
+A7.7
+LAMPALARM
+A7.6
+LAMPALARM 2
+A7.5
+RESET ALARMSINVERTER
+A7.3
+SPARE
+A7.2
+SPARE
+A7.1
+ENABLE SPARK FOR3 sec. DURINGTRANSITION FROM THEMAIN FLAME PILOT F.
+A7.0
+START HIGH FLAMEBURNER
+A7.4
+RESET ALARSINVERTER
+X213035X213036X213037X213038
+A7.517/7A7.417/6</pre><h3>FG 144 / PDF 145</h3><pre>TECNOLOGY MODULE TM TIMER
+45.145/345.245/345SCH145/4
+MODULATION VALVE MV-01 ENCODER ZT-02
+E20.0
+SPARE
+E20.1
+SPARE
+E20.2
+SPARE
+A8.0
+SPARE
+A8.1
+SPARE
+37.145/337.245/3</pre><h3>FG 145 / PDF 146</h3><pre>TECNOLOGY MODULE TM TIMER
+145.12A IST.5x203040X21 -0Vdc 10.6147/0-0Vdc 10.6143/9 +24Vdc 10.7147/0+24Vdc 10.7135/9
+37.337/337.437/337SCH137/4
+MODULATION VALVE MV-02 ENCODER ZT-03
+E20.3
+SPARE
+E20.4
+SPARE
+E20.5
+SPARE
+A8.2
+SPARE
+A8.3
+SPARE</pre><h3>FG 146 / PDF 147</h3><pre>TECNOLOGY MODULE TM TIMER
+39.139/339.239/339SCH139/4 35.239/335.139/3
+A9.1
+SPARE
+A9.0
+SPARE
+E21.2
+SPARE
+E21.1
+SPARE
+E21.0
+SPAREMODULATION VALVE MV-03 ENCODER ZT-04</pre><h3>FG 147 / PDF 148</h3><pre>TECNOLOGY MODULE TM TIMER
+35.335/335.435/335SCH135/4
+A9.3
+SPARE
+A9.2
+SPARE
+E21.5
+SPARE
+E21.4
+SPARE
+E21.3
+SPAREMODULATION VALVE MV-05 ENCODER ZT-05
++24Vdc 10.7145/9 +24Vdc 10.7149/0-0Vdc 10.6145/9 -0Vdc 10.6149/03041X215x202A IST.147.1</pre><h3>FG 148 / PDF 149</h3><pre>TECNOLOGY MODULE TM TIMER
+33SCH133/433.433/333.333/3
+MODULATION VALVE MV-06 ENCODER ZT-06
+E22.0
+SPARE
+E22.1
+SPARE
+E22.2
+SPARE
+A10.0
+SPARE
+A10.1
+SPARE
+33.133/233.233/2</pre><h3>FG 149 / PDF 150</h3><pre>TECNOLOGY MODULE TM TIMER
+149.12A IST.5x203042X21 -0Vdc 10.6///-0Vdc 10.6147/9 +24Vdc 10.7///+24Vdc 10.7147/9
+E22.3
+SPARE
+E22.4
+SPARE
+E22.5
+SPARE
+A10.2
+SPARE
+A10.3
+SPARE</pre><h3>FG 153 / PDF 154</h3><pre>CONFIGURATION PLC JB1 BOX
+6ES7155-5AA01-0AB0
+IM 155-5 PN ST6ES7155-5AA00-0AB0153IM155
++24Vdc 152.5+24Vdc 152.5-0Vdc 152.4154/0-0Vdc 152.4152/1
+POS.26ES7531-7KF00-0AB0
+AI 8xU/I/RTD/TC ST6ES7531-7KF00-0AB00AI 41 52 63 7
+P C
+153A1
+6ES7523-1BL01-0AB0
+DI/DQ 16x24VDC6ES7523-1BL00-0AA0a
+b
+.0.1.2.3.4.5.6.7
+.0.1.2.3.4.5.6.7
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7
+c
+d
+P
+P
+153A3
+POS.4POS.3
+DQ 32x24VDC/0.5A HF6ES7522-1BL01-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+P P
+153A2
+6ES7522-1BL01-0AB06ES7532-5HF00-0AB0
+AQ 8xU/I HS6ES7532-5HF00-0AB00AQ
+123
+P
+4567
+153A4
+POS.5</pre><h3>FG 182 / PDF 185</h3><pre>CONFIGURATION PLC JB2 BOX
+6ES7522-1BL01-0AB0
+DQ 32x24VDC/0.5A HF6ES7522-1BL01-0AB0.0a
+b
+.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7P
+c
+d
+P P
+182A1
+POS.3
+DI/DQ 16x24VDC6ES7523-1BL00-0AA0a
+b
+.0.1.2.3.4.5.6.7
+.0.1.2.3.4.5.6.7
+.0.1.2.3.4.5.6.7.0.1.2.3.4.5.6.7
+c
+d
+P
+P
+182A2
+6ES7523-1BL01-0AB0POS.2
+-0Vdc 181.4181/1-0Vdc 181.4183/0+24Vdc 181.5+24Vdc 181.5
+IM 155-5 PN ST6ES7155-5AA00-0AB0182IM155
+6ES7155-5AA01-0AB0</pre></details></main></div><footer>원본 백업과 도면에 근거한 오프라인 검토본 · 현장 현재값 및 TIA 실행 결과와 구분</footer></body></html>

@@ -1,0 +1,180 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="2025" Gate="Contact" />
+    <Part UId="1935" Gate="Sub">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2027" Gate="Contact" />
+    <Part UId="1945" Gate="Ge">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1948" Gate="Lt">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1951" Gate="Add">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1957" Gate="Le">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1960" Gate="Gt">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1963" Gate="Add">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2029" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="1970" Gate="SdCoil" />
+    <ORef UId="1972" RefId="254" />
+    <ORef UId="1973" RefId="256" />
+    <ORef UId="1974" RefId="257" />
+    <ORef UId="1975" RefId="258" />
+    <ORef UId="1976" RefId="259" />
+    <ORef UId="24" RefId="258" />
+    <ORef UId="25" RefId="311" />
+    <ORef UId="1979" RefId="262" />
+    <ORef UId="1980" RefId="263" />
+    <ORef UId="1981" RefId="70" />
+    <ORef UId="1982" RefId="252" />
+    <ORef UId="1983" RefId="252" />
+    <ORef UId="29" RefId="258" />
+    <ORef UId="30" RefId="265" />
+    <ORef UId="1986" RefId="252" />
+    <ORef UId="1987" RefId="110" />
+    <ORef UId="1988" RefId="265" />
+    <ORef UId="1989" RefId="252" />
+    <ORef UId="1990" RefId="252" />
+    <ORef UId="1992" RefId="259" />
+    <ORef UId="1993" RefId="259" />
+    <ORef UId="1991" RefId="267" />
+  </Parts>
+  <Wires>
+    <Wire UId="2031">
+      <Powerrail />
+      <PCon UId="2025" PinName="in" />
+    </Wire>
+    <Wire UId="1994">
+      <OCon UId="1972" />
+      <PCon UId="2025" PinName="operand" />
+    </Wire>
+    <Wire UId="2026">
+      <PCon UId="2025" PinName="out" />
+      <PCon UId="1935" PinName="en" />
+      <PCon UId="2027" PinName="in" />
+      <PCon UId="2029" PinName="in" />
+    </Wire>
+    <Wire UId="1995">
+      <OCon UId="1973" />
+      <PCon UId="1935" PinName="in1" />
+    </Wire>
+    <Wire UId="1996">
+      <OCon UId="1974" />
+      <PCon UId="1935" PinName="in2" />
+    </Wire>
+    <Wire UId="1997">
+      <PCon UId="1935" PinName="out" />
+      <OCon UId="1975" />
+    </Wire>
+    <Wire UId="1998">
+      <OCon UId="1976" />
+      <PCon UId="2027" PinName="operand" />
+    </Wire>
+    <Wire UId="2028">
+      <PCon UId="2027" PinName="out" />
+      <PCon UId="1945" PinName="pre" />
+      <PCon UId="1957" PinName="pre" />
+    </Wire>
+    <Wire UId="22">
+      <OCon UId="24" />
+      <PCon UId="1945" PinName="in1" />
+    </Wire>
+    <Wire UId="23">
+      <OCon UId="25" />
+      <PCon UId="1945" PinName="in2" />
+    </Wire>
+    <Wire UId="21">
+      <PCon UId="1945" PinName="out" />
+      <PCon UId="1948" PinName="pre" />
+    </Wire>
+    <Wire UId="2002">
+      <OCon UId="1979" />
+      <PCon UId="1948" PinName="in1" />
+    </Wire>
+    <Wire UId="2003">
+      <OCon UId="1980" />
+      <PCon UId="1948" PinName="in2" />
+    </Wire>
+    <Wire UId="2004">
+      <PCon UId="1948" PinName="out" />
+      <PCon UId="1951" PinName="en" />
+    </Wire>
+    <Wire UId="2006">
+      <OCon UId="1981" />
+      <PCon UId="1951" PinName="in1" />
+    </Wire>
+    <Wire UId="2007">
+      <OCon UId="1982" />
+      <PCon UId="1951" PinName="in2" />
+    </Wire>
+    <Wire UId="2008">
+      <PCon UId="1951" PinName="out" />
+      <OCon UId="1983" />
+    </Wire>
+    <Wire UId="27">
+      <OCon UId="29" />
+      <PCon UId="1957" PinName="in1" />
+    </Wire>
+    <Wire UId="28">
+      <OCon UId="30" />
+      <PCon UId="1957" PinName="in2" />
+    </Wire>
+    <Wire UId="26">
+      <PCon UId="1957" PinName="out" />
+      <PCon UId="1960" PinName="pre" />
+    </Wire>
+    <Wire UId="2012">
+      <OCon UId="1986" />
+      <PCon UId="1960" PinName="in1" />
+    </Wire>
+    <Wire UId="2013">
+      <OCon UId="1987" />
+      <PCon UId="1960" PinName="in2" />
+    </Wire>
+    <Wire UId="2014">
+      <PCon UId="1960" PinName="out" />
+      <PCon UId="1963" PinName="en" />
+    </Wire>
+    <Wire UId="2016">
+      <OCon UId="1988" />
+      <PCon UId="1963" PinName="in1" />
+    </Wire>
+    <Wire UId="2017">
+      <OCon UId="1989" />
+      <PCon UId="1963" PinName="in2" />
+    </Wire>
+    <Wire UId="2018">
+      <PCon UId="1963" PinName="out" />
+      <OCon UId="1990" />
+    </Wire>
+    <Wire UId="2021">
+      <OCon UId="1992" />
+      <PCon UId="2029" PinName="operand" />
+    </Wire>
+    <Wire UId="2030">
+      <PCon UId="2029" PinName="out" />
+      <PCon UId="1970" PinName="in" />
+    </Wire>
+    <Wire UId="2020">
+      <OCon UId="1991" />
+      <PCon UId="1970" PinName="value" />
+    </Wire>
+    <Wire UId="2023">
+      <OCon UId="1993" />
+      <PCon UId="1970" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

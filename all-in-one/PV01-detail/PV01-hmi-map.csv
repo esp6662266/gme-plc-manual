@@ -1,0 +1,11 @@
+﻿HMI 태그,설정 주소,표시 또는 명령 역할,PLC 쪽 검토 대상,검증 상태
+PV_01\Flag,DB2.DBX5.0,PV01 운전 명령 플래그,flag.enable_r1_gate와 연결 여부,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\Allarme1,DB11.DBX76.0,PV01 통합 알람 표시,motors.pv_01.comulativo_allarmi,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\GateA_Open,DB11.DBX76.1,A 열림 표시,motors.pv_01.ls_gate_a_open,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\GateA_Close,DB11.DBX76.2,A 닫힘 표시,motors.pv_01.ls_gate_a_close,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\GateB_Open,DB11.DBX76.3,B 열림 표시,motors.pv_01.ls_gate_b_open,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\GateB_Close,DB11.DBX76.4,B 닫힘 표시,motors.pv_01.ls_gate_b_close,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\Selector_GateA,DB11.DBX76.5,A 현장 선택·조작 상태 표시,motors.pv_01.selector_gatea,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+PV_01\Selector_GateB,DB11.DBX76.6,B 현장 선택·조작 상태 표시,motors.pv_01.selector_gateb,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+AbilitaMaintenance,DB2.DBX7.5,공통 유지보수 모드 명령 참조,flag.maintenance_on과 전달 경로,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요
+ResetAlarms,DB2.DBX13.4,HMI 알람 리셋 요청,flag.reset_allarms_hmi → flag.reset_allarm 전달 경로,HMI 설정 확인; 멤버 오프셋·온라인 상태 확인 필요

@@ -1,0 +1,43 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="1861" Gate="Contact" />
+    <Part UId="1847" Gate="PBox" />
+    <Part UId="1849" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <ORef UId="1852" RefId="316" />
+    <ORef UId="1853" RefId="250" />
+    <ORef UId="1854" RefId="110" />
+    <ORef UId="1855" RefId="252" />
+  </Parts>
+  <Wires>
+    <Wire UId="1863">
+      <Powerrail />
+      <PCon UId="1861" PinName="in" />
+    </Wire>
+    <Wire UId="1856">
+      <OCon UId="1852" />
+      <PCon UId="1861" PinName="operand" />
+    </Wire>
+    <Wire UId="1862">
+      <PCon UId="1861" PinName="out" />
+      <PCon UId="1847" PinName="in" />
+    </Wire>
+    <Wire UId="1857">
+      <OCon UId="1853" />
+      <PCon UId="1847" PinName="bit" />
+    </Wire>
+    <Wire UId="1858">
+      <PCon UId="1847" PinName="out" />
+      <PCon UId="1849" PinName="en" />
+    </Wire>
+    <Wire UId="1859">
+      <OCon UId="1854" />
+      <PCon UId="1849" PinName="in" />
+    </Wire>
+    <Wire UId="1860">
+      <PCon UId="1849" PinName="out1" />
+      <OCon UId="1855" />
+    </Wire>
+  </Wires>
+</FlgNet>

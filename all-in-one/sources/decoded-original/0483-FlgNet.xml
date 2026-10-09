@@ -1,0 +1,53 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="105" Gate="Contact" />
+    <CRef UId="86" RefId="351">
+      <CodeBlock UId="98" RefId="5" />
+    </CRef>
+    <ORef UId="92" RefId="1" />
+    <ORef UId="93" RefId="1" />
+    <ORef UId="94" RefId="19" />
+    <ORef UId="95" RefId="20" />
+    <ORef UId="96" RefId="21" />
+    <ORef UId="97" RefId="22" />
+    <ORef UId="23" RefId="359" />
+  </Parts>
+  <Wires>
+    <Wire UId="107">
+      <Powerrail />
+      <PCon UId="105" PinName="in" />
+    </Wire>
+    <Wire UId="99">
+      <OCon UId="92" />
+      <PCon UId="105" PinName="operand" />
+    </Wire>
+    <Wire UId="106">
+      <PCon UId="105" PinName="out" />
+      <PCon UId="86" PinName="en" />
+    </Wire>
+    <Wire UId="100">
+      <OCon UId="93" />
+      <PCon UId="86" PinName="IN0" />
+    </Wire>
+    <Wire UId="101">
+      <OCon UId="94" />
+      <PCon UId="86" PinName="Analog_input" />
+    </Wire>
+    <Wire UId="102">
+      <OCon UId="95" />
+      <PCon UId="86" PinName="Coeff" />
+    </Wire>
+    <Wire UId="103">
+      <OCon UId="96" />
+      <PCon UId="86" PinName="Zero" />
+    </Wire>
+    <Wire UId="104">
+      <PCon UId="86" PinName="OutValue" />
+      <OCon UId="97" />
+    </Wire>
+    <Wire UId="24">
+      <PCon UId="86" PinName="Out_of_range" />
+      <OCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet>

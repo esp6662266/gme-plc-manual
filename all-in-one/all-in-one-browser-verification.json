@@ -1,0 +1,988 @@
+{
+  "status": "passed_with_observed_inspection_error",
+  "date": "2026-10-08",
+  "version": "0.4.0",
+  "browser": "Codex in-app browser",
+  "scope": "Historical virtual observations preserved. Current follow-ups verify manuals and original circuit, construction and signal sources only. Simulator development and behavior tests remain stopped until a separate explicit user authoring request.",
+  "observations": {
+    "bc01_virtual_normal_and_fault_reset": true,
+    "fn04_feedback_alarm_at_virtual_17_seconds": true,
+    "unsupported_network_execution_disabled": true,
+    "unknown_operand_not_coerced_to_false": true,
+    "program_structure_visible": true,
+    "bc01_and_fn04_source_procedures_visible": true,
+    "unknown_gss_has_identification_worksheet": true,
+    "bc01_circuit_link_stays_in_workspace": true,
+    "fn04_circuit_has_shared_inverter_and_two_motors": true,
+    "virtual_results_display": "19 passed / 0 failed",
+    "full_design_results_display": "577 designed; full acceptance 0",
+    "prior_ui_baseline": "all-in-one-browser-verification-v0.3.json"
+  },
+  "screenshots": [
+    "assets/manual-review-preview.png",
+    "assets/electrical-trace-preview.png",
+    "assets/construction-reference-preview.png",
+    "assets/actuator-circuit-preview.png",
+    "assets/signal-trace-preview.png",
+    "assets/common-control-preview.png",
+    "assets/repair-decision-preview.png",
+    "assets/repair-evidence-preview.png",
+    "assets/improvement-impact-preview.png",
+    "assets/alarm-recovery-preview.png",
+    "assets/actuator-alarm-preview.png",
+    "assets/work-progress-preview.png",
+    "assets/burner-interface-preview.png",
+    "assets/measurement-trace-preview.png",
+    "assets/sensor-measurement-preview.png",
+    "assets/regulation-manual-preview.png",
+    "assets/encoder-position-preview.png",
+    "assets/hmi-transfer-preview.png",
+    "assets/recipe-settings-preview.png"
+  ],
+  "inspection_errors": [
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T12:28:49.884Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T13:08:55.402Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T13:16:22.594Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T13:59:19.244Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T14:05:56.830Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T14:07:10.288Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T14:25:16.072Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent signal/manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T14:29:23.169Z",
+      "source_url": null,
+      "origin": "unconfirmed; no MutationObserver invocation in app source; subsequent signal/manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T14:51:23.306Z",
+      "source_url": null,
+      "origin": "unconfirmed; subsequent common manual and source navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T15:16:11.377Z",
+      "source_url": null,
+      "origin": "unconfirmed; repair manual and source navigation continued to work"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T15:22:31.594Z",
+      "source_url": null,
+      "origin": "unconfirmed; repair manual and source navigation continued to work"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T15:24:49.091Z",
+      "source_url": null,
+      "origin": "unconfirmed; repair manual and source navigation continued to work"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T16:10:54.759Z",
+      "source_url": null,
+      "origin": "unconfirmed; no invocation in manual UI source; subsequent record navigation worked"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T16:50:56.572Z",
+      "url": null,
+      "origin": "unconfirmed"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T17:00:11.750Z",
+      "url": null,
+      "origin": "unconfirmed"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T17:15:52.243Z",
+      "source_url": null,
+      "origin": "unconfirmed; manual navigation continued"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T17:23:45.997Z",
+      "source_url": null,
+      "origin": "unconfirmed; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T17:26:38.132Z",
+      "source_url": null,
+      "origin": "unconfirmed; subsequent manual navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T17:46:15.581Z",
+      "source_url": null,
+      "origin": "unconfirmed; subsequent BR01 source and record navigation worked"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T18:17:44.980Z",
+      "source_url": null,
+      "origin": "unconfirmed; subsequent sensor/source/repair navigation worked"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T18:37:52.353Z",
+      "source_url": null,
+      "origin": "unconfirmed; source-less inspection error; later manual, index and record navigation succeeded"
+    },
+    {
+      "message": "MutationObserver.observe parameter is not Node",
+      "timestamp": "2026-10-07T18:38:29.057Z",
+      "source_url": null,
+      "origin": "unconfirmed; source-less inspection error; later manual, index and record navigation succeeded"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T18:54:10.941Z",
+      "origin": "source URL absent; origin unconfirmed",
+      "followup": "encoder_position"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T19:25:09.533Z",
+      "origin": "source URL absent; origin unconfirmed",
+      "followup": "hmi_transfer"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T19:25:42.925Z",
+      "origin": "source URL absent; origin unconfirmed",
+      "followup": "hmi_transfer"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T19:47:44.332Z",
+      "origin": "source URL absent; origin unconfirmed",
+      "followup": "recipe_settings"
+    },
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-07T19:51:15.406Z",
+      "origin": "source URL absent; origin unconfirmed",
+      "followup": "recipe_settings"
+    }
+  ],
+  "manual_only_followup": {
+    "date": "2026-10-07",
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "simulator_files_hashes_unchanged": true,
+    "observations": {
+      "global_and_tab_development_stopped_labels_visible": true,
+      "fn03_from_circuit_index_selects_P17_priority": true,
+      "fn03_tor_I4_1_T5_source_visible": true,
+      "rd01_aux_fan_kept_separate_in_all_scope": true,
+      "fn04_running_alarm_common_terminals_22_25_visible": true,
+      "ev03_direct_FG21_route_present": true,
+      "construction_master_64_page_index_visible": true,
+      "construction_23_priority_statuses_and_5_unmatched_preserved": true,
+      "fn04_two_power_cable_rows_M31_M36_visible": true,
+      "construction_master_to_PV01_selects_P05_priority": true,
+      "pv01_two_gate_boxes_and_LS_EV_bundles_visible": true,
+      "pv01_P53_source_image_loaded_2800x1979": true,
+      "construction_draft_approval_and_masked_exclusion_visible": true
+    },
+    "inspection_errors_this_followup": 2
+  },
+  "actuator_circuit_followup": {
+    "date": "2026-10-07",
+    "scope": "manual UI and original source navigation only",
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "simulator_files_hashes_unchanged": true,
+    "observations": {
+      "circuit_index_19_guides_104_paths_43_FG_visible": true,
+      "PV01_gate_close_anchor_and_LS02_SPARE_visible": true,
+      "PV01_circuit_to_construction_to_circuit_retains_P05": true,
+      "MV06_from_circuit_index_selects_P21": true,
+      "MV06_common_inverter_and_separate_contactors_limits_visible": true,
+      "MV06_encoder_unknown_address_anchor_visible": true,
+      "MV06_FG148_image_loaded_3200x2263": true,
+      "BR01_from_circuit_index_selects_P11": true,
+      "BR01_external_010_390_boundary_and_19_interfaces_visible": true,
+      "BR01_gas_setpoint_QW308_to_network_1687_ORef606_visible": true,
+      "manual_UI_and_data_cache_fingerprints_loaded": true
+    },
+    "fixes": [
+      {
+        "issue": "same-document signal anchor left embedded frame about:blank",
+        "correction": "Keep loaded frame when navigating between documents or anchors; clear only when leaving document view",
+        "verified": "PV01 #signal-4, MV06 #signal-10, BR01 #signal-15 remain populated and scroll to target"
+      },
+      {
+        "issue": "ordinary reload retained an older manual UI script",
+        "correction": "Fingerprint manual UI, CSS and register bundle URLs with their current hashes",
+        "verified": "ordinary reload loaded all-in-one.js?v=29750195902e and all-in-one-data.js?v=360abac3d204"
+      }
+    ],
+    "inspection_errors_this_followup": 3
+  },
+  "signal_trace_followup": {
+    "date": "2026-10-07",
+    "scope": "Static signal manual UI and original XML source navigation only",
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "master_19_signal_guides_4961_native_pins_visible": true,
+      "FN04_two_global_write_locations_1070_1085_visible": true,
+      "FN04_transfer_anchor_remains_populated": true,
+      "MV03_selects_P20_and_NOT_input_transfers_visible": true,
+      "PV01_selects_P05_raw_EV01_Open_and_processed_Inputs_separate": true,
+      "PV01_circuit_signal_round_trip_retains_P05": true,
+      "RD01_FAN_kept_separate_in_all_scope": true,
+      "original_Simulation_block_guard_and_current_mode_unknown_visible": true,
+      "latest_explicit_authoring_request_required_label_visible": true,
+      "ordinary_reload_loaded_current_manual_script": true
+    },
+    "inspection_errors_this_followup": 2,
+    "screenshot": "assets/signal-trace-preview.png",
+    "simulator_files_hashes_unchanged": true,
+    "manual_script_loaded": "assets/all-in-one.js?v=058ea1b360e9"
+  },
+  "common_control_followup": {
+    "date": "2026-10-08",
+    "scope": "Static common-control manual and source navigation only",
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "simulator_files_hashes_unchanged": true,
+    "observations": {
+      "master_31_networks_97_stage_writes_visible": true,
+      "FN04_priority_P02_common_guide_and_three_stages_visible": true,
+      "FN04_stage_to_native_1844_source_retains_selection": true,
+      "GSS_P22_has_no_assigned_PLC_tag_or_automatic_stage": true,
+      "GSS_repair_to_common_guide_retains_selection": true,
+      "resources_common_control_entry_opens_master": true,
+      "reset_anchor_populated_and_TOF_native_reference_visible": true,
+      "current_PLC_and_field_unverified_labels_visible": true
+    },
+    "fixes": [
+      {
+        "issue": "Long condition code overflowed the stage table and narrowed source links",
+        "correction": "Scoped wrapping and minimum source-cell width in common manual pages",
+        "verified": "FN04 table clientWidth872 equals scrollWidth872; original1844 semantic link navigates"
+      }
+    ],
+    "inspection_errors_this_followup": 1,
+    "screenshot": "assets/common-control-preview.png"
+  },
+  "repair_decision_followup": {
+    "date": "2026-10-08",
+    "scope": "Static repair manual UI and original source navigation; blank observation download",
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "simulator_files_hashes_unchanged": true,
+    "observations": {
+      "BC01_default_repair_opens_P01_integrated_guide": true,
+      "BC01_permit_branch_anchor_populated": true,
+      "BC01_request_reset_and_output_OR_permit_visible": true,
+      "BC01_source_1935_opens_in_workspace": true,
+      "FN04_default_repair_selects_P02_and_17sec_90min_distinct": true,
+      "FN04_common_guide_retains_P02": true,
+      "MV06_selects_P21_NOT_ON_and_only_own_1714_fault_values_visible": true,
+      "HE01_P13_body_candidate_has_no_assigned_PLC_outputs": true,
+      "GSS_P22_unmatched_has_identification_and_dedicated_recovery_steps": true,
+      "GSS_blank_observation_download_matches_source": true,
+      "resources_23_repair_guide_index_visible": true,
+      "repair_index_BC01_route_selects_P01": true
+    },
+    "download": {
+      "equipment": "P22",
+      "status": "미작성",
+      "actual_equipment_id": null,
+      "field_verified": false,
+      "sha256": "49a77ecd9fc690ca5d269d8a25e9e0b55350de42062a4d9704ee4efcf503e847"
+    },
+    "inspection_errors_this_followup": 3,
+    "screenshot": "assets/repair-decision-preview.png"
+  },
+  "evidence_review_followup": {
+    "date": "2026-10-08",
+    "scope": "Static review hub and isolated local annotation UI only",
+    "test_origin": "http://127.0.0.1:8771",
+    "user_origin_written": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "64_categories_visible": true,
+      "full_source_filter_18": true,
+      "FN04_selected_source_filter_6": true,
+      "FN04_exact_search_1": true,
+      "GSS_selected_identity_filter_1_unassigned": true,
+      "IMP03_MC04_VS01_exact_native_relation_visible": true,
+      "IMP04_note_defaults_to_primary_FN06_P18": true,
+      "stale_edit_conflict_rejected_text_preserved": true,
+      "legacy_edit_draft_missing_base_rejected": true,
+      "stale_edit_after_reload_rejected_latest_A2_preserved": true,
+      "other_equipment_record_preserved_in_download": true
+    },
+    "download": {
+      "filename": "GME-work-notes-2026-10-07 (1).json",
+      "sha256": "46f2d8945b618ab403f06eef645be95138dcc0c62ed14fd69c4d79e50fcdf344",
+      "notes": 2,
+      "equipment": [
+        "P08",
+        "P18"
+      ],
+      "review_ids": [
+        "improvement:IMP-03",
+        "improvement:IMP-04"
+      ],
+      "contents": "explicit QA records; no field results"
+    },
+    "download_event_note": "download event wait timed out; actual UI-created file verified by timestamp and contents",
+    "inspection_errors_this_followup": 0,
+    "prior_inspection_errors_retained": 12,
+    "screenshot": "assets/evidence-review-preview.png",
+    "limitations": [
+      "No field identity or source conflict resolution",
+      "Web Locks fallback is optimistic rather than transactional",
+      "Same equipment temporary drafts are last-writer data"
+    ]
+  },
+  "repair_record_followup": {
+    "date": "2026-10-08",
+    "scope": "Structured local repair observations; no current PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8772",
+    "user_origin_written": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "BC01_blank_fields_no_live_values": true,
+      "BC01_output_Q0_0_refs_1935_1785_visible": true,
+      "BC01_saved_signal_value_time_evidence_and_permit_observation_reopened": true,
+      "BC01_independent_tab_reads_same_saved_record": true,
+      "stale_record_after_reload_rejected_latest_A_and_form_B_preserved": true,
+      "ordinary_note_and_repair_drafts_separate": true,
+      "ordinary_note_save_preserves_structured_record": true,
+      "FN04_Q17_1_and_own_feedback_visible": true,
+      "FN04_record_to_manual_to_record_retains_P02": true,
+      "FN04_signal_source_1965_opens_in_workspace": true,
+      "GSS_P22_zero_signals_and_three_identity_boundary_steps": true,
+      "seconds_and_Asia_Seoul_retained_in_JSON": true,
+      "individual_and_full_backup_observation_equal": true,
+      "double_click_existing_save_retains_one_record_and_button_recovers": true
+    },
+    "downloads": [
+      {
+        "filename": "GME-repair-P01-269f71d7-0ecc-431d-806a-7abf850ea380 (1).json",
+        "sha256": "133554b0b389b26b157b9a45ef93a5a91ef37c25facd9ee3e29f543625c8d177"
+      },
+      {
+        "filename": "GME-work-notes-2026-10-07 (2).json",
+        "sha256": "a2955e49db6cf3d8a5c3450e6db9f0a06b66751ec6957949e16ad6c2594a6bce"
+      }
+    ],
+    "inspection_errors_this_followup": 1,
+    "prior_inspection_errors_retained": 12,
+    "screenshot": "assets/repair-record-preview.png",
+    "field_verified": false,
+    "repairs_completed": 0
+  },
+  "repair_evidence_followup": {
+    "date": "2026-10-08",
+    "scope": "Evidence collection instructions and navigation; no field or control execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "FN04_common_inverter_two_motor_reference_visible": true,
+      "FN04_response_circuit_pending_items_visible": true,
+      "FN04_declared_related_global_review_scopes_distinct": true,
+      "FN04_C05_focus_retains_P02": true,
+      "FN04_draft_preserved_after_review_navigation": true,
+      "FN04_OEM_FG59_opens_PDF60": true,
+      "FN04_response_link_opens_own_circuit_guide": true,
+      "BC01_serial_contacts_and_raw_to_Inputs_pending_visible": true,
+      "GSS_zero_signals_and_dedicated_controller_recovery_visible": true,
+      "HE01_body_candidate_zero_signals_visible": true
+    },
+    "inspection_errors_this_followup": 0,
+    "prior_inspection_errors_retained": 13,
+    "screenshot": "assets/repair-evidence-preview.png",
+    "field_verified": false,
+    "repairs_completed": 0,
+    "qa_data": "Explicit QA draft on 8773 only; no saved repair record or user origin writes",
+    "repair_note": "Body recovery evidence text corrected and GSS/browser plus all eight body/unidentified schema checks passed"
+  },
+  "improvement_impact_followup": {
+    "date": "2026-10-08",
+    "scope": "Static impact worksheets and source navigation only",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "six_guides_open_from_existing_review_index": true,
+      "review_IMP06_opens_own_detail": true,
+      "FN04_main_network9_Motors1_Filter_network10_analog_output_visible": true,
+      "FN04_Stop_Fan_local_motors1_scope_and_two_pins_visible": true,
+      "FN03_two_SD_same_Ref95_and_S5T_35S_visible": true,
+      "MC04_Flag_Maintenance_comparator_not_seed_operand": true,
+      "MV06_ON_unknown_startup403_not_merged_into_Global": true,
+      "FN06_alarm_and_RD01_reference_visible": true,
+      "BR01_MV03_two_enable_names_kept_separate": true,
+      "workspace_navigation_retains_P02": true,
+      "FN04_local_declaration_href_prefix_corrected": true
+    },
+    "prior_inspection_errors_retained": 13,
+    "inspection_errors_this_followup": 2,
+    "screenshot": "assets/improvement-impact-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "plc_changes": 0,
+    "limitations": [
+      "Current program, ENO, interrupts, external writes and installed identity unverified",
+      "Unnamed calls and other language blocks may be outside the static named-call graph",
+      "Source-less MutationObserver error origin unconfirmed; local app JS search has no matching call and worksheet navigation continued"
+    ],
+    "link_repair": "Native identifier href prefix duplication detected by package link validation, corrected; latest package runs fresh checks before replacement."
+  },
+  "alarm_recovery_followup": {
+    "date": "2026-10-08",
+    "scope": "Native alarm manual navigation; no PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": {
+      "BC01_repair_opens_alarm_detail": true,
+      "BC01_trip_reset_negative_input_visible": true,
+      "nine_profile_comparison_index_visible": true,
+      "FN03_two_SD35s_and_separate_INV_set_visible": true,
+      "FN04_record_stop_step_opens_own_alarm_guide": true,
+      "FN04_selection_P02_retained": true,
+      "overview_nine_guide_button_opens_comparison": true,
+      "existing_QA_FN04_draft_retained": true
+    },
+    "prior_inspection_errors_retained": 15,
+    "inspection_errors_this_followup": 1,
+    "screenshot": "assets/alarm-recovery-preview.png",
+    "plc_changes": 0,
+    "field_verified": false,
+    "tia_verified": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "Current CPU, execution order, actual input polarity and installed identity unverified",
+      "One source-less MutationObserver error; origin unconfirmed",
+      "One iframe selector click did not navigate; refreshed native AX link completed navigation; selector timeout and stale index were inspection issues"
+    ]
+  },
+  "actuator_alarm_followup": {
+    "date": "2026-10-08",
+    "scope": "Five actuator alarm guides and source navigation; no execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": {
+      "PV01_repair_opens_alarm_guide": true,
+      "PV01_four_seven_second_native_values_and_MEM_conditions_visible": true,
+      "PV02_all_four_seven_second_native_values_visible": true,
+      "MV01_150ms_W33_W34_only_visible": true,
+      "MV03_150s_W29_W30_and_two_zero_Move_visible": true,
+      "MV06_150ms_W19_W20_only_visible": true,
+      "MV03_repair_record_recovery_opens_own_guide_and_retains_P20": true,
+      "overview_fourteen_guide_button_opens_index": true
+    },
+    "prior_inspection_errors_retained": 16,
+    "inspection_errors_this_followup": 2,
+    "screenshot": "assets/actuator-alarm-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "plc_changes": 0,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "Current CPU, installed identity, timer intent, actual input polarity and encoder units unverified",
+      "Two source-less MutationObserver inspection errors; origin unconfirmed; subsequent navigation worked",
+      "One AX link lookup ran before iframe load and returned no link; fresh AX state resolved it"
+    ]
+  },
+  "work_progress_followup": {
+    "date": "2026-10-08",
+    "origin": "http://127.0.0.1:8773",
+    "scope": "Manual work order UI only; no PLC or simulator execution",
+    "overview_entry": true,
+    "resources_entry": true,
+    "six_stages_visible": true,
+    "selected_equipment_preserved": "P01 while viewing work-progress.html",
+    "br01_record_link": "Top-level repair-record view and P11 selected",
+    "notes_written": 0,
+    "current_tab_console_errors": 0,
+    "prior_inspection_error_history_preserved": true,
+    "screenshot": "assets/work-progress-preview.png"
+  },
+  "burner_interface_followup": {
+    "date": "2026-10-08",
+    "scope": "BR01 static manual and related repair evidence UI only",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": [
+      "P11 repair guide opens burner-interface.html and preserves selected P11",
+      "Six symptom rows and twelve timer/declaration rows visible",
+      "Tag141 S5T#4S and two Tag142 rows shown separately",
+      "Timer row opens original1863 ladder and preserves P11",
+      "P11 recovery comparison links back to BR01 detailed manual",
+      "P20 repair guide includes BR01/MV03 related source link"
+    ],
+    "prior_inspection_errors_retained": 18,
+    "inspection_errors_this_followup": [
+      {
+        "message": "MutationObserver.observe parameter is not Node",
+        "timestamp": "2026-10-07T17:46:15.581Z",
+        "source_url": null,
+        "origin": "unconfirmed; subsequent BR01 source and record navigation worked"
+      }
+    ],
+    "screenshot": "assets/burner-interface-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "plc_changes": 0,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "One source-less MutationObserver error retained; origin unconfirmed",
+      "No repair observations saved",
+      "Dedicated burner controller internal sequence unverified"
+    ]
+  },
+  "process_measurement_followup": {
+    "date": "2026-10-08",
+    "scope": "Static measurement/alarm manual and source navigation only; no current PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "four_input_calls_coeff_zero_outputs_OFR_visible": true,
+      "Int_to_DInt_Div28000_sentinel_and_disabled_output_distinct": true,
+      "gas_flow_post_limit_1_and_final_value_pending_visible": true,
+      "air_272_QW310_and_gas_285_QW308_visible": true,
+      "measurement_to_process_alarm_preserves_P11": true,
+      "eleven_process_alarm_names_visible": true,
+      "low_aspiration_reset_FN01_FN04_and_PSL_positive_pressure_distinct": true,
+      "EmergencyStopTC1_2_writer_pending_visible": true,
+      "PSL_alarm_source_1227_262_268_opens_in_workspace": true,
+      "P11_response_step_opens_measurement_manual": true,
+      "P11_recovery_step_opens_process_stop_manual": true
+    },
+    "inspection_errors_this_followup": 0,
+    "prior_inspection_errors_retained": 19,
+    "screenshot": "assets/measurement-trace-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "repairs_completed": 0,
+    "limitations": [
+      "Native iframe link click had no effect; fresh accessibility link navigation succeeded",
+      "Static source verification does not establish current execution, physical units or approved settings"
+    ]
+  },
+  "sensor_measurement_followup": {
+    "date": "2026-10-08",
+    "scope": "Static sensor manual, source image and navigation only; no current PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "observations": {
+      "nineteen_channel_index_visible": true,
+      "TC05_OFF_en_IN0_ON_and_two_ranges_distinct": true,
+      "TC05_FG104_image_loaded_2800x1980": true,
+      "RO03_output_call_and_RO02_plus_11_native_write_visible": true,
+      "RO03_source_1750_566_opens_in_workspace": true,
+      "P11_response_step_opens_sensor_manual": true,
+      "resources_entry_opens_sensor_manual": true,
+      "PSH01_IW284_Press_PC01_and_PC01_IW322_PC_01_distinct": true,
+      "TC05_procedure_links_to_own_sensor_anchor": true,
+      "TC05_anchor_heading_at_19px_in_frame": true,
+      "manual_review_link_opens_parent_workspace_P11_64_items": true
+    },
+    "inspection_errors_this_followup": 1,
+    "prior_inspection_errors_retained": 19,
+    "screenshot": "assets/sensor-measurement-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "repairs_completed": 0,
+    "limitations": [
+      "One source-unidentified MutationObserver inspection error; subsequent navigation succeeded",
+      "Current physical wiring, coefficient, units, call mode and repair outcome unverified"
+    ],
+    "navigation_fix": "Embedded index review link now routes to existing parent review view; selected P11 retained and 64 items observed"
+  },
+  "regulation_manual_followup": {
+    "date": "2026-10-08",
+    "scope": "Static LAD and separately preserved index-text source manual only; no current PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": {
+      "nine_loop_index_visible": true,
+      "FN04_PC01_input_dp_title_thresholds_and_QW336_distinct": true,
+      "MV01_native_CONT_S_instance_SP_PV_and_unknown_refs_visible": true,
+      "MV01_wire_442_opens_collapsed_native_detail_and_shows_OCon401_PCon366_SP_INT": true,
+      "SCL1719_index_source_and_EmergencyStop_assignment_visible": true,
+      "P02_response_record_opens_FN04_own_anchor_at_20px": true,
+      "manual_record_link_preserves_P02": true,
+      "resources_link_opens_regulation_manual": true,
+      "FN04_original_1901_h1_dp_01_control_loop_visible": true,
+      "process_EmergencyStop_detail_links_separate_SCL1719_source": true,
+      "MV06_procedure_opens_own_loop_anchor_at_19px": true,
+      "MV06_raw_PSH02_and_scaled_PSH_02_distinct": true
+    },
+    "inspection_errors_this_followup": 2,
+    "prior_inspection_errors_retained": 20,
+    "tool_inspection_errors": [
+      {
+        "message": "Outer DOM iframe contentDocument unavailable in read-only inspection",
+        "origin": "inspection call; recovered with supported frameLocator",
+        "application_error_claimed": false
+      }
+    ],
+    "screenshot": "assets/regulation-manual-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "repairs_completed": 0,
+    "plc_changes": 0,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "Two source-less MutationObserver inspection errors retained; origin unconfirmed",
+      "No repair observations or drafts saved",
+      "Index text does not prove original line boundaries, compiled instructions, current tuning or PLC execution"
+    ]
+  },
+  "encoder_position_followup": {
+    "date": "2026-10-08",
+    "scope": "Native LAD counter, position, calibration and command-monitor manual; no PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": {
+      "five_valve_index_visible": true,
+      "MV01_anchor_top_px": 19.90625,
+      "MV01_wire_1756_75_opens_ancestor_details": true,
+      "MV01_counter_and_unknown_setcount_pin_visible": true,
+      "P19_saved_repair_records": 0,
+      "P19_response_source_button_opens_own_position_manual": true,
+      "resources_link_opens_encoder_manual": true,
+      "MV06_anchor_top_px": 19.78125,
+      "MV06_calibration_pending_coeff_and_command_monitor_visible": true,
+      "P19_repair_guide_link_opens_own_position_manual": true,
+      "MV01_alarm_heading_corrected_to_command_accumulator_visible": true
+    },
+    "inspection_errors_this_followup": 1,
+    "prior_inspection_errors_retained": 22,
+    "screenshot": "assets/encoder-position-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "repairs_completed": 0,
+    "plc_changes": 0,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "One source-less MutationObserver error retained; origin unconfirmed; document and record navigation verified",
+      "No repair observations, drafts or notes saved",
+      "Software counter indices do not prove physical HW channels, current DB settings, position units or calibration completion"
+    ]
+  },
+  "hmi_transfer_followup": {
+    "date": "2026-10-08",
+    "scope": "Exported HMI tag address audit and native LAD manual; no PLC or simulator execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": {
+      "tag_rows": 782,
+      "RESET_ENC_search_rows": 2,
+      "db_filter_rows": 678,
+      "physical_filter_rows": 101,
+      "shared_I_W20_anchor_clears_filters_and_reveals_row": true,
+      "P02_io_link_opens_own_profile": true,
+      "P02_profile_tags": 5,
+      "P03_io_link_opens_own_profile": true,
+      "P03_profile_tags": 0,
+      "P03_profile_no_plc_alias_assigned": true,
+      "P03_profile_to_own_repair_record": true,
+      "P03_saved_repair_records": 0,
+      "P02_saved_repair_records": 0,
+      "P02_request_source_button_opens_own_hmi_profile": true,
+      "window_metadata_rows": 17,
+      "wire_331_21_opens_ancestor_details": true,
+      "resources_link_opens_hmi_manual": true,
+      "outer_selected_equipment_retained": true
+    },
+    "inspection_errors_this_followup": 2,
+    "prior_inspection_errors_retained": 23,
+    "screenshot": "assets/hmi-transfer-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "repairs_completed": 0,
+    "plc_changes": 0,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "Two source-less MutationObserver errors retained; origin unconfirmed; document and record navigation verified",
+      "One DOM locator click did not select equipment; fresh AX control selected P03 and verified subsequent own-profile navigation",
+      "No repair observations, drafts or notes saved",
+      "DB member offsets, actual screen events, current communication and physical identity remain unverified"
+    ]
+  },
+  "recipe_settings_followup": {
+    "date": "2026-10-08",
+    "scope": "Recipe source and setting/reset repair manual navigation, not recipe or PLC execution",
+    "test_origin": "http://127.0.0.1:8773",
+    "user_origin_written": false,
+    "observations": {
+      "recipe_364_index_opens": true,
+      "recipe_364_exact_text_length": 2831,
+      "load_condition_and_8_data_fields_visible": true,
+      "Editor_FN01_link_opens_tag_00414_DB26_INT14": true,
+      "P15_saved_repair_records": 0,
+      "P15_request_source_button_opens_own_settings_profile": true,
+      "P15_profile_returns_own_repair_record": true,
+      "resources_link_opens_recipe_manual": true,
+      "startup_401_anchor_opens_exact_STL_text": true,
+      "startup_402_unknown_move_refs_preserved": true,
+      "wire_402_184_opens_ancestor_details": true,
+      "P03_profile_no_equipment_ownership_assigned": true,
+      "sidebar_list_footer_no_overlap_at_height_720": true,
+      "sidebar_geometry_after_scroll": {
+        "listBottom": 667.046875,
+        "pickerBottom": 667.046875,
+        "footerTop": 667.046875,
+        "footerBottom": 708.046875,
+        "scrollTop": 61
+      }
+    },
+    "inspection_errors_this_followup": 2,
+    "prior_inspection_errors_retained": 25,
+    "screenshot": "assets/recipe-settings-preview.png",
+    "field_verified": false,
+    "tia_verified": false,
+    "repairs_completed": 0,
+    "plc_changes": 0,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "limitations": [
+      "Two source-less MutationObserver errors retained; origin unconfirmed; manual and record navigation verified",
+      "No repair observations, drafts or notes saved",
+      "Exact backup index text has flattened comments/newlines; no SCL compilation or execution claimed",
+      "Current array declaration, DB layout, Retain, HMI events, OB write order and field identity remain unverified",
+      "One offscreen text locator did not open index401; observed deep-link route subsequently opened and verified exact STL text"
+    ]
+  },
+  "requirements_audit_followup": {
+    "date": "2026-10-08",
+    "origin": "http://127.0.0.1:8773",
+    "user_origin_8770_untouched": true,
+    "status": "passed",
+    "scope": "audit/guide navigation and filters; not PLC/TIA or behavioral simulation",
+    "requirements_audit_sha256": "7271b08a1f0df9a52f1fa2b766ed1d225f31b07ce4fbb1a9585e00dbf06a13e2",
+    "observations": [
+      "P01 summary button opens requirements-audit.html#priority-P01",
+      "P03 unresolved summary opens priority-P03; no PLC ID or actual identity claimed",
+      "Priority rows23/equipment rows248",
+      "Baseline208/specialist25/symptom15/priority referenced18 filters",
+      "FN04 search returns1 and all reset returns248",
+      "Operator guide BC01 record link opens parent repair-record P01; persisted test record count0; no record written",
+      "Source-only depth classification; common HMI/recipe guides remain available separately",
+      "Five simulator/model/result hashes unchanged; no behavioral tests"
+    ],
+    "counts": {
+      "equipment": 248,
+      "priority": 23,
+      "priority_referenced_equipment": 18,
+      "priority_unknown": 5,
+      "base_manuals": 248,
+      "base_specs": 248,
+      "base_procedures": 248,
+      "representative_symptom_devices": 15,
+      "representative_symptom_cases": 34,
+      "specialist_only_devices": 25,
+      "baseline_only_devices": 208,
+      "with_io": 207,
+      "with_hmi": 65,
+      "with_direct_paths": 148,
+      "tests_designed": 577,
+      "tests_executed": 0,
+      "pending_checks": 1060,
+      "source_conflicts": 18,
+      "review_items": 64,
+      "field_verified": 0,
+      "tia_verified": 0
+    },
+    "screenshot": "assets/requirements-audit-preview.png",
+    "new_console_errors": [
+      {
+        "level": "error",
+        "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+        "timestamp": "2026-10-07T20:23:14.618Z",
+        "source_url": null,
+        "origin_identified": false
+      }
+    ],
+    "limitation": "Source URL absent for MutationObserver error; this inspection does not establish its origin or certify a clean console."
+  },
+  "body_manual_followup": {
+    "status": "passed",
+    "date": "2026-10-09",
+    "origin": "http://127.0.0.1:8773/",
+    "equipment": [
+      "P10/CC01",
+      "P12/AB01",
+      "P13/HE01"
+    ],
+    "source_sha256": "b39ee0c611b49c9220d8fce36dfa2bdd8b7c435223a6646d089697937c221af7",
+    "html_sha256": "f46c93f499e5447150a21577fba4dd8c4b3c8e3dd215299baa45ca764931b252",
+    "ui_sha256": "700989003068501b473c2e0a92f1df4b33b49ac5c04ed366a266ba505de1ea2b",
+    "form_sha256": "ea9da42c613f9a52f26f2aa389999b813c62cbe83d3d6b1ec7d6d8aaa3cf9c8a",
+    "observations": [
+      "Each selected summary opens its own body section and retains the priority equipment context",
+      "CC01-D02 and HE01-D03 expanded symptom/source boundaries checked",
+      "AB01 MAX/MAXMAX/comparison Set/Reset, timer and request/enable/output boundaries displayed",
+      "1719 TC02-only indexed TC01_OFR/EnableTC01 text preserved with native/current limits",
+      "All three body documents return to their own P10/P12/P13 repair forms",
+      "Nine body source buttons and empty observations/no assigned signals checked",
+      "Resources opens common body manual, all three source crop images loaded",
+      "Audit HE01 row has specialist reference and current follow-up",
+      "390x844 requested viewport: outer html client/scroll width375/375; inner326/326, no whole-page horizontal overflow; temporary override reset"
+    ],
+    "new_records_saved": 0,
+    "nonempty_observation_fields": 0,
+    "new_console_errors_observed": [],
+    "console_scope": "Current own QA tab logs returned empty; historical source-less errors preserved",
+    "schema_verification": {
+      "status": "passed",
+      "profiles": 23,
+      "source_links": 3447,
+      "scope": "blank observations, round trip, source scope, unknown fields and escaping; no PLC or simulator tests"
+    },
+    "screenshots": [
+      "assets/body-manual-preview.png",
+      "assets/body-manual-small-preview.png"
+    ],
+    "field_verified": false,
+    "tia_verified": false,
+    "plc_changes": 0,
+    "simulator_executed": false
+  },
+  "identity_scope_followup": {
+    "status": "passed",
+    "date": "2026-10-09",
+    "html_sha256": "7e27f86b57406c19f9607946252221f25d28ad2b64b5e754862171f7a9712642",
+    "json_sha256": "82dbf1796a21554923bcc913c3deee1fa4597d4fcc70a9ea0e86fd9d2b9d1adc",
+    "body_html_sha256": "5cf9dc5cb88ea6306f06aa12604de9b747ca2995f09ec13bf88299543e05f308",
+    "app_js_sha256": "a4cbed49749af2324a5cce994f54a6b3a1f1bd7005697c17d13fa46ae1d9203c",
+    "observations": [
+      "P03/P04/P14 summary to own identity and own blank repair form",
+      "hopper2 details expands static conditions",
+      "P22/P23 list/context/summary exclusions shown; P22 active repair form hidden with preserved data",
+      "MV04 list/context/summary historical notice",
+      "HE01 removed MV04 notice and BODY07 excluded not resolved",
+      "390x844 outer375/375 inner326/326 no horizontal overflow; viewport reset"
+    ],
+    "screenshot": "assets/identity-scope-preview.png",
+    "screenshot_sha256": "25667c8dd143d32f0c303b7c2166047aa01fdcd80ed3230ffb36a51e89d60345",
+    "own_tab_console_errors": [],
+    "records_saved": 0,
+    "simulator_behavior_tests": "not_rerun",
+    "field_verified": false
+  },
+  "excluded_equipment_followup": {
+    "date": "2026-10-09",
+    "status": "historical_inputs_superseded",
+    "scope": "SC12 absent and PV04 not planned user statements; existing sources preserved",
+    "observations": [
+      "SC12/PV04 list and selected context reflect user status",
+      "Summary shows current detailed work excluded; new investigation prompts absent",
+      "Both historical procedures remain accessible with exclusion notice",
+      "PV04 audit row reflects exclusion",
+      "PV04 summary survives reload",
+      "Small viewport outer375/375 and audit iframe326/326; override reset",
+      "Own QA console error/warn0; saved records0; simulator routes0"
+    ],
+    "source_hashes": {
+      "assets/all-in-one.js": "12242b7b094b9efeb1c9821a3d2ddf2aa0fca9b6d11aa471d780decab83f71ca",
+      "registers/all-in-one-data.json": "00c6606a7fdfa301f6aab48a208b89f21dc4f479cadffcbb45eb064fdb20a89f",
+      "procedures/SC12.html": "c2ccc97f78ac2bee52c8f6969322bef3b792bd9bb256c8fafc1813aa5d2dd976",
+      "procedures/PV04.html": "9657309afe1749f2ab9cd418bf1effae4a11bb562f6d5bfa670fbfcd44dc1a50",
+      "requirements-audit.html": "bec533ea1fbfbc961d40b4f81586c756d4c124eae497b4147000191d02f14a1b"
+    },
+    "screenshot": "assets/excluded-scope-preview.png",
+    "simulator_behavior_tests": "not_rerun",
+    "field_verified": false,
+    "latest_regenerated_data_reload_checked": true
+  },
+  "priority_first_scope_followup": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "scope": "priority23 first; current21; full248 preserved reference only",
+    "source_hashes": {
+      "assets/all-in-one.js": "dd06d585217e523ecb259b4ac10deb5c7ed02ab1a249d152feee8ef98c8937ff",
+      "registers/all-in-one-data.json": "9e204e9c2f7d0e0de4624c3ee20621530395d5b787f263a1d5876b27953a1fca",
+      "procedures/SC12.html": "c2ccc97f78ac2bee52c8f6969322bef3b792bd9bb256c8fafc1813aa5d2dd976",
+      "procedures/PV04.html": "9657309afe1749f2ab9cd418bf1effae4a11bb562f6d5bfa670fbfcd44dc1a50",
+      "procedures/EV01.html": "720294b83f42ec371bbe8e6274cff68d1f3ec702e1d719a4d24def53c676fa3f",
+      "procedures/EV90.html": "6fbe79a5dbc06f42f01af1e752b40ccd6859fcf617b24bc1f277f6ea47e33f27",
+      "requirements-audit.html": "43fcb214a632c8d4be1a7b3029f2172ba7b0e4f8744d688dc611021ad3bd271f",
+      "work-progress.html": "d0218ba42ffc71fee81c55377a59b8e397cfe1a6d83a4281f951fac36296e6a8"
+    },
+    "observations": [
+      "EV01 and EV90 summary excluded",
+      "EV90 historical procedure remains accessible with manual exclusion notice",
+      "SC12 and PV04 retain current exclusions after latest data reload",
+      "Overview says priority23 first/current21; full248 reference only",
+      "Audit shows current21/reference248",
+      "Overview375/375 and audit iframe326/326 at390x844; viewport reset",
+      "Own console error/warn0; saved records0; no simulator route",
+      "Own temporary QA tab closed"
+    ],
+    "screenshot": "assets/priority-first-preview.png",
+    "simulator_behavior_tests": "not_rerun",
+    "field_verified": false
+  }
+}

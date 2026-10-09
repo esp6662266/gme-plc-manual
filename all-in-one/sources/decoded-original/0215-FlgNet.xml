@@ -1,0 +1,129 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="2028" Gate="Contact" />
+    <Part UId="2030" Gate="Contact" />
+    <Part UId="2032" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="2034" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="2036" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="1979" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="1986" Gate="SdCoil" />
+    <Part UId="2038" Gate="Contact" />
+    <Part UId="1991" Gate="SCoil" />
+    <Part UId="2040" Gate="Contact" />
+    <Part UId="2042" Gate="Contact" />
+    <Part UId="1996" Gate="RCoil" />
+    <ORef UId="1997" RefId="52" />
+    <ORef UId="1998" RefId="268" />
+    <ORef UId="1999" RefId="313" />
+    <ORef UId="2000" RefId="268" />
+    <ORef UId="24" RefId="315" />
+    <ORef UId="2003" RefId="273" />
+    <ORef UId="2002" RefId="317" />
+    <ORef UId="2004" RefId="273" />
+    <ORef UId="2005" RefId="275" />
+    <ORef UId="2006" RefId="276" />
+    <ORef UId="2007" RefId="275" />
+    <ORef UId="2008" RefId="275" />
+  </Parts>
+  <Wires>
+    <Wire UId="2044">
+      <Powerrail />
+      <PCon UId="2028" PinName="in" />
+    </Wire>
+    <Wire UId="2009">
+      <OCon UId="1997" />
+      <PCon UId="2028" PinName="operand" />
+    </Wire>
+    <Wire UId="2029">
+      <PCon UId="2028" PinName="out" />
+      <PCon UId="2030" PinName="in" />
+      <PCon UId="2034" PinName="in" />
+      <PCon UId="2040" PinName="in" />
+    </Wire>
+    <Wire UId="2010">
+      <OCon UId="1998" />
+      <PCon UId="2030" PinName="operand" />
+    </Wire>
+    <Wire UId="2031">
+      <PCon UId="2030" PinName="out" />
+      <PCon UId="2032" PinName="in" />
+    </Wire>
+    <Wire UId="2011">
+      <OCon UId="1999" />
+      <PCon UId="2032" PinName="operand" />
+    </Wire>
+    <Wire UId="2033">
+      <PCon UId="2032" PinName="out" />
+      <PCon UId="1979" PinName="in1" />
+    </Wire>
+    <Wire UId="2013">
+      <OCon UId="2000" />
+      <PCon UId="2034" PinName="operand" />
+    </Wire>
+    <Wire UId="21">
+      <PCon UId="2034" PinName="out" />
+      <PCon UId="2036" PinName="in" />
+    </Wire>
+    <Wire UId="23">
+      <OCon UId="24" />
+      <PCon UId="2036" PinName="operand" />
+    </Wire>
+    <Wire UId="22">
+      <PCon UId="2036" PinName="out" />
+      <PCon UId="1979" PinName="in2" />
+    </Wire>
+    <Wire UId="2016">
+      <PCon UId="1979" PinName="out" />
+      <PCon UId="1986" PinName="in" />
+      <PCon UId="2038" PinName="in" />
+    </Wire>
+    <Wire UId="2017">
+      <OCon UId="2002" />
+      <PCon UId="1986" PinName="value" />
+    </Wire>
+    <Wire UId="2018">
+      <OCon UId="2003" />
+      <PCon UId="1986" PinName="operand" />
+    </Wire>
+    <Wire UId="2019">
+      <OCon UId="2004" />
+      <PCon UId="2038" PinName="operand" />
+    </Wire>
+    <Wire UId="2039">
+      <PCon UId="2038" PinName="out" />
+      <PCon UId="1991" PinName="in" />
+    </Wire>
+    <Wire UId="2021">
+      <OCon UId="2005" />
+      <PCon UId="1991" PinName="operand" />
+    </Wire>
+    <Wire UId="2023">
+      <OCon UId="2006" />
+      <PCon UId="2040" PinName="operand" />
+    </Wire>
+    <Wire UId="2041">
+      <PCon UId="2040" PinName="out" />
+      <PCon UId="2042" PinName="in" />
+    </Wire>
+    <Wire UId="2024">
+      <OCon UId="2007" />
+      <PCon UId="2042" PinName="operand" />
+    </Wire>
+    <Wire UId="2043">
+      <PCon UId="2042" PinName="out" />
+      <PCon UId="1996" PinName="in" />
+    </Wire>
+    <Wire UId="2026">
+      <OCon UId="2008" />
+      <PCon UId="1996" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

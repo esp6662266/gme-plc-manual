@@ -1,0 +1,499 @@
+﻿설비 ID,원본 심볼,백업 주소,자료형,설명,문서 ID
+BC01,bc01_all_inv,%i0.1,bool,alarm motor bc-01,950
+BC01,bc01_fbk,%i0.0,bool,feedback motor bc-01,951
+BC01,bc01_tripwire,%i6.2,bool,limit switch ss-01,952
+BC01,bc01_prox,%i6.3,bool,limit switch ssl-01,973
+BC01,memocmd_bc01_startup,%m180.7,bool,,1173
+BC01,start bc01,%q0.0,bool,a 48.1 bc-01 motorcommand,1343
+RD01,rd01_all_inv,%i0.3,bool,alarm motor rd-01,953
+RD01,start fan rd01,%q0.2,bool,a 48.6 rd-01f motorcommand,1339
+RD01,start rd01,%q0.1,bool,a 48.5 rd-01 motorcommand,1341
+RD01,rd01_sp_speed,%qw290,word,rotating drum rd-01,1354
+RD01,rd01_current,%iw332,int,rotating drum current,1525
+RD01,rd01_fbk,%i0.2,bool,feedback motor rd-01,1653
+RD01-FAN,rd01f_fbk,%i0.4,bool,feedback motor rd-01f,954
+RD01-FAN,start fan rd01,%q0.2,bool,a 48.6 rd-01f motorcommand,1339
+MC03,mc03_torque,%i6.4,bool,limit switch ss-09,936
+MC03,start spare motor,%q0.3,bool,a 48.7 spare motorcommand,1337
+MC04,mc04_all_inv,%i0.7,bool,feedback motor mc-04,916
+MC04,mc04_fbk,%i0.6,bool,feedback motor mc-04,958
+MC04,mc04_torque,%i6.5,bool,limit switch ss-10,1097
+MC04,start mc04,%q0.4,bool,a 49.1 mc-04 motorcommand,1335
+MC05,mc05_torque,%i6.6,bool,limit switch ss-11,937
+MC05,start mc05,%q0.5,bool,a 49.2 mc-05 motorcommand,975
+MC05,mc05_fbk,%i1.0,bool,feedback motor mc-05,976
+VS01,start vs01 brake,%m11.0,bool,,58
+VS01,braking vs01,%q49.5,bool,it's no longer there,461
+VS01,vs01_fbk,%i1.1,bool,feedback motor vs-01/vs-01a,493
+VS01,vs01_all_inv,%i1.2,bool,alarm motor vs-01/vs-01a,917
+VS01,start vs01,%q0.6,bool,a 49.0 vs-01/vs-01amotor command,1333
+SC12,sc12_fbk,%i1.3,bool,feedback motor sc-12,979
+SC12,start sc12,%q0.7,bool,a 48.0 sc-12 motorcommand,980
+AB01,tc02,%iw274,int,safety temperature chamber ab-01,1545
+AB01,tc01,%iw272,int,temperature chamber ab-01,1546
+BR01,start burner,%m48.3,bool,,472
+BR01,programmed stop burner,%m1.1,bool,,477
+BR01,burner on,%i17.0,bool,e 44.7 burner on,906
+BR01,brurner lock out,%i17.1,bool,e 44.6 burner lockout,907
+BR01,burner on and ok,%i17.2,bool,e 44.1 burner inmodulation,908
+BR01,rst allarm burner,%q6.7,bool,a 56.2 reset alarmburner,911
+BR01,lock burner,%m28.0,bool,,1060
+BR01,enable start burner,%m48.2,bool,,1061
+BR01,rem. start/stop burner,%q6.5,bool,a 56.1 remote start/stopburner,1062
+BR01,close mv03 for burner startup,%m180.5,bool,,1096
+BR01,enable start burner(1),%m48.0,bool,,1275
+BR01,br01_gas_sp,%qw308,word,flame modulation gas floating motor br-01(4-20ma),1351
+BR01,br01_air_sp,%qw310,word,flame modulation air floating motor br-01(4-20ma),1352
+BR01,br01_flowmeter_air,%iw366,int,air outlet br-01,1530
+BR01,br01_flowmeter_gas,%iw364,int,gas outlet br-01,1531
+BR01,br01_air,%iw362,int,air servo-motor br-01,1532
+BR01,br01_gas,%iw360,int,gas servo-motor br-01,1533
+FN01,fn01_fbk,%i3.5,bool,feedbackmotor fn-01,502
+FN01,reserved tc05,%iw262,int,probe sensor pt100 bearing fn-01 (tc-05) -30...350°c,897
+FN01,fn01_all_inv,%i3.6,bool,alarm motor fn-01,919
+FN01,star fan fn01,%q3.5,bool,a 53.5 fn-01 motorcommand cooling fan,997
+FN01,fn01f_fbk,%i4.5,bool,feedback cooling fan motor fn-01,1057
+FN01,start fn01,%q2.7,bool,a 49.6 fn-01 motorcommand,1328
+FN01,fn01_sp_speed,%qw292,word,sp speed blower fan fn-01,1353
+FN01,tc05,%iw260,int,probe sensor pt100 bearing fn-01 (tc-04) -30...250°c,1511
+FN01,fn01_current,%iw334,int,blower fan current fn-01,1524
+FN01,zt01,%iw282,int,vibration trasmitter blower fn-01,1541
+FN02,fn02_fbk,%i3.0,bool,feedback motor fn-02,500
+FN02,fn02_all_inv,%i3.1,bool,alarm motor fn-02,918
+FN02,fn02_sp,%qw306,word,blower fan fn-02(4-20ma),1350
+FN02,start fn02,%q2.3,bool,a 52.0 fn-02 motorcommand,1360
+FN02,fn02_current,%iw328,int,blower fan current,1526
+FN03,fn03_fbk,%i4.1,bool,feedback motor fn-03,505
+FN03,fn03_all_softstarter,%i4.2,bool,alarm motor fn-03,506
+FN03,start fn03,%q3.2,bool,a 56.0 fn-03 motorcommand,1322
+FN04,fn04_all_inv,%i28.3,bool,,955
+FN04,fn04_fbk,%i28.2,bool,,956
+FN04,spare_0,%q4.2,bool,a 52.4 fn-04/fn-04a motorcommand,957
+FN04,start fn04,%q17.1,bool,fn-04/fn-04a motor,1278
+FN04,fn04_sp,%qw336,word,aspiration fan fn-04 speed,1349
+FN04,fn04_current,%iw394,int,main aspirator absorption current fn-04(4-20ma),1515
+FN05,fn05_fbk,%i6.0,bool,feedback motor fn-05,518
+FN05,start fn05,%q4.7,bool,a 60.0 fn-05 motorcommand,1299
+FN06,fn06_fbk,%i4.3,bool,feedback motor fn-06,507
+FN06,start fn06,%q3.3,bool,a 60.3 fn-06 motorcommand,1320
+FN01-FAN,star fan fn01,%q3.5,bool,a 53.5 fn-01 motorcommand cooling fan,997
+FN01-FAN,fn01f_fbk,%i4.5,bool,feedback cooling fan motor fn-01,1057
+CH01,enable start chiller,%q6.0,bool,a 61.0 chiller remotestart,678
+CH01,ch01_fbk,%i4.0,bool,feedback motor ch-01,942
+CH01,start ch01,%q3.1,bool,a 53.4 ch-01 motorcommand,1324
+MV01,start open mv-01,%q2.4,bool,a 60.1 mv-01 openingmotor command,676
+MV01,start close mv-01,%q2.5,bool,a 60.2 mv-01 closingmotor command,677
+MV01,mv01_fbk_opening,%i3.2,bool,feedback openingmotor mv-01,885
+MV01,mv01_fbk_closing,%i3.3,bool,feedback closingmotor mv-01,886
+MV01,mv01_open,%i8.1,bool,limit switch ls-23,889
+MV01,down mv01 pid,%m12.1,bool,,1361
+MV01,up mv01 pid,%m12.0,bool,,1362
+MV01,mv01_close,%i8.2,bool,limit switch ls-24,1528
+MV02,close mv02 pid,%m11.7,bool,,54
+MV02,open mv02 pid,%m11.6,bool,,62
+MV02,mv02_05_06_power_ok,%i1.4,bool,feedback inverter supply motors mv-02/mv-05/mv-06,494
+MV02,mv02_fbk_opening,%i2.2,bool,feedback opening motor mv-02,499
+MV02,mv02_open,%i7.3,bool,limit switch ls-17,659
+MV02,open mv02,%q1.5,bool,a 57.2 mv-02 openingmotor command,672
+MV02,close mv02,%q1.6,bool,a 57.3 mv-02 closingmotor command,673
+MV02,mv02_fbk_closing,%i2.3,bool,feedback closing motor mv-02,882
+MV02,mv02_05_06_inv_all,%i1.5,bool,alarm inverter supply motors mv-02/mv-05/mv-06,915
+MV02,start aux inv,%q1.0,bool,start inverter for valve motorized mv02-05-06,1280
+MV02,pid mv02 down,%m14.1,bool,,1363
+MV02,pid mv02 up,%m14.0,bool,,1364
+MV02,mv02_close,%i7.4,bool,limit switch ls-18,1514
+MV02,psh01,%iw284,int,pressure control output mv-02,1540
+MV03,start open mv03,%q1.7,bool,a 52.5 mv-03 openingmotor command,674
+MV03,start close mv03,%q2.0,bool,a 52.6 mv-03 closingmotor command,675
+MV03,mv03_fbk_opening,%i2.4,bool,feedback opening motor mv-03,883
+MV03,mv03_fbk_closing,%i2.5,bool,feedback closing motor mv-03,884
+MV03,mv03_open,%i7.5,bool,limit switch ls-19,887
+MV03,mv03_close,%i7.6,bool,limit switch ls-20,888
+MV03,close mv03 for burner startup,%m180.5,bool,,1096
+MV03,pid down mv03,%m14.5,bool,,1357
+MV03,pid up mv03,%m14.4,bool,,1358
+MV03,open mv03 for washing,%m48.1,bool,,1359
+MV03,psh02,%iw286,int,pressure control output mv-03,1539
+MV04,up mv04 pid,%m11.2,bool,,96
+MV04,down mv04 pid,%m11.3,bool,,105
+MV04,down tc03 pid mv04,%m11.1,bool,,106
+MV04,mv04_fbk_opening,%i2.6,bool,feedback opening motor mv-04,938
+MV04,mv04_fbk_closing,%i2.7,bool,feedback closing motor mv-04,939
+MV04,mv04_open,%i7.7,bool,limit switch ls21a/ls21b,940
+MV04,mv04_close,%i8.0,bool,limit switch ls-22a/ls-22b,941
+MV04,close mv04,%q2.2,bool,a 57.5 mv-04 closingmotor command,982
+MV04,open mv04,%q2.1,bool,a 57.4 mv-04 openingmotor command,983
+MV04,mv04_m18b,%iw326,int,mv-04 position m18b,984
+MV04,pid down mv04,%m14.3,bool,,985
+MV04,pid up mv04,%m14.2,bool,,986
+MV04,mv04_m18a,%iw324,int,mv-04 position m18a,1726
+MV05,open mv05 pid,%m11.4,bool,,38
+MV05,close mv05 pid,%m11.5,bool,,73
+MV05,mv02_05_06_power_ok,%i1.4,bool,feedback inverter supply motors mv-02/mv-05/mv-06,494
+MV05,mv05_fbk_opening,%i2.0,bool,feedback opening motor mv-05,497
+MV05,mv05_fbk_closing,%i2.1,bool,feedback closing motor mv-05,498
+MV05,mv05_open,%i7.1,bool,limit switch ls-15,658
+MV05,open mv05,%q1.3,bool,a 48.2 mv-05 openingmotor command,670
+MV05,close mv05,%q1.4,bool,a 48.3 mv-05 closingmotor command,671
+MV05,mv02_05_06_inv_all,%i1.5,bool,alarm inverter supply motors mv-02/mv-05/mv-06,915
+MV05,pid down mv05,%m13.1,bool,,1365
+MV05,pid up mv05,%m13.0,bool,,1366
+MV05,mv05_close,%i7.2,bool,limit switch ls-16,1513
+MV06,mv06 pid down,%m13.3,bool,,82
+MV06,mv06 pid up,%m13.2,bool,,83
+MV06,mv02_05_06_power_ok,%i1.4,bool,feedback inverter supply motors mv-02/mv-05/mv-06,494
+MV06,mv06_fbk_opening,%i1.6,bool,feedback opening motor mv-06,495
+MV06,mv06_fbk_closing,%i1.7,bool,feedback closing motor mv-06,496
+MV06,mv06_open,%i6.7,bool,limit switch ls.40,657
+MV06,open mv06,%q1.1,bool,a 60.6 mv-06 openingmotor command,668
+MV06,close mv06,%q1.2,bool,a 60.7 mv-06 closingmotor command,669
+MV06,mv02_05_06_inv_all,%i1.5,bool,alarm inverter supply motors mv-02/mv-05/mv-06,915
+MV06,mv06_close,%i7.0,bool,limit switch ls-41,1527
+PV01,open ev a 00 pv-01,%m20.0,bool,,39
+PV01,open ev a 01 pv-01,%m21.3,bool,,41
+PV01,close ev a 00 pv-01,%m20.2,bool,,46
+PV01,close ev a 01 pv-01,%m21.0,bool,,47
+PV01,close ev a 02 pv-01,%m22.3,bool,,49
+PV01,close ev b 00 pv-01,%m20.3,bool,,50
+PV01,close ev b 01 pv-01,%m21.2,bool,,51
+PV01,close ev b 02 pv-01,%m22.1,bool,,53
+PV01,open ev b 01 pv-01,%m21.1,bool,,59
+PV01,open ev b 02 pv-01,%m22.2,bool,,61
+PV01,mem gate a open pv-01,%m10.7,bool,,84
+PV01,mem gate b open pv-01,%m10.6,bool,,86
+PV01,open ev a 02 pv-01,%m22.0,bool,,99
+PV01,open ev b 00 pv-01,%m20.1,bool,,100
+PV01,maintenance pv01,%m80.5,bool,,474
+PV01,ev01_open,%i8.6,bool,"limit switch ls-01 gate ""a"" open",662
+PV01,ev01_close,%i8.7,bool,"limit switch ls-02 gate ""a"" closed",663
+PV01,ev02_open,%i9.0,bool,"limit switch ls-05 gate ""b"" open",664
+PV01,ev02_close,%i9.1,bool,"limit switch ls-06 gate ""b"" closed",665
+PV01,ev01_sel_open,%i9.2,bool,"opening gate ""a""local selector",877
+PV01,ev02_sel_open,%i9.3,bool,"opening gate ""b""local selector",878
+PV01,memocmd_pv1_startup,%m180.6,bool,,1169
+PV01,pv-01 gate b ev,%q5.3,bool,a 48.4 ev-02 valvecommand,1296
+PV01,pv-01 gate a,%q5.2,bool,a 57.0 ev-01 valvecommand,1297
+PV02,open ev a 00 pv-02,%m30.4,bool,,40
+PV02,pv-02 gate on,%m12.2,bool,,45
+PV02,close ev a 01 pv-02,%m30.0,bool,,48
+PV02,close ev b 01 pv-02,%m30.2,bool,,52
+PV02,open ev b 01 pv-02,%m30.1,bool,,60
+PV02,mem gate a open pv-02,%m12.4,bool,,85
+PV02,mem gate b open pv-02,%m12.3,bool,,87
+PV02,open ev a 01 pv-02,%m30.3,bool,,98
+PV02,maintenance pv02,%m80.6,bool,,475
+PV02,ev04_close,%i9.5,bool,"e29.7 limit switch ls-26gate ""a"" closed",666
+PV02,ev05_close,%i9.7,bool,"e29.3 limit switch ls-30gate ""b"" closed",667
+PV02,open ev b 00 pv-02,%m30.5,bool,,785
+PV02,selector op gate a pv-02,%i10.0,bool,"e45.4 opening gate ""a""local selector",875
+PV02,selector op gate b pv-02,%i10.1,bool,"e45.5 opening gate ""b""local selector",876
+PV02,ev04_open,%i9.4,bool,"e29.6 limit switch ls-25gate ""a"" open",1166
+PV02,ev05_open,%i9.6,bool,"e29.2 limit switch ls-29gate ""b"" open",1167
+PV02,pv-02 gate b ev,%q5.5,bool,a 56.4 ev-05 valvecommand,1294
+PV02,pv-02 gate a ev,%q5.4,bool,a 53.7 ev-04 valvecommand,1295
+PV03,deviator open pv-03,%i10.2,bool,e29.4 limit switchls-09,879
+PV03,deviator close pv-03,%i10.3,bool,e29.5 limit switchls-10,880
+PV03,pv03 local selector,%i10.4,bool,e65.7 73sa1 deviatorev-06 selector,881
+PV03,pv-03 gate ev,%q5.6,bool,a 56.5 ev-06 valvecommand,1293
+PV04,pv04 open,%i10.5,bool,e 45.0 pv 04 ls33 open,943
+PV04,pv04 close,%i10.6,bool,e36.6 limit switchls-32,944
+PV04,pv-04,%q5.7,bool,a 57.1 ev-07 valvecommand,988
+PV04,button open pv-0000,%i10.7,bool,e 37.6 74sb1 diverterv-07 selector,989
+PV05,start nitrogen,%q6.4,bool,a 60.5 automatic immissionmotor command,1059
+PV05,nitrogen tank ready,%i16.7,bool,e 45.7 nitrogen tankready,1074
+PV06,start nitrogen,%q6.4,bool,a 60.5 automatic immissionmotor command,1059
+PV06,nitrogen tank ready,%i16.7,bool,e 45.7 nitrogen tankready,1074
+PV14,pv-14,%q17.0,bool,a 5.0 inlet fresh airfilters valve,830
+PV14,pv-14 open,%i28.0,bool,%i6.0,873
+PV14,pv-14 close,%i28.1,bool,%i6.1,874
+PV14,open false air,%m2.1,bool,,1565
+VR01,vr01_fbk,%i3.4,bool,feedbackmotor vr-01,501
+VR01,start vr01,%q2.6,bool,a 53.2 vr-01 motorcommand,1330
+VR02,vr02_fbk,%i3.7,bool,feedbackmotor vr-02,503
+VR02,start vr02,%q3.0,bool,a 49.7 vr-02 motorcommand,1326
+VR03,vr03_fbk,%i5.4,bool,feedback motor vr-03,517
+VR03,start vr03,%q4.3,bool,a 52.7 vr-03 motorcommand,1307
+VR04,vr04_fbk,%i5.5,bool,feedback motor vr-04,516
+VR04,start vr04,%q4.4,bool,a 53.0 vr-04 motorcommand,1305
+VR05,vr05_fbk,%i5.6,bool,feedback motor vr-05,515
+VR05,start vr05,%q4.5,bool,a 53.3 vr-05 motorcommand,1303
+VR06,vr06_fbk,%i5.7,bool,feedback motor vr-06,514
+VR06,start vr06,%q4.6,bool,a 53.6 vr-06 motorcommand,1301
+SC01,sc01_fbk,%i4.4,bool,feedback motor sc-01,508
+SC01,start sc01,%q3.4,bool,a 49.3 sc-01 motorcommand,1318
+SC10,sc-10_fbk,%i5.0,bool,feedback motor sc-10,511
+SC10,start sc10,%q4.0,bool,a 52.2 sc-10 motorcommand,1312
+SC11,sc-11_fbk,%i5.1,bool,feedback motor sc-11,512
+SC11,start sc11,%q4.1,bool,a 52.3 sc-11 motorcommand,1310
+BF01,ev-11,%q12.0,bool,a0.0 filter 1 valve bf01first sector,791
+BF01,ev-19,%q13.0,bool,a1.0 filter 1 valve bf01second sector,799
+BF01,ev-27,%q14.0,bool,a2.0 filter 1 valve bf01third sector,806
+BF01,ev-35,%q15.0,bool,a3.0 filter 1 valve bf01fourth sector,814
+BF01,ev-43,%q16.0,bool,a4.0 filter 1 valve bf01fifth sector,822
+BF01,ev-59,%q19.0,bool,a9.0 filter 1 valve bf02second sector,843
+BF01,ev-67,%q20.0,bool,a10.0 filter 1 valve bf02third sector,850
+BF01,ev-75,%q21.0,bool,a11.0 filter 1 valve bf02fourth sector,858
+BF01,ev-83,%q22.0,bool,a12.0 filter 1 valve bf02fifth sector,866
+BF01,ev-51,%q18.0,bool,a8.0 filter 1 valve bf02first sector,890
+BF01,bf01_run,%m180.3,bool,,902
+BF01,pr_bf01,%iw398,int,differential pressure switchbags filter bf-01(4-20ma),1523
+BF01,tc09,%iw386,int,temperature bf-01,1555
+BF02,ev-12,%q12.1,bool,a0.1 filter 2 valve bf01first sector,792
+BF02,ev-20,%q13.1,bool,a1.1 filter 2 valve bf01second sector,800
+BF02,ev-28,%q14.1,bool,a2.1 filter 2 valve bf01third sector,807
+BF02,ev-36,%q15.1,bool,a3.1 filter 2 valve bf01fourth sector,815
+BF02,ev-44,%q16.1,bool,a4.1 filter 2 valve bf01fifth sector,823
+BF02,ev-60,%q19.1,bool,a9.1 filter 2 valve bf02second sector,844
+BF02,ev-68,%q20.1,bool,a10.1 filter 2 valve bf02third sector,851
+BF02,ev-76,%q21.1,bool,a11.1 filter 2 valve bf02fourth sector,859
+BF02,ev-84,%q22.1,bool,a12.1 filter 2 valve bf02fifth sector,867
+BF02,ev-52,%q18.1,bool,a8.1 filter 2 valve bf02first sector,891
+BF02,bf02_run,%m180.4,bool,,903
+BF02,pr_br02,%iw400,int,differential pressure switchbags filter bf-02(4-20ma),1522
+LD01,ld-01_fbk,%i4.6,bool,feedback motor ld-01,509
+LD01,ll_ld01,%i28.5,bool,,947
+LD01,start vibrator ld-01,%q3.7,bool,a 52.1 ld-01a motorcommand,1314
+LD01,start ld01,%q3.6,bool,a 49.4 ld-01 motorcommand,1316
+LD01A,ld-01a_fbk,%i4.7,bool,feedback motor-ld-01a,510
+LD01A,start vibrator ld-01,%q3.7,bool,a 52.1 ld-01a motorcommand,1314
+ER01,er01_fbk,%i6.1,bool,feedback er-01 electrical resistance,519
+ER01,start er-01,%q5.0,bool,a 60.4 er-01 electricalresistance command,1279
+BWF01,bwf1_inverter_high_speed,%i14.4,bool,e 17.0 bwf1_inverter_high_speed,531
+BWF01,bwf01 ok,%i11.1,bool,e 64.0 bwf 01 manu status,959
+BWF01,bwf01 fault,%i11.3,bool,e 64.2 bwf 01 fault,960
+BWF01,min lev bwf01,%i11.4,bool,e 64.3 bwf 01 minimum level,961
+BWF01,max lev bwf01,%i11.5,bool,e 64.4 bwf 01maximum level,962
+BWF01,bwf01_sp_flowrate,%qw298,word,flow rate speed set bwf 01(client machine)(4-20ma),1356
+BWF01,bwf01 pulse,%i20.1,bool,old address,1520
+BWF01,bwf01_level,%iw268,int,level bwf 01 (client machine),1548
+BWF01,bwf 01 run,%i11.2,bool,e 64.1 bwf 01 run,1551
+BWF01,bwf01_flowrate,%iw264,int,flow rate bwf 01(client machine),1553
+BWF01,consent start bwf01,%q6.2,bool,a 61.7 bwf 01 remotestart,1666
+BWF02,bwf2_inverter_high_speed,%i14.5,bool,e 17.1 bwf2_inverter_high_speed,532
+BWF02,bwf02 ok,%i11.6,bool,e 64.5 bwf 02 manu status,963
+BWF02,bwf02 fault,%i12.0,bool,e 64.7 bwf 02 fault,964
+BWF02,min lev bwf02,%i12.1,bool,e 65.0 bwf 02minimum level,965
+BWF02,max lev bwf02,%i12.2,bool,e 65.1 bwf 02maximum level,966
+BWF02,bwf02_sp_flowrate,%qw300,word,flow rate speed set bwf 02(client machine)(4-20ma),1355
+BWF02,bwf02 pulse,%i20.2,bool,old address,1518
+BWF02,bwf02_level,%iw270,int,level bwf 02 (client machine),1547
+BWF02,bwf 02 run,%i11.7,bool,e 64.6 bwf 02 run,1549
+BWF02,bwf02_flowrate,%iw266,int,flow rate bwf 02 (client machine),1550
+BWF02,consent start bwf02,%q6.3,bool,a 68.3 bwf 02 remotestart,1667
+LIW,liw systemautoreader,%i14.1,bool,e 15.0 liw systemautoreader,529
+LIW,start liw feeder,%q6.1,bool,a 61.1 liw feederremote start,679
+LIW,liw_sp_speed,%qw302,word,speed set liw system(client machine)(4-20ma),1346
+CLIENT-CL01,apron conveyor a fault,%i14.6,bool,"e 17.6 apron conveyor ""a""fault",533
+CLIENT-CL01,apron conveyor a run,%i12.3,bool,"e 13.0 apron conveyor ""a""run",967
+CLIENT-CL02,impactor fault,%i14.7,bool,e 17.7 impactor fault,534
+CLIENT-CL02,impactor run,%i12.4,bool,e 13.1 impactor run,968
+CLIENT-CL03,impact vibrationfeeder fault,%i15.0,bool,e 18.0 impact vibrationfeeder fault,535
+CLIENT-CL03,impact vibrationfeeder run,%i12.5,bool,e 13.2 impact vibrationfeeder run,969
+CLIENT-CL04,start client motor 4,%q61.2,bool,it should be free but it is used,480
+CLIENT-CL04,belt conveyor a fault,%i15.1,bool,"e 18.1 belt conveyor ""a""fault",536
+CLIENT-CL04,belt conveyor a run,%i12.6,bool,"e 13.3 belt conveyor ""a""run",970
+CLIENT-CL05,air knife fault,%i15.2,bool,e 18.2 air knife fault,537
+CLIENT-CL05,air knife run,%i12.7,bool,e 13.4 air knife run,978
+CLIENT-CL06,start client motor 6,%q61.3,bool,it should be free but it is used,481
+CLIENT-CL06,belt conveyor b run,%i13.0,bool,"e 13.5 belt conveyor ""b""run",520
+CLIENT-CL06,belt conveyor b fault,%i15.3,bool,"e 18.3 belt conveyor ""b""fault",538
+CLIENT-CL07,shredder 1 run,%i13.1,bool,e 13.6 shredder 1 run,521
+CLIENT-CL07,shredder 1 fault,%i15.4,bool,e 18.4 shredder 1 fault,539
+CLIENT-CL08,start client motor 8,%q61.4,bool,it should be free but it is used,482
+CLIENT-CL08,shredder vibrationfeeder run,%i13.2,bool,e 13.7 shredder vibrationfeeder run,522
+CLIENT-CL08,shredder vibrationfeeder fault,%i15.5,bool,e 18.5 shredder vibrationfeeder fault,540
+CLIENT-CL09,start client motor 9,%q61.5,bool,it should be free but it is used,483
+CLIENT-CL09,belt conveyor c run,%i13.3,bool,"e 14.0 belt conveyor ""c""run",523
+CLIENT-CL09,belt conveyor c fault,%i15.6,bool,"e 18.6 belt conveyor ""c""fault",541
+CLIENT-CL09,belt conveyor c fault_doppio!,%i16.6,bool,"e20.0 belt conveyor ""c""fault",567
+CLIENT-CL10,rotex screen run,%i13.4,bool,e 14.1 rotex screen run,524
+CLIENT-CL13,apron conveyor b run,%i13.5,bool,"e 14.4 apron conveyor ""b""run",525
+CLIENT-CL13,apron conveyor b fault,%i16.0,bool,"e19.2 apron conveyor ""b""fault",561
+CLIENT-CL14,shredder 2 run,%i13.6,bool,e 14.5 shredder 2 run,526
+CLIENT-CL15,belt coveyor d fault,%i16.2,bool,"e19.4 belt coveyor ""d""fault",563
+CLIENT-CL16,belt conveyor e run,%i14.0,bool,"e 14.7 belt conveyor ""e""run",528
+CLIENT-CL16,belt conveyor e fault,%i16.3,bool,"e19.5 belt conveyor ""e""fault",564
+CLIENT-CL17,weighting hopper 2fault,%i16.4,bool,e19.6 weighting hopper 2fault,565
+CLIENT-CL18,hopper conveyor 2fault,%i16.5,bool,e19.7 hopper conveyor 2fault,566
+CLIENT-CL19,primaryshredder run,%i14.2,bool,e 15.2 primaryshredder run,530
+TC01,tc01,%iw272,int,temperature chamber ab-01,1546
+TC01,tc01-tc02control disable,%m80.2,bool,,1570
+TC02,tc02,%iw274,int,safety temperature chamber ab-01,1545
+TC03,tc03 close,%m40.7,bool,,34
+TC03,tc03 close2,%m41.1,bool,,35
+TC03,tc03 open,%m40.6,bool,,36
+TC03,tc03 open2,%m41.0,bool,,37
+TC03,down tc03 pid mv04,%m11.1,bool,,106
+TC03,tc03,%iw276,int,temperature control outputsmoke,1544
+TC04,reserved tc04,%iw258,int,,896
+TC04,tc05,%iw260,int,probe sensor pt100 bearing fn-01 (tc-04) -30...250°c,1511
+TC04,tc04,%iw256,int,,1512
+TC05,reserved tc05,%iw262,int,probe sensor pt100 bearing fn-01 (tc-05) -30...350°c,897
+TC05,tc05,%iw260,int,probe sensor pt100 bearing fn-01 (tc-04) -30...250°c,1511
+TC06,tc06,%iw278,int,temperature control outputab-01,1543
+TC07,tc07,%iw280,int,temperature control inputsmoke,1542
+TC09,tc09,%iw386,int,temperature bf-01,1555
+TC10,tc-10,%iw390,int,spare temperature,1554
+RO01,ro01 close,%m40.1,bool,,88
+RO01,ro01 open,%m40.0,bool,,89
+RO01,ro01_close,%m41.3,bool,,90
+RO01,ro01_open,%m41.2,bool,,91
+RO01,r001,%iw352,int,oxigen control,1537
+RO01,ro01-ro02control disable,%m80.1,bool,,1572
+RO02,r002,%iw354,int,oxigen control,1536
+RO03,r003,%iw356,int,oxigen control,1535
+RO04,r004,%iw358,int,oxigen control,1534
+PSH01,psh01,%iw284,int,pressure control output mv-02,1540
+PSH02,psh02,%iw286,int,pressure control output mv-03,1539
+PSH03,psh03,%iw320,int,pressure control,1538
+PC01,pc01 close,%m40.2,bool,,63
+PC01,pc01 open,%m40.3,bool,,64
+PC01,pc01,%iw322,int,pressure control,1521
+PC02,pc02 close,%m40.4,bool,,65
+PC02,pc02 open,%m40.5,bool,,66
+DP01,pr_bf01,%iw398,int,differential pressure switchbags filter bf-01(4-20ma),1523
+DP02,pr_br02,%iw400,int,differential pressure switchbags filter bf-02(4-20ma),1522
+ZT01,zt01,%iw282,int,vibration trasmitter blower fn-01,1541
+LT01,ll_ld01,%i28.5,bool,,947
+SS01,bc01_tripwire,%i6.2,bool,limit switch ss-01,952
+SS01,bc01_prox,%i6.3,bool,limit switch ssl-01,973
+SS09,mc03_torque,%i6.4,bool,limit switch ss-09,936
+SS10,mc04_torque,%i6.5,bool,limit switch ss-10,1097
+SS11,mc05_torque,%i6.6,bool,limit switch ss-11,937
+PSL05,low pressure air,%i11.0,bool,e 41.4 psl-05 low airpressure switch,945
+EV01,ev01_open,%i8.6,bool,"limit switch ls-01 gate ""a"" open",662
+EV01,ev01_close,%i8.7,bool,"limit switch ls-02 gate ""a"" closed",663
+EV01,ev01_sel_open,%i9.2,bool,"opening gate ""a""local selector",877
+EV01,pv-01 gate a,%q5.2,bool,a 57.0 ev-01 valvecommand,1297
+EV02,ev02_open,%i9.0,bool,"limit switch ls-05 gate ""b"" open",664
+EV02,ev02_close,%i9.1,bool,"limit switch ls-06 gate ""b"" closed",665
+EV02,ev02_sel_open,%i9.3,bool,"opening gate ""b""local selector",878
+EV02,pv-01 gate b ev,%q5.3,bool,a 48.4 ev-02 valvecommand,1296
+EV03,ev03,%q5.1,bool,a 53.1 ev-03 valvecommand,901
+EV04,ev04_close,%i9.5,bool,"e29.7 limit switch ls-26gate ""a"" closed",666
+EV04,ev04_open,%i9.4,bool,"e29.6 limit switch ls-25gate ""a"" open",1166
+EV04,pv-02 gate a ev,%q5.4,bool,a 53.7 ev-04 valvecommand,1295
+EV05,ev05_close,%i9.7,bool,"e29.3 limit switch ls-30gate ""b"" closed",667
+EV05,ev05_open,%i9.6,bool,"e29.2 limit switch ls-29gate ""b"" open",1167
+EV05,pv-02 gate b ev,%q5.5,bool,a 56.4 ev-05 valvecommand,1294
+EV06,pv-03 gate ev,%q5.6,bool,a 56.5 ev-06 valvecommand,1293
+EV07,pv-04,%q5.7,bool,a 57.1 ev-07 valvecommand,988
+EV11,ev-11,%q12.0,bool,a0.0 filter 1 valve bf01first sector,791
+EV12,ev-12,%q12.1,bool,a0.1 filter 2 valve bf01first sector,792
+EV13,ev-13,%q12.2,bool,a0.2 filter 3 valve bf01first sector,793
+EV14,ev-14,%q12.3,bool,a0.3 filter 4 valve bf01first sector,794
+EV15,ev-15,%q12.4,bool,a0.4 filter 5 valve bf01first sector,795
+EV16,ev-16,%q12.5,bool,a0.5 filter 6 valve bf01first sector,796
+EV17,ev-17,%q12.6,bool,a0.6 filter 7 valve bf01first sector,797
+EV18,ev-18,%q12.7,bool,a0.7 filter 8 valve bf01first sector,798
+EV19,ev-19,%q13.0,bool,a1.0 filter 1 valve bf01second sector,799
+EV20,ev-20,%q13.1,bool,a1.1 filter 2 valve bf01second sector,800
+EV21,ev-21,%q13.2,bool,a1.2 filter 3 valve bf01second sector,801
+EV22,ev-22,%q13.3,bool,a1.3 filter 4 valve bf01second sector,802
+EV23,ev-23,%q13.4,bool,a1.4 filter 5 valve bf01second sector,803
+EV24,ev-24,%q13.5,bool,a1.5 filter 6 valve bf01second sector,831
+EV25,ev-25,%q13.6,bool,a1.6 filter 7 valve bf01second sector,804
+EV26,ev-26,%q13.7,bool,a1.7 filter 8 valve bf01second sector,805
+EV27,ev-27,%q14.0,bool,a2.0 filter 1 valve bf01third sector,806
+EV28,ev-28,%q14.1,bool,a2.1 filter 2 valve bf01third sector,807
+EV29,ev-29,%q14.2,bool,a2.2 filter 3 valve bf01third sector,808
+EV30,ev-30,%q14.3,bool,a2.3 filter 4 valve bf01third sector,809
+EV31,ev-31,%q14.4,bool,a2.4 filter 5 valve bf01third sector,810
+EV32,ev-32,%q14.5,bool,a2.5 filter 6 valve bf01third sector,811
+EV33,ev-33,%q14.6,bool,a2.6 filter 7 valve bf01third sector,812
+EV34,ev-34,%q14.7,bool,a2.7 filter 8 valve bf01third sector,813
+EV35,ev-35,%q15.0,bool,a3.0 filter 1 valve bf01fourth sector,814
+EV36,ev-36,%q15.1,bool,a3.1 filter 2 valve bf01fourth sector,815
+EV37,ev-37,%q15.2,bool,a3.2 filter 3 valve bf01fourth sector,816
+EV38,ev-38,%q15.3,bool,a3.3 filter 4 valve bf01fourth sector,817
+EV39,ev-39,%q15.4,bool,a3.4 filter 5 valve bf01fourth sector,818
+EV40,ev-40,%q15.5,bool,a3.5 filter 6 valve bf01fourth sector,819
+EV41,ev-41,%q15.6,bool,a3.6 filter 7 valve bf01fourth sector,820
+EV42,ev-42,%q15.7,bool,a3.7 filter 8 valve bf01fourth sector,821
+EV43,ev-43,%q16.0,bool,a4.0 filter 1 valve bf01fifth sector,822
+EV44,ev-44,%q16.1,bool,a4.1 filter 2 valve bf01fifth sector,823
+EV45,ev-45,%q16.2,bool,a4.2 filter 3 valve bf01fifth sector,824
+EV46,ev-46,%q16.3,bool,a4.3 filter 4 valve bf01fifth sector,825
+EV47,ev-47,%q16.4,bool,a4.4 filter 5 valve bf01fifth sector,826
+EV48,ev-48,%q16.5,bool,a4.5 filter 6 valve bf01fifth sector,827
+EV49,ev-49,%q16.6,bool,a4.6 filter 7 valve bf01fifth sector,828
+EV50,ev-50,%q16.7,bool,a4.7 filter 8 valve bf01fifth sector,829
+EV51,ev-51,%q18.0,bool,a8.0 filter 1 valve bf02first sector,890
+EV52,ev-52,%q18.1,bool,a8.1 filter 2 valve bf02first sector,891
+EV53,ev-53,%q18.2,bool,a8.2 filter 3 valve bf02first sector,892
+EV54,ev-54,%q18.3,bool,a8.3 filter 4 valve bf02first sector,893
+EV55,ev-55,%q18.4,bool,a8.4 filter 5 valve bf02first sector,894
+EV56,ev-56,%q18.5,bool,a8.5 filter 6 valve bf02first sector,895
+EV57,ev-57,%q18.6,bool,a8.6 filter 7 valve bf02first sector,841
+EV58,ev-58,%q18.7,bool,a8.7 filter 8 valve bf02first sector,842
+EV59,ev-59,%q19.0,bool,a9.0 filter 1 valve bf02second sector,843
+EV60,ev-60,%q19.1,bool,a9.1 filter 2 valve bf02second sector,844
+EV61,ev-61,%q19.2,bool,a9.2 filter 3 valve bf02second sector,904
+EV62,ev-62,%q19.3,bool,a9.3 filter 4 valve bf02second sector,845
+EV63,ev-63,%q19.4,bool,a9.4 filter 5 valve bf02second sector,846
+EV64,ev-64,%q19.5,bool,a9.5 filter 6 valve bf02second sector,847
+EV65,ev-65,%q19.6,bool,a9.6 filter 7 valve bf02second sector,848
+EV66,ev-66,%q19.7,bool,a9.7 filter 8 valve bf02second sector,849
+EV67,ev-67,%q20.0,bool,a10.0 filter 1 valve bf02third sector,850
+EV68,ev-68,%q20.1,bool,a10.1 filter 2 valve bf02third sector,851
+EV69,ev-69,%q20.2,bool,a10.2 filter 3 valve bf02third sector,852
+EV70,ev-70,%q20.3,bool,a10.3 filter 4 valve bf02third sector,853
+EV71,ev-71,%q20.4,bool,a10.4 filter 5 valve bf02third sector,854
+EV72,ev-72,%q20.5,bool,a10.5 filter 6 valve bf02third sector,855
+EV73,ev-73,%q20.6,bool,a10.6 filter 7 valve bf02third sector,856
+EV74,ev-74,%q20.7,bool,a10.7 filter 8 valve bf02third sector,857
+EV75,ev-75,%q21.0,bool,a11.0 filter 1 valve bf02fourth sector,858
+EV76,ev-76,%q21.1,bool,a11.1 filter 2 valve bf02fourth sector,859
+EV77,ev-77,%q21.2,bool,a11.2 filter 3 valve bf02fourth sector,860
+EV78,ev-78,%q21.3,bool,a11.3 filter 4 valve bf02fourth sector,861
+EV79,ev-79,%q21.4,bool,a11.4 filter 5 valve bf02fourth sector,862
+EV80,ev-80,%q21.5,bool,a11.5 filter 6 valve bf02fourth sector,863
+EV81,ev-81,%q21.6,bool,a11.6 filter 7 valve bf02fourth sector,864
+EV82,ev-82,%q21.7,bool,a11.7 filter 8 valve bf02fourth sector,865
+EV83,ev-83,%q22.0,bool,a12.0 filter 1 valve bf02fifth sector,866
+EV84,ev-84,%q22.1,bool,a12.1 filter 2 valve bf02fifth sector,867
+EV85,ev-85,%q22.2,bool,a12.2 filter 3 valve bf02fifth sector,868
+EV86,ev-86,%q22.3,bool,a12.3 filter 4 valve bf02fifth sector,905
+EV87,ev-87,%q22.4,bool,a12.4 filter 5 valve bf02fifth sector,869
+EV88,ev-88,%q22.5,bool,a12.5 filter 6 valve bf02fifth sector,870
+EV89,ev-89,%q22.6,bool,a12.6 filter 7 valve bf02fifth sector,871
+EV90,ev-90,%q22.7,bool,a12.7 filter 8 valve bf02fifth sector,872
+LS01,ev01_open,%i8.6,bool,"limit switch ls-01 gate ""a"" open",662
+LS02,ev01_close,%i8.7,bool,"limit switch ls-02 gate ""a"" closed",663
+LS05,ev02_open,%i9.0,bool,"limit switch ls-05 gate ""b"" open",664
+LS06,ev02_close,%i9.1,bool,"limit switch ls-06 gate ""b"" closed",665
+LS09,deviator open pv-03,%i10.2,bool,e29.4 limit switchls-09,879
+LS10,deviator close pv-03,%i10.3,bool,e29.5 limit switchls-10,880
+LS15,mv05_open,%i7.1,bool,limit switch ls-15,658
+LS16,mv05_close,%i7.2,bool,limit switch ls-16,1513
+LS17,mv02_open,%i7.3,bool,limit switch ls-17,659
+LS18,mv02_close,%i7.4,bool,limit switch ls-18,1514
+LS19,mv03_open,%i7.5,bool,limit switch ls-19,887
+LS20,mv03_close,%i7.6,bool,limit switch ls-20,888
+LS21A,mv04_open,%i7.7,bool,limit switch ls21a/ls21b,940
+LS21B,mv04_open,%i7.7,bool,limit switch ls21a/ls21b,940
+LS22A,mv04_close,%i8.0,bool,limit switch ls-22a/ls-22b,941
+LS22B,mv04_close,%i8.0,bool,limit switch ls-22a/ls-22b,941
+LS23,mv01_open,%i8.1,bool,limit switch ls-23,889
+LS24,mv01_close,%i8.2,bool,limit switch ls-24,1528
+LS25,ev04_open,%i9.4,bool,"e29.6 limit switch ls-25gate ""a"" open",1166
+LS26,ev04_close,%i9.5,bool,"e29.7 limit switch ls-26gate ""a"" closed",666
+LS29,ev05_open,%i9.6,bool,"e29.2 limit switch ls-29gate ""b"" open",1167
+LS30,ev05_close,%i9.7,bool,"e29.3 limit switch ls-30gate ""b"" closed",667
+LS32,pv04 close,%i10.6,bool,e36.6 limit switchls-32,944
+LS33,pv04 open,%i10.5,bool,e 45.0 pv 04 ls33 open,943
+LS40,mv06_open,%i6.7,bool,limit switch ls.40,657
+LS41,mv06_close,%i7.0,bool,limit switch ls-41,1527
+SYS-POWER,presence 110v,%i19.5,bool,,568
+SYS-SAFETY,177t1_ok,%i28.4,bool,,946
+SYS-SAFETY,temperature interlock ok,%q6.6,bool,a 56.3 max.temperaturefilter,1058
+SYS-SAFETY,em_ok,%i19.4,bool,,1529
+SYS-ALARM,acknowledg,%i19.6,bool,,569
+SYS-ALARM,reset_allarm,%i19.7,bool,,570
+SYS-ALARM,siren,%q7.6,bool,a 57.6 siren alarms,783
+SYS-ALARM,blinking ligh,%q7.7,bool,a 57.7 lampalarm,784
+SYS-AUTO,maintenance pv01,%m80.5,bool,,474
+SYS-AUTO,maintenance pv02,%m80.6,bool,,475
+SYS-SIMULATION,simulation(1),%m180.0,bool,,1516
+SYS-SIMULATION,under testing,%m5.5,bool,,1906
+SYS-LEGACY,riduce mn01,%m1.2,bool,,471

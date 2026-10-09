@@ -1,0 +1,75 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="88" Gate="Contact" />
+    <Part UId="90" Gate="Contact" />
+    <Part UId="59" Gate="Add">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="92" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="66" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <ORef UId="69" RefId="1" />
+    <ORef UId="70" RefId="4" />
+    <ORef UId="71" RefId="7" />
+    <ORef UId="72" RefId="8" />
+    <ORef UId="73" RefId="7" />
+    <ORef UId="74" RefId="4" />
+    <ORef UId="75" RefId="10" />
+    <ORef UId="76" RefId="7" />
+  </Parts>
+  <Wires>
+    <Wire UId="94">
+      <Powerrail />
+      <PCon UId="88" PinName="in" />
+    </Wire>
+    <Wire UId="77">
+      <OCon UId="69" />
+      <PCon UId="88" PinName="operand" />
+    </Wire>
+    <Wire UId="89">
+      <PCon UId="88" PinName="out" />
+      <PCon UId="90" PinName="in" />
+      <PCon UId="92" PinName="in" />
+    </Wire>
+    <Wire UId="78">
+      <OCon UId="70" />
+      <PCon UId="90" PinName="operand" />
+    </Wire>
+    <Wire UId="91">
+      <PCon UId="90" PinName="out" />
+      <PCon UId="59" PinName="en" />
+    </Wire>
+    <Wire UId="80">
+      <OCon UId="71" />
+      <PCon UId="59" PinName="in1" />
+    </Wire>
+    <Wire UId="81">
+      <OCon UId="72" />
+      <PCon UId="59" PinName="in2" />
+    </Wire>
+    <Wire UId="82">
+      <PCon UId="59" PinName="out" />
+      <OCon UId="73" />
+    </Wire>
+    <Wire UId="83">
+      <OCon UId="74" />
+      <PCon UId="92" PinName="operand" />
+    </Wire>
+    <Wire UId="93">
+      <PCon UId="92" PinName="out" />
+      <PCon UId="66" PinName="en" />
+    </Wire>
+    <Wire UId="85">
+      <OCon UId="75" />
+      <PCon UId="66" PinName="in" />
+    </Wire>
+    <Wire UId="86">
+      <PCon UId="66" PinName="out1" />
+      <OCon UId="76" />
+    </Wire>
+  </Wires>
+</FlgNet>

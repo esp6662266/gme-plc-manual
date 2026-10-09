@@ -1,0 +1,130 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="691" Gate="Contact" />
+    <Part UId="693" Gate="Contact" />
+    <Part UId="695" Gate="Contact" />
+    <Part UId="697" Gate="Contact" />
+    <Part UId="699" Gate="Contact" />
+    <Part UId="701" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="703" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="707" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">5</TemplateValue>
+    </Part>
+    <Part UId="653" Gate="Coil" />
+    <Part UId="656" Gate="SdCoil" />
+    <Part UId="705" Gate="Contact" />
+    <Part UId="661" Gate="Coil" />
+    <ORef UId="662" RefId="1" />
+    <ORef UId="663" RefId="105" />
+    <ORef UId="664" RefId="106" />
+    <ORef UId="665" RefId="107" />
+    <ORef UId="666" RefId="250" />
+    <ORef UId="667" RefId="251" />
+    <ORef UId="668" RefId="252" />
+    <ORef UId="669" RefId="111" />
+    <ORef UId="671" RefId="113" />
+    <ORef UId="670" RefId="112" />
+    <ORef UId="672" RefId="113" />
+    <ORef UId="673" RefId="114" />
+  </Parts>
+  <Wires>
+    <Wire UId="708">
+      <Powerrail />
+      <PCon UId="691" PinName="in" />
+    </Wire>
+    <Wire UId="674">
+      <OCon UId="662" />
+      <PCon UId="691" PinName="operand" />
+    </Wire>
+    <Wire UId="692">
+      <PCon UId="691" PinName="out" />
+      <PCon UId="693" PinName="in" />
+      <PCon UId="695" PinName="in" />
+      <PCon UId="697" PinName="in" />
+      <PCon UId="699" PinName="in" />
+    </Wire>
+    <Wire UId="675">
+      <OCon UId="663" />
+      <PCon UId="693" PinName="operand" />
+    </Wire>
+    <Wire UId="694">
+      <PCon UId="693" PinName="out" />
+      <PCon UId="707" PinName="in1" />
+    </Wire>
+    <Wire UId="676">
+      <OCon UId="664" />
+      <PCon UId="695" PinName="operand" />
+    </Wire>
+    <Wire UId="25">
+      <PCon UId="695" PinName="out" />
+      <PCon UId="707" PinName="in2" />
+    </Wire>
+    <Wire UId="677">
+      <OCon UId="665" />
+      <PCon UId="697" PinName="operand" />
+    </Wire>
+    <Wire UId="698">
+      <PCon UId="697" PinName="out" />
+      <PCon UId="707" PinName="in3" />
+    </Wire>
+    <Wire UId="678">
+      <OCon UId="666" />
+      <PCon UId="699" PinName="operand" />
+    </Wire>
+    <Wire UId="700">
+      <PCon UId="699" PinName="out" />
+      <PCon UId="701" PinName="in" />
+      <PCon UId="703" PinName="in" />
+    </Wire>
+    <Wire UId="679">
+      <OCon UId="667" />
+      <PCon UId="701" PinName="operand" />
+    </Wire>
+    <Wire UId="702">
+      <PCon UId="701" PinName="out" />
+      <PCon UId="707" PinName="in4" />
+    </Wire>
+    <Wire UId="680">
+      <OCon UId="668" />
+      <PCon UId="703" PinName="operand" />
+    </Wire>
+    <Wire UId="704">
+      <PCon UId="703" PinName="out" />
+      <PCon UId="707" PinName="in5" />
+    </Wire>
+    <Wire UId="683">
+      <PCon UId="707" PinName="out" />
+      <PCon UId="653" PinName="in" />
+      <PCon UId="656" PinName="in" />
+      <PCon UId="705" PinName="in" />
+    </Wire>
+    <Wire UId="684">
+      <OCon UId="669" />
+      <PCon UId="653" PinName="operand" />
+    </Wire>
+    <Wire UId="685">
+      <OCon UId="670" />
+      <PCon UId="656" PinName="value" />
+    </Wire>
+    <Wire UId="686">
+      <OCon UId="671" />
+      <PCon UId="656" PinName="operand" />
+    </Wire>
+    <Wire UId="687">
+      <OCon UId="672" />
+      <PCon UId="705" PinName="operand" />
+    </Wire>
+    <Wire UId="27">
+      <PCon UId="705" PinName="out" />
+      <PCon UId="661" PinName="in" />
+    </Wire>
+    <Wire UId="689">
+      <OCon UId="673" />
+      <PCon UId="661" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

@@ -1,0 +1,249 @@
+﻿id,name,group,kind,parent,priority,detail_level,symptom_detail,inputs,outputs,hmi,networks,direct_paths,pending,next_task,field_verified,tia_verified
+BC01,드럼 투입 컨베이어,원료 이송,motor,,P01,symptom,True,4,1,3,15,19,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+RD01,회전 드럼,원료 이송,motor,,P06,symptom,True,3,3,8,23,26,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+RD01-FAN,드럼 모터 냉각팬,원료 이송,motor,RD01,,specialist,False,1,1,3,10,1,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+MC03,예비 모터 MC03,원료 이송,motor,,,baseline,False,1,1,0,7,10,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+MC04,금속 컨베이어,원료 이송,motor,,P08,symptom,True,3,1,3,15,18,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+MC05,금속 컨베이어 MC05,원료 이송,motor,,,baseline,False,2,1,3,3,3,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+VS01,진동 스크린,원료 이송,motor,,P09,symptom,True,2,2,3,11,16,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+SC12,드럼 배출실 스크루,원료 이송,motor,,,baseline,False,1,1,3,1,1,7,"현장 없음 · 사용자 제공(2026-10-09). 현재 상세 조사 제외; 과거 도면·백업 보존, 부모 현장 검증 미실시",False,False
+CC01,드럼 투입실,공정 본체,passive,,P10,specialist,False,0,0,0,0,0,9,본체 자료 확인7항목의 설치/기계/제작사 근거 수집; MV04 관련1항목은 사용자 제공 철거에 따라 상세 조사 제외,False,False
+UC01,드럼 배출실,공정 본체,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+AB01,연소 챔버,연소·열회수,passive,,P12,specialist,False,2,0,0,0,0,8,본체 자료 확인7항목의 설치/기계/제작사 근거 수집; MV04 관련1항목은 사용자 제공 철거에 따라 상세 조사 제외,False,False
+BR01,가스 버너,연소·열회수,burner,,P11,symptom,True,7,4,10,36,35,4,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+HE01,열교환기,연소·열회수,passive,,P13,specialist,False,0,0,0,0,0,9,본체 자료 확인7항목의 설치/기계/제작사 근거 수집; MV04 관련1항목은 사용자 제공 철거에 따라 상세 조사 제외,False,False
+FN01,순환 블로어,연소·열회수,motor,,P15,symptom,True,7,3,6,18,20,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+FN02,열회수 블로어,연소·열회수,motor,,P16,symptom,True,3,2,6,15,15,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+FN03,연소 공기 블로어,연소·열회수,motor,,P17,symptom,True,2,1,3,11,14,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+FN04,집진 배기팬,집진·석회,motor,,P02,symptom,True,3,3,5,20,22,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+FN05,석회 계통 송풍기,집진·석회,motor,,,baseline,False,1,1,3,7,8,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+FN06,보조 블로어,연소·열회수,motor,,P18,symptom,True,1,1,3,10,9,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+FN01-FAN,FN01 모터 냉각팬,연소·열회수,motor,FN01,,specialist,False,1,1,0,2,0,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CH01,냉각기,연소·열회수,motor,,,baseline,False,1,2,3,11,16,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+MV01,모터 구동 밸브,제어 밸브,motorvalve,,P19,symptom,True,4,2,9,11,16,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+MV02,모터 구동 밸브,제어 밸브,motorvalve,,,specialist,False,7,3,8,11,14,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+MV03,모터 구동 밸브,제어 밸브,motorvalve,,P20,symptom,True,5,2,9,14,27,4,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+MV04,모터 구동 밸브,제어 밸브,motorvalve,,,baseline,False,6,2,2,5,4,5,"철거됨 · 사용자 제공(2026-10-09). 현재 상세 조사 제외; 과거 도면·백업·기존 불일치 보존, 현장 검증 미실시",False,False
+MV05,모터 구동 밸브,제어 밸브,motorvalve,,,specialist,False,6,2,8,10,13,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+MV06,모터 구동 밸브,제어 밸브,motorvalve,,P21,symptom,True,6,2,8,11,15,5,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+PV01,공압 게이트/분기 밸브,공압 밸브,gate,,P05,symptom,True,6,2,10,12,39,4,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+PV02,공압 게이트/분기 밸브,공압 밸브,gate,,P07,symptom,True,6,2,8,11,39,4,현재 프로그램·실물 대응과 관찰값을 수집하여 원인 배제·복구 확인을 기록,False,False
+PV03,공압 게이트/분기 밸브,공압 밸브,gate,,,baseline,False,3,1,5,7,13,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+PV04,공압 게이트/분기 밸브,공압 밸브,gate,,,baseline,False,3,1,5,3,2,6,"사용 계획 없음 · 사용자 제공(2026-10-09). 현재 상세 조사 제외; 과거 도면·백업 보존, 현재 사용 상태 부모 검증 미실시",False,False
+PV05,질소 주입 밸브,공압 밸브,nitrogen,,,baseline,False,1,1,0,2,0,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+PV06,질소 주입 밸브,공압 밸브,nitrogen,,,baseline,False,1,1,0,2,0,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+PV14,필터 냉풍 유입 밸브,공압 밸브,gate,,,baseline,False,2,1,3,6,10,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CY01,사이클론,집진·석회,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CY02,사이클론,집진·석회,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CY03,사이클론,집진·석회,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CY04,사이클론,집진·석회,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CY05,사이클론,집진·석회,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+VR01,로터리 밸브,집진·석회,motor,,,baseline,False,1,1,3,10,11,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+VR02,로터리 밸브,집진·석회,motor,,,baseline,False,1,1,3,10,11,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+VR03,로터리 밸브,집진·석회,motor,,,baseline,False,1,1,3,11,11,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+VR04,로터리 밸브,집진·석회,motor,,,baseline,False,1,1,3,12,11,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+VR05,로터리 밸브,집진·석회,motor,,,baseline,False,1,1,3,12,11,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+VR06,로터리 밸브,집진·석회,motor,,,baseline,False,1,1,3,8,8,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+SC01,사이클론 분진 스크루,집진·석회,motor,,,specialist,False,1,1,3,9,10,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+SC10,BF01 분진 스크루,집진·석회,motor,,,baseline,False,1,1,3,11,10,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+SC11,BF02 분진 스크루,집진·석회,motor,,,baseline,False,1,1,3,11,10,5,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+BF01,백 필터,집진·석회,filter,,,baseline,False,2,10,1,11,12,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+BF02,백 필터,집진·석회,filter,,,baseline,False,1,10,1,11,12,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LD01,석회 마이크로피더,집진·석회,motor,,,baseline,False,2,2,6,15,22,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LD01A,석회 사일로 진동기,집진·석회,motor,LD01,,baseline,False,1,1,0,6,2,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+ER01,전기 히터,집진·석회,heater,,,baseline,False,1,1,3,6,6,6,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CM01,집진 배기 스택,공정 본체,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CM02,상부 배기 스택,공정 본체,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CR01,운전 제어반,공정 본체,passive,,,baseline,False,0,0,0,0,0,9,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+BWF01,고객 설비 계량 피더,외부 연동,client,,,baseline,False,9,2,7,19,22,6,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+BWF02,고객 설비 계량 피더,외부 연동,client,,,baseline,False,9,2,7,20,21,6,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+LIW,외부 LIW 피더,외부 연동,client,,,baseline,False,1,2,0,3,3,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL01,Apron conveyor A,외부 연동,client,,,baseline,False,2,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL02,Impactor,외부 연동,client,,,baseline,False,2,0,1,2,0,6,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL03,Impact vibration feeder,외부 연동,client,,,baseline,False,2,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL04,Belt conveyor A,외부 연동,client,,,baseline,False,2,1,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL05,Air knife,외부 연동,client,,,baseline,False,2,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL06,Belt conveyor B,외부 연동,client,,,baseline,False,2,1,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL07,Shredder 1,외부 연동,client,,,baseline,False,2,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL08,Shredder vibration feeder,외부 연동,client,,,baseline,False,2,1,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL09,Belt conveyor C,외부 연동,client,,,baseline,False,3,1,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL10,Rotex screen,외부 연동,client,,,baseline,False,1,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL13,Apron conveyor B,외부 연동,client,,,baseline,False,2,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL14,Shredder 2,외부 연동,client,,,baseline,False,1,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL15,Belt conveyor D,외부 연동,client,,,baseline,False,1,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL16,Belt conveyor E,외부 연동,client,,,baseline,False,2,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL17,Weighing hopper 2,외부 연동,client,,,baseline,False,1,0,0,2,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL18,Hopper conveyor 2,외부 연동,client,,,baseline,False,1,0,0,1,0,7,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+CLIENT-CL19,Primary shredder,외부 연동,client,,,baseline,False,1,0,1,2,0,6,본체 또는 외부 제어 주체·접속 경계·제작사 자료 확인; 직접 PLC 출력을 임의 배정하지 않음,False,False
+TC01,온도 계측,계측,sensor,,,specialist,False,1,0,2,20,30,5,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC02,온도 계측,계측,sensor,,,specialist,False,1,0,1,5,3,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC03,온도 계측,계측,sensor,,,specialist,False,1,0,2,13,11,5,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC04,온도 계측,계측,sensor,,,specialist,False,3,0,1,5,3,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC05,온도 계측,계측,sensor,,,specialist,False,2,0,1,5,3,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC06,온도 계측,계측,sensor,,,specialist,False,1,0,1,2,1,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC07,온도 계측,계측,sensor,,,specialist,False,1,0,1,2,1,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC09,온도 계측,계측,sensor,,,specialist,False,1,0,0,8,4,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC10,온도 계측,계측,sensor,,,specialist,False,1,0,0,1,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+TC11,온도 계측,계측,sensor,,,baseline,False,0,0,0,0,0,9,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+RO01,산소 분석 채널,계측,sensor,,,specialist,False,1,0,1,10,4,5,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+RO02,산소 분석 채널,계측,sensor,,,specialist,False,1,0,1,4,1,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+RO03,산소 분석 채널,계측,sensor,,,specialist,False,1,0,1,3,5,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+RO04,산소 분석 채널,계측,sensor,,,specialist,False,1,0,1,2,1,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+PSH01,압력 측정 채널,계측,sensor,,,specialist,False,1,0,2,3,1,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+PSH02,압력 측정 채널,계측,sensor,,,specialist,False,1,0,2,6,3,5,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+PSH03,압력 측정 채널,계측,sensor,,,specialist,False,1,0,1,4,1,5,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+PC01,집진 흡인 압력,계측,sensor,,,specialist,False,1,0,1,6,1,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+PC02,소프트웨어 압력 루프 명칭,계측,software,,,baseline,False,0,0,0,1,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+DP01,백 필터 차압,계측,sensor,,,specialist,False,1,0,0,7,0,5,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+DP02,백 필터 차압,계측,sensor,,,specialist,False,1,0,0,4,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+ZT01,FN01 진동 계측,계측,sensor,,,baseline,False,1,0,1,4,3,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+ZT02,P&ID 밸브 위치 계측,계측,sensor,MV01,,baseline,False,0,0,0,0,0,9,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+ZT03,P&ID 밸브 위치 계측,계측,sensor,MV02,,baseline,False,0,0,0,0,0,9,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+ZT04,P&ID 밸브 위치 계측,계측,sensor,MV03,,baseline,False,0,0,0,0,0,9,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+ZT05,P&ID 밸브 위치 계측,계측,sensor,MV05,,baseline,False,0,0,0,0,0,9,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+ZT06,P&ID 밸브 위치 계측,계측,sensor,MV06,,baseline,False,0,0,0,0,0,9,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+LT01,석회 사일로 레벨,계측,sensor,LD01,,baseline,False,1,0,0,2,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SS01,이송 장치 감시 스위치,계측,sensor,BC01,,baseline,False,2,0,0,0,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SS09,이송 장치 감시 스위치,계측,sensor,MC03,,baseline,False,1,0,0,0,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SS10,이송 장치 감시 스위치,계측,sensor,MC04,,baseline,False,1,0,0,0,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SS11,이송 장치 감시 스위치,계측,sensor,MC05,,baseline,False,1,0,0,0,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+PSL05,압축공기 저압 스위치,계측,sensor,,,baseline,False,1,0,0,2,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+EV01,공압 솔레노이드,하위 구성품,component,PV01,,baseline,False,3,1,0,2,0,7,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV02,공압 솔레노이드,하위 구성품,component,PV01,,baseline,False,3,1,0,3,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV03,드럼 윤활 솔레노이드,하위 구성품,component,RD01,,specialist,False,0,1,2,3,1,5,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV04,공압 솔레노이드,하위 구성품,component,PV02,,baseline,False,2,1,0,1,0,7,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV05,공압 솔레노이드,하위 구성품,component,PV02,,baseline,False,2,1,0,2,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV06,공압 솔레노이드,하위 구성품,component,PV03,,baseline,False,0,1,0,0,0,8,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV07,공압 솔레노이드,하위 구성품,component,PV04,,baseline,False,0,1,0,0,0,8,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV11,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV12,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV13,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV14,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV15,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV16,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV17,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV18,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV19,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV20,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV21,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV22,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV23,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV24,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV25,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV26,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV27,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV28,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV29,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV30,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV31,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV32,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV33,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV34,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV35,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV36,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV37,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV38,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV39,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV40,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV41,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV42,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV43,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV44,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV45,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV46,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV47,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV48,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV49,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV50,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF01,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV51,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV52,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV53,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV54,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV55,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV56,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV57,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV58,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV59,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV60,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV61,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV62,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV63,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV64,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV65,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV66,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV67,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV68,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV69,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV70,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV71,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV72,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV73,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV74,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV75,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV76,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV77,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV78,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV79,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV80,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV81,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV82,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV83,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV84,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV85,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV86,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV87,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV88,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV89,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+EV90,필터 펄스 세정 밸브,필터 세정 밸브,pulse,BF02,,baseline,False,0,1,0,1,1,6,EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존,False,False
+CYL-CL01,공압 실린더,하위 구성품,component,PV01,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL02,공압 실린더,하위 구성품,component,PV01,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL03,공압 실린더,하위 구성품,component,PV01,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL04,공압 실린더,하위 구성품,component,PV01,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL05,공압 실린더,하위 구성품,component,PV02,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL06,공압 실린더,하위 구성품,component,PV02,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL07,공압 실린더,하위 구성품,component,PV02,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL08,공압 실린더,하위 구성품,component,PV02,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL09,공압 실린더,하위 구성품,component,PV03,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL10,공압 실린더,하위 구성품,component,PV03,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL11,공압 실린더,하위 구성품,component,PV04,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+CYL-CL12,공압 실린더,하위 구성품,component,PV14,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS01,밸브 위치 리미트 스위치,하위 구성품,component,PV01,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS02,밸브 위치 리미트 스위치,하위 구성품,component,PV01,,baseline,False,1,0,0,3,0,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS05,밸브 위치 리미트 스위치,하위 구성품,component,PV01,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS06,밸브 위치 리미트 스위치,하위 구성품,component,PV01,,baseline,False,1,0,0,3,0,7,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS09,밸브 위치 리미트 스위치,하위 구성품,component,PV03,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS10,밸브 위치 리미트 스위치,하위 구성품,component,PV03,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS15,밸브 위치 리미트 스위치,하위 구성품,component,MV05,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS16,밸브 위치 리미트 스위치,하위 구성품,component,MV05,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS17,밸브 위치 리미트 스위치,하위 구성품,component,MV02,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS18,밸브 위치 리미트 스위치,하위 구성품,component,MV02,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS19,밸브 위치 리미트 스위치,하위 구성품,component,MV03,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS20,밸브 위치 리미트 스위치,하위 구성품,component,MV03,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS21A,밸브 위치 리미트 스위치,하위 구성품,component,MV04,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS21B,밸브 위치 리미트 스위치,하위 구성품,component,MV04,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS22A,밸브 위치 리미트 스위치,하위 구성품,component,MV04,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS22B,밸브 위치 리미트 스위치,하위 구성품,component,MV04,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS23,밸브 위치 리미트 스위치,하위 구성품,component,MV01,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS24,밸브 위치 리미트 스위치,하위 구성품,component,MV01,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS25,밸브 위치 리미트 스위치,하위 구성품,component,PV02,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS26,밸브 위치 리미트 스위치,하위 구성품,component,PV02,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS29,밸브 위치 리미트 스위치,하위 구성품,component,PV02,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS30,밸브 위치 리미트 스위치,하위 구성품,component,PV02,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS32,밸브 위치 리미트 스위치,하위 구성품,component,PV04,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS33,밸브 위치 리미트 스위치,하위 구성품,component,PV04,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS34,밸브 위치 리미트 스위치,하위 구성품,component,MV06,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS35,밸브 위치 리미트 스위치,하위 구성품,component,MV06,,baseline,False,0,0,0,0,0,9,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS40,밸브 위치 리미트 스위치,하위 구성품,component,MV06,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+LS41,밸브 위치 리미트 스위치,하위 구성품,component,MV06,,baseline,False,1,0,0,0,0,8,요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강,False,False
+SYS-POWER,주전원·보조전원·제어반,공통 시스템,software,,,baseline,False,1,0,0,1,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-SAFETY,비상정지·일반 안전 회로,공통 시스템,software,,,baseline,False,2,1,0,40,1,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-PLC-IO,CPU·분산 I/O·신호 변환,공통 시스템,software,,,baseline,False,0,0,0,84,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-HMI,HMI·통신·가공 상태,공통 시스템,software,,,baseline,False,0,0,0,54,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-ALARM,알람·경광등·사이렌·Reset,공통 시스템,software,,,baseline,False,2,2,1,98,3,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-AUTO,자동 기동·정지·유지보수,공통 시스템,software,,,baseline,False,0,0,2,37,0,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-PID,온도·압력·산소·비율 제어,공통 시스템,software,,,baseline,False,0,0,2,52,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-RECIPES,레시피·설정값 관리,공통 시스템,software,,,baseline,False,0,0,4,1,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-SIMULATION,기존 시험·시뮬레이션 블록,공통 시스템,software,,,baseline,False,0,0,0,42,1,6,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-RUNHOURS,모터 운전시간·정비 이력,공통 시스템,software,,,baseline,False,0,0,0,56,0,8,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-COUNTERS,생산량·가스·유량 계수,공통 시스템,software,,,baseline,False,0,0,5,54,0,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False
+SYS-LEGACY,과거 태그·이름 대응,공통 시스템,software,,,baseline,False,0,0,0,8,2,7,미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적,False,False

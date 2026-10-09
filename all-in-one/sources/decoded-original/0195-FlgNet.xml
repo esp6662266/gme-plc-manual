@@ -1,0 +1,242 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="657" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="658" Gate="Contact" />
+    <Part UId="659" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="765" Gate="Contact" />
+    <Part UId="661" Gate="Contact" />
+    <Part UId="662" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <LRef UId="663" RefId="112">
+      <Instance UId="664" RefId="86" />
+    </LRef>
+    <ORef UId="672" RefId="124" />
+    <ORef UId="673" RefId="1" />
+    <ORef UId="674" RefId="124" />
+    <ORef UId="766" RefId="77" />
+    <ORef UId="676" RefId="78" />
+    <ORef UId="677" RefId="78" />
+    <ORef UId="678" RefId="1" />
+    <ORef UId="679" RefId="1" />
+    <ORef UId="680" />
+    <ORef UId="681" />
+    <ORef UId="682" RefId="1" />
+    <ORef UId="683" RefId="87" />
+    <ORef UId="684" RefId="74" />
+    <ORef UId="685" RefId="71" />
+    <ORef UId="686" />
+    <ORef UId="687" RefId="88" />
+    <ORef UId="688" RefId="89" />
+    <ORef UId="689" RefId="90" />
+    <ORef UId="690" RefId="91" />
+    <ORef UId="691" RefId="92" />
+    <ORef UId="692" RefId="93" />
+    <ORef UId="693" RefId="94" />
+    <ORef UId="694" RefId="95" />
+    <ORef UId="695" RefId="96" />
+    <ORef UId="696" RefId="88" />
+    <ORef UId="697" RefId="96" />
+    <ORef UId="698" RefId="88" />
+    <ORef UId="699" />
+    <ORef UId="700" RefId="96" />
+    <ORef UId="701" RefId="97" />
+    <ORef UId="702" />
+    <ORef UId="703" />
+    <ORef UId="704" />
+    <ORef UId="705" />
+    <ORef UId="706" />
+    <ORef UId="707" />
+    <ORef UId="708" />
+    <ORef UId="709" />
+  </Parts>
+  <Wires>
+    <Wire UId="637">
+      <Powerrail />
+      <PCon UId="663" PinName="en" />
+      <PCon UId="657" PinName="in" />
+      <PCon UId="658" PinName="in" />
+    </Wire>
+    <Wire UId="721">
+      <OCon UId="672" />
+      <PCon UId="657" PinName="operand" />
+    </Wire>
+    <Wire UId="722">
+      <PCon UId="657" PinName="out" />
+      <PCon UId="663" PinName="COM_RST" />
+    </Wire>
+    <Wire UId="723">
+      <OCon UId="673" />
+      <PCon UId="658" PinName="operand" />
+    </Wire>
+    <Wire UId="724">
+      <PCon UId="658" PinName="out" />
+      <PCon UId="659" PinName="in" />
+      <PCon UId="661" PinName="in" />
+    </Wire>
+    <Wire UId="725">
+      <OCon UId="674" />
+      <PCon UId="659" PinName="operand" />
+    </Wire>
+    <Wire UId="726">
+      <PCon UId="659" PinName="out" />
+      <PCon UId="765" PinName="in" />
+    </Wire>
+    <Wire UId="768">
+      <OCon UId="766" />
+      <PCon UId="765" PinName="operand" />
+    </Wire>
+    <Wire UId="21">
+      <PCon UId="765" PinName="out" />
+      <PCon UId="662" PinName="in1" />
+    </Wire>
+    <Wire UId="729">
+      <OCon UId="676" />
+      <PCon UId="661" PinName="operand" />
+    </Wire>
+    <Wire UId="730">
+      <PCon UId="661" PinName="out" />
+      <PCon UId="662" PinName="in2" />
+    </Wire>
+    <Wire UId="731">
+      <PCon UId="662" PinName="out" />
+      <PCon UId="663" PinName="MAN_ON" />
+    </Wire>
+    <Wire UId="732">
+      <OCon UId="677" />
+      <PCon UId="663" PinName="PVPER_ON" />
+    </Wire>
+    <Wire UId="733">
+      <OCon UId="678" />
+      <PCon UId="663" PinName="P_SEL" />
+    </Wire>
+    <Wire UId="734">
+      <OCon UId="679" />
+      <PCon UId="663" PinName="I_SEL" />
+    </Wire>
+    <Wire UId="735">
+      <OCon UId="680" />
+      <PCon UId="663" PinName="INT_HOLD" />
+    </Wire>
+    <Wire UId="736">
+      <OCon UId="681" />
+      <PCon UId="663" PinName="I_ITL_ON" />
+    </Wire>
+    <Wire UId="737">
+      <OCon UId="682" />
+      <PCon UId="663" PinName="D_SEL" />
+    </Wire>
+    <Wire UId="738">
+      <OCon UId="683" />
+      <PCon UId="663" PinName="CYCLE" />
+    </Wire>
+    <Wire UId="739">
+      <OCon UId="684" />
+      <PCon UId="663" PinName="SP_INT" />
+    </Wire>
+    <Wire UId="740">
+      <OCon UId="685" />
+      <PCon UId="663" PinName="PV_IN" />
+    </Wire>
+    <Wire UId="741">
+      <OCon UId="686" />
+      <PCon UId="663" PinName="PV_PER" />
+    </Wire>
+    <Wire UId="742">
+      <OCon UId="687" />
+      <PCon UId="663" PinName="MAN" />
+    </Wire>
+    <Wire UId="743">
+      <OCon UId="688" />
+      <PCon UId="663" PinName="GAIN" />
+    </Wire>
+    <Wire UId="744">
+      <OCon UId="689" />
+      <PCon UId="663" PinName="TI" />
+    </Wire>
+    <Wire UId="745">
+      <OCon UId="690" />
+      <PCon UId="663" PinName="TD" />
+    </Wire>
+    <Wire UId="746">
+      <OCon UId="691" />
+      <PCon UId="663" PinName="TM_LAG" />
+    </Wire>
+    <Wire UId="747">
+      <OCon UId="692" />
+      <PCon UId="663" PinName="DEADB_W" />
+    </Wire>
+    <Wire UId="748">
+      <OCon UId="693" />
+      <PCon UId="663" PinName="LMN_HLM" />
+    </Wire>
+    <Wire UId="749">
+      <OCon UId="694" />
+      <PCon UId="663" PinName="LMN_LLM" />
+    </Wire>
+    <Wire UId="750">
+      <OCon UId="695" />
+      <PCon UId="663" PinName="PV_FAC" />
+    </Wire>
+    <Wire UId="751">
+      <OCon UId="696" />
+      <PCon UId="663" PinName="PV_OFF" />
+    </Wire>
+    <Wire UId="752">
+      <OCon UId="697" />
+      <PCon UId="663" PinName="LMN_FAC" />
+    </Wire>
+    <Wire UId="753">
+      <OCon UId="698" />
+      <PCon UId="663" PinName="LMN_OFF" />
+    </Wire>
+    <Wire UId="754">
+      <OCon UId="699" />
+      <PCon UId="663" PinName="I_ITLVAL" />
+    </Wire>
+    <Wire UId="755">
+      <OCon UId="700" />
+      <PCon UId="663" PinName="DISV" />
+    </Wire>
+    <Wire UId="756">
+      <PCon UId="663" PinName="LMN" />
+      <OCon UId="701" />
+    </Wire>
+    <Wire UId="757">
+      <PCon UId="663" PinName="LMN_PER" />
+      <OCon UId="702" />
+    </Wire>
+    <Wire UId="758">
+      <PCon UId="663" PinName="QLMN_HLM" />
+      <OCon UId="703" />
+    </Wire>
+    <Wire UId="759">
+      <PCon UId="663" PinName="QLMN_LLM" />
+      <OCon UId="704" />
+    </Wire>
+    <Wire UId="760">
+      <PCon UId="663" PinName="LMN_P" />
+      <OCon UId="705" />
+    </Wire>
+    <Wire UId="761">
+      <PCon UId="663" PinName="LMN_I" />
+      <OCon UId="706" />
+    </Wire>
+    <Wire UId="762">
+      <PCon UId="663" PinName="LMN_D" />
+      <OCon UId="707" />
+    </Wire>
+    <Wire UId="763">
+      <PCon UId="663" PinName="PV" />
+      <OCon UId="708" />
+    </Wire>
+    <Wire UId="764">
+      <PCon UId="663" PinName="ER" />
+      <OCon UId="709" />
+    </Wire>
+  </Wires>
+</FlgNet>

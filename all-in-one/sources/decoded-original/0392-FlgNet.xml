@@ -1,0 +1,113 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="22" RefId="716">
+      <CodeBlock UId="23" RefId="715" />
+    </CRef>
+    <ORef UId="24" RefId="734" />
+    <ORef UId="25" RefId="735" />
+    <ORef UId="26" RefId="736" />
+    <ORef UId="27" RefId="737" />
+    <ORef UId="28" RefId="738" />
+    <ORef UId="29" RefId="739" />
+    <ORef UId="30" RefId="740" />
+    <ORef UId="31" RefId="741" />
+    <ORef UId="32" RefId="742" />
+    <ORef UId="33" RefId="743" />
+    <ORef UId="34" RefId="48" />
+    <ORef UId="35" RefId="48" />
+    <ORef UId="36" RefId="48" />
+    <ORef UId="37" RefId="744" />
+    <ORef UId="38" RefId="745" />
+    <ORef UId="39" RefId="746" />
+    <ORef UId="40" RefId="747" />
+    <ORef UId="41" RefId="748" />
+    <ORef UId="42" RefId="749" />
+    <ORef UId="43" RefId="750" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="22" PinName="en" />
+    </Wire>
+    <Wire UId="45">
+      <OCon UId="24" />
+      <PCon UId="22" PinName="GateA_Open" />
+    </Wire>
+    <Wire UId="46">
+      <OCon UId="25" />
+      <PCon UId="22" PinName="GateA_Close" />
+    </Wire>
+    <Wire UId="47">
+      <OCon UId="26" />
+      <PCon UId="22" PinName="GateB_Open" />
+    </Wire>
+    <Wire UId="48">
+      <OCon UId="27" />
+      <PCon UId="22" PinName="GateB_Close" />
+    </Wire>
+    <Wire UId="49">
+      <OCon UId="28" />
+      <PCon UId="22" PinName="Selector_GateA" />
+    </Wire>
+    <Wire UId="50">
+      <OCon UId="29" />
+      <PCon UId="22" PinName="Selector_GateB" />
+    </Wire>
+    <Wire UId="51">
+      <OCon UId="30" />
+      <PCon UId="22" PinName="Allarm1" />
+    </Wire>
+    <Wire UId="52">
+      <OCon UId="31" />
+      <PCon UId="22" PinName="Allarm2" />
+    </Wire>
+    <Wire UId="53">
+      <OCon UId="32" />
+      <PCon UId="22" PinName="Allarm3" />
+    </Wire>
+    <Wire UId="54">
+      <OCon UId="33" />
+      <PCon UId="22" PinName="Allarm4" />
+    </Wire>
+    <Wire UId="55">
+      <OCon UId="34" />
+      <PCon UId="22" PinName="Allarm5" />
+    </Wire>
+    <Wire UId="56">
+      <OCon UId="35" />
+      <PCon UId="22" PinName="Allarm6" />
+    </Wire>
+    <Wire UId="57">
+      <OCon UId="36" />
+      <PCon UId="22" PinName="Allarm7" />
+    </Wire>
+    <Wire UId="58">
+      <PCon UId="22" PinName="HMI_GateA_Open" />
+      <OCon UId="37" />
+    </Wire>
+    <Wire UId="59">
+      <PCon UId="22" PinName="HMI_GateA_Close" />
+      <OCon UId="38" />
+    </Wire>
+    <Wire UId="60">
+      <PCon UId="22" PinName="HMI_GateB_Open" />
+      <OCon UId="39" />
+    </Wire>
+    <Wire UId="61">
+      <PCon UId="22" PinName="HMI_GateB_Close" />
+      <OCon UId="40" />
+    </Wire>
+    <Wire UId="62">
+      <PCon UId="22" PinName="HMI_Selector_GateA" />
+      <OCon UId="41" />
+    </Wire>
+    <Wire UId="63">
+      <PCon UId="22" PinName="HMI_Selector_GateB" />
+      <OCon UId="42" />
+    </Wire>
+    <Wire UId="64">
+      <PCon UId="22" PinName="Total_Allarms" />
+      <OCon UId="43" />
+    </Wire>
+  </Wires>
+</FlgNet>

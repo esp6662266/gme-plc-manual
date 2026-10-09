@@ -1,0 +1,53 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="23" RefId="638">
+      <CodeBlock UId="22" RefId="1" />
+    </CRef>
+    <ORef UId="25" RefId="708" />
+    <ORef UId="29" RefId="101" />
+    <ORef UId="31" RefId="102" />
+    <ORef UId="33" RefId="48" />
+    <ORef UId="35" RefId="48" />
+    <ORef UId="37" RefId="48" />
+    <ORef UId="43" RefId="95" />
+    <ORef UId="47" RefId="97" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="23" PinName="en" />
+    </Wire>
+    <Wire UId="24">
+      <OCon UId="25" />
+      <PCon UId="23" PinName="Ingresso_run" />
+    </Wire>
+    <Wire UId="28">
+      <OCon UId="29" />
+      <PCon UId="23" PinName="Allarme1" />
+    </Wire>
+    <Wire UId="30">
+      <OCon UId="31" />
+      <PCon UId="23" PinName="Allarme2" />
+    </Wire>
+    <Wire UId="32">
+      <OCon UId="33" />
+      <PCon UId="23" PinName="Allarme3" />
+    </Wire>
+    <Wire UId="34">
+      <OCon UId="35" />
+      <PCon UId="23" PinName="Allarme4" />
+    </Wire>
+    <Wire UId="36">
+      <OCon UId="37" />
+      <PCon UId="23" PinName="Allarme5" />
+    </Wire>
+    <Wire UId="42">
+      <PCon UId="23" PinName="Risposta" />
+      <OCon UId="43" />
+    </Wire>
+    <Wire UId="46">
+      <PCon UId="23" PinName="Comulativo_allarmi" />
+      <OCon UId="47" />
+    </Wire>
+  </Wires>
+</FlgNet>

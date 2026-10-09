@@ -1,0 +1,50 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="36" RefId="248">
+      <CodeBlock UId="35" RefId="241" />
+    </CRef>
+    <CRef UId="44" RefId="248">
+      <CodeBlock UId="45" RefId="241" />
+    </CRef>
+    <ORef UId="38" RefId="235" />
+    <ORef UId="40" RefId="249" />
+    <ORef UId="43" RefId="148" />
+    <ORef UId="46" RefId="236" />
+    <ORef UId="47" RefId="249" />
+    <ORef UId="48" RefId="150" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="36" PinName="en" />
+    </Wire>
+    <Wire UId="37">
+      <OCon UId="38" />
+      <PCon UId="36" PinName="KF" />
+    </Wire>
+    <Wire UId="39">
+      <OCon UId="40" />
+      <PCon UId="36" PinName="SEC" />
+    </Wire>
+    <Wire UId="41">
+      <PCon UId="36" PinName="eno" />
+      <PCon UId="44" PinName="en" />
+    </Wire>
+    <Wire UId="42">
+      <PCon UId="36" PinName="KT" />
+      <OCon UId="43" />
+    </Wire>
+    <Wire UId="50">
+      <OCon UId="46" />
+      <PCon UId="44" PinName="KF" />
+    </Wire>
+    <Wire UId="51">
+      <OCon UId="47" />
+      <PCon UId="44" PinName="SEC" />
+    </Wire>
+    <Wire UId="52">
+      <PCon UId="44" PinName="KT" />
+      <OCon UId="48" />
+    </Wire>
+  </Wires>
+</FlgNet>

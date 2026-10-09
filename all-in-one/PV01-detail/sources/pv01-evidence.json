@@ -1,0 +1,4328 @@
+{
+  "kind": "Selected search-index evidence, not executable ladder",
+  "repository": "esp6662266/gme-plc-manual",
+  "commit": "2ebff1273f586f3355a2ba8fb91d701ac94e4a5e",
+  "archive_baseline": "GME_20250506.zap18 / GME_20250605.ap18",
+  "source_index_sha256": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1",
+  "source_block_summary_sha256": "68253f9366908244a27ed461c66d465da7ec1723571f27deaa9a6f81a542de63",
+  "network_locators": [
+    {
+      "block": "hmi pv_2gate",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 347,
+      "title": ""
+    },
+    {
+      "block": "startup only",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 401,
+      "title": "special flag initialization"
+    },
+    {
+      "block": "startup only",
+      "index_order": 5,
+      "segment": "_7ev",
+      "document_id": 405,
+      "title": "default"
+    },
+    {
+      "block": "allarm manager",
+      "index_order": 4,
+      "segment": "_7ev",
+      "document_id": 930,
+      "title": "com_w3 bit8 (reset_allarm)"
+    },
+    {
+      "block": "hmi inputs",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 1070,
+      "title": ""
+    },
+    {
+      "block": "simulation",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 1079,
+      "title": ""
+    },
+    {
+      "block": "simulation",
+      "index_order": 2,
+      "segment": "_7ev",
+      "document_id": 1080,
+      "title": ""
+    },
+    {
+      "block": "simulation",
+      "index_order": 3,
+      "segment": "_7ev",
+      "document_id": 1081,
+      "title": ""
+    },
+    {
+      "block": "simulation",
+      "index_order": 12,
+      "segment": "_7ev",
+      "document_id": 1090,
+      "title": "pv01"
+    },
+    {
+      "block": "hmi",
+      "index_order": 38,
+      "segment": "_7ev",
+      "document_id": 1215,
+      "title": "pv01"
+    },
+    {
+      "block": "main",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 1612,
+      "title": "simulation"
+    },
+    {
+      "block": "main",
+      "index_order": 2,
+      "segment": "_7ev",
+      "document_id": 1613,
+      "title": ""
+    },
+    {
+      "block": "main",
+      "index_order": 8,
+      "segment": "_7ev",
+      "document_id": 1619,
+      "title": "analog conversion and allarms"
+    },
+    {
+      "block": "main",
+      "index_order": 9,
+      "segment": "_7ev",
+      "document_id": 1620,
+      "title": "motors valve and burner"
+    },
+    {
+      "block": "allarms 1",
+      "index_order": 35,
+      "segment": "_7ev",
+      "document_id": 1815,
+      "title": "pv01"
+    },
+    {
+      "block": "allarms 1",
+      "index_order": 36,
+      "segment": "_7ev",
+      "document_id": 1816,
+      "title": "pv01"
+    },
+    {
+      "block": "allarms 1",
+      "index_order": 45,
+      "segment": "_7ev",
+      "document_id": 1825,
+      "title": "simulation enabled"
+    },
+    {
+      "block": "auto start motors",
+      "index_order": 3,
+      "segment": "_7ev",
+      "document_id": 1843,
+      "title": "preheating"
+    },
+    {
+      "block": "auto start motors",
+      "index_order": 4,
+      "segment": "_7ev",
+      "document_id": 1844,
+      "title": "production"
+    },
+    {
+      "block": "auto start motors",
+      "index_order": 7,
+      "segment": "_7ev",
+      "document_id": 1847,
+      "title": "presetting sequence 5: complete engine stop"
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 1911,
+      "title": "pv-01"
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 2,
+      "segment": "_7ev",
+      "document_id": 1912,
+      "title": ""
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 3,
+      "segment": "_7ev",
+      "document_id": 1913,
+      "title": "r1 gate loop pv-01"
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 4,
+      "segment": "_7ev",
+      "document_id": 1914,
+      "title": "evr4 scraps discharge door and gates selector pv-01"
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 5,
+      "segment": "_7ev",
+      "document_id": 1915,
+      "title": "a 48.4 ev-02 valvecommand"
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 11,
+      "segment": "_7ev",
+      "document_id": 1921,
+      "title": "pv01"
+    },
+    {
+      "block": "r1 scraps gate 2",
+      "index_order": 12,
+      "segment": "_7ev",
+      "document_id": 1922,
+      "title": "pv01"
+    },
+    {
+      "block": "motors 1",
+      "index_order": 1,
+      "segment": "_7ev",
+      "document_id": 1930,
+      "title": "maintenance"
+    },
+    {
+      "block": "motors 1",
+      "index_order": 6,
+      "segment": "_7ev",
+      "document_id": 1935,
+      "title": "bc01"
+    }
+  ],
+  "documents": [
+    {
+      "segment": "_7ev",
+      "i": 39,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgBzIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m20.0",
+        "Datatype": "bool",
+        "Name": "open ev a 00 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 41,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgB1IwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m21.3",
+        "Datatype": "bool",
+        "Name": "open ev a 01 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 46,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDZIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m20.2",
+        "Datatype": "bool",
+        "Name": "close ev a 00 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 47,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDaIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m21.0",
+        "Datatype": "bool",
+        "Name": "close ev a 01 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 49,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDcIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m22.3",
+        "Datatype": "bool",
+        "Name": "close ev a 02 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 50,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDdIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m20.3",
+        "Datatype": "bool",
+        "Name": "close ev b 00 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 51,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDeIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m21.2",
+        "Datatype": "bool",
+        "Name": "close ev b 01 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 53,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDgIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m22.1",
+        "Datatype": "bool",
+        "Name": "close ev b 02 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 59,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAEJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m21.1",
+        "Datatype": "bool",
+        "Name": "open ev b 01 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 61,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAGJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m22.2",
+        "Datatype": "bool",
+        "Name": "open ev b 02 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 84,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgByJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m10.7",
+        "Datatype": "bool",
+        "Name": "mem gate a open pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 86,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgB0JAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m10.6",
+        "Datatype": "bool",
+        "Name": "mem gate b open pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 99,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCjJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m22.0",
+        "Datatype": "bool",
+        "Name": "open ev a 02 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 100,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCkJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m20.1",
+        "Datatype": "bool",
+        "Name": "open ev b 00 pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 101,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCtJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m10.5",
+        "Datatype": "bool",
+        "Name": "r1 gate on"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 157,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCLJQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t100",
+        "Datatype": "timer",
+        "Name": "tag_163"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 158,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCMJQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t56",
+        "Datatype": "timer",
+        "Name": "tag_164"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 159,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCNJQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t102",
+        "Datatype": "timer",
+        "Name": "tag_165"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 160,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCOJQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t57",
+        "Datatype": "timer",
+        "Name": "tag_166"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 347,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBNFwAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBNFwAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgBQFwAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBNFwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBNFwAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBNFwAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "#gatea_open #hmi_gatea_open #gatea_close #hmi_gatea_close #gateb_open #hmi_gateb_open #gateb_close #hmi_gateb_close #selector_gatea #hmi_selector_gatea #selector_gateb #hmi_selector_gateb #allarm1 #total_allarms #allarm2 #allarm3 #allarm4 #allarm5 #allarm6 #allarm7"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 351,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgBlFwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgBlFwAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgBlFwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "104"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgBlFwAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgBlFwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Datatype": "bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool",
+        "InterfaceMember_Name": "start bc01 start rd01 start fan rd01 start spare motor start mc04 start mc05 start vs01 start sc12 start aux inv open mv06 close mv06 open mv05 close mv05 open mv02 close mv02 start open mv03 start close mv03 open mv04 close mv04 start fn02 start open mv-01 start close mv-01 start vr01 start fn01 start vr02 start ch01 start fn03 start fn06 start sc01 star fan fn01 start ld01 start vibrator ld-01 start sc10 start sc11 start fn04 start vr03 start vr04 start vr05 start vr06 start fn05 start er-01 ev03 pv-01 gate a pv-01 gate b ev pv-02 gate a ev pv-02 gate b ev pv-03 gate ev pv-04 abilita start chiller start liw feeder consenso start bwf01 consenso start bwf02 start nitrogen rem. start/stop burner temperature interlock ok rst allarm burner start high flame forzatura scintilla spare_30 spare_31 spare_32 spare_33 siren blinking ligh spare spare_1 spare_2 spare_3 spare_4 spare_5 spare_6 spare_7 spare_8 spare_9 spare_10 spare_11 spare_12 spare_13 spare_14 spare_15 spare_16 spare_17 spare_18 spare_19 spare_20 spare_21 spare_22 spare_23 spare_24 spare_25 spare_26 spare_27 spare_28 spare_29 spare_34 spare_35 ev-11 ev-12 ev-13 ev-14 ev-15 ev-16 ev-17 ev-18 ev-19 ev-20 ev-21 ev-22 ev-23 ev-24 ev-25 ev-26 ev-27 ev-28 ev-29 ev-30 ev-31 ev-32 ev-33 ev-34 ev-35 ev-36 ev-37 ev-38 ev-39 ev-40 ev-41 ev-42 ev-43 ev-44 ev-45 ev-46 ev-47 ev-48 ev-49 ev-50 pv-14 spare_36 spare_37 spare_38 spare_39 spare_40 spare_41 spare_42 ev-51 ev-52 ev-53 ev-54 ev-55 ev-56 ev-57 ev-58 ev-59 ev-60 ev- 61 ev-62 ev-63 ev-64 ev-65 ev-66 ev-67 ev-68 ev-69 ev-70 ev-71 ev-72 ev-73 ev-74 ev-75 ev-76 ev-77 ev-78 ev-79 ev-80 ev-81 ev-82 ev-83 ev-84 ev-85 ev- 86 ev-87 ev-88 ev-89 ev-90",
+        "InterfaceMember_Value": "false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 401,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "STL Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgBiDwAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "101"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "Network title": "special flag initialization",
+        "STL Code": "set s \"on\" clr s \"off\""
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 405,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgBmDwAAAAAAACEYCA8ABQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "101"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDODgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"flag\".pv_02_gate_a_mem_close \"flag\".pv_02_gate_b_mem_close \"flag\".pv_01_gate_a_mem_close \"flag\".pv_01_gate_b_mem_close \"flag\".pv_03_gate_mem_close",
+        "Network title": "default"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 452,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDrDgAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDrDgAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDrDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "104"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDrDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDrDgAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Comment": "com_w0 bit8 (m_tr01) com_w0 bit9 (m_mn02) com_w0 bit10 (m_mr1) com_w0 bit11 (m_vt00_cliente) com_w0 bit12 (m_vb01) com_w0 bit13 (m_fr01) com_w0 bit14 (m_servo_fr01) com_w0 bit15 (m_mn03) com_w0 bit0 (m_vv01ab) com_w0 bit1 (m_tm01) com_w0 bit2 (m_mn04) com_w0 bit3 (m_mbn4_sx00000) com_w0 bit4 (m_mbn4_dx00000) com_w0 bit5 (m_va01ab) com_w0 bit6 (m_vt01) com_w0 bit7 (m_vr03) com_w1 bit8 (m_vt00_auto) com_w1 bit9 (m_mv01_open) com_w1 bit10 (m_mv01_close) com_w1 bit11 (m_mv01_close) com_w1 bit12 (m_mv02_close) com_w1 bit13 (m_mv03_open) com_w1 bit14 (m_mv03_close) com_w1 bit15 (m_mcv500000000) com_w1 bit0 (m_tshl0000000) com_w1 bit1 (m_mv04_open) com_w1 bit2 (m_mv04_close) com_w1 bit3 (m_vg01_open) com_w1 bit4 (m_vg01_close) com_w1 bit5 (m_servo_vt01) com_w1 bit6 (m_mvt02) com_w1 bit7 (m_ch01) com_w2 bit8 (m_vt03) com_w2 bit9 (burner_open) com_w2 bit10 (burner_close) com_w2 bit11 (auto_burner) com_w2 bit12 (m_vr01) com_w2 bit13 (m_vr02) com_w2 bit14 (ground_mode) com_w2 bit15 (r1_gate_loop_on) com_w2 bit0 (disable_r1_gate) com_w2 bit1 (burner_ready) com_w2 bit2 (start_burner) com_w2 bit3 (m_servo_vt02) com_w2 bit4 (m_mrt300000000) com_w2 bit5 (m_mvv2000000000) com_w2 bit6 (m_dm01000000000) com_w2 bit7 (b047) com_w3 bit8 (reset_allarm) com_w3 bit9 (run_horn) com_w3 bit10 (stop_horn) com_w3 bit11 (new_allarm) com_w3 bit12 (m_horn) com_w3 bit13 (b053) com_w3 bit14 (mv01_auto) com_w3 bit15 (mv02_auto) com_w3 bit0 (mv03_auto) com_w3 bit1 (mv04_auto) com_w3 bit2 (vg01_auto) com_w3 bit3 (auto_on1) com_w3 bit4 (standby_on) com_w3 bit5 (auto_off1) com_w3 bit6 (b062) com_w3 bit7 (m_tdpro_report)",
+        "InterfaceMember_Datatype": "bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool",
+        "InterfaceMember_Name": "m_bc_01 m_rd_01 m_rd_01_fan m_mc_03 m_mc_04 m_mc_05 m_vs_01 m_sc_12 m_fn_02 m_vr_01 m_fn_01 m_vr_02 m_ch_01 m_fn_03 m_sc_01 m_fn_01_fan m_ld_01 m_ld_01_vib m_sc_10 m_sc_11 m_fn_04 m_vr_03 m_vr_04 m_vr_05 m_vr_06 m_fn_05 spare m_mv01_open m_mv01_close m_aux_inv spare_2 m_fn_06 spare_3 m_pv04 spare_4 auto_burner spare_5 spare_6 spare_7 r1_gate_loop_on enable_r1_gate burner_ready start_burner spare_8 m_er01 spare_9 spare_10 spare_11 reset_allarm run_horn stop_horn new_allarm m_horn mv06_auto mv05_auto mv02_auto mv03_auto mv04_auto mv01_auto auto_on1 standby_on maintenance_on spare_12 m_tdpro_report pv_01_gate_a_mem_close pv_01_gate_a_mem_open pv_01_gate_b_mem_close pv_01_gate_b_mem_open pv_02_gate_a_mem_close pv_02_gate_a_mem_open pv_02_gate_b_mem_close pv_02_gate_b_mem_open pv_03_gate_mem_close pv_03_gate_mem_open fn_04_auto m_mv05_close m_mv05_open m_mv02_close m_mv02_open m_mv03_open m_mv03_close m_mv04_open m_mv04_close enable_r2_gate r2_gate_loop_on mv06_open mv06_close spare_13 spare_14 spare_15 m_pv03 spare_16 spare_17 spare_18 spare_19 spare_20 m_bwf01 spare_21 spare_22 spare_23 spare_24 m_bwf02 spare_25 spare_26 spare_27 m_pv14 mv04_close mv04_open reset_allarms_hmi stop_horn_hmi spare_30 spare_31 spare_32 spare_33 spare_34 spare_35 spare_36 spare_37 spare_38 spare_39 spare_40 spare_41 spare_42 spare_43 spare_44 spare_45 spare_46 spare_47 spare_48",
+        "InterfaceMember_Value": "false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false true true true true true false false false false false true false true false true false true false false true false false false false false false false false false false false false false false false false true false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 474,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAZJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m80.5",
+        "Datatype": "bool",
+        "Name": "maintenance pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 662,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCVJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%i8.6",
+        "Comment": "limit switch ls-01 gate \"a\" open",
+        "Datatype": "bool",
+        "Name": "ev01_open"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 663,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgDsIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%i8.7",
+        "Comment": "limit switch ls-02 gate \"a\" closed",
+        "Datatype": "bool",
+        "Name": "ev01_close"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 664,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAkJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%i9.0",
+        "Comment": "limit switch ls-05 gate \"b\" open",
+        "Datatype": "bool",
+        "Name": "ev02_open"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 665,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAiJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%i9.1",
+        "Comment": "limit switch ls-06 gate \"b\" closed",
+        "Datatype": "bool",
+        "Name": "ev02_close"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 877,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCNIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%i9.2",
+        "Comment": "opening gate \"a\"local selector",
+        "Datatype": "bool",
+        "Name": "ev01_sel_open"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 878,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCPIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBARwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%i9.3",
+        "Comment": "opening gate \"b\"local selector",
+        "Datatype": "bool",
+        "Name": "ev02_sel_open"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 900,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgAKFgAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgAKFgAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgAKFgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "104"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgAKFgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgAKFgAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Datatype": "\"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motorized valve\" bool bool bool bool bool \"motorized valve\" bool bool bool bool bool \"motorized valve\" bool bool bool bool bool \"motorized valve\" bool bool bool bool bool \"motorized valve\" bool bool bool bool bool \"motorized valve\" bool bool bool bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"motor\" bool bool \"client motor\" bool bool bool bool bool \"client motor\" bool bool bool bool bool \"valve\" bool bool bool \"pv_2_gate\" bool bool bool bool bool bool bool \"pv_2_gate\" bool bool bool bool bool bool bool \"pv_1_gate\" bool bool bool bool \"pv_1_gate\" bool bool bool bool \"br-01\" bool bool \"valve\" bool bool bool",
+        "InterfaceMember_Name": "bc01 risposta allarme_comulativo rd01 risposta allarme_comulativo rd01_fan risposta allarme_comulativo spare risposta allarme_comulativo mc04 risposta allarme_comulativo mc05 risposta allarme_comulativo vs01 risposta allarme_comulativo sc12 risposta allarme_comulativo aux_inv risposta allarme_comulativo mv01 risposta_opening risposta_closing comulativo_allarmi limit_switch_open limit_switch_close mv02 risposta_opening risposta_closing comulativo_allarmi limit_switch_open limit_switch_close mv03 risposta_opening risposta_closing comulativo_allarmi limit_switch_open limit_switch_close mv04 risposta_opening risposta_closing comulativo_allarmi limit_switch_open limit_switch_close mv05 risposta_opening risposta_closing comulativo_allarmi limit_switch_open limit_switch_close mv06 risposta_opening risposta_closing comulativo_allarmi limit_switch_open limit_switch_close fn02 risposta allarme_comulativo vr01 risposta allarme_comulativo fn01 risposta allarme_comulativo vr02 risposta allarme_comulativo ch01 risposta allarme_comulativo fn03 risposta allarme_comulativo fn06 risposta allarme_comulativo sc1 risposta allarme_comulativo fn01_fan risposta allarme_comulativo ld01_mf risposta allarme_comulativo ld01_vb risposta allarme_comulativo sc10 risposta allarme_comulativo sc11 risposta allarme_comulativo fn04 risposta allarme_comulativo vr03 risposta allarme_comulativo vr04 risposta allarme_comulativo vr05 risposta allarme_comulativo vr06 risposta allarme_comulativo fn05 risposta allarme_comulativo er01 risposta allarme_comulativo bwf01 status risposta allarme_comulativo livello_max livello_min bwf02 status risposta allarme_comulativo livello_max livello_min pv_14 ls_open ls_close total_allarms pv_01 comulativo_allarmi ls_gate_a_open ls_gate_a_close ls_gate_b_open ls_gate_b_close selector_gatea selector_gateb pv_02 comulativo_allarmi ls_gate_a_open ls_gate_a_close ls_gate_b_open ls_gate_b_close selector_gatea selector_gateb pv_03 ls_open ls_close selector total_allarms pv_04 ls_open ls_close selector total_allarms br_01 high_flame burner_on ev_03 ls_open ls_close total_allarms",
+        "InterfaceMember_Value": "false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 930,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDQDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDQDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgCDFwAAAAAAACEYCA8ABAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDQDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDQDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDQDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"inputs\".reset_allarmi \"flag\".reset_allarm \"flag\".reset_allarms_hmi \"inputs\".tacitazione \"flag\".stop_horn \"flag\".stop_horn_hmi \"flag\".stop_horn_hmi \"flag\".reset_allarms_hmi tof \"iec_timer_0_db\" t#3s \"103a7\" tof \"iec_timer_1_db\" t#3s \"reset_inverter\"",
+        "Network title": "com_w3 bit8 (reset_allarm)"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1065,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjFgAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjFgAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjFgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "104"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjFgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjFgAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Datatype": "bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word",
+        "InterfaceMember_Name": "bc01 run bc01_all_inv rd01 run rd01_all_inv fan rd01 run mc03 run mc04 run mc04_all_inv mc05 run vs01 run vs01_all_inv feedbackmotor sc-12 aux inverter run aux_inv_all mv06 run_opening mv06 run_closing mv05 run_opening mv05 run_closing mv02 run_opening mv02 run_closing mv03 run_opening mv03 run_closing mv04 run_opening mv04 run_closing fn02 run fn02_all_inv mv01 run_opening mv01 run_closing vr-01 run fn01 run fn01_all_inv vr02 run ch01 run fn03 run fn03_all_softstarter feedbackmotor fn-06 feedbackmotor sc-01 feedbackmotor fn-01 fan feedbackmotor ld-01 feedbackmotor-ld-01a feedbackmotor sc-10 feedbackmotor sc-11 spare_0 spare_1 vr03 run vr04 run vr05 run vr-06 run fn-05 run feedback_er01 bc01 trip wire bc01 prox mc03 torque mc04 torque mc05 torque mv06_open mv06 close mv05 open mv05 close mv02 open mv02 close mv03 open mv03 close mv04 open mv04 close mv01 open mv01 close spare_2 spare_3 spare_4 fc gate a open limit switch ls-02gate a closedvalve pv-01 pv-01 gate b open limit switch ls-06gate b closedvalve pv-01 selector op gate a pv-01 selector op gate b pv-01 pv-02 ev a open pv-02 ev a close pv-02 gate b open pv-02 gate b close selector op gate a pv-02 selector op gate b pv-02 deviator open pv-03 deviator close pv-03 pv03 local selector pv04 open pv04 close button open pv-0000 low pressure air bwf01 ok bwf 01 run bwf01 fault min lev bwf01 max lev bwf01 bwf02 ok bwf 02 run bwf02 fault min lev bwf02 max lev bwf02 apron conveyor a run impactor run impact vibrationfeeder run belt conveyor a run air knife run belt conveyor b run shredder 1 run shredder vibrationfeeder run belt conveyor c run rotex screen run apron conveyor b run shredder 2 run belt conveyor d run belt conveyor e run liw systemautoreader primaryshredder run free bwf1_inverter_high_speed bwf2_inverter_high_speed apron conveyor a fault impactor fault impact vibrationfeeder fault belt conveyor a fault air knife fault belt conveyor b fault shredder 1 fault shredder vibrationfeeder fault belt conveyor c fault rotex screenfault apron conveyor b fault shredder 2fault belt coveyor d fault belt conveyor e fault weighting hopper 2fault hopper conveyor 2fault belt conveyor c fault_doppio! nitrogen tank ready burner on brurner lock out burner on and ok fc gas chiuso max pressure gas fc aria chiusa fc aria aperta high flame gas free_2 free_3 free_4 free_5 free_6 free_7 free_8 free_9 free_10 free_11 free_12 free_13 em_ok presenza_110v tacitazione reset_allarmi mv01_channel_d mv01_channel_c mv02_channel_d mv02_channel_c mv03_channel_d mv03_channel_c mv05_channel_d mv05_channel_c mv06_channel_d mv06_channel_c free_23 free_24 free_25 free_26 free_27 free_28 pv-14 open pv-14 close fn04 run fn04_all_inv 177t1_ok ld-01 minimo ld-01 inspection ls ld-01 local button tc_04 tc_05 flow_rate_bwf01 flow_rate_bwf02 level_bwf01 level_bwf02 tc_01 tc_02 tc_03 tc_06 tc_07 zt_01 psh_01 psh_02 psh_03 pc_01 mv_04_m18a mv_04_mv18b fn02_absorption fn04_absorption rd01_absorbption fn01_absorption ro_01 ro_02 ro_03 ro_04 br_01_retransmission_gas br_01_retransmission_air br_01_massflowmeter_gas br_01_massflowmeter_air",
+        "InterfaceMember_Value": "false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1070,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDmFgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDmFgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDpFgAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDmFgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDmFgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDmFgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "move \"tag_178\" move \"tag_179\" move \"tag_180\" move \"tag_171\" move \"tag_181\" move \"tag_182\" %db13.dbw6 %db13.dbw8 %db13.dbw10 move \"tag_183\" move \"tag_274\" move \"tag_275\" %db13.dbw12 %db13.dbw14 %db13.dbw16 move \"tag_276\" move \"tag_277\" %db13.dbw18 %db13.dbw20 \"pv-14 close\" \"inputs\".\"pv-14 close\" \"pv-14 open\" \"inputs\".\"pv-14 open\" \"fn04_fbk\" \"inputs\".\"fn04 run\" \"fn04_all_inv\" \"inputs\".fn04_all_inv \"177t1_ok\" \"inputs\".\"177t1_ok\" \"ll_ld01\" \"inputs\".\"ld-01 minimo\" \"170fc1\" \"inputs\".\"ld-01 inspection ls\" \"170sa1\" \"inputs\".\"ld-01 local button\" \"mv03_open\" \"inputs\".\"mv03 open\" \"mv03_close\" \"inputs\".\"mv03 close\" %db13.dbw0 %db13.dbw2 %db13.dbw4"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1079,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgCrPQAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"clock100ms\" ton \"clock1s_simu\" t#100ms \"clock100ms\""
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1080,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDbPQAAAAAAACEYCA8AAgAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"inputs\".\"mc04 torque\" \"inputs\".\"low pressure air\" \"inputs\".\"ld-01 minimo\" \"inputs\".\"nitrogen tank ready\" \"inputs\".em_ok \"inputs\".presenza_110v"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1081,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgC9PQAAAAAAACEYCA8AAwAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"clock3s\" ton \"clock3s_simu\" t#3s \"clock3s\""
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1090,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDVOAAAAAAAACEYCA8ADAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBoKAAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"pv-01 gate a\" \"inputs\".\"fc gate a open\" \"pv-01 gate a\" \"inputs\".\"limit switch ls-02gate a closedvalve pv-01\" \"pv-01 gate b ev\" \"inputs\".\"pv-01 gate b open\" \"pv-01 gate b ev\" \"inputs\".\"limit switch ls-06gate b closedvalve pv-01\"",
+        "Network title": "pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1215,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgAvFgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgAvFgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgBAFwAAAAAAACEYCA8AJgAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgAvFgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgAvFgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgAvFgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"hmi pv_2gate\" \"inputs\".\"fc gate a open\" \"inputs\".\"limit switch ls-02gate a closedvalve pv-01\" \"inputs\".\"pv-01 gate b open\" \"inputs\".\"limit switch ls-06gate b closedvalve pv-01\" \"inputs\".\"selector op gate a pv-01\" \"inputs\".\"selector op gate b pv-01\" \"allarm\".pv_01_gate_a_not_close \"allarm\".pv_01_gate_a_not_open \"allarm\".pv_01_gate_b_not_close \"allarm\".pv_01_gate_b_not_open false false false \"motors\".pv_01.ls_gate_a_open \"motors\".pv_01.ls_gate_a_close \"motors\".pv_01.ls_gate_b_open \"motors\".pv_01.ls_gate_b_close \"motors\".pv_01.selector_gatea \"motors\".pv_01.selector_gateb \"motors\".pv_01.comulativo_allarmi",
+        "Network title": "pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1289,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgA7JQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t106",
+        "Datatype": "timer",
+        "Name": "tag_83"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1290,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgA6JQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t105",
+        "Datatype": "timer",
+        "Name": "tag_82"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1291,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgA5JQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t104",
+        "Datatype": "timer",
+        "Name": "tag_81"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1292,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgA4JQAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%t103",
+        "Datatype": "timer",
+        "Name": "tag_80"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1296,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBCRwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAjJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBCRwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBCRwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%q5.3",
+        "Comment": "a 48.4 ev-02 valvecommand",
+        "Datatype": "bool",
+        "Name": "pv-01 gate b ev"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1297,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBCRwAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAlJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBCRwAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgBCRwAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%q5.2",
+        "Comment": "a 57.0 ev-01 valvecommand",
+        "Datatype": "bool",
+        "Name": "pv-01 gate a"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1516,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgAzJgAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m180.0",
+        "Datatype": "bool",
+        "Name": "simulation(1)"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1552,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgBvIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m0.1",
+        "Datatype": "bool",
+        "Name": "off"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1556,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgBwIwAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m0.0",
+        "Datatype": "bool",
+        "Name": "on"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1612,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgChawAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "101"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"simulation(1)\" \"simulation\"",
+        "Network title": "simulation"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1613,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgCiawAAAAAAACEYCA8AAgAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "101"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"recipes handler\" \"hmi\" \"hmi output\" \"simulation(1)\" \"hmi inputs\""
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1619,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgCoawAAAAAAACEYCA8ACAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "101"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"analog input conversion\" \"allarms 1\" \"allarms 2\" \"allarms 3\"",
+        "Network title": "analog conversion and allarms"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1620,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgCpawAAAAAAACEYCA8ACQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "101"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDragAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"motors 1\" \"filter\" \"r1 scraps gate 2\" \"burner control\" \"motor/alarm client\" \"time work motor\"",
+        "Network title": "motors valve and burner"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1629,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDuagAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDuagAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDuagAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "104"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDuagAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDuagAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Comment": "(set_perc_tr01) (set_perc_vt00) set speed fn02 (set_perc_fr01) (set_perc_vt01) (set_perc_tm01) (tc06) (set_perc_vt4) (set_evr1a_open_time) (set_perc_burner) (ro01_setpoint_min) (ro01_setpoint_max) (pc01_setpoint_min) (pc01_setpoint_max) (pc02_setpoint_min) (pc02_setpoint_max) (pc02_pulse_time) (pc02_kp) (tc03_setpoint_min) (tc03_vg1_kp) (ro03) (tc01_setpoint) (tc01_max_all) (tc01_max_max_all) (tc03_min_all) (tc03_max_all) (tc03_max_max_all) (ro04) (t3_max_all) (t3_max_max_all) (tc04_tc05_max_all) (t5_t6_max_all) (siren_work_time) (d37) (evfr01_work_time) (evfr01_wait_time) (time_presetting) (type_preset) (amp_fr01) (amp_vt01) (amp_vt03) (temp_tc02) (temp_tc01) (temp_tc03) (temp_t3) (temp_tc04) (temp_tc05) (temp_t6) (pot_br1) (max_prc_br1) (dp_aspir_pc03) (oxigen_ro02) (oxigen_ro01) (gasm) (press_pc01) (press_pc02) (free_138) (pot_mv01) (pot_mv02) (pot_mv03) (pot_mv04) (pot_vg01) (vb01_work_time) (vb01_pause_time) (ev01_work_time) (ev01_pause_time) (evsa_work_time) (evsa_pause_time) (free_w166) (free_w168)",
+        "InterfaceMember_Datatype": "int int int int int int int int word int int int int int int int int int int int int int word word int int int int int int int int int int int int int int int int int int int int s5time int word word int int int int int int int int int int int int int int int int int int int int int int int int int int int word word word word s5time s5time s5time s5time s5time s5time int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int word word int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int int",
+        "InterfaceMember_Name": "set_perc_bwf01 set_perc_bwf02 set_perc_vt02 set_perc_fr01 set_perc_vt01 set_perc_fn04 tc06 set_perc_vt4 set_evr1a_open_time burner_air_out ro01_setpoint burner_panel_setpoint psh03 ro01_max_setpoint psh02_max_setpoint pc01_s000000000 psh01_setpoint free_34 free_36 free_38 psh03_setpoint psh02_setpoint set_evr1b_open_time pv04_clean_delay pc02_kp0000000 tc03_setpoint free_52 tc09_max tc09_max_max free_58 free_60 tc00030_v0000000 ro03 tc01_setpoint tc01_max_all free_70 tc03_min_all tc03_max_all free_76 ro04 min_pressure_pc_01 free_82 tc04_tc05_max_all free_86 siren_work_time d37 evfr01_work_time evfr01_wait_time tempo_presetting tipo_preset amp_rd01 amp_fn01 amp_fn040000000 amp_vt0300000000 temp_tc02 temp_tc01 temp_tc03 temp_t3000000000 temp_tc04 temp_tc05 temp_t6 pot00000000000009 max_prc_br1 dp_aspi00000000000000 oxigen_ro02 oxigen_ro01 gas00000000000000 press_pc01 pot_mv06 pot_mv04a pot_mv05 pot_mv02 pot_mv03 pot_mv04b pot_mv01 ld_01v_worktime ld_01v_pausetime set_pv02b_open_time set_pv02a_open_time free158 free160 free162 free164 free166 free168 ev_filter_on tc_040000000 tc_0500000 client_1 client_2 client_3 tc_01 tc_02 tc_03 tc_06 tc_07 zt_01 psh_01 psh_02 ro_01 ro_02 ro_03 ro_04 gas_br_01 air_br_01 massico_flow_gas massico_flow_air mv_05 mv_02 mv_06 mv_04 fn_02_fan fn_04_aspirator rd_01 fn_01 lava lava_start lava_end lava_pausa lava_lavoro dp_01 dp_02 pc_01 set_pos_mv05 set_pos_mv02 set_pos_mv04 burner_gas_out encoder_mv03 encoder_mv01 client_4 p0000000000 tc_09 tc_10 bwf01_count bwf02_count bwf01_count_rep bwf02_count_rep free_04 free_05 free_06 free_07 free_08 free_09 maint_code_0 maint_code_1 maint_code_3 free_013 free_014 free_015 free_016 pv-01a pv_01b pv_02a pv_02b ld01_w ld01_p ev_03_w ev_03p pv04 valve_w valve_p siren_time",
+        "InterfaceMember_Value": "30 40 35 55 64 80 0 0 16#0400 35 0 35 -10 100 3 0 20 0 0 0 10 0 16#0400 16#1600 0 450 0 180 200 0 0 0 0 660 1200 0 400 750 0 -9999 -10 0 120 0 s5t#20s 2 16#0700 16#2400 0 2 27 71 0 0 656 664 482 0 4 -9999 450 0 45 100 -9999 -9999 0 -1 0 0 0 0 55 0 100 16#0300 16#2120 16#0200 16#0200 s5t#0ms s5t#0ms s5t#0ms s5t#0ms s5t#0ms s5t#0ms 25 0 0 3 13 -9999 0 0 0 0 -9999 -9999 0 0 0 0 0 0 63 32 168 1599 0 0 0 0 34 97 0 0 0 11 90 16#0400 16#0020 29 140 -44 0 100 100 71 0 0 69 0 61 -9999 10 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 40 40 20 20 30 1200 70 4000 600 2 40 200"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1697,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjDgAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjDgAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "104"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAIQIgDjDgAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Comment": "[db3.dbx0.0] bc-01 belt fault rd-01 rotary drum fault rd-01 rotary drum fan fault mc-03 fault mc-04 metallic conveyor fault mc-05 metallic conveyor fault vs-01 vibrating screen fault sc-12 dust discharge screw fault fn-02 secondary line fan fault vr-01 cyclon 1 rotary valve fault fn-01 primary line fan fault vr-02 cyclon 3 rotary valve fault ch-01 chiller fault fn-03 burner fan fault sc-01 cyclon 2/4/5 screw fault fn-01 primary line fan cooling motor fault ld-01 lime dosator fault ld-01-vib lime vibrator fault sc-10 filter 1 screw fault sc-11 filter 2 screw fault fn-04 primary aspirator fault vr-03 cyclon 2/4/5 rotary valvefault vr-04 filter 1 rotary valve fault vr-05 filter 2 rotary valve fault vr-06 lime rotoary valve fault fn-05 lime fan fault bc-01 trip wire limit switch bc-01 proximity sensor mc-03 torque limit switch mc-04 torque limit switch mc-05 torque limit switch fn-06 fan fault mv-02 motorized valve fault 4.1 [db3.dbx4.2] mv-03 motorized valve fault ro01-ro02 signal compare fault pc-01 low depressure pv-04 discharge drum chamber fault mv-01 motorized valve fault oxygen ro03 too low oxygen ro03 [db3.dbx5.2] [db3.dbx5.3] psl-04 low air pressure mv-04 motorized valve fault [db3.dbx5.6] ld-01 low lime level fn-03 burner fan fault [db3.dbx6.1] [db3.dbx6.2] [db3.dbx6.3] [db3.dbx6.4 [db3.dbx6.5] [db3.dbx6.6] [db3.dbx6.7] burner start fault burner servomotor not in minimal position hydrogen box not ready stoichiometry out of range [db3.dbx7.3] burner control box fault maintenence mode !!!! maintenance period limits burner continuous working time limit max tc01 temperature extremely high tc01 temperature max pressure psh-02 low tc03 temperature max tc03 temperature extremely high tc03 temperature high tc-09 filter temperature extremly high tc-09 filter temperature high vibrations fn-01 tc01/tc02 signal compare fault max tc04 temperature max tc05 temperature ro01 oxigen low limit max filter depressure oxigen analyzer out of range oxigen too high 10.0 pv-01 gate a not open pv-01 gate a not close pv-01 gate b not open pv-01 gate b not close pv-02 gate a not open pv-02 gate a not close pv-02 gate b not open pv-02 gate b not close pv-03 not open pv-03 not close mv-03 motorized valve fault no 110v voltage mv-05 motorized valve fault mv-06 motorized valve fault bwf 01 scraps feeder fault bwf 01 min level bwf 01 max level [db3.dbx12.2] [db3.dbx12.3] bwf 02 scraps feeder fault bwf 02 min level bwf 02 max level incorrect scraps feeder formula [db3.dbx13.0] [db3.dbx13.1] [db3.dbx13.2] [db3.dbx13.3] pv-14 cold air filter fault [db3.dbx13.5] [db3.dbx13.6] [db3.dbx13.7] [db3.dbx14.0] apron conveyor fault (cl01) impactor fault (cl02) impact vibrator fault (cl03) belt conveyor a fault (cl04) air knife fault (cl05) belt conveyor b fault (cl06) shradder 1 fault (cl07) shradder vibrator fault (cl08) belt conveyor c fault (cl09) rotex screen fault (cl10) free db3_dbx_15_3 free db3_dbx_15_3 apron conveyor b fault (cl13) shradder 2 fault (cl14) belt conveyor d fault (cl15) belt conveyor e fault (cl16) fr ee (cl17) [db3.dbx16.2] primary shradder fault (cl19) bwf 01 control sytem fault bwf 02 control sytem fault emergency module alarm, reset the module simulation enabled prealarm stop fn-01 prealarm stop fn-04 auxiliary inverter fault plc hardware diagnostic fault fault fault inverter bc01 fault inverter rd01 fault inverter mc04 fault inverter vs01 fault inverter fn02 fault inverter fn01 fault inverter fn03 fault inverter fn04 fault inverter auxilary feedback allarm er01 tc04 out of range tc05 out of range tc09 out of range tc10 out of range flow rate bwf01 out of range flow rate bwf02 out of range level bwf01 out of range level bwf02 out of range tc01 out of range tc02 out of range tc03 out of range tc06 out of range tc07 out of range zt01 out of range psh01 out of range psh02 out of range psh03 out of range ro01 out of range ro02 out of range ro03 out of range ro04 out of range br01 gas br01 air gas out of range air out of range mv05 out of range mv06 out of range mv04a out of range mv04b out of range fn02 absorbption out of range fn04 absorbption out of range rd01 absorbption out of range fn01 absorbption out of range bf01 out of range pc01 out of range bf02 out of range pot mv01 out of range pot mv02 out of range pot mv03 out of range pot mv05 out of range pot mv06 out of range",
+        "InterfaceMember_Datatype": "bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool bool",
+        "InterfaceMember_Name": "bc_01_fault rd_01_fault rd_01_fan_fault mc_03_fault mc_04_fault mc_05_fault vs_01_fault sc_12_fault fn_02_fault vr_01_fault fn_01_fault vr_02_fault ch_01_fault fn_03_fault sc_01_fault fn_01_fan_fault ld_01_fault ld_01_vib_fault sc_10_fault sc_11_fault fn_04_fault vr_03_fault vr_04_fault vr_05_fault vr_06_fault fn_05_fault bc_01_fc bc_01_proximity mc_03_torque mc_04_torque mc_05_torque mbva01_fault mv02_fault vr01_fault00000000000000 vr02_fault00000000000000 mv03_fault ro01_signal_fault low_aspiration pv04_fault mv01_fault ro03_min ro03_max mr3_fault00000 zxtr01_fault0000000000 psl_air_low mv04_fault vt00_fault00000000000 ld_01_min fn03_fault servovt02_fault0000000 vt1_b0000000000000 vt1_bea0000 low_gas_press00000 high_gas_press00000 low_bur000000000 burner_start_fault servomotor_min_pos_all hydrogen_box_fault sechio_limits pv8_fault00000 burner_ldu_fault maintenance_on maintenance_period_limit burner_time_limit_22h max_tc01_temp max_max_tc01_temp max_psh_02 low_tc03_temp max_tc03_temp max_max_tc03_temp max_tc09 max_max_tc09 zt01_fn01_vibration tc01_tc02_comp_fault max_tc04_temp max_tc05_temp oxigen_low max_dp_filter oxigen_fault oxigen_too_high anomaly_burner pv_01_gate_a_not_open pv_01_gate_a_not_close pv_01_gate_b_not_open pv_01_gate_b_not_close pv_02_gate_a_not_open pv_02_gate_a_not_close pv_02_gate_b_not_open pv_02_gate_b_not_close pv_03_gate_not_open1 pv_03_gate_not_close1 mv_03_fault 110v_fault mv_05_fault mv_06_fault bwf01_fault bwf01_min_level bwf01_max_level bwf01_free01 bwf01_free02 bwf02_fault bwf02_min_level bwf02_max_level formula_fault bwf02_free02 bwf01_max_level1 bwf01_free011 bwf01_free021 fault_pv14 fault_pv15 fault_pv16 fault_pv17 fault_pv18 motor_client_01_fault motor_client_02_fault motor_client_03_fault motor_client_04_fault motor_client_05_fault motor_client_06_fault motor_client_07_fault motor_client_08_fault motor_client_09_fault motor_client_10_fault motor_client_11_fault motor_client_12_fault motor_client_13_fault motor_client_14_fault motor_client_15_fault motor_client_16_fault motor_client_17_fault motor_client_18_fault motor_client_19_fault bwf01_fault_control bwf02_fault_control emergency_module_fault simulation enabled prealarms_fn01 prealarms_fn04 aux_inverter_fault plc_diagnostic_fault emergencystoptc1_2 bc01_absorbption_ofr mc04_absorbption_ofr free_011 free_012 free_013 free_014 free_015 free_016 free_017 free_018 free_019 bc01_inv rd01_inv mc04_inv vs01_inv fn02_inv fn01_inv fn03_inv fn04_inv aux_inv er01_run tc04_ofr tc05_ofr tc09_ofr tc10_ofr flow_rate_bwf01_ofr flow_rate_bwf02_ofr level_bwf01_ofr level_bwf02_ofr tc01_ofr tc02_ofr tc03_ofr tc06_ofr tc07_ofr zt01_ofr psh01_ofr psh02_ofr psh03_ofr ro01_ofr ro02_ofr ro03_ofr ro04_ofr br01_gas_ofr br01_air_ofr massico_gas_ofr massico_air_ofr mv05_ofr mv06_ofr mv04a_ofr mv04b_ofr fn02_absorbption_ofr fn04_absorbption_ofr rd01_absorbption_ofr fn01_absorbption_ofr bf01_ofr pc01_ofr bf02_ofr pot_mv01_ofr pot_mv02_ofr pot_mv03_ofr pot_mv05_ofr pot_mv06_ofr",
+        "InterfaceMember_Value": "false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1815,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgB1YgAAAAAAACEYCA8AIwAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"pv-01 gate a\" \"flag\".pv_01_gate_a_mem_open \"tag_80\" s5t#4s \"flag\".reset_allarm \"allarm\".pv_01_gate_a_not_open \"allarm\".pv_01_gate_a_not_open \"pv-01 gate a\" \"flag\".pv_01_gate_a_mem_close \"tag_81\" s5t#4s \"tag_81\" \"allarm\".pv_01_gate_a_not_close \"flag\".reset_allarm \"allarm\".pv_01_gate_a_not_close \"allarm\".pv_01_gate_a_not_close \"tag_80\" \"allarm\".pv_01_gate_a_not_open",
+        "Network title": "pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1816,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgB2YgAAAAAAACEYCA8AJAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"pv-01 gate b ev\" \"flag\".pv_01_gate_b_mem_open \"tag_82\" s5t#7s \"flag\".reset_allarm \"allarm\".pv_01_gate_b_not_open \"allarm\".pv_01_gate_b_not_open \"pv-01 gate b ev\" \"flag\".pv_01_gate_b_mem_close \"tag_83\" s5t#7s \"tag_83\" \"allarm\".pv_01_gate_b_not_close \"flag\".reset_allarm \"allarm\".pv_01_gate_b_not_close \"allarm\".pv_01_gate_b_not_close \"tag_82\" \"allarm\".pv_01_gate_b_not_open",
+        "Network title": "pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1825,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgB/YgAAAAAAACEYCA8ALQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgBHYgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"simulation(1)\" \"allarm\".\"simulation enabled\" \"flag\".reset_allarm \"allarm\".\"simulation enabled\" \"allarm\".\"simulation enabled\"",
+        "Network title": "simulation enabled"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1843,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDDEAAAAAAAACEYCA8AAwAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"allarm\".emergency_module_fault \"data\".tipo_preset 1 \"flag\".auto_on1 \"data\".tempo_presetting 1 \"flag\".reset_allarm \"memocmd_bc01_startup\" \"flag\".enable_r1_gate \"memocmd_pv1_startup\" ton \"t_reset_startup_pv1\" t#1m \"flag\".enable_r1_gate \"memocmd_pv1_startup\" \"data\".tempo_presetting 3 \"flag\".m_vr_03 \"flag\".m_vr_04 \"flag\".m_vr_05 \"data\".tempo_presetting 5 \"flag\".m_sc_01 \"flag\".m_sc_10 \"flag\".m_sc_11 \"data\".tempo_presetting 8 \"flag\".m_fn_04 \"data\".tempo_presetting 15 \"flag\".standby_on \"data\".tempo_presetting 17 \"flag\".m_vs_01 \"flag\".m_mc_05 \"flag\".m_mc_04 \"flag\".enable_r2_gate \"data\".tempo_presetting 19 \"flag\".m_rd_01_fan \"data\".tempo_presetting 21 \"flag\".m_rd_01 move 25 \"data\".set_perc_fr01 \"data\".tempo_presetting 24 \"flag\".m_bc_01 \"memocmd_bc01_startup\" move 75 \"data\".set_perc_vt02 \"flag\".m_fn_02 \"data\".tempo_presetting 26 \"flag\".enable_r1_gate \"memocmd_pv1_startup\" \"data\".tempo_presetting 28 \"flag\".m_vr_01 \"flag\".m_vr_02 \"flag\".m_ch_01 \"data\".tempo_presetting 30 \"flag\".m_fn_01 move 35 \"data\".set_perc_vt01 \"data\".tempo_presetting 33 \"off\" \"flag\".m_fn_02 \"data\".tempo_presetting 36 \"flag\".m_fn_03 \"data\".tempo_presetting 40 \"flag\".reset_allarm \"flag\".m_fn_06 \"data\".tempo_presetting 45 \"off\" move 850 \"flag\".start_burner \"flag\".auto_burner move 500 \"data\".tc03_setpoint \"data\".tc01_setpoint \"data\".tempo_presetting 50 \"flag\".auto_on1 \"flag\".maintenance_on",
+        "Network title": "preheating"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1844,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDEEAAAAAAAACEYCA8ABAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"allarm\".emergency_module_fault \"flag\".auto_on1 \"data\".tipo_preset 2 \"data\".tempo_presetting 1 \"flag\".reset_allarm \"data\".tempo_presetting 3 \"flag\".m_vr_03 \"flag\".m_vr_04 \"flag\".m_vr_05 \"data\".tempo_presetting 6 \"flag\".m_sc_01 \"flag\".m_sc_10 \"flag\".m_sc_11 \"data\".tempo_presetting 10 \"flag\".m_fn_04 \"data\".tempo_presetting 18 \"flag\".m_vs_01 \"data\".tempo_presetting 21 \"off\" \"flag\".m_mc_05 \"data\".tempo_presetting 24 \"flag\".m_mc_04 \"data\".tempo_presetting 27 \"flag\".enable_r2_gate \"data\".tempo_presetting 30 \"flag\".standby_on \"data\".tempo_presetting 33 \"flag\".m_rd_01_fan \"data\".tempo_presetting 35 \"flag\".m_rd_01 move 25 \"data\".set_perc_fr01 \"data\".tempo_presetting 40 \"flag\".enable_r1_gate \"data\".tempo_presetting 43 \"flag\".m_bc_01 \"data\".tempo_presetting 46 \"flag\".m_vr_01 \"flag\".m_vr_02 \"flag\".m_ch_01 \"data\".tempo_presetting 49 \"flag\".m_fn_01 move 35 \"data\".set_perc_vt01 \"data\".tempo_presetting 52 \"flag\".m_fn_02 move 80 \"data\".set_perc_vt02 \"data\".tempo_presetting 56 \"flag\".m_fn_03 \"data\".tempo_presetting 60 \"flag\".reset_allarm \"flag\".m_fn_06 \"data\".tempo_presetting 62 \"off\" move 850 \"flag\".start_burner \"flag\".auto_burner move 500 \"data\".tc03_setpoint \"data\".tc01_setpoint \"data\".tempo_presetting 65 \"flag\".auto_on1 \"flag\".maintenance_on",
+        "Network title": "production"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1847,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDFEAAAAAAAACEYCA8ABwAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDWDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"flag\".auto_on1 \"data\".tipo_preset 5 \"data\".tempo_presetting 1 \"flag\".m_fn_03 \"allarm\".emergency_module_fault \"data\".tempo_presetting 5 \"flag\".m_ch_01 \"flag\".m_fn_01_fan \"flag\".m_fn_01 \"allarm\".emergency_module_fault \"data\".tempo_presetting 11 \"flag\".m_vr_01 \"flag\".m_vr_02 \"allarm\".emergency_module_fault \"data\".tempo_presetting 13 \"flag\".m_bc_01 \"flag\".m_fn_04 \"flag\".m_er01 \"allarm\".emergency_module_fault \"data\".tempo_presetting 15 \"flag\".m_rd_01 \"flag\".enable_r1_gate \"allarm\".emergency_module_fault \"data\".tempo_presetting 17 \"flag\".m_rd_01_fan \"allarm\".emergency_module_fault \"data\".tempo_presetting 19 \"flag\".m_mc_04 \"allarm\".emergency_module_fault \"data\".tempo_presetting 20 \"flag\".m_vr_03 \"flag\".m_vr_04 \"flag\".m_vr_05 \"allarm\".emergency_module_fault \"data\".tempo_presetting 21 \"flag\".standby_on \"flag\".m_vs_01 \"allarm\".emergency_module_fault \"data\".tempo_presetting 25 \"flag\".auto_on1 \"allarm\".emergency_module_fault \"flag\".m_fn_02 \"flag\".m_fn_06",
+        "Network title": "presetting sequence 5: complete engine stop"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1906,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Comment"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Address"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAFwQAgCOJAAAAAAAAA=="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "201"
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAGIQAgAVCAAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "Address": "%m5.5",
+        "Datatype": "bool",
+        "Name": "under testing"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1909,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Name"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Datatype"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Value"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "InterfaceMember_Comment"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA8WCA8ACQBJbnRlcmZhY2U="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        }
+      ],
+      "values": {
+        "InterfaceMember_Datatype": "time void",
+        "InterfaceMember_Name": "pv01_a_time r1 scraps gate 2"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1911,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDZEQAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"on\" \"flag\".enable_r1_gate \"allarm\".pv_01_gate_a_not_open \"allarm\".pv_01_gate_b_not_open \"r1 gate on\" \"under testing\" \"r1 gate on\" move 0 \"open ev a 01 pv-01\" \"open ev b 01 pv-01\" \"close ev a 01 pv-01\" \"close ev b 01 pv-01\" \"workdata\".r1state \"flag\".enable_r1_gate \"flag\".pv_01_gate_a_mem_open \"flag\".pv_01_gate_b_mem_open \"flag\".r1_gate_loop_on",
+        "Network title": "pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1912,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgANOQAAAAAAACEYCA8AAgAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"kf_kt\" \"data\".pv_01b 0 \"kf_kt\" \"data\".\"pv-01a\" 0 \"data\".set_evr1b_open_time \"data\".set_evr1a_open_time"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1913,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDbEQAAAAAAACEYCA8AAwAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"flag\".enable_r1_gate \"r1 gate on\" \"workdata\".r1state 0 \"close ev a 01 pv-01\" \"workdata\".r1state 1 \"open ev b 01 pv-01\" \"close ev b 01 pv-01\" \"flag\".pv_01_gate_b_mem_open move 2 \"workdata\".r1state \"workdata\".r1state 2 \"tag_164\" \"data\".set_evr1b_open_time \"tag_164\" move 3 \"workdata\".r1state \"workdata\".r1state 3 \"close ev b 01 pv-01\" \"open ev b 01 pv-01\" \"tag_165\" s5t#1s \"tag_165\" move 4 \"workdata\".r1state \"workdata\".r1state 4 \"open ev a 01 pv-01\" \"close ev a 01 pv-01\" \"flag\".pv_01_gate_a_mem_open move 5 \"workdata\".r1state \"workdata\".r1state 5 \"tag_166\" \"data\".set_evr1a_open_time \"tag_166\" move 0 \"workdata\".r1state \"open ev a 01 pv-01\" \"tag_163\" s5t#1s \"tag_163\" move 1 \"workdata\".r1state",
+        "Network title": "r1 gate loop pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1914,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDdEQAAAAAAACEYCA8ABAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"ev01_sel_open\" \"open ev a 00 pv-01\" \"ev02_sel_open\" \"open ev b 00 pv-01\"",
+        "Network title": "evr4 scraps discharge door and gates selector pv-01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1915,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDfEQAAAAAAACEYCA8ABQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"open ev b 00 pv-01\" \"pv-01 gate b ev\" \"open ev b 01 pv-01\" \"maintenance pv01\" \"off\" \"open ev a 00 pv-01\" \"pv-01 gate a\" \"open ev a 01 pv-01\" \"maintenance pv01\"",
+        "Network title": "a 48.4 ev-02 valvecommand"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1921,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDGPQAAAAAAACEYCA8ACwAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"pv-01 gate a\" \"ev01_open\" \"flag\".pv_01_gate_a_mem_open \"pv-01 gate a\" \"flag\".pv_01_gate_a_mem_open \"pv-01 gate a\" \"ev01_close\" \"flag\".pv_01_gate_a_mem_close \"inputs\".\"limit switch ls-02gate a closedvalve pv-01\" \"pv-01 gate a\" \"flag\".pv_01_gate_a_mem_close \"inputs\".\"fc gate a open\"",
+        "Network title": "pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1922,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgDHPQAAAAAAACEYCA8ADAAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDeDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"pv-01 gate b ev\" \"ev02_open\" \"flag\".pv_01_gate_b_mem_open \"pv-01 gate b ev\" \"flag\".pv_01_gate_b_mem_open \"pv-01 gate b ev\" \"ev02_close\" \"flag\".pv_01_gate_b_mem_close \"inputs\".\"limit switch ls-06gate b closedvalve pv-01\" \"pv-01 gate b ev\" \"flag\".pv_01_gate_b_mem_close false \"ev02_close\" \"inputs\".\"pv-01 gate b open\"",
+        "Network title": "pv01"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1930,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgB8EQAAAAAAACEYCA8AAQAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"flag\".maintenance_on \"under testing\" \"allarm\".maintenance_on",
+        "Network title": "maintenance"
+      }
+    },
+    {
+      "segment": "_7ev",
+      "i": 1935,
+      "deleted": false,
+      "fields": [
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "Network title"
+        },
+        {
+          "id": 8,
+          "bits": 0,
+          "value": "LADFBD Code"
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAA=="
+        },
+        {
+          "id": 9,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAAoXCA8ABABDb2Rl"
+        },
+        {
+          "id": 0,
+          "bits": 0,
+          "value": "s8IQAhAPABYQIgCGEQAAAAAAACEYCA8ABgAAABcATmV0d29ya1ZpcnR1YWxCcm93c2FibGU="
+        },
+        {
+          "id": 1,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAA=="
+        },
+        {
+          "id": 13,
+          "bits": 0,
+          "value": "103"
+        },
+        {
+          "id": 19,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAA=="
+        },
+        {
+          "id": 10,
+          "bits": 0,
+          "value": "s8IQAhAPAAEQIgDdDgAAAAAAAAoXCA8ABABDb2Rl"
+        }
+      ],
+      "values": {
+        "LADFBD Code": "\"on\" \"allarm\".bc_01_fault \"flag\".m_bc_01 \"allarm\".bc01_inv \"allarm\".bc_01_fc \"under testing\" \"flag\".m_bc_01 \"flag\".r1_gate_loop_on \"start bc01\" \"memocmd_bc01_startup\" \"flag\".maintenance_on",
+        "Network title": "bc01"
+      }
+    }
+  ]
+}

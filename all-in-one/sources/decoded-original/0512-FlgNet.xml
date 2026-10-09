@@ -1,0 +1,171 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="1113" Gate="Contact" />
+    <Part UId="1115" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="1025" Gate="Coil" />
+    <Part UId="1030" Gate="Add">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">DInt</TemplateValue>
+    </Part>
+    <Part UId="1034" Gate="Div">
+      <TemplateValue Name="SrcType" Type="Type">DInt</TemplateValue>
+    </Part>
+    <Part UId="1038" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1117" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="1047" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1052" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <CRef UId="1059" RefId="351">
+      <CodeBlock UId="1086" RefId="5" />
+    </CRef>
+    <ORef UId="1064" RefId="173" />
+    <ORef UId="1065" RefId="205" />
+    <ORef UId="1066" RefId="207" />
+    <ORef UId="1067" RefId="192" />
+    <ORef UId="1068" RefId="209" />
+    <ORef UId="1069" RefId="190" />
+    <ORef UId="1070" RefId="190" />
+    <ORef UId="1071" RefId="211" />
+    <ORef UId="1072" RefId="212" />
+    <ORef UId="1073" RefId="212" />
+    <ORef UId="1074" RefId="214" />
+    <ORef UId="1075" RefId="207" />
+    <ORef UId="1076" RefId="44" />
+    <ORef UId="1077" RefId="214" />
+    <ORef UId="1078" RefId="327" />
+    <ORef UId="1079" RefId="192" />
+    <ORef UId="1081" RefId="1" />
+    <ORef UId="1082" RefId="214" />
+    <ORef UId="1083" RefId="218" />
+    <ORef UId="1084" RefId="219" />
+    <ORef UId="1085" RefId="220" />
+    <ORef UId="23" RefId="432" />
+  </Parts>
+  <Wires>
+    <Wire UId="1119">
+      <Powerrail />
+      <PCon UId="1113" PinName="in" />
+    </Wire>
+    <Wire UId="1087">
+      <OCon UId="1064" />
+      <PCon UId="1113" PinName="operand" />
+    </Wire>
+    <Wire UId="1114">
+      <PCon UId="1113" PinName="out" />
+      <PCon UId="1115" PinName="in" />
+      <PCon UId="1117" PinName="in" />
+      <PCon UId="1059" PinName="en" />
+    </Wire>
+    <Wire UId="1088">
+      <OCon UId="1065" />
+      <PCon UId="1115" PinName="operand" />
+    </Wire>
+    <Wire UId="1116">
+      <PCon UId="1115" PinName="out" />
+      <PCon UId="1025" PinName="in" />
+      <PCon UId="1030" PinName="en" />
+    </Wire>
+    <Wire UId="1089">
+      <OCon UId="1066" />
+      <PCon UId="1025" PinName="operand" />
+    </Wire>
+    <Wire UId="1090">
+      <OCon UId="1067" />
+      <PCon UId="1030" PinName="in1" />
+    </Wire>
+    <Wire UId="1091">
+      <OCon UId="1068" />
+      <PCon UId="1030" PinName="in2" />
+    </Wire>
+    <Wire UId="1093">
+      <PCon UId="1030" PinName="eno" />
+      <PCon UId="1034" PinName="en" />
+    </Wire>
+    <Wire UId="1092">
+      <PCon UId="1030" PinName="out" />
+      <OCon UId="1069" />
+    </Wire>
+    <Wire UId="1094">
+      <OCon UId="1070" />
+      <PCon UId="1034" PinName="in1" />
+    </Wire>
+    <Wire UId="1095">
+      <OCon UId="1071" />
+      <PCon UId="1034" PinName="in2" />
+    </Wire>
+    <Wire UId="1097">
+      <PCon UId="1034" PinName="eno" />
+      <PCon UId="1038" PinName="en" />
+    </Wire>
+    <Wire UId="1096">
+      <PCon UId="1034" PinName="out" />
+      <OCon UId="1072" />
+    </Wire>
+    <Wire UId="1098">
+      <OCon UId="1073" />
+      <PCon UId="1038" PinName="in" />
+    </Wire>
+    <Wire UId="1099">
+      <PCon UId="1038" PinName="out1" />
+      <OCon UId="1074" />
+    </Wire>
+    <Wire UId="1101">
+      <OCon UId="1075" />
+      <PCon UId="1117" PinName="operand" />
+    </Wire>
+    <Wire UId="1118">
+      <PCon UId="1117" PinName="out" />
+      <PCon UId="1047" PinName="en" />
+      <PCon UId="1052" PinName="en" />
+    </Wire>
+    <Wire UId="1102">
+      <OCon UId="1076" />
+      <PCon UId="1047" PinName="in" />
+    </Wire>
+    <Wire UId="1103">
+      <PCon UId="1047" PinName="out1" />
+      <OCon UId="1077" />
+    </Wire>
+    <Wire UId="1104">
+      <OCon UId="1078" />
+      <PCon UId="1052" PinName="in" />
+    </Wire>
+    <Wire UId="1105">
+      <PCon UId="1052" PinName="out1" />
+      <OCon UId="1079" />
+    </Wire>
+    <Wire UId="1107">
+      <OCon UId="1081" />
+      <PCon UId="1059" PinName="IN0" />
+    </Wire>
+    <Wire UId="1108">
+      <OCon UId="1082" />
+      <PCon UId="1059" PinName="Analog_input" />
+    </Wire>
+    <Wire UId="1109">
+      <OCon UId="1083" />
+      <PCon UId="1059" PinName="Coeff" />
+    </Wire>
+    <Wire UId="1110">
+      <OCon UId="1084" />
+      <PCon UId="1059" PinName="Zero" />
+    </Wire>
+    <Wire UId="1111">
+      <PCon UId="1059" PinName="OutValue" />
+      <OCon UId="1085" />
+    </Wire>
+    <Wire UId="24">
+      <PCon UId="1059" PinName="Out_of_range" />
+      <OCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet>

@@ -1,8 +1,11 @@
+import { verifyAllInOne } from './verify-all-in-one.mjs';
+import { buildHeaders } from './headers.mjs';
 import { mkdir, cp, readFile, writeFile, readdir, stat } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+await verifyAllInOne(root);
 const source = resolve(root, 'manual');
 const destination = resolve(root, 'dist');
 await mkdir(destination, { recursive: true });
@@ -10,7 +13,7 @@ await cp(source, destination, { recursive: true });
 for (const name of ['index.html', 'manual.html']) {
   const filename = resolve(destination, name);
   let html = await readFile(filename, 'utf8');
-  html = html.replace('</nav>', '<a href="/library/">서버 자료실</a></nav>');
+  html = html.replace('</nav>', '<a href="/all-in-one/">올인원 설비 매뉴얼</a><a href="/library/">서버 자료실</a></nav>');
   html = html.replace('이 홈페이지는 저장된 문서를 보여주는 파일이며', '이 홈페이지는 기술 자료를 제공하며');
   html = html.replace('</body>', '<script type="module" src="/auth-callback.js"></script></body>');
   await writeFile(filename, html);
@@ -22,5 +25,7 @@ await build({ entryPoints: [resolve(root, 'src/library.js')], outfile: resolve(d
 await build({ entryPoints: [resolve(root, 'src/auth-callback.js')], outfile: resolve(destination, 'auth-callback.js'), bundle: true, format: 'esm', platform: 'browser', target: 'es2022', minify: true });
 let count = 0;
 async function walk(folder) { for (const item of await readdir(folder)) { const path = resolve(folder, item); if ((await stat(path)).isDirectory()) await walk(path); else count++; } }
+await cp(resolve(root, 'all-in-one'), resolve(destination, 'all-in-one'), { recursive: true });
+await buildHeaders(destination);
 await walk(destination);
 console.log(`GME 매뉴얼 홈페이지: ${count}개 공개 파일 준비 완료`);

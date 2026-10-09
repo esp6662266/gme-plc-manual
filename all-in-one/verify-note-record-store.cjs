@@ -1,0 +1,33 @@
+/* Local annotation data safety, not simulator/PLC behavior tests. */
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const sandbox={window:{}};
+vm.runInNewContext(fs.readFileSync(__dirname+'/assets/note-record-store.js','utf8'),sandbox);
+// Compare the JSON-persisted data across the isolated browser-like realm.
+const store=Object.fromEntries(Object.entries(sandbox.window.GMENoteStore).map(([name,fn])=>[name,(...args)=>{const result=fn(...args);return result===undefined?undefined:JSON.parse(JSON.stringify(result));}]));
+const valid=new Set(['P01','P02']);
+const a={id:'a',equipment:'P01',title:'A',text:'original',updated:'1',extra:{preserved:true}};
+const b={id:'b',equipment:'P02',title:'B',text:'other tab',updated:'2'};
+assert.deepEqual(store.decodeNotes(JSON.stringify([a,b]),valid),[a,b]);
+assert.throws(()=>store.decodeNotes('{',valid));
+assert.throws(()=>store.decodeNotes(JSON.stringify([a,a]),valid),/invalid_notes/);
+assert.throws(()=>store.decodeNotes(JSON.stringify([a,{...b,equipment:'unknown'}]),valid),/invalid_notes/);
+assert.throws(()=>store.decodeNotes(JSON.stringify([a,{bad:'row'}]),valid),/invalid_notes/);
+const changed={...a,text:'edited',review_id:'source:BASELINE',updated:'3'};
+assert.doesNotThrow(()=>store.assertBase(a,JSON.stringify(a)));
+assert.throws(()=>store.assertBase(changed,JSON.stringify(a)),/note_conflict/);
+assert.throws(()=>store.assertBase(a,''),/note_conflict/);
+assert.doesNotThrow(()=>store.assertBase(undefined,''));
+assert.throws(()=>store.assertBase(undefined,JSON.stringify(a)),/note_conflict/);
+assert.deepEqual(store.mergeNote([a,b],a,changed),[b,changed]);
+assert.throws(()=>store.mergeNote([{...a,text:'newer tab value'},b],a,changed),/note_conflict/);
+assert.throws(()=>store.mergeNote([b],a,changed),/note_conflict/);
+assert.throws(()=>store.mergeNote([a],null,changed),/note_conflict/);
+assert.deepEqual(store.mergeNote([a,b],a,{id:'a',text:'updated'})[1].extra,a.extra);
+const otherDraft={title:'other key draft'};
+assert.deepEqual(store.mergeDraft(JSON.stringify({P02:otherDraft}),'P01',{title:'current draft'}),{P02:otherDraft,P01:{title:'current draft'}});
+assert.deepEqual(store.mergeDraft(JSON.stringify({P01:{title:'newer'},P02:otherDraft}),'P01',null,JSON.stringify({title:'older'})),{P01:{title:'newer'},P02:otherDraft});
+assert.deepEqual(store.mergeDraft(JSON.stringify({P01:{title:'same'},P02:otherDraft}),'P01',null,JSON.stringify({title:'same'})),{P02:otherDraft});
+assert.throws(()=>store.mergeDraft('[1]','P01',{}),/invalid_drafts/);
+console.log(JSON.stringify({status:'passed',scope:'local manual annotation decode, stale-edit detection and preservation; no PLC or simulator tests'}));

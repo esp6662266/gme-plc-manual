@@ -1,0 +1,790 @@
+﻿원본 심볼,백업 주소,자료형,설명,색인 세그먼트,문서 ID
+flag_aggiorna_db,%m1.7,bool,,_7ev,30
+stop counter pew 336,%m114.3,bool,,_7ev,31
+stop counter pew 368,%m115.3,bool,,_7ev,32
+stop counter pew 418,%m116.3,bool,,_7ev,33
+tc03 close,%m40.7,bool,,_7ev,34
+tc03 close2,%m41.1,bool,,_7ev,35
+tc03 open,%m40.6,bool,,_7ev,36
+tc03 open2,%m41.0,bool,,_7ev,37
+open mv05 pid,%m11.4,bool,,_7ev,38
+open ev a 00 pv-01,%m20.0,bool,,_7ev,39
+open ev a 00 pv-02,%m30.4,bool,,_7ev,40
+open ev a 01 pv-01,%m21.3,bool,,_7ev,41
+scarico ceneri auto,%m15.1,bool,,_7ev,42
+mem2_0,%m2.0,bool,,_7ev,43
+mv work pulse,%m10.0,bool,,_7ev,44
+pv-02 gate on,%m12.2,bool,,_7ev,45
+close ev a 00 pv-01,%m20.2,bool,,_7ev,46
+close ev a 01 pv-01,%m21.0,bool,,_7ev,47
+close ev a 01 pv-02,%m30.0,bool,,_7ev,48
+close ev a 02 pv-01,%m22.3,bool,,_7ev,49
+close ev b 00 pv-01,%m20.3,bool,,_7ev,50
+close ev b 01 pv-01,%m21.2,bool,,_7ev,51
+close ev b 01 pv-02,%m30.2,bool,,_7ev,52
+close ev b 02 pv-01,%m22.1,bool,,_7ev,53
+close mv02 pid,%m11.7,bool,,_7ev,54
+enable counter pew 336,%m114.2,bool,,_7ev,55
+enable counter pew 368,%m115.2,bool,,_7ev,56
+enable counter pew 418,%m116.2,bool,,_7ev,57
+start vs01 brake,%m11.0,bool,,_7ev,58
+open ev b 01 pv-01,%m21.1,bool,,_7ev,59
+open ev b 01 pv-02,%m30.1,bool,,_7ev,60
+open ev b 02 pv-01,%m22.2,bool,,_7ev,61
+open mv02 pid,%m11.6,bool,,_7ev,62
+pc01 close,%m40.2,bool,,_7ev,63
+pc01 open,%m40.3,bool,,_7ev,64
+pc02 close,%m40.4,bool,,_7ev,65
+pc02 open,%m40.5,bool,,_7ev,66
+m491,%m10.1,bool,,_7ev,67
+pls m51 6,%m51.6,bool,,_7ev,68
+pls m51.5,%m51.5,bool,,_7ev,69
+pls m51_4,%m51.4,bool,,_7ev,70
+pls m10.3,%m10.3,bool,,_7ev,71
+pls m10.4,%m10.4,bool,,_7ev,72
+close mv05 pid,%m11.5,bool,,_7ev,73
+pls 50 4,%m50.4,bool,,_7ev,74
+pls 50 7,%m50.7,bool,,_7ev,75
+pls 50_5,%m50.5,bool,,_7ev,76
+pls 51 2,%m51.2,bool,,_7ev,77
+pls 51 3,%m51.3,bool,,_7ev,78
+pls m50.0,%m50.0,bool,,_7ev,79
+pls m50.1,%m50.1,bool,,_7ev,80
+pls m50.2,%m50.2,bool,,_7ev,81
+mv06 pid down,%m13.3,bool,,_7ev,82
+mv06 pid up,%m13.2,bool,,_7ev,83
+mem gate a open pv-01,%m10.7,bool,,_7ev,84
+mem gate a open pv-02,%m12.4,bool,,_7ev,85
+mem gate b open pv-01,%m10.6,bool,,_7ev,86
+mem gate b open pv-02,%m12.3,bool,,_7ev,87
+ro01 close,%m40.1,bool,,_7ev,88
+ro01 open,%m40.0,bool,,_7ev,89
+ro01_close,%m41.3,bool,,_7ev,90
+ro01_open,%m41.2,bool,,_7ev,91
+reset counter pew 336,%m114.5,bool,,_7ev,92
+reset counter pew 368,%m115.5,bool,,_7ev,93
+reset counter pew 418,%m116.5,bool,,_7ev,94
+init_rk_512,%m200.0,bool,,_7ev,95
+up mv04 pid,%m11.2,bool,,_7ev,96
+app m10.2,%m10.2,bool,,_7ev,97
+open ev a 01 pv-02,%m30.3,bool,,_7ev,98
+open ev a 02 pv-01,%m22.0,bool,,_7ev,99
+open ev b 00 pv-01,%m20.1,bool,,_7ev,100
+r1 gate on,%m10.5,bool,,_7ev,101
+counter error pew 336,%m114.4,bool,,_7ev,102
+counter error pew 368,%m115.4,bool,,_7ev,103
+counter error pew 418,%m116.4,bool,,_7ev,104
+down mv04 pid,%m11.3,bool,,_7ev,105
+down tc03 pid mv04,%m11.1,bool,,_7ev,106
+tag_47,%t13,timer,,_7ev,107
+tag_48,%t17,timer,,_7ev,108
+tag_92,%t4,timer,,_7ev,109
+tag_93,%t21,timer,,_7ev,110
+tag_94,%t3,timer,,_7ev,111
+tag_96,%t15,timer,,_7ev,112
+tag_97,%t16,timer,,_7ev,113
+tag_114,%t6,timer,,_7ev,114
+tag_115,%t58,timer,,_7ev,115
+tag_116,%t59,timer,,_7ev,116
+tag_117,%t69,timer,,_7ev,117
+tag_122,%t130,timer,,_7ev,118
+tag_123,%t113,timer,,_7ev,119
+tag_124,%t40,timer,,_7ev,120
+tag_125,%t41,timer,,_7ev,121
+tag_126,%t131,timer,,_7ev,122
+tag_127,%t126,timer,,_7ev,123
+tag_128,%t127,timer,,_7ev,124
+tag_129,%t133,timer,,_7ev,125
+tag_130,%t134,timer,,_7ev,126
+tag_131,%t1,timer,,_7ev,127
+tag_132,%t2,timer,,_7ev,128
+tag_133,%t5,timer,,_7ev,129
+tag_134,%t20,timer,,_7ev,130
+tag_135,%t26,timer,,_7ev,131
+tag_136,%t27,timer,,_7ev,132
+tag_137,%t28,timer,,_7ev,133
+tag_138,%t30,timer,,_7ev,134
+tag_139,%t29,timer,,_7ev,135
+tag_140,%t12,timer,,_7ev,136
+tag_141,%t122,timer,,_7ev,137
+tag_142,%t32,timer,,_7ev,138
+tag_143,%t31,timer,,_7ev,139
+tag_144,%t37,timer,,_7ev,140
+tag_145,%t38,timer,,_7ev,141
+tag_146,%t90,timer,,_7ev,142
+tag_147,%t138,timer,,_7ev,143
+tag_148,%t139,timer,,_7ev,144
+tag_149,%t135,timer,,_7ev,145
+tag_150,%t136,timer,,_7ev,146
+tag_151,%t140,timer,,_7ev,147
+tag_152,%t143,timer,,_7ev,148
+tag_153,%t141,timer,,_7ev,149
+tag_154,%t78,timer,,_7ev,150
+tag_155,%t79,timer,,_7ev,151
+tag_156,%t118,timer,,_7ev,152
+tag_157,%t119,timer,,_7ev,153
+tag_160,%t47,timer,,_7ev,154
+tag_161,%t48,timer,,_7ev,155
+tag_162,%t142,timer,,_7ev,156
+tag_163,%t100,timer,,_7ev,157
+tag_164,%t56,timer,,_7ev,158
+tag_165,%t102,timer,,_7ev,159
+tag_166,%t57,timer,,_7ev,160
+tag_167,%t8,timer,,_7ev,161
+tag_168,%t9,timer,,_7ev,162
+tag_169,%t10,timer,,_7ev,163
+tag_170,%t11,timer,,_7ev,164
+tag_191,%m100.0,bool,,_7ev,165
+tag_192,%m150.0,bool,,_7ev,166
+tag_193,%m150.1,bool,,_7ev,167
+tag_194,%m150.2,bool,,_7ev,168
+tag_195,%m150.3,bool,,_7ev,169
+tag_196,%m150.4,bool,,_7ev,170
+tag_197,%m150.5,bool,,_7ev,171
+tag_198,%m150.6,bool,,_7ev,172
+tag_199,%m150.7,bool,,_7ev,173
+tag_200,%m151.0,bool,,_7ev,174
+tag_201,%m151.1,bool,,_7ev,175
+tag_202,%m151.2,bool,,_7ev,176
+tag_203,%m151.3,bool,,_7ev,177
+tag_204,%m151.4,bool,,_7ev,178
+tag_205,%m151.5,bool,,_7ev,179
+tag_206,%m151.6,bool,,_7ev,180
+tag_207,%m151.7,bool,,_7ev,181
+tag_208,%m152.0,bool,,_7ev,182
+tag_209,%m152.1,bool,,_7ev,183
+tag_210,%m152.2,bool,,_7ev,184
+tag_211,%m152.3,bool,,_7ev,185
+tag_212,%m152.4,bool,,_7ev,186
+tag_213,%m152.5,bool,,_7ev,187
+tag_214,%m152.6,bool,,_7ev,188
+tag_215,%m152.7,bool,,_7ev,189
+tag_216,%m153.0,bool,,_7ev,190
+tag_217,%m153.1,bool,,_7ev,191
+tag_218,%m153.2,bool,,_7ev,192
+tag_219,%m153.3,bool,,_7ev,193
+tag_220,%m153.4,bool,,_7ev,194
+tag_221,%m153.5,bool,,_7ev,195
+tag_222,%m153.6,bool,,_7ev,196
+tag_223,%m153.7,bool,,_7ev,197
+tag_224,%m154.0,bool,,_7ev,198
+tag_225,%m154.1,bool,,_7ev,199
+tag_226,%m154.2,bool,,_7ev,200
+tag_227,%m154.3,bool,,_7ev,201
+tag_228,%m154.4,bool,,_7ev,202
+tag_229,%m154.5,bool,,_7ev,203
+tag_230,%m154.6,bool,,_7ev,204
+tag_231,%m154.7,bool,,_7ev,205
+tag_232,%m155.0,bool,,_7ev,206
+tag_233,%m155.1,bool,,_7ev,207
+tag_234,%m155.2,bool,,_7ev,208
+tag_235,%m155.3,bool,,_7ev,209
+tag_236,%m155.4,bool,,_7ev,210
+tag_237,%m155.5,bool,,_7ev,211
+tag_238,%m155.6,bool,,_7ev,212
+tag_239,%m155.7,bool,,_7ev,213
+tag_240,%m156.0,bool,,_7ev,214
+tag_241,%m156.1,bool,,_7ev,215
+tag_242,%m156.2,bool,,_7ev,216
+tag_243,%m156.3,bool,,_7ev,217
+tag_244,%m156.4,bool,,_7ev,218
+tag_245,%m156.5,bool,,_7ev,219
+tag_246,%m156.6,bool,,_7ev,220
+tag_247,%m156.7,bool,,_7ev,221
+tag_248,%m157.0,bool,,_7ev,222
+tag_249,%m157.1,bool,,_7ev,223
+tag_250,%m157.2,bool,,_7ev,224
+tag_251,%m157.3,bool,,_7ev,225
+tag_252,%m157.4,bool,,_7ev,226
+tag_253,%m157.5,bool,,_7ev,227
+tag_254,%m157.6,bool,,_7ev,228
+tag_255,%m157.7,bool,,_7ev,229
+tag_256,%m158.0,bool,,_7ev,230
+tag_257,%m158.1,bool,,_7ev,231
+tag_258,%m158.2,bool,,_7ev,232
+tag_259,%m158.3,bool,,_7ev,233
+tag_260,%m158.4,bool,,_7ev,234
+tag_261,%m158.5,bool,,_7ev,235
+tag_262,%m159.0,bool,,_7ev,236
+tag_263,%m159.1,bool,,_7ev,237
+tag_264,%m159.2,bool,,_7ev,238
+tag_265,%m159.3,bool,,_7ev,239
+tag_266,%m159.4,bool,,_7ev,240
+tag_267,%m159.5,bool,,_7ev,241
+tag_268,%m159.6,bool,,_7ev,242
+tag_269,%m159.7,bool,,_7ev,243
+tag_270,%m160.0,bool,,_7ev,244
+tag_271,%m160.1,bool,,_7ev,245
+tag_272,%m160.2,bool,,_7ev,246
+tag_273,%m160.3,bool,,_7ev,247
+tag_280,%qw0,word,,_7ev,248
+tag_281,%qw2,word,,_7ev,249
+tag_282,%qw4,word,,_7ev,250
+tag_283,%qw6,word,,_7ev,251
+tag_284,%qw8,word,,_7ev,252
+tag_285,%qw10,word,,_7ev,253
+tag_286,%qw12,word,,_7ev,254
+tag_287,%qw14,word,,_7ev,255
+tag_288,%qw16,word,,_7ev,256
+tag_289,%qw18,word,,_7ev,257
+tag_290,%qw20,word,,_7ev,258
+tag_291,%qw22,word,,_7ev,259
+clock100ms,%m90.0,bool,,_7ev,368
+clock3s,%m90.1,bool,,_7ev,372
+tag_292,%m90.5,bool,,_7ev,391
+braking vs01,%q49.5,bool,it's no longer there,_7ev,461
+main flame on,%m25.0,bool,,_7ev,468
+test cabin,%m5.0,bool,,_7ev,469
+every 1 second,%m1.0,bool,,_7ev,470
+riduce mn01,%m1.2,bool,,_7ev,471
+start burner,%m48.3,bool,,_7ev,472
+washing max ok,%m9.0,bool,,_7ev,473
+maintenance pv01,%m80.5,bool,,_7ev,474
+maintenance pv02,%m80.6,bool,,_7ev,475
+disable masses,%m80.0,bool,,_7ev,476
+programmed stop burner,%m1.1,bool,,_7ev,477
+shot to close,%m18.0,bool,,_7ev,478
+shot to open,%m18.1,bool,,_7ev,479
+start client motor 4,%q61.2,bool,it should be free but it is used,_7ev,480
+start client motor 6,%q61.3,bool,it should be free but it is used,_7ev,481
+start client motor 8,%q61.4,bool,it should be free but it is used,_7ev,482
+start client motor 9,%q61.5,bool,it should be free but it is used,_7ev,483
+start client motore 10,%q61.6,bool,it should be free but it is used,_7ev,484
+vs01_fbk,%i1.1,bool,feedback motor vs-01/vs-01a,_7ev,493
+mv02_05_06_power_ok,%i1.4,bool,feedback inverter supply motors mv-02/mv-05/mv-06,_7ev,494
+mv06_fbk_opening,%i1.6,bool,feedback opening motor mv-06,_7ev,495
+mv06_fbk_closing,%i1.7,bool,feedback closing motor mv-06,_7ev,496
+mv05_fbk_opening,%i2.0,bool,feedback opening motor mv-05,_7ev,497
+mv05_fbk_closing,%i2.1,bool,feedback closing motor mv-05,_7ev,498
+mv02_fbk_opening,%i2.2,bool,feedback opening motor mv-02,_7ev,499
+fn02_fbk,%i3.0,bool,feedback motor fn-02,_7ev,500
+vr01_fbk,%i3.4,bool,feedbackmotor vr-01,_7ev,501
+fn01_fbk,%i3.5,bool,feedbackmotor fn-01,_7ev,502
+vr02_fbk,%i3.7,bool,feedbackmotor vr-02,_7ev,503
+fn03_fbk,%i4.1,bool,feedback motor fn-03,_7ev,505
+fn03_all_softstarter,%i4.2,bool,alarm motor fn-03,_7ev,506
+fn06_fbk,%i4.3,bool,feedback motor fn-06,_7ev,507
+sc01_fbk,%i4.4,bool,feedback motor sc-01,_7ev,508
+ld-01_fbk,%i4.6,bool,feedback motor ld-01,_7ev,509
+ld-01a_fbk,%i4.7,bool,feedback motor-ld-01a,_7ev,510
+sc-10_fbk,%i5.0,bool,feedback motor sc-10,_7ev,511
+sc-11_fbk,%i5.1,bool,feedback motor sc-11,_7ev,512
+102a8_spare1,%i5.3,bool,,_7ev,513
+vr06_fbk,%i5.7,bool,feedback motor vr-06,_7ev,514
+vr05_fbk,%i5.6,bool,feedback motor vr-05,_7ev,515
+vr04_fbk,%i5.5,bool,feedback motor vr-04,_7ev,516
+vr03_fbk,%i5.4,bool,feedback motor vr-03,_7ev,517
+fn05_fbk,%i6.0,bool,feedback motor fn-05,_7ev,518
+er01_fbk,%i6.1,bool,feedback er-01 electrical resistance,_7ev,519
+belt conveyor b run,%i13.0,bool,"e 13.5 belt conveyor ""b""run",_7ev,520
+shredder 1 run,%i13.1,bool,e 13.6 shredder 1 run,_7ev,521
+shredder vibrationfeeder run,%i13.2,bool,e 13.7 shredder vibrationfeeder run,_7ev,522
+belt conveyor c run,%i13.3,bool,"e 14.0 belt conveyor ""c""run",_7ev,523
+rotex screen run,%i13.4,bool,e 14.1 rotex screen run,_7ev,524
+apron conveyor b run,%i13.5,bool,"e 14.4 apron conveyor ""b""run",_7ev,525
+shredder 2 run,%i13.6,bool,e 14.5 shredder 2 run,_7ev,526
+belt conveyor d run,%i13.7,bool,"e 14.6 belt conveyor ""d""run",_7ev,527
+belt conveyor e run,%i14.0,bool,"e 14.7 belt conveyor ""e""run",_7ev,528
+liw systemautoreader,%i14.1,bool,e 15.0 liw systemautoreader,_7ev,529
+primaryshredder run,%i14.2,bool,e 15.2 primaryshredder run,_7ev,530
+bwf1_inverter_high_speed,%i14.4,bool,e 17.0 bwf1_inverter_high_speed,_7ev,531
+bwf2_inverter_high_speed,%i14.5,bool,e 17.1 bwf2_inverter_high_speed,_7ev,532
+apron conveyor a fault,%i14.6,bool,"e 17.6 apron conveyor ""a""fault",_7ev,533
+impactor fault,%i14.7,bool,e 17.7 impactor fault,_7ev,534
+impact vibrationfeeder fault,%i15.0,bool,e 18.0 impact vibrationfeeder fault,_7ev,535
+belt conveyor a fault,%i15.1,bool,"e 18.1 belt conveyor ""a""fault",_7ev,536
+air knife fault,%i15.2,bool,e 18.2 air knife fault,_7ev,537
+belt conveyor b fault,%i15.3,bool,"e 18.3 belt conveyor ""b""fault",_7ev,538
+shredder 1 fault,%i15.4,bool,e 18.4 shredder 1 fault,_7ev,539
+shredder vibrationfeeder fault,%i15.5,bool,e 18.5 shredder vibrationfeeder fault,_7ev,540
+belt conveyor c fault,%i15.6,bool,"e 18.6 belt conveyor ""c""fault",_7ev,541
+rotex screenfault,%i15.7,bool,e 18.7 rotex screenfault,_7ev,542
+apron conveyor b fault,%i16.0,bool,"e19.2 apron conveyor ""b""fault",_7ev,561
+shredder 2fault,%i16.1,bool,e19.3 shredder 2fault,_7ev,562
+belt coveyor d fault,%i16.2,bool,"e19.4 belt coveyor ""d""fault",_7ev,563
+belt conveyor e fault,%i16.3,bool,"e19.5 belt conveyor ""e""fault",_7ev,564
+weighting hopper 2fault,%i16.4,bool,e19.6 weighting hopper 2fault,_7ev,565
+hopper conveyor 2fault,%i16.5,bool,e19.7 hopper conveyor 2fault,_7ev,566
+belt conveyor c fault_doppio!,%i16.6,bool,"e20.0 belt conveyor ""c""fault",_7ev,567
+presence 110v,%i19.5,bool,,_7ev,568
+acknowledg,%i19.6,bool,,_7ev,569
+reset_allarm,%i19.7,bool,,_7ev,570
+103a3_spare0,%i18.0,bool,,_7ev,571
+103a3_spare1,%i18.1,bool,,_7ev,572
+103a3_spare2,%i18.2,bool,,_7ev,573
+103a3_spare3,%i18.3,bool,,_7ev,574
+103a3_spare4,%i18.4,bool,,_7ev,575
+103a3_spare5,%i18.5,bool,,_7ev,576
+103a3_spare6,%i18.6,bool,,_7ev,577
+103a3_spare7,%i18.7,bool,,_7ev,578
+103a3_spare8,%i19.0,bool,,_7ev,579
+103a3_spare9,%i19.1,bool,,_7ev,580
+103a3_spare10,%i19.2,bool,,_7ev,581
+103a3_spare11,%i19.3,bool,,_7ev,582
+153a1_spare1,%iw392,int,,_7ev,583
+153a1_spare3,%iw396,int,,_7ev,584
+102a10_spare0,%i14.3,bool,consent spare,_7ev,585
+153a3_spare0,%i29.0,bool,,_7ev,586
+153a3_spare1,%i29.1,bool,,_7ev,587
+153a3_spare2,%i29.2,bool,,_7ev,588
+153a3_spare3,%i29.3,bool,,_7ev,589
+153a3_spare4,%i29.4,bool,,_7ev,590
+153a3_spare5,%i29.5,bool,,_7ev,591
+153a3_spare6,%i29.6,bool,,_7ev,592
+153a3_spare7,%i29.7,bool,,_7ev,593
+mv06_open,%i6.7,bool,limit switch ls.40,_7ev,657
+mv05_open,%i7.1,bool,limit switch ls-15,_7ev,658
+mv02_open,%i7.3,bool,limit switch ls-17,_7ev,659
+102a9_spare1,%i8.4,bool,,_7ev,660
+102a9_spare0,%i8.3,bool,,_7ev,661
+ev01_open,%i8.6,bool,"limit switch ls-01 gate ""a"" open",_7ev,662
+ev01_close,%i8.7,bool,"limit switch ls-02 gate ""a"" closed",_7ev,663
+ev02_open,%i9.0,bool,"limit switch ls-05 gate ""b"" open",_7ev,664
+ev02_close,%i9.1,bool,"limit switch ls-06 gate ""b"" closed",_7ev,665
+ev04_close,%i9.5,bool,"e29.7 limit switch ls-26gate ""a"" closed",_7ev,666
+ev05_close,%i9.7,bool,"e29.3 limit switch ls-30gate ""b"" closed",_7ev,667
+open mv06,%q1.1,bool,a 60.6 mv-06 openingmotor command,_7ev,668
+close mv06,%q1.2,bool,a 60.7 mv-06 closingmotor command,_7ev,669
+open mv05,%q1.3,bool,a 48.2 mv-05 openingmotor command,_7ev,670
+close mv05,%q1.4,bool,a 48.3 mv-05 closingmotor command,_7ev,671
+open mv02,%q1.5,bool,a 57.2 mv-02 openingmotor command,_7ev,672
+close mv02,%q1.6,bool,a 57.3 mv-02 closingmotor command,_7ev,673
+start open mv03,%q1.7,bool,a 52.5 mv-03 openingmotor command,_7ev,674
+start close mv03,%q2.0,bool,a 52.6 mv-03 closingmotor command,_7ev,675
+start open mv-01,%q2.4,bool,a 60.1 mv-01 openingmotor command,_7ev,676
+start close mv-01,%q2.5,bool,a 60.2 mv-01 closingmotor command,_7ev,677
+enable start chiller,%q6.0,bool,a 61.0 chiller remotestart,_7ev,678
+start liw feeder,%q6.1,bool,a 61.1 liw feederremote start,_7ev,679
+102a6_spare4,%qw312,word,,_7ev,680
+102a6_spare5,%qw314,word,,_7ev,681
+102a6_spare7,%qw318,word,,_7ev,682
+102a6_spare0,%qw304,word,,_7ev,683
+102a6_spare6,%qw316,word,,_7ev,684
+153a4_spare0,%qw338,word,,_7ev,685
+153a4_spare1,%qw340,word,,_7ev,686
+153a4_spare2,%qw342,word,,_7ev,687
+153a4_spare3,%qw344,word,,_7ev,688
+153a4_spare4,%qw346,word,,_7ev,689
+153a4_spare5,%qw348,word,,_7ev,690
+153a4_spare6,%qw350,word,,_7ev,691
+102a8_spare0,%i5.2,bool,,_7ev,692
+reset_inverter,%q7.5,bool,reset alarms inverter,_7ev,766
+103a7,%q7.4,bool,,_7ev,767
+clock_byte,%mb2000,byte,,_7ev,774
+clock_10hz,%m2000.0,bool,,_7ev,775
+clock_5hz,%m2000.1,bool,,_7ev,776
+clock_2.5hz,%m2000.2,bool,,_7ev,777
+clock_2hz,%m2000.3,bool,,_7ev,778
+clock_1.25hz,%m2000.4,bool,,_7ev,779
+clock_0.625hz,%m2000.6,bool,,_7ev,780
+clock_0.5hz,%m2000.7,bool,,_7ev,781
+102a9_spare2,%i8.5,bool,,_7ev,782
+siren,%q7.6,bool,a 57.6 siren alarms,_7ev,783
+blinking ligh,%q7.7,bool,a 57.7 lampalarm,_7ev,784
+open ev b 00 pv-02,%m30.5,bool,,_7ev,785
+spare_1,%q17.2,bool,spare,_7ev,786
+spare_2,%q17.3,bool,spare,_7ev,787
+spare_3,%q17.4,bool,spare,_7ev,788
+spare_4,%q17.5,bool,spare,_7ev,789
+spare_6,%q17.7,bool,spare,_7ev,790
+ev-11,%q12.0,bool,a0.0 filter 1 valve bf01first sector,_7ev,791
+ev-12,%q12.1,bool,a0.1 filter 2 valve bf01first sector,_7ev,792
+ev-13,%q12.2,bool,a0.2 filter 3 valve bf01first sector,_7ev,793
+ev-14,%q12.3,bool,a0.3 filter 4 valve bf01first sector,_7ev,794
+ev-15,%q12.4,bool,a0.4 filter 5 valve bf01first sector,_7ev,795
+ev-16,%q12.5,bool,a0.5 filter 6 valve bf01first sector,_7ev,796
+ev-17,%q12.6,bool,a0.6 filter 7 valve bf01first sector,_7ev,797
+ev-18,%q12.7,bool,a0.7 filter 8 valve bf01first sector,_7ev,798
+ev-19,%q13.0,bool,a1.0 filter 1 valve bf01second sector,_7ev,799
+ev-20,%q13.1,bool,a1.1 filter 2 valve bf01second sector,_7ev,800
+ev-21,%q13.2,bool,a1.2 filter 3 valve bf01second sector,_7ev,801
+ev-22,%q13.3,bool,a1.3 filter 4 valve bf01second sector,_7ev,802
+ev-23,%q13.4,bool,a1.4 filter 5 valve bf01second sector,_7ev,803
+ev-25,%q13.6,bool,a1.6 filter 7 valve bf01second sector,_7ev,804
+ev-26,%q13.7,bool,a1.7 filter 8 valve bf01second sector,_7ev,805
+ev-27,%q14.0,bool,a2.0 filter 1 valve bf01third sector,_7ev,806
+ev-28,%q14.1,bool,a2.1 filter 2 valve bf01third sector,_7ev,807
+ev-29,%q14.2,bool,a2.2 filter 3 valve bf01third sector,_7ev,808
+ev-30,%q14.3,bool,a2.3 filter 4 valve bf01third sector,_7ev,809
+ev-31,%q14.4,bool,a2.4 filter 5 valve bf01third sector,_7ev,810
+ev-32,%q14.5,bool,a2.5 filter 6 valve bf01third sector,_7ev,811
+ev-33,%q14.6,bool,a2.6 filter 7 valve bf01third sector,_7ev,812
+ev-34,%q14.7,bool,a2.7 filter 8 valve bf01third sector,_7ev,813
+ev-35,%q15.0,bool,a3.0 filter 1 valve bf01fourth sector,_7ev,814
+ev-36,%q15.1,bool,a3.1 filter 2 valve bf01fourth sector,_7ev,815
+ev-37,%q15.2,bool,a3.2 filter 3 valve bf01fourth sector,_7ev,816
+ev-38,%q15.3,bool,a3.3 filter 4 valve bf01fourth sector,_7ev,817
+ev-39,%q15.4,bool,a3.4 filter 5 valve bf01fourth sector,_7ev,818
+ev-40,%q15.5,bool,a3.5 filter 6 valve bf01fourth sector,_7ev,819
+ev-41,%q15.6,bool,a3.6 filter 7 valve bf01fourth sector,_7ev,820
+ev-42,%q15.7,bool,a3.7 filter 8 valve bf01fourth sector,_7ev,821
+ev-43,%q16.0,bool,a4.0 filter 1 valve bf01fifth sector,_7ev,822
+ev-44,%q16.1,bool,a4.1 filter 2 valve bf01fifth sector,_7ev,823
+ev-45,%q16.2,bool,a4.2 filter 3 valve bf01fifth sector,_7ev,824
+ev-46,%q16.3,bool,a4.3 filter 4 valve bf01fifth sector,_7ev,825
+ev-47,%q16.4,bool,a4.4 filter 5 valve bf01fifth sector,_7ev,826
+ev-48,%q16.5,bool,a4.5 filter 6 valve bf01fifth sector,_7ev,827
+ev-49,%q16.6,bool,a4.6 filter 7 valve bf01fifth sector,_7ev,828
+ev-50,%q16.7,bool,a4.7 filter 8 valve bf01fifth sector,_7ev,829
+pv-14,%q17.0,bool,a 5.0 inlet fresh airfilters valve,_7ev,830
+ev-24,%q13.5,bool,a1.5 filter 6 valve bf01second sector,_7ev,831
+spare_5,%q17.6,bool,spare,_7ev,832
+tag_274,%iw14,word,,_7ev,833
+tag_275,%iw16,word,,_7ev,834
+tag_276,%iw18,word,,_7ev,835
+tag_277,%iw20,word,,_7ev,836
+tag_278,%iw22,word,,_7ev,837
+tag_279,%iw24,word,,_7ev,838
+free e37.0,%i37.0,bool,,_7ev,839
+free e45.1,%i45.1,bool,,_7ev,840
+ev-57,%q18.6,bool,a8.6 filter 7 valve bf02first sector,_7ev,841
+ev-58,%q18.7,bool,a8.7 filter 8 valve bf02first sector,_7ev,842
+ev-59,%q19.0,bool,a9.0 filter 1 valve bf02second sector,_7ev,843
+ev-60,%q19.1,bool,a9.1 filter 2 valve bf02second sector,_7ev,844
+ev-62,%q19.3,bool,a9.3 filter 4 valve bf02second sector,_7ev,845
+ev-63,%q19.4,bool,a9.4 filter 5 valve bf02second sector,_7ev,846
+ev-64,%q19.5,bool,a9.5 filter 6 valve bf02second sector,_7ev,847
+ev-65,%q19.6,bool,a9.6 filter 7 valve bf02second sector,_7ev,848
+ev-66,%q19.7,bool,a9.7 filter 8 valve bf02second sector,_7ev,849
+ev-67,%q20.0,bool,a10.0 filter 1 valve bf02third sector,_7ev,850
+ev-68,%q20.1,bool,a10.1 filter 2 valve bf02third sector,_7ev,851
+ev-69,%q20.2,bool,a10.2 filter 3 valve bf02third sector,_7ev,852
+ev-70,%q20.3,bool,a10.3 filter 4 valve bf02third sector,_7ev,853
+ev-71,%q20.4,bool,a10.4 filter 5 valve bf02third sector,_7ev,854
+ev-72,%q20.5,bool,a10.5 filter 6 valve bf02third sector,_7ev,855
+ev-73,%q20.6,bool,a10.6 filter 7 valve bf02third sector,_7ev,856
+ev-74,%q20.7,bool,a10.7 filter 8 valve bf02third sector,_7ev,857
+ev-75,%q21.0,bool,a11.0 filter 1 valve bf02fourth sector,_7ev,858
+ev-76,%q21.1,bool,a11.1 filter 2 valve bf02fourth sector,_7ev,859
+ev-77,%q21.2,bool,a11.2 filter 3 valve bf02fourth sector,_7ev,860
+ev-78,%q21.3,bool,a11.3 filter 4 valve bf02fourth sector,_7ev,861
+ev-79,%q21.4,bool,a11.4 filter 5 valve bf02fourth sector,_7ev,862
+ev-80,%q21.5,bool,a11.5 filter 6 valve bf02fourth sector,_7ev,863
+ev-81,%q21.6,bool,a11.6 filter 7 valve bf02fourth sector,_7ev,864
+ev-82,%q21.7,bool,a11.7 filter 8 valve bf02fourth sector,_7ev,865
+ev-83,%q22.0,bool,a12.0 filter 1 valve bf02fifth sector,_7ev,866
+ev-84,%q22.1,bool,a12.1 filter 2 valve bf02fifth sector,_7ev,867
+ev-85,%q22.2,bool,a12.2 filter 3 valve bf02fifth sector,_7ev,868
+ev-87,%q22.4,bool,a12.4 filter 5 valve bf02fifth sector,_7ev,869
+ev-88,%q22.5,bool,a12.5 filter 6 valve bf02fifth sector,_7ev,870
+ev-89,%q22.6,bool,a12.6 filter 7 valve bf02fifth sector,_7ev,871
+ev-90,%q22.7,bool,a12.7 filter 8 valve bf02fifth sector,_7ev,872
+pv-14 open,%i28.0,bool,%i6.0,_7ev,873
+pv-14 close,%i28.1,bool,%i6.1,_7ev,874
+selector op gate a pv-02,%i10.0,bool,"e45.4 opening gate ""a""local selector",_7ev,875
+selector op gate b pv-02,%i10.1,bool,"e45.5 opening gate ""b""local selector",_7ev,876
+ev01_sel_open,%i9.2,bool,"opening gate ""a""local selector",_7ev,877
+ev02_sel_open,%i9.3,bool,"opening gate ""b""local selector",_7ev,878
+deviator open pv-03,%i10.2,bool,e29.4 limit switchls-09,_7ev,879
+deviator close pv-03,%i10.3,bool,e29.5 limit switchls-10,_7ev,880
+pv03 local selector,%i10.4,bool,e65.7 73sa1 deviatorev-06 selector,_7ev,881
+mv02_fbk_closing,%i2.3,bool,feedback closing motor mv-02,_7ev,882
+mv03_fbk_opening,%i2.4,bool,feedback opening motor mv-03,_7ev,883
+mv03_fbk_closing,%i2.5,bool,feedback closing motor mv-03,_7ev,884
+mv01_fbk_opening,%i3.2,bool,feedback openingmotor mv-01,_7ev,885
+mv01_fbk_closing,%i3.3,bool,feedback closingmotor mv-01,_7ev,886
+mv03_open,%i7.5,bool,limit switch ls-19,_7ev,887
+mv03_close,%i7.6,bool,limit switch ls-20,_7ev,888
+mv01_open,%i8.1,bool,limit switch ls-23,_7ev,889
+ev-51,%q18.0,bool,a8.0 filter 1 valve bf02first sector,_7ev,890
+ev-52,%q18.1,bool,a8.1 filter 2 valve bf02first sector,_7ev,891
+ev-53,%q18.2,bool,a8.2 filter 3 valve bf02first sector,_7ev,892
+ev-54,%q18.3,bool,a8.3 filter 4 valve bf02first sector,_7ev,893
+ev-55,%q18.4,bool,a8.4 filter 5 valve bf02first sector,_7ev,894
+ev-56,%q18.5,bool,a8.5 filter 6 valve bf02first sector,_7ev,895
+reserved tc04,%iw258,int,,_7ev,896
+reserved tc05,%iw262,int,probe sensor pt100 bearing fn-01 (tc-05) -30...350°c,_7ev,897
+ev03,%q5.1,bool,a 53.1 ev-03 valvecommand,_7ev,901
+bf01_run,%m180.3,bool,,_7ev,902
+bf02_run,%m180.4,bool,,_7ev,903
+ev-61,%q19.2,bool,a9.2 filter 3 valve bf02second sector,_7ev,904
+ev-86,%q22.3,bool,a12.3 filter 4 valve bf02fifth sector,_7ev,905
+burner on,%i17.0,bool,e 44.7 burner on,_7ev,906
+brurner lock out,%i17.1,bool,e 44.6 burner lockout,_7ev,907
+burner on and ok,%i17.2,bool,e 44.1 burner inmodulation,_7ev,908
+max pressure gas,%i17.4,bool,e 44.3 limit switch s4max pressure gas,_7ev,909
+high flame gas,%i17.7,bool,e 41.7 high flame gasvalve inserted,_7ev,910
+rst allarm burner,%q6.7,bool,a 56.2 reset alarmburner,_7ev,911
+103a5,%q7.2,bool,,_7ev,912
+103a6,%q7.3,bool,,_7ev,913
+102a7_spare5,%i0.5,bool,,_7ev,914
+mv02_05_06_inv_all,%i1.5,bool,alarm inverter supply motors mv-02/mv-05/mv-06,_7ev,915
+mc04_all_inv,%i0.7,bool,feedback motor mc-04,_7ev,916
+vs01_all_inv,%i1.2,bool,alarm motor vs-01/vs-01a,_7ev,917
+fn02_all_inv,%i3.1,bool,alarm motor fn-02,_7ev,918
+fn01_all_inv,%i3.6,bool,alarm motor fn-01,_7ev,919
+min pressure gas,%i17.3,bool,e 44.2 limit switch s3min.pressure gas,_7ev,920
+min pressure air,%i17.5,bool,e 44.4 limit switch s3min.pressure air,_7ev,921
+max pressure air,%i17.6,bool,e 40.6 limit switch s4max pressure air,_7ev,922
+mc03_torque,%i6.4,bool,limit switch ss-09,_7ev,936
+mc05_torque,%i6.6,bool,limit switch ss-11,_7ev,937
+mv04_fbk_opening,%i2.6,bool,feedback opening motor mv-04,_7ev,938
+mv04_fbk_closing,%i2.7,bool,feedback closing motor mv-04,_7ev,939
+mv04_open,%i7.7,bool,limit switch ls21a/ls21b,_7ev,940
+mv04_close,%i8.0,bool,limit switch ls-22a/ls-22b,_7ev,941
+ch01_fbk,%i4.0,bool,feedback motor ch-01,_7ev,942
+pv04 open,%i10.5,bool,e 45.0 pv 04 ls33 open,_7ev,943
+pv04 close,%i10.6,bool,e36.6 limit switchls-32,_7ev,944
+low pressure air,%i11.0,bool,e 41.4 psl-05 low airpressure switch,_7ev,945
+177t1_ok,%i28.4,bool,,_7ev,946
+ll_ld01,%i28.5,bool,,_7ev,947
+170fc1,%i28.6,bool,,_7ev,948
+170sa1,%i28.7,bool,,_7ev,949
+bc01_all_inv,%i0.1,bool,alarm motor bc-01,_7ev,950
+bc01_fbk,%i0.0,bool,feedback motor bc-01,_7ev,951
+bc01_tripwire,%i6.2,bool,limit switch ss-01,_7ev,952
+rd01_all_inv,%i0.3,bool,alarm motor rd-01,_7ev,953
+rd01f_fbk,%i0.4,bool,feedback motor rd-01f,_7ev,954
+fn04_all_inv,%i28.3,bool,,_7ev,955
+fn04_fbk,%i28.2,bool,,_7ev,956
+spare_0,%q4.2,bool,a 52.4 fn-04/fn-04a motorcommand,_7ev,957
+mc04_fbk,%i0.6,bool,feedback motor mc-04,_7ev,958
+bwf01 ok,%i11.1,bool,e 64.0 bwf 01 manu status,_7ev,959
+bwf01 fault,%i11.3,bool,e 64.2 bwf 01 fault,_7ev,960
+min lev bwf01,%i11.4,bool,e 64.3 bwf 01 minimum level,_7ev,961
+max lev bwf01,%i11.5,bool,e 64.4 bwf 01maximum level,_7ev,962
+bwf02 ok,%i11.6,bool,e 64.5 bwf 02 manu status,_7ev,963
+bwf02 fault,%i12.0,bool,e 64.7 bwf 02 fault,_7ev,964
+min lev bwf02,%i12.1,bool,e 65.0 bwf 02minimum level,_7ev,965
+max lev bwf02,%i12.2,bool,e 65.1 bwf 02maximum level,_7ev,966
+apron conveyor a run,%i12.3,bool,"e 13.0 apron conveyor ""a""run",_7ev,967
+impactor run,%i12.4,bool,e 13.1 impactor run,_7ev,968
+impact vibrationfeeder run,%i12.5,bool,e 13.2 impact vibrationfeeder run,_7ev,969
+belt conveyor a run,%i12.6,bool,"e 13.3 belt conveyor ""a""run",_7ev,970
+tag_52,%t99,timer,,_7ev,971
+tag_53,%t101,timer,,_7ev,972
+bc01_prox,%i6.3,bool,limit switch ssl-01,_7ev,973
+tag_58,%t55,timer,,_7ev,974
+start mc05,%q0.5,bool,a 49.2 mc-05 motorcommand,_7ev,975
+mc05_fbk,%i1.0,bool,feedback motor mc-05,_7ev,976
+tag_60,%t61,timer,,_7ev,977
+air knife run,%i12.7,bool,e 13.4 air knife run,_7ev,978
+sc12_fbk,%i1.3,bool,feedback motor sc-12,_7ev,979
+start sc12,%q0.7,bool,a 48.0 sc-12 motorcommand,_7ev,980
+tag_95,%t22,timer,,_7ev,981
+close mv04,%q2.2,bool,a 57.5 mv-04 closingmotor command,_7ev,982
+open mv04,%q2.1,bool,a 57.4 mv-04 openingmotor command,_7ev,983
+mv04_m18b,%iw326,int,mv-04 position m18b,_7ev,984
+pid down mv04,%m14.3,bool,,_7ev,985
+pid up mv04,%m14.2,bool,,_7ev,986
+tag_98,%t42,timer,,_7ev,987
+pv-04,%q5.7,bool,a 57.1 ev-07 valvecommand,_7ev,988
+button open pv-0000,%i10.7,bool,e 37.6 74sb1 diverterv-07 selector,_7ev,989
+pls 50 6,%m50.6,bool,,_7ev,990
+button pushed,%m60.0,bool,,_7ev,991
+tag_118,%t145,timer,,_7ev,992
+tag_119,%t124,timer,,_7ev,993
+tag_120,%t125,timer,,_7ev,994
+tag_121,%t19,timer,,_7ev,995
+tag_69,%t73,timer,,_7ev,996
+star fan fn01,%q3.5,bool,a 53.5 fn-01 motorcommand cooling fan,_7ev,997
+fn01f_fbk,%i4.5,bool,feedback cooling fan motor fn-01,_7ev,1057
+temperature interlock ok,%q6.6,bool,a 56.3 max.temperaturefilter,_7ev,1058
+start nitrogen,%q6.4,bool,a 60.5 automatic immissionmotor command,_7ev,1059
+lock burner,%m28.0,bool,,_7ev,1060
+enable start burner,%m48.2,bool,,_7ev,1061
+rem. start/stop burner,%q6.5,bool,a 56.1 remote start/stopburner,_7ev,1062
+nitrogen tank ready,%i16.7,bool,e 45.7 nitrogen tankready,_7ev,1074
+start high flame,%q7.0,bool,a 56.6 start high flameburner,_7ev,1094
+foced spark,%q7.1,bool,a 56.7 enable spark for3 sec. during,_7ev,1095
+close mv03 for burner startup,%m180.5,bool,,_7ev,1096
+mc04_torque,%i6.5,bool,limit switch ss-10,_7ev,1097
+ev04_open,%i9.4,bool,"e29.6 limit switch ls-25gate ""a"" open",_7ev,1166
+ev05_open,%i9.6,bool,"e29.2 limit switch ls-29gate ""b"" open",_7ev,1167
+102a5_spare4,%qw296,word,,_7ev,1168
+memocmd_pv1_startup,%m180.6,bool,,_7ev,1169
+memocmd_bc01_startup,%m180.7,bool,,_7ev,1173
+flag autoburner,%m15.0,bool,,_7ev,1231
+enable start burner(1),%m48.0,bool,,_7ev,1275
+fp_m25_run,%m180.2,bool,,_7ev,1276
+memo_m25_running,%m180.1,bool,,_7ev,1277
+start fn04,%q17.1,bool,fn-04/fn-04a motor,_7ev,1278
+start er-01,%q5.0,bool,a 60.4 er-01 electricalresistance command,_7ev,1279
+start aux inv,%q1.0,bool,start inverter for valve motorized mv02-05-06,_7ev,1280
+tag_91,%t44,timer,,_7ev,1281
+tag_90,%t43,timer,,_7ev,1282
+tag_89,%t112,timer,,_7ev,1283
+tag_88,%t111,timer,,_7ev,1284
+tag_87,%t110,timer,,_7ev,1285
+tag_86,%t109,timer,,_7ev,1286
+tag_85,%t108,timer,,_7ev,1287
+tag_84,%t107,timer,,_7ev,1288
+tag_83,%t106,timer,,_7ev,1289
+tag_82,%t105,timer,,_7ev,1290
+tag_81,%t104,timer,,_7ev,1291
+tag_80,%t103,timer,,_7ev,1292
+pv-03 gate ev,%q5.6,bool,a 56.5 ev-06 valvecommand,_7ev,1293
+pv-02 gate b ev,%q5.5,bool,a 56.4 ev-05 valvecommand,_7ev,1294
+pv-02 gate a ev,%q5.4,bool,a 53.7 ev-04 valvecommand,_7ev,1295
+pv-01 gate b ev,%q5.3,bool,a 48.4 ev-02 valvecommand,_7ev,1296
+pv-01 gate a,%q5.2,bool,a 57.0 ev-01 valvecommand,_7ev,1297
+tag_79,%t96,timer,,_7ev,1298
+start fn05,%q4.7,bool,a 60.0 fn-05 motorcommand,_7ev,1299
+tag_78,%t95,timer,,_7ev,1300
+start vr06,%q4.6,bool,a 53.6 vr-06 motorcommand,_7ev,1301
+tag_77,%t94,timer,,_7ev,1302
+start vr05,%q4.5,bool,a 53.3 vr-05 motorcommand,_7ev,1303
+tag_76,%t93,timer,,_7ev,1304
+start vr04,%q4.4,bool,a 53.0 vr-04 motorcommand,_7ev,1305
+tag_75,%t84,timer,,_7ev,1306
+start vr03,%q4.3,bool,a 52.7 vr-03 motorcommand,_7ev,1307
+tag_74,%t83,timer,,_7ev,1308
+tag_73,%t82,timer,,_7ev,1309
+start sc11,%q4.1,bool,a 52.3 sc-11 motorcommand,_7ev,1310
+tag_72,%t81,timer,,_7ev,1311
+start sc10,%q4.0,bool,a 52.2 sc-10 motorcommand,_7ev,1312
+tag_71,%t80,timer,,_7ev,1313
+start vibrator ld-01,%q3.7,bool,a 52.1 ld-01a motorcommand,_7ev,1314
+tag_70,%t75,timer,,_7ev,1315
+start ld01,%q3.6,bool,a 49.4 ld-01 motorcommand,_7ev,1316
+tag_68,%t72,timer,,_7ev,1317
+start sc01,%q3.4,bool,a 49.3 sc-01 motorcommand,_7ev,1318
+tag_67,%t91,timer,,_7ev,1319
+start fn06,%q3.3,bool,a 60.3 fn-06 motorcommand,_7ev,1320
+tag_66,%t71,timer,,_7ev,1321
+start fn03,%q3.2,bool,a 56.0 fn-03 motorcommand,_7ev,1322
+tag_65,%t70,timer,,_7ev,1323
+start ch01,%q3.1,bool,a 53.4 ch-01 motorcommand,_7ev,1324
+tag_64,%t67,timer,,_7ev,1325
+start vr02,%q3.0,bool,a 49.7 vr-02 motorcommand,_7ev,1326
+tag_63,%t66,timer,,_7ev,1327
+start fn01,%q2.7,bool,a 49.6 fn-01 motorcommand,_7ev,1328
+tag_62,%t63,timer,,_7ev,1329
+start vr01,%q2.6,bool,a 53.2 vr-01 motorcommand,_7ev,1330
+tag_61,%t62,timer,,_7ev,1331
+tag_59,%t60,timer,,_7ev,1332
+start vs01,%q0.6,bool,a 49.0 vs-01/vs-01amotor command,_7ev,1333
+tag_57,%t54,timer,,_7ev,1334
+start mc04,%q0.4,bool,a 49.1 mc-04 motorcommand,_7ev,1335
+tag_56,%t53,timer,,_7ev,1336
+start spare motor,%q0.3,bool,a 48.7 spare motorcommand,_7ev,1337
+tag_55,%t52,timer,,_7ev,1338
+start fan rd01,%q0.2,bool,a 48.6 rd-01f motorcommand,_7ev,1339
+tag_54,%t49,timer,,_7ev,1340
+start rd01,%q0.1,bool,a 48.5 rd-01 motorcommand,_7ev,1341
+tag_51,%t39,timer,,_7ev,1342
+start bc01,%q0.0,bool,a 48.1 bc-01 motorcommand,_7ev,1343
+tag_50,%t121,timer,,_7ev,1344
+tag_49,%t120,timer,,_7ev,1345
+liw_sp_speed,%qw302,word,speed set liw system(client machine)(4-20ma),_7ev,1346
+tag_159,%t128,timer,,_7ev,1347
+tag_158,%mw70,word,,_7ev,1348
+fn04_sp,%qw336,word,aspiration fan fn-04 speed,_7ev,1349
+fn02_sp,%qw306,word,blower fan fn-02(4-20ma),_7ev,1350
+br01_gas_sp,%qw308,word,flame modulation gas floating motor br-01(4-20ma),_7ev,1351
+br01_air_sp,%qw310,word,flame modulation air floating motor br-01(4-20ma),_7ev,1352
+fn01_sp_speed,%qw292,word,sp speed blower fan fn-01,_7ev,1353
+rd01_sp_speed,%qw290,word,rotating drum rd-01,_7ev,1354
+bwf02_sp_flowrate,%qw300,word,flow rate speed set bwf 02(client machine)(4-20ma),_7ev,1355
+bwf01_sp_flowrate,%qw298,word,flow rate speed set bwf 01(client machine)(4-20ma),_7ev,1356
+pid down mv03,%m14.5,bool,,_7ev,1357
+pid up mv03,%m14.4,bool,,_7ev,1358
+open mv03 for washing,%m48.1,bool,,_7ev,1359
+start fn02,%q2.3,bool,a 52.0 fn-02 motorcommand,_7ev,1360
+down mv01 pid,%m12.1,bool,,_7ev,1361
+up mv01 pid,%m12.0,bool,,_7ev,1362
+pid mv02 down,%m14.1,bool,,_7ev,1363
+pid mv02 up,%m14.0,bool,,_7ev,1364
+pid down mv05,%m13.1,bool,,_7ev,1365
+pid up mv05,%m13.0,bool,,_7ev,1366
+tc05,%iw260,int,probe sensor pt100 bearing fn-01 (tc-04) -30...250°c,_7ev,1511
+tc04,%iw256,int,,_7ev,1512
+mv05_close,%i7.2,bool,limit switch ls-16,_7ev,1513
+mv02_close,%i7.4,bool,limit switch ls-18,_7ev,1514
+fn04_current,%iw394,int,main aspirator absorption current fn-04(4-20ma),_7ev,1515
+simulation(1),%m180.0,bool,,_7ev,1516
+pls 51 1,%m51.1,bool,,_7ev,1517
+bwf02 pulse,%i20.2,bool,old address,_7ev,1518
+pls m51 0,%m51.0,bool,,_7ev,1519
+bwf01 pulse,%i20.1,bool,old address,_7ev,1520
+pc01,%iw322,int,pressure control,_7ev,1521
+pr_br02,%iw400,int,differential pressure switchbags filter bf-02(4-20ma),_7ev,1522
+pr_bf01,%iw398,int,differential pressure switchbags filter bf-01(4-20ma),_7ev,1523
+fn01_current,%iw334,int,blower fan current fn-01,_7ev,1524
+rd01_current,%iw332,int,rotating drum current,_7ev,1525
+fn02_current,%iw328,int,blower fan current,_7ev,1526
+mv06_close,%i7.0,bool,limit switch ls-41,_7ev,1527
+mv01_close,%i8.2,bool,limit switch ls-24,_7ev,1528
+em_ok,%i19.4,bool,,_7ev,1529
+br01_flowmeter_air,%iw366,int,air outlet br-01,_7ev,1530
+br01_flowmeter_gas,%iw364,int,gas outlet br-01,_7ev,1531
+br01_air,%iw362,int,air servo-motor br-01,_7ev,1532
+br01_gas,%iw360,int,gas servo-motor br-01,_7ev,1533
+r004,%iw358,int,oxigen control,_7ev,1534
+r003,%iw356,int,oxigen control,_7ev,1535
+r002,%iw354,int,oxigen control,_7ev,1536
+r001,%iw352,int,oxigen control,_7ev,1537
+psh03,%iw320,int,pressure control,_7ev,1538
+psh02,%iw286,int,pressure control output mv-03,_7ev,1539
+psh01,%iw284,int,pressure control output mv-02,_7ev,1540
+zt01,%iw282,int,vibration trasmitter blower fn-01,_7ev,1541
+tc07,%iw280,int,temperature control inputsmoke,_7ev,1542
+tc06,%iw278,int,temperature control outputab-01,_7ev,1543
+tc03,%iw276,int,temperature control outputsmoke,_7ev,1544
+tc02,%iw274,int,safety temperature chamber ab-01,_7ev,1545
+tc01,%iw272,int,temperature chamber ab-01,_7ev,1546
+bwf02_level,%iw270,int,level bwf 02 (client machine),_7ev,1547
+bwf01_level,%iw268,int,level bwf 01 (client machine),_7ev,1548
+bwf 02 run,%i11.7,bool,e 64.6 bwf 02 run,_7ev,1549
+bwf02_flowrate,%iw266,int,flow rate bwf 02 (client machine),_7ev,1550
+bwf 01 run,%i11.2,bool,e 64.1 bwf 01 run,_7ev,1551
+off,%m0.1,bool,,_7ev,1552
+bwf01_flowrate,%iw264,int,flow rate bwf 01(client machine),_7ev,1553
+tc-10,%iw390,int,spare temperature,_7ev,1554
+tc09,%iw386,int,temperature bf-01,_7ev,1555
+on,%m0.0,bool,,_7ev,1556
+servicebit,%m1000.0,bool,must be always false,_7ev,1557
+prog fault,%m32.4,bool,,_7ev,1558
+module access flt,%m32.3,bool,,_7ev,1559
+rack fault,%m32.2,bool,,_7ev,1560
+ob fault,%m32.1,bool,,_7ev,1561
+i/o flt,%m32.0,bool,,_7ev,1562
+tag_113,%t50,timer,,_7ev,1563
+tag_112,%t114,timer,,_7ev,1564
+open false air,%m2.1,bool,,_7ev,1565
+tag_111,%t132,timer,,_7ev,1566
+tag_110,%t123,timer,,_7ev,1567
+tag_109,%t115,timer,,_7ev,1568
+tag_108,%t116,timer,,_7ev,1569
+tc01-tc02control disable,%m80.2,bool,,_7ev,1570
+tag_107,%t117,timer,,_7ev,1571
+ro01-ro02control disable,%m80.1,bool,,_7ev,1572
+tag_106,%t68,timer,,_7ev,1573
+tag_105,%t77,timer,,_7ev,1574
+tag_104,%t76,timer,,_7ev,1575
+tag_103,%t89,timer,,_7ev,1576
+tag_102,%t88,timer,,_7ev,1577
+tag_101,%t87,timer,,_7ev,1578
+tag_100,%t86,timer,,_7ev,1579
+tag_99,%t85,timer,,_7ev,1580
+tag_190,%mw82,word,,_7ev,1581
+tag_189,%mw80,word,,_7ev,1582
+tag_188,%iw68,word,,_7ev,1583
+tag_187,%iw60,word,,_7ev,1584
+tag_186,%iw56,word,,_7ev,1585
+tag_185,%iw52,word,,_7ev,1586
+tag_184,%iw48,word,,_7ev,1587
+tag_183,%iw12,word,,_7ev,1588
+tag_182,%iw10,word,,_7ev,1589
+tag_181,%iw8,word,,_7ev,1590
+tag_180,%iw4,word,,_7ev,1591
+tag_179,%iw2,word,,_7ev,1592
+tag_178,%iw0,word,,_7ev,1593
+tag_177,%iw64,word,,_7ev,1594
+tag_176,%iw44,word,,_7ev,1595
+tag_175,%iw40,word,,_7ev,1596
+tag_174,%iw36,word,,_7ev,1597
+tag_173,%iw32,word,,_7ev,1598
+tag_172,%iw28,word,,_7ev,1599
+tag_171,%iw6,word,,_7ev,1600
+102a5_spare0,%qw288,word,,_7ev,1636
+102a5_spare3,%qw294,word,,_7ev,1637
+rd01_fbk,%i0.2,bool,feedback motor rd-01,_7ev,1653
+clock_1hz,%m2000.5,bool,,_7ev,1660
+ps181_0,%m181.0,bool,,_7ev,1664
+pls 50 3,%m50.3,bool,,_7ev,1665
+consent start bwf01,%q6.2,bool,a 61.7 bwf 01 remotestart,_7ev,1666
+consent start bwf02,%q6.3,bool,a 68.3 bwf 02 remotestart,_7ev,1667
+102a3_spare0,%iw330,int,,_7ev,1725
+mv04_m18a,%iw324,int,mv-04 position m18a,_7ev,1726
+under testing,%m5.5,bool,,_7ev,1906

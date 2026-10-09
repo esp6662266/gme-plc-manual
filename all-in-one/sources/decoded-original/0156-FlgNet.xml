@@ -1,0 +1,72 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="305" Gate="Contact" />
+    <Part UId="307" Gate="Contact" />
+    <Part UId="281" Gate="SCoil" />
+    <Part UId="309" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="311" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="286" Gate="SdCoil" />
+    <ORef UId="288" RefId="46" />
+    <ORef UId="289" RefId="47" />
+    <ORef UId="290" RefId="48" />
+    <ORef UId="292" RefId="48" />
+    <ORef UId="293" RefId="47" />
+    <ORef UId="294" RefId="47" />
+    <ORef UId="291" RefId="49" />
+  </Parts>
+  <Wires>
+    <Wire UId="313">
+      <Powerrail />
+      <PCon UId="305" PinName="in" />
+    </Wire>
+    <Wire UId="295">
+      <OCon UId="288" />
+      <PCon UId="305" PinName="operand" />
+    </Wire>
+    <Wire UId="306">
+      <PCon UId="305" PinName="out" />
+      <PCon UId="307" PinName="in" />
+      <PCon UId="309" PinName="in" />
+    </Wire>
+    <Wire UId="296">
+      <OCon UId="289" />
+      <PCon UId="307" PinName="operand" />
+    </Wire>
+    <Wire UId="308">
+      <PCon UId="307" PinName="out" />
+      <PCon UId="281" PinName="in" />
+    </Wire>
+    <Wire UId="298">
+      <OCon UId="290" />
+      <PCon UId="281" PinName="operand" />
+    </Wire>
+    <Wire UId="300">
+      <OCon UId="292" />
+      <PCon UId="309" PinName="operand" />
+    </Wire>
+    <Wire UId="310">
+      <PCon UId="309" PinName="out" />
+      <PCon UId="311" PinName="in" />
+    </Wire>
+    <Wire UId="301">
+      <OCon UId="293" />
+      <PCon UId="311" PinName="operand" />
+    </Wire>
+    <Wire UId="312">
+      <PCon UId="311" PinName="out" />
+      <PCon UId="286" PinName="in" />
+    </Wire>
+    <Wire UId="299">
+      <OCon UId="291" />
+      <PCon UId="286" PinName="value" />
+    </Wire>
+    <Wire UId="303">
+      <OCon UId="294" />
+      <PCon UId="286" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

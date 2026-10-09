@@ -1,0 +1,107 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="1748" Gate="Contact" />
+    <Part UId="1750" Gate="Contact" />
+    <Part UId="1702" Gate="Add">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1709" Gate="Ge">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1712" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1715" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1718" Gate="SCoil" />
+    <ORef UId="1719" RefId="1" />
+    <ORef UId="1720" RefId="188" />
+    <ORef UId="1721" RefId="190" />
+    <ORef UId="1722" RefId="7" />
+    <ORef UId="1723" RefId="190" />
+    <ORef UId="1724" RefId="190" />
+    <ORef UId="1725" RefId="8" />
+    <ORef UId="1726" RefId="7" />
+    <ORef UId="1727" RefId="192" />
+    <ORef UId="1728" RefId="12" />
+    <ORef UId="1729" RefId="190" />
+    <ORef UId="1730" RefId="13" />
+  </Parts>
+  <Wires>
+    <Wire UId="1752">
+      <Powerrail />
+      <PCon UId="1748" PinName="in" />
+    </Wire>
+    <Wire UId="1731">
+      <OCon UId="1719" />
+      <PCon UId="1748" PinName="operand" />
+    </Wire>
+    <Wire UId="1749">
+      <PCon UId="1748" PinName="out" />
+      <PCon UId="1750" PinName="in" />
+    </Wire>
+    <Wire UId="1732">
+      <OCon UId="1720" />
+      <PCon UId="1750" PinName="operand" />
+    </Wire>
+    <Wire UId="1751">
+      <PCon UId="1750" PinName="out" />
+      <PCon UId="1702" PinName="en" />
+      <PCon UId="1709" PinName="pre" />
+    </Wire>
+    <Wire UId="1733">
+      <OCon UId="1721" />
+      <PCon UId="1702" PinName="in1" />
+    </Wire>
+    <Wire UId="1734">
+      <OCon UId="1722" />
+      <PCon UId="1702" PinName="in2" />
+    </Wire>
+    <Wire UId="1735">
+      <PCon UId="1702" PinName="out" />
+      <OCon UId="1723" />
+    </Wire>
+    <Wire UId="1736">
+      <OCon UId="1724" />
+      <PCon UId="1709" PinName="in1" />
+    </Wire>
+    <Wire UId="1737">
+      <OCon UId="1725" />
+      <PCon UId="1709" PinName="in2" />
+    </Wire>
+    <Wire UId="1738">
+      <PCon UId="1709" PinName="out" />
+      <PCon UId="1712" PinName="en" />
+    </Wire>
+    <Wire UId="1740">
+      <OCon UId="1726" />
+      <PCon UId="1712" PinName="in" />
+    </Wire>
+    <Wire UId="1742">
+      <PCon UId="1712" PinName="eno" />
+      <PCon UId="1715" PinName="en" />
+    </Wire>
+    <Wire UId="1741">
+      <PCon UId="1712" PinName="out1" />
+      <OCon UId="1727" />
+    </Wire>
+    <Wire UId="1743">
+      <OCon UId="1728" />
+      <PCon UId="1715" PinName="in" />
+    </Wire>
+    <Wire UId="1745">
+      <PCon UId="1715" PinName="eno" />
+      <PCon UId="1718" PinName="in" />
+    </Wire>
+    <Wire UId="1744">
+      <PCon UId="1715" PinName="out1" />
+      <OCon UId="1729" />
+    </Wire>
+    <Wire UId="1746">
+      <OCon UId="1730" />
+      <PCon UId="1718" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

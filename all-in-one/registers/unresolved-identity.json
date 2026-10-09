@@ -1,0 +1,3111 @@
+{
+  "date": "2026-10-09",
+  "profiles": [
+    {
+      "key": "P03",
+      "title": "웨잉호퍼1",
+      "confirmed": "배치도 명칭은 호퍼1입니다. 제공 백업에는 명시적으로 WEIGHTING HOPPER 2FAULT 외부 입력과 client17 고장 래치가 있습니다.",
+      "excluded": "호퍼2 자료를 호퍼1의 직접 입력·알람·계량 로직으로 배정하지 않습니다. 전용 계량기 내부 순서·Reset·재기동은 확보 전입니다.",
+      "needed": "호퍼 번호/명판·위치 사진, 로드셀·계량 표시기 모델, 계량 제어반/CPU, 투입·배출 전체 경로, 최신 단자/I/O/통신도.",
+      "symptom": "계량/배출 불능: 실물ID·시각 → 전용 계량기 최초 알람 → 로드셀·게이트·컨베이어 경계 → 확인된 연동의 요청/응답 → 전용 원본 대조.",
+      "candidates": [
+        "hopper2",
+        "bwf"
+      ],
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "assigned_signals": [],
+      "field_verified": false
+    },
+    {
+      "key": "P04",
+      "title": "웨잉호퍼배출컨베이어",
+      "confirmed": "제공 백업의 HOPPER CONVEYOR 2FAULT는 client18 외부 고장 입력입니다. 별도 BWF01/02 원격기동 허가 출력 자료도 있습니다.",
+      "excluded": "일반 컨베이어 명칭과 425 제목의 bwf02만으로 CLIENT-CL18=BWF02=P04라고 확정하지 않습니다.",
+      "needed": "본체·모터·감속기 명판, 기동반/VFD 표시, 케이블번호·양단 단자, 상하류 연결 사진, 외부반 Ready/Run/Fault/허가의 주체·정상 극성.",
+      "symptom": "미기동: 실물ID → 자기 기동반/VFD 최초 상태 → 명령과 실제 Run 구분 → 상하류 허가/Fault 변화 → 확인된 케이블·단자 비교.",
+      "candidates": [
+        "hopper2",
+        "bwf"
+      ],
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "assigned_signals": [],
+      "field_verified": false
+    },
+    {
+      "key": "P14",
+      "title": "2사이클론",
+      "confirmed": "P&ID에는 HE01–FN01 사이 CY01/CY03 한 쌍과 별도 CY02/CY04/CY05–SC01 군이 있습니다. 시공31페이지 M21/VR01·M23/VR02와 CY02의 17HL1/6SB03을 구분합니다. 시공58페이지 8_16은 UC01 FLO4TB1→CY02 17HL1의 DC/CVV/3G/1.0 표기입니다.",
+      "excluded": "숫자2가 장치 번호인지 수량인지 미확정입니다. CY02·CY01+CY03 어느 쪽도 배정하지 않습니다. 주변 램프·버튼·질소박스·VR/SC/FN 구동을 본체의 전용 제어로 합치지 않습니다.",
+      "needed": "원래 배치도에서 숫자2의 의미, 본체 명판/태그와 입출구·하부 배출 사진, 최신 P&ID/기계도, 주변 구동·센서 목록.",
+      "symptom": "분리/배출 이상: 실제 본체 식별 → 가스/고형물 유로·발생 위치 → 배출 구동·팬·계측 경계 → 제작사 기준 및 관련 장치 근거 비교.",
+      "candidates": [
+        "cyclones"
+      ],
+      "plc_id": "",
+      "match": "unknown",
+      "identity_verified": false,
+      "assigned_signals": [],
+      "field_verified": false
+    }
+  ],
+  "candidates": [
+    {
+      "id": "hopper2",
+      "title": "호퍼2 client17/18 고장 래치",
+      "detail": "Global 물리 Input AO132/133(색인 I16.4/I16.5). 선택 원본424/425: ON AND 외부 Fault → Set; ON AND NOT 외부 Fault AND Flag.RESET_ALLARM → Reset. 타이머·Ready·Run·기동 출력·계량 내부 제어가 이 두 네트워크에 없습니다. 다른 미확보 실행 경로의 부재를 증명하지 않습니다.",
+      "networks": [
+        424,
+        425
+      ],
+      "paths": [
+        "sources/decoded-original/0599-IdentXmlPart.xml",
+        "sources/decoded-original/0601-IdentXmlPart.xml"
+      ],
+      "assigned_to_priority": [],
+      "field_verified": false,
+      "identity_verified": false
+    },
+    {
+      "id": "bwf",
+      "title": "별도 BWF01/BWF02 원격기동 인터페이스",
+      "detail": "선택1932/1933: ON에서 자기 Fault, ControlFault, SET_PERC=Int0, NOT 처리 BWF OK, NOT 처리 BC01 run, motors 1 Local Disable_Load_RD01의 여섯 OR → M_BWF 요청 Reset. 별도 ON AND M_BWF → Consent Start 일반 Coil. Output AO50/51(색인 Q6.2/Q6.3). Local을 같은 이름의 다른 범위와 합치지 않습니다. 요청 해제와 실제 구동 정지·재기동은 다릅니다.",
+      "networks": [
+        1932,
+        1933
+      ],
+      "paths": [
+        "sources/decoded-original/0602-IdentXmlPart.xml",
+        "sources/decoded-original/0606-IdentXmlPart.xml"
+      ],
+      "assigned_to_priority": [],
+      "field_verified": false,
+      "identity_verified": false
+    },
+    {
+      "id": "cyclones",
+      "title": "서로 다른 사이클론 배치·시공 구역",
+      "detail": "CY01/CY03–HE01/FN01과 CY02/CY04/CY05–SC01을 구분합니다. 도면의 구역/접속함 표기는 제어 소유 관계가 아닙니다. 시공58페이지의 가려진 행은 복원·채택하지 않습니다.",
+      "networks": [],
+      "paths": [
+        "sources/PID_1684n002I.pdf#page=1",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=31",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ],
+      "assigned_to_priority": [],
+      "field_verified": false,
+      "identity_verified": false
+    }
+  ],
+  "native": [
+    {
+      "id": 424,
+      "file": "sources/decoded-original/0234-FlgNet.xml",
+      "title": "client motor 17 allarm",
+      "block": "motor/alarm client",
+      "evidence": {
+        "network": 424,
+        "inferred_nid": "17",
+        "parts": [
+          {
+            "uid": "355",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "355",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "357",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "357",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "334",
+            "gate": "SCoil",
+            "attributes": {
+              "UId": "334",
+              "Gate": "SCoil"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "359",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "359",
+              "Gate": "Contact"
+            },
+            "negated": [
+              {
+                "PinName": "operand"
+              }
+            ],
+            "templates": []
+          },
+          {
+            "uid": "361",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "361",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "339",
+            "gate": "RCoil",
+            "attributes": {
+              "UId": "339",
+              "Gate": "RCoil"
+            },
+            "negated": [],
+            "templates": []
+          }
+        ],
+        "references": {
+          "340": {
+            "uid": "340",
+            "rid": "1",
+            "nid": "17",
+            "name": "ON",
+            "declarations": [
+              {
+                "file": "0599-IdentXmlPart.xml",
+                "nid": "17",
+                "uid": "340",
+                "rid": "1",
+                "name": "ON",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "17",
+                  "UID": "340",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "341": {
+            "uid": "341",
+            "rid": "38",
+            "nid": "17",
+            "name": "WEIGHTING HOPPER 2FAULT",
+            "declarations": [
+              {
+                "file": "0599-IdentXmlPart.xml",
+                "nid": "17",
+                "uid": "341",
+                "rid": "38",
+                "name": "WEIGHTING HOPPER 2FAULT",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "17",
+                  "UID": "341",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "342": {
+            "uid": "342",
+            "rid": "39",
+            "nid": "17",
+            "name": "Allarm.motor_client_17_fault",
+            "declarations": [
+              {
+                "file": "0601-IdentXmlPart.xml",
+                "nid": "17",
+                "uid": "342",
+                "rid": "39",
+                "name": "Allarm.motor_client_17_fault",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "17",
+                  "UID": "342",
+                  "OID": "7",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "343": {
+            "uid": "343",
+            "rid": "38",
+            "nid": "17",
+            "name": "WEIGHTING HOPPER 2FAULT",
+            "declarations": [
+              {
+                "file": "0599-IdentXmlPart.xml",
+                "nid": "17",
+                "uid": "343",
+                "rid": "38",
+                "name": "WEIGHTING HOPPER 2FAULT",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "17",
+                  "UID": "343",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "344": {
+            "uid": "344",
+            "rid": "7",
+            "nid": "17",
+            "name": "Flag.RESET_ALLARM",
+            "declarations": [
+              {
+                "file": "0601-IdentXmlPart.xml",
+                "nid": "17",
+                "uid": "344",
+                "rid": "7",
+                "name": "Flag.RESET_ALLARM",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "17",
+                  "UID": "344",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493758:Flag"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "345": {
+            "uid": "345",
+            "rid": "39",
+            "nid": "17",
+            "name": "Allarm.motor_client_17_fault",
+            "declarations": [
+              {
+                "file": "0601-IdentXmlPart.xml",
+                "nid": "17",
+                "uid": "345",
+                "rid": "39",
+                "name": "Allarm.motor_client_17_fault",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "17",
+                  "UID": "345",
+                  "OID": "8",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          }
+        },
+        "wires": [
+          {
+            "uid": "363",
+            "endpoints": [
+              {
+                "kind": "Powerrail",
+                "attributes": {}
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "355",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "346",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "340"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "355",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "356",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "355",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "357",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "359",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "347",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "341"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "357",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "358",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "357",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "334",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "349",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "342"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "334",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "350",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "343"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "359",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "360",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "359",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "361",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "351",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "344"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "361",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "362",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "361",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "339",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "353",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "345"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "339",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          }
+        ],
+        "call_nodes": []
+      },
+      "candidate_only": true,
+      "identity_verified": false
+    },
+    {
+      "id": 425,
+      "file": "sources/decoded-original/0235-FlgNet.xml",
+      "title": "client motor 18 allarm bwf02---------------",
+      "block": "motor/alarm client",
+      "evidence": {
+        "network": 425,
+        "inferred_nid": "18",
+        "parts": [
+          {
+            "uid": "373",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "373",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "375",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "375",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "352",
+            "gate": "SCoil",
+            "attributes": {
+              "UId": "352",
+              "Gate": "SCoil"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "377",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "377",
+              "Gate": "Contact"
+            },
+            "negated": [
+              {
+                "PinName": "operand"
+              }
+            ],
+            "templates": []
+          },
+          {
+            "uid": "379",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "379",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "357",
+            "gate": "RCoil",
+            "attributes": {
+              "UId": "357",
+              "Gate": "RCoil"
+            },
+            "negated": [],
+            "templates": []
+          }
+        ],
+        "references": {
+          "358": {
+            "uid": "358",
+            "rid": "1",
+            "nid": "18",
+            "name": "ON",
+            "declarations": [
+              {
+                "file": "0599-IdentXmlPart.xml",
+                "nid": "18",
+                "uid": "358",
+                "rid": "1",
+                "name": "ON",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "18",
+                  "UID": "358",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "359": {
+            "uid": "359",
+            "rid": "40",
+            "nid": "18",
+            "name": "HOPPER CONVEYOR 2FAULT",
+            "declarations": [
+              {
+                "file": "0599-IdentXmlPart.xml",
+                "nid": "18",
+                "uid": "359",
+                "rid": "40",
+                "name": "HOPPER CONVEYOR 2FAULT",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "18",
+                  "UID": "359",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "360": {
+            "uid": "360",
+            "rid": "41",
+            "nid": "18",
+            "name": "Allarm.motor_client_18_fault",
+            "declarations": [
+              {
+                "file": "0601-IdentXmlPart.xml",
+                "nid": "18",
+                "uid": "360",
+                "rid": "41",
+                "name": "Allarm.motor_client_18_fault",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "18",
+                  "UID": "360",
+                  "OID": "7",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "361": {
+            "uid": "361",
+            "rid": "40",
+            "nid": "18",
+            "name": "HOPPER CONVEYOR 2FAULT",
+            "declarations": [
+              {
+                "file": "0599-IdentXmlPart.xml",
+                "nid": "18",
+                "uid": "361",
+                "rid": "40",
+                "name": "HOPPER CONVEYOR 2FAULT",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "18",
+                  "UID": "361",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "362": {
+            "uid": "362",
+            "rid": "7",
+            "nid": "18",
+            "name": "Flag.RESET_ALLARM",
+            "declarations": [
+              {
+                "file": "0601-IdentXmlPart.xml",
+                "nid": "18",
+                "uid": "362",
+                "rid": "7",
+                "name": "Flag.RESET_ALLARM",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "18",
+                  "UID": "362",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493758:Flag"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "363": {
+            "uid": "363",
+            "rid": "41",
+            "nid": "18",
+            "name": "Allarm.motor_client_18_fault",
+            "declarations": [
+              {
+                "file": "0601-IdentXmlPart.xml",
+                "nid": "18",
+                "uid": "363",
+                "rid": "41",
+                "name": "Allarm.motor_client_18_fault",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "18",
+                  "UID": "363",
+                  "OID": "8",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          }
+        },
+        "wires": [
+          {
+            "uid": "381",
+            "endpoints": [
+              {
+                "kind": "Powerrail",
+                "attributes": {}
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "373",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "364",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "358"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "373",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "374",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "373",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "375",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "377",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "365",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "359"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "375",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "376",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "375",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "352",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "367",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "360"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "352",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "368",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "361"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "377",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "378",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "377",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "379",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "369",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "362"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "379",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "380",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "379",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "357",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "371",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "363"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "357",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          }
+        ],
+        "call_nodes": []
+      },
+      "candidate_only": true,
+      "identity_verified": false
+    },
+    {
+      "id": 1932,
+      "file": "sources/decoded-original/0239-FlgNet.xml",
+      "title": "bwf01",
+      "block": "motors 1",
+      "evidence": {
+        "network": 1932,
+        "inferred_nid": "3",
+        "parts": [
+          {
+            "uid": "145",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "145",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "147",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "147",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "149",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "149",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "100",
+            "gate": "Eq",
+            "attributes": {
+              "UId": "100",
+              "Gate": "Eq"
+            },
+            "negated": [],
+            "templates": [
+              {
+                "attributes": {
+                  "Name": "SrcType",
+                  "Type": "Type"
+                },
+                "value": "Int"
+              }
+            ]
+          },
+          {
+            "uid": "22",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "22",
+              "Gate": "Contact"
+            },
+            "negated": [
+              {
+                "PinName": "operand"
+              }
+            ],
+            "templates": []
+          },
+          {
+            "uid": "26",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "26",
+              "Gate": "Contact"
+            },
+            "negated": [
+              {
+                "PinName": "operand"
+              }
+            ],
+            "templates": []
+          },
+          {
+            "uid": "155",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "155",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "97",
+            "gate": "O",
+            "attributes": {
+              "UId": "97",
+              "Gate": "O"
+            },
+            "negated": [],
+            "templates": [
+              {
+                "attributes": {
+                  "Name": "Card",
+                  "Type": "Cardinality"
+                },
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "uid": "109",
+            "gate": "RCoil",
+            "attributes": {
+              "UId": "109",
+              "Gate": "RCoil"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "159",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "159",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "113",
+            "gate": "Coil",
+            "attributes": {
+              "UId": "113",
+              "Gate": "Coil"
+            },
+            "negated": [],
+            "templates": []
+          }
+        ],
+        "references": {
+          "114": {
+            "uid": "114",
+            "rid": "1",
+            "nid": "3",
+            "name": "ON",
+            "declarations": [
+              {
+                "file": "0602-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "114",
+                "rid": "1",
+                "name": "ON",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "114",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "115": {
+            "uid": "115",
+            "rid": "18",
+            "nid": "3",
+            "name": "Allarm.BWF01_FAULT",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "115",
+                "rid": "18",
+                "name": "Allarm.BWF01_FAULT",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "115",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "116": {
+            "uid": "116",
+            "rid": "19",
+            "nid": "3",
+            "name": "Allarm.BWF01_Fault_Control",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "116",
+                "rid": "19",
+                "name": "Allarm.BWF01_Fault_Control",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "116",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "117": {
+            "uid": "117",
+            "rid": "21",
+            "nid": "3",
+            "name": "Data.SET_PERC_BWF01",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "117",
+                "rid": "21",
+                "name": "Data.SET_PERC_BWF01",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "117"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Int:33554437:Int"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493759:Data"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Int:33554437:Int"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "118": {
+            "uid": "118",
+            "rid": "22",
+            "nid": "3",
+            "name": "0",
+            "declarations": [
+              {
+                "file": "0606-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "118",
+                "rid": "22",
+                "name": "0",
+                "kind": "LiteralConstant",
+                "scope": "Constant",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "118"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Int:33554437:Int"
+                  }
+                ],
+                "constants": [
+                  {
+                    "ST": "Number",
+                    "T": "Int",
+                    "SV": "_x0030_",
+                    "V": "0"
+                  }
+                ]
+              }
+            ],
+            "unresolved": false
+          },
+          "23": {
+            "uid": "23",
+            "rid": "230",
+            "nid": "3",
+            "name": "Inputs.BWF01 OK",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "23",
+                "rid": "230",
+                "name": "Inputs.BWF01 OK",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "23",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493747:Ingressi"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "27": {
+            "uid": "27",
+            "rid": "231",
+            "nid": "3",
+            "name": "Inputs.BC01 run",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "27",
+                "rid": "231",
+                "name": "Inputs.BC01 run",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "27",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493747:Ingressi"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "121": {
+            "uid": "121",
+            "rid": "16",
+            "nid": "3",
+            "name": "Disable_Load_RD01",
+            "declarations": [
+              {
+                "file": "0605-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "121",
+                "rid": "16",
+                "name": "Disable_Load_RD01",
+                "kind": "InterfaceAccess",
+                "scope": "Local",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "121",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "123": {
+            "uid": "123",
+            "rid": "25",
+            "nid": "3",
+            "name": "Flag.M_BWF01",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "123",
+                "rid": "25",
+                "name": "Flag.M_BWF01",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "123",
+                  "OID": "8",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493758:Flag"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "124": {
+            "uid": "124",
+            "rid": "25",
+            "nid": "3",
+            "name": "Flag.M_BWF01",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "124",
+                "rid": "25",
+                "name": "Flag.M_BWF01",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "124",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493758:Flag"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "125": {
+            "uid": "125",
+            "rid": "26",
+            "nid": "3",
+            "name": "Consent Start BWF01",
+            "declarations": [
+              {
+                "file": "0602-IdentXmlPart.xml",
+                "nid": "3",
+                "uid": "125",
+                "rid": "26",
+                "name": "Consent Start BWF01",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "3",
+                  "UID": "125",
+                  "OID": "9",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          }
+        },
+        "wires": [
+          {
+            "uid": "161",
+            "endpoints": [
+              {
+                "kind": "Powerrail",
+                "attributes": {}
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "145",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "126",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "114"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "145",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "146",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "145",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "147",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "149",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "100",
+                  "PinName": "pre"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "22",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "26",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "155",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "159",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "127",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "115"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "147",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "148",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "147",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "in1"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "128",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "116"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "149",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "150",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "149",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "in2"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "129",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "117"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "100",
+                  "PinName": "in1"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "130",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "118"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "100",
+                  "PinName": "in2"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "131",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "100",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "in3"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "21",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "23"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "22",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "30",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "22",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "in4"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "25",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "27"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "26",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "28",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "26",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "in5"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "134",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "121"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "155",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "156",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "155",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "in6"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "138",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "97",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "109",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "140",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "123"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "109",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "141",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "124"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "159",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "160",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "159",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "113",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "143",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "125"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "113",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          }
+        ],
+        "call_nodes": []
+      },
+      "candidate_only": true,
+      "identity_verified": false
+    },
+    {
+      "id": 1933,
+      "file": "sources/decoded-original/0240-FlgNet.xml",
+      "title": "bwf02",
+      "block": "motors 1",
+      "evidence": {
+        "network": 1933,
+        "inferred_nid": "4",
+        "parts": [
+          {
+            "uid": "183",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "183",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "185",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "185",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "187",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "187",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "138",
+            "gate": "Eq",
+            "attributes": {
+              "UId": "138",
+              "Gate": "Eq"
+            },
+            "negated": [],
+            "templates": [
+              {
+                "attributes": {
+                  "Name": "SrcType",
+                  "Type": "Type"
+                },
+                "value": "Int"
+              }
+            ]
+          },
+          {
+            "uid": "22",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "22",
+              "Gate": "Contact"
+            },
+            "negated": [
+              {
+                "PinName": "operand"
+              }
+            ],
+            "templates": []
+          },
+          {
+            "uid": "26",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "26",
+              "Gate": "Contact"
+            },
+            "negated": [
+              {
+                "PinName": "operand"
+              }
+            ],
+            "templates": []
+          },
+          {
+            "uid": "193",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "193",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "135",
+            "gate": "O",
+            "attributes": {
+              "UId": "135",
+              "Gate": "O"
+            },
+            "negated": [],
+            "templates": [
+              {
+                "attributes": {
+                  "Name": "Card",
+                  "Type": "Cardinality"
+                },
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "uid": "147",
+            "gate": "RCoil",
+            "attributes": {
+              "UId": "147",
+              "Gate": "RCoil"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "197",
+            "gate": "Contact",
+            "attributes": {
+              "UId": "197",
+              "Gate": "Contact"
+            },
+            "negated": [],
+            "templates": []
+          },
+          {
+            "uid": "151",
+            "gate": "Coil",
+            "attributes": {
+              "UId": "151",
+              "Gate": "Coil"
+            },
+            "negated": [],
+            "templates": []
+          }
+        ],
+        "references": {
+          "152": {
+            "uid": "152",
+            "rid": "1",
+            "nid": "4",
+            "name": "ON",
+            "declarations": [
+              {
+                "file": "0602-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "152",
+                "rid": "1",
+                "name": "ON",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "152",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "153": {
+            "uid": "153",
+            "rid": "27",
+            "nid": "4",
+            "name": "Allarm.BWF02_FAULT",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "153",
+                "rid": "27",
+                "name": "Allarm.BWF02_FAULT",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "153",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "154": {
+            "uid": "154",
+            "rid": "28",
+            "nid": "4",
+            "name": "Allarm.BWF02_Fault_Control",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "154",
+                "rid": "28",
+                "name": "Allarm.BWF02_Fault_Control",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "154",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493757:Allarm"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "155": {
+            "uid": "155",
+            "rid": "29",
+            "nid": "4",
+            "name": "Data.SET_PERC_BWF02",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "155",
+                "rid": "29",
+                "name": "Data.SET_PERC_BWF02",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "155"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Int:33554437:Int"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493759:Data"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Int:33554437:Int"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "156": {
+            "uid": "156",
+            "rid": "22",
+            "nid": "4",
+            "name": "0",
+            "declarations": [
+              {
+                "file": "0606-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "156",
+                "rid": "22",
+                "name": "0",
+                "kind": "LiteralConstant",
+                "scope": "Constant",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "156"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Int:33554437:Int"
+                  }
+                ],
+                "constants": [
+                  {
+                    "ST": "Number",
+                    "T": "Int",
+                    "SV": "_x0030_",
+                    "V": "0"
+                  }
+                ]
+              }
+            ],
+            "unresolved": false
+          },
+          "23": {
+            "uid": "23",
+            "rid": "232",
+            "nid": "4",
+            "name": "Inputs.BWF02 OK",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "23",
+                "rid": "232",
+                "name": "Inputs.BWF02 OK",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "23",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493747:Ingressi"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "27": {
+            "uid": "27",
+            "rid": "231",
+            "nid": "4",
+            "name": "Inputs.BC01 run",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "27",
+                "rid": "231",
+                "name": "Inputs.BC01 run",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "27",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493747:Ingressi"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "159": {
+            "uid": "159",
+            "rid": "16",
+            "nid": "4",
+            "name": "Disable_Load_RD01",
+            "declarations": [
+              {
+                "file": "0605-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "159",
+                "rid": "16",
+                "name": "Disable_Load_RD01",
+                "kind": "InterfaceAccess",
+                "scope": "Local",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "159",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "161": {
+            "uid": "161",
+            "rid": "31",
+            "nid": "4",
+            "name": "Flag.M_BWF02",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "161",
+                "rid": "31",
+                "name": "Flag.M_BWF02",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "161",
+                  "OID": "8",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493758:Flag"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "162": {
+            "uid": "162",
+            "rid": "31",
+            "nid": "4",
+            "name": "Flag.M_BWF02",
+            "declarations": [
+              {
+                "file": "0604-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "162",
+                "rid": "31",
+                "name": "Flag.M_BWF02",
+                "kind": "GlobalAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "162",
+                  "OID": "1"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Block_DB:-1845493758:Flag"
+                  },
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          },
+          "163": {
+            "uid": "163",
+            "rid": "32",
+            "nid": "4",
+            "name": "Consent Start BWF02",
+            "declarations": [
+              {
+                "file": "0602-IdentXmlPart.xml",
+                "nid": "4",
+                "uid": "163",
+                "rid": "32",
+                "name": "Consent Start BWF02",
+                "kind": "SimpleAccess",
+                "scope": "Global",
+                "occurrence": {
+                  "NID": "4",
+                  "UID": "163",
+                  "OID": "9",
+                  "AK": "Write"
+                },
+                "types": [
+                  {
+                    "TDF": "OST",
+                    "T": "Bool:33554433:Bool"
+                  }
+                ],
+                "constants": []
+              }
+            ],
+            "unresolved": false
+          }
+        },
+        "wires": [
+          {
+            "uid": "199",
+            "endpoints": [
+              {
+                "kind": "Powerrail",
+                "attributes": {}
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "183",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "164",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "152"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "183",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "184",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "183",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "185",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "187",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "138",
+                  "PinName": "pre"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "22",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "26",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "193",
+                  "PinName": "in"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "197",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "165",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "153"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "185",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "186",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "185",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "in1"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "166",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "154"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "187",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "188",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "187",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "in2"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "167",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "155"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "138",
+                  "PinName": "in1"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "168",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "156"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "138",
+                  "PinName": "in2"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "169",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "138",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "in3"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "21",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "23"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "22",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "30",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "22",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "in4"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "25",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "27"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "26",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "28",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "26",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "in5"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "172",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "159"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "193",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "194",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "193",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "in6"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "176",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "135",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "147",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "178",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "161"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "147",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "179",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "162"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "197",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "198",
+            "endpoints": [
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "197",
+                  "PinName": "out"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "151",
+                  "PinName": "in"
+                }
+              }
+            ]
+          },
+          {
+            "uid": "181",
+            "endpoints": [
+              {
+                "kind": "OCon",
+                "attributes": {
+                  "UId": "163"
+                }
+              },
+              {
+                "kind": "PCon",
+                "attributes": {
+                  "UId": "151",
+                  "PinName": "operand"
+                }
+              }
+            ]
+          }
+        ],
+        "call_nodes": []
+      },
+      "candidate_only": true,
+      "identity_verified": false
+    }
+  ],
+  "index_evidence": [
+    {
+      "id": 565,
+      "values": {
+        "Address": "%i16.4",
+        "Comment": "e19.6 weighting hopper 2fault",
+        "Datatype": "bool",
+        "Name": "weighting hopper 2fault"
+      }
+    },
+    {
+      "id": 566,
+      "values": {
+        "Address": "%i16.5",
+        "Comment": "e19.7 hopper conveyor 2fault",
+        "Datatype": "bool",
+        "Name": "hopper conveyor 2fault"
+      }
+    }
+  ],
+  "sources": {
+    "build-unresolved-identity.py": "22328a188af6efa030a98a5ed60241f8d8ef36c7adb16438900b0d836dee773d",
+    "body-native-evidence.py": "e3683b2292bbd00148bf828bbfeda1ddfb8e150b293decf5e218f00cc085ba1a",
+    "sources/PEData.plf": "647de7ea123daced41c27bec8f81aeb93c712cac714d4754d7da5c528abb016a",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "registers/program-model.json": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/decoded-original/identifier-declarations.json": "0f74123ad80664acdeeb10c29f3e1e73a98d76e5d22169723977371a88768944",
+    "sources/decoded-original/0234-FlgNet.xml": "4fa899449ab66d4a852be7c21085590393a8ad11c65d265222c3bfcd649dfc64",
+    "sources/decoded-original/0599-IdentXmlPart.xml": "32a693fe12134febbd9f5c7da10c3469ef4d5b164ab8b6bd9ea3867c358936c1",
+    "sources/decoded-original/0601-IdentXmlPart.xml": "04c9481f7381284de689ef5c7ff40d7aea93f2004cd877a4e4f27e47baa6d862",
+    "sources/decoded-original/0235-FlgNet.xml": "1a4913d7a151824d6318edcd43bd4d496bee11b83a75f1d8f5d4cb04dd01b71c",
+    "sources/decoded-original/0239-FlgNet.xml": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0606-IdentXmlPart.xml": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740",
+    "sources/decoded-original/0605-IdentXmlPart.xml": "0ff6e2228dbfbc9f657359fe1055083ce621365084ea24c4160e4969b3eaac8b",
+    "sources/decoded-original/0240-FlgNet.xml": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33",
+    "sources/live_index.json": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1",
+    "registers/simulator-freeze.json": "1140f96a0b4a7a778778af37e8e8e41659430ee212b0068e4fcb882132b67c53",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "registers/priority-equipment.csv": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba",
+    "registers/unresolved-identity-independent-review.json": "c33c349d82e73f5e7055e2c909adc41f47f9279e2de228522fb229f4564b7f04"
+  },
+  "independent_review": "registers/unresolved-identity-independent-review.json",
+  "counts": {
+    "profiles": 3,
+    "candidates": 3,
+    "native_networks": 4,
+    "assigned_signals": 0,
+    "identity_verified": 0
+  },
+  "field_verified": false,
+  "tia_verified": false,
+  "plc_changes": 0,
+  "simulator_development": "stopped_by_user",
+  "simulator_behavior_tests": "not_rerun",
+  "source_conflicts_preserved": 18
+}

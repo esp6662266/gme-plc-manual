@@ -1,0 +1,55 @@
+{
+  "created_date": "2026-10-07",
+  "document_version": "0.1",
+  "repository": "esp6662266/gme-plc-manual",
+  "commit": "2ebff1273f586f3355a2ba8fb91d701ac94e4a5e",
+  "review_status": "Document matching complete; ladder and field verification pending; no simulation tests executed",
+  "repository_file_sha256": {
+    "GME_PROJECT_SOURCE_20261007.zip": "5849aa1a922ae0cb396f99929b20f5e10c0fb49bd358f137230efb5195fea8c3",
+    "hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "manual/manual.md": "3a758744dfece259ed883c5d9968b00c37cd78bb422eb07b6c23d3384a4b56cd"
+  },
+  "original_sources": [
+    {
+      "copied_file": "sources/PID_1684n002I.pdf",
+      "original_path": "/tmp/codex-remote-attachments/01a11506-73f8-78e0-a8d9-0544578532e2/144c86fa-42a2-43f6-bb3a-2a6622fd90cb/1-1684n002I_P-I.pdf",
+      "sha256": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b"
+    },
+    {
+      "copied_file": "sources/Electrical_Rev2.pdf",
+      "original_path": "/tmp/codex-remote-attachments/01a11506-73f8-78e0-a8d9-0544578532e2/58f4b427-2f6c-44a7-a219-2343e85503d1/1-IMPIANTO-COREA-DEFINITIVO-REVISIONE-2.pdf",
+      "sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6"
+    },
+    {
+      "copied_file": "assets/HMI_DECOATER.png",
+      "original_path": "/private/tmp/gme-hmi-reference-20261007.png",
+      "sha256": "b84b888a2df87d23b514aeb790d2fc51f31c3b20486061a365380b28986f49af"
+    },
+    {
+      "copied_file": "assets/PV01-output-FG69.png",
+      "original_path": "/private/tmp/gme-electrical-review-20261007/detail-70.png",
+      "sha256": "6f7520cfd2b54d70d7970ac22bdd488a594fbeee42ba6b556be007e894bcb9d8"
+    },
+    {
+      "copied_file": "assets/PV01-input-FG70.png",
+      "original_path": "/private/tmp/gme-electrical-review-20261007/detail-71.png",
+      "sha256": "ecaa325dfe95c6e04d7d3f3e01dea29390fe82c8472bafb531d5677052bc7100"
+    },
+    {
+      "copied_file": "sources/hmi_plc_tags.csv",
+      "original_path": "/private/tmp/gme-pv01-analysis-20261007/hmi_plc_tags.csv",
+      "sha256": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
+    },
+    {
+      "copied_file": "sources/existing-manual.md",
+      "original_path": "/private/tmp/gme-pv01-analysis-20261007/manual-manual.md",
+      "sha256": "3a758744dfece259ed883c5d9968b00c37cd78bb422eb07b6c23d3384a4b56cd"
+    }
+  ],
+  "derived_evidence": [
+    {
+      "file": "sources/pv01-evidence.json",
+      "sha256": "5a344c04c01144e441c75635eb30cb381051109e89e03428b845b9661edf2640"
+    }
+  ]
+}

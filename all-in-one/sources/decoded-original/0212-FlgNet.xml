@@ -1,0 +1,369 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="2012" Gate="Contact" />
+    <Part UId="2014" Gate="Contact" />
+    <Part UId="1839" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2016" Gate="Contact" />
+    <Part UId="1843" Gate="Coil" />
+    <Part UId="1846" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2018" Gate="Contact" />
+    <Part UId="1850" Gate="Coil" />
+    <Part UId="1853" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2020" Gate="Contact" />
+    <Part UId="1857" Gate="Coil" />
+    <Part UId="1860" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2022" Gate="Contact" />
+    <Part UId="1864" Gate="Coil" />
+    <Part UId="1867" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2024" Gate="Contact" />
+    <Part UId="1871" Gate="Coil" />
+    <Part UId="1874" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2026" Gate="Contact" />
+    <Part UId="1878" Gate="Coil" />
+    <Part UId="1881" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2028" Gate="Contact" />
+    <Part UId="1885" Gate="Coil" />
+    <Part UId="1888" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2030" Gate="Contact" />
+    <Part UId="1892" Gate="Coil" />
+    <Part UId="1895" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2032" Gate="Contact" />
+    <Part UId="1899" Gate="Coil" />
+    <Part UId="1902" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="2034" Gate="Contact" />
+    <Part UId="1906" Gate="Coil" />
+    <ORef UId="1907" RefId="52" />
+    <ORef UId="1908" RefId="61" />
+    <ORef UId="1909" RefId="3" />
+    <ORef UId="1910" RefId="230" />
+    <ORef UId="1911" RefId="63" />
+    <ORef UId="1912" RefId="231" />
+    <ORef UId="1913" RefId="3" />
+    <ORef UId="1914" RefId="232" />
+    <ORef UId="1915" RefId="65" />
+    <ORef UId="1916" RefId="233" />
+    <ORef UId="1917" RefId="3" />
+    <ORef UId="1918" RefId="234" />
+    <ORef UId="1919" RefId="63" />
+    <ORef UId="1920" RefId="235" />
+    <ORef UId="1921" RefId="3" />
+    <ORef UId="1922" RefId="236" />
+    <ORef UId="1923" RefId="65" />
+    <ORef UId="1924" RefId="237" />
+    <ORef UId="1925" RefId="3" />
+    <ORef UId="1926" RefId="238" />
+    <ORef UId="1927" RefId="63" />
+    <ORef UId="1928" RefId="239" />
+    <ORef UId="1929" RefId="3" />
+    <ORef UId="1930" RefId="240" />
+    <ORef UId="1931" RefId="65" />
+    <ORef UId="1932" RefId="241" />
+    <ORef UId="1933" RefId="3" />
+    <ORef UId="1934" RefId="242" />
+    <ORef UId="1935" RefId="63" />
+    <ORef UId="1936" RefId="243" />
+    <ORef UId="1937" RefId="3" />
+    <ORef UId="1938" RefId="244" />
+    <ORef UId="1939" RefId="65" />
+    <ORef UId="1940" RefId="245" />
+    <ORef UId="1941" RefId="3" />
+    <ORef UId="1942" RefId="246" />
+    <ORef UId="1943" RefId="63" />
+    <ORef UId="1944" RefId="247" />
+    <ORef UId="1945" RefId="3" />
+    <ORef UId="1946" RefId="84" />
+    <ORef UId="1947" RefId="65" />
+    <ORef UId="1948" RefId="248" />
+  </Parts>
+  <Wires>
+    <Wire UId="2036">
+      <Powerrail />
+      <PCon UId="2012" PinName="in" />
+    </Wire>
+    <Wire UId="1949">
+      <OCon UId="1907" />
+      <PCon UId="2012" PinName="operand" />
+    </Wire>
+    <Wire UId="2013">
+      <PCon UId="2012" PinName="out" />
+      <PCon UId="2014" PinName="in" />
+    </Wire>
+    <Wire UId="1950">
+      <OCon UId="1908" />
+      <PCon UId="2014" PinName="operand" />
+    </Wire>
+    <Wire UId="2015">
+      <PCon UId="2014" PinName="out" />
+      <PCon UId="1839" PinName="pre" />
+      <PCon UId="1846" PinName="pre" />
+      <PCon UId="1853" PinName="pre" />
+      <PCon UId="1860" PinName="pre" />
+      <PCon UId="1867" PinName="pre" />
+      <PCon UId="1874" PinName="pre" />
+      <PCon UId="1881" PinName="pre" />
+      <PCon UId="1888" PinName="pre" />
+      <PCon UId="1895" PinName="pre" />
+      <PCon UId="1902" PinName="pre" />
+    </Wire>
+    <Wire UId="1951">
+      <OCon UId="1909" />
+      <PCon UId="1839" PinName="in1" />
+    </Wire>
+    <Wire UId="1952">
+      <OCon UId="1910" />
+      <PCon UId="1839" PinName="in2" />
+    </Wire>
+    <Wire UId="1953">
+      <PCon UId="1839" PinName="out" />
+      <PCon UId="2016" PinName="in" />
+    </Wire>
+    <Wire UId="1954">
+      <OCon UId="1911" />
+      <PCon UId="2016" PinName="operand" />
+    </Wire>
+    <Wire UId="2017">
+      <PCon UId="2016" PinName="out" />
+      <PCon UId="1843" PinName="in" />
+    </Wire>
+    <Wire UId="1956">
+      <OCon UId="1912" />
+      <PCon UId="1843" PinName="operand" />
+    </Wire>
+    <Wire UId="1957">
+      <OCon UId="1913" />
+      <PCon UId="1846" PinName="in1" />
+    </Wire>
+    <Wire UId="1958">
+      <OCon UId="1914" />
+      <PCon UId="1846" PinName="in2" />
+    </Wire>
+    <Wire UId="1959">
+      <PCon UId="1846" PinName="out" />
+      <PCon UId="2018" PinName="in" />
+    </Wire>
+    <Wire UId="1960">
+      <OCon UId="1915" />
+      <PCon UId="2018" PinName="operand" />
+    </Wire>
+    <Wire UId="2019">
+      <PCon UId="2018" PinName="out" />
+      <PCon UId="1850" PinName="in" />
+    </Wire>
+    <Wire UId="1962">
+      <OCon UId="1916" />
+      <PCon UId="1850" PinName="operand" />
+    </Wire>
+    <Wire UId="1963">
+      <OCon UId="1917" />
+      <PCon UId="1853" PinName="in1" />
+    </Wire>
+    <Wire UId="1964">
+      <OCon UId="1918" />
+      <PCon UId="1853" PinName="in2" />
+    </Wire>
+    <Wire UId="1965">
+      <PCon UId="1853" PinName="out" />
+      <PCon UId="2020" PinName="in" />
+    </Wire>
+    <Wire UId="1966">
+      <OCon UId="1919" />
+      <PCon UId="2020" PinName="operand" />
+    </Wire>
+    <Wire UId="2021">
+      <PCon UId="2020" PinName="out" />
+      <PCon UId="1857" PinName="in" />
+    </Wire>
+    <Wire UId="1968">
+      <OCon UId="1920" />
+      <PCon UId="1857" PinName="operand" />
+    </Wire>
+    <Wire UId="1969">
+      <OCon UId="1921" />
+      <PCon UId="1860" PinName="in1" />
+    </Wire>
+    <Wire UId="1970">
+      <OCon UId="1922" />
+      <PCon UId="1860" PinName="in2" />
+    </Wire>
+    <Wire UId="1971">
+      <PCon UId="1860" PinName="out" />
+      <PCon UId="2022" PinName="in" />
+    </Wire>
+    <Wire UId="1972">
+      <OCon UId="1923" />
+      <PCon UId="2022" PinName="operand" />
+    </Wire>
+    <Wire UId="2023">
+      <PCon UId="2022" PinName="out" />
+      <PCon UId="1864" PinName="in" />
+    </Wire>
+    <Wire UId="1974">
+      <OCon UId="1924" />
+      <PCon UId="1864" PinName="operand" />
+    </Wire>
+    <Wire UId="1975">
+      <OCon UId="1925" />
+      <PCon UId="1867" PinName="in1" />
+    </Wire>
+    <Wire UId="1976">
+      <OCon UId="1926" />
+      <PCon UId="1867" PinName="in2" />
+    </Wire>
+    <Wire UId="1977">
+      <PCon UId="1867" PinName="out" />
+      <PCon UId="2024" PinName="in" />
+    </Wire>
+    <Wire UId="1978">
+      <OCon UId="1927" />
+      <PCon UId="2024" PinName="operand" />
+    </Wire>
+    <Wire UId="2025">
+      <PCon UId="2024" PinName="out" />
+      <PCon UId="1871" PinName="in" />
+    </Wire>
+    <Wire UId="1980">
+      <OCon UId="1928" />
+      <PCon UId="1871" PinName="operand" />
+    </Wire>
+    <Wire UId="1981">
+      <OCon UId="1929" />
+      <PCon UId="1874" PinName="in1" />
+    </Wire>
+    <Wire UId="1982">
+      <OCon UId="1930" />
+      <PCon UId="1874" PinName="in2" />
+    </Wire>
+    <Wire UId="1983">
+      <PCon UId="1874" PinName="out" />
+      <PCon UId="2026" PinName="in" />
+    </Wire>
+    <Wire UId="1984">
+      <OCon UId="1931" />
+      <PCon UId="2026" PinName="operand" />
+    </Wire>
+    <Wire UId="2027">
+      <PCon UId="2026" PinName="out" />
+      <PCon UId="1878" PinName="in" />
+    </Wire>
+    <Wire UId="1986">
+      <OCon UId="1932" />
+      <PCon UId="1878" PinName="operand" />
+    </Wire>
+    <Wire UId="1987">
+      <OCon UId="1933" />
+      <PCon UId="1881" PinName="in1" />
+    </Wire>
+    <Wire UId="1988">
+      <OCon UId="1934" />
+      <PCon UId="1881" PinName="in2" />
+    </Wire>
+    <Wire UId="1989">
+      <PCon UId="1881" PinName="out" />
+      <PCon UId="2028" PinName="in" />
+    </Wire>
+    <Wire UId="1990">
+      <OCon UId="1935" />
+      <PCon UId="2028" PinName="operand" />
+    </Wire>
+    <Wire UId="2029">
+      <PCon UId="2028" PinName="out" />
+      <PCon UId="1885" PinName="in" />
+    </Wire>
+    <Wire UId="1992">
+      <OCon UId="1936" />
+      <PCon UId="1885" PinName="operand" />
+    </Wire>
+    <Wire UId="1993">
+      <OCon UId="1937" />
+      <PCon UId="1888" PinName="in1" />
+    </Wire>
+    <Wire UId="1994">
+      <OCon UId="1938" />
+      <PCon UId="1888" PinName="in2" />
+    </Wire>
+    <Wire UId="1995">
+      <PCon UId="1888" PinName="out" />
+      <PCon UId="2030" PinName="in" />
+    </Wire>
+    <Wire UId="1996">
+      <OCon UId="1939" />
+      <PCon UId="2030" PinName="operand" />
+    </Wire>
+    <Wire UId="2031">
+      <PCon UId="2030" PinName="out" />
+      <PCon UId="1892" PinName="in" />
+    </Wire>
+    <Wire UId="1998">
+      <OCon UId="1940" />
+      <PCon UId="1892" PinName="operand" />
+    </Wire>
+    <Wire UId="1999">
+      <OCon UId="1941" />
+      <PCon UId="1895" PinName="in1" />
+    </Wire>
+    <Wire UId="2000">
+      <OCon UId="1942" />
+      <PCon UId="1895" PinName="in2" />
+    </Wire>
+    <Wire UId="2001">
+      <PCon UId="1895" PinName="out" />
+      <PCon UId="2032" PinName="in" />
+    </Wire>
+    <Wire UId="2002">
+      <OCon UId="1943" />
+      <PCon UId="2032" PinName="operand" />
+    </Wire>
+    <Wire UId="2033">
+      <PCon UId="2032" PinName="out" />
+      <PCon UId="1899" PinName="in" />
+    </Wire>
+    <Wire UId="2004">
+      <OCon UId="1944" />
+      <PCon UId="1899" PinName="operand" />
+    </Wire>
+    <Wire UId="2005">
+      <OCon UId="1945" />
+      <PCon UId="1902" PinName="in1" />
+    </Wire>
+    <Wire UId="2006">
+      <OCon UId="1946" />
+      <PCon UId="1902" PinName="in2" />
+    </Wire>
+    <Wire UId="2007">
+      <PCon UId="1902" PinName="out" />
+      <PCon UId="2034" PinName="in" />
+    </Wire>
+    <Wire UId="2008">
+      <OCon UId="1947" />
+      <PCon UId="2034" PinName="operand" />
+    </Wire>
+    <Wire UId="2035">
+      <PCon UId="2034" PinName="out" />
+      <PCon UId="1906" PinName="in" />
+    </Wire>
+    <Wire UId="2010">
+      <OCon UId="1948" />
+      <PCon UId="1906" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

@@ -1,0 +1,19 @@
+﻿ID,항목,자료 내용,관련 범위,근거,다음 검증,문서 검토 상태,해소 상태
+BASELINE,백업 파일명과 내부 프로젝트 날짜,GME_20250506.zap18 내부 GME_20250605.ap18; 2026-10-01은 보관 일자,전체 공통,sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,온라인 PLC 및 현재 엔지니어링 프로젝트와 비교,제어 명세에 연결,원인·해소 미확정
+POWER,설치 전력·도면 세대,2013 P&ID 355kW / 2024~2025 전기 463kW,전체 공통,sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,설치·개조 내역과 명판 기준 확정,제어 명세에 연결,원인·해소 미확정
+VOLTAGE,주전원 표기,전기 표지 440Vac / 일부 인덱스 제목 400V,전체 공통,sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,현장 공급 및 실제 회로/명판 확인,제어 명세에 연결,원인·해소 미확정
+PV01-LS02,닫힘 센서 예비 표기,"FG70에 LS02, PLC I8.7, FG124 SPARE 표기","PV01, LS02",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,단자와 현재 입력 채널 실제 사용 확인,제어 명세에 연결,원인·해소 미확정
+ADDRESS,현재 주소와 과거 주석,심볼 Address와 설명에 남은 옛 E/A 주소가 다름,전체 공통,sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,Address 및 실제 모듈/배선으로 대조,제어 명세에 연결,원인·해소 미확정
+MC05-SC12-PV04,삭제/예비 및 잔존 I/O,"도면/심볼에는 존재, Motors 1 일부 deleted 제목","MC05, SC12, PV04, EV07, CYL-CL11",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,실물·현재 네트워크·사용 상태 확정,제어 명세에 연결,원인·해소 미확정
+FN01-FAN,냉각팬 삭제/예비,"FG54 SPARE, I4.5/Q3.5 잔존","FN01, FN01-FAN",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,현재 연결 및 필요성 확인,제어 명세에 연결,원인·해소 미확정
+MV04-MC04,아날로그 입력 목적 충돌,MV04 위치 M18A/IW324를 MC04 전류 변환에서 참조,"MV04, MC04",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,현장 배선·모듈 채널·사용 프로그램 목적 확인,제어 명세에 연결,원인·해소 미확정
+FN04,실구동 출력 및 제목,Q17.1 start fn04 / Q4.2 옛 FN04 주석; 변환 제목 FN02,"FN04, PC01, SYS-PID",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,사용처와 전기도면 기준 현재 채널 확인,제어 명세에 연결,원인·해소 미확정
+MV06-LS,리미트 번호 변경,P&ID LS34/35 / 백업 LS40/41,"MV06, LS34, LS35, LS40, LS41",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,변경 이력과 실제 센서/단자 확인,제어 명세에 연결,원인·해소 미확정
+CL-NAMESPACE,같은 CL 번호의 다른 장치,P&ID 실린더 CL01~12 / 외부 모터 CL01~19 일부 채널,"CLIENT-CL01, CLIENT-CL02, CLIENT-CL03, CLIENT-CL04, CLIENT-CL05, CLIENT-CL06, CLIENT-CL07, CLIENT-CL08, CLIENT-CL09, CLIENT-CL10, CLIENT-CL13, CLIENT-CL14, CLIENT-CL15, CLIENT-CL16, CLIENT-CL17, CLIENT-CL18, CLIENT-CL19, CYL-CL01, CYL-CL02, CYL-CL03, CYL-CL04, CYL-CL05, CYL-CL06, CYL-CL07, CYL-CL08, CYL-CL09, CYL-CL10, CYL-CL11, CYL-CL12",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,CYL-CL / CLIENT-CL ID 유지,제어 명세에 연결,원인·해소 미확정
+TC05,베어링 채널·범위 문구,TC04/TC05·범위 설명 혼재,"TC04, TC05, FN01",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,전송기 범위와 AI 채널/환산 계수 확인,제어 명세에 연결,원인·해소 미확정
+RO03,산소 대체 계산,실제 입력 외 RO02+11 참조,"RO03, RO02, SYS-PID",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,원본 분기·시험 비트·현재 값 확인,제어 명세에 연결,원인·해소 미확정
+BF02-DP,차압 계수 이름,DP02와 DP01 임계값 참조 혼재,"BF02, DP01, DP02, SYS-PID",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,공용 설정 의도와 실제 적용 확인,제어 명세에 연결,원인·해소 미확정
+CLIENT19,고장/운전 신호 의미,Primaryshredder run을 fault 알람에 연결,"CLIENT-CL19, SYS-ALARM",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,외부 신호 정상 극성과 원본 접점 확인,제어 명세에 연결,원인·해소 미확정
+BR01,버너 상세 도면 경계,P&ID에서 버너 별도 DWG 참조,"BR01, AB01, FN03, SYS-SAFETY",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,제조사 버너 도면/안전 제어 순서 확보,제어 명세에 연결,원인·해소 미확정
+SOURCE-XML,복원 해석과 TIA 결과,426 LAD 원본 XML 복원; 상수/일부 참조 이름 미해석,전체 공통,sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,TIA에서 프로젝트 복원·블록 비교·컴파일·오프라인 실행 검증,제어 명세에 연결,원인·해소 미확정
+PID-TM,과거 위치 계측과 현재 엔코더,P&ID ZT02~06 / TM·엔코더 카운트 사용,"ZT02, ZT03, ZT04, ZT05, ZT06, MV01, MV02, MV03, MV05, MV06",sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장,실제 위치 계측 방식/보정 절차 확인,제어 명세에 연결,원인·해소 미확정

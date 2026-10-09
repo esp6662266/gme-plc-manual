@@ -1,0 +1,101 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="2925" Gate="Contact" />
+    <Part UId="2884" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="2887" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="2890" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="2893" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="2896" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <ORef UId="2899" RefId="284" />
+    <ORef UId="2900" RefId="12" />
+    <ORef UId="2901" RefId="162" />
+    <ORef UId="2902" RefId="12" />
+    <ORef UId="2903" RefId="168" />
+    <ORef UId="2904" RefId="12" />
+    <ORef UId="2905" RefId="174" />
+    <ORef UId="2906" RefId="12" />
+    <ORef UId="2907" RefId="180" />
+    <ORef UId="2908" RefId="12" />
+    <ORef UId="2909" RefId="186" />
+  </Parts>
+  <Wires>
+    <Wire UId="2927">
+      <Powerrail />
+      <PCon UId="2925" PinName="in" />
+    </Wire>
+    <Wire UId="2910">
+      <OCon UId="2899" />
+      <PCon UId="2925" PinName="operand" />
+    </Wire>
+    <Wire UId="2926">
+      <PCon UId="2925" PinName="out" />
+      <PCon UId="2884" PinName="en" />
+    </Wire>
+    <Wire UId="2911">
+      <OCon UId="2900" />
+      <PCon UId="2884" PinName="in" />
+    </Wire>
+    <Wire UId="2913">
+      <PCon UId="2884" PinName="eno" />
+      <PCon UId="2887" PinName="en" />
+    </Wire>
+    <Wire UId="2912">
+      <PCon UId="2884" PinName="out1" />
+      <OCon UId="2901" />
+    </Wire>
+    <Wire UId="2914">
+      <OCon UId="2902" />
+      <PCon UId="2887" PinName="in" />
+    </Wire>
+    <Wire UId="2916">
+      <PCon UId="2887" PinName="eno" />
+      <PCon UId="2890" PinName="en" />
+    </Wire>
+    <Wire UId="2915">
+      <PCon UId="2887" PinName="out1" />
+      <OCon UId="2903" />
+    </Wire>
+    <Wire UId="2917">
+      <OCon UId="2904" />
+      <PCon UId="2890" PinName="in" />
+    </Wire>
+    <Wire UId="2919">
+      <PCon UId="2890" PinName="eno" />
+      <PCon UId="2893" PinName="en" />
+    </Wire>
+    <Wire UId="2918">
+      <PCon UId="2890" PinName="out1" />
+      <OCon UId="2905" />
+    </Wire>
+    <Wire UId="2920">
+      <OCon UId="2906" />
+      <PCon UId="2893" PinName="in" />
+    </Wire>
+    <Wire UId="2922">
+      <PCon UId="2893" PinName="eno" />
+      <PCon UId="2896" PinName="en" />
+    </Wire>
+    <Wire UId="2921">
+      <PCon UId="2893" PinName="out1" />
+      <OCon UId="2907" />
+    </Wire>
+    <Wire UId="2923">
+      <OCon UId="2908" />
+      <PCon UId="2896" PinName="in" />
+    </Wire>
+    <Wire UId="2924">
+      <PCon UId="2896" PinName="out1" />
+      <OCon UId="2909" />
+    </Wire>
+  </Wires>
+</FlgNet>

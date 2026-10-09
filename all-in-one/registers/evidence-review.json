@@ -1,0 +1,4318 @@
+{
+  "date": "2026-10-08",
+  "scope": "source review and repair navigation; browser annotations separate",
+  "counts": {
+    "source": 18,
+    "construction": 7,
+    "common": 10,
+    "improvement": 6,
+    "identity": 23
+  },
+  "items": [
+    {
+      "id": "source:BASELINE",
+      "kind": "source",
+      "source_id": "BASELINE",
+      "title": "백업 파일명과 내부 프로젝트 날짜",
+      "observation": "GME_20250506.zap18 내부 GME_20250605.ap18; 2026-10-01은 보관 일자",
+      "next_check": "온라인 PLC 및 현재 엔지니어링 프로젝트와 비교",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "BASELINE",
+        "항목": "백업 파일명과 내부 프로젝트 날짜",
+        "자료 내용": "GME_20250506.zap18 내부 GME_20250605.ap18; 2026-10-01은 보관 일자",
+        "관련 범위": "전체 공통",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "온라인 PLC 및 현재 엔지니어링 프로젝트와 비교",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:POWER",
+      "kind": "source",
+      "source_id": "POWER",
+      "title": "설치 전력·도면 세대",
+      "observation": "2013 P&ID 355kW / 2024~2025 전기 463kW",
+      "next_check": "설치·개조 내역과 명판 기준 확정",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "POWER",
+        "항목": "설치 전력·도면 세대",
+        "자료 내용": "2013 P&ID 355kW / 2024~2025 전기 463kW",
+        "관련 범위": "전체 공통",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "설치·개조 내역과 명판 기준 확정",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:VOLTAGE",
+      "kind": "source",
+      "source_id": "VOLTAGE",
+      "title": "주전원 표기",
+      "observation": "전기 표지 440Vac / 일부 인덱스 제목 400V",
+      "next_check": "현장 공급 및 실제 회로/명판 확인",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "VOLTAGE",
+        "항목": "주전원 표기",
+        "자료 내용": "전기 표지 440Vac / 일부 인덱스 제목 400V",
+        "관련 범위": "전체 공통",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "현장 공급 및 실제 회로/명판 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:PV01-LS02",
+      "kind": "source",
+      "source_id": "PV01-LS02",
+      "title": "닫힘 센서 예비 표기",
+      "observation": "FG70에 LS02, PLC I8.7, FG124 SPARE 표기",
+      "next_check": "단자와 현재 입력 채널 실제 사용 확인",
+      "equipment_ids": [
+        "PV01",
+        "LS02"
+      ],
+      "declared_scope": [
+        "PV01",
+        "LS02"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P05"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "PV01-LS02",
+        "항목": "닫힘 센서 예비 표기",
+        "자료 내용": "FG70에 LS02, PLC I8.7, FG124 SPARE 표기",
+        "관련 범위": "PV01, LS02",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "단자와 현재 입력 채널 실제 사용 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:ADDRESS",
+      "kind": "source",
+      "source_id": "ADDRESS",
+      "title": "현재 주소와 과거 주석",
+      "observation": "심볼 Address와 설명에 남은 옛 E/A 주소가 다름",
+      "next_check": "Address 및 실제 모듈/배선으로 대조",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "ADDRESS",
+        "항목": "현재 주소와 과거 주석",
+        "자료 내용": "심볼 Address와 설명에 남은 옛 E/A 주소가 다름",
+        "관련 범위": "전체 공통",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "Address 및 실제 모듈/배선으로 대조",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:MC05-SC12-PV04",
+      "kind": "source",
+      "source_id": "MC05-SC12-PV04",
+      "title": "삭제/예비 및 잔존 I/O",
+      "observation": "도면/심볼에는 존재, Motors 1 일부 deleted 제목",
+      "next_check": "실물·현재 네트워크·사용 상태 확정",
+      "equipment_ids": [
+        "MC05",
+        "SC12",
+        "PV04",
+        "EV07",
+        "CYL-CL11"
+      ],
+      "declared_scope": [
+        "MC05",
+        "SC12",
+        "PV04",
+        "EV07",
+        "CYL-CL11"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "MC05-SC12-PV04",
+        "항목": "삭제/예비 및 잔존 I/O",
+        "자료 내용": "도면/심볼에는 존재, Motors 1 일부 deleted 제목",
+        "관련 범위": "MC05, SC12, PV04, EV07, CYL-CL11",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "실물·현재 네트워크·사용 상태 확정",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:FN01-FAN",
+      "kind": "source",
+      "source_id": "FN01-FAN",
+      "title": "냉각팬 삭제/예비",
+      "observation": "FG54 SPARE, I4.5/Q3.5 잔존",
+      "next_check": "현재 연결 및 필요성 확인",
+      "equipment_ids": [
+        "FN01",
+        "FN01-FAN"
+      ],
+      "declared_scope": [
+        "FN01",
+        "FN01-FAN"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P15"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "FN01-FAN",
+        "항목": "냉각팬 삭제/예비",
+        "자료 내용": "FG54 SPARE, I4.5/Q3.5 잔존",
+        "관련 범위": "FN01, FN01-FAN",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "현재 연결 및 필요성 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:MV04-MC04",
+      "kind": "source",
+      "source_id": "MV04-MC04",
+      "title": "아날로그 입력 목적 충돌",
+      "observation": "MV04 위치 M18A/IW324를 MC04 전류 변환에서 참조",
+      "next_check": "현장 배선·모듈 채널·사용 프로그램 목적 확인",
+      "equipment_ids": [
+        "MV04",
+        "MC04"
+      ],
+      "declared_scope": [
+        "MV04",
+        "MC04"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P08"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "MV04-MC04",
+        "항목": "아날로그 입력 목적 충돌",
+        "자료 내용": "MV04 위치 M18A/IW324를 MC04 전류 변환에서 참조",
+        "관련 범위": "MV04, MC04",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "현장 배선·모듈 채널·사용 프로그램 목적 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:FN04",
+      "kind": "source",
+      "source_id": "FN04",
+      "title": "실구동 출력 및 제목",
+      "observation": "Q17.1 start fn04 / Q4.2 옛 FN04 주석; 변환 제목 FN02",
+      "next_check": "사용처와 전기도면 기준 현재 채널 확인",
+      "equipment_ids": [
+        "FN04",
+        "PC01",
+        "SYS-PID"
+      ],
+      "declared_scope": [
+        "FN04",
+        "PC01",
+        "SYS-PID"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P02"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "FN04",
+        "항목": "실구동 출력 및 제목",
+        "자료 내용": "Q17.1 start fn04 / Q4.2 옛 FN04 주석; 변환 제목 FN02",
+        "관련 범위": "FN04, PC01, SYS-PID",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "사용처와 전기도면 기준 현재 채널 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:MV06-LS",
+      "kind": "source",
+      "source_id": "MV06-LS",
+      "title": "리미트 번호 변경",
+      "observation": "P&ID LS34/35 / 백업 LS40/41",
+      "next_check": "변경 이력과 실제 센서/단자 확인",
+      "equipment_ids": [
+        "MV06",
+        "LS34",
+        "LS35",
+        "LS40",
+        "LS41"
+      ],
+      "declared_scope": [
+        "MV06",
+        "LS34",
+        "LS35",
+        "LS40",
+        "LS41"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P21"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "MV06-LS",
+        "항목": "리미트 번호 변경",
+        "자료 내용": "P&ID LS34/35 / 백업 LS40/41",
+        "관련 범위": "MV06, LS34, LS35, LS40, LS41",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "변경 이력과 실제 센서/단자 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:CL-NAMESPACE",
+      "kind": "source",
+      "source_id": "CL-NAMESPACE",
+      "title": "같은 CL 번호의 다른 장치",
+      "observation": "P&ID 실린더 CL01~12 / 외부 모터 CL01~19 일부 채널",
+      "next_check": "CYL-CL / CLIENT-CL ID 유지",
+      "equipment_ids": [
+        "CLIENT-CL01",
+        "CLIENT-CL02",
+        "CLIENT-CL03",
+        "CLIENT-CL04",
+        "CLIENT-CL05",
+        "CLIENT-CL06",
+        "CLIENT-CL07",
+        "CLIENT-CL08",
+        "CLIENT-CL09",
+        "CLIENT-CL10",
+        "CLIENT-CL13",
+        "CLIENT-CL14",
+        "CLIENT-CL15",
+        "CLIENT-CL16",
+        "CLIENT-CL17",
+        "CLIENT-CL18",
+        "CLIENT-CL19",
+        "CYL-CL01",
+        "CYL-CL02",
+        "CYL-CL03",
+        "CYL-CL04",
+        "CYL-CL05",
+        "CYL-CL06",
+        "CYL-CL07",
+        "CYL-CL08",
+        "CYL-CL09",
+        "CYL-CL10",
+        "CYL-CL11",
+        "CYL-CL12"
+      ],
+      "declared_scope": [
+        "CLIENT-CL01",
+        "CLIENT-CL02",
+        "CLIENT-CL03",
+        "CLIENT-CL04",
+        "CLIENT-CL05",
+        "CLIENT-CL06",
+        "CLIENT-CL07",
+        "CLIENT-CL08",
+        "CLIENT-CL09",
+        "CLIENT-CL10",
+        "CLIENT-CL13",
+        "CLIENT-CL14",
+        "CLIENT-CL15",
+        "CLIENT-CL16",
+        "CLIENT-CL17",
+        "CLIENT-CL18",
+        "CLIENT-CL19",
+        "CYL-CL01",
+        "CYL-CL02",
+        "CYL-CL03",
+        "CYL-CL04",
+        "CYL-CL05",
+        "CYL-CL06",
+        "CYL-CL07",
+        "CYL-CL08",
+        "CYL-CL09",
+        "CYL-CL10",
+        "CYL-CL11",
+        "CYL-CL12"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "CL-NAMESPACE",
+        "항목": "같은 CL 번호의 다른 장치",
+        "자료 내용": "P&ID 실린더 CL01~12 / 외부 모터 CL01~19 일부 채널",
+        "관련 범위": "CLIENT-CL01, CLIENT-CL02, CLIENT-CL03, CLIENT-CL04, CLIENT-CL05, CLIENT-CL06, CLIENT-CL07, CLIENT-CL08, CLIENT-CL09, CLIENT-CL10, CLIENT-CL13, CLIENT-CL14, CLIENT-CL15, CLIENT-CL16, CLIENT-CL17, CLIENT-CL18, CLIENT-CL19, CYL-CL01, CYL-CL02, CYL-CL03, CYL-CL04, CYL-CL05, CYL-CL06, CYL-CL07, CYL-CL08, CYL-CL09, CYL-CL10, CYL-CL11, CYL-CL12",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "CYL-CL / CLIENT-CL ID 유지",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:TC05",
+      "kind": "source",
+      "source_id": "TC05",
+      "title": "베어링 채널·범위 문구",
+      "observation": "TC04/TC05·범위 설명 혼재",
+      "next_check": "전송기 범위와 AI 채널/환산 계수 확인",
+      "equipment_ids": [
+        "TC04",
+        "TC05",
+        "FN01"
+      ],
+      "declared_scope": [
+        "TC04",
+        "TC05",
+        "FN01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P15"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "TC05",
+        "항목": "베어링 채널·범위 문구",
+        "자료 내용": "TC04/TC05·범위 설명 혼재",
+        "관련 범위": "TC04, TC05, FN01",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "전송기 범위와 AI 채널/환산 계수 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:RO03",
+      "kind": "source",
+      "source_id": "RO03",
+      "title": "산소 대체 계산",
+      "observation": "실제 입력 외 RO02+11 참조",
+      "next_check": "원본 분기·시험 비트·현재 값 확인",
+      "equipment_ids": [
+        "RO03",
+        "RO02",
+        "SYS-PID"
+      ],
+      "declared_scope": [
+        "RO03",
+        "RO02",
+        "SYS-PID"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "RO03",
+        "항목": "산소 대체 계산",
+        "자료 내용": "실제 입력 외 RO02+11 참조",
+        "관련 범위": "RO03, RO02, SYS-PID",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "원본 분기·시험 비트·현재 값 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:BF02-DP",
+      "kind": "source",
+      "source_id": "BF02-DP",
+      "title": "차압 계수 이름",
+      "observation": "DP02와 DP01 임계값 참조 혼재",
+      "next_check": "공용 설정 의도와 실제 적용 확인",
+      "equipment_ids": [
+        "BF02",
+        "DP01",
+        "DP02",
+        "SYS-PID"
+      ],
+      "declared_scope": [
+        "BF02",
+        "DP01",
+        "DP02",
+        "SYS-PID"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "BF02-DP",
+        "항목": "차압 계수 이름",
+        "자료 내용": "DP02와 DP01 임계값 참조 혼재",
+        "관련 범위": "BF02, DP01, DP02, SYS-PID",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "공용 설정 의도와 실제 적용 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:CLIENT19",
+      "kind": "source",
+      "source_id": "CLIENT19",
+      "title": "고장/운전 신호 의미",
+      "observation": "Primaryshredder run을 fault 알람에 연결",
+      "next_check": "외부 신호 정상 극성과 원본 접점 확인",
+      "equipment_ids": [
+        "CLIENT-CL19",
+        "SYS-ALARM"
+      ],
+      "declared_scope": [
+        "CLIENT-CL19",
+        "SYS-ALARM"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "CLIENT19",
+        "항목": "고장/운전 신호 의미",
+        "자료 내용": "Primaryshredder run을 fault 알람에 연결",
+        "관련 범위": "CLIENT-CL19, SYS-ALARM",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "외부 신호 정상 극성과 원본 접점 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:BR01",
+      "kind": "source",
+      "source_id": "BR01",
+      "title": "버너 상세 도면 경계",
+      "observation": "P&ID에서 버너 별도 DWG 참조",
+      "next_check": "제조사 버너 도면/안전 제어 순서 확보",
+      "equipment_ids": [
+        "BR01",
+        "AB01",
+        "FN03",
+        "SYS-SAFETY"
+      ],
+      "declared_scope": [
+        "BR01",
+        "AB01",
+        "FN03",
+        "SYS-SAFETY"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P11",
+        "P12",
+        "P17"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "BR01",
+        "항목": "버너 상세 도면 경계",
+        "자료 내용": "P&ID에서 버너 별도 DWG 참조",
+        "관련 범위": "BR01, AB01, FN03, SYS-SAFETY",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "제조사 버너 도면/안전 제어 순서 확보",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:SOURCE-XML",
+      "kind": "source",
+      "source_id": "SOURCE-XML",
+      "title": "복원 해석과 TIA 결과",
+      "observation": "426 LAD 원본 XML 복원; 상수/일부 참조 이름 미해석",
+      "next_check": "TIA에서 프로젝트 복원·블록 비교·컴파일·오프라인 실행 검증",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "SOURCE-XML",
+        "항목": "복원 해석과 TIA 결과",
+        "자료 내용": "426 LAD 원본 XML 복원; 상수/일부 참조 이름 미해석",
+        "관련 범위": "전체 공통",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "TIA에서 프로젝트 복원·블록 비교·컴파일·오프라인 실행 검증",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "source:PID-TM",
+      "kind": "source",
+      "source_id": "PID-TM",
+      "title": "과거 위치 계측과 현재 엔코더",
+      "observation": "P&ID ZT02~06 / TM·엔코더 카운트 사용",
+      "next_check": "실제 위치 계측 방식/보정 절차 확인",
+      "equipment_ids": [
+        "ZT02",
+        "ZT03",
+        "ZT04",
+        "ZT05",
+        "ZT06",
+        "MV01",
+        "MV02",
+        "MV03",
+        "MV05",
+        "MV06"
+      ],
+      "declared_scope": [
+        "ZT02",
+        "ZT03",
+        "ZT04",
+        "ZT05",
+        "ZT06",
+        "MV01",
+        "MV02",
+        "MV03",
+        "MV05",
+        "MV06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P19",
+        "P20",
+        "P21"
+      ],
+      "global_scope": false,
+      "source_file": "registers/source-conflict-review.csv",
+      "source_status": "원인·해소 미확정",
+      "raw": {
+        "ID": "PID-TM",
+        "항목": "과거 위치 계측과 현재 엔코더",
+        "자료 내용": "P&ID ZT02~06 / TM·엔코더 카운트 사용",
+        "관련 범위": "ZT02, ZT03, ZT04, ZT05, ZT06, MV01, MV02, MV03, MV05, MV06",
+        "근거": "sources 원본 PDF·ZAP18·PLF 및 관련 설비 신호·네트워크 대장",
+        "다음 검증": "실제 위치 계측 방식/보정 절차 확인",
+        "문서 검토 상태": "제어 명세에 연결",
+        "해소 상태": "원인·해소 미확정"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "원본 불일치 대장",
+          "path": "registers/source-conflict-review.csv"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C01",
+      "kind": "construction",
+      "source_id": "C01",
+      "title": "시공 자료 C01",
+      "observation": "=FLB+MV06-FLO4TB2A가 TM/CVV-S/4S/CR 시작 행과 DC/CVV/7G/UC01 시작 행에 반복됩니다.",
+      "next_check": "제작사 수정본, 양단 케이블 표찰·접속함 단자 기록을 대조해 두 간선을 식별합니다.",
+      "equipment_ids": [
+        "MV06"
+      ],
+      "declared_scope": [
+        "MV06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P21"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C01",
+        "equipment": [
+          "MV06"
+        ],
+        "pages": [
+          58
+        ],
+        "rows": [
+          "8_6",
+          "8_17"
+        ],
+        "observation": "=FLB+MV06-FLO4TB2A가 TM/CVV-S/4S/CR 시작 행과 DC/CVV/7G/UC01 시작 행에 반복됩니다.",
+        "impact": "식별자만 키로 쓰면 서로 다른 신호·시작점이 합쳐집니다.",
+        "validation": "제작사 수정본, 양단 케이블 표찰·접속함 단자 기록을 대조해 두 간선을 식별합니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 58",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C02",
+      "kind": "construction",
+      "source_id": "C02",
+      "title": "시공 자료 C02",
+      "observation": "=ENT+CC01-BR01F가 같은 FROM/TO·AI·4S 규격으로 두 행에 반복됩니다.",
+      "next_check": "버너 전용 배선도와 양단 표찰·케이블 수를 확인합니다. 자동 중복 제거를 하지 않습니다.",
+      "equipment_ids": [
+        "BR01",
+        "CC01"
+      ],
+      "declared_scope": [
+        "BR01",
+        "CC01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P10",
+        "P11"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C02",
+        "equipment": [
+          "BR01",
+          "CC01"
+        ],
+        "pages": [
+          64
+        ],
+        "rows": [
+          "14_17",
+          "14_18"
+        ],
+        "observation": "=ENT+CC01-BR01F가 같은 FROM/TO·AI·4S 규격으로 두 행에 반복됩니다.",
+        "impact": "중복 기재인지 실제 두 간선인지 확정할 수 없습니다.",
+        "validation": "버너 전용 배선도와 양단 표찰·케이블 수를 확인합니다. 자동 중복 제거를 하지 않습니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 64",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=64"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C03",
+      "kind": "construction",
+      "source_id": "C03",
+      "title": "시공 자료 C03",
+      "observation": "MV05 FLO1TB2 간선 설명은 ZT06, 같은 접속함에서 나가는 직접 케이블·TO는 ZT05입니다.",
+      "next_check": "MV05·MV06 실물 센서 표찰과 단자, 원본 회로도·PLC 심볼을 각각 확인합니다.",
+      "equipment_ids": [
+        "MV05",
+        "MV06"
+      ],
+      "declared_scope": [
+        "MV05",
+        "MV06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P21"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C03",
+        "equipment": [
+          "MV05",
+          "MV06"
+        ],
+        "pages": [
+          56
+        ],
+        "rows": [
+          "6_6",
+          "6_20"
+        ],
+        "observation": "MV05 FLO1TB2 간선 설명은 ZT06, 같은 접속함에서 나가는 직접 케이블·TO는 ZT05입니다.",
+        "impact": "MV06의 ZT06 또는 다른 센서로 잘못 연결될 수 있습니다.",
+        "validation": "MV05·MV06 실물 센서 표찰과 단자, 원본 회로도·PLC 심볼을 각각 확인합니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 56",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=56"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C04",
+      "kind": "construction",
+      "source_id": "C04",
+      "title": "시공 자료 C04",
+      "observation": "=ROT+RD01-M03A: PDF24 배관표 SIZE16, PDF51 케이블 목록 SIZE25SB입니다.",
+      "next_check": "승인된 개정본과 실제 케이블·보호기기·모터 명판을 대조합니다. 이 매뉴얼에서 임의 규격을 확정하지 않습니다.",
+      "equipment_ids": [
+        "RD01"
+      ],
+      "declared_scope": [
+        "RD01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P06"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C04",
+        "equipment": [
+          "RD01"
+        ],
+        "pages": [
+          24,
+          51
+        ],
+        "rows": [
+          "1_5"
+        ],
+        "observation": "=ROT+RD01-M03A: PDF24 배관표 SIZE16, PDF51 케이블 목록 SIZE25SB입니다.",
+        "impact": "도면만으로 케이블 단면·사양을 선택할 수 없습니다.",
+        "validation": "승인된 개정본과 실제 케이블·보호기기·모터 명판을 대조합니다. 이 매뉴얼에서 임의 규격을 확정하지 않습니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 24",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=24"
+        },
+        {
+          "label": "추가 시공도면 PDF 51",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=51"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C05",
+      "kind": "construction",
+      "source_id": "C05",
+      "title": "시공 자료 C05",
+      "observation": "PDF48 DUST14의 모터 그림은 M34/M38, 표의 TAG는 M31/M34, 케이블 접미사·PDF52 TO는 M31/M36입니다.",
+      "next_check": "OEM FG59의 M31/M36, 배치도, 양단 표찰·모터 명판을 별도로 대조합니다. PDF48 표기를 현장 ID로 채택하지 않습니다.",
+      "equipment_ids": [
+        "FN04"
+      ],
+      "declared_scope": [
+        "FN04"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P02"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C05",
+        "equipment": [
+          "FN04"
+        ],
+        "pages": [
+          48,
+          52
+        ],
+        "rows": [
+          "2_3",
+          "2_4"
+        ],
+        "observation": "PDF48 DUST14의 모터 그림은 M34/M38, 표의 TAG는 M31/M34, 케이블 접미사·PDF52 TO는 M31/M36입니다.",
+        "impact": "FN04 두 분기를 SC10 M34·VR04 M38과 잘못 병합할 수 있습니다.",
+        "validation": "OEM FG59의 M31/M36, 배치도, 양단 표찰·모터 명판을 별도로 대조합니다. PDF48 표기를 현장 ID로 채택하지 않습니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 48",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=48"
+        },
+        {
+          "label": "추가 시공도면 PDF 52",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=52"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C06",
+      "kind": "construction",
+      "source_id": "C06",
+      "title": "시공 자료 C06",
+      "observation": "배관도 PDF24의 LS25·LS26 No.는 5_3·5_4, 케이블 목록 PDF55에서는 5_4·5_5입니다. PDF55의 5_3은 RD01 ROT1TB2 간선입니다.",
+      "next_check": "전체 케이블 식별자+페이지+FROM/TO로 대조하고 제작사 개정본에서 참조 순번을 확인합니다.",
+      "equipment_ids": [
+        "PV02",
+        "EV03"
+      ],
+      "declared_scope": [
+        "PV02",
+        "EV03"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P07"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C06",
+        "equipment": [
+          "PV02",
+          "EV03"
+        ],
+        "pages": [
+          24,
+          55
+        ],
+        "rows": [
+          "5_3",
+          "5_4",
+          "5_5"
+        ],
+        "observation": "배관도 PDF24의 LS25·LS26 No.는 5_3·5_4, 케이블 목록 PDF55에서는 5_4·5_5입니다. PDF55의 5_3은 RD01 ROT1TB2 간선입니다.",
+        "impact": "짧은 No.만 따라가면 센서와 밸브 간선이 바뀝니다.",
+        "validation": "전체 케이블 식별자+페이지+FROM/TO로 대조하고 제작사 개정본에서 참조 순번을 확인합니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 24",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=24"
+        },
+        {
+          "label": "추가 시공도면 PDF 55",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=55"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "construction:C07",
+      "kind": "construction",
+      "source_id": "C07",
+      "title": "시공 자료 C07",
+      "observation": "케이블 식별자는 =EXI+MC04-SS11A지만 TO는 MC05 / SS11입니다.",
+      "next_check": "SS10·SS11 실물 위치, EXI1TB2 양단 단자와 OEM 회로도를 확인합니다. 이름만으로 소유 설비를 지정하지 않습니다.",
+      "equipment_ids": [
+        "MC04",
+        "MC05"
+      ],
+      "declared_scope": [
+        "MC04",
+        "MC05"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P08"
+      ],
+      "global_scope": false,
+      "source_file": "registers/construction-review.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "C07",
+        "equipment": [
+          "MC04",
+          "MC05"
+        ],
+        "pages": [
+          59
+        ],
+        "rows": [
+          "9_8"
+        ],
+        "observation": "케이블 식별자는 =EXI+MC04-SS11A지만 TO는 MC05 / SS11입니다.",
+        "impact": "MC04·MC05의 감시 신호와 정비 이력이 섞일 수 있습니다.",
+        "validation": "SS10·SS11 실물 위치, EXI1TB2 양단 단자와 OEM 회로도를 확인합니다. 이름만으로 소유 설비를 지정하지 않습니다.",
+        "status": "확인 대기",
+        "resolved": false,
+        "field_verified": false
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "시공 참조 작업지",
+          "path": "construction-guide.html"
+        },
+        {
+          "label": "추가 시공도면 PDF 59",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=59"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-01",
+      "kind": "common",
+      "source_id": "COM-01",
+      "title": "ON·OFF 값과 초기화",
+      "observation": "ON=%M0.0·OFF=%M0.1의 현재값, 초기화·외부 쓰기·호출 조건을 확인한다. 이름만으로 상수 True/False로 치환하지 않는다.",
+      "next_check": "ON=%M0.0·OFF=%M0.1의 현재값, 초기화·외부 쓰기·호출 조건을 확인한다. 이름만으로 상수 True/False로 치환하지 않는다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-01",
+        "title": "ON·OFF 값과 초기화",
+        "networks": [
+          1619,
+          1620,
+          1621,
+          1723
+        ],
+        "work": "ON=%M0.0·OFF=%M0.1의 현재값, 초기화·외부 쓰기·호출 조건을 확인한다. 이름만으로 상수 True/False로 치환하지 않는다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1619,
+        1620,
+        1621,
+        1723
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1619",
+          "path": "networks/network-1619.html"
+        },
+        {
+          "label": "원본 1620",
+          "path": "networks/network-1620.html"
+        },
+        {
+          "label": "원본 1621",
+          "path": "networks/network-1621.html"
+        },
+        {
+          "label": "원본 1723",
+          "path": "networks/network-1723.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-02",
+      "kind": "common",
+      "source_id": "COM-02",
+      "title": "주기와 카운터 시간",
+      "observation": "cyc_int2 ogni 1s의 실제 OB 설정·호출 간격과 카운터 증가를 대조한다. 단계 값을 초로 확정하기 전 시간 근거를 기록한다.",
+      "next_check": "cyc_int2 ogni 1s의 실제 OB 설정·호출 간격과 카운터 증가를 대조한다. 단계 값을 초로 확정하기 전 시간 근거를 기록한다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-02",
+        "title": "주기와 카운터 시간",
+        "networks": [
+          1723,
+          1841
+        ],
+        "work": "cyc_int2 ogni 1s의 실제 OB 설정·호출 간격과 카운터 증가를 대조한다. 단계 값을 초로 확정하기 전 시간 근거를 기록한다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1723,
+        1841
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1723",
+          "path": "networks/network-1723.html"
+        },
+        {
+          "label": "원본 1841",
+          "path": "networks/network-1841.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-03",
+      "kind": "common",
+      "source_id": "COM-03",
+      "title": "예열·생산 요청의 시작 주체",
+      "observation": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+      "next_check": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "BC01",
+        "FN04",
+        "PV01",
+        "RD01",
+        "PV02",
+        "MC04",
+        "VS01",
+        "BR01",
+        "FN01",
+        "FN02",
+        "FN03",
+        "FN06"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "BC01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "628",
+              "name": "Flag.M_BC_01"
+            },
+            {
+              "network": 1844,
+              "oref": "1163",
+              "name": "Flag.M_BC_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "608",
+              "name": "Flag.M_FN_04"
+            },
+            {
+              "network": 1844,
+              "oref": "952",
+              "name": "Flag.M_FN_04"
+            }
+          ]
+        },
+        {
+          "equipment": "PV01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "29",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1843,
+              "oref": "839",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1843,
+              "oref": "843",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1844,
+              "oref": "1159",
+              "name": "Flag.Enable_R1_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "RD01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "623",
+              "name": "Flag.M_RD_01"
+            },
+            {
+              "network": 1844,
+              "oref": "974",
+              "name": "Flag.M_RD_01"
+            }
+          ]
+        },
+        {
+          "equipment": "PV02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "617",
+              "name": "Flag.Enable_R2_GATE"
+            },
+            {
+              "network": 1844,
+              "oref": "965",
+              "name": "Flag.Enable_R2_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "MC04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "616",
+              "name": "Flag.M_MC_04"
+            },
+            {
+              "network": 1844,
+              "oref": "962",
+              "name": "Flag.M_MC_04"
+            }
+          ]
+        },
+        {
+          "equipment": "VS01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "614",
+              "name": "Flag.M_VS_01"
+            },
+            {
+              "network": 1844,
+              "oref": "955",
+              "name": "Flag.M_VS_01"
+            }
+          ]
+        },
+        {
+          "equipment": "BR01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "663",
+              "name": "Flag.Start_Burner"
+            },
+            {
+              "network": 1844,
+              "oref": "1012",
+              "name": "Flag.Start_Burner"
+            }
+          ]
+        },
+        {
+          "equipment": "FN01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "642",
+              "name": "Flag.M_FN_01"
+            },
+            {
+              "network": 1844,
+              "oref": "990",
+              "name": "Flag.M_FN_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "631",
+              "name": "Flag.M_FN_02"
+            },
+            {
+              "network": 1843,
+              "oref": "648",
+              "name": "Flag.M_FN_02"
+            },
+            {
+              "network": 1844,
+              "oref": "995",
+              "name": "Flag.M_FN_02"
+            }
+          ]
+        },
+        {
+          "equipment": "FN03",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "651",
+              "name": "Flag.M_FN_03"
+            },
+            {
+              "network": 1844,
+              "oref": "1000",
+              "name": "Flag.M_FN_03"
+            }
+          ]
+        },
+        {
+          "equipment": "FN06",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "655",
+              "name": "Flag.M_FN_06"
+            },
+            {
+              "network": 1844,
+              "oref": "1004",
+              "name": "Flag.M_FN_06"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P01",
+        "P02",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P11",
+        "P15",
+        "P16",
+        "P17",
+        "P18"
+      ],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-03",
+        "title": "예열·생산 요청의 시작 주체",
+        "networks": [
+          1842,
+          1843,
+          1844,
+          1846
+        ],
+        "work": "Data.Tipo_preset=1/2와 Flag.Auto_ON1의 HMI·외부·다른 언어 블록 쓰기를 찾는다. 복원 LAD의 직접 쓰기만으로 전체 요청 경로를 확정하지 않는다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1842,
+        1843,
+        1844,
+        1846
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1842",
+          "path": "networks/network-1842.html"
+        },
+        {
+          "label": "원본 1843",
+          "path": "networks/network-1843.html"
+        },
+        {
+          "label": "원본 1844",
+          "path": "networks/network-1844.html"
+        },
+        {
+          "label": "원본 1846",
+          "path": "networks/network-1846.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-04",
+      "kind": "common",
+      "source_id": "COM-04",
+      "title": "카운터 초기화 미해석",
+      "observation": "NOT 접점 Part92의 ORef74 이름과 호출을 TIA에서 확인한다. RefId4가 다른 피연산자와 같지만 해당 UID의 이름은 미복원 상태로 유지한다.",
+      "next_check": "NOT 접점 Part92의 ORef74 이름과 호출을 TIA에서 확인한다. RefId4가 다른 피연산자와 같지만 해당 UID의 이름은 미복원 상태로 유지한다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-04",
+        "title": "카운터 초기화 미해석",
+        "networks": [
+          1841
+        ],
+        "work": "NOT 접점 Part92의 ORef74 이름과 호출을 TIA에서 확인한다. RefId4가 다른 피연산자와 같지만 해당 UID의 이름은 미복원 상태로 유지한다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1841
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1841",
+          "path": "networks/network-1841.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-05",
+      "kind": "common",
+      "source_id": "COM-05",
+      "title": "리셋 타이머·출력",
+      "observation": "TOF 두 인스턴스·PT=T#3s·Q→Q7.4/Q7.5 경로와 SD Tag_160의 S5T#1S를 현재 프로그램·출력 회로에서 대조한다. 알람 해제·인버터 출력·경음기 정지를 구분한다.",
+      "next_check": "TOF 두 인스턴스·PT=T#3s·Q→Q7.4/Q7.5 경로와 SD Tag_160의 S5T#1S를 현재 프로그램·출력 회로에서 대조한다. 알람 해제·인버터 출력·경음기 정지를 구분한다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-05",
+        "title": "리셋 타이머·출력",
+        "networks": [
+          930,
+          931
+        ],
+        "work": "TOF 두 인스턴스·PT=T#3s·Q→Q7.4/Q7.5 경로와 SD Tag_160의 S5T#1S를 현재 프로그램·출력 회로에서 대조한다. 알람 해제·인버터 출력·경음기 정지를 구분한다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        930,
+        931
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 930",
+          "path": "networks/network-930.html"
+        },
+        {
+          "label": "원본 931",
+          "path": "networks/network-931.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-06",
+      "kind": "common",
+      "source_id": "COM-06",
+      "title": "비상 모듈 알람의 Set/Reset",
+      "observation": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+      "next_check": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "BC01",
+        "FN04",
+        "PV01",
+        "RD01",
+        "MC04",
+        "VS01",
+        "FN01",
+        "FN02",
+        "FN03",
+        "FN06"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "BC01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "1003",
+              "name": "Flag.M_BC_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "1004",
+              "name": "Flag.M_FN_04"
+            }
+          ]
+        },
+        {
+          "equipment": "PV01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "1009",
+              "name": "Flag.Enable_R1_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "RD01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "1008",
+              "name": "Flag.M_RD_01"
+            }
+          ]
+        },
+        {
+          "equipment": "MC04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "1015",
+              "name": "Flag.M_MC_04"
+            }
+          ]
+        },
+        {
+          "equipment": "VS01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "1024",
+              "name": "Flag.M_VS_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "996",
+              "name": "Flag.M_FN_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "989",
+              "name": "Flag.M_FN_02"
+            }
+          ]
+        },
+        {
+          "equipment": "FN03",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "988",
+              "name": "Flag.M_FN_03"
+            }
+          ]
+        },
+        {
+          "equipment": "FN06",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1847,
+              "oref": "991",
+              "name": "Flag.M_FN_06"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P01",
+        "P02",
+        "P05",
+        "P06",
+        "P08",
+        "P09",
+        "P15",
+        "P16",
+        "P17",
+        "P18"
+      ],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-06",
+        "title": "비상 모듈 알람의 Set/Reset",
+        "networks": [
+          1824,
+          1846,
+          1847
+        ],
+        "work": "Inputs.EM_OK 불량과 RESET_ALLARM이 겹칠 때 같은 알람의 Set·Reset 및 이후 쓰기를 확인한다. 리셋만으로 원인 제거·하드웨어 복구 완료로 판단하지 않는다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1824,
+        1846,
+        1847
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1824",
+          "path": "networks/network-1824.html"
+        },
+        {
+          "label": "원본 1846",
+          "path": "networks/network-1846.html"
+        },
+        {
+          "label": "원본 1847",
+          "path": "networks/network-1847.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-07",
+      "kind": "common",
+      "source_id": "COM-07",
+      "title": "기동 초기화와 기억 상태",
+      "observation": "startup only의 실제 OB 조건·미해석 Move 대상 범위·DB 유지 설정·게이트 닫힘 메모를 대조한다. 닫힘 메모는 실제 센서 응답과 별도로 기록한다.",
+      "next_check": "startup only의 실제 OB 조건·미해석 Move 대상 범위·DB 유지 설정·게이트 닫힘 메모를 대조한다. 닫힘 메모는 실제 센서 응답과 별도로 기록한다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "MV01",
+        "MV03",
+        "MV06"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "MV01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 404,
+              "oref": "315",
+              "name": "Flag.MV01_Auto"
+            }
+          ]
+        },
+        {
+          "equipment": "MV03",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 404,
+              "oref": "318",
+              "name": "Flag.MV03_Auto"
+            }
+          ]
+        },
+        {
+          "equipment": "MV06",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 404,
+              "oref": "322",
+              "name": "Flag.MV06_Auto"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P19",
+        "P20",
+        "P21"
+      ],
+      "global_scope": true,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-07",
+        "title": "기동 초기화와 기억 상태",
+        "networks": [
+          402,
+          403,
+          404,
+          405
+        ],
+        "work": "startup only의 실제 OB 조건·미해석 Move 대상 범위·DB 유지 설정·게이트 닫힘 메모를 대조한다. 닫힘 메모는 실제 센서 응답과 별도로 기록한다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        402,
+        403,
+        404,
+        405
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 402",
+          "path": "networks/network-402.html"
+        },
+        {
+          "label": "원본 403",
+          "path": "networks/network-403.html"
+        },
+        {
+          "label": "원본 404",
+          "path": "networks/network-404.html"
+        },
+        {
+          "label": "원본 405",
+          "path": "networks/network-405.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-08",
+      "kind": "common",
+      "source_id": "COM-08",
+      "title": "BC01 요청과 출력 허가",
+      "observation": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+      "next_check": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+      "equipment_ids": [
+        "BC01"
+      ],
+      "declared_scope": [
+        "BC01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "FN04",
+        "PV01",
+        "RD01",
+        "PV02",
+        "MC04",
+        "VS01",
+        "BR01",
+        "FN01",
+        "FN02",
+        "FN03",
+        "FN06"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "FN04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "608",
+              "name": "Flag.M_FN_04"
+            },
+            {
+              "network": 1844,
+              "oref": "952",
+              "name": "Flag.M_FN_04"
+            },
+            {
+              "network": 1847,
+              "oref": "1004",
+              "name": "Flag.M_FN_04"
+            }
+          ]
+        },
+        {
+          "equipment": "PV01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "29",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1843,
+              "oref": "839",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1843,
+              "oref": "843",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1844,
+              "oref": "1159",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1847,
+              "oref": "1009",
+              "name": "Flag.Enable_R1_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "RD01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "623",
+              "name": "Flag.M_RD_01"
+            },
+            {
+              "network": 1844,
+              "oref": "974",
+              "name": "Flag.M_RD_01"
+            },
+            {
+              "network": 1847,
+              "oref": "1008",
+              "name": "Flag.M_RD_01"
+            }
+          ]
+        },
+        {
+          "equipment": "PV02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "617",
+              "name": "Flag.Enable_R2_GATE"
+            },
+            {
+              "network": 1844,
+              "oref": "965",
+              "name": "Flag.Enable_R2_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "MC04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "616",
+              "name": "Flag.M_MC_04"
+            },
+            {
+              "network": 1844,
+              "oref": "962",
+              "name": "Flag.M_MC_04"
+            },
+            {
+              "network": 1847,
+              "oref": "1015",
+              "name": "Flag.M_MC_04"
+            }
+          ]
+        },
+        {
+          "equipment": "VS01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "614",
+              "name": "Flag.M_VS_01"
+            },
+            {
+              "network": 1844,
+              "oref": "955",
+              "name": "Flag.M_VS_01"
+            },
+            {
+              "network": 1847,
+              "oref": "1024",
+              "name": "Flag.M_VS_01"
+            }
+          ]
+        },
+        {
+          "equipment": "BR01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "663",
+              "name": "Flag.Start_Burner"
+            },
+            {
+              "network": 1844,
+              "oref": "1012",
+              "name": "Flag.Start_Burner"
+            }
+          ]
+        },
+        {
+          "equipment": "FN01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "642",
+              "name": "Flag.M_FN_01"
+            },
+            {
+              "network": 1844,
+              "oref": "990",
+              "name": "Flag.M_FN_01"
+            },
+            {
+              "network": 1847,
+              "oref": "996",
+              "name": "Flag.M_FN_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "631",
+              "name": "Flag.M_FN_02"
+            },
+            {
+              "network": 1843,
+              "oref": "648",
+              "name": "Flag.M_FN_02"
+            },
+            {
+              "network": 1844,
+              "oref": "995",
+              "name": "Flag.M_FN_02"
+            },
+            {
+              "network": 1847,
+              "oref": "989",
+              "name": "Flag.M_FN_02"
+            }
+          ]
+        },
+        {
+          "equipment": "FN03",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "651",
+              "name": "Flag.M_FN_03"
+            },
+            {
+              "network": 1844,
+              "oref": "1000",
+              "name": "Flag.M_FN_03"
+            },
+            {
+              "network": 1847,
+              "oref": "988",
+              "name": "Flag.M_FN_03"
+            }
+          ]
+        },
+        {
+          "equipment": "FN06",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "655",
+              "name": "Flag.M_FN_06"
+            },
+            {
+              "network": 1844,
+              "oref": "1004",
+              "name": "Flag.M_FN_06"
+            },
+            {
+              "network": 1847,
+              "oref": "991",
+              "name": "Flag.M_FN_06"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P01",
+        "P02",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P11",
+        "P15",
+        "P16",
+        "P17",
+        "P18"
+      ],
+      "global_scope": false,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-08",
+        "title": "BC01 요청과 출력 허가",
+        "networks": [
+          1843,
+          1844,
+          1847,
+          1935
+        ],
+        "work": "Flag.M_BC_01, R1_GATE_LOOP_ON, MemoCMD_BC01_Startup, Maintenance_ON, Start BC01 및 피드백을 함께 기록한다. 자동 요청 Set만으로 실제 운전을 판단하지 않는다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1843,
+        1844,
+        1847,
+        1935
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1843",
+          "path": "networks/network-1843.html"
+        },
+        {
+          "label": "원본 1844",
+          "path": "networks/network-1844.html"
+        },
+        {
+          "label": "원본 1847",
+          "path": "networks/network-1847.html"
+        },
+        {
+          "label": "원본 1935",
+          "path": "networks/network-1935.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-09",
+      "kind": "common",
+      "source_id": "COM-09",
+      "title": "버너 허가의 서로 다른 주소",
+      "observation": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+      "next_check": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+      "equipment_ids": [
+        "BR01",
+        "FN03",
+        "MV03"
+      ],
+      "declared_scope": [
+        "BR01",
+        "FN03",
+        "MV03"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "FN04",
+        "RD01",
+        "FN01",
+        "FN02",
+        "FN06"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "FN04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1857,
+              "oref": "29",
+              "name": "Inputs.FN04 Run"
+            }
+          ]
+        },
+        {
+          "equipment": "RD01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1857,
+              "oref": "33",
+              "name": "Inputs.RD01 run"
+            }
+          ]
+        },
+        {
+          "equipment": "FN01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1857,
+              "oref": "24",
+              "name": "Inputs.FN01 Run"
+            }
+          ]
+        },
+        {
+          "equipment": "FN02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1857,
+              "oref": "41",
+              "name": "Inputs.FN02 Run"
+            }
+          ]
+        },
+        {
+          "equipment": "FN06",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1857,
+              "oref": "33",
+              "name": "Inputs.RD01 run"
+            },
+            {
+              "network": 1857,
+              "oref": "37",
+              "name": "Inputs.FEEDBACKMOTOR FN-06"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P02",
+        "P06",
+        "P11",
+        "P15",
+        "P16",
+        "P17",
+        "P18",
+        "P20"
+      ],
+      "global_scope": false,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-09",
+        "title": "버너 허가의 서로 다른 주소",
+        "networks": [
+          1857,
+          1858,
+          1866,
+          1868
+        ],
+        "work": "Enable start burner=%M48.2와 Enable start burner(1)=%M48.0을 구분한다. FN03 응답·세정 단계·Lock Burner·외부 버너 제어기의 허가를 대조한다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1857,
+        1858,
+        1866,
+        1868
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1857",
+          "path": "networks/network-1857.html"
+        },
+        {
+          "label": "원본 1858",
+          "path": "networks/network-1858.html"
+        },
+        {
+          "label": "원본 1866",
+          "path": "networks/network-1866.html"
+        },
+        {
+          "label": "원본 1868",
+          "path": "networks/network-1868.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "common:COM-10",
+      "kind": "common",
+      "source_id": "COM-10",
+      "title": "OFF 분기의 활성 여부·재기동",
+      "observation": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+      "next_check": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+      "equipment_ids": [
+        "FN02",
+        "FN03",
+        "MC05",
+        "BR01"
+      ],
+      "declared_scope": [
+        "FN02",
+        "FN03",
+        "MC05",
+        "BR01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "BC01",
+        "FN04",
+        "PV01",
+        "RD01",
+        "PV02",
+        "MC04",
+        "VS01",
+        "FN01",
+        "FN06"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "BC01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "628",
+              "name": "Flag.M_BC_01"
+            },
+            {
+              "network": 1844,
+              "oref": "1163",
+              "name": "Flag.M_BC_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "608",
+              "name": "Flag.M_FN_04"
+            },
+            {
+              "network": 1844,
+              "oref": "952",
+              "name": "Flag.M_FN_04"
+            }
+          ]
+        },
+        {
+          "equipment": "PV01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "29",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1843,
+              "oref": "839",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1843,
+              "oref": "843",
+              "name": "Flag.Enable_R1_GATE"
+            },
+            {
+              "network": 1844,
+              "oref": "1159",
+              "name": "Flag.Enable_R1_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "RD01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "623",
+              "name": "Flag.M_RD_01"
+            },
+            {
+              "network": 1844,
+              "oref": "974",
+              "name": "Flag.M_RD_01"
+            }
+          ]
+        },
+        {
+          "equipment": "PV02",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "617",
+              "name": "Flag.Enable_R2_GATE"
+            },
+            {
+              "network": 1844,
+              "oref": "965",
+              "name": "Flag.Enable_R2_GATE"
+            }
+          ]
+        },
+        {
+          "equipment": "MC04",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "616",
+              "name": "Flag.M_MC_04"
+            },
+            {
+              "network": 1844,
+              "oref": "962",
+              "name": "Flag.M_MC_04"
+            }
+          ]
+        },
+        {
+          "equipment": "VS01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "614",
+              "name": "Flag.M_VS_01"
+            },
+            {
+              "network": 1844,
+              "oref": "955",
+              "name": "Flag.M_VS_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "642",
+              "name": "Flag.M_FN_01"
+            },
+            {
+              "network": 1844,
+              "oref": "990",
+              "name": "Flag.M_FN_01"
+            }
+          ]
+        },
+        {
+          "equipment": "FN06",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1843,
+              "oref": "655",
+              "name": "Flag.M_FN_06"
+            },
+            {
+              "network": 1844,
+              "oref": "1004",
+              "name": "Flag.M_FN_06"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P01",
+        "P02",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P11",
+        "P15",
+        "P16",
+        "P17",
+        "P18"
+      ],
+      "global_scope": false,
+      "source_file": "registers/common-control.json",
+      "source_status": "확인 대기",
+      "raw": {
+        "id": "COM-10",
+        "title": "OFF 분기의 활성 여부·재기동",
+        "networks": [
+          1843,
+          1844,
+          1865,
+          1866
+        ],
+        "work": "추가 OFF 접점이 있는 FN02 해제·온도 설정·MC05·FN03 요청 분기를 현재값·호출·다른 쓰기와 대조한다. 삭제하거나 조건을 활성화하기 전 의도를 확인한다.",
+        "status": "확인 대기"
+      },
+      "networks": [
+        1843,
+        1844,
+        1865,
+        1866
+      ],
+      "links": [
+        {
+          "label": "공통 확인 목록",
+          "path": "common-control.html#checks"
+        },
+        {
+          "label": "원본 1843",
+          "path": "networks/network-1843.html"
+        },
+        {
+          "label": "원본 1844",
+          "path": "networks/network-1844.html"
+        },
+        {
+          "label": "원본 1865",
+          "path": "networks/network-1865.html"
+        },
+        {
+          "label": "원본 1866",
+          "path": "networks/network-1866.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "improvement:IMP-01",
+      "kind": "improvement",
+      "source_id": "IMP-01",
+      "title": "FN03 · 원본 구조 개선 검토",
+      "observation": "Tag_66에 연결한 SD 코일 Part 854·908 두 곳이 있습니다. 같은 RefId 95와 35초 설정, Memo_M25_Running 분기와 PContact를 확인했습니다.",
+      "next_check": "V18 TIA에서 펄스 접점과 두 SD 실행 순서·각 조건·온라인 타이머를 대조",
+      "equipment_ids": [
+        "FN03"
+      ],
+      "declared_scope": [
+        "FN03"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "BR01"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "BR01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1801,
+              "oref": "55",
+              "name": "Inputs.FN03 Run"
+            },
+            {
+              "network": 1801,
+              "oref": "60",
+              "name": "Inputs.FN03 Run"
+            },
+            {
+              "network": 1801,
+              "oref": "867",
+              "name": "Inputs.FN03 Run"
+            },
+            {
+              "network": 1801,
+              "oref": "873",
+              "name": "Inputs.FN03 Run"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P11",
+        "P17"
+      ],
+      "global_scope": false,
+      "source_file": "registers/improvement-review.json",
+      "source_status": "원본 구조 확인 / 활성 동작·수정 필요성 미확정",
+      "raw": {
+        "id": "IMP-01",
+        "equipment": "FN03",
+        "networks": [
+          1801
+        ],
+        "observation": "Tag_66에 연결한 SD 코일 Part 854·908 두 곳이 있습니다. 같은 RefId 95와 35초 설정, Memo_M25_Running 분기와 PContact를 확인했습니다.",
+        "impact": "감시 타이머의 실제 시작·리셋·유지와 고장 검출 시점이 단순 모델과 달라질 수 있음",
+        "validation": "V18 TIA에서 펄스 접점과 두 SD 실행 순서·각 조건·온라인 타이머를 대조",
+        "proposal": "중복 타이머 구동의 의도가 확인된 뒤 타이머 소유와 운전 모드별 조건을 명시",
+        "status": "원본 구조 확인 / 활성 동작·수정 필요성 미확정"
+      },
+      "networks": [
+        1801
+      ],
+      "links": [
+        {
+          "label": "개선 후보 전체 목록",
+          "path": "improvement-review.html"
+        },
+        {
+          "label": "개별 영향·대안·확인",
+          "path": "improvement-guides/IMP-01.html"
+        },
+        {
+          "label": "원본 1801",
+          "path": "networks/network-1801.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "improvement:IMP-02",
+      "kind": "improvement",
+      "source_id": "IMP-02",
+      "title": "MV06 · 원본 구조 개선 검토",
+      "observation": "열기·닫기 경로에 ON의 Negated operand가 있으며 정적 조건은 NOT ON으로 시작합니다. 같은 경로의 일부 분기에는 ON도 참조됩니다.",
+      "next_check": "ON(M0.0)의 쓰기와 호출, 다른 MV06 출력 쓰기, 현재 활성 네트워크를 확인",
+      "equipment_ids": [
+        "MV06"
+      ],
+      "declared_scope": [
+        "MV06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P21"
+      ],
+      "global_scope": false,
+      "source_file": "registers/improvement-review.json",
+      "source_status": "원본 반전 접점 확인 / 오류 여부 미확정",
+      "raw": {
+        "id": "IMP-02",
+        "equipment": "MV06",
+        "networks": [
+          1711
+        ],
+        "observation": "열기·닫기 경로에 ON의 Negated operand가 있으며 정적 조건은 NOT ON으로 시작합니다. 같은 경로의 일부 분기에는 ON도 참조됩니다.",
+        "impact": "활성·미사용 로직 또는 운전 조건 구분 없이 수동·자동 허가를 설명하면 잘못 판단할 수 있음",
+        "validation": "ON(M0.0)의 쓰기와 호출, 다른 MV06 출력 쓰기, 현재 활성 네트워크를 확인",
+        "proposal": "활성 범위·운전 조건을 문서화하고 확인 후 불필요한 경로 정리 여부 검토",
+        "status": "원본 반전 접점 확인 / 오류 여부 미확정"
+      },
+      "networks": [
+        1711
+      ],
+      "links": [
+        {
+          "label": "개선 후보 전체 목록",
+          "path": "improvement-review.html"
+        },
+        {
+          "label": "개별 영향·대안·확인",
+          "path": "improvement-guides/IMP-02.html"
+        },
+        {
+          "label": "원본 1711",
+          "path": "networks/network-1711.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "improvement:IMP-03",
+      "kind": "improvement",
+      "source_id": "IMP-03",
+      "title": "MC04 · 원본 구조 개선 검토",
+      "observation": "VS01 미운전 시 요청 해제 조건은 Allarm.Maintenance_ON입니다. BC01 등 다른 경로의 Flag.Maintenance_ON과 이름 공간이 다릅니다.",
+      "next_check": "DB 선언·주소·읽기·쓰기와 현재 HMI 모드 전달을 대조",
+      "equipment_ids": [
+        "MC04"
+      ],
+      "declared_scope": [
+        "MC04"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "VS01"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "VS01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1941,
+              "oref": "27",
+              "name": "Inputs.VS01 run"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P08",
+        "P09"
+      ],
+      "global_scope": false,
+      "source_file": "registers/improvement-review.json",
+      "source_status": "원본 신호 명칭 차이 확인 / 동일성 미확정",
+      "raw": {
+        "id": "IMP-03",
+        "equipment": "MC04",
+        "networks": [
+          1941
+        ],
+        "observation": "VS01 미운전 시 요청 해제 조건은 Allarm.Maintenance_ON입니다. BC01 등 다른 경로의 Flag.Maintenance_ON과 이름 공간이 다릅니다.",
+        "impact": "서로 다른 유지보수 신호를 같은 값으로 설명하거나 치환할 위험",
+        "validation": "DB 선언·주소·읽기·쓰기와 현재 HMI 모드 전달을 대조",
+        "proposal": "실제 의미가 확인되면 유지보수 모드의 명칭·표시·허가 정책을 일관되게 정리",
+        "status": "원본 신호 명칭 차이 확인 / 동일성 미확정"
+      },
+      "networks": [
+        1941
+      ],
+      "links": [
+        {
+          "label": "개선 후보 전체 목록",
+          "path": "improvement-review.html"
+        },
+        {
+          "label": "개별 영향·대안·확인",
+          "path": "improvement-guides/IMP-03.html"
+        },
+        {
+          "label": "원본 1941",
+          "path": "networks/network-1941.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "improvement:IMP-04",
+      "kind": "improvement",
+      "source_id": "IMP-04",
+      "title": "FN06 · 원본 구조 개선 검토",
+      "observation": "FN06 관련 요청 해제에 Allarm.MBVA01_FAULT를 참조합니다. 고장 태그 이름이 FN06 이름과 다릅니다.",
+      "next_check": "알람 Set·Reset, 내부 선언과 HMI 문구, 도면과 실제 팬을 대조",
+      "equipment_ids": [
+        "FN06"
+      ],
+      "declared_scope": [
+        "FN06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [
+        "RD01"
+      ],
+      "relationship_evidence": [
+        {
+          "equipment": "RD01",
+          "basis": "exact native name reference",
+          "refs": [
+            {
+              "network": 1955,
+              "oref": "23",
+              "name": "Inputs.RD01 run"
+            }
+          ]
+        }
+      ],
+      "priority_keys": [
+        "P06",
+        "P18"
+      ],
+      "global_scope": false,
+      "source_file": "registers/improvement-review.json",
+      "source_status": "원본 참조 확인 / 태그 의미 미확정",
+      "raw": {
+        "id": "IMP-04",
+        "equipment": "FN06",
+        "networks": [
+          1802,
+          1955
+        ],
+        "observation": "FN06 관련 요청 해제에 Allarm.MBVA01_FAULT를 참조합니다. 고장 태그 이름이 FN06 이름과 다릅니다.",
+        "impact": "정비 시 최초 고장·장치 대응을 잘못 찾을 수 있음",
+        "validation": "알람 Set·Reset, 내부 선언과 HMI 문구, 도면과 실제 팬을 대조",
+        "proposal": "별칭 또는 과거 장치명 관계를 근거와 함께 표시하고 확인 후 명칭 정리 검토",
+        "status": "원본 참조 확인 / 태그 의미 미확정"
+      },
+      "networks": [
+        1802,
+        1955
+      ],
+      "links": [
+        {
+          "label": "개선 후보 전체 목록",
+          "path": "improvement-review.html"
+        },
+        {
+          "label": "개별 영향·대안·확인",
+          "path": "improvement-guides/IMP-04.html"
+        },
+        {
+          "label": "원본 1802",
+          "path": "networks/network-1802.html"
+        },
+        {
+          "label": "원본 1955",
+          "path": "networks/network-1955.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "improvement:IMP-05",
+      "kind": "improvement",
+      "source_id": "IMP-05",
+      "title": "BR01·MV03 · 원본 구조 개선 검토",
+      "observation": "Close MV03 for Burner Startup을 Set하는 한 정적 경로에 Inputs.MV03 Close와 NOT Inputs.MV03 Close가 동시에 나타납니다. 별도 상태 7 경로도 존재합니다.",
+      "next_check": "두 피연산자의 UID/RID·원본 접점과 TIA 표시, 단계·호출 문맥을 확인",
+      "equipment_ids": [
+        "BR01",
+        "MV03"
+      ],
+      "declared_scope": [
+        "BR01",
+        "MV03"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P11",
+        "P20"
+      ],
+      "global_scope": false,
+      "source_file": "registers/improvement-review.json",
+      "source_status": "정적 경로 확인 / TIA에서 재확인 필요",
+      "raw": {
+        "id": "IMP-05",
+        "equipment": "BR01·MV03",
+        "networks": [
+          1868
+        ],
+        "observation": "Close MV03 for Burner Startup을 Set하는 한 정적 경로에 Inputs.MV03 Close와 NOT Inputs.MV03 Close가 동시에 나타납니다. 별도 상태 7 경로도 존재합니다.",
+        "impact": "해당 분기를 실제 동작으로 설명하면 원본의 활성·비활성 경로를 혼동할 수 있음",
+        "validation": "두 피연산자의 UID/RID·원본 접점과 TIA 표시, 단계·호출 문맥을 확인",
+        "proposal": "현재 쓰기 경로를 확정한 뒤 미도달 경로의 정리 또는 의도 문서화 검토",
+        "status": "정적 경로 확인 / TIA에서 재확인 필요"
+      },
+      "networks": [
+        1868
+      ],
+      "links": [
+        {
+          "label": "개선 후보 전체 목록",
+          "path": "improvement-review.html"
+        },
+        {
+          "label": "개별 영향·대안·확인",
+          "path": "improvement-guides/IMP-05.html"
+        },
+        {
+          "label": "원본 1868",
+          "path": "networks/network-1868.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "improvement:IMP-06",
+      "kind": "improvement",
+      "source_id": "IMP-06",
+      "title": "FN04 · 원본 구조 개선 검토",
+      "observation": "1689는 ON일 때 Data.SET_PERC_FN04<5를5, >100을100으로 씁니다(Part831·839). 1965는 같은 설정=0을 요청 해제 조건으로 읽습니다.",
+      "next_check": "아날로그 출력 변환·모터 제어 블록의 호출 조건과 순서, HMI·자동 시퀀스의 동일 설정 쓰기를 확인",
+      "equipment_ids": [
+        "FN04"
+      ],
+      "declared_scope": [
+        "FN04"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P02"
+      ],
+      "global_scope": false,
+      "source_file": "registers/improvement-review.json",
+      "source_status": "원본 제한 쓰기·정지 읽기 확인 / 전체 실행 도달 조건 미확정",
+      "raw": {
+        "id": "IMP-06",
+        "equipment": "FN04",
+        "networks": [
+          1689,
+          1965
+        ],
+        "observation": "1689는 ON일 때 Data.SET_PERC_FN04<5를5, >100을100으로 씁니다(Part831·839). 1965는 같은 설정=0을 요청 해제 조건으로 읽습니다.",
+        "impact": "한 네트워크에 설정0을 직접 넣은 부분 시험을 전체 프로그램의 설정0 정지 동작으로 오해할 수 있음",
+        "validation": "아날로그 출력 변환·모터 제어 블록의 호출 조건과 순서, HMI·자동 시퀀스의 동일 설정 쓰기를 확인",
+        "proposal": "실제 정지 요청과 운전 설정의 역할·최소값 정책을 문서화하고 정지 경로를 일관되게 검토",
+        "status": "원본 제한 쓰기·정지 읽기 확인 / 전체 실행 도달 조건 미확정"
+      },
+      "networks": [
+        1689,
+        1965
+      ],
+      "links": [
+        {
+          "label": "개선 후보 전체 목록",
+          "path": "improvement-review.html"
+        },
+        {
+          "label": "개별 영향·대안·확인",
+          "path": "improvement-guides/IMP-06.html"
+        },
+        {
+          "label": "원본 1689",
+          "path": "networks/network-1689.html"
+        },
+        {
+          "label": "원본 1965",
+          "path": "networks/network-1965.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P01",
+      "kind": "identity",
+      "source_id": "P01",
+      "title": "BC-01(벨트) · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "BC01"
+      ],
+      "declared_scope": [
+        "BC01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P01"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P01",
+        "name": "BC-01(벨트)",
+        "plc_id": "BC01",
+        "match": "tag",
+        "phase": "첫 상세 사례",
+        "x": 990,
+        "y": 1220,
+        "note": "",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P01.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P01.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P02",
+      "kind": "identity",
+      "source_id": "P02",
+      "title": "FN-04 팬 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 팬 본체와 모터의 관리 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "FN04"
+      ],
+      "declared_scope": [
+        "FN04"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P02"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P02",
+        "name": "FN-04 팬 모터",
+        "plc_id": "FN04",
+        "match": "tag",
+        "phase": "첫 상세 사례",
+        "x": 2250,
+        "y": 470,
+        "note": "팬 본체와 모터의 관리 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P02.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P02.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P03",
+      "kind": "identity",
+      "source_id": "P03",
+      "title": "웨잉호퍼1 · 동일성·제어 경계",
+      "observation": "PLC 대응 미확정 · 호퍼 번호·계량 제어 주체 확인. 호퍼2 태그를 대신 연결하지 않음",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P03"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "PLC 대응 미확정",
+      "raw": {
+        "key": "P03",
+        "name": "웨잉호퍼1",
+        "plc_id": "",
+        "match": "unknown",
+        "phase": "원료·제품 이송",
+        "x": 470,
+        "y": 1235,
+        "note": "호퍼 번호·계량 제어 주체 확인. 호퍼2 태그를 대신 연결하지 않음",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P03.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P03.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P04",
+      "kind": "identity",
+      "source_id": "P04",
+      "title": "웨잉호퍼배출컨베이어 · 동일성·제어 경계",
+      "observation": "PLC 대응 미확정 · 실제 컨베이어 태그·제어반·앞뒤 운전 신호 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P04"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "PLC 대응 미확정",
+      "raw": {
+        "key": "P04",
+        "name": "웨잉호퍼배출컨베이어",
+        "plc_id": "",
+        "match": "unknown",
+        "phase": "원료·제품 이송",
+        "x": 730,
+        "y": 1230,
+        "note": "실제 컨베이어 태그·제어반·앞뒤 운전 신호 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P04.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P04.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P05",
+      "kind": "identity",
+      "source_id": "P05",
+      "title": "PV-01 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "PV01"
+      ],
+      "declared_scope": [
+        "PV01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P05"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P05",
+        "name": "PV-01",
+        "plc_id": "PV01",
+        "match": "tag",
+        "phase": "원료·제품 이송",
+        "x": 1250,
+        "y": 1235,
+        "note": "",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P05.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P05.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P06",
+      "kind": "identity",
+      "source_id": "P06",
+      "title": "킬른 · 동일성·제어 경계",
+      "observation": "공정 역할 대응 후보 / 실물 확인 전 · 킬른 본체와 RD01 구동 설비의 관계를 확인. 동일 설비로 병합하지 않음",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "RD01"
+      ],
+      "declared_scope": [
+        "RD01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P06"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+      "raw": {
+        "key": "P06",
+        "name": "킬른",
+        "plc_id": "RD01",
+        "match": "candidate",
+        "phase": "원료·제품 이송",
+        "x": 1530,
+        "y": 1235,
+        "note": "킬른 본체와 RD01 구동 설비의 관계를 확인. 동일 설비로 병합하지 않음",
+        "identity_verified": false,
+        "sejin_id": "1766455617361"
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P06.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P06.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P07",
+      "kind": "identity",
+      "source_id": "P07",
+      "title": "PV-02 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "PV02"
+      ],
+      "declared_scope": [
+        "PV02"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P07"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P07",
+        "name": "PV-02",
+        "plc_id": "PV02",
+        "match": "tag",
+        "phase": "원료·제품 이송",
+        "x": 1830,
+        "y": 1230,
+        "note": "",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P07.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P07.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P08",
+      "kind": "identity",
+      "source_id": "P08",
+      "title": "MC04 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "MC04"
+      ],
+      "declared_scope": [
+        "MC04"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P08"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P08",
+        "name": "MC04",
+        "plc_id": "MC04",
+        "match": "tag",
+        "phase": "원료·제품 이송",
+        "x": 2090,
+        "y": 1220,
+        "note": "",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P08.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P08.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P09",
+      "kind": "identity",
+      "source_id": "P09",
+      "title": "VS01 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "VS01"
+      ],
+      "declared_scope": [
+        "VS01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P09"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P09",
+        "name": "VS01",
+        "plc_id": "VS01",
+        "match": "tag",
+        "phase": "원료·제품 이송",
+        "x": 2350,
+        "y": 1220,
+        "note": "",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P09.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P09.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P10",
+      "kind": "identity",
+      "source_id": "P10",
+      "title": "CC챔버 · 동일성·제어 경계",
+      "observation": "공정 역할 대응 후보 / 실물 확인 전 · 투입·배출 챔버 구분과 실물 위치 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "CC01"
+      ],
+      "declared_scope": [
+        "CC01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P10"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+      "raw": {
+        "key": "P10",
+        "name": "CC챔버",
+        "plc_id": "CC01",
+        "match": "candidate",
+        "phase": "원료·제품 이송",
+        "x": 1530,
+        "y": 1530,
+        "note": "투입·배출 챔버 구분과 실물 위치 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P10.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P10.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P11",
+      "kind": "identity",
+      "source_id": "P11",
+      "title": "BR01 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 버너 전용 도면과 연소 제어 경계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "BR01"
+      ],
+      "declared_scope": [
+        "BR01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P11"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P11",
+        "name": "BR01",
+        "plc_id": "BR01",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 750,
+        "y": 800,
+        "note": "버너 전용 도면과 연소 제어 경계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P11.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P11.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P12",
+      "kind": "identity",
+      "source_id": "P12",
+      "title": "재연소로 · 동일성·제어 경계",
+      "observation": "공정 역할 대응 후보 / 실물 확인 전 · 공정 역할을 기준으로 한 후보. 본체·버너·챔버 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "AB01"
+      ],
+      "declared_scope": [
+        "AB01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P12"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+      "raw": {
+        "key": "P12",
+        "name": "재연소로",
+        "plc_id": "AB01",
+        "match": "candidate",
+        "phase": "열처리·순환",
+        "x": 1050,
+        "y": 790,
+        "note": "공정 역할을 기준으로 한 후보. 본체·버너·챔버 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P12.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P12.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P13",
+      "kind": "identity",
+      "source_id": "P13",
+      "title": "열교환기 · 동일성·제어 경계",
+      "observation": "공정 역할 대응 후보 / 실물 확인 전 · 명판·P&ID·주변 연결로 동일성 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "HE01"
+      ],
+      "declared_scope": [
+        "HE01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P13"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "공정 역할 대응 후보 / 실물 확인 전",
+      "raw": {
+        "key": "P13",
+        "name": "열교환기",
+        "plc_id": "HE01",
+        "match": "candidate",
+        "phase": "열처리·순환",
+        "x": 1430,
+        "y": 800,
+        "note": "명판·P&ID·주변 연결로 동일성 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P13.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P13.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P14",
+      "kind": "identity",
+      "source_id": "P14",
+      "title": "2사이클론 · 동일성·제어 경계",
+      "observation": "PLC 대응 미확정 · 숫자 2가 장치 번호인지 수량인지 확인. CY02로 자동 연결하지 않음",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P14"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "PLC 대응 미확정",
+      "raw": {
+        "key": "P14",
+        "name": "2사이클론",
+        "plc_id": "",
+        "match": "unknown",
+        "phase": "열처리·순환",
+        "x": 1970,
+        "y": 790,
+        "note": "숫자 2가 장치 번호인지 수량인지 확인. CY02로 자동 연결하지 않음",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P14.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P14.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P15",
+      "kind": "identity",
+      "source_id": "P15",
+      "title": "FN-01 팬 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 팬 본체와 모터의 관리 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "FN01"
+      ],
+      "declared_scope": [
+        "FN01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P15"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P15",
+        "name": "FN-01 팬 모터",
+        "plc_id": "FN01",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 2250,
+        "y": 800,
+        "note": "팬 본체와 모터의 관리 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P15.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P15.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P16",
+      "kind": "identity",
+      "source_id": "P16",
+      "title": "FN-02 팬 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 팬 본체와 모터의 관리 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "FN02"
+      ],
+      "declared_scope": [
+        "FN02"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P16"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P16",
+        "name": "FN-02 팬 모터",
+        "plc_id": "FN02",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 1430,
+        "y": 485,
+        "note": "팬 본체와 모터의 관리 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P16.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P16.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P17",
+      "kind": "identity",
+      "source_id": "P17",
+      "title": "FN-03 팬 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 팬 본체와 모터의 관리 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "FN03"
+      ],
+      "declared_scope": [
+        "FN03"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P17"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P17",
+        "name": "FN-03 팬 모터",
+        "plc_id": "FN03",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 470,
+        "y": 795,
+        "note": "팬 본체와 모터의 관리 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P17.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P17.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P18",
+      "kind": "identity",
+      "source_id": "P18",
+      "title": "FN-06 팬 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 팬 본체와 모터의 관리 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "FN06"
+      ],
+      "declared_scope": [
+        "FN06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P18"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P18",
+        "name": "FN-06 팬 모터",
+        "plc_id": "FN06",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 1110,
+        "y": 1525,
+        "note": "팬 본체와 모터의 관리 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P18.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P18.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P19",
+      "kind": "identity",
+      "source_id": "P19",
+      "title": "MV-01 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "MV01"
+      ],
+      "declared_scope": [
+        "MV01"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P19"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P19",
+        "name": "MV-01",
+        "plc_id": "MV01",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 1710,
+        "y": 790,
+        "note": "",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P19.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P19.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P20",
+      "kind": "identity",
+      "source_id": "P20",
+      "title": "MV-03 댐퍼 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 댐퍼 본체와 구동모터 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "MV03"
+      ],
+      "declared_scope": [
+        "MV03"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P20"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P20",
+        "name": "MV-03 댐퍼 모터",
+        "plc_id": "MV03",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 1710,
+        "y": 480,
+        "note": "댐퍼 본체와 구동모터 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P20.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P20.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P21",
+      "kind": "identity",
+      "source_id": "P21",
+      "title": "MV-06 댐퍼 모터 · 동일성·제어 경계",
+      "observation": "태그명 일치 / 실물 확인 전 · 댐퍼 본체와 구동모터 관계 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [
+        "MV06"
+      ],
+      "declared_scope": [
+        "MV06"
+      ],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P21"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "태그명 일치 / 실물 확인 전",
+      "raw": {
+        "key": "P21",
+        "name": "MV-06 댐퍼 모터",
+        "plc_id": "MV06",
+        "match": "tag",
+        "phase": "열처리·순환",
+        "x": 1970,
+        "y": 475,
+        "note": "댐퍼 본체와 구동모터 관계 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P21.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P21.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P22",
+      "kind": "identity",
+      "source_id": "P22",
+      "title": "GSS · 동일성·제어 경계",
+      "observation": "PLC 대응 미확정 · 설비 카드·제어 주체·디코팅 연동 신호 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P22"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "PLC 대응 미확정",
+      "raw": {
+        "key": "P22",
+        "name": "GSS",
+        "plc_id": "",
+        "match": "unknown",
+        "phase": "연결 공정",
+        "x": 2610,
+        "y": 1525,
+        "note": "설비 카드·제어 주체·디코팅 연동 신호 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P22.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P22.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    },
+    {
+      "id": "identity:P23",
+      "kind": "identity",
+      "source_id": "P23",
+      "title": "85톤로(압연) · 동일성·제어 경계",
+      "observation": "PLC 대응 미확정 · GME 제어 범위와 상위 공정의 허가·정지 신호 확인",
+      "next_check": "명판·실물 설비ID·위치·본체/구동부·제어반/전용 제어기·P&ID 연결과 현재 I/O를 대조합니다. 태그 일치나 역할 후보만으로 실물 동일성을 확정하지 않습니다.",
+      "equipment_ids": [],
+      "declared_scope": [],
+      "unmapped_scope": [],
+      "related_equipment_ids": [],
+      "relationship_evidence": [],
+      "priority_keys": [
+        "P23"
+      ],
+      "global_scope": false,
+      "source_file": "registers/priority-equipment.csv",
+      "source_status": "PLC 대응 미확정",
+      "raw": {
+        "key": "P23",
+        "name": "85톤로(압연)",
+        "plc_id": "",
+        "match": "unknown",
+        "phase": "연결 공정",
+        "x": 2610,
+        "y": 1220,
+        "note": "GME 제어 범위와 상위 공정의 허가·정지 신호 확인",
+        "identity_verified": false,
+        "sejin_id": ""
+      },
+      "networks": [],
+      "links": [
+        {
+          "label": "실물 대응 작업지",
+          "path": "priority-guides/P23.html"
+        },
+        {
+          "label": "수리 판단 작업지",
+          "path": "repair-guides/P23.html"
+        }
+      ],
+      "identity_verified": false,
+      "field_verified": false,
+      "resolved": false
+    }
+  ],
+  "sources": {
+    "registers/source-conflict-review.csv": "b962b36775a95914eba6443fa1be0b47afea6c893d6f23526674bfa4abcf0475",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/common-control.json": "5b42877aecd7f80135c7a03d8cdfefc566533cc6a472e51a0b0a2996aab74d55",
+    "registers/improvement-review.json": "17b21258d5ab389957ad35c6a857396c976492e4ad5206600dea27a7a53e7e80",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/priority-equipment.csv": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705"
+  },
+  "original_pending_register_count": 1060,
+  "design_tests_preserved": 577,
+  "field_verified": 0,
+  "plc_changes": 0,
+  "simulator_development": "stopped_by_user",
+  "simulator_behavior_tests": "not_rerun"
+}

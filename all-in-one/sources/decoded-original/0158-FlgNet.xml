@@ -1,0 +1,141 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="23" Gate="Contact" />
+    <Part UId="26" Gate="Contact" />
+    <Part UId="28" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="33" Gate="SCoil" />
+    <Part UId="40" Gate="RCoil" />
+    <LRef UId="64" RefId="77" EN="false" ENO="false">
+      <Instance UId="72" RefId="78" />
+    </LRef>
+    <Part UId="48" Gate="Coil" />
+    <LRef UId="73" RefId="77" EN="false" ENO="false">
+      <Instance UId="74" RefId="84" />
+    </LRef>
+    <Part UId="60" Gate="Coil" />
+    <Part UId="32" Gate="Contact" />
+    <Part UId="39" Gate="Contact" />
+    <Part UId="44" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="49" Gate="SCoil" />
+    <Part UId="56" Gate="RCoil" />
+    <ORef UId="24" RefId="57" />
+    <ORef UId="27" RefId="61" />
+    <ORef UId="37" RefId="2" />
+    <ORef UId="43" RefId="61" />
+    <ORef UId="70" RefId="79" />
+    <ORef UId="71" />
+    <ORef UId="63" RefId="76" />
+    <ORef UId="75" RefId="79" />
+    <ORef UId="76" />
+    <ORef UId="55" RefId="74" />
+    <ORef UId="34" RefId="63" />
+    <ORef UId="41" RefId="62" />
+    <ORef UId="53" RefId="4" />
+    <ORef UId="59" RefId="62" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="23" PinName="in" />
+      <PCon UId="26" PinName="in" />
+      <PCon UId="32" PinName="in" />
+      <PCon UId="39" PinName="in" />
+    </Wire>
+    <Wire UId="22">
+      <OCon UId="24" />
+      <PCon UId="23" PinName="operand" />
+    </Wire>
+    <Wire UId="29">
+      <PCon UId="23" PinName="out" />
+      <PCon UId="28" PinName="in1" />
+    </Wire>
+    <Wire UId="25">
+      <OCon UId="27" />
+      <PCon UId="26" PinName="operand" />
+    </Wire>
+    <Wire UId="30">
+      <PCon UId="26" PinName="out" />
+      <PCon UId="28" PinName="in2" />
+    </Wire>
+    <Wire UId="38">
+      <PCon UId="28" PinName="out" />
+      <PCon UId="33" PinName="in" />
+      <PCon UId="40" PinName="in" />
+      <PCon UId="64" PinName="IN" />
+      <PCon UId="73" PinName="IN" />
+    </Wire>
+    <Wire UId="36">
+      <OCon UId="37" />
+      <PCon UId="33" PinName="operand" />
+    </Wire>
+    <Wire UId="42">
+      <OCon UId="43" />
+      <PCon UId="40" PinName="operand" />
+    </Wire>
+    <Wire UId="68">
+      <OCon UId="70" />
+      <PCon UId="64" PinName="PT" />
+    </Wire>
+    <Wire UId="67">
+      <PCon UId="64" PinName="Q" />
+      <PCon UId="48" PinName="in" />
+    </Wire>
+    <Wire UId="69">
+      <PCon UId="64" PinName="ET" />
+      <OCon UId="71" />
+    </Wire>
+    <Wire UId="62">
+      <OCon UId="63" />
+      <PCon UId="48" PinName="operand" />
+    </Wire>
+    <Wire UId="78">
+      <OCon UId="75" />
+      <PCon UId="73" PinName="PT" />
+    </Wire>
+    <Wire UId="77">
+      <PCon UId="73" PinName="Q" />
+      <PCon UId="60" PinName="in" />
+    </Wire>
+    <Wire UId="79">
+      <PCon UId="73" PinName="ET" />
+      <OCon UId="76" />
+    </Wire>
+    <Wire UId="51">
+      <OCon UId="55" />
+      <PCon UId="60" PinName="operand" />
+    </Wire>
+    <Wire UId="31">
+      <OCon UId="34" />
+      <PCon UId="32" PinName="operand" />
+    </Wire>
+    <Wire UId="45">
+      <PCon UId="32" PinName="out" />
+      <PCon UId="44" PinName="in1" />
+    </Wire>
+    <Wire UId="35">
+      <OCon UId="41" />
+      <PCon UId="39" PinName="operand" />
+    </Wire>
+    <Wire UId="46">
+      <PCon UId="39" PinName="out" />
+      <PCon UId="44" PinName="in2" />
+    </Wire>
+    <Wire UId="54">
+      <PCon UId="44" PinName="out" />
+      <PCon UId="49" PinName="in" />
+      <PCon UId="56" PinName="in" />
+    </Wire>
+    <Wire UId="52">
+      <OCon UId="53" />
+      <PCon UId="49" PinName="operand" />
+    </Wire>
+    <Wire UId="58">
+      <OCon UId="59" />
+      <PCon UId="56" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

@@ -1,0 +1,73 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <CRef UId="22" RefId="752">
+      <CodeBlock UId="23" RefId="751" />
+    </CRef>
+    <ORef UId="24" RefId="765" />
+    <ORef UId="25" RefId="766" />
+    <ORef UId="26" RefId="767" />
+    <ORef UId="27" RefId="771" />
+    <ORef UId="28" RefId="20" />
+    <ORef UId="29" RefId="48" />
+    <ORef UId="30" RefId="48" />
+    <ORef UId="31" RefId="48" />
+    <ORef UId="32" RefId="777" />
+    <ORef UId="33" RefId="778" />
+    <ORef UId="34" RefId="779" />
+    <ORef UId="35" RefId="780" />
+  </Parts>
+  <Wires>
+    <Wire UId="21">
+      <Powerrail />
+      <PCon UId="22" PinName="en" />
+    </Wire>
+    <Wire UId="37">
+      <OCon UId="24" />
+      <PCon UId="22" PinName="LS_Open" />
+    </Wire>
+    <Wire UId="38">
+      <OCon UId="25" />
+      <PCon UId="22" PinName="LS_Close" />
+    </Wire>
+    <Wire UId="39">
+      <OCon UId="26" />
+      <PCon UId="22" PinName="Selector" />
+    </Wire>
+    <Wire UId="40">
+      <OCon UId="27" />
+      <PCon UId="22" PinName="Allarm1" />
+    </Wire>
+    <Wire UId="41">
+      <OCon UId="28" />
+      <PCon UId="22" PinName="Allarm2" />
+    </Wire>
+    <Wire UId="42">
+      <OCon UId="29" />
+      <PCon UId="22" PinName="Allarm3" />
+    </Wire>
+    <Wire UId="43">
+      <OCon UId="30" />
+      <PCon UId="22" PinName="Allarm4" />
+    </Wire>
+    <Wire UId="44">
+      <OCon UId="31" />
+      <PCon UId="22" PinName="Allarm5" />
+    </Wire>
+    <Wire UId="45">
+      <PCon UId="22" PinName="HMI_LS_Open" />
+      <OCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <PCon UId="22" PinName="HMI_LS_Close" />
+      <OCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <PCon UId="22" PinName="Total_Allarms" />
+      <OCon UId="34" />
+    </Wire>
+    <Wire UId="48">
+      <PCon UId="22" PinName="HMI_Selectoor" />
+      <OCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet>

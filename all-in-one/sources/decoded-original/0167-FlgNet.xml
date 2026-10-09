@@ -1,0 +1,84 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="954" Gate="Contact" />
+    <Part UId="914" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="920" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="923" Gate="SCoil" />
+    <Part UId="926" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="929" Gate="RCoil" />
+    <ORef UId="930" RefId="4" />
+    <ORef UId="931" RefId="12" />
+    <ORef UId="932" RefId="79" />
+    <ORef UId="933" RefId="7" />
+    <ORef UId="934" RefId="8" />
+    <ORef UId="935" RefId="29" />
+    <ORef UId="936" RefId="7" />
+    <ORef UId="937" RefId="42" />
+    <ORef UId="938" RefId="4" />
+  </Parts>
+  <Wires>
+    <Wire UId="956">
+      <Powerrail />
+      <PCon UId="954" PinName="in" />
+    </Wire>
+    <Wire UId="939">
+      <OCon UId="930" />
+      <PCon UId="954" PinName="operand" />
+    </Wire>
+    <Wire UId="955">
+      <PCon UId="954" PinName="out" />
+      <PCon UId="914" PinName="pre" />
+    </Wire>
+    <Wire UId="940">
+      <OCon UId="931" />
+      <PCon UId="914" PinName="in1" />
+    </Wire>
+    <Wire UId="941">
+      <OCon UId="932" />
+      <PCon UId="914" PinName="in2" />
+    </Wire>
+    <Wire UId="942">
+      <PCon UId="914" PinName="out" />
+      <PCon UId="920" PinName="pre" />
+      <PCon UId="926" PinName="pre" />
+    </Wire>
+    <Wire UId="943">
+      <OCon UId="933" />
+      <PCon UId="920" PinName="in1" />
+    </Wire>
+    <Wire UId="944">
+      <OCon UId="934" />
+      <PCon UId="920" PinName="in2" />
+    </Wire>
+    <Wire UId="945">
+      <PCon UId="920" PinName="out" />
+      <PCon UId="923" PinName="in" />
+    </Wire>
+    <Wire UId="947">
+      <OCon UId="935" />
+      <PCon UId="923" PinName="operand" />
+    </Wire>
+    <Wire UId="948">
+      <OCon UId="936" />
+      <PCon UId="926" PinName="in1" />
+    </Wire>
+    <Wire UId="949">
+      <OCon UId="937" />
+      <PCon UId="926" PinName="in2" />
+    </Wire>
+    <Wire UId="950">
+      <PCon UId="926" PinName="out" />
+      <PCon UId="929" PinName="in" />
+    </Wire>
+    <Wire UId="952">
+      <OCon UId="938" />
+      <PCon UId="929" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

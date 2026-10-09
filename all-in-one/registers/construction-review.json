@@ -1,0 +1,147 @@
+{
+  "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+  "items": [
+    {
+      "id": "C01",
+      "equipment": [
+        "MV06"
+      ],
+      "pages": [
+        58
+      ],
+      "rows": [
+        "8_6",
+        "8_17"
+      ],
+      "observation": "=FLB+MV06-FLO4TB2A가 TM/CVV-S/4S/CR 시작 행과 DC/CVV/7G/UC01 시작 행에 반복됩니다.",
+      "impact": "식별자만 키로 쓰면 서로 다른 신호·시작점이 합쳐집니다.",
+      "validation": "제작사 수정본, 양단 케이블 표찰·접속함 단자 기록을 대조해 두 간선을 식별합니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    },
+    {
+      "id": "C02",
+      "equipment": [
+        "BR01",
+        "CC01"
+      ],
+      "pages": [
+        64
+      ],
+      "rows": [
+        "14_17",
+        "14_18"
+      ],
+      "observation": "=ENT+CC01-BR01F가 같은 FROM/TO·AI·4S 규격으로 두 행에 반복됩니다.",
+      "impact": "중복 기재인지 실제 두 간선인지 확정할 수 없습니다.",
+      "validation": "버너 전용 배선도와 양단 표찰·케이블 수를 확인합니다. 자동 중복 제거를 하지 않습니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    },
+    {
+      "id": "C03",
+      "equipment": [
+        "MV05",
+        "MV06"
+      ],
+      "pages": [
+        56
+      ],
+      "rows": [
+        "6_6",
+        "6_20"
+      ],
+      "observation": "MV05 FLO1TB2 간선 설명은 ZT06, 같은 접속함에서 나가는 직접 케이블·TO는 ZT05입니다.",
+      "impact": "MV06의 ZT06 또는 다른 센서로 잘못 연결될 수 있습니다.",
+      "validation": "MV05·MV06 실물 센서 표찰과 단자, 원본 회로도·PLC 심볼을 각각 확인합니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    },
+    {
+      "id": "C04",
+      "equipment": [
+        "RD01"
+      ],
+      "pages": [
+        24,
+        51
+      ],
+      "rows": [
+        "1_5"
+      ],
+      "observation": "=ROT+RD01-M03A: PDF24 배관표 SIZE16, PDF51 케이블 목록 SIZE25SB입니다.",
+      "impact": "도면만으로 케이블 단면·사양을 선택할 수 없습니다.",
+      "validation": "승인된 개정본과 실제 케이블·보호기기·모터 명판을 대조합니다. 이 매뉴얼에서 임의 규격을 확정하지 않습니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    },
+    {
+      "id": "C05",
+      "equipment": [
+        "FN04"
+      ],
+      "pages": [
+        48,
+        52
+      ],
+      "rows": [
+        "2_3",
+        "2_4"
+      ],
+      "observation": "PDF48 DUST14의 모터 그림은 M34/M38, 표의 TAG는 M31/M34, 케이블 접미사·PDF52 TO는 M31/M36입니다.",
+      "impact": "FN04 두 분기를 SC10 M34·VR04 M38과 잘못 병합할 수 있습니다.",
+      "validation": "OEM FG59의 M31/M36, 배치도, 양단 표찰·모터 명판을 별도로 대조합니다. PDF48 표기를 현장 ID로 채택하지 않습니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    },
+    {
+      "id": "C06",
+      "equipment": [
+        "PV02",
+        "EV03"
+      ],
+      "pages": [
+        24,
+        55
+      ],
+      "rows": [
+        "5_3",
+        "5_4",
+        "5_5"
+      ],
+      "observation": "배관도 PDF24의 LS25·LS26 No.는 5_3·5_4, 케이블 목록 PDF55에서는 5_4·5_5입니다. PDF55의 5_3은 RD01 ROT1TB2 간선입니다.",
+      "impact": "짧은 No.만 따라가면 센서와 밸브 간선이 바뀝니다.",
+      "validation": "전체 케이블 식별자+페이지+FROM/TO로 대조하고 제작사 개정본에서 참조 순번을 확인합니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    },
+    {
+      "id": "C07",
+      "equipment": [
+        "MC04",
+        "MC05"
+      ],
+      "pages": [
+        59
+      ],
+      "rows": [
+        "9_8"
+      ],
+      "observation": "케이블 식별자는 =EXI+MC04-SS11A지만 TO는 MC05 / SS11입니다.",
+      "impact": "MC04·MC05의 감시 신호와 정비 이력이 섞일 수 있습니다.",
+      "validation": "SS10·SS11 실물 위치, EXI1TB2 양단 단자와 OEM 회로도를 확인합니다. 이름만으로 소유 설비를 지정하지 않습니다.",
+      "status": "확인 대기",
+      "resolved": false,
+      "field_verified": false
+    }
+  ],
+  "resolved": 0,
+  "field_verified": 0,
+  "original_conflicts_preserved": 18
+}

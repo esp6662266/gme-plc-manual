@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "date": "2026-10-07",
+  "browser": "Codex in-app browser",
+  "single_entry_loaded": true,
+  "priority_cards": 23,
+  "fn04_io_addresses": [
+    "%I28.3",
+    "%I28.2",
+    "%IW394",
+    "%Q4.2",
+    "%Q17.1",
+    "%QW336"
+  ],
+  "manual_to_control_spec_kept_outer_app": true,
+  "selection_preserved": "P02",
+  "browser_back_restored_manual": true,
+  "selected_fn04_tests": 5,
+  "fn04_drawing_link": "sources/Electrical_Rev2.pdf#page=60",
+  "full_equipment_search": "EV61",
+  "ev61_output": "%Q19.2",
+  "unknown_equipment_kept_unmatched": "웨잉호퍼1",
+  "kiln_mapping_kept_candidate": "RD01",
+  "scope_preserved_across_view_change": true,
+  "local_note_saved_and_present_after_reload": true,
+  "note_backup_file_verified": "GME-work-notes-2026-10-07.json",
+  "narrow_viewport_css_width": 375,
+  "narrow_page_scroll_width": 375,
+  "viewport_override_reset": true,
+  "simulator_unimplemented_label_verified": true,
+  "scope": "web UI integration only; not PLC/TIA execution or simulator test execution",
+  "browser_console_errors": 0
+}

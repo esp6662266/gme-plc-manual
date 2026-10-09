@@ -1,0 +1,1413 @@
+﻿블록,네트워크 문서,Part UID,동작,대상,정적 조건식,내용
+hmi standard motors,331,27,Coil,Risposta,Ingresso_run,조건에 따른 Coil 기록
+hmi standard motors,331,59,Coil,Comulativo_allarmi,(Allarme1 OR Allarme2 OR Allarme3 OR Allarme4 OR Allarme5),조건에 따른 Coil 기록
+hmi standard motorized valve,336,27,Coil,ORef UID 28,ORef UID 24,조건에 따른 Coil 기록
+hmi standard motorized valve,336,90,Coil,Risposta_Closing,Ingresso_run_Closing,조건에 따른 Coil 기록
+hmi standard motorized valve,336,59,Coil,Comulativo_allarmi,(Allarme1 OR Allarme2 OR Allarme3 OR Allarme4 OR Allarme5),조건에 따른 Coil 기록
+hmi standard motorized valve,336,98,Coil,Limit_Switch_Open_HMI,Limit_switch_Open,조건에 따른 Coil 기록
+hmi standard motorized valve,336,106,Coil,Limit_Switch_Close_HMI,Limiti_Switch_Close,조건에 따른 Coil 기록
+hmi pv_1gate,341,66,Coil,HMI_LS_Open,LS_Open,조건에 따른 Coil 기록
+hmi pv_1gate,341,62,Coil,HMI_LS_Close,LS_Close,조건에 따른 Coil 기록
+hmi pv_1gate,341,58,Coil,HMI_Selectoor,Selector,조건에 따른 Coil 기록
+hmi pv_1gate,341,54,Coil,Total_Allarms,(Allarm1 OR Allarm2 OR Allarm3 OR Allarm4 OR Allarm5),조건에 따른 Coil 기록
+hmi pv_2gate,347,23,Coil,HMI_GateA_Open,GateA_Open,조건에 따른 Coil 기록
+hmi pv_2gate,347,25,Coil,HMI_GateA_Close,GateA_Close,조건에 따른 Coil 기록
+hmi pv_2gate,347,70,Coil,HMI_GateB_Open,GateB_Open,조건에 따른 Coil 기록
+hmi pv_2gate,347,72,Coil,HMI_GateB_Close,GateB_Close,조건에 따른 Coil 기록
+hmi pv_2gate,347,27,Coil,HMI_Selector_GateA,Selector_GateA,조건에 따른 Coil 기록
+hmi pv_2gate,347,85,Coil,HMI_Selector_GateB,Selector_GateB,조건에 따른 Coil 기록
+hmi pv_2gate,347,34,Coil,Total_Allarms,(Allarm1 OR Allarm2 OR Allarm3 OR Allarm4 OR Allarm5 OR Allarm6 OR Allarm7),조건에 따른 Coil 기록
+hmi output,356,22,Move,ORef UID 34,POWER,Move 입력 Tag_280
+hmi output,356,23,Move,ORef UID 36,Move UID 22.eno (블록 동작 확인),Move 입력 Tag_281
+hmi output,356,24,Move,ORef UID 38,Move UID 23.eno (블록 동작 확인),Move 입력 Tag_282
+hmi output,356,25,Move,ORef UID 40,POWER,Move 입력 Tag_283
+hmi output,356,26,Move,ORef UID 42,Move UID 25.eno (블록 동작 확인),Move 입력 Tag_284
+hmi output,356,27,Move,ORef UID 44,Move UID 26.eno (블록 동작 확인),Move 입력 Tag_285
+hmi output,356,28,Move,ORef UID 46,POWER,Move 입력 Tag_286
+hmi output,356,29,Move,ORef UID 48,Move UID 28.eno (블록 동작 확인),Move 입력 Tag_287
+hmi output,356,30,Move,ORef UID 50,Move UID 29.eno (블록 동작 확인),Move 입력 Tag_288
+hmi output,356,31,Move,ORef UID 52,POWER,Move 입력 Tag_289
+hmi output,356,32,Move,ORef UID 54,Move UID 31.eno (블록 동작 확인),Move 입력 Tag_290
+hmi output,356,85,Move,ORef UID 90,Move UID 32.eno (블록 동작 확인),Move 입력 Tag_291
+cyc_int4 ogni 200ms,396,70,Move,Data.Pot_MV02,(OFF AND [Data.Pot_MV02 > 100]),Move 입력 0
+startup only,402,138,Move,ORef UID 169,ON,Move 입력 ORef UID 168
+startup only,402,141,Move,ORef UID 171,Move UID 138.eno (블록 동작 확인),Move 입력 ORef UID 170
+startup only,402,144,Move,ORef UID 173,Move UID 141.eno (블록 동작 확인),Move 입력 ORef UID 172
+startup only,402,147,Move,ORef UID 175,Move UID 144.eno (블록 동작 확인),Move 입력 ORef UID 174
+startup only,402,155,Move,ORef UID 177,ON,Move 입력 ORef UID 176
+startup only,402,158,Move,ORef UID 179,Move UID 155.eno (블록 동작 확인),Move 입력 ORef UID 178
+startup only,402,161,Move,ORef UID 181,Move UID 158.eno (블록 동작 확인),Move 입력 ORef UID 180
+startup only,402,164,Move,ORef UID 183,Move UID 161.eno (블록 동작 확인),Move 입력 ORef UID 182
+startup only,403,250,Move,ORef UID 286,ON,Move 입력 ORef UID 285
+startup only,403,253,Move,ORef UID 288,Move UID 250.eno (블록 동작 확인),Move 입력 ORef UID 287
+startup only,403,256,Move,ORef UID 290,Move UID 253.eno (블록 동작 확인),Move 입력 ORef UID 289
+startup only,403,259,Move,ORef UID 292,Move UID 256.eno (블록 동작 확인),Move 입력 ORef UID 291
+startup only,403,267,Move,ORef UID 294,ON,Move 입력 ORef UID 293
+startup only,403,270,Move,ORef UID 296,Move UID 267.eno (블록 동작 확인),Move 입력 ORef UID 295
+startup only,403,273,Move,ORef UID 298,Move UID 270.eno (블록 동작 확인),Move 입력 ORef UID 297
+startup only,403,276,Move,ORef UID 300,Move UID 273.eno (블록 동작 확인),Move 입력 ORef UID 299
+startup only,403,281,Move,ORef UID 302,ON,Move 입력 ORef UID 301
+startup only,404,293,SCoil,Flag.MV01_Auto,ON,조건 성립 시 Set
+startup only,404,297,SCoil,Flag.MV02_Auto,ON,조건 성립 시 Set
+startup only,404,300,SCoil,Flag.MV03_Auto,ON,조건 성립 시 Set
+startup only,404,304,SCoil,Flag.MV04_Auto,ON,조건 성립 시 Set
+startup only,404,307,SCoil,Flag.MV05_Auto,ON,조건 성립 시 Set
+startup only,404,310,SCoil,Flag.MV06_Auto,ON,조건 성립 시 Set
+startup only,404,313,SCoil,Flag.FN_04_AUTO,ON,조건 성립 시 Set
+startup only,405,303,SCoil,Flag.PV_02_GATE_A_MEM_CLOSE,ON,조건 성립 시 Set
+startup only,405,305,SCoil,Flag.PV_02_GATE_B_MEM_CLOSE,ON,조건 성립 시 Set
+startup only,405,307,SCoil,Flag.PV_01_GATE_A_MEM_CLOSE,ON,조건 성립 시 Set
+startup only,405,309,SCoil,Flag.PV_01_GATE_B_MEM_CLOSE,ON,조건 성립 시 Set
+startup only,405,311,SCoil,Flag.PV_03_GATE_MEM_CLOSE,ON,조건 성립 시 Set
+motor/alarm client,410,46,SCoil,Allarm.motor_client_01_fault,(ON AND APRON CONVEYOR A FAULT),조건 성립 시 Set
+motor/alarm client,410,51,RCoil,Allarm.motor_client_01_fault,((ON AND NOT [APRON CONVEYOR A FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,411,64,SCoil,Allarm.motor_client_02_fault,(ON AND IMPACTOR FAULT),조건 성립 시 Set
+motor/alarm client,411,69,RCoil,Allarm.motor_client_02_fault,((ON AND NOT [IMPACTOR FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,412,82,SCoil,Allarm.motor_client_03_fault,(ON AND IMPACT VIBRATIONFEEDER FAULT),조건 성립 시 Set
+motor/alarm client,412,87,RCoil,Allarm.motor_client_03_fault,((ON AND NOT [IMPACT VIBRATIONFEEDER FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,413,100,SCoil,Allarm.motor_client_04_fault,(ON AND BELT CONVEYOR  A FAULT),조건 성립 시 Set
+motor/alarm client,413,105,RCoil,Allarm.motor_client_04_fault,((ON AND NOT [BELT CONVEYOR  A FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,414,118,SCoil,Allarm.motor_client_05_fault,(ON AND AIR KNIFE FAULT),조건 성립 시 Set
+motor/alarm client,414,123,RCoil,Allarm.motor_client_05_fault,((ON AND NOT [AIR KNIFE FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,415,136,SCoil,Allarm.motor_client_06_fault,(ON AND BELT CONVEYOR B FAULT),조건 성립 시 Set
+motor/alarm client,415,141,RCoil,Allarm.motor_client_06_fault,((ON AND NOT [BELT CONVEYOR B FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,416,154,SCoil,Allarm.motor_client_07_fault,(ON AND SHREDDER 1 FAULT),조건 성립 시 Set
+motor/alarm client,416,159,RCoil,Allarm.motor_client_07_fault,((ON AND NOT [SHREDDER 1 FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,417,172,SCoil,Allarm.motor_client_08_fault,(ON AND SHREDDER VIBRATIONFEEDER FAULT),조건 성립 시 Set
+motor/alarm client,417,177,RCoil,Allarm.motor_client_08_fault,((ON AND NOT [SHREDDER VIBRATIONFEEDER FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,418,190,SCoil,Allarm.motor_client_09_fault,(ON AND BELT CONVEYOR C FAULT),조건 성립 시 Set
+motor/alarm client,418,195,RCoil,Allarm.motor_client_09_fault,((ON AND NOT [BELT CONVEYOR C FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,419,208,SCoil,Allarm.motor_client_10_fault,(ON AND ROTEX SCREENFAULT),조건 성립 시 Set
+motor/alarm client,419,213,RCoil,Allarm.motor_client_10_fault,((ON AND NOT [ROTEX SCREENFAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,420,262,SCoil,Allarm.motor_client_13_fault,(ON AND APRON CONVEYOR B FAULT),조건 성립 시 Set
+motor/alarm client,420,267,RCoil,Allarm.motor_client_13_fault,((ON AND NOT [APRON CONVEYOR B FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,421,280,SCoil,Allarm.motor_client_14_fault,(ON AND SHREDDER 2FAULT),조건 성립 시 Set
+motor/alarm client,421,285,RCoil,Allarm.motor_client_14_fault,((ON AND NOT [SHREDDER 2FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,422,298,SCoil,Allarm.motor_client_15_fault,(ON AND BELT COVEYOR  D FAULT),조건 성립 시 Set
+motor/alarm client,422,303,RCoil,Allarm.motor_client_15_fault,((ON AND NOT [BELT COVEYOR  D FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,423,316,SCoil,Allarm.motor_client_16_fault,(ON AND BELT CONVEYOR  E FAULT),조건 성립 시 Set
+motor/alarm client,423,321,RCoil,Allarm.motor_client_16_fault,((ON AND NOT [BELT CONVEYOR  E FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,424,334,SCoil,Allarm.motor_client_17_fault,(ON AND WEIGHTING HOPPER 2FAULT),조건 성립 시 Set
+motor/alarm client,424,339,RCoil,Allarm.motor_client_17_fault,((ON AND NOT [WEIGHTING HOPPER 2FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,425,352,SCoil,Allarm.motor_client_18_fault,(ON AND HOPPER CONVEYOR 2FAULT),조건 성립 시 Set
+motor/alarm client,425,357,RCoil,Allarm.motor_client_18_fault,((ON AND NOT [HOPPER CONVEYOR 2FAULT]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+motor/alarm client,426,370,SCoil,Allarm.motor_client_19_fault,(ON AND PRIMARYSHREDDER RUN),조건 성립 시 Set
+motor/alarm client,426,375,RCoil,Allarm.motor_client_19_fault,((ON AND NOT [PRIMARYSHREDDER RUN]) AND Flag.RESET_ALLARM),조건 성립 시 Reset
+i/o_flt1,434,28,SCoil,I/O FLT,ON,조건 성립 시 Set
+mod_err,439,28,SCoil,Module Access FLT,ON,조건 성립 시 Set
+prog_err,444,28,SCoil,Prog FAULT,ON,조건 성립 시 Set
+tod_int0,449,28,SCoil,Tag_191,ON,조건 성립 시 Set
+rack_flt,765,28,SCoil,Rack FAULT,ON,조건 성립 시 Set
+allarm manager,927,127,Move,WorkData.W0,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 173
+allarm manager,927,132,Move,WorkData.W1,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 175
+allarm manager,927,137,Move,WorkData.W2,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 177
+allarm manager,927,142,Move,WorkData.W3,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 179
+allarm manager,927,147,Move,WorkData.W4,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 181
+allarm manager,927,152,Move,WorkData.W15,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 183
+allarm manager,927,157,Move,WorkData.W16,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 185
+allarm manager,927,162,Move,WorkData.W17,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 187
+allarm manager,927,167,Move,WorkData.W18,(Flag.RESET_ALLARM OR Flag.RUN_HORN OR Flag.STOP_HORN),Move 입력 ORef UID 189
+allarm manager,928,219,Coil,Flag.NEW_ALLARM,(([ORef UID 220 != WorkData.W0] OR [ORef UID 222 != WorkData.W1] OR [ORef UID 224 != WorkData.W2] OR [ORef UID 226 != WorkData.W3] OR [ORef UID 228 != WorkData.W4] OR [ORef UID 230 != WorkData.W15] OR [ORef UID 232 != WorkData.W16] OR [ORef UID 234 != WorkData.W17] OR [ORef UID 236 != WorkData.W18]) AND NOT [Flag.STOP_HORN]),조건에 따른 Coil 기록
+allarm manager,929,204,SCoil,Flag.RUN_HORN,((Flag.NEW_ALLARM AND NOT [Flag.RESET_ALLARM]) AND NOT [Flag.STOP_HORN]),조건 성립 시 Set
+allarm manager,929,206,RCoil,Flag.NEW_ALLARM,((Flag.NEW_ALLARM AND NOT [Flag.RESET_ALLARM]) AND NOT [Flag.STOP_HORN]),조건 성립 시 Reset
+allarm manager,930,33,SCoil,Flag.RESET_ALLARM,(Inputs.Reset_allarmi OR Flag.Reset_Allarms_HMI),조건 성립 시 Set
+allarm manager,930,40,RCoil,Flag.Reset_Allarms_HMI,(Inputs.Reset_allarmi OR Flag.Reset_Allarms_HMI),조건 성립 시 Reset
+allarm manager,930,48,Coil,103A7,LRef UID 64.Q (블록 동작 확인),조건에 따른 Coil 기록
+allarm manager,930,60,Coil,Reset_Inverter,LRef UID 73.Q (블록 동작 확인),조건에 따른 Coil 기록
+allarm manager,930,49,SCoil,Flag.STOP_HORN,(Inputs.Tacitazione OR Flag.Stop_horn_HMI),조건 성립 시 Set
+allarm manager,930,56,RCoil,Flag.Stop_horn_HMI,(Inputs.Tacitazione OR Flag.Stop_horn_HMI),조건 성립 시 Reset
+allarm manager,931,229,SdCoil,Tag_160,(Flag.RESET_ALLARM OR Flag.STOP_HORN),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1S
+allarm manager,931,235,RCoil,Flag.RESET_ALLARM,((Flag.RESET_ALLARM OR Flag.STOP_HORN) AND Tag_160),조건 성립 시 Reset
+allarm manager,931,237,RCoil,Flag.STOP_HORN,((Flag.RESET_ALLARM OR Flag.STOP_HORN) AND Tag_160),조건 성립 시 Reset
+allarm manager,931,239,RCoil,Blinking Ligh,((Flag.RESET_ALLARM OR Flag.STOP_HORN) AND Tag_160),조건 성립 시 Reset
+allarm manager,933,261,SdCoil,Tag_161,(Flag.RUN_HORN OR Flag.M_HORN),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.SIREN_WORK_TIME
+allarm manager,933,265,Coil,Siren,(Flag.RUN_HORN OR Flag.M_HORN),조건에 따른 Coil 기록
+allarm manager,933,270,SCoil,Blinking Ligh,PBox UID 268.out (블록 동작 확인),조건 성립 시 Set
+allarm manager,933,274,RCoil,Flag.RUN_HORN,((Flag.RUN_HORN OR Flag.M_HORN) AND Tag_161),조건 성립 시 Reset
+allarm manager,934,281,SCoil,Flag.M_TDPRO_REPORT,(ON AND Tag_162),조건 성립 시 Set
+allarm manager,934,286,SdCoil,Tag_162,((ON AND NOT [Flag.M_TDPRO_REPORT]) AND NOT [Tag_162]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10M
+allarm manager,935,311,Move,Data.BWF01_count_rep,PBox UID 306.out (블록 동작 확인),Move 입력 0
+allarm manager,935,316,Move,Data.BWF02_count_rep,PBox UID 306.out (블록 동작 확인),Move 입력 0
+time work motor,1002,92,Move,hours motors.CLIENT_MOTOR_1_HOUR,((Tag_47 AND APRON CONVEYOR A RUN) AND [hours motors.CLIENT_MOTOR_1_MIN >= 60]),Move 입력 1
+time work motor,1002,95,Move,hours motors.CLIENT_MOTOR_1_MIN,Move UID 92.eno (블록 동작 확인),Move 입력 0
+time work motor,1002,98,SCoil,Flag_Aggiorna_DB,Move UID 95.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1003,146,Move,hours motors.CLIENT_MOTOR_2_HOUR,((Tag_47 AND IMPACTOR RUN) AND [hours motors.CLIENT_MOTOR_2_MIN >= 60]),Move 입력 1
+time work motor,1003,149,Move,hours motors.CLIENT_MOTOR_2_MIN,Move UID 146.eno (블록 동작 확인),Move 입력 0
+time work motor,1003,152,SCoil,Flag_Aggiorna_DB,Move UID 149.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1004,200,Move,hours motors.CLIENT_MOTOR_3_HOUR,((Tag_47 AND IMPACT VIBRATIONFEEDER RUN) AND [hours motors.CLIENT_MOTOR_3_MIN >= 60]),Move 입력 1
+time work motor,1004,203,Move,hours motors.CLIENT_MOTOR_3_MIN,Move UID 200.eno (블록 동작 확인),Move 입력 0
+time work motor,1004,206,SCoil,Flag_Aggiorna_DB,Move UID 203.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1005,254,Move,hours motors.CLIENT_MOTOR_4_HOUR,((Tag_47 AND BELT CONVEYOR A RUN) AND [hours motors.CLIENT_MOTOR_4_MIN >= 60]),Move 입력 1
+time work motor,1005,257,Move,hours motors.CLIENT_MOTOR_4_MIN,Move UID 254.eno (블록 동작 확인),Move 입력 0
+time work motor,1005,260,SCoil,Flag_Aggiorna_DB,Move UID 257.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1006,308,Move,hours motors.CLIENT_MOTOR_5_HOUR,((Tag_47 AND AIR KNIFE RUN) AND [hours motors.CLIENT_MOTOR_5_MIN >= 60]),Move 입력 1
+time work motor,1006,311,Move,hours motors.CLIENT_MOTOR_5_MIN,Move UID 308.eno (블록 동작 확인),Move 입력 0
+time work motor,1006,314,SCoil,Flag_Aggiorna_DB,Move UID 311.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1007,362,Move,hours motors.CLIENT_MOTOR_6_HOUR,((Tag_47 AND BELT CONVEYOR B RUN) AND [hours motors.CLIENT_MOTOR_6_MIN >= 60]),Move 입력 1
+time work motor,1007,365,Move,hours motors.CLIENT_MOTOR_6_MIN,Move UID 362.eno (블록 동작 확인),Move 입력 0
+time work motor,1007,368,SCoil,Flag_Aggiorna_DB,Move UID 365.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1008,416,Move,hours motors.CLIENT_MOTOR_7_HOUR,((Tag_47 AND SHREDDER 1 RUN) AND [hours motors.CLIENT_MOTOR_7_MIN >= 60]),Move 입력 1
+time work motor,1008,419,Move,hours motors.CLIENT_MOTOR_7_MIN,Move UID 416.eno (블록 동작 확인),Move 입력 0
+time work motor,1008,422,SCoil,Flag_Aggiorna_DB,Move UID 419.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1009,470,Move,hours motors.CLIENT_MOTOR_8_HOUR,((Tag_47 AND SHREDDER VIBRATIONFEEDER RUN) AND [hours motors.CLIENT_MOTOR_8_MIN >= 60]),Move 입력 1
+time work motor,1009,473,Move,hours motors.CLIENT_MOTOR_8_MIN,Move UID 470.eno (블록 동작 확인),Move 입력 0
+time work motor,1009,476,SCoil,Flag_Aggiorna_DB,Move UID 473.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1010,524,Move,hours motors.CLIENT_MOTOR_9_HOUR,((Tag_47 AND BELT CONVEYOR  C RUN) AND [hours motors.CLIENT_MOTOR_9_MIN >= 60]),Move 입력 1
+time work motor,1010,527,Move,hours motors.CLIENT_MOTOR_9_MIN,Move UID 524.eno (블록 동작 확인),Move 입력 0
+time work motor,1010,530,SCoil,Flag_Aggiorna_DB,Move UID 527.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1011,578,Move,hours motors.CLIENT_MOTOR_10_HOUR,((Tag_47 AND ROTEX SCREEN RUN) AND [hours motors.CLIENT_MOTOR_10_MIN >= 60]),Move 입력 1
+time work motor,1011,581,Move,hours motors.CLIENT_MOTOR_10_MIN,Move UID 578.eno (블록 동작 확인),Move 입력 0
+time work motor,1011,584,SCoil,Flag_Aggiorna_DB,Move UID 581.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1012,740,Move,hours motors.CLIENT_MOTOR_13_HOUR,((Tag_47 AND APRON CONVEYOR B RUN) AND [hours motors.CLIENT_MOTOR_13_MIN >= 60]),Move 입력 1
+time work motor,1012,743,Move,hours motors.CLIENT_MOTOR_13_MIN,Move UID 740.eno (블록 동작 확인),Move 입력 0
+time work motor,1012,746,SCoil,Flag_Aggiorna_DB,Move UID 743.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1013,794,Move,hours motors.CLIENT_MOTOR_14_HOUR,((Tag_47 AND SHREDDER 2 RUN) AND [hours motors.CLIENT_MOTOR_14_MIN >= 60]),Move 입력 1
+time work motor,1013,797,Move,hours motors.CLIENT_MOTOR_14_MIN,Move UID 794.eno (블록 동작 확인),Move 입력 0
+time work motor,1013,800,SCoil,Flag_Aggiorna_DB,Move UID 797.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1014,848,Move,hours motors.CLIENT_MOTOR_15_HOUR,((Tag_47 AND BELT CONVEYOR  D RUN) AND [hours motors.CLIENT_MOTOR_15_MIN >= 60]),Move 입력 1
+time work motor,1014,851,Move,hours motors.CLIENT_MOTOR_15_MIN,Move UID 848.eno (블록 동작 확인),Move 입력 0
+time work motor,1014,854,SCoil,Flag_Aggiorna_DB,Move UID 851.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1015,902,Move,hours motors.CLIENT_MOTOR_16_HOUR,((Tag_47 AND BELT CONVEYOR E RUN) AND [hours motors.CLIENT_MOTOR_16_MIN >= 60]),Move 입력 1
+time work motor,1015,905,Move,hours motors.CLIENT_MOTOR_16_MIN,Move UID 902.eno (블록 동작 확인),Move 입력 0
+time work motor,1015,908,SCoil,Flag_Aggiorna_DB,Move UID 905.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1016,956,Move,hours motors.CLIENT_MOTOR_17_HOUR,((Tag_47 AND LIW SYSTEMAUTOREADER) AND [hours motors.CLIENT_MOTOR_17_MIN >= 60]),Move 입력 1
+time work motor,1016,959,Move,hours motors.CLIENT_MOTOR_17_MIN,Move UID 956.eno (블록 동작 확인),Move 입력 0
+time work motor,1016,962,SCoil,Flag_Aggiorna_DB,Move UID 959.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1017,1064,Move,hours motors.CLIENT_MOTOR_19_HOUR,((Tag_47 AND PRIMARYSHREDDER RUN) AND [hours motors.CLIENT_MOTOR_19_MIN >= 60]),Move 입력 1
+time work motor,1017,1067,Move,hours motors.CLIENT_MOTOR_19_MIN,Move UID 1064.eno (블록 동작 확인),Move 입력 0
+time work motor,1017,1070,SCoil,Flag_Aggiorna_DB,Move UID 1067.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1018,1118,Move,hours motors.BC_01_HOUR,((Tag_47 AND BC01_Fbk) AND [hours motors.BC_01_MIN >= 60]),Move 입력 1
+time work motor,1018,1121,Move,hours motors.BC_01_MIN,Move UID 1118.eno (블록 동작 확인),Move 입력 0
+time work motor,1018,1124,SCoil,Flag_Aggiorna_DB,Move UID 1121.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1019,1172,Move,hours motors.RD_01_HOUR,((Tag_47 AND RD01_Fbk) AND [hours motors.RD_01_MIN >= 60]),Move 입력 1
+time work motor,1019,1175,Move,hours motors.RD_01_MIN,Move UID 1172.eno (블록 동작 확인),Move 입력 0
+time work motor,1019,1178,SCoil,Flag_Aggiorna_DB,Move UID 1175.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1020,1226,Move,hours motors.RD_01_FAN_HOUR,((Tag_47 AND RD01F_Fbk) AND [hours motors.RD_01_FAN_MIN >= 60]),Move 입력 1
+time work motor,1020,1229,Move,hours motors.RD_01_FAN_MIN,Move UID 1226.eno (블록 동작 확인),Move 입력 0
+time work motor,1020,1232,SCoil,Flag_Aggiorna_DB,Move UID 1229.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1021,1280,Move,hours motors.MC_03_HOUR,((Tag_47 AND 102A7_SPARE5) AND [hours motors.MC_03_MIN >= 60]),Move 입력 1
+time work motor,1021,1283,Move,hours motors.MC_03_MIN,Move UID 1280.eno (블록 동작 확인),Move 입력 0
+time work motor,1021,1286,SCoil,Flag_Aggiorna_DB,Move UID 1283.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1022,1334,Move,hours motors.MC_04_HOUR,((Tag_47 AND MC04_Fbk) AND [hours motors.MC_04_MIN >= 60]),Move 입력 1
+time work motor,1022,1337,Move,hours motors.MC_04_MIN,Move UID 1334.eno (블록 동작 확인),Move 입력 0
+time work motor,1022,1340,SCoil,Flag_Aggiorna_DB,Move UID 1337.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1024,1442,Move,hours motors.VS_01_HOUR,((Tag_47 AND VS01_Fbk) AND [hours motors.VS_01_MIN >= 60]),Move 입력 1
+time work motor,1024,1445,Move,hours motors.VS_01_MIN,Move UID 1442.eno (블록 동작 확인),Move 입력 0
+time work motor,1024,1448,SCoil,Flag_Aggiorna_DB,Move UID 1445.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1026,1550,Move,hours motors.FN_02_HOUR,((Tag_47 AND FN02_Fbk) AND [hours motors.FN_02_MIN >= 60]),Move 입력 1
+time work motor,1026,1553,Move,hours motors.FN_02_MIN,Move UID 1550.eno (블록 동작 확인),Move 입력 0
+time work motor,1026,1556,SCoil,Flag_Aggiorna_DB,Move UID 1553.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1027,1604,Move,hours motors.VR_01_HOUR,((Tag_47 AND VR01_Fbk) AND [hours motors.VR_01_MIN >= 60]),Move 입력 1
+time work motor,1027,1607,Move,hours motors.VR_01_MIN,Move UID 1604.eno (블록 동작 확인),Move 입력 0
+time work motor,1027,1610,SCoil,Flag_Aggiorna_DB,Move UID 1607.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1028,1658,Move,hours motors.FN_01_HOUR,((Tag_47 AND FN01_Fbk) AND [hours motors.FN_01_MIN >= 60]),Move 입력 1
+time work motor,1028,1661,Move,hours motors.FN_01_MIN,Move UID 1658.eno (블록 동작 확인),Move 입력 0
+time work motor,1028,1664,SCoil,Flag_Aggiorna_DB,Move UID 1661.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1029,1712,Move,hours motors.VR_02_HOUR,((Tag_47 AND VR02_Fbk) AND [hours motors.VR_02_MIN >= 60]),Move 입력 1
+time work motor,1029,1715,Move,hours motors.VR_02_MIN,Move UID 1712.eno (블록 동작 확인),Move 입력 0
+time work motor,1029,1718,SCoil,Flag_Aggiorna_DB,Move UID 1715.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1030,1766,Move,hours motors.CH_01_HOUR,((Tag_47 AND CH01_Fbk) AND [hours motors.CH_01_MIN >= 60]),Move 입력 1
+time work motor,1030,1769,Move,hours motors.CH_01_MIN,Move UID 1766.eno (블록 동작 확인),Move 입력 0
+time work motor,1030,1772,SCoil,Flag_Aggiorna_DB,Move UID 1769.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1031,1820,Move,hours motors.FN_03_HOUR,((Tag_47 AND FN03_Fbk) AND [hours motors.FN_03_MIN >= 60]),Move 입력 1
+time work motor,1031,1823,Move,hours motors.FN_03_MIN,Move UID 1820.eno (블록 동작 확인),Move 입력 0
+time work motor,1031,1826,SCoil,Flag_Aggiorna_DB,Move UID 1823.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1032,1874,Move,hours motors.FN_06_HOUR,((Tag_47 AND FN06_Fbk) AND [hours motors.FN_06_MIN >= 60]),Move 입력 1
+time work motor,1032,1877,Move,hours motors.FN_06_MIN,Move UID 1874.eno (블록 동작 확인),Move 입력 0
+time work motor,1032,1880,SCoil,Flag_Aggiorna_DB,Move UID 1877.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1033,1928,Move,hours motors.SC_01_HOUR,((Tag_47 AND SC01_Fbk) AND [hours motors.SC_01_MIN >= 60]),Move 입력 1
+time work motor,1033,1931,Move,hours motors.SC_01_MIN,Move UID 1928.eno (블록 동작 확인),Move 입력 0
+time work motor,1033,1934,SCoil,Flag_Aggiorna_DB,Move UID 1931.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1035,2036,Move,hours motors.LD_01_HOUR,((Tag_47 AND LD-01_Fbk) AND [hours motors.LD_01_MIN >= 60]),Move 입력 1
+time work motor,1035,2039,Move,hours motors.LD_01_MIN,Move UID 2036.eno (블록 동작 확인),Move 입력 0
+time work motor,1035,2042,SCoil,Flag_Aggiorna_DB,Move UID 2039.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1036,2090,Move,hours motors.LD_01_VIB_HOUR,((Tag_47 AND LD-01A_Fbk) AND [hours motors.LD_01_VIB_MIN >= 60]),Move 입력 1
+time work motor,1036,2093,Move,hours motors.LD_01_VIB_MIN,Move UID 2090.eno (블록 동작 확인),Move 입력 0
+time work motor,1036,2096,SCoil,Flag_Aggiorna_DB,Move UID 2093.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1037,2144,Move,hours motors.SC_10_HOUR,((Tag_47 AND SC-10_Fbk) AND [hours motors.SC_10_MIN >= 60]),Move 입력 1
+time work motor,1037,2147,Move,hours motors.SC_10_MIN,Move UID 2144.eno (블록 동작 확인),Move 입력 0
+time work motor,1037,2150,SCoil,Flag_Aggiorna_DB,Move UID 2147.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1038,2198,Move,hours motors.SC_11_HOUR,((Tag_47 AND SC-11_Fbk) AND [hours motors.SC_11_MIN >= 60]),Move 입력 1
+time work motor,1038,2201,Move,hours motors.SC_11_MIN,Move UID 2198.eno (블록 동작 확인),Move 입력 0
+time work motor,1038,2204,SCoil,Flag_Aggiorna_DB,Move UID 2201.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1039,2252,Move,hours motors.FN_04_HOUR,((Tag_47 AND FN04_Fbk) AND [hours motors.FN_04_MIN >= 60]),Move 입력 1
+time work motor,1039,2255,Move,hours motors.FN_04_MIN,Move UID 2252.eno (블록 동작 확인),Move 입력 0
+time work motor,1039,2258,SCoil,Flag_Aggiorna_DB,Move UID 2255.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1040,2306,Move,hours motors.VR_03_HOUR,((Tag_47 AND VR03_Fbk) AND [hours motors.VR_03_MIN >= 60]),Move 입력 1
+time work motor,1040,2309,Move,hours motors.VR_03_MIN,Move UID 2306.eno (블록 동작 확인),Move 입력 0
+time work motor,1040,2312,SCoil,Flag_Aggiorna_DB,Move UID 2309.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1041,2360,Move,hours motors.VR_04_HOUR,((Tag_47 AND VR04_Fbk) AND [hours motors.VR_04_MIN >= 60]),Move 입력 1
+time work motor,1041,2363,Move,hours motors.VR_04_MIN,Move UID 2360.eno (블록 동작 확인),Move 입력 0
+time work motor,1041,2366,SCoil,Flag_Aggiorna_DB,Move UID 2363.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1042,2414,Move,hours motors.VR_05_HOUR,((Tag_47 AND VR05_Fbk) AND [hours motors.VR_05_MIN >= 60]),Move 입력 1
+time work motor,1042,2417,Move,hours motors.VR_05_MIN,Move UID 2414.eno (블록 동작 확인),Move 입력 0
+time work motor,1042,2420,SCoil,Flag_Aggiorna_DB,Move UID 2417.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1043,2468,Move,hours motors.VR_06_HOUR,((Tag_47 AND VR06_Fbk) AND [hours motors.VR_06_MIN >= 60]),Move 입력 1
+time work motor,1043,2471,Move,hours motors.VR_06_MIN,Move UID 2468.eno (블록 동작 확인),Move 입력 0
+time work motor,1043,2474,SCoil,Flag_Aggiorna_DB,Move UID 2471.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1044,2522,Move,hours motors.FN_05_HOUR,((Tag_47 AND FN05_Fbk) AND [hours motors.FN_05_MIN >= 60]),Move 입력 1
+time work motor,1044,2525,Move,hours motors.FN_05_MIN,Move UID 2522.eno (블록 동작 확인),Move 입력 0
+time work motor,1044,2528,SCoil,Flag_Aggiorna_DB,Move UID 2525.eno (블록 동작 확인),조건 성립 시 Set
+time work motor,1045,2574,Move,hours motors.CLIENT_MOTOR_1_HOUR,Tag_48,Move 입력 0
+time work motor,1045,2577,Move,hours motors.CLIENT_MOTOR_2_HOUR,Move UID 2574.eno (블록 동작 확인),Move 입력 0
+time work motor,1045,2580,Move,hours motors.CLIENT_MOTOR_3_HOUR,Move UID 2577.eno (블록 동작 확인),Move 입력 0
+time work motor,1045,2583,Move,hours motors.CLIENT_MOTOR_4_HOUR,Move UID 2580.eno (블록 동작 확인),Move 입력 0
+time work motor,1045,2586,Move,hours motors.CLIENT_MOTOR_5_HOUR,Move UID 2583.eno (블록 동작 확인),Move 입력 0
+time work motor,1046,2636,Move,hours motors.CLIENT_MOTOR_6_HOUR,Tag_48,Move 입력 0
+time work motor,1046,2639,Move,hours motors.CLIENT_MOTOR_7_HOUR,Move UID 2636.eno (블록 동작 확인),Move 입력 0
+time work motor,1046,2642,Move,hours motors.CLIENT_MOTOR_8_HOUR,Move UID 2639.eno (블록 동작 확인),Move 입력 0
+time work motor,1046,2645,Move,hours motors.CLIENT_MOTOR_9_HOUR,Move UID 2642.eno (블록 동작 확인),Move 입력 0
+time work motor,1046,2648,Move,hours motors.CLIENT_MOTOR_10_HOUR,Move UID 2645.eno (블록 동작 확인),Move 입력 0
+time work motor,1047,2698,Move,hours motors.CLIENT_MOTOR_11_HOUR,Tag_48,Move 입력 0
+time work motor,1047,2701,Move,hours motors.CLIENT_MOTOR_12_HOUR,Move UID 2698.eno (블록 동작 확인),Move 입력 0
+time work motor,1047,2704,Move,hours motors.CLIENT_MOTOR_13_HOUR,Move UID 2701.eno (블록 동작 확인),Move 입력 0
+time work motor,1047,2707,Move,hours motors.CLIENT_MOTOR_14_HOUR,Move UID 2704.eno (블록 동작 확인),Move 입력 0
+time work motor,1047,2710,Move,hours motors.CLIENT_MOTOR_15_HOUR,Move UID 2707.eno (블록 동작 확인),Move 입력 0
+time work motor,1048,2760,Move,hours motors.CLIENT_MOTOR_16_HOUR,Tag_48,Move 입력 0
+time work motor,1048,2763,Move,hours motors.CLIENT_MOTOR_17_HOUR,Move UID 2760.eno (블록 동작 확인),Move 입력 0
+time work motor,1048,2766,Move,hours motors.CLIENT_MOTOR_18_HOUR,Move UID 2763.eno (블록 동작 확인),Move 입력 0
+time work motor,1048,2769,Move,hours motors.CLIENT_MOTOR_19_HOUR,Move UID 2766.eno (블록 동작 확인),Move 입력 0
+time work motor,1048,2772,Move,hours motors.BC_01_HOUR,Move UID 2769.eno (블록 동작 확인),Move 입력 0
+time work motor,1049,2822,Move,hours motors.RD_01_HOUR,Tag_48,Move 입력 0
+time work motor,1049,2825,Move,hours motors.RD_01_FAN_HOUR,Move UID 2822.eno (블록 동작 확인),Move 입력 0
+time work motor,1049,2828,Move,hours motors.MC_03_HOUR,Move UID 2825.eno (블록 동작 확인),Move 입력 0
+time work motor,1049,2831,Move,hours motors.MC_04_HOUR,Move UID 2828.eno (블록 동작 확인),Move 입력 0
+time work motor,1049,2834,Move,hours motors.MC_05_HOUR,Move UID 2831.eno (블록 동작 확인),Move 입력 0
+time work motor,1050,2884,Move,hours motors.VS_01_HOUR,Tag_48,Move 입력 0
+time work motor,1050,2887,Move,hours motors.SC_12_HOUR,Move UID 2884.eno (블록 동작 확인),Move 입력 0
+time work motor,1050,2890,Move,hours motors.FN_02_HOUR,Move UID 2887.eno (블록 동작 확인),Move 입력 0
+time work motor,1050,2893,Move,hours motors.VR_01_HOUR,Move UID 2890.eno (블록 동작 확인),Move 입력 0
+time work motor,1050,2896,Move,hours motors.FN_01_HOUR,Move UID 2893.eno (블록 동작 확인),Move 입력 0
+time work motor,1051,2946,Move,hours motors.VR_02_HOUR,Tag_48,Move 입력 0
+time work motor,1051,2949,Move,hours motors.CH_01_HOUR,Move UID 2946.eno (블록 동작 확인),Move 입력 0
+time work motor,1051,2952,Move,hours motors.FN_03_HOUR,Move UID 2949.eno (블록 동작 확인),Move 입력 0
+time work motor,1051,2955,Move,hours motors.FN_06_HOUR,Move UID 2952.eno (블록 동작 확인),Move 입력 0
+time work motor,1051,2958,Move,hours motors.SC_01_HOUR,Move UID 2955.eno (블록 동작 확인),Move 입력 0
+time work motor,1052,3008,Move,hours motors.FN_01_FAN_HOUR,Tag_48,Move 입력 0
+time work motor,1052,3011,Move,hours motors.LD_01_HOUR,Move UID 3008.eno (블록 동작 확인),Move 입력 0
+time work motor,1052,3014,Move,hours motors.LD_01_VIB_HOUR,Move UID 3011.eno (블록 동작 확인),Move 입력 0
+time work motor,1052,3017,Move,hours motors.SC_10_HOUR,Move UID 3014.eno (블록 동작 확인),Move 입력 0
+time work motor,1052,3020,Move,hours motors.SC_11_HOUR,Move UID 3017.eno (블록 동작 확인),Move 입력 0
+time work motor,1053,3070,Move,hours motors.FN_04_HOUR,Tag_48,Move 입력 0
+time work motor,1053,3073,Move,hours motors.VR_03_HOUR,Move UID 3070.eno (블록 동작 확인),Move 입력 0
+time work motor,1053,3076,Move,hours motors.VR_04_HOUR,Move UID 3073.eno (블록 동작 확인),Move 입력 0
+time work motor,1053,3079,Move,hours motors.VR_05_HOUR,Move UID 3076.eno (블록 동작 확인),Move 입력 0
+time work motor,1053,3082,Move,hours motors.VR_06_HOUR,Move UID 3079.eno (블록 동작 확인),Move 입력 0
+time work motor,1054,3076,Move,hours motors.FN_05_HOUR,Tag_48,Move 입력 ORef UID 3080
+time work motor,1055,3110,SCoil,MEM2_0,(ON AND Flag_Aggiorna_DB),조건 성립 시 Set
+time work motor,1055,3118,SdCoil,Tag_48,((ON AND MEM2_0) AND NOT [Flag_Aggiorna_DB]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#5S
+time work motor,1055,3123,RCoil,MEM2_0,((ON AND MEM2_0) AND Tag_48),조건 성립 시 Reset
+time work motor,1056,3112,SdCoil,Tag_47,NOT [Tag_47],시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+hmi inputs,1070,22,Move,ORef UID 26,POWER,Move 입력 Tag_178
+hmi inputs,1070,27,Move,ORef UID 29,Move UID 22.eno (블록 동작 확인),Move 입력 Tag_179
+hmi inputs,1070,35,Move,ORef UID 37,Move UID 27.eno (블록 동작 확인),Move 입력 Tag_180
+hmi inputs,1070,42,Move,ORef UID 46,POWER,Move 입력 Tag_171
+hmi inputs,1070,43,Move,ORef UID 48,Move UID 42.eno (블록 동작 확인),Move 입력 Tag_181
+hmi inputs,1070,44,Move,ORef UID 50,Move UID 43.eno (블록 동작 확인),Move 입력 Tag_182
+hmi inputs,1070,60,Move,ORef UID 64,POWER,Move 입력 Tag_183
+hmi inputs,1070,61,Move,ORef UID 66,Move UID 60.eno (블록 동작 확인),Move 입력 Tag_274
+hmi inputs,1070,62,Move,ORef UID 68,Move UID 61.eno (블록 동작 확인),Move 입력 Tag_275
+hmi inputs,1070,78,Move,ORef UID 82,POWER,Move 입력 Tag_276
+hmi inputs,1070,79,Move,ORef UID 84,Move UID 78.eno (블록 동작 확인),Move 입력 Tag_277
+hmi inputs,1070,105,Coil,Inputs.PV-14 CLOSE,PV-14 CLOSE,조건에 따른 Coil 기록
+hmi inputs,1070,112,Coil,Inputs.PV-14 OPEN,PV-14 OPEN,조건에 따른 Coil 기록
+hmi inputs,1070,118,Coil,Inputs.FN04 Run,FN04_Fbk,조건에 따른 Coil 기록
+hmi inputs,1070,120,Coil,Inputs.FN04_All_inv,FN04_All_inv,조건에 따른 Coil 기록
+hmi inputs,1070,125,Coil,Inputs.177T1_OK,177T1_OK,조건에 따른 Coil 기록
+hmi inputs,1070,130,Coil,Inputs.LD-01 Minimo,LL_LD01,조건에 따른 Coil 기록
+hmi inputs,1070,135,Coil,Inputs.LD-01 Inspection LS,170FC1,조건에 따른 Coil 기록
+hmi inputs,1070,140,Coil,Inputs.LD-01 Local Button,170SA1,조건에 따른 Coil 기록
+hmi inputs,1070,147,Coil,Inputs.MV03 open,NOT [MV03_Open],조건에 따른 Coil 기록
+hmi inputs,1070,151,Coil,Inputs.MV03 Close,NOT [MV03_Close],조건에 따른 Coil 기록
+hmi inputs,1071,22,Move,Inputs.TC_04,POWER,Move 입력 TC04
+hmi inputs,1071,27,Move,Inputs.TC_05,Move UID 22.eno (블록 동작 확인),Move 입력 TC05
+hmi inputs,1071,34,Move,Inputs.Flow_rate_BWF01,Move UID 27.eno (블록 동작 확인),Move 입력 BWF01_FlowRate
+hmi inputs,1071,41,Move,Inputs.Flow_rate_BWF02,Move UID 34.eno (블록 동작 확인),Move 입력 BWF02_FlowRate
+hmi inputs,1071,48,Move,Inputs.Level_BWF01,POWER,Move 입력 BWF01_Level
+hmi inputs,1071,49,Move,Inputs.Level_BWF02,Move UID 48.eno (블록 동작 확인),Move 입력 BWF02_Level
+hmi inputs,1071,50,Move,Inputs.TC_01,Move UID 49.eno (블록 동작 확인),Move 입력 TC01
+hmi inputs,1071,51,Move,Inputs.TC_02,Move UID 50.eno (블록 동작 확인),Move 입력 TC02
+hmi inputs,1071,72,Move,Inputs.TC_03,POWER,Move 입력 TC03
+hmi inputs,1071,73,Move,Inputs.TC_06,Move UID 72.eno (블록 동작 확인),Move 입력 TC06
+hmi inputs,1071,74,Move,Inputs.TC_07,Move UID 73.eno (블록 동작 확인),Move 입력 TC07
+hmi inputs,1071,75,Move,Inputs.ZT_01,Move UID 74.eno (블록 동작 확인),Move 입력 ZT01
+hmi inputs,1071,96,Move,Inputs.PSH_01,POWER,Move 입력 PSH01
+hmi inputs,1071,97,Move,Inputs.PSH_02,Move UID 96.eno (블록 동작 확인),Move 입력 PSH02
+hmi inputs,1071,98,Move,Inputs.PSH_03,Move UID 97.eno (블록 동작 확인),Move 입력 PSH03
+hmi inputs,1071,99,Move,Inputs.PC_01,Move UID 98.eno (블록 동작 확인),Move 입력 PC01
+hmi inputs,1071,122,Move,Inputs.FN02_ABSORPTION,POWER,Move 입력 FN02_Current
+hmi inputs,1071,123,Move,Inputs.FN04_ABSORPTION,Move UID 122.eno (블록 동작 확인),Move 입력 FN04_Current
+hmi inputs,1071,144,Move,Inputs.RD01_ABSORBPTION,POWER,Move 입력 RD01_Current
+hmi inputs,1071,145,Move,Inputs.FN01_ABSORPTION,Move UID 144.eno (블록 동작 확인),Move 입력 FN01_Current
+hmi inputs,1071,146,Move,Inputs.RO_01,Move UID 145.eno (블록 동작 확인),Move 입력 R001
+hmi inputs,1071,147,Move,Inputs.RO_02,Move UID 146.eno (블록 동작 확인),Move 입력 R002
+hmi inputs,1071,168,Move,Inputs.RO_03,POWER,Move 입력 R003
+hmi inputs,1071,169,Move,Inputs.RO_04,Move UID 168.eno (블록 동작 확인),Move 입력 R004
+hmi inputs,1071,170,Move,Inputs.BR_01_RETRANSMISSION_GAS,Move UID 169.eno (블록 동작 확인),Move 입력 BR01_GAS
+hmi inputs,1071,171,Move,Inputs.BR_01_RETRANSMISSION_AIR,Move UID 170.eno (블록 동작 확인),Move 입력 BR01_AIR
+hmi inputs,1071,84,Move,Inputs.BR_01_MASSFLOWMETER_GAS,Move UID 171.eno (블록 동작 확인),Move 입력 BR01_FlowMeter_GAS
+hmi inputs,1071,194,Move,Inputs.BR_01_MASSFLOWMETER_AIR,Move UID 84.eno (블록 동작 확인),Move 입력 BR01_FlowMeter_AIR
+simulation,1079,39,Coil,Clock100ms,LRef UID 26.Q (블록 동작 확인),조건에 따른 Coil 기록
+simulation,1080,27,Coil,Inputs.MC04 torque,ON,조건에 따른 Coil 기록
+simulation,1080,33,Coil,Inputs.Low Pressure Air,ON,조건에 따른 Coil 기록
+simulation,1080,36,Coil,Inputs.LD-01 Minimo,ON,조건에 따른 Coil 기록
+simulation,1080,39,Coil,Inputs.NITROGEN TANK READY,ON,조건에 따른 Coil 기록
+simulation,1080,42,Coil,Inputs.EM_OK,ON,조건에 따른 Coil 기록
+simulation,1080,45,Coil,Inputs.Presenza_110V,ON,조건에 따른 Coil 기록
+simulation,1081,24,Coil,Clock3s,LRef UID 22.Q (블록 동작 확인),조건에 따른 Coil 기록
+simulation,1082,33,Coil,Inputs.BC01 run,Flag.M_BC_01,조건에 따른 Coil 기록
+simulation,1082,37,Coil,Inputs.RD01 run,Flag.M_RD_01,조건에 따른 Coil 기록
+simulation,1082,41,Coil,Inputs.fan RD01 run,Flag.M_RD_01_FAN,조건에 따른 Coil 기록
+simulation,1082,44,Coil,Inputs.MC03 run,Flag.M_MC_03,조건에 따른 Coil 기록
+simulation,1082,46,Coil,Inputs.MC04 run,Flag.M_MC_04,조건에 따른 Coil 기록
+simulation,1082,66,Coil,Inputs.VS01 run,Flag.M_VS_01,조건에 따른 Coil 기록
+simulation,1082,70,Coil,Inputs.Aux inverter RUN,Start Aux INV,조건에 따른 Coil 기록
+simulation,1083,43,Coil,Inputs.MV01 Run_Opening,Start Open MV-01,조건에 따른 Coil 기록
+simulation,1083,45,Coil,Inputs.MV01 Run_Closing,Start Close MV-01,조건에 따른 Coil 기록
+simulation,1083,151,Coil,Inputs.MV01 Open,[Data.Pot_MV01 >= 98],조건에 따른 Coil 기록
+simulation,1083,349,Coil,Inputs.MV01 Close,[Data.Pot_MV01 <= 2],조건에 따른 Coil 기록
+simulation,1083,355,Coil,Inputs.MV02 RUN_Opening,Open MV02,조건에 따른 Coil 기록
+simulation,1083,360,Coil,Inputs.MV02 RUN_Closing,Close MV02,조건에 따른 Coil 기록
+simulation,1083,365,Coil,Inputs.MV02 Open,[Data.Pot_MV02 < 98],조건에 따른 Coil 기록
+simulation,1083,367,Coil,Inputs.MV02 Close,[Data.Pot_MV02 > 2],조건에 따른 Coil 기록
+simulation,1083,489,Coil,Inputs.MV03 Run_Opening,Start open MV03,조건에 따른 Coil 기록
+simulation,1083,494,Coil,Inputs.MV03 Run_Closing,Start Close MV03,조건에 따른 Coil 기록
+simulation,1083,499,Coil,Inputs.MV03 open,[Data.Pot_MV03 < 98],조건에 따른 Coil 기록
+simulation,1083,501,Coil,Inputs.MV03 Close,[Data.Pot_MV03 > 2],조건에 따른 Coil 기록
+simulation,1083,556,Coil,Inputs.MV05 RUN_Opening,Open MV05,조건에 따른 Coil 기록
+simulation,1083,561,Coil,Inputs.MV05 RUN_Closing,Close MV05,조건에 따른 Coil 기록
+simulation,1083,566,Coil,Inputs.MV05 open,[Data.Pot_MV05 < 98],조건에 따른 Coil 기록
+simulation,1083,568,Coil,Inputs.MV05 Close,[Data.Pot_MV05 > 2],조건에 따른 Coil 기록
+simulation,1083,623,Coil,Inputs.MV06 Run_Opening,Open MV06,조건에 따른 Coil 기록
+simulation,1083,628,Coil,Inputs.MV06 Run_Closing,Close MV06,조건에 따른 Coil 기록
+simulation,1083,633,Coil,Inputs.MV06_Open,[Data.Pot_MV06 >= 98],조건에 따른 Coil 기록
+simulation,1083,635,Coil,Inputs.MV06 Close,[Data.Pot_MV06 <= 2],조건에 따른 Coil 기록
+simulation,1084,27,Coil,Inputs.FN02 Run,Flag.M_FN_02,조건에 따른 Coil 기록
+simulation,1084,34,Coil,Inputs.VR-01 RUN,Flag.M_VR_01,조건에 따른 Coil 기록
+simulation,1084,41,Coil,Inputs.FN01 Run,Flag.M_FN_01,조건에 따른 Coil 기록
+simulation,1084,44,Coil,Inputs.VR02 Run,Flag.M_VR_02,조건에 따른 Coil 기록
+simulation,1084,46,Coil,Inputs.CH01 Run,Flag.M_CH_01,조건에 따른 Coil 기록
+simulation,1084,48,Coil,Inputs.FN03 Run,Flag.M_FN_03,조건에 따른 Coil 기록
+simulation,1084,69,Coil,Inputs.FEEDBACKMOTOR FN-06,Flag.M_FN_06,조건에 따른 Coil 기록
+simulation,1084,76,Coil,Inputs.FEEDBACKMOTOR SC-01,Flag.M_SC_01,조건에 따른 Coil 기록
+simulation,1085,27,Coil,Inputs.FEEDBACKMOTOR LD-01,Flag.M_LD_01,조건에 따른 Coil 기록
+simulation,1085,34,Coil,Inputs.FEEDBACKMOTOR-LD-01A,Flag.M_LD_01_VIB,조건에 따른 Coil 기록
+simulation,1085,86,Coil,Inputs.LD-01 Local Button,Flag.M_LD_01_VIB,조건에 따른 Coil 기록
+simulation,1085,41,Coil,Inputs.FEEDBACKMOTOR SC-10,Flag.M_SC_10,조건에 따른 Coil 기록
+simulation,1085,48,Coil,Inputs.FEEDBACKMOTOR SC-11,Flag.M_SC_11,조건에 따른 Coil 기록
+simulation,1085,51,Coil,Inputs.FN04 Run,Flag.M_FN_04,조건에 따른 Coil 기록
+simulation,1085,53,Coil,Inputs.VR03 Run,Flag.M_VR_03,조건에 따른 Coil 기록
+simulation,1085,55,Coil,Inputs.VR04 Run,Flag.M_VR_04,조건에 따른 Coil 기록
+simulation,1085,57,Coil,Inputs.VR05 Run,Flag.M_VR_05,조건에 따른 Coil 기록
+simulation,1085,83,Coil,Inputs.VR-06 RUN,Flag.M_VR_06,조건에 따른 Coil 기록
+simulation,1086,34,Coil,Inputs.FN-05 RUN,Flag.M_FN_05,조건에 따른 Coil 기록
+simulation,1086,41,Coil,Inputs.Feedback_ER01,Flag.M_ER01,조건에 따른 Coil 기록
+simulation,1086,44,Coil,Inputs.BWF 01 RUN,Flag.M_BWF01,조건에 따른 Coil 기록
+simulation,1086,24,Coil,Inputs.BWF01 OK,POWER,조건에 따른 Coil 기록
+simulation,1086,46,Coil,Inputs.BWF 02 RUN,Flag.M_BWF02,조건에 따른 Coil 기록
+simulation,1086,28,Coil,Inputs.BWF02 OK,POWER,조건에 따른 Coil 기록
+simulation,1087,31,Coil,Inputs.Deviator Open PV-03,Flag.M_PV03,조건에 따른 Coil 기록
+simulation,1087,38,Coil,Inputs.Deviator Close PV-03,NOT [Flag.M_PV03],조건에 따른 Coil 기록
+simulation,1088,30,Coil,Inputs.PV04 Open,Flag.M_PV04,조건에 따른 Coil 기록
+simulation,1088,35,Coil,Inputs.PV04 Close,NOT [Flag.M_PV04],조건에 따른 Coil 기록
+simulation,1089,27,Coil,Inputs.PV-14 OPEN,PV-14,조건에 따른 Coil 기록
+simulation,1089,34,Coil,Inputs.PV-14 CLOSE,NOT [PV-14],조건에 따른 Coil 기록
+simulation,1090,27,Coil,Inputs.FC GATE A OPEN,PV-01 Gate a,조건에 따른 Coil 기록
+simulation,1090,36,Coil,Inputs.LIMIT SWITCH LS-02GATE A CLOSEDVALVE PV-01,NOT [PV-01 Gate a],조건에 따른 Coil 기록
+simulation,1090,39,Coil,Inputs.PV-01 GATE B OPEN,PV-01 GATE B EV,조건에 따른 Coil 기록
+simulation,1090,41,Coil,Inputs.LIMIT SWITCH LS-06GATE B CLOSEDVALVE PV-01,NOT [PV-01 GATE B EV],조건에 따른 Coil 기록
+simulation,1091,23,Coil,Inputs.PV-02 EV A OPEN,PV-02 GATE A EV,조건에 따른 Coil 기록
+simulation,1091,25,Coil,Inputs.PV-02 EV A CLOSE,NOT [PV-02 GATE A EV],조건에 따른 Coil 기록
+simulation,1091,27,Coil,Inputs.PV-02 GATE B OPEN,PV-02 GATE B EV,조건에 따른 Coil 기록
+simulation,1091,29,Coil,Inputs.PV-02 GATE B CLOSE,NOT [PV-02 GATE B EV],조건에 따른 Coil 기록
+simulation,1092,27,Coil,Inputs.FC Aria chiusa,Flag.Start_Burner,조건에 따른 Coil 기록
+simulation,1092,31,Coil,Inputs.FC GAS Chiuso,Flag.Start_Burner,조건에 따른 Coil 기록
+simulation,1092,33,Coil,Inputs.Burner On,Flag.Start_Burner,조건에 따른 Coil 기록
+simulation,1092,36,Coil,Inputs.High Flame Gas,Flag.Start_Burner,조건에 따른 Coil 기록
+hmi,1186,64,Coil,Start Aux INV,NOT [ORef UID 39],조건에 따른 Coil 기록
+hmi,1212,37,Coil,ORef UID 38,ORef UID 27,조건에 따른 Coil 기록
+hmi,1212,41,Coil,ORef UID 42,ORef UID 30,조건에 따른 Coil 기록
+hmi,1213,51,Coil,ORef UID 52,ORef UID 24,조건에 따른 Coil 기록
+hmi,1213,55,Coil,ORef UID 56,ORef UID 27,조건에 따른 Coil 기록
+hmi,1213,47,Coil,ORef UID 48,(ORef UID 30 OR ORef UID 33 OR ORef UID 36 OR ORef UID 43),조건에 따른 Coil 기록
+hmi,1214,23,Coil,ORef UID 33,ORef UID 32,조건에 따른 Coil 기록
+hmi,1214,25,Coil,ORef UID 35,ORef UID 34,조건에 따른 Coil 기록
+hmi,1214,31,Coil,ORef UID 40,(ORef UID 36 OR ORef UID 37 OR ORef UID 38 OR ORef UID 39),조건에 따른 Coil 기록
+hmi,1219,27,Coil,ORef UID 28,ORef UID 24,조건에 따른 Coil 기록
+hmi,1219,34,Coil,ORef UID 35,ORef UID 31,조건에 따른 Coil 기록
+hmi,1220,27,Coil,ORef UID 28,EV03,조건에 따른 Coil 기록
+hmi,1220,30,Coil,ORef UID 32,NOT [EV03],조건에 따른 Coil 기록
+allarms 2,1226,249,SdCoil,Tag_92,(((ON AND Start Open MV-01) AND NOT [Inputs.MV01 Run_Opening]) OR ((ON AND Start Close MV-01) AND NOT [Inputs.MV01 Run_Closing])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#150mS
+allarms 2,1226,254,SCoil,Allarm.MV01_FAULT,((((ON AND Start Open MV-01) AND NOT [Inputs.MV01 Run_Opening]) OR ((ON AND Start Close MV-01) AND NOT [Inputs.MV01 Run_Closing])) AND Tag_92),조건 성립 시 Set
+allarms 2,1226,265,SdCoil,Tag_93,(((ON AND Open MV02) AND NOT [Inputs.MV02 RUN_Opening]) OR ((ON AND Close MV02) AND NOT [Inputs.MV02 RUN_Closing])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#150MS
+allarms 2,1226,270,SCoil,Allarm.MV02_FAULT,((((ON AND Open MV02) AND NOT [Inputs.MV02 RUN_Opening]) OR ((ON AND Close MV02) AND NOT [Inputs.MV02 RUN_Closing])) AND Tag_93),조건 성립 시 Set
+allarms 2,1226,281,SdCoil,Tag_94,(((ON AND Start open MV03) AND NOT [Inputs.MV03 Run_Opening]) OR ((ON AND Start Close MV03) AND NOT [Inputs.MV03 Run_Closing])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#150S
+allarms 2,1226,286,SCoil,Allarm.MV03_FAULT,((((ON AND Start open MV03) AND NOT [Inputs.MV03 Run_Opening]) OR ((ON AND Start Close MV03) AND NOT [Inputs.MV03 Run_Closing])) AND Tag_94),조건 성립 시 Set
+allarms 2,1226,313,SdCoil,Tag_96,(((ON AND Open MV05) AND NOT [Inputs.MV05 RUN_Opening]) OR ((ON AND Close MV05) AND NOT [Inputs.MV05 RUN_Closing])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#150MS
+allarms 2,1226,318,SCoil,Allarm.MV_05_FAULT,((((ON AND Open MV05) AND NOT [Inputs.MV05 RUN_Opening]) OR ((ON AND Close MV05) AND NOT [Inputs.MV05 RUN_Closing])) AND Tag_96),조건 성립 시 Set
+allarms 2,1226,329,SdCoil,Tag_97,(((ON AND Open MV06) AND NOT [Inputs.MV06 Run_Opening]) OR ((ON AND Close MV06) AND NOT [Inputs.MV06 Run_Closing])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#150MS
+allarms 2,1226,334,SCoil,Allarm.MV_06_FAULT,((((ON AND Open MV06) AND NOT [Inputs.MV06 Run_Opening]) OR ((ON AND Close MV06) AND NOT [Inputs.MV06 Run_Closing])) AND Tag_97),조건 성립 시 Set
+allarms 2,1226,342,RCoil,Allarm.MV01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MV01_FAULT),조건 성립 시 Reset
+allarms 2,1226,346,RCoil,Allarm.MV02_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MV02_FAULT),조건 성립 시 Reset
+allarms 2,1226,350,RCoil,Allarm.MV03_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MV03_FAULT),조건 성립 시 Reset
+allarms 2,1226,354,RCoil,Allarm.MV04_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MV04_FAULT),조건 성립 시 Reset
+allarms 2,1226,358,RCoil,Allarm.MV_05_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MV_05_FAULT),조건 성립 시 Reset
+allarms 2,1226,362,RCoil,Allarm.MV_06_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MV_06_FAULT),조건 성립 시 Reset
+allarms 2,1227,262,SCoil,Allarm.PSL_AIR_LOW,(ON AND NOT [Inputs.Low Pressure Air]),조건 성립 시 Set
+allarms 2,1227,268,RCoil,Allarm.PSL_AIR_LOW,(((ON AND Flag.RESET_ALLARM) AND Allarm.PSL_AIR_LOW) AND Inputs.Low Pressure Air),조건 성립 시 Reset
+allarms 2,1228,282,SCoil,Allarm.LD_01_MIN,LRef UID 21.Q (블록 동작 확인),조건 성립 시 Set
+allarms 2,1228,288,RCoil,Allarm.LD_01_MIN,(((ON AND Flag.RESET_ALLARM) AND Allarm.LD_01_MIN) AND NOT [Inputs.LD-01 Minimo]),조건 성립 시 Reset
+main,1614,69,Move,Word_inputs.word1,POWER,Move 입력 Tag_171
+main,1614,73,Move,Word_inputs.word2,Move UID 69.eno (블록 동작 확인),Move 입력 Tag_172
+main,1614,76,Move,Word_inputs.word3,Move UID 73.eno (블록 동작 확인),Move 입력 Tag_173
+main,1614,79,Move,Word_inputs.word4,Move UID 76.eno (블록 동작 확인),Move 입력 Tag_174
+main,1615,99,Move,Word_inputs.word5,POWER,Move 입력 Tag_175
+main,1615,103,Move,Word_inputs.word6,Move UID 99.eno (블록 동작 확인),Move 입력 Tag_176
+main,1615,106,Move,Word_inputs.word7,Move UID 103.eno (블록 동작 확인),Move 입력 Tag_177
+main,1616,144,Move,Word_outputs.WORD1,POWER,Move 입력 Tag_178
+main,1616,148,Move,Word_outputs.WORD2,Move UID 144.eno (블록 동작 확인),Move 입력 Tag_179
+main,1616,151,Move,Word_outputs.WORD3,Move UID 148.eno (블록 동작 확인),Move 입력 Tag_180
+main,1616,154,Move,Word_outputs.WORD4,Move UID 151.eno (블록 동작 확인),Move 입력 Tag_181
+main,1617,188,Move,Word_outputs.WORD5,POWER,Move 입력 Tag_182
+main,1617,192,Move,Word_outputs.WORD6,Move UID 188.eno (블록 동작 확인),Move 입력 Tag_183
+main,1617,195,Move,Word_outputs.WORD7,Move UID 192.eno (블록 동작 확인),Move 입력 Tag_184
+main,1617,198,Move,Word_outputs.WORD8,Move UID 195.eno (블록 동작 확인),Move 입력 Tag_185
+main,1618,218,Move,Word_outputs.WORD9,POWER,Move 입력 Tag_186
+main,1618,222,Move,Word_outputs.WORD10,Move UID 218.eno (블록 동작 확인),Move 입력 Tag_187
+main,1618,225,Move,Word_outputs.WORD11,Move UID 222.eno (블록 동작 확인),Move 입력 Tag_188
+main,1624,400,Move,Tag_189,ON,Move 입력 Data.Maint_code_0
+main,1624,405,Move,Tag_190,ON,Move 입력 Data.Maint_code_3
+main,1626,441,RCoil,Allarm.MAINTENANCE_PERIOD_LIMIT,((ON AND Flag.RESET_ALLARM) AND Allarm.MAINTENANCE_PERIOD_LIMIT),조건 성립 시 Reset
+signal linearization,1658,185,Move,OutValue,Div UID 181.eno (블록 동작 확인),Move 입력 App3
+signal linearization,1658,193,Move,OutValue,((IN0 AND [Analog_input > 32767]) OR (IN0 AND [Analog_input <= -1382])),Move 입력 -9999
+signal linearization,1658,23,Coil,Out_of_range,Move UID 193.eno (블록 동작 확인),조건에 따른 Coil 기록
+signal linearization,1659,162,Move,OutValue,NOT [IN0],Move 입력 0
+analog output conversion,1679,68,Move,Data2.Set_TH,(ON AND [ORef UID 80 < 0]),Move 입력 0
+analog output conversion,1679,76,Move,Data2.Set_TH,(ON AND [Data2.Set_TH > Data2.Set_MAX_TH]),Move 입력 Data2.Set_MAX_TH
+analog output conversion,1679,107,Move,Data.SET_PERC_BWF01,(ON AND [Prod_h < 0.0]),Move 입력 0
+analog output conversion,1679,169,Move,Data.SET_PERC_BWF02,(ON AND [Prod_h < 0.0]),Move 입력 0
+analog output conversion,1680,121,Move,Data.SET_PERC_BWF01,(ON AND [Data.SET_PERC_BWF01 < 0]),Move 입력 0
+analog output conversion,1680,129,Move,Data.SET_PERC_BWF01,(ON AND [Data.SET_PERC_BWF01 > 100]),Move 입력 100
+analog output conversion,1681,210,Move,App00,ON,Move 입력 Data.SET_PERC_BWF01
+analog output conversion,1681,215,Move,App01,ON,Move 입력 Data2.Set_TH
+analog output conversion,1681,350,Move,App03,ON,Move 입력 Data2.Set_MAX_TH1
+analog output conversion,1681,240,Move,BWF01_SP_FlowRate,Div UID 236.eno (블록 동작 확인),Move 입력 App03
+analog output conversion,1681,323,Move,BWF01_SP_FlowRate,Div UID 356.eno (블록 동작 확인),Move 입력 App03
+analog output conversion,1682,266,Move,Data.SET_PERC_BWF02,(ON AND [Data.SET_PERC_BWF02 < 0]),Move 입력 0
+analog output conversion,1682,274,Move,Data.SET_PERC_BWF02,(ON AND [Data.SET_PERC_BWF02 > 100]),Move 입력 100
+analog output conversion,1683,355,Move,App00,ON,Move 입력 Data.SET_PERC_BWF02
+analog output conversion,1683,360,Move,App01,ON,Move 입력 Data2.Set_TH
+analog output conversion,1683,365,Move,App03,ON,Move 입력 Data2.Set_MAX_TH2
+analog output conversion,1683,385,Move,BWF02_SP_FlowRate,Div UID 381.eno (블록 동작 확인),Move 입력 App03
+analog output conversion,1684,409,Move,Data.SET_PERC_FR01,(ON AND [Data.SET_PERC_FR01 < 5]),Move 입력 5
+analog output conversion,1684,417,Move,Data.SET_PERC_FR01,(ON AND [Data.SET_PERC_FR01 > 100]),Move 입력 100
+analog output conversion,1685,460,Move,Data.SET_PERC_VT01,(ON AND [Data.SET_PERC_VT01 < 5]),Move 입력 5
+analog output conversion,1685,468,Move,Data.SET_PERC_VT01,(ON AND [Data.SET_PERC_VT01 > 100]),Move 입력 100
+analog output conversion,1686,523,Move,Data.Burner_Air_Out,(ON AND [Data.Burner_Air_Out < 0]),Move 입력 0
+analog output conversion,1686,531,Move,Data.Burner_Air_Out,(ON AND [Data.Burner_Air_Out > 100]),Move 입력 100
+analog output conversion,1686,543,Move,BR01_AIR_SP,ON,Move 입력 Calcolo_Aria
+analog output conversion,1687,576,Move,Data.Burner_Gas_Out,(ON AND [Data.Burner_Gas_Out < 0]),Move 입력 0
+analog output conversion,1687,584,Move,Data.Burner_Gas_Out,(ON AND [Data.Burner_Gas_Out > 100]),Move 입력 100
+analog output conversion,1687,22,Move,test_out,Mul UID 590.eno (블록 동작 확인),Move 입력 BR01_GAS_SP
+analog output conversion,1688,627,Move,Data.Set_Perc_VT02,(ON AND [Data.Set_Perc_VT02 < 5]),Move 입력 5
+analog output conversion,1688,635,Move,Data.Set_Perc_VT02,(ON AND [Data.Set_Perc_VT02 > 100]),Move 입력 100
+analog output conversion,1689,831,Move,Data.SET_PERC_FN04,(ON AND [Data.SET_PERC_FN04 < 5]),Move 입력 5
+analog output conversion,1689,839,Move,Data.SET_PERC_FN04,(ON AND [Data.SET_PERC_FN04 > 100]),Move 입력 100
+analog output conversion,1690,862,SdCoil,Tag_159,(ON AND [Data2.Set_TH != Tag_158]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#15M
+analog output conversion,1690,867,Move,Tag_158,((ON AND [Data2.Set_TH != Tag_158]) AND Tag_159),Move 입력 Data2.Set_TH
+analog output conversion,1691,899,Move,App04,ON,Move 입력 Tag_158
+analog output conversion,1691,909,Move,LIW_SP_SPEED,Mul UID 905.eno (블록 동작 확인),Move 입력 app05
+analog output conversion,1692,36,Move,HMI_DB.SET_PERC_BC01,(ON AND [HMI_DB.SET_PERC_BC01 < 10]),Move 입력 10
+analog output conversion,1692,38,Move,HMI_DB.SET_PERC_BC01,(ON AND [HMI_DB.SET_PERC_BC01 > 100]),Move 입력 100
+analog output conversion,1693,24,Move,HMI_DB.SET_PERC_MC04,(ON AND [HMI_DB.SET_PERC_MC04 < 10]),Move 입력 10
+analog output conversion,1693,26,Move,HMI_DB.SET_PERC_MC04,(ON AND [HMI_DB.SET_PERC_MC04 > 100]),Move 입력 100
+valve control loop,1702,119,RCoil,Flag.M_MV01_OPEN,((ON AND Inputs.MV01 Open) OR (ON AND Flag.M_MV01_Close) OR (ON AND Flag.MV01_Auto)),조건 성립 시 Reset
+valve control loop,1702,126,RCoil,Flag.M_MV01_Close,((ON AND Inputs.MV01 Close) OR (ON AND Flag.M_MV01_OPEN) OR (ON AND Flag.MV01_Auto)),조건 성립 시 Reset
+valve control loop,1702,143,Coil,Start Open MV-01,(((((((((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.MV01_Auto) AND UP MV01 PID) OR ((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.M_MV01_OPEN)) AND MV WORK PULSE) OR (((((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.MV01_Auto) AND UP MV01 PID) OR ((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.M_MV01_OPEN)) AND ORef UID 172)) AND NOT [Start Close MV-01]) AND NOT [Inputs.MV01 Open]) AND NOT [HMI_DB.ResetEncoderProcedure_MV01]),조건에 따른 Coil 기록
+valve control loop,1702,156,Coil,Start Close MV-01,((((((((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.MV01_Auto) AND DOWN MV01 PID) OR ((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.M_MV01_Close)) AND MV WORK PULSE) OR (((((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.MV01_Auto) AND DOWN MV01 PID) OR ((ON AND NOT [Allarm.MV01_FAULT]) AND Flag.M_MV01_Close)) AND ON) OR ((ON AND NOT [Allarm.MV01_FAULT]) AND HMI_DB.ResetEncoderProcedure_MV01)) AND NOT [Start Open MV-01]) AND NOT [Inputs.MV01 Close]),조건에 따른 Coil 기록
+valve control loop,1703,23,Move,MV01_Encoder.NewCountValue,(HMI_DB.ResetEncoderProcedure_MV01 AND Inputs.MV01 Close),Move 입력 0
+valve control loop,1703,25,Coil,MV01_Encoder.SetCountValue,(Move UID 23.eno (블록 동작 확인) AND NOT [MV01_Encoder.SetCountValue]),조건에 따른 Coil 기록
+valve control loop,1703,26,RCoil,HMI_DB.ResetEncoderProcedure_MV01,Coil UID 25.out (블록 동작 확인),조건 성립 시 Reset
+valve control loop,1704,203,RCoil,Flag.M_MV02_OPEN,((NOT [ON] AND NOT [Inputs.MV02 Open]) OR (NOT [ON] AND Flag.M_MV02_CLOSE) OR (NOT [ON] AND Flag.MV02_Auto)),조건 성립 시 Reset
+valve control loop,1704,210,RCoil,Flag.M_MV02_CLOSE,((NOT [ON] AND NOT [Inputs.MV02 Close]) OR (NOT [ON] AND Flag.M_MV02_OPEN) OR (NOT [ON] AND Flag.MV02_Auto)),조건 성립 시 Reset
+valve control loop,1704,227,Coil,Open MV02,((((((((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.MV02_Auto) AND PID MV02 UP) OR ((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.M_MV02_OPEN)) AND MV WORK PULSE) OR (((((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.MV02_Auto) AND PID MV02 UP) OR ((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.M_MV02_OPEN)) AND ON)) AND NOT [Close MV02]) AND Inputs.MV02 Open),조건에 따른 Coil 기록
+valve control loop,1704,240,Coil,Close MV02,((((((((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.MV02_Auto) AND PID MV02 Down) OR ((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.M_MV02_CLOSE)) AND MV WORK PULSE) OR (((((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.MV02_Auto) AND PID MV02 Down) OR ((NOT [ON] AND NOT [Allarm.MV02_FAULT]) AND Flag.M_MV02_CLOSE)) AND ON)) AND NOT [Open MV02]) AND Inputs.MV02 Close),조건에 따른 Coil 기록
+valve control loop,1705,263,SdCoil,Tag_148,(ON AND NOT [Tag_147]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4S
+valve control loop,1705,268,SdCoil,Tag_147,(ON AND Tag_148),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10S
+valve control loop,1705,279,Coil,PID down MV03,((ON AND NOT [Tag_148]) AND [ErrPSH03 >= 5]),조건에 따른 Coil 기록
+valve control loop,1705,285,Coil,PID UP MV03,((ON AND NOT [Tag_148]) AND [ErrPSH03 < -5]),조건에 따른 Coil 기록
+valve control loop,1706,362,RCoil,Flag.M_MV03_OPEN,((ON AND Inputs.MV03 open) OR (ON AND Flag.M_MV03_CLOSE) OR (ON AND Flag.MV03_Auto)),조건 성립 시 Reset
+valve control loop,1706,369,RCoil,Flag.M_MV03_CLOSE,((ON AND Inputs.MV03 Close) OR (ON AND Flag.M_MV03_OPEN) OR (ON AND Flag.MV03_Auto)),조건 성립 시 Reset
+valve control loop,1706,46,RCoil,Close MV03 for Burner Startup,(ON AND Inputs.MV03 Close),조건 성립 시 Reset
+valve control loop,1706,390,Coil,Start open MV03,(((((((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.MV03_Auto) AND PID UP MV03) AND MV WORK PULSE) OR ((((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.MV03_Auto) AND PID UP MV03) AND ON) OR (((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.M_MV03_OPEN) AND MV WORK PULSE) OR (((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.M_MV03_OPEN) AND ON) OR ((ON AND NOT [Allarm.MV03_FAULT]) AND Open MV03 for washing)) AND NOT [HMI_DB.ResetEncoderProcedure_MV03]) AND NOT [Inputs.MV03 open]),조건에 따른 Coil 기록
+valve control loop,1706,407,Coil,Start Close MV03,((((((((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.MV03_Auto) AND PID down MV03) AND MV WORK PULSE) OR ((((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.MV03_Auto) AND PID down MV03) AND ON) OR (((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.M_MV03_CLOSE) AND MV WORK PULSE) OR (((ON AND NOT [Allarm.MV03_FAULT]) AND Flag.M_MV03_CLOSE) AND ON) OR ((ON AND NOT [Allarm.MV03_FAULT]) AND Close MV03 for Burner Startup)) AND NOT [Open MV03 for washing]) OR ((ON AND NOT [Allarm.MV03_FAULT]) AND HMI_DB.ResetEncoderProcedure_MV03)) AND NOT [Inputs.MV03 Close]),조건에 따른 Coil 기록
+valve control loop,1707,32,Move,MV03_Encoder.NewCountValue,(HMI_DB.ResetEncoderProcedure_MV03 AND Inputs.MV03 Close),Move 입력 0
+valve control loop,1707,44,Coil,MV03_Encoder.SetCountValue,(Move UID 32.eno (블록 동작 확인) AND NOT [MV03_Encoder.SetCountValue]),조건에 따른 Coil 기록
+valve control loop,1707,48,RCoil,HMI_DB.ResetEncoderProcedure_MV03,Coil UID 44.out (블록 동작 확인),조건 성립 시 Reset
+valve control loop,1708,535,RCoil,Flag.M_MV05_OPEN,(((NOT [ORef UID 24] AND NOT [ON]) AND NOT [Inputs.MV05 open]) OR ((NOT [ORef UID 24] AND NOT [ON]) AND Flag.M_MV05_CLOSE) OR ((NOT [ORef UID 24] AND NOT [ON]) AND Flag.MV05_Auto)),조건 성립 시 Reset
+valve control loop,1708,542,RCoil,Flag.M_MV05_CLOSE,(((NOT [ORef UID 24] AND NOT [ON]) AND NOT [Inputs.MV05 Close]) OR ((NOT [ORef UID 24] AND NOT [ON]) AND Flag.M_MV05_OPEN) OR ((NOT [ORef UID 24] AND NOT [ON]) AND Flag.MV05_Auto)),조건 성립 시 Reset
+valve control loop,1708,561,Coil,Open MV05,((((((((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Flag.MV05_Auto) AND PID UP MV05) OR (((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Flag.M_MV05_OPEN) AND MV WORK PULSE)) AND NOT [Allarm.Oxigen_Fault]) OR (((((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Flag.MV05_Auto) AND PID UP MV05) OR (((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Flag.M_MV05_OPEN) AND MV WORK PULSE)) AND UNDER TESTING)) AND NOT [Close MV05]) AND Inputs.MV05 open),조건에 따른 Coil 기록
+valve control loop,1708,576,Coil,Close MV05,((((((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Flag.MV05_Auto) AND PID DOWN MV05) OR (((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Flag.M_MV05_CLOSE) AND MV WORK PULSE) OR (((NOT [ORef UID 24] AND NOT [Allarm.MV_05_FAULT]) AND Allarm.Oxigen_Fault) AND NOT [UNDER TESTING])) AND NOT [Open MV05]) AND Inputs.MV05 Close),조건에 따른 Coil 기록
+valve control loop,1709,605,SdCoil,Tag_150,((ON AND [Data.PSH02_SETPOINT != 0]) AND NOT [Tag_149]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#300MS
+valve control loop,1709,610,SdCoil,Tag_149,((ON AND [Data.PSH02_SETPOINT != 0]) AND Tag_150),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4S
+valve control loop,1709,621,Coil,MV06 PID DOWN,(((ON AND [Data.PSH02_SETPOINT != 0]) AND NOT [Tag_150]) AND [ErrPSH02 >= 5]),조건에 따른 Coil 기록
+valve control loop,1709,627,Coil,MV06 PID UP,(((ON AND [Data.PSH02_SETPOINT != 0]) AND NOT [Tag_150]) AND [ErrPSH02 <= -5]),조건에 따른 Coil 기록
+valve control loop,1710,707,SdCoil,Tag_151,(((((ON AND Flag.MV06_Auto) AND [Data.PSH02_SETPOINT = 0]) AND NOT [Shot to close]) AND NOT [Shot to open]) AND [PSH02 <= 0]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#20S
+valve control loop,1710,712,SCoil,Shot to close,((((((ON AND Flag.MV06_Auto) AND [Data.PSH02_SETPOINT = 0]) AND NOT [Shot to close]) AND NOT [Shot to open]) AND [PSH02 <= 0]) AND Tag_151),조건 성립 시 Set
+valve control loop,1710,721,SdCoil,Tag_152,(((((ON AND Flag.MV06_Auto) AND [Data.PSH02_SETPOINT = 0]) AND NOT [Shot to close]) AND NOT [Shot to open]) AND [PSH02 > 0]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+valve control loop,1710,726,SCoil,Shot to open,((((((ON AND Flag.MV06_Auto) AND [Data.PSH02_SETPOINT = 0]) AND NOT [Shot to close]) AND NOT [Shot to open]) AND [PSH02 > 0]) AND Tag_152),조건 성립 시 Set
+valve control loop,1710,735,SdCoil,Tag_153,((ON AND Shot to close) OR (ON AND Shot to open)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#300MS
+valve control loop,1710,741,RCoil,Shot to close,(((ON AND Shot to close) OR (ON AND Shot to open)) AND Tag_153),조건 성립 시 Reset
+valve control loop,1710,743,RCoil,Shot to open,(((ON AND Shot to close) OR (ON AND Shot to open)) AND Tag_153),조건 성립 시 Reset
+valve control loop,1711,794,RCoil,Flag.MV06_Open,((NOT [ON] AND Inputs.MV06_Open) OR (NOT [ON] AND Flag.MV06_Close) OR (NOT [ON] AND Flag.MV06_Auto)),조건 성립 시 Reset
+valve control loop,1711,801,RCoil,Flag.MV06_Close,((NOT [ON] AND Inputs.MV06 Close) OR (NOT [ON] AND Flag.MV06_Open) OR (NOT [ON] AND Flag.MV06_Auto)),조건 성립 시 Reset
+valve control loop,1711,821,Coil,Open MV06,((((((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Auto) AND MV06 PID UP) OR (((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Auto) AND Shot to open) OR (((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Open) AND MV WORK PULSE) OR (((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Open) AND ON)) AND NOT [Close MV06]) AND NOT [Inputs.MV06_Open]),조건에 따른 Coil 기록
+valve control loop,1711,837,Coil,Close MV06,((((((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Auto) AND MV06 PID DOWN) OR (((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Auto) AND Shot to close) OR (((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Close) AND MV WORK PULSE) OR (((NOT [ON] AND NOT [Allarm.MV_06_FAULT]) AND Flag.MV06_Close) AND ON)) AND NOT [Open MV06]) AND NOT [Inputs.MV06 Close]),조건에 따른 Coil 기록
+valve control loop,1712,813,SdCoil,Tag_155,(ON AND NOT [Tag_154]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#200MS
+valve control loop,1712,818,SdCoil,Tag_154,(ON AND Tag_155),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+valve control loop,1712,823,Coil,MV WORK PULSE,(ON AND NOT [Tag_155]),조건에 따른 Coil 기록
+valve control loop,1713,1225,SdCoil,Tag_157,(ON AND NOT [Tag_156]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10MS
+valve control loop,1713,1230,SdCoil,Tag_156,(ON AND Tag_157),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10MS
+valve control loop,1713,1254,Move,WorkData.W34,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Start Open MV-01),Move 입력 0
+valve control loop,1713,1269,Move,WorkData.W33,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Start Close MV-01),Move 입력 0
+valve control loop,1713,1288,Move,WorkData.W36,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Open MV02),Move 입력 0
+valve control loop,1713,1303,Move,WorkData.W35,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Close MV02),Move 입력 0
+valve control loop,1713,1322,Move,WorkData.W30,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Start open MV03),Move 입력 0
+valve control loop,1713,1337,Move,WorkData.W29,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Start Close MV03),Move 입력 0
+valve control loop,1713,1390,Move,WorkData.W32,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Open MV05),Move 입력 0
+valve control loop,1713,1405,Move,WorkData.W31,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Close MV05),Move 입력 0
+valve control loop,1713,1424,Move,WorkData.W20,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Open MV06),Move 입력 0
+valve control loop,1713,1439,Move,WorkData.W19,((PBox UID 1235.out (블록 동작 확인) AND ON) AND Close MV06),Move 입력 0
+valve control loop,1714,1598,SCoil,Allarm.MV01_FAULT,(ON AND [WorkData.W33 > 2000]),조건 성립 시 Set
+valve control loop,1714,1601,Move,WorkData.W33,(ON AND [WorkData.W33 > 2000]),Move 입력 0
+valve control loop,1714,1612,SCoil,Allarm.MV01_FAULT,(ON AND [WorkData.W34 < -2000]),조건 성립 시 Set
+valve control loop,1714,1615,Move,WorkData.W34,(ON AND [WorkData.W34 < -2000]),Move 입력 0
+valve control loop,1714,1630,SCoil,Allarm.MV02_FAULT,(ON AND [WorkData.W35 > 1000]),조건 성립 시 Set
+valve control loop,1714,1633,Move,WorkData.W35,(ON AND [WorkData.W35 > 1000]),Move 입력 0
+valve control loop,1714,1644,SCoil,Allarm.MV02_FAULT,(ON AND [WorkData.W36 < -1000]),조건 성립 시 Set
+valve control loop,1714,1647,Move,WorkData.W36,(ON AND [WorkData.W36 < -1000]),Move 입력 0
+valve control loop,1714,1662,SCoil,Allarm.MV03_FAULT,(ON AND [WorkData.W29 > 3400]),조건 성립 시 Set
+valve control loop,1714,1665,Move,WorkData.W29,(ON AND [WorkData.W29 > 3400]),Move 입력 0
+valve control loop,1714,1676,SCoil,Allarm.MV03_FAULT,(ON AND [WorkData.W30 < -3400]),조건 성립 시 Set
+valve control loop,1714,1679,Move,WorkData.W30,(ON AND [WorkData.W30 < -3400]),Move 입력 0
+valve control loop,1714,1694,SCoil,Allarm.MV04_FAULT,(ON AND [WorkData.W37 > 700]),조건 성립 시 Set
+valve control loop,1714,1697,Move,WorkData.W37,(ON AND [WorkData.W37 > 700]),Move 입력 0
+valve control loop,1714,1708,SCoil,Allarm.MV04_FAULT,(ON AND [WorkData.W38 < -700]),조건 성립 시 Set
+valve control loop,1714,1711,Move,WorkData.W38,(ON AND [WorkData.W38 < -700]),Move 입력 0
+valve control loop,1714,1726,SCoil,Allarm.MV_05_FAULT,(ON AND [WorkData.W31 > 700]),조건 성립 시 Set
+valve control loop,1714,1729,Move,WorkData.W31,(ON AND [WorkData.W31 > 700]),Move 입력 0
+valve control loop,1714,1740,SCoil,Allarm.MV_05_FAULT,(ON AND [WorkData.W32 < -700]),조건 성립 시 Set
+valve control loop,1714,1743,Move,WorkData.W32,(ON AND [WorkData.W32 < -700]),Move 입력 0
+valve control loop,1714,1758,SCoil,Allarm.MV_06_FAULT,(ON AND [WorkData.W19 > 2200]),조건 성립 시 Set
+valve control loop,1714,1761,Move,WorkData.W19,(ON AND [WorkData.W19 > 2200]),Move 입력 0
+valve control loop,1714,1772,SCoil,Allarm.MV_06_FAULT,(ON AND [WorkData.W20 < -2200]),조건 성립 시 Set
+valve control loop,1714,1775,Move,WorkData.W20,(ON AND [WorkData.W20 < -2200]),Move 입력 0
+cyc_int2 ogni 1s,1721,165,Move,WorkData.Burner_PID_Result,(OFF AND Manuale),Move 입력 I_FFWD
+analog input conversion,1735,209,Move,Data.CLIENT_1,(ON AND NOT [BWF 01 RUN]),Move 입력 0
+analog input conversion,1736,284,Move,Data.CLIENT_2,((ON AND OFF) AND NOT [BWF 02 RUN]),Move 입력 0
+analog input conversion,1754,669,Move,Data.MASSICO_FLOW_GAS,(ON AND [Data.MASSICO_FLOW_GAS < 1]),Move 입력 1
+analog input conversion,1761,917,Move,Memory encoder.Encoder_CH00,NOT [EM_OK],Move 입력 CNT_Act_0
+analog input conversion,1761,922,Move,Memory encoder.Encoder_CH01,NOT [EM_OK],Move 입력 CNT_Act_1
+analog input conversion,1761,927,Move,Memory encoder.Encoder_CH02,NOT [EM_OK],Move 입력 CNT_Act_2
+analog input conversion,1761,932,Move,Memory encoder.Encoder_CH03,NOT [EM_OK],Move 입력 CNT_Act_3
+analog input conversion,1761,937,Move,Memory encoder.Encoder_CH04,NOT [EM_OK],Move 입력 CNT_Act_4
+analog input conversion,1762,1025,Coil,fill_unit1.CONTROL_SIGNALS.SW_GATE0,(EM_OK AND NOT [MV01_Close]),조건에 따른 Coil 기록
+analog input conversion,1762,1038,Move,Memory encoder.Encoder_CH00_10,Div UID 1034.eno (블록 동작 확인),Move 입력 CNTV0_100
+analog input conversion,1762,1047,Move,Memory encoder.Encoder_CH00_10,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE0]),Move 입력 0
+analog input conversion,1762,1052,Move,Memory encoder.Encoder_CH00,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE0]),Move 입력 INT#0
+analog input conversion,1763,23,Coil,fill_unit1.CONTROL_SIGNALS.SW_GATE1,(EM_OK AND NOT [MV02_Close]),조건에 따른 Coil 기록
+analog input conversion,1763,26,Move,Memory encoder.Encoder_CH01_10,Div UID 25.eno (블록 동작 확인),Move 입력 CNTV1_100
+analog input conversion,1763,28,Move,Memory encoder.Encoder_CH01_10,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE1]),Move 입력 0
+analog input conversion,1763,29,Move,Memory encoder.Encoder_CH01,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE1]),Move 입력 INT#0
+analog input conversion,1764,1129,Coil,fill_unit1.CONTROL_SIGNALS.SW_GATE2,(EM_OK AND NOT [Inputs.MV03 Close]),조건에 따른 Coil 기록
+analog input conversion,1764,1142,Move,Memory encoder.Encoder_CH02_10,Div UID 1138.eno (블록 동작 확인),Move 입력 CNTV2_100
+analog input conversion,1764,1151,Move,Memory encoder.Encoder_CH02_10,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE2]),Move 입력 0
+analog input conversion,1764,1156,Move,Memory encoder.Encoder_CH02,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE2]),Move 입력 INT#0
+analog input conversion,1765,1233,Coil,fill_unit1.CONTROL_SIGNALS.SW_GATE3,(EM_OK AND NOT [MV05_Close]),조건에 따른 Coil 기록
+analog input conversion,1765,1246,Move,Memory encoder.Encoder_CH03_10,Div UID 1242.eno (블록 동작 확인),Move 입력 CNTV3_100
+analog input conversion,1765,1255,Move,Memory encoder.Encoder_CH03_10,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE3]),Move 입력 0
+analog input conversion,1765,1260,Move,Memory encoder.Encoder_CH03,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE3]),Move 입력 INT#0
+analog input conversion,1766,1441,Coil,fill_unit1.CONTROL_SIGNALS.SW_GATE4,(EM_OK AND NOT [MV06_Close]),조건에 따른 Coil 기록
+analog input conversion,1766,1454,Move,Memory encoder.Encoder_CH04_10,Div UID 1450.eno (블록 동작 확인),Move 입력 CNTV4_100
+analog input conversion,1766,1463,Move,Memory encoder.Encoder_CH04_10,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE4]),Move 입력 0
+analog input conversion,1766,1468,Move,Memory encoder.Encoder_CH04,(EM_OK AND NOT [fill_unit1.CONTROL_SIGNALS.SW_GATE4]),Move 입력 INT#0
+allarms 1,1781,71,SdCoil,Tag_49,((ON AND Consent Start BWF01) AND NOT [Inputs.BWF 01 RUN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10S
+allarms 1,1781,80,SCoil,Allarm.BWF01_FAULT,((((ON AND Consent Start BWF01) AND Tag_49) AND NOT [Inputs.BWF 01 RUN]) OR ((ON AND Consent Start BWF01) AND Inputs.BWF01 FAULT)),조건 성립 시 Set
+allarms 1,1781,86,RCoil,Allarm.BWF01_FAULT,(((ON AND Flag.RESET_ALLARM) AND Allarm.BWF01_FAULT) AND NOT [Inputs.BWF01 FAULT]),조건 성립 시 Reset
+allarms 1,1782,105,SCoil,Allarm.BWF01_min_LEVEL,((ON AND Consent Start BWF01) AND Inputs.min LEV BWF01),조건 성립 시 Set
+allarms 1,1782,109,SCoil,Allarm.BWF01_MAX_LEVEL,(ON AND Inputs.MAX LEV BWF01),조건 성립 시 Set
+allarms 1,1782,117,RCoil,Allarm.BWF01_min_LEVEL,((ON AND Flag.RESET_ALLARM) AND NOT [Inputs.min LEV BWF01]),조건 성립 시 Reset
+allarms 1,1782,121,RCoil,Allarm.BWF01_MAX_LEVEL,((ON AND Flag.RESET_ALLARM) AND NOT [Inputs.MAX LEV BWF01]),조건 성립 시 Reset
+allarms 1,1783,147,SdCoil,Tag_50,((ON AND Consent Start BWF02) AND NOT [Inputs.BWF 02 RUN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10S
+allarms 1,1783,156,SCoil,Allarm.BWF02_FAULT,((((ON AND Consent Start BWF02) AND Tag_50) AND NOT [Inputs.BWF 02 RUN]) OR ((ON AND Consent Start BWF02) AND Inputs.BWF02 FAULT)),조건 성립 시 Set
+allarms 1,1783,162,RCoil,Allarm.BWF02_FAULT,(((ON AND Flag.RESET_ALLARM) AND Allarm.BWF02_FAULT) AND NOT [Inputs.BWF02 FAULT]),조건 성립 시 Reset
+allarms 1,1784,181,SCoil,Allarm.BWF02_min_LEVEL,((ON AND Consent Start BWF02) AND Inputs.min LEV BWF02),조건 성립 시 Set
+allarms 1,1784,185,SCoil,Allarm.BWF02_MAX_LEVEL,(ON AND Inputs.MAX LEV BWF02),조건 성립 시 Set
+allarms 1,1784,193,RCoil,Allarm.BWF02_min_LEVEL,((ON AND Flag.RESET_ALLARM) AND NOT [Inputs.min LEV BWF02]),조건 성립 시 Reset
+allarms 1,1784,197,RCoil,Allarm.BWF02_MAX_LEVEL,((ON AND Flag.RESET_ALLARM) AND NOT [Inputs.MAX LEV BWF02]),조건 성립 시 Reset
+allarms 1,1785,217,SdCoil,Tag_51,(((ON AND Start BC01) AND NOT [Inputs.BC01 run]) OR ((ON AND Start BC01) AND Inputs.BC01_All_inv)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1785,223,SCoil,Allarm.BC_01_FAULT,(((ON AND Start BC01) AND Tag_51) AND NOT [Inputs.BC01 run]),조건 성립 시 Set
+allarms 1,1785,27,SCoil,Allarm.BC01_INV,(((ON AND Start BC01) AND Tag_51) AND Inputs.BC01_All_inv),조건 성립 시 Set
+allarms 1,1785,228,RCoil,Allarm.BC_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.BC_01_FAULT),조건 성립 시 Reset
+allarms 1,1785,267,RCoil,Allarm.BC01_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.BC01_INV),조건 성립 시 Reset
+allarms 1,1786,234,SCoil,Allarm.BC_01_FC,(ON AND Inputs.BC01 trip wire),조건 성립 시 Set
+allarms 1,1786,240,RCoil,Allarm.BC_01_FC,(((ON AND Flag.RESET_ALLARM) AND NOT [Inputs.BC01 trip wire]) AND Allarm.BC_01_FC),조건 성립 시 Reset
+allarms 1,1787,315,SdCoil,Tag_54,(((ON AND Start RD01) AND NOT [Inputs.RD01 run]) OR ((ON AND Start RD01) AND Inputs.RD01_All_inv)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#5S
+allarms 1,1787,321,SCoil,Allarm.RD_01_FAULT,(((ON AND Start RD01) AND Tag_54) AND NOT [Inputs.RD01 run]),조건 성립 시 Set
+allarms 1,1787,365,SCoil,Allarm.RD01_INV,(((ON AND Start RD01) AND Tag_54) AND Inputs.RD01_All_inv),조건 성립 시 Set
+allarms 1,1787,326,RCoil,Allarm.RD_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.RD_01_FAULT),조건 성립 시 Reset
+allarms 1,1787,373,RCoil,Allarm.RD01_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.RD01_INV),조건 성립 시 Reset
+allarms 1,1788,349,SdCoil,Tag_55,((ON AND Start fan RD01) AND NOT [Inputs.fan RD01 run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1788,355,SCoil,Allarm.RD_01_FAN_FAULT,(((ON AND Start fan RD01) AND Tag_55) AND NOT [Inputs.fan RD01 run]),조건 성립 시 Set
+allarms 1,1788,360,RCoil,Allarm.RD_01_FAN_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.RD_01_FAN_FAULT),조건 성립 시 Reset
+allarms 1,1789,383,SdCoil,Tag_56,((OFF AND Start Spare Motor) AND NOT [Inputs.MC03 run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1789,389,SCoil,Allarm.MC_03_FAULT,(((OFF AND Start Spare Motor) AND Tag_56) AND NOT [Inputs.MC03 run]),조건 성립 시 Set
+allarms 1,1789,394,RCoil,Allarm.MC_03_FAULT,((OFF AND Flag.RESET_ALLARM) AND Allarm.MC_03_FAULT),조건 성립 시 Reset
+allarms 1,1790,400,SCoil,Allarm.MC_03_TORQUE,(OFF AND NOT [Inputs.MC03 torque]),조건 성립 시 Set
+allarms 1,1790,406,RCoil,Allarm.MC_03_TORQUE,(((OFF AND Flag.RESET_ALLARM) AND Inputs.MC03 torque) AND Allarm.MC_03_TORQUE),조건 성립 시 Reset
+allarms 1,1791,437,SdCoil,Tag_57,(((ON AND Start MC04) AND Inputs.MC04_All_inv) OR ((ON AND Start MC04) AND NOT [Inputs.MC04 run])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#5S
+allarms 1,1791,443,SCoil,Allarm.MC_04_FAULT,(((ON AND Start MC04) AND Tag_57) AND NOT [Inputs.MC04 run]),조건 성립 시 Set
+allarms 1,1791,487,SCoil,Allarm.MC04_INV,(((ON AND Start MC04) AND Tag_57) AND Inputs.MC04_All_inv),조건 성립 시 Set
+allarms 1,1791,448,RCoil,Allarm.MC_04_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MC_04_FAULT),조건 성립 시 Reset
+allarms 1,1791,495,RCoil,Allarm.MC04_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.MC04_INV),조건 성립 시 Reset
+allarms 1,1792,454,SCoil,Allarm.MC_04_TORQUE,(OFF AND NOT [Inputs.MC04 torque]),조건 성립 시 Set
+allarms 1,1792,460,RCoil,Allarm.MC_04_TORQUE,(((OFF AND Flag.RESET_ALLARM) AND Inputs.MC04 torque) AND Allarm.MC_04_TORQUE),조건 성립 시 Reset
+allarms 1,1794,545,SdCoil,Tag_59,(((ON AND Start VS01) AND NOT [Inputs.VS01 run]) OR ((ON AND Start VS01) AND Inputs.VS01_All_Inv)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1794,551,SCoil,Allarm.VS_01_FAULT,(((ON AND Start VS01) AND Tag_59) AND NOT [Inputs.VS01 run]),조건 성립 시 Set
+allarms 1,1794,595,SCoil,Allarm.VS01_INV,(((ON AND Start VS01) AND Tag_59) AND Inputs.VS01_All_Inv),조건 성립 시 Set
+allarms 1,1794,556,RCoil,Allarm.VS_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VS_01_FAULT),조건 성립 시 Reset
+allarms 1,1794,603,RCoil,Allarm.VS01_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.VS01_INV),조건 성립 시 Reset
+allarms 1,1796,613,SdCoil,Tag_61,(((ON AND Start FN02) AND NOT [Inputs.FN02 Run]) OR ((ON AND Start FN02) AND Inputs.FN02_All_Inv)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1796,619,SCoil,Allarm.FN_02_FAULT,(((ON AND Start FN02) AND Tag_61) AND NOT [Inputs.FN02 Run]),조건 성립 시 Set
+allarms 1,1796,663,SCoil,Allarm.FN02_INV,(((ON AND Start FN02) AND Tag_61) AND Inputs.FN02_All_Inv),조건 성립 시 Set
+allarms 1,1796,624,RCoil,Allarm.FN_02_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.FN_02_FAULT),조건 성립 시 Reset
+allarms 1,1796,671,RCoil,Allarm.FN02_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.FN02_INV),조건 성립 시 Reset
+allarms 1,1797,647,SdCoil,Tag_62,((ON AND Start VR01) AND NOT [Inputs.VR-01 RUN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1797,653,SCoil,Allarm.VR_01_FAULT,((ON AND Start VR01) AND Tag_62),조건 성립 시 Set
+allarms 1,1797,658,RCoil,Allarm.VR_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VR_01_FAULT),조건 성립 시 Reset
+allarms 1,1798,681,SdCoil,Tag_63,(((ON AND Start FN01) AND NOT [Inputs.FN01 Run]) OR ((ON AND Start FN01) AND Inputs.FN01_All_Inv)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1798,687,SCoil,Allarm.FN_01_FAULT,(((ON AND Start FN01) AND Tag_63) AND NOT [Inputs.FN01 Run]),조건 성립 시 Set
+allarms 1,1798,731,SCoil,Allarm.FN01_INV,(((ON AND Start FN01) AND Tag_63) AND Inputs.FN01_All_Inv),조건 성립 시 Set
+allarms 1,1798,692,RCoil,Allarm.FN_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.FN_01_FAULT),조건 성립 시 Reset
+allarms 1,1798,739,RCoil,Allarm.FN01_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.FN01_INV),조건 성립 시 Reset
+allarms 1,1799,715,SdCoil,Tag_64,((ON AND Start VR02) AND NOT [Inputs.VR02 Run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1799,721,SCoil,Allarm.VR_02_FAULT,((ON AND Start VR02) AND Tag_64),조건 성립 시 Set
+allarms 1,1799,726,RCoil,Allarm.VR_02_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VR_02_FAULT),조건 성립 시 Reset
+allarms 1,1800,749,SdCoil,Tag_65,((ON AND Start CH01) AND NOT [Inputs.CH01 Run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1800,755,SCoil,Allarm.CH_01_FAULT,((ON AND Start CH01) AND Tag_65),조건 성립 시 Set
+allarms 1,1800,760,RCoil,Allarm.CH_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.CH_01_FAULT),조건 성립 시 Reset
+allarms 1,1801,73,SCoil,Memo_M25_Running,PContact UID 905.out (블록 동작 확인),조건 성립 시 Set
+allarms 1,1801,66,RCoil,Memo_M25_Running,(NOT [Start FN03] OR NOT [Inputs.FN03 Run]),조건 성립 시 Reset
+allarms 1,1801,854,SdCoil,Tag_66,(((ON AND Start FN03) AND NOT [Inputs.FN03 Run]) AND NOT [Memo_M25_Running]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#35S
+allarms 1,1801,908,SdCoil,Tag_66,(((ON AND Start FN03) AND NOT [Inputs.FN03 Run]) AND Memo_M25_Running),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#35S
+allarms 1,1801,856,SCoil,Allarm.FN03_INV,((ON AND Start FN03) AND NOT [Inputs.FN03_All_SoftStarter]),조건 성립 시 Set
+allarms 1,1801,859,SCoil,Allarm.FN_03_FAULT,(((ON AND Start FN03) AND Tag_66) AND NOT [Inputs.FN03 Run]),조건 성립 시 Set
+allarms 1,1801,862,RCoil,Allarm.FN_03_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.FN_03_FAULT),조건 성립 시 Reset
+allarms 1,1801,864,RCoil,Allarm.FN03_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.FN03_INV),조건 성립 시 Reset
+allarms 1,1802,817,SdCoil,Tag_67,((ON AND Start FN06) AND NOT [Inputs.FEEDBACKMOTOR FN-06]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1802,823,SCoil,Allarm.MBVA01_FAULT,((ON AND Start FN06) AND Tag_67),조건 성립 시 Set
+allarms 1,1802,828,RCoil,Allarm.MBVA01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.MBVA01_FAULT),조건 성립 시 Reset
+allarms 1,1803,851,SdCoil,Tag_68,((ON AND Start SC01) AND NOT [Inputs.FEEDBACKMOTOR SC-01]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1803,857,SCoil,Allarm.SC_01_FAULT,((ON AND Start SC01) AND Tag_68),조건 성립 시 Set
+allarms 1,1803,862,RCoil,Allarm.SC_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.SC_01_FAULT),조건 성립 시 Reset
+allarms 1,1805,919,SdCoil,Tag_70,((ON AND Start LD01) AND NOT [Inputs.FEEDBACKMOTOR LD-01]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1805,925,SCoil,Allarm.LD_01_FAULT,((ON AND Start LD01) AND Tag_70),조건 성립 시 Set
+allarms 1,1805,930,RCoil,Allarm.LD_01_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.LD_01_FAULT),조건 성립 시 Reset
+allarms 1,1806,953,SdCoil,Tag_71,((ON AND Start Vibrator LD-01) AND NOT [Inputs.FEEDBACKMOTOR-LD-01A]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1806,959,SCoil,Allarm.LD_01_VIB_FAULT,((ON AND Start Vibrator LD-01) AND Tag_71),조건 성립 시 Set
+allarms 1,1806,964,RCoil,Allarm.LD_01_VIB_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.LD_01_VIB_FAULT),조건 성립 시 Reset
+allarms 1,1807,987,SdCoil,Tag_72,((ON AND Start SC10) AND NOT [Inputs.FEEDBACKMOTOR SC-10]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1807,993,SCoil,Allarm.SC_10_FAULT,((ON AND Start SC10) AND Tag_72),조건 성립 시 Set
+allarms 1,1807,998,RCoil,Allarm.SC_10_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.SC_10_FAULT),조건 성립 시 Reset
+allarms 1,1808,1021,SdCoil,Tag_73,((ON AND Start SC11) AND NOT [Inputs.FEEDBACKMOTOR SC-11]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1808,1027,SCoil,Allarm.SC_11_FAULT,((ON AND Start SC11) AND Tag_73),조건 성립 시 Set
+allarms 1,1808,1032,RCoil,Allarm.SC_11_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.SC_11_FAULT),조건 성립 시 Reset
+allarms 1,1809,1055,SdCoil,Tag_74,(((ON AND Start FN04) AND NOT [Inputs.FN04 Run]) OR ((ON AND Start FN04) AND Inputs.FN04_All_inv)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#17S
+allarms 1,1809,1061,SCoil,Allarm.FN_04_FAULT,(((ON AND Start FN04) AND Tag_74) AND NOT [Inputs.FN04 Run]),조건 성립 시 Set
+allarms 1,1809,1105,SCoil,Allarm.FN04_INV,(((ON AND Start FN04) AND Tag_74) AND Inputs.FN04_All_inv),조건 성립 시 Set
+allarms 1,1809,1066,RCoil,Allarm.FN_04_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.FN_04_FAULT),조건 성립 시 Reset
+allarms 1,1809,1113,RCoil,Allarm.FN04_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.FN04_INV),조건 성립 시 Reset
+allarms 1,1810,1089,SdCoil,Tag_75,((ON AND Start VR03) AND NOT [Inputs.VR03 Run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1810,1095,SCoil,Allarm.VR_03_FAULT,((ON AND Start VR03) AND Tag_75),조건 성립 시 Set
+allarms 1,1810,1100,RCoil,Allarm.VR_03_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VR_03_FAULT),조건 성립 시 Reset
+allarms 1,1811,1123,SdCoil,Tag_76,((ON AND Start VR04) AND NOT [Inputs.VR04 Run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1811,1129,SCoil,Allarm.VR_04_FAULT,((ON AND Start VR04) AND Tag_76),조건 성립 시 Set
+allarms 1,1811,1134,RCoil,Allarm.VR_04_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VR_04_FAULT),조건 성립 시 Reset
+allarms 1,1812,1157,SdCoil,Tag_77,((ON AND Start VR05) AND NOT [Inputs.VR05 Run]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1812,1163,SCoil,Allarm.VR_05_FAULT,((ON AND Start VR05) AND Tag_77),조건 성립 시 Set
+allarms 1,1812,1168,RCoil,Allarm.VR_05_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VR_05_FAULT),조건 성립 시 Reset
+allarms 1,1813,1191,SdCoil,Tag_78,((ON AND Start VR06) AND NOT [Inputs.VR-06 RUN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1813,1197,SCoil,Allarm.VR_06_FAULT,((ON AND Start VR06) AND Tag_78),조건 성립 시 Set
+allarms 1,1813,1202,RCoil,Allarm.VR_06_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.VR_06_FAULT),조건 성립 시 Reset
+allarms 1,1814,1225,SdCoil,Tag_79,((ON AND Start FN05) AND NOT [Inputs.FN-05 RUN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+allarms 1,1814,1231,SCoil,Allarm.FN_05_FAULT,((ON AND Start FN05) AND Tag_79),조건 성립 시 Set
+allarms 1,1814,1236,RCoil,Allarm.FN_05_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.FN_05_FAULT),조건 성립 시 Reset
+allarms 1,1815,1453,SdCoil,Tag_80,((ON AND PV-01 Gate a) AND NOT [Flag.PV_01_GATE_A_MEM_OPEN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4S
+allarms 1,1815,1459,SCoil,Allarm.PV_01_GATE_A_NOT_OPEN,((ON AND PV-01 Gate a) AND Tag_80),조건 성립 시 Set
+allarms 1,1815,1464,RCoil,Allarm.PV_01_GATE_A_NOT_OPEN,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_01_GATE_A_NOT_OPEN),조건 성립 시 Reset
+allarms 1,1815,1471,SdCoil,Tag_81,((ON AND NOT [PV-01 Gate a]) AND NOT [Flag.PV_01_GATE_A_MEM_CLOSE]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4S
+allarms 1,1815,1477,SCoil,Allarm.PV_01_GATE_A_NOT_CLOSE,((ON AND NOT [PV-01 Gate a]) AND Tag_81),조건 성립 시 Set
+allarms 1,1815,1482,RCoil,Allarm.PV_01_GATE_A_NOT_CLOSE,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_01_GATE_A_NOT_CLOSE),조건 성립 시 Reset
+allarms 1,1816,1517,SdCoil,Tag_82,((ON AND PV-01 GATE B EV) AND NOT [Flag.PV_01_GATE_B_MEM_OPEN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#7S
+allarms 1,1816,1523,SCoil,Allarm.PV_01_GATE_B_NOT_OPEN,((ON AND PV-01 GATE B EV) AND Tag_82),조건 성립 시 Set
+allarms 1,1816,1528,RCoil,Allarm.PV_01_GATE_B_NOT_OPEN,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_01_GATE_B_NOT_OPEN),조건 성립 시 Reset
+allarms 1,1816,1535,SdCoil,Tag_83,((ON AND NOT [PV-01 GATE B EV]) AND NOT [Flag.PV_01_GATE_B_MEM_CLOSE]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#7S
+allarms 1,1816,1541,SCoil,Allarm.PV_01_GATE_B_NOT_CLOSE,((ON AND NOT [PV-01 GATE B EV]) AND Tag_83),조건 성립 시 Set
+allarms 1,1816,1546,RCoil,Allarm.PV_01_GATE_B_NOT_CLOSE,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_01_GATE_B_NOT_CLOSE),조건 성립 시 Reset
+allarms 1,1817,1581,SdCoil,Tag_84,((ON AND PV-02 GATE A EV) AND NOT [Flag.PV_02_GATE_A_MEM_OPEN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#7S
+allarms 1,1817,1587,SCoil,Allarm.PV_02_GATE_A_NOT_OPEN,((ON AND PV-02 GATE A EV) AND Tag_84),조건 성립 시 Set
+allarms 1,1817,1592,RCoil,Allarm.PV_02_GATE_A_NOT_OPEN,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_02_GATE_A_NOT_OPEN),조건 성립 시 Reset
+allarms 1,1817,1599,SdCoil,Tag_85,((ON AND NOT [PV-02 GATE A EV]) AND NOT [Flag.PV_02_GATE_A_MEM_CLOSE]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#7S
+allarms 1,1817,1605,SCoil,Allarm.PV_02_GATE_A_NOT_CLOSE,((ON AND NOT [PV-02 GATE A EV]) AND Tag_85),조건 성립 시 Set
+allarms 1,1817,1610,RCoil,Allarm.PV_02_GATE_A_NOT_CLOSE,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_02_GATE_A_NOT_CLOSE),조건 성립 시 Reset
+allarms 1,1818,1645,SdCoil,Tag_86,((ON AND PV-02 GATE B EV) AND NOT [Flag.PV_02_GATE_B_MEM_OPEN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#7S
+allarms 1,1818,1651,SCoil,Allarm.PV_02_GATE_B_NOT_OPEN,((ON AND PV-02 GATE B EV) AND Tag_86),조건 성립 시 Set
+allarms 1,1818,1656,RCoil,Allarm.PV_02_GATE_B_NOT_OPEN,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_02_GATE_B_NOT_OPEN),조건 성립 시 Reset
+allarms 1,1818,1663,SdCoil,Tag_87,((ON AND NOT [PV-02 GATE B EV]) AND NOT [Flag.PV_02_GATE_B_MEM_CLOSE]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#7S
+allarms 1,1818,1669,SCoil,Allarm.PV_02_GATE_B_NOT_CLOSE,((ON AND NOT [PV-02 GATE B EV]) AND Tag_87),조건 성립 시 Set
+allarms 1,1818,1674,RCoil,Allarm.PV_02_GATE_B_NOT_CLOSE,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_02_GATE_B_NOT_CLOSE),조건 성립 시 Reset
+allarms 1,1819,1709,SdCoil,Tag_88,((ON AND PV-03 GATE EV) AND NOT [Flag.PV_03_GATE_MEM_OPEN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#5S
+allarms 1,1819,1715,SCoil,Allarm.PV_03_GATE_NOT_OPEN1,((ON AND PV-03 GATE EV) AND Tag_88),조건 성립 시 Set
+allarms 1,1819,1720,RCoil,Allarm.PV_03_GATE_NOT_OPEN1,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_03_GATE_NOT_OPEN1),조건 성립 시 Reset
+allarms 1,1819,1727,SdCoil,Tag_89,((ON AND NOT [PV-03 GATE EV]) AND NOT [Flag.PV_03_GATE_MEM_CLOSE]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#5S
+allarms 1,1819,1733,SCoil,Allarm.PV_03_GATE_NOT_CLOSE1,((ON AND NOT [PV-03 GATE EV]) AND Tag_89),조건 성립 시 Set
+allarms 1,1819,1738,RCoil,Allarm.PV_03_GATE_NOT_CLOSE1,((ON AND Flag.RESET_ALLARM) AND Allarm.PV_03_GATE_NOT_CLOSE1),조건 성립 시 Reset
+allarms 1,1820,1775,SdCoil,Tag_90,(OFF AND NOT [Inputs.BWF1_INVERTER_HIGH_SPEED]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#30S
+allarms 1,1820,1780,SCoil,Allarm.BWF01_Fault_Control,((OFF AND NOT [Inputs.BWF1_INVERTER_HIGH_SPEED]) AND Tag_90),조건 성립 시 Set
+allarms 1,1820,1787,SdCoil,Tag_91,(OFF AND NOT [Inputs.BWF2_INVERTER_HIGH_SPEED]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#30S
+allarms 1,1820,1792,SCoil,Allarm.BWF02_Fault_Control,((OFF AND NOT [Inputs.BWF2_INVERTER_HIGH_SPEED]) AND Tag_91),조건 성립 시 Set
+allarms 1,1820,1801,RCoil,Allarm.BWF01_Fault_Control,(((OFF AND Flag.RESET_ALLARM) AND Allarm.BWF01_Fault_Control) AND Inputs.BWF1_INVERTER_HIGH_SPEED),조건 성립 시 Reset
+allarms 1,1820,1806,RCoil,Allarm.BWF02_Fault_Control,(((OFF AND Flag.RESET_ALLARM) AND Allarm.BWF02_Fault_Control) AND Inputs.BWF2_INVERTER_HIGH_SPEED),조건 성립 시 Reset
+allarms 1,1821,1792,SCoil,Allarm.Aux_Inverter_Fault,LRef UID 24.Q (블록 동작 확인),조건 성립 시 Set
+allarms 1,1821,1828,SCoil,Allarm.Aux_INV,(((ON AND Start Aux INV) AND NOT [Start Aux INV]) AND Inputs.Aux_Inv_All),조건 성립 시 Set
+allarms 1,1821,1798,RCoil,Allarm.Aux_Inverter_Fault,(((ON AND Flag.RESET_ALLARM) AND Allarm.Aux_Inverter_Fault) AND Inputs.Aux inverter RUN),조건 성립 시 Reset
+allarms 1,1821,1836,RCoil,Allarm.Aux_INV,((ON AND Flag.RESET_ALLARM) AND Allarm.Aux_INV),조건 성립 시 Reset
+allarms 1,1822,24,SCoil,Allarm.ER01_run,LRef UID 28.Q (블록 동작 확인),조건 성립 시 Set
+allarms 1,1822,32,RCoil,Allarm.ER01_run,((ON AND Flag.RESET_ALLARM) AND Allarm.ER01_run),조건 성립 시 Reset
+allarms 1,1823,27,SCoil,Allarm.110V_Fault,NOT [Inputs.Presenza_110V],조건 성립 시 Set
+allarms 1,1823,37,RCoil,Allarm.110V_Fault,(Flag.RESET_ALLARM AND Allarm.110V_Fault),조건 성립 시 Reset
+allarms 1,1824,31,SCoil,Allarm.Emergency_module_fault,NOT [Inputs.EM_OK],조건 성립 시 Set
+allarms 1,1824,38,RCoil,Allarm.Emergency_module_fault,(Flag.RESET_ALLARM AND Allarm.Emergency_module_fault),조건 성립 시 Reset
+allarms 1,1825,27,Coil,Allarm.Simulation enabled,Simulation(1),조건에 따른 Coil 기록
+allarms 1,1825,31,RCoil,Allarm.Simulation enabled,(Flag.RESET_ALLARM AND Allarm.Simulation enabled),조건 성립 시 Reset
+control_stechio,1830,374,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 0]),Move 입력 Stechio.Gas_crv0_4
+control_stechio,1830,382,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 5]),Move 입력 Stechio.Gas_crv5_9
+control_stechio,1830,390,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 10]),Move 입력 Stechio.Gas_crv10_14
+control_stechio,1830,398,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 15]),Move 입력 Stechio.Gas_crv15_19
+control_stechio,1830,406,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 20]),Move 입력 Stechio.Gas_crv20_24
+control_stechio,1830,414,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 25]),Move 입력 Stechio.Gas_crv25_29
+control_stechio,1830,422,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 30]),Move 입력 Stechio.Gas_crv30_34
+control_stechio,1830,430,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 35]),Move 입력 Stechio.Gas_crv35_39
+control_stechio,1830,438,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 40]),Move 입력 Stechio.Gas_crv40_44
+control_stechio,1830,446,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 45]),Move 입력 Stechio.Gas_crv45_49
+control_stechio,1830,454,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 50]),Move 입력 Stechio.Gas_crv50_54
+control_stechio,1830,462,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 55]),Move 입력 Stechio.Gas_crv55_59
+control_stechio,1830,470,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 60]),Move 입력 Stechio.Gas_crv60_64
+control_stechio,1830,478,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 65]),Move 입력 Stechio.Gas_crv65_69
+control_stechio,1830,486,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 70]),Move 입력 Stechio.Gas_crv70_74
+control_stechio,1830,494,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 75]),Move 입력 Stechio.Gas_crv75_79
+control_stechio,1830,502,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 80]),Move 입력 Stechio.Gas_crv80_84
+control_stechio,1830,510,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 85]),Move 입력 Stechio.Gas_crv85_89
+control_stechio,1830,518,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 90]),Move 입력 Stechio.Gas_crv90_94
+control_stechio,1830,526,Move,Portata_Presunta_GAS,(ON AND [Data.Burner_Air_Out >= 95]),Move 입력 Stechio.Gas_crv95_100
+control_stechio,1834,566,Move,Data.Burner_Gas_Out,(ON AND [Data.Burner_Gas_Out < 0]),Move 입력 0
+control_stechio,1834,574,Move,Data.Burner_Gas_Out,(ON AND [Data.Burner_Gas_Out > 100]),Move 입력 100
+control_stechio,1835,592,Coil,Stechio.Sign_lim_min,(ON AND [Correzione_Stechio <= Stechio.Limite_min]),조건에 따른 Coil 기록
+control_stechio,1835,598,Coil,Stechio.Sign_lim_MAX,(ON AND [Correzione_Stechio >= Stechio.Limite_MAX]),조건에 따른 Coil 기록
+auto start motors,1841,66,Move,Data.Tempo_presetting,(ON AND NOT [ORef UID 74]),Move 입력 0
+auto start motors,1842,87,Move,Data.D37,(ON AND NOT [Flag.Auto_ON1]),Move 입력 Data.Tipo_preset
+auto start motors,1842,93,Move,Data.D37,(ON AND Flag.Auto_ON1),Move 입력 -1
+auto start motors,1843,410,SCoil,Flag.RESET_ALLARM,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 1]),조건 성립 시 Set
+auto start motors,1843,412,RCoil,Flag.Maintenance_ON,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 1]),조건 성립 시 Reset
+auto start motors,1843,420,SCoil,Flag.M_VR_03,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 3]),조건 성립 시 Set
+auto start motors,1843,422,SCoil,Flag.M_VR_04,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 3]),조건 성립 시 Set
+auto start motors,1843,424,SCoil,Flag.M_VR_05,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 3]),조건 성립 시 Set
+auto start motors,1843,432,SCoil,Flag.M_SC_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 5]),조건 성립 시 Set
+auto start motors,1843,434,SCoil,Flag.M_SC_10,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 5]),조건 성립 시 Set
+auto start motors,1843,436,SCoil,Flag.M_SC_11,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 5]),조건 성립 시 Set
+auto start motors,1843,443,SCoil,Flag.M_FN_04,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 8]),조건 성립 시 Set
+auto start motors,1843,449,SCoil,Flag.STANDBY_ON,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 15]),조건 성립 시 Set
+auto start motors,1843,456,RCoil,Flag.M_VS_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 17]),조건 성립 시 Reset
+auto start motors,1843,458,RCoil,Flag.M_MC_05,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 17]),조건 성립 시 Reset
+auto start motors,1843,460,RCoil,Flag.M_MC_04,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 17]),조건 성립 시 Reset
+auto start motors,1843,462,RCoil,Flag.Enable_R2_GATE,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 17]),조건 성립 시 Reset
+auto start motors,1843,469,SCoil,Flag.M_RD_01_FAN,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 19]),조건 성립 시 Set
+auto start motors,1843,478,SCoil,Flag.M_RD_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 21]),조건 성립 시 Set
+auto start motors,1843,481,Move,Data.SET_PERC_FR01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 21]),Move 입력 25
+auto start motors,1843,492,SCoil,Flag.M_BC_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 24]),조건 성립 시 Set
+auto start motors,1843,102,SCoil,MemoCMD_BC01_Startup,SCoil UID 492.out (블록 동작 확인),조건 성립 시 Set
+auto start motors,1843,495,Move,Data.Set_Perc_VT02,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 24]),Move 입력 75
+auto start motors,1843,500,SCoil,Flag.M_FN_02,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 24]),조건 성립 시 Set
+auto start motors,1843,506,SCoil,Flag.Enable_R1_GATE,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 26]),조건 성립 시 Set
+auto start motors,1843,34,SCoil,MemoCMD_PV1_Startup,SCoil UID 506.out (블록 동작 확인),조건 성립 시 Set
+auto start motors,1843,513,SCoil,Flag.M_VR_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 28]),조건 성립 시 Set
+auto start motors,1843,515,SCoil,Flag.M_VR_02,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 28]),조건 성립 시 Set
+auto start motors,1843,517,RCoil,Flag.M_CH_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 28]),조건 성립 시 Reset
+auto start motors,1843,527,SCoil,Flag.M_FN_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 30]),조건 성립 시 Set
+auto start motors,1843,530,Move,Data.SET_PERC_VT01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 30]),Move 입력 35
+auto start motors,1843,539,RCoil,Flag.M_FN_02,(((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 33]) AND OFF),조건 성립 시 Reset
+auto start motors,1843,545,SCoil,Flag.M_FN_03,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 36]),조건 성립 시 Set
+auto start motors,1843,552,SCoil,Flag.RESET_ALLARM,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 40]),조건 성립 시 Set
+auto start motors,1843,554,SCoil,Flag.M_FN_06,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 40]),조건 성립 시 Set
+auto start motors,1843,568,Move,Data.TC01_SETPOINT,(((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 45]) AND OFF),Move 입력 850
+auto start motors,1843,573,Move,Data.TC03_SETPOINT,(((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 45]) AND OFF),Move 입력 500
+auto start motors,1843,578,SCoil,Flag.Start_Burner,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 45]),조건 성립 시 Set
+auto start motors,1843,581,SCoil,Flag.AUTO_BURNER,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 45]),조건 성립 시 Set
+auto start motors,1843,587,RCoil,Flag.Auto_ON1,((((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1]) AND Flag.Auto_ON1) AND [Data.Tempo_presetting = 50]),조건 성립 시 Reset
+auto start motors,1843,828,RCoil,MemoCMD_BC01_Startup,NOT [((ON AND NOT [Allarm.Emergency_module_fault]) AND [Data.Tipo_preset = 1])],조건 성립 시 Reset
+auto start motors,1843,837,RCoil,Flag.Enable_R1_GATE,LRef UID 835.Q (블록 동작 확인),조건 성립 시 Reset
+auto start motors,1843,838,RCoil,MemoCMD_PV1_Startup,RCoil UID 837.out (블록 동작 확인),조건 성립 시 Reset
+auto start motors,1844,747,SCoil,Flag.RESET_ALLARM,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 1]),조건 성립 시 Set
+auto start motors,1844,749,RCoil,Flag.Maintenance_ON,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 1]),조건 성립 시 Reset
+auto start motors,1844,757,SCoil,Flag.M_VR_03,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 3]),조건 성립 시 Set
+auto start motors,1844,759,SCoil,Flag.M_VR_04,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 3]),조건 성립 시 Set
+auto start motors,1844,761,SCoil,Flag.M_VR_05,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 3]),조건 성립 시 Set
+auto start motors,1844,769,SCoil,Flag.M_SC_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 6]),조건 성립 시 Set
+auto start motors,1844,771,SCoil,Flag.M_SC_10,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 6]),조건 성립 시 Set
+auto start motors,1844,773,SCoil,Flag.M_SC_11,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 6]),조건 성립 시 Set
+auto start motors,1844,780,SCoil,Flag.M_FN_04,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 10]),조건 성립 시 Set
+auto start motors,1844,786,SCoil,Flag.M_VS_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 18]),조건 성립 시 Set
+auto start motors,1844,793,SCoil,Flag.M_MC_05,(((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 21]) AND OFF),조건 성립 시 Set
+auto start motors,1844,799,SCoil,Flag.M_MC_04,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 24]),조건 성립 시 Set
+auto start motors,1844,805,SCoil,Flag.Enable_R2_GATE,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 27]),조건 성립 시 Set
+auto start motors,1844,811,RCoil,Flag.STANDBY_ON,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 30]),조건 성립 시 Reset
+auto start motors,1844,817,SCoil,Flag.M_RD_01_FAN,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 33]),조건 성립 시 Set
+auto start motors,1844,826,SCoil,Flag.M_RD_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 35]),조건 성립 시 Set
+auto start motors,1844,829,Move,Data.SET_PERC_FR01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 35]),Move 입력 25
+auto start motors,1844,1158,SCoil,Flag.Enable_R1_GATE,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 40]),조건 성립 시 Set
+auto start motors,1844,1162,SCoil,Flag.M_BC_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 43]),조건 성립 시 Set
+auto start motors,1844,850,SCoil,Flag.M_VR_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 46]),조건 성립 시 Set
+auto start motors,1844,852,SCoil,Flag.M_VR_02,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 46]),조건 성립 시 Set
+auto start motors,1844,854,SCoil,Flag.M_CH_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 46]),조건 성립 시 Set
+auto start motors,1844,864,SCoil,Flag.M_FN_01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 49]),조건 성립 시 Set
+auto start motors,1844,867,Move,Data.SET_PERC_VT01,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 49]),Move 입력 35
+auto start motors,1844,878,SCoil,Flag.M_FN_02,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 52]),조건 성립 시 Set
+auto start motors,1844,881,Move,Data.Set_Perc_VT02,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 52]),Move 입력 80
+auto start motors,1844,889,SCoil,Flag.M_FN_03,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 56]),조건 성립 시 Set
+auto start motors,1844,896,SCoil,Flag.RESET_ALLARM,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 60]),조건 성립 시 Set
+auto start motors,1844,898,SCoil,Flag.M_FN_06,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 60]),조건 성립 시 Set
+auto start motors,1844,912,Move,Data.TC01_SETPOINT,(((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 62]) AND OFF),Move 입력 850
+auto start motors,1844,917,Move,Data.TC03_SETPOINT,(((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 62]) AND OFF),Move 입력 500
+auto start motors,1844,922,SCoil,Flag.Start_Burner,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 62]),조건 성립 시 Set
+auto start motors,1844,925,SCoil,Flag.AUTO_BURNER,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 62]),조건 성립 시 Set
+auto start motors,1844,931,RCoil,Flag.Auto_ON1,((((ON AND NOT [Allarm.Emergency_module_fault]) AND Flag.Auto_ON1) AND [Data.Tipo_preset = 2]) AND [Data.Tempo_presetting = 65]),조건 성립 시 Reset
+auto start motors,1845,60,Move,Data.SET_PERC_VT01,LRef UID 58.Q (블록 동작 확인),Move 입력 HMI_DB.FN01_Preheating_1st_step_speed
+auto start motors,1845,65,Move,Data.SET_PERC_VT01,LRef UID 63.Q (블록 동작 확인),Move 입력 HMI_DB.FN01_Preheating_2nd_step_speed
+auto start motors,1845,70,Move,Data.SET_PERC_VT01,LRef UID 68.Q (블록 동작 확인),Move 입력 HMI_DB.FN01_Preheating_3rd_step_speed
+auto start motors,1845,74,Move,Data.SET_PERC_VT01,LRef UID 72.Q (블록 동작 확인),Move 입력 HMI_DB.FN01_Preheating_4th_step_speed
+auto start motors,1845,78,Move,Data.SET_PERC_VT01,LRef UID 76.Q (블록 동작 확인),Move 입력 15
+auto start motors,1846,22,Move,Data.Tempo_presetting,PContact UID 21.out (블록 동작 확인),Move 입력 0
+auto start motors,1846,23,Move,Data.Tipo_preset,Move UID 22.eno (블록 동작 확인),Move 입력 5
+auto start motors,1846,24,SCoil,Flag.Auto_ON1,Move UID 23.eno (블록 동작 확인),조건 성립 시 Set
+auto start motors,1847,891,RCoil,Flag.M_FN_03,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 1]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,893,RCoil,Flag.M_FN_02,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 1]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,897,RCoil,Flag.M_FN_06,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 1]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,905,RCoil,Flag.M_CH_01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 5]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,907,RCoil,Flag.M_FN_01_FAN,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 5]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,909,RCoil,Flag.M_FN_01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 5]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,917,RCoil,Flag.M_VR_01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 11]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,919,RCoil,Flag.M_VR_02,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 11]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,927,RCoil,Flag.M_BC_01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 13]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,929,RCoil,Flag.M_FN_04,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 13]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,931,RCoil,Flag.M_ER01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 13]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,939,RCoil,Flag.M_RD_01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 15]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,941,RCoil,Flag.Enable_R1_GATE,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 15]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,948,RCoil,Flag.M_RD_01_FAN,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 17]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,954,RCoil,Flag.M_MC_04,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 19]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,961,RCoil,Flag.M_VR_03,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 20]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,963,RCoil,Flag.M_VR_04,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 20]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,965,RCoil,Flag.M_VR_05,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 20]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,973,RCoil,Flag.STANDBY_ON,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 21]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,975,RCoil,Flag.M_VS_01,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 21]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1847,982,RCoil,Flag.Auto_ON1,(((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND [Data.Tempo_presetting = 25]) OR ((Flag.Auto_ON1 AND [Data.Tipo_preset = 5]) AND Allarm.Emergency_module_fault)),조건 성립 시 Reset
+auto start motors,1848,923,SCoil,Flag.STANDBY_ON,((Flag.Auto_ON1 AND [Data.Tipo_preset = 6]) AND [Data.Tempo_presetting = 1]),조건 성립 시 Set
+auto start motors,1848,929,RCoil,Flag.Auto_ON1,((Flag.Auto_ON1 AND [Data.Tipo_preset = 6]) AND [Data.Tempo_presetting = 25]),조건 성립 시 Reset
+auto start motors,1849,69,Move,HMI_DB.Counter_PartialProduction,HMI_DB.ResetCounter_PartialProduction,Move 입력 0.0
+auto start motors,1849,80,RCoil,HMI_DB.ResetCounter_PartialProduction,Move UID 69.eno (블록 동작 확인),조건 성립 시 Reset
+burner control,1854,117,SCoil,Allarm.BURNER_LDU_FAULT,((ON AND Brurner Lock Out) AND NOT [APP M10.2]),조건 성립 시 Set
+burner control,1854,123,SCoil,m491,((ON AND Flag.RESET_ALLARM) AND Allarm.BURNER_LDU_FAULT),조건 성립 시 Set
+burner control,1854,125,SCoil,APP M10.2,((ON AND Flag.RESET_ALLARM) AND Allarm.BURNER_LDU_FAULT),조건 성립 시 Set
+burner control,1854,133,SdCoil,Tag_135,(ON AND APP M10.2),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#6S
+burner control,1854,138,RCoil,APP M10.2,((ON AND APP M10.2) AND Tag_135),조건 성립 시 Reset
+burner control,1854,145,SdCoil,Tag_136,(ON AND m491),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+burner control,1854,149,Coil,Rst allarm Burner,(ON AND m491),조건에 따른 Coil 기록
+burner control,1854,156,RCoil,Allarm.BURNER_LDU_FAULT,((ON AND m491) AND Tag_136),조건 성립 시 Reset
+burner control,1854,159,SdCoil,Tag_137,((ON AND m491) AND Tag_136),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+burner control,1854,164,RCoil,m491,(((ON AND m491) AND Tag_136) AND Tag_137),조건 성립 시 Reset
+burner control,1855,245,SCoil,Allarm.SERVOMOTOR_MIN_POS_ALL,((PBox UID 239.out (블록 동작 확인) AND NOT [Inputs.FC GAS Chiuso]) OR (PBox UID 239.out (블록 동작 확인) AND NOT [Inputs.FC Aria chiusa])),조건 성립 시 Set
+burner control,1855,248,RCoil,Allarm.SERVOMOTOR_MIN_POS_ALL,((ON AND Flag.RESET_ALLARM) AND Allarm.SERVOMOTOR_MIN_POS_ALL),조건 성립 시 Reset
+burner control,1856,150,Coil,Temperature Interlock OK,((ON AND NOT [Allarm.MAX_MAX_TC09]) AND NOT [Allarm.MAX_MAX_TC01_TEMP]),조건에 따른 Coil 기록
+burner control,1857,182,Coil,Flag.Burner_ready,(((((((((ON AND NOT [Allarm.MAX_MAX_TC09]) AND NOT [Allarm.BURNER_START_FAULT]) AND NOT [Allarm.BURNER_LDU_FAULT]) AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND Inputs.RD01 run) AND Inputs.FEEDBACKMOTOR FN-06) OR (((((((ON AND NOT [Allarm.MAX_MAX_TC09]) AND NOT [Allarm.BURNER_START_FAULT]) AND NOT [Allarm.BURNER_LDU_FAULT]) AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND Inputs.RD01 run) AND Inputs.Burner On)) AND Inputs.FN02 Run),조건에 따른 Coil 기록
+burner control,1858,232,RCoil,Flag.Start_Burner,((ON AND NOT [Flag.Burner_ready]) OR (ON AND Allarm.MAX_MAX_TC09) OR (ON AND Allarm.BURNER_START_FAULT) OR (ON AND Allarm.BURNER_LDU_FAULT) OR (((ON AND Allarm.FN_03_FAULT) OR (ON AND Allarm.PSL_AIR_LOW) OR (ON AND Allarm.HYDROGEN_BOX_FAULT) OR (ON AND Allarm.EmergencyStopTC1_2) OR (ON AND Allarm.SERVOMOTOR_MIN_POS_ALL) OR (ON AND Allarm.MAX_TC04_TEMP) OR (ON AND Allarm.MAX_TC05_TEMP) OR (ON AND Allarm.MAX_MAX_TC03_TEMP) OR (ON AND Allarm.MAX_MAX_TC01_TEMP) OR (ON AND Allarm.RO01_Signal_Fault) OR (ON AND Allarm.TC01_TC02_COMP_FAULT) OR (ON AND Allarm.Low_Aspiration)) AND ON)),조건 성립 시 Reset
+burner control,1859,277,SdCoil,Tag_138,((ON AND Inputs.Burner On) AND NOT [Tag_138]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+burner control,1859,282,Move,WorkData.W5,(ON AND NOT [Inputs.Burner On]),Move 입력 0
+burner control,1860,23,RCoil,HMI_DB.memoBurnerON,([Data.Tipo_preset != 1] AND [Data.Tipo_preset != 2]),조건 성립 시 Reset
+burner control,1860,29,SCoil,HMI_DB.memoBurnerON,(((Flag.Start_Burner OR Flag.AUTO_BURNER) AND NOT [HMI_DB.memoBurnerON]) AND Inputs.Burner On),조건 성립 시 Set
+burner control,1860,30,Move,HMI_DB.Counter_StopBurner,(((Flag.Start_Burner OR Flag.AUTO_BURNER) AND NOT [HMI_DB.memoBurnerON]) AND Inputs.Burner On),Move 입력 0
+burner control,1860,113,Move,Stechio.Consumo_GAS,(((Flag.Start_Burner OR Flag.AUTO_BURNER) AND NOT [HMI_DB.memoBurnerON]) AND Inputs.Burner On),Move 입력 0.0
+burner control,1860,119,Move,HMI_DB.Counter_PartialProduction,(((Flag.Start_Burner OR Flag.AUTO_BURNER) AND NOT [HMI_DB.memoBurnerON]) AND Inputs.Burner On),Move 입력 0.0
+burner control,1860,90,Move,HMI_DB.Counter_StopBurner,HMI_DB.ResetCounter_StopBurner,Move 입력 0
+burner control,1860,104,RCoil,HMI_DB.ResetCounter_StopBurner,Move UID 90.eno (블록 동작 확인),조건 성립 시 Reset
+burner control,1861,292,Coil,Programmed stop burner,(OFF AND [WorkData.W5 >= 1440]),조건에 따른 Coil 기록
+burner control,1861,298,Coil,Allarm.BURNER_TIME_LIMIT_22H,(OFF AND [WorkData.W5 >= 1320]),조건에 따른 Coil 기록
+burner control,1862,422,RCoil,Start High Flame,(ON AND NOT [Inputs.Burner ON and OK]),조건 성립 시 Reset
+burner control,1862,441,Move,Data.Burner_Panel_SetPoint,(((((ON AND Burner ON and OK) AND Start High Flame) AND ON) AND [Manage_TC1_2.PID_Ref_Temp >= App00]) OR (((ON AND Burner ON and OK) AND Start High Flame) AND Allarm.MAX_TC01_TEMP) OR (((ON AND Burner ON and OK) AND Start High Flame) AND Allarm.MAX_TC03_TEMP)),Move 입력 0
+burner control,1862,448,SdCoil,Tag_139,(((((((ON AND Burner ON and OK) AND Start High Flame) AND ON) AND [Manage_TC1_2.PID_Ref_Temp >= App00]) OR (((ON AND Burner ON and OK) AND Start High Flame) AND Allarm.MAX_TC01_TEMP) OR (((ON AND Burner ON and OK) AND Start High Flame) AND Allarm.MAX_TC03_TEMP)) AND Inputs.FC GAS Chiuso) AND Inputs.FC Aria chiusa),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#50MS
+burner control,1862,453,RCoil,Start High Flame,((((((ON AND Burner ON and OK) AND Start High Flame) AND ON) AND [Manage_TC1_2.PID_Ref_Temp >= App00]) OR (((ON AND Burner ON and OK) AND Start High Flame) AND Allarm.MAX_TC01_TEMP) OR (((ON AND Burner ON and OK) AND Start High Flame) AND Allarm.MAX_TC03_TEMP)) AND Tag_139),조건 성립 시 Reset
+burner control,1862,465,SdCoil,Tag_140,(((((ON AND Burner ON and OK) AND NOT [Start High Flame]) AND [Manage_TC1_2.PID_Ref_Temp < App01]) AND NOT [Allarm.MAX_TC01_TEMP]) AND NOT [Allarm.MAX_TC03_TEMP]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#8S
+burner control,1862,470,SCoil,Start High Flame,((((((ON AND Burner ON and OK) AND NOT [Start High Flame]) AND [Manage_TC1_2.PID_Ref_Temp < App01]) AND NOT [Allarm.MAX_TC01_TEMP]) AND NOT [Allarm.MAX_TC03_TEMP]) AND Tag_140),조건 성립 시 Set
+burner control,1863,464,SCoil,Main flame ON,((ON AND Inputs.Burner On) AND Start High Flame),조건 성립 시 Set
+burner control,1863,472,SdCoil,Tag_141,(((ON AND Inputs.Burner On) AND NOT [Start High Flame]) AND Main flame ON),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4S
+burner control,1863,477,Coil,Foced Spark,((((ON AND Inputs.Burner On) AND NOT [Start High Flame]) AND Main flame ON) AND NOT [Tag_141]),조건에 따른 Coil 기록
+burner control,1863,481,RCoil,Main flame ON,((((ON AND Inputs.Burner On) AND NOT [Start High Flame]) AND Main flame ON) AND Tag_141),조건 성립 시 Reset
+burner control,1863,485,RCoil,Main flame ON,(ON AND NOT [Inputs.Burner On]),조건 성립 시 Reset
+burner control,1864,536,SCoil,Riduce MN01,((OFF AND ON) AND [Manage_TC1_2.PID_Ref_Temp >= App02]),조건 성립 시 Set
+burner control,1864,542,RCoil,Riduce MN01,((OFF AND ON) AND [Manage_TC1_2.PID_Ref_Temp < App03]),조건 성립 시 Reset
+burner control,1865,579,SCoil,Lock Burner,(((((ON AND OFF) AND Allarm.MAX_TC01_TEMP) OR ((ON AND OFF) AND Allarm.MAX_TC03_TEMP) OR (ON AND Programmed stop burner)) AND [Data.GAS_BR_01 <= 30]) OR (((((ON AND OFF) AND Allarm.MAX_TC01_TEMP) OR ((ON AND OFF) AND Allarm.MAX_TC03_TEMP) OR (ON AND Programmed stop burner)) AND Inputs.FC GAS Chiuso) AND Inputs.FC Aria chiusa)),조건 성립 시 Set
+burner control,1865,588,RCoil,Lock Burner,((((ON AND NOT [Allarm.MAX_TC01_TEMP]) AND NOT [Allarm.MAX_TC03_TEMP]) OR ON) AND NOT [Programmed stop burner]),조건 성립 시 Reset
+burner control,1866,600,SCoil,Flag.M_FN_03,(((Flag.Start_Burner AND NOT [Lock Burner]) AND NOT [Flag.M_FN_03]) AND OFF),조건 성립 시 Set
+burner control,1866,607,Coil,Enable start burner(1),((Flag.Start_Burner AND NOT [Lock Burner]) AND Inputs.FN03 Run),조건에 따른 Coil 기록
+burner control,1866,611,Coil,Rem. Start/Stop Burner,(((Flag.Start_Burner AND NOT [Lock Burner]) AND Inputs.FN03 Run) AND Enable start burner),조건에 따른 Coil 기록
+burner control,1867,632,SdCoil,Tag_142,(ON AND NOT [Tag_142]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1S
+burner control,1868,1122,Move,WorkData.BR01_State,(ON AND NOT [Enable start burner(1)]),Move 입력 0
+burner control,1868,1127,RCoil,Open MV03 for washing,(ON AND NOT [Enable start burner(1)]),조건 성립 시 Reset
+burner control,1868,1669,SCoil,Close MV03 for Burner Startup,(((ON AND NOT [Enable start burner(1)]) AND NOT [Inputs.MV03 Close]) AND Inputs.MV03 Close),조건 성립 시 Set
+burner control,1868,1130,RCoil,Enable start burner,(ON AND NOT [Enable start burner(1)]),조건 성립 시 Reset
+burner control,1868,1146,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 0]) AND [Manage_TC1_2.PID_Ref_Temp >= 500.0]),Move 입력 7
+burner control,1868,1154,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 0]) AND [Manage_TC1_2.PID_Ref_Temp < 500.0]),Move 입력 1
+burner control,1868,1159,Move,WorkData.BR01_CleanTime,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 0]),Move 입력 0
+burner control,1868,1171,Move,Data.Burner_Panel_SetPoint,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 1]) AND OFF),Move 입력 Data.Max_PRC_BR1
+burner control,1868,1176,SCoil,Open MV03 for washing,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 1]),조건 성립 시 Set
+burner control,1868,1179,Move,WorkData.BR01_State,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 1]),Move 입력 2
+burner control,1868,1188,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 2]) AND NOT [Inputs.MV03 open]),Move 입력 3
+burner control,1868,1199,SdCoil,Tag_143,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 3]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4M
+burner control,1868,1215,SdCoil,Tag_142,((((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 3]) AND ON) AND NOT [Tag_142]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1S
+burner control,1868,1220,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 3]) AND Tag_143),Move 입력 4
+burner control,1868,1232,Move,Data.Burner_Panel_SetPoint,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 4]) AND OFF),Move 입력 0
+burner control,1868,1237,RCoil,Open MV03 for washing,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 4]),조건 성립 시 Reset
+burner control,1868,1240,Move,WorkData.BR01_State,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 4]),Move 입력 5
+burner control,1868,1251,Move,WorkData.BR01_State,((((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 5]) AND Inputs.MV03 Close) OR (((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 5]) AND ON)),Move 입력 6
+burner control,1868,1262,SdCoil,Tag_144,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 6]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1S
+burner control,1868,1267,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 6]) AND Tag_144),Move 입력 7
+burner control,1868,1281,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 77]) AND [Data.Oxigen_RO01 >= 60]),Move 입력 7
+burner control,1868,1289,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 77]) AND [Data.Oxigen_RO01 < 60]),Move 입력 0
+burner control,1868,1300,SCoil,Enable start burner,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 7]),조건 성립 시 Set
+burner control,1868,1303,RCoil,Open MV03 for washing,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 7]),조건 성립 시 Reset
+burner control,1868,1306,SCoil,Close MV03 for Burner Startup,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 7]),조건 성립 시 Set
+burner control,1868,1309,Move,WorkData.BR01_State,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 7]),Move 입력 8
+burner control,1868,1318,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 8]) AND Inputs.Burner On),Move 입력 9
+burner control,1868,1329,SdCoil,Tag_145,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 9]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#30S
+burner control,1868,1334,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 9]) AND Tag_145),Move 입력 10
+burner control,1868,1342,Move,WorkData.BR01_State,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 10]),Move 입력 11
+burner control,1868,1354,Coil,Start Burner,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 11]) AND Inputs.Burner On),조건에 따른 Coil 기록
+burner control,1868,1358,Move,WorkData.BR01_State,(((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 11]) AND NOT [Inputs.Burner On]),Move 입력 0
+burner control,1868,1363,Move,WorkData.BR01_CleanTime,((ON AND Enable start burner(1)) AND [WorkData.BR01_State = 11]),Move 입력 0
+burner control,1869,1122,RCoil,Allarm.BURNER_START_FAULT,(Flag.RESET_ALLARM AND Allarm.BURNER_START_FAULT),조건 성립 시 Reset
+burner control,1870,1172,Coil,Flag AutoBurner,((((((ON AND Flag.AUTO_BURNER) AND NOT [Allarm.MAX_TC01_TEMP]) AND NOT [Allarm.MAX_TC03_TEMP]) AND NOT [Programmed stop burner]) AND Start Burner) AND Inputs.High Flame Gas),조건에 따른 Coil 기록
+burner control,1870,1181,Move,Data.Burner_Panel_SetPoint,((ON AND NOT [Enable start burner(1)]) OR (ON AND Allarm.MAX_TC01_TEMP) OR (ON AND Allarm.MAX_TC03_TEMP) OR (ON AND Programmed stop burner) OR (ON AND NOT [Inputs.High Flame Gas])),Move 입력 0
+burner control,1872,1265,Move,Data.Burner_Panel_SetPoint,((ON AND Inputs.Burner On) AND [Data.Burner_Panel_SetPoint > Data.Max_PRC_BR1]),Move 입력 Data.Max_PRC_BR1
+burner control,1872,1273,Move,Data.Burner_Panel_SetPoint,(ON AND [Data.Burner_Panel_SetPoint > 100]),Move 입력 100
+burner control,1872,1282,Move,Data.Burner_Panel_SetPoint,((ON AND Rem. Start/Stop Burner) AND [Data.Burner_Panel_SetPoint < 0]),Move 입력 0
+burner control,1872,1294,Move,Data.Burner_Panel_SetPoint,(((ON AND NOT [Rem. Start/Stop Burner]) AND [Data.Burner_Panel_SetPoint <= 0]) OR (ON AND NOT [Enable start burner(1)])),Move 입력 0
+burner control,1873,1268,Move,Data.Burner_Panel_SetPoint,OFF,Move 입력 ORef UID 1272
+burner control,1874,1317,SdCoil,Tag_146,((ON AND Stechio.Sign_lim_min) OR (ON AND Stechio.Sign_lim_MAX)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#20S
+burner control,1874,1322,SCoil,Allarm.Sechio_Limits,(((ON AND Stechio.Sign_lim_min) OR (ON AND Stechio.Sign_lim_MAX)) AND Tag_146),조건 성립 시 Set
+burner control,1874,1329,RCoil,Allarm.Sechio_Limits,((((ON AND Flag.RESET_ALLARM) AND Allarm.Sechio_Limits) AND NOT [Stechio.Sign_lim_min]) AND NOT [Stechio.Sign_lim_MAX]),조건 성립 시 Reset
+burner control,1875,1505,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1]),Move 입력 20
+burner control,1875,1513,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 60]),Move 입력 30
+burner control,1875,1521,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 120]),Move 입력 40
+burner control,1875,1529,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 180]),Move 입력 80
+burner control,1875,1537,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 240]),Move 입력 100
+burner control,1875,1545,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 300]),Move 입력 120
+burner control,1875,1553,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 360]),Move 입력 140
+burner control,1875,1561,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 420]),Move 입력 160
+burner control,1875,1569,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 480]),Move 입력 180
+burner control,1875,1577,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 540]),Move 입력 200
+burner control,1875,1585,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 600]),Move 입력 200
+burner control,1876,1577,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1320]),Move 입력 240
+burner control,1876,1585,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1380]),Move 입력 280
+burner control,1876,1593,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1440]),Move 입력 320
+burner control,1876,1601,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1500]),Move 입력 360
+burner control,1877,1683,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1740]),Move 입력 400
+burner control,1877,1691,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1800]),Move 입력 440
+burner control,1877,1699,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1860]),Move 입력 480
+burner control,1877,1707,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1920]),Move 입력 520
+burner control,1877,1715,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 1980]),Move 입력 560
+burner control,1877,1723,Move,Data.TC01_SETPOINT,(OFF AND [WorkData.W5 = 2040]),Move 입력 600
+filter,1883,216,Move,Data.LAVA_PAUSA,((OFF AND [Data.Ev_filter_on < 51]) AND [Data.DP_01 < Coeff.DP_01_SOGLIA_1]),Move 입력 Coeff.DP_01_PAUSA_SOGLIA_1
+filter,1883,219,Move,Data.LAVA_LAVORO,Move UID 216.eno (블록 동작 확인),Move 입력 Coeff.DP_01_LAVORO_SOGLIA_1
+filter,1883,231,Move,Data.LAVA_PAUSA,(((OFF AND [Data.Ev_filter_on < 51]) AND [Data.DP_01 >= Coeff.DP_01_SOGLIA_1]) AND [Data.DP_01 < Coeff.DP_01_SOGLIA_2]),Move 입력 Coeff.DP_01_PAUSA_SOGLIA_2
+filter,1883,234,Move,Data.LAVA_LAVORO,Move UID 231.eno (블록 동작 확인),Move 입력 Coeff.DP_01_LAVORO_SOGLIA_1
+filter,1883,246,Move,Data.LAVA_PAUSA,(((OFF AND [Data.Ev_filter_on < 51]) AND [Data.DP_01 >= Coeff.DP_01_SOGLIA_2]) AND [Data.DP_01 < Coeff.DP_01_SOGLIA_3]),Move 입력 Coeff.DP_01_PAUSA_SOGLIA_3
+filter,1883,249,Move,Data.LAVA_LAVORO,Move UID 246.eno (블록 동작 확인),Move 입력 Coeff.DP_01_LAVORO_SOGLIA_1
+filter,1883,261,Move,Data.LAVA_PAUSA,(((OFF AND [Data.Ev_filter_on < 51]) AND [Data.DP_01 >= Coeff.DP_01_SOGLIA_3]) AND [Data.DP_01 < Coeff.DP_01_SOGLIA_4]),Move 입력 Coeff.DP_01_PAUSA_SOGLIA_4
+filter,1883,264,Move,Data.LAVA_LAVORO,Move UID 261.eno (블록 동작 확인),Move 입력 Coeff.DP_01_LAVORO_SOGLIA_1
+filter,1883,273,Move,Data.LAVA_PAUSA,((OFF AND [Data.Ev_filter_on < 51]) AND [Data.DP_01 >= Coeff.DP_01_SOGLIA_4]),Move 입력 Coeff.DP_01_PAUSA_SOGLIA_5
+filter,1883,276,Move,Data.LAVA_LAVORO,Move UID 273.eno (블록 동작 확인),Move 입력 Coeff.DP_01_LAVORO_SOGLIA_1
+filter,1884,398,Move,Data.LAVA_PAUSA,((OFF AND [ORef UID 462 > 50]) AND [Data.DP_02 < Coeff.DP_02_SOGLIA_1]),Move 입력 Coeff.DP_02_PAUSA_SOGLIA_1
+filter,1884,401,Move,Data.LAVA_LAVORO,Move UID 398.eno (블록 동작 확인),Move 입력 Coeff.DP_02_LAVORO_SOGLIA_1
+filter,1884,413,Move,Data.LAVA_PAUSA,(((OFF AND [ORef UID 462 > 50]) AND [Data.DP_02 >= Coeff.DP_02_SOGLIA_1]) AND [Data.DP_02 < Coeff.DP_02_SOGLIA_2]),Move 입력 Coeff.DP_02_PAUSA_SOGLIA_2
+filter,1884,416,Move,Data.LAVA_LAVORO,Move UID 413.eno (블록 동작 확인),Move 입력 Coeff.DP_02_LAVORO_SOGLIA_1
+filter,1884,428,Move,Data.LAVA_PAUSA,(((OFF AND [ORef UID 462 > 50]) AND [Data.DP_02 >= Coeff.DP_02_SOGLIA_2]) AND [Data.DP_02 < Coeff.DP_02_SOGLIA_3]),Move 입력 Coeff.DP_02_PAUSA_SOGLIA_3
+filter,1884,431,Move,Data.LAVA_LAVORO,Move UID 428.eno (블록 동작 확인),Move 입력 Coeff.DP_02_LAVORO_SOGLIA_1
+filter,1884,443,Move,Data.LAVA_PAUSA,(((OFF AND [ORef UID 462 > 50]) AND [Data.DP_02 >= Coeff.DP_02_SOGLIA_3]) AND [Data.DP_02 < Coeff.DP_02_SOGLIA_4]),Move 입력 Coeff.DP_02_PAUSA_SOGLIA_4
+filter,1884,446,Move,Data.LAVA_LAVORO,Move UID 443.eno (블록 동작 확인),Move 입력 Coeff.DP_02_LAVORO_SOGLIA_1
+filter,1884,455,Move,Data.LAVA_PAUSA,((OFF AND [ORef UID 462 > 50]) AND [Data.DP_02 >= Coeff.DP_02_SOGLIA_4]),Move 입력 Coeff.DP_02_PAUSA_SOGLIA_5
+filter,1884,458,Move,Data.LAVA_LAVORO,Move UID 455.eno (블록 동작 확인),Move 입력 Coeff.DP_02_LAVORO_SOGLIA_1
+filter,1885,418,SdCoil,Tag_130,(ON AND NOT [Tag_129]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2H
+filter,1885,423,SdCoil,Tag_129,(ON AND Tag_130),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10M
+filter,1885,428,Coil,Forza_Lavaggio,((ON AND Tag_130) OR ON),조건에 따른 Coil 기록
+filter,1886,27,Coil,Abilita_lavaggio_BF01,((((ON AND Inputs.FEEDBACKMOTOR SC-10) AND Inputs.VR04 Run) AND [Data.DP_01 <= Coeff.DP_01_SOGLIA_1]) OR (((ON AND Inputs.FEEDBACKMOTOR SC-10) AND Inputs.VR04 Run) AND Forza_Lavaggio)),조건에 따른 Coil 기록
+filter,1886,74,Coil,BF01_RUN,Coil UID 27.out (블록 동작 확인),조건에 따른 Coil 기록
+filter,1886,33,Coil,Abilita_lavaggio_BF02,((((ON AND Inputs.FEEDBACKMOTOR SC-11) AND Inputs.VR05 Run) AND [Data.DP_02 <= Coeff.DP_01_SOGLIA_1]) OR (((ON AND Inputs.FEEDBACKMOTOR SC-11) AND Inputs.VR05 Run) AND Forza_Lavaggio)),조건에 따른 Coil 기록
+filter,1886,78,Coil,BF02_RUN,Coil UID 33.out (블록 동작 확인),조건에 따른 Coil 기록
+filter,1887,457,Move,Data.LAVA_PAUSA,ON,Move 입력 Coeff.DP_01_PAUSA_SOGLIA_1
+filter,1887,462,Move,Data.LAVA_LAVORO,ON,Move 입력 Coeff.DP_01_LAVORO_SOGLIA_1
+filter,1887,468,SdCoil,Tag_132,(((ON AND Abilita_lavaggio_BF01) OR (ON AND Abilita_lavaggio_BF02)) AND NOT [Tag_131]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.LAVA_PAUSA
+filter,1887,473,SdCoil,Tag_131,(ON AND Tag_132),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.LAVA_LAVORO
+filter,1888,547,Move,Data.LAVA,OFF,Move 입력 0
+filter,1888,553,Move,Data.LAVA,(OFF AND SC-10_Fbk),Move 입력 1
+filter,1888,559,Move,Data.LAVA,(OFF AND SC-11_Fbk),Move 입력 2
+filter,1888,566,Move,Data.LAVA,((OFF AND SC-10_Fbk) AND SC-11_Fbk),Move 입력 3
+filter,1889,675,Move,Data.LAVA_START,(OFF AND [Data.LAVA = 0]),Move 입력 0
+filter,1889,678,Move,Data.LAVA_END,Move UID 675.eno (블록 동작 확인),Move 입력 0
+filter,1889,687,Move,Data.LAVA_START,(OFF AND [Data.LAVA = 1]),Move 입력 11
+filter,1889,690,Move,Data.LAVA_END,Move UID 687.eno (블록 동작 확인),Move 입력 50
+filter,1889,699,Move,Data.LAVA_START,(OFF AND [Data.LAVA = 2]),Move 입력 51
+filter,1889,702,Move,Data.LAVA_END,Move UID 699.eno (블록 동작 확인),Move 입력 90
+filter,1889,711,Move,Data.LAVA_START,(OFF AND [Data.LAVA = 3]),Move 입력 11
+filter,1889,714,Move,Data.LAVA_END,Move UID 711.eno (블록 동작 확인),Move 입력 90
+filter,1890,695,Move,Data.LAVA_START,ON,Move 입력 11
+filter,1890,700,Move,Data.LAVA_END,ON,Move 입력 90
+filter,1891,891,Coil,EV-11,(((ON AND Tag_132) AND [Data.Ev_filter_on = 11]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1891,898,Coil,EV-51,(((ON AND Tag_132) AND [Data.Ev_filter_on = 12]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1891,905,Coil,EV-12,(((ON AND Tag_132) AND [Data.Ev_filter_on = 13]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1891,912,Coil,EV-52,(((ON AND Tag_132) AND [Data.Ev_filter_on = 14]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1891,919,Coil,EV-13,(((ON AND Tag_132) AND [Data.Ev_filter_on = 15]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1891,926,Coil,EV-53,(((ON AND Tag_132) AND [Data.Ev_filter_on = 16]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1891,933,Coil,EV-14,(((ON AND Tag_132) AND [Data.Ev_filter_on = 17]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1891,940,Coil,EV-54,(((ON AND Tag_132) AND [Data.Ev_filter_on = 18]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1891,947,Coil,EV-15,(((ON AND Tag_132) AND [Data.Ev_filter_on = 19]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1891,954,Coil,EV-55,(((ON AND Tag_132) AND [Data.Ev_filter_on = 20]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1892,1027,Coil,EV-16,(((ON AND Tag_132) AND [Data.Ev_filter_on = 21]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1892,1034,Coil,EV-56,(((ON AND Tag_132) AND [Data.Ev_filter_on = 22]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1892,1041,Coil,EV-17,(((ON AND Tag_132) AND [Data.Ev_filter_on = 23]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1892,1048,Coil,EV-57,(((ON AND Tag_132) AND [Data.Ev_filter_on = 24]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1892,1055,Coil,EV-18,(((ON AND Tag_132) AND [Data.Ev_filter_on = 25]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1892,1062,Coil,EV-58,(((ON AND Tag_132) AND [Data.Ev_filter_on = 26]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1892,1069,Coil,EV-19,(((ON AND Tag_132) AND [Data.Ev_filter_on = 27]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1892,1076,Coil,EV-59,(((ON AND Tag_132) AND [Data.Ev_filter_on = 28]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1892,1083,Coil,EV-20,(((ON AND Tag_132) AND [Data.Ev_filter_on = 29]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1892,1090,Coil,EV-60,(((ON AND Tag_132) AND [Data.Ev_filter_on = 30]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1893,1163,Coil,EV-21,(((ON AND Tag_132) AND [Data.Ev_filter_on = 31]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1893,1170,Coil,EV-61,(((ON AND Tag_132) AND [Data.Ev_filter_on = 32]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1893,1177,Coil,EV-22,(((ON AND Tag_132) AND [Data.Ev_filter_on = 33]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1893,1184,Coil,EV-62,(((ON AND Tag_132) AND [Data.Ev_filter_on = 34]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1893,1191,Coil,EV-23,(((ON AND Tag_132) AND [Data.Ev_filter_on = 35]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1893,1198,Coil,EV-63,(((ON AND Tag_132) AND [Data.Ev_filter_on = 36]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1893,1205,Coil,EV-24,(((ON AND Tag_132) AND [Data.Ev_filter_on = 37]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1893,1212,Coil,EV-64,(((ON AND Tag_132) AND [Data.Ev_filter_on = 38]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1893,1219,Coil,EV-25,(((ON AND Tag_132) AND [Data.Ev_filter_on = 39]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1893,1226,Coil,EV-65,(((ON AND Tag_132) AND [Data.Ev_filter_on = 40]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1894,1299,Coil,EV-26,(((ON AND Tag_132) AND [Data.Ev_filter_on = 41]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1894,1306,Coil,EV-66,(((ON AND Tag_132) AND [Data.Ev_filter_on = 42]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1894,1313,Coil,EV-27,(((ON AND Tag_132) AND [Data.Ev_filter_on = 43]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1894,1320,Coil,EV-67,(((ON AND Tag_132) AND [Data.Ev_filter_on = 44]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1894,1327,Coil,EV-28,(((ON AND Tag_132) AND [Data.Ev_filter_on = 45]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1894,1334,Coil,EV-68,(((ON AND Tag_132) AND [Data.Ev_filter_on = 46]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1894,1341,Coil,EV-29,(((ON AND Tag_132) AND [Data.Ev_filter_on = 47]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1894,1348,Coil,EV-69,(((ON AND Tag_132) AND [Data.Ev_filter_on = 48]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1894,1355,Coil,EV-30,(((ON AND Tag_132) AND [Data.Ev_filter_on = 49]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1894,1362,Coil,EV-70,(((ON AND Tag_132) AND [Data.Ev_filter_on = 50]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1895,1435,Coil,EV-31,(((ON AND Tag_132) AND [Data.Ev_filter_on = 51]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1895,1442,Coil,EV-71,(((ON AND Tag_132) AND [Data.Ev_filter_on = 52]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1895,1449,Coil,EV-32,(((ON AND Tag_132) AND [Data.Ev_filter_on = 53]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1895,1456,Coil,EV-72,(((ON AND Tag_132) AND [Data.Ev_filter_on = 54]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1895,1463,Coil,EV-33,(((ON AND Tag_132) AND [Data.Ev_filter_on = 55]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1895,1470,Coil,EV-73,(((ON AND Tag_132) AND [Data.Ev_filter_on = 56]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1895,1477,Coil,EV-34,(((ON AND Tag_132) AND [Data.Ev_filter_on = 57]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1895,1484,Coil,EV-74,(((ON AND Tag_132) AND [Data.Ev_filter_on = 58]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1895,1491,Coil,EV-35,(((ON AND Tag_132) AND [Data.Ev_filter_on = 59]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1895,1498,Coil,EV-75,(((ON AND Tag_132) AND [Data.Ev_filter_on = 60]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1896,1571,Coil,EV-36,(((ON AND Tag_132) AND [Data.Ev_filter_on = 61]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1896,1578,Coil,EV-76,(((ON AND Tag_132) AND [Data.Ev_filter_on = 62]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1896,1585,Coil,EV-37,(((ON AND Tag_132) AND [Data.Ev_filter_on = 63]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1896,1592,Coil,EV-77,(((ON AND Tag_132) AND [Data.Ev_filter_on = 64]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1896,1599,Coil,EV-38,(((ON AND Tag_132) AND [Data.Ev_filter_on = 65]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1896,1606,Coil,EV-78,(((ON AND Tag_132) AND [Data.Ev_filter_on = 66]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1896,1613,Coil,EV-39,(((ON AND Tag_132) AND [Data.Ev_filter_on = 67]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1896,1620,Coil,EV-79,(((ON AND Tag_132) AND [Data.Ev_filter_on = 68]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1896,1627,Coil,EV-40,(((ON AND Tag_132) AND [Data.Ev_filter_on = 69]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1896,1634,Coil,EV-80,(((ON AND Tag_132) AND [Data.Ev_filter_on = 70]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1897,1707,Coil,EV-41,(((ON AND Tag_132) AND [Data.Ev_filter_on = 71]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1897,1714,Coil,EV-81,(((ON AND Tag_132) AND [Data.Ev_filter_on = 72]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1897,1721,Coil,EV-42,(((ON AND Tag_132) AND [Data.Ev_filter_on = 73]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1897,1728,Coil,EV-82,(((ON AND Tag_132) AND [Data.Ev_filter_on = 74]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1897,1735,Coil,EV-43,(((ON AND Tag_132) AND [Data.Ev_filter_on = 75]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1897,1742,Coil,EV-83,(((ON AND Tag_132) AND [Data.Ev_filter_on = 76]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1897,1749,Coil,EV-44,(((ON AND Tag_132) AND [Data.Ev_filter_on = 77]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1897,1756,Coil,EV-84,(((ON AND Tag_132) AND [Data.Ev_filter_on = 78]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1897,1763,Coil,EV-45,(((ON AND Tag_132) AND [Data.Ev_filter_on = 79]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1897,1770,Coil,EV-85,(((ON AND Tag_132) AND [Data.Ev_filter_on = 80]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1898,1843,Coil,EV-46,(((ON AND Tag_132) AND [Data.Ev_filter_on = 81]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1898,1850,Coil,EV-86,(((ON AND Tag_132) AND [Data.Ev_filter_on = 82]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1898,1857,Coil,EV-47,(((ON AND Tag_132) AND [Data.Ev_filter_on = 83]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1898,1864,Coil,EV-87,(((ON AND Tag_132) AND [Data.Ev_filter_on = 84]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1898,1871,Coil,EV-48,(((ON AND Tag_132) AND [Data.Ev_filter_on = 85]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1898,1878,Coil,EV-88,(((ON AND Tag_132) AND [Data.Ev_filter_on = 86]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1898,1885,Coil,EV-49,(((ON AND Tag_132) AND [Data.Ev_filter_on = 87]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1898,1892,Coil,EV-89,(((ON AND Tag_132) AND [Data.Ev_filter_on = 88]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1898,1899,Coil,EV-50,(((ON AND Tag_132) AND [Data.Ev_filter_on = 89]) AND Abilita_lavaggio_BF01),조건에 따른 Coil 기록
+filter,1898,1906,Coil,EV-90,(((ON AND Tag_132) AND [Data.Ev_filter_on = 90]) AND Abilita_lavaggio_BF02),조건에 따른 Coil 기록
+filter,1899,26,Move,Data.Ev_filter_on,(PBox UID 23.out (블록 동작 확인) AND [Data.Ev_filter_on < Data.LAVA_START]),Move 입력 Data.LAVA_START
+filter,1899,28,Move,Data.Ev_filter_on,(PBox UID 23.out (블록 동작 확인) AND [Data.Ev_filter_on > Data.LAVA_END]),Move 입력 Data.LAVA_START
+filter,1900,1849,Move,Data.SET_PERC_FN04,PBox UID 1847.out (블록 동작 확인),Move 입력 20
+filter,1901,1970,SdCoil,Tag_133,(Flag.FN_04_AUTO AND NOT [Tag_133]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#4S
+filter,1902,1986,SdCoil,Tag_134,(((ON AND PV-14) AND NOT [Inputs.PV-14 OPEN]) OR ((ON AND NOT [PV-14]) AND NOT [Inputs.PV-14 CLOSE])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#20S
+filter,1902,1991,SCoil,Allarm.Fault_PV14,((((ON AND PV-14) AND NOT [Inputs.PV-14 OPEN]) OR ((ON AND NOT [PV-14]) AND NOT [Inputs.PV-14 CLOSE])) AND Tag_134),조건 성립 시 Set
+filter,1902,1996,RCoil,Allarm.Fault_PV14,((ON AND Flag.RESET_ALLARM) AND Allarm.Fault_PV14),조건 성립 시 Reset
+filter,1903,2004,RCoil,Flag.M_PV14,(ON AND Allarm.Fault_PV14),조건 성립 시 Reset
+filter,1903,2012,Coil,PV-14,((ON AND Flag.M_PV14) OR (ON AND Open false air) OR (ON AND Allarm.MAX_TC09) OR (ON AND Allarm.MAX_MAX_TC09) OR (ON AND Allarm.Emergency_module_fault)),조건에 따른 Coil 기록
+r1 scraps gate 2,1911,115,Coil,R1 Gate ON,(((((ON OR (ON AND UNDER TESTING)) AND Flag.Enable_R1_GATE) AND NOT [Allarm.PV_01_GATE_A_NOT_OPEN]) AND NOT [Allarm.PV_01_GATE_B_NOT_OPEN]) OR ((((ON OR (ON AND UNDER TESTING)) AND NOT [Flag.Enable_R1_GATE]) AND Flag.PV_01_GATE_A_MEM_OPEN) AND Flag.PV_01_GATE_B_MEM_OPEN)),조건에 따른 Coil 기록
+r1 scraps gate 2,1911,117,Coil,Flag.R1_GATE_LOOP_ON,(((((ON OR (ON AND UNDER TESTING)) AND Flag.Enable_R1_GATE) AND NOT [Allarm.PV_01_GATE_A_NOT_OPEN]) AND NOT [Allarm.PV_01_GATE_B_NOT_OPEN]) OR ((((ON OR (ON AND UNDER TESTING)) AND NOT [Flag.Enable_R1_GATE]) AND Flag.PV_01_GATE_A_MEM_OPEN) AND Flag.PV_01_GATE_B_MEM_OPEN)),조건에 따른 Coil 기록
+r1 scraps gate 2,1911,125,Move,WorkData.R1State,(ON AND NOT [R1 Gate ON]),Move 입력 0
+r1 scraps gate 2,1911,130,RCoil,Open EV A 01  PV-01,(ON AND NOT [R1 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1911,133,RCoil,Open EV B 01  PV-01,(ON AND NOT [R1 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1911,136,RCoil,Close EV A 01  PV-01,(ON AND NOT [R1 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1911,139,RCoil,Close EV B 01  PV-01,(ON AND NOT [R1 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1913,334,SCoil,Close EV A 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 0]),조건 성립 시 Set
+r1 scraps gate 2,1913,337,RCoil,Open EV A 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 0]),조건 성립 시 Reset
+r1 scraps gate 2,1913,340,SdCoil,Tag_163,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 0]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1S
+r1 scraps gate 2,1913,345,Move,WorkData.R1State,((((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 0]) AND Tag_163),Move 입력 1
+r1 scraps gate 2,1913,356,SCoil,Open EV B 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 1]),조건 성립 시 Set
+r1 scraps gate 2,1913,359,RCoil,Close EV B 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 1]),조건 성립 시 Reset
+r1 scraps gate 2,1913,363,Move,WorkData.R1State,((((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 1]) AND Flag.PV_01_GATE_B_MEM_OPEN),Move 입력 2
+r1 scraps gate 2,1913,374,SdCoil,Tag_164,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 2]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.SET_EVR1B_Open_time
+r1 scraps gate 2,1913,379,Move,WorkData.R1State,((((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 2]) AND Tag_164),Move 입력 3
+r1 scraps gate 2,1913,390,SCoil,Close EV B 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 3]),조건 성립 시 Set
+r1 scraps gate 2,1913,393,RCoil,Open EV B 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 3]),조건 성립 시 Reset
+r1 scraps gate 2,1913,396,SdCoil,Tag_165,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 3]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1S
+r1 scraps gate 2,1913,401,Move,WorkData.R1State,((((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 3]) AND Tag_165),Move 입력 4
+r1 scraps gate 2,1913,412,SCoil,Open EV A 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 4]),조건 성립 시 Set
+r1 scraps gate 2,1913,415,RCoil,Close EV A 01  PV-01,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 4]),조건 성립 시 Reset
+r1 scraps gate 2,1913,419,Move,WorkData.R1State,((((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 4]) AND Flag.PV_01_GATE_A_MEM_OPEN),Move 입력 5
+r1 scraps gate 2,1913,430,SdCoil,Tag_166,(((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 5]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.SET_EVR1A_Open_time
+r1 scraps gate 2,1913,435,Move,WorkData.R1State,((((ON AND Flag.Enable_R1_GATE) AND R1 Gate ON) AND [WorkData.R1State = 5]) AND Tag_166),Move 입력 0
+r1 scraps gate 2,1914,343,Coil,Open EV A 00 PV-01,(ON AND EV01_Sel_Open),조건에 따른 Coil 기록
+r1 scraps gate 2,1914,347,Coil,Open EV B 00  PV-01,(ON AND EV02_Sel_Open),조건에 따른 Coil 기록
+r1 scraps gate 2,1915,377,Coil,PV-01 GATE B EV,((ON AND Open EV B 00  PV-01) OR (ON AND Open EV B 01  PV-01) OR (ON AND maintenance PV01) OR (ON AND OFF)),조건에 따른 Coil 기록
+r1 scraps gate 2,1915,384,Coil,PV-01 Gate a,((ON AND Open EV A 00 PV-01) OR (ON AND Open EV A 01  PV-01) OR (ON AND maintenance PV01)),조건에 따른 Coil 기록
+r1 scraps gate 2,1916,456,Coil,PV-02 Gate ON,((((((ON AND MC04_Fbk) OR (ON AND Inputs.MC04 run) OR (ON AND Allarm.Maintenance_ON)) AND Flag.Enable_R2_GATE) AND NOT [Allarm.PV_02_GATE_A_NOT_OPEN]) AND NOT [Allarm.PV_02_GATE_B_NOT_OPEN]) OR (((((ON AND MC04_Fbk) OR (ON AND Inputs.MC04 run) OR (ON AND Allarm.Maintenance_ON)) AND NOT [Flag.Enable_R2_GATE]) AND Flag.PV_02_GATE_A_MEM_OPEN) AND Flag.PV_02_GATE_B_MEM_OPEN)),조건에 따른 Coil 기록
+r1 scraps gate 2,1916,458,Coil,Flag.R2_GATE_LOOP_ON,((((((ON AND MC04_Fbk) OR (ON AND Inputs.MC04 run) OR (ON AND Allarm.Maintenance_ON)) AND Flag.Enable_R2_GATE) AND NOT [Allarm.PV_02_GATE_A_NOT_OPEN]) AND NOT [Allarm.PV_02_GATE_B_NOT_OPEN]) OR (((((ON AND MC04_Fbk) OR (ON AND Inputs.MC04 run) OR (ON AND Allarm.Maintenance_ON)) AND NOT [Flag.Enable_R2_GATE]) AND Flag.PV_02_GATE_A_MEM_OPEN) AND Flag.PV_02_GATE_B_MEM_OPEN)),조건에 따른 Coil 기록
+r1 scraps gate 2,1916,466,Move,WorkData.W7,(ON AND NOT [PV-02 Gate ON]),Move 입력 0
+r1 scraps gate 2,1916,471,RCoil,Open EV A 01  PV-02,(ON AND NOT [PV-02 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1916,474,RCoil,Open EV B 01  PV-02,(ON AND NOT [PV-02 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1916,477,RCoil,Close EV A 01  PV-02,(ON AND NOT [PV-02 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1916,480,RCoil,Close EV B 01  PV-02,(ON AND NOT [PV-02 Gate ON]),조건 성립 시 Reset
+r1 scraps gate 2,1918,677,SCoil,Close EV A 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 0]),조건 성립 시 Set
+r1 scraps gate 2,1918,680,RCoil,Open EV A 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 0]),조건 성립 시 Reset
+r1 scraps gate 2,1918,683,SdCoil,Tag_167,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 0]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#300MS
+r1 scraps gate 2,1918,688,Move,WorkData.W7,((((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 0]) AND Tag_167),Move 입력 1
+r1 scraps gate 2,1918,699,SCoil,Open EV B 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 1]),조건 성립 시 Set
+r1 scraps gate 2,1918,702,RCoil,Close EV B 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 1]),조건 성립 시 Reset
+r1 scraps gate 2,1918,706,Move,WorkData.W7,((((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 1]) AND Flag.PV_02_GATE_B_MEM_OPEN),Move 입력 2
+r1 scraps gate 2,1918,717,SdCoil,Tag_168,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 2]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.SET_PV02B_Open_time
+r1 scraps gate 2,1918,722,Move,WorkData.W7,((((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 2]) AND Tag_168),Move 입력 3
+r1 scraps gate 2,1918,733,SCoil,Close EV B 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 3]),조건 성립 시 Set
+r1 scraps gate 2,1918,736,RCoil,Open EV B 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 3]),조건 성립 시 Reset
+r1 scraps gate 2,1918,739,SdCoil,Tag_169,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 3]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#800MS
+r1 scraps gate 2,1918,744,Move,WorkData.W7,((((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 3]) AND Tag_169),Move 입력 4
+r1 scraps gate 2,1918,755,SCoil,Open EV A 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 4]),조건 성립 시 Set
+r1 scraps gate 2,1918,758,RCoil,Close EV A 01  PV-02,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 4]),조건 성립 시 Reset
+r1 scraps gate 2,1918,762,Move,WorkData.W7,((((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 4]) AND Flag.PV_02_GATE_A_MEM_OPEN),Move 입력 5
+r1 scraps gate 2,1918,773,SdCoil,Tag_170,(((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 5]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.SET_PV02A_Open_time
+r1 scraps gate 2,1918,778,Move,WorkData.W7,((((ON AND Flag.Enable_R2_GATE) AND PV-02 Gate ON) AND [WorkData.W7 = 5]) AND Tag_170),Move 입력 0
+r1 scraps gate 2,1919,686,Coil,Open EV A 00 PV-02,(ON AND Selector Op Gate A PV-02),조건에 따른 Coil 기록
+r1 scraps gate 2,1919,690,Coil,Open EV B 00  PV-02,(ON AND Selector Op Gate B PV-02),조건에 따른 Coil 기록
+r1 scraps gate 2,1920,717,Coil,PV-02 GATE B EV,((ON AND Open EV B 00  PV-02) OR (ON AND Open EV B 01  PV-02) OR (ON AND maintenance PV02)),조건에 따른 Coil 기록
+r1 scraps gate 2,1920,724,Coil,PV-02 GATE A EV,((ON AND Open EV A 00 PV-02) OR (ON AND Open EV A 01  PV-02) OR (ON AND maintenance PV02)),조건에 따른 Coil 기록
+r1 scraps gate 2,1921,26,SCoil,Flag.PV_01_GATE_A_MEM_OPEN,(((ON AND PV-01 Gate a) AND EV01_Open) OR ((ON AND PV-01 Gate a) AND Inputs.FC GATE A OPEN)),조건 성립 시 Set
+r1 scraps gate 2,1921,28,RCoil,Flag.PV_01_GATE_A_MEM_OPEN,(ON AND NOT [PV-01 Gate a]),조건 성립 시 Reset
+r1 scraps gate 2,1921,33,SCoil,Flag.PV_01_GATE_A_MEM_CLOSE,(((ON AND NOT [PV-01 Gate a]) AND EV01_Close) OR ((ON AND NOT [PV-01 Gate a]) AND Inputs.LIMIT SWITCH LS-02GATE A CLOSEDVALVE PV-01)),조건 성립 시 Set
+r1 scraps gate 2,1921,35,RCoil,Flag.PV_01_GATE_A_MEM_CLOSE,(ON AND PV-01 Gate a),조건 성립 시 Reset
+r1 scraps gate 2,1922,28,SCoil,Flag.PV_01_GATE_B_MEM_OPEN,(((ON AND PV-01 GATE B EV) AND EV02_Open) OR (((ON AND PV-01 GATE B EV) AND false) AND EV02_Close) OR ((ON AND PV-01 GATE B EV) AND Inputs.PV-01 GATE B OPEN)),조건 성립 시 Set
+r1 scraps gate 2,1922,30,RCoil,Flag.PV_01_GATE_B_MEM_OPEN,(ON AND NOT [PV-01 GATE B EV]),조건 성립 시 Reset
+r1 scraps gate 2,1922,35,SCoil,Flag.PV_01_GATE_B_MEM_CLOSE,(((ON AND NOT [PV-01 GATE B EV]) AND EV02_Close) OR ((ON AND NOT [PV-01 GATE B EV]) AND Inputs.LIMIT SWITCH LS-06GATE B CLOSEDVALVE PV-01)),조건 성립 시 Set
+r1 scraps gate 2,1922,37,RCoil,Flag.PV_01_GATE_B_MEM_CLOSE,(ON AND PV-01 GATE B EV),조건 성립 시 Reset
+r1 scraps gate 2,1923,26,SCoil,Flag.PV_02_GATE_A_MEM_OPEN,(((ON AND PV-02 GATE A EV) AND EV04_Open) OR ((ON AND PV-02 GATE A EV) AND Inputs.PV-02 EV A OPEN)),조건 성립 시 Set
+r1 scraps gate 2,1923,28,RCoil,Flag.PV_02_GATE_A_MEM_OPEN,(ON AND NOT [PV-02 GATE A EV]),조건 성립 시 Reset
+r1 scraps gate 2,1923,33,SCoil,Flag.PV_02_GATE_A_MEM_CLOSE,(((ON AND NOT [PV-02 GATE A EV]) AND EV04_Close) OR ((ON AND NOT [PV-02 GATE A EV]) AND Inputs.PV-02 EV A CLOSE)),조건 성립 시 Set
+r1 scraps gate 2,1923,35,RCoil,Flag.PV_02_GATE_A_MEM_CLOSE,(ON AND PV-02 GATE A EV),조건 성립 시 Reset
+r1 scraps gate 2,1924,26,SCoil,Flag.PV_02_GATE_B_MEM_OPEN,(((ON AND PV-02 GATE B EV) AND EV05_Open) OR ((ON AND PV-02 GATE B EV) AND Inputs.PV-02 GATE B OPEN)),조건 성립 시 Set
+r1 scraps gate 2,1924,28,RCoil,Flag.PV_02_GATE_B_MEM_OPEN,(ON AND NOT [PV-02 GATE B EV]),조건 성립 시 Reset
+r1 scraps gate 2,1924,33,SCoil,Flag.PV_02_GATE_B_MEM_CLOSE,(((ON AND NOT [PV-02 GATE B EV]) AND EV05_Close) OR ((ON AND NOT [PV-02 GATE B EV]) AND Inputs.PV-02 GATE B CLOSE)),조건 성립 시 Set
+r1 scraps gate 2,1924,35,RCoil,Flag.PV_02_GATE_B_MEM_CLOSE,(ON AND PV-02 GATE B EV),조건 성립 시 Reset
+r1 scraps gate 2,1925,24,SCoil,Flag.PV_03_GATE_MEM_OPEN,(((ON AND PV-03 GATE EV) AND Deviator Open PV-03) OR ((ON AND PV-03 GATE EV) AND Inputs.Deviator Open PV-03) OR ((ON AND PV-03 GATE EV) AND Flag.M_PV03)),조건 성립 시 Set
+r1 scraps gate 2,1925,26,RCoil,Flag.PV_03_GATE_MEM_OPEN,(ON AND NOT [PV-03 GATE EV]),조건 성립 시 Reset
+r1 scraps gate 2,1925,29,SCoil,Flag.PV_03_GATE_MEM_CLOSE,(((ON AND NOT [PV-03 GATE EV]) AND Deviator Close PV-03) OR ((ON AND NOT [PV-03 GATE EV]) AND Inputs.Deviator Close PV-03) OR ((ON AND NOT [PV-03 GATE EV]) AND NOT [Flag.M_PV03])),조건 성립 시 Set
+r1 scraps gate 2,1925,31,RCoil,Flag.PV_03_GATE_MEM_CLOSE,(ON AND PV-03 GATE EV),조건 성립 시 Reset
+motors 1,1930,34,Coil,UNDER TESTING,(ON AND Flag.Maintenance_ON),조건에 따른 Coil 기록
+motors 1,1930,36,Coil,Allarm.Maintenance_ON,(ON AND Flag.Maintenance_ON),조건에 따른 Coil 기록
+motors 1,1931,66,Coil,Disable_Load_RD01,((ON AND Allarm.LOW_TC03_TEMP) OR (ON AND Allarm.Oxigen_Fault) OR (ON AND Allarm.Oxigen_Too_high) OR (ON AND Flag.STANDBY_ON) OR (ON AND Allarm.MAX_MAX_TC09) OR (ON AND Allarm.HYDROGEN_BOX_FAULT) OR (ON AND NOT [R1 Gate ON]) OR (ON AND NOT [RD01_Fbk])),조건에 따른 Coil 기록
+motors 1,1932,109,RCoil,Flag.M_BWF01,((ON AND Allarm.BWF01_FAULT) OR (ON AND Allarm.BWF01_Fault_Control) OR (ON AND [Data.SET_PERC_BWF01 = 0]) OR (ON AND NOT [Inputs.BWF01 OK]) OR (ON AND NOT [Inputs.BC01 run]) OR (ON AND Disable_Load_RD01)),조건 성립 시 Reset
+motors 1,1932,113,Coil,Consent Start BWF01,(ON AND Flag.M_BWF01),조건에 따른 Coil 기록
+motors 1,1933,147,RCoil,Flag.M_BWF02,((ON AND Allarm.BWF02_FAULT) OR (ON AND Allarm.BWF02_Fault_Control) OR (ON AND [Data.SET_PERC_BWF02 = 0]) OR (ON AND NOT [Inputs.BWF02 OK]) OR (ON AND NOT [Inputs.BC01 run]) OR (ON AND Disable_Load_RD01)),조건 성립 시 Reset
+motors 1,1933,151,Coil,Consent Start BWF02,(ON AND Flag.M_BWF02),조건에 따른 Coil 기록
+motors 1,1934,164,SdCoil,Tag_114,((OFF AND Flag.M_BWF01) OR (OFF AND Flag.M_BWF02)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#6M
+motors 1,1934,170,RCoil,Flag.M_BWF01,(((OFF AND Flag.M_BWF01) OR (OFF AND Flag.M_BWF02)) AND Tag_114),조건 성립 시 Reset
+motors 1,1934,172,RCoil,Flag.M_BWF02,(((OFF AND Flag.M_BWF01) OR (OFF AND Flag.M_BWF02)) AND Tag_114),조건 성립 시 Reset
+motors 1,1934,228,RCoil,Flag.M_BWF02,((((ON AND Flag.M_BWF01) OR (ON AND Flag.M_BWF02)) AND NOT [Inputs.RD01 run]) OR (((ON AND Flag.M_BWF01) OR (ON AND Flag.M_BWF02)) AND NOT [Inputs.BC01 run])),조건 성립 시 Reset
+motors 1,1934,210,RCoil,Flag.M_BWF01,RCoil UID 228.out (블록 동작 확인),조건 성립 시 Reset
+motors 1,1935,198,RCoil,Flag.M_BC_01,((ON AND Allarm.BC_01_FAULT) OR (ON AND Allarm.BC01_INV) OR ((ON AND Allarm.BC_01_FC) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1935,202,Coil,Start BC01,(((ON AND Flag.M_BC_01) AND Flag.R1_GATE_LOOP_ON) OR ((ON AND Flag.M_BC_01) AND MemoCMD_BC01_Startup) OR ((ON AND Flag.M_BC_01) AND Flag.Maintenance_ON)),조건에 따른 Coil 기록
+motors 1,1936,236,RCoil,Flag.M_RD_01,((ON AND Allarm.RD_01_FAULT) OR (ON AND Allarm.RD01_INV) OR (ON AND [Data.SET_PERC_FR01 = 0]) OR (ON AND NOT [Inputs.fan RD01 run]) OR (((ON AND NOT [Flag.R2_GATE_LOOP_ON]) AND NOT [Flag.STANDBY_ON]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1936,240,Coil,Start RD01,(ON AND Flag.M_RD_01),조건에 따른 Coil 기록
+motors 1,1938,257,SdCoil,Tag_116,((ON AND Start RD01) AND NOT [Tag_115]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.EVFR01_Work_time
+motors 1,1938,262,SdCoil,Tag_115,((ON AND Start RD01) AND Tag_116),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.EVFR01_Wait_time
+motors 1,1938,268,Coil,EV03,(((ON AND Start RD01) AND NOT [Tag_116]) AND ON),조건에 따른 Coil 기록
+motors 1,1939,283,RCoil,Flag.M_RD_01_FAN,((ON AND Allarm.RD_01_FAN_FAULT) OR (((ON AND NOT [Flag.R2_GATE_LOOP_ON]) AND NOT [Flag.STANDBY_ON]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1939,287,Coil,Start fan RD01,(ON AND Flag.M_RD_01_FAN),조건에 따른 Coil 기록
+motors 1,1940,314,RCoil,Flag.M_MC_03,((ON AND Allarm.MC_03_FAULT) OR ((ON AND NOT [Inputs.MC04 run]) AND NOT [Flag.STANDBY_ON]) OR ((ON AND Allarm.MC_03_TORQUE) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1940,318,Coil,Start Spare Motor,(ON AND Flag.M_MC_03),조건에 따른 Coil 기록
+motors 1,1941,340,RCoil,Flag.M_MC_04,((ON AND Allarm.MC_04_FAULT) OR (ON AND Allarm.MC04_INV) OR ((ON AND NOT [Inputs.VS01 run]) AND NOT [Allarm.Maintenance_ON])),조건 성립 시 Reset
+motors 1,1941,344,Coil,Start MC04,(ON AND Flag.M_MC_04),조건에 따른 Coil 기록
+motors 1,1943,377,RCoil,Flag.M_VS_01,((ON AND Allarm.VS_01_FAULT) OR (ON AND Allarm.VS01_INV)),조건 성립 시 Reset
+motors 1,1943,381,Coil,Start VS01,(ON AND Flag.M_VS_01),조건에 따른 Coil 기록
+motors 1,1944,425,SCoil,Start VS01 BRAKE,(((OFF AND NOT [Flag.M_VS_01]) AND NOT [Inputs.VS01 run]) AND NOT [Allarm.VS_01_FAULT]),조건 성립 시 Set
+motors 1,1944,431,RCoil,Start VS01 BRAKE,((OFF AND Flag.M_VS_01) OR (OFF AND Allarm.VS_01_FAULT) OR (OFF AND Allarm.VS01_INV)),조건 성립 시 Reset
+motors 1,1944,439,SdCoil,Tag_117,((OFF AND NOT [Inputs.VS01 run]) AND Start VS01 BRAKE),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#2S
+motors 1,1944,444,Coil,Braking VS01,(((OFF AND NOT [Inputs.VS01 run]) AND Start VS01 BRAKE) AND Tag_117),조건에 따른 Coil 기록
+motors 1,1948,592,RCoil,Flag.M_FN_02,((ON AND Allarm.FN_02_FAULT) OR (ON AND Allarm.FN02_INV) OR (ON AND [Data.Set_Perc_VT02 = 0])),조건 성립 시 Reset
+motors 1,1948,596,Coil,Start FN02,(ON AND Flag.M_FN_02),조건에 따른 Coil 기록
+motors 1,1949,604,RCoil,Flag.M_VR_01,(ON AND Allarm.VR_01_FAULT),조건 성립 시 Reset
+motors 1,1949,608,Coil,Start VR01,(ON AND Flag.M_VR_01),조건에 따른 Coil 기록
+motors 1,1950,653,Coil,Allarm.Prealarms_FN01,((ON AND Allarm.MAX_TC04_TEMP) OR (ON AND Allarm.MAX_TC05_TEMP) OR (ON AND Allarm.ZT01_FN01_Vibration) OR ((ON AND Inputs.FN01 Run) AND NOT [Inputs.VR-01 RUN]) OR ((ON AND Inputs.FN01 Run) AND NOT [Inputs.VR02 Run])),조건에 따른 Coil 기록
+motors 1,1950,656,SdCoil,Tag_122,((ON AND Allarm.MAX_TC04_TEMP) OR (ON AND Allarm.MAX_TC05_TEMP) OR (ON AND Allarm.ZT01_FN01_Vibration) OR ((ON AND Inputs.FN01 Run) AND NOT [Inputs.VR-01 RUN]) OR ((ON AND Inputs.FN01 Run) AND NOT [Inputs.VR02 Run])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1H_30M
+motors 1,1950,661,Coil,Stop_Fan_FN01,(((ON AND Allarm.MAX_TC04_TEMP) OR (ON AND Allarm.MAX_TC05_TEMP) OR (ON AND Allarm.ZT01_FN01_Vibration) OR ((ON AND Inputs.FN01 Run) AND NOT [Inputs.VR-01 RUN]) OR ((ON AND Inputs.FN01 Run) AND NOT [Inputs.VR02 Run])) AND Tag_122),조건에 따른 Coil 기록
+motors 1,1951,685,RCoil,Flag.M_FN_01,((ON AND Allarm.FN_01_FAULT) OR (ON AND Allarm.FN01_INV) OR (ON AND [Data.SET_PERC_VT01 = 0]) OR (ON AND Stop_Fan_FN01) OR ((ON AND Allarm.HYDROGEN_BOX_FAULT) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1951,689,Coil,Start FN01,(ON AND Flag.M_FN_01),조건에 따른 Coil 기록
+motors 1,1952,693,RCoil,Flag.M_VR_02,(ON AND Allarm.VR_02_FAULT),조건 성립 시 Reset
+motors 1,1952,697,Coil,Start VR02,(ON AND Flag.M_VR_02),조건에 따른 Coil 기록
+motors 1,1953,729,RCoil,Flag.M_CH_01,((ON AND ServiceBit) AND Allarm.CH_01_FAULT),조건 성립 시 Reset
+motors 1,1953,736,Coil,Start CH01,((ON AND ServiceBit) AND Flag.M_CH_01),조건에 따른 Coil 기록
+motors 1,1953,739,SdCoil,Tag_123,((ON AND ServiceBit) AND Flag.M_CH_01),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10S
+motors 1,1953,744,Coil,Enable start chiller,(((ON AND ServiceBit) AND Flag.M_CH_01) AND Tag_123),조건에 따른 Coil 기록
+motors 1,1954,745,RCoil,Flag.M_FN_03,((ON AND Allarm.FN_03_FAULT) OR (ON AND Allarm.FN03_INV)),조건 성립 시 Reset
+motors 1,1954,749,Coil,Start FN03,(ON AND Flag.M_FN_03),조건에 따른 Coil 기록
+motors 1,1955,772,RCoil,Flag.M_FN_06,((ON AND Allarm.MBVA01_FAULT) OR ((ON AND NOT [Inputs.RD01 run]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1955,776,Coil,Start FN06,(ON AND Flag.M_FN_06),조건에 따른 Coil 기록
+motors 1,1956,795,RCoil,Flag.M_SC_01,((ON AND Allarm.SC_01_FAULT) OR ((ON AND NOT [Inputs.VR03 Run]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1956,799,Coil,Start SC01,(ON AND Flag.M_SC_01),조건에 따른 Coil 기록
+motors 1,1958,836,RCoil,Flag.M_LD_01,((ON AND Allarm.LD_01_FAULT) OR ((ON AND NOT [Inputs.VR-06 RUN]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1958,841,Coil,Start LD01,((ON AND Flag.M_LD_01) AND Inputs.LD-01 Inspection LS),조건에 따른 Coil 기록
+motors 1,1960,861,SdCoil,Tag_125,((ON AND Inputs.FEEDBACKMOTOR LD-01) AND NOT [Tag_124]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.LD_01V_WorkTime
+motors 1,1960,866,SdCoil,Tag_124,((ON AND Inputs.FEEDBACKMOTOR LD-01) AND Tag_125),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 Data.LD_01V_PauseTime
+motors 1,1960,871,Coil,Start_LD01Vib,((ON AND Inputs.FEEDBACKMOTOR LD-01) AND NOT [Tag_125]),조건에 따른 Coil 기록
+motors 1,1961,891,RCoil,Flag.M_LD_01_VIB,((ON AND Allarm.LD_01_VIB_FAULT) OR ((ON AND NOT [Inputs.VR-06 RUN]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1961,900,Coil,Start Vibrator LD-01,(((ON AND Flag.M_LD_01_VIB) OR ((ON AND NOT [Allarm.LD_01_VIB_FAULT]) AND Start_LD01Vib)) AND Inputs.LD-01 Local Button),조건에 따른 Coil 기록
+motors 1,1962,916,RCoil,Flag.M_SC_10,((ON AND Allarm.SC_10_FAULT) OR ((ON AND NOT [Inputs.VR04 Run]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1962,920,Coil,Start SC10,(ON AND Flag.M_SC_10),조건에 따른 Coil 기록
+motors 1,1963,939,RCoil,Flag.M_SC_11,((ON AND Allarm.SC_11_FAULT) OR ((ON AND NOT [Inputs.VR05 Run]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1963,943,Coil,Start SC11,(ON AND Flag.M_SC_11),조건에 따른 Coil 기록
+motors 1,1964,982,Coil,Allarm.Prealarms_FN04,(((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-01]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR03 Run]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-10]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR04 Run]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-11]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR05 Run])),조건에 따른 Coil 기록
+motors 1,1964,985,SdCoil,Tag_126,(((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-01]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR03 Run]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-10]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR04 Run]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-11]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR05 Run])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1H_30M
+motors 1,1964,990,Coil,Stop_Fan_FN04,((((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-01]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR03 Run]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-10]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR04 Run]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.FEEDBACKMOTOR SC-11]) OR ((ON AND Inputs.FN04 Run) AND NOT [Inputs.VR05 Run])) AND Tag_126),조건에 따른 Coil 기록
+motors 1,1965,1010,RCoil,Flag.M_FN_04,((ON AND Allarm.FN_04_FAULT) OR (ON AND Allarm.FN04_INV) OR (ON AND [Data.SET_PERC_FN04 = 0]) OR (ON AND Stop_Fan_FN04) OR (ON AND Allarm.MAX_MAX_TC09)),조건 성립 시 Reset
+motors 1,1965,1014,Coil,Start FN04,(ON AND Flag.M_FN_04),조건에 따른 Coil 기록
+motors 1,1966,1020,RCoil,Flag.M_VR_03,(ON AND Allarm.VR_03_FAULT),조건 성립 시 Reset
+motors 1,1966,1024,Coil,Start VR03,(ON AND Flag.M_VR_03),조건에 따른 Coil 기록
+motors 1,1967,1036,RCoil,Flag.M_VR_04,(ON AND Allarm.VR_04_FAULT),조건 성립 시 Reset
+motors 1,1967,1040,Coil,Start VR04,(ON AND Flag.M_VR_04),조건에 따른 Coil 기록
+motors 1,1968,1052,RCoil,Flag.M_VR_05,(ON AND Allarm.VR_05_FAULT),조건 성립 시 Reset
+motors 1,1968,1056,Coil,Start VR05,(ON AND Flag.M_VR_05),조건에 따른 Coil 기록
+motors 1,1969,1079,RCoil,Flag.M_VR_06,((ON AND Allarm.VR_06_FAULT) OR ((ON AND NOT [Start ER-01]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1969,1083,Coil,Start VR06,(ON AND Flag.M_VR_06),조건에 따른 Coil 기록
+motors 1,1970,1102,RCoil,Flag.M_FN_05,((ON AND Allarm.FN_05_FAULT) OR ((ON AND NOT [Inputs.FN04 Run]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1970,1106,Coil,Start FN05,(ON AND Flag.M_FN_05),조건에 따른 Coil 기록
+motors 1,1971,1125,RCoil,Flag.M_ER01,((ON AND OFF) OR (ON AND Allarm.ER01_run) OR ((ON AND NOT [Inputs.FN-05 RUN]) AND NOT [UNDER TESTING])),조건 성립 시 Reset
+motors 1,1971,1129,Coil,Start ER-01,((ON AND Flag.M_ER01) AND Inputs.177T1_OK),조건에 따른 Coil 기록
+motors 1,1972,1141,RCoil,Flag.M_PV03,(ON AND OFF),조건 성립 시 Reset
+motors 1,1972,1147,Coil,PV-03 GATE EV,((ON AND Flag.M_PV03) OR (ON AND Inputs.PV03 Local Selector)),조건에 따른 Coil 기록
+motors 1,1973,1196,SdCoil,Tag_127,((ON AND Inputs.BWF 01 RUN) OR (ON AND Inputs.BWF 02 RUN)),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#15M
+motors 1,1973,1201,SCoil,START LIW FEEDER,(((ON AND Inputs.BWF 01 RUN) OR (ON AND Inputs.BWF 02 RUN)) AND PV-03 GATE EV),조건 성립 시 Set
+motors 1,1973,1210,SdCoil,Tag_128,(((ON AND START LIW FEEDER) AND NOT [Inputs.BWF 01 RUN]) AND NOT [Inputs.BWF 02 RUN]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#15M
+motors 1,1973,1215,RCoil,START LIW FEEDER,((ON AND START LIW FEEDER) AND Tag_128),조건 성립 시 Reset
+allarms 3,1979,155,SdCoil,Tag_99,(ON AND [Manage_TC1_2.PID_Ref_Temp > Data.TC01_MAX_ALL]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#6S
+allarms 3,1979,160,SCoil,Allarm.MAX_TC01_TEMP,((ON AND [Manage_TC1_2.PID_Ref_Temp > Data.TC01_MAX_ALL]) AND Tag_99),조건 성립 시 Set
+allarms 3,1979,173,RCoil,Allarm.MAX_TC01_TEMP,(Sub UID 165.eno (블록 동작 확인) AND [Manage_TC1_2.PID_Ref_Temp < app00]),조건 성립 시 Reset
+allarms 3,1979,175,SCoil,Flag.STOP_HORN,(Sub UID 165.eno (블록 동작 확인) AND [Manage_TC1_2.PID_Ref_Temp < app00]),조건 성립 시 Set
+allarms 3,1979,198,SdCoil,Tag_100,((ON AND [Manage_TC1_2.PID_Ref_Temp > max_max_tc1]) OR (ON AND [Manage_TC1_2.PID_Ref_Temp > 1250.0]) OR (ON AND [Manage_TC1_2.PID_Ref_Temp < -60.0])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#6S
+allarms 3,1979,203,SCoil,Allarm.MAX_MAX_TC01_TEMP,(((ON AND [Manage_TC1_2.PID_Ref_Temp > max_max_tc1]) OR (ON AND [Manage_TC1_2.PID_Ref_Temp > 1250.0]) OR (ON AND [Manage_TC1_2.PID_Ref_Temp < -60.0])) AND Tag_100),조건 성립 시 Set
+allarms 3,1979,208,RCoil,Allarm.MAX_MAX_TC01_TEMP,((ON AND Flag.RESET_ALLARM) AND Allarm.MAX_MAX_TC01_TEMP),조건 성립 시 Reset
+allarms 3,1980,342,SdCoil,Tag_101,(((ON AND Inputs.BWF 01 RUN) OR (ON AND Inputs.BWF 02 RUN)) AND [Data.Temp_TC03 < Data.TC03_MIN_ALL]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#3S
+allarms 3,1980,347,SCoil,Allarm.LOW_TC03_TEMP,((((ON AND Inputs.BWF 01 RUN) OR (ON AND Inputs.BWF 02 RUN)) AND [Data.Temp_TC03 < Data.TC03_MIN_ALL]) AND Tag_101),조건 성립 시 Set
+allarms 3,1980,27,Move,Data.TC03_MIN_ALL,(ON AND [Data.TC03_MIN_ALL < 200]),Move 입력 200
+allarms 3,1980,360,RCoil,Allarm.LOW_TC03_TEMP,(Add UID 352.eno (블록 동작 확인) AND [Data.Temp_TC03 > app00]),조건 성립 시 Reset
+allarms 3,1980,362,SCoil,Flag.STOP_HORN,(Add UID 352.eno (블록 동작 확인) AND [Data.Temp_TC03 > app00]),조건 성립 시 Set
+allarms 3,1980,372,SdCoil,Tag_102,(ON AND [Data.Temp_TC03 > Data.TC03_MAX_ALL]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#3S
+allarms 3,1980,377,SCoil,Allarm.MAX_TC03_TEMP,((ON AND [Data.Temp_TC03 > Data.TC03_MAX_ALL]) AND Tag_102),조건 성립 시 Set
+allarms 3,1980,390,RCoil,Allarm.MAX_TC03_TEMP,(Sub UID 382.eno (블록 동작 확인) AND [Data.Temp_TC03 < app00]),조건 성립 시 Reset
+allarms 3,1980,392,SCoil,Flag.STOP_HORN,(Sub UID 382.eno (블록 동작 확인) AND [Data.Temp_TC03 < app00]),조건 성립 시 Set
+allarms 3,1980,415,SdCoil,Tag_103,((ON AND [Data.Temp_TC03 > max_max_tc3]) OR (ON AND [Data.Temp_TC03 > 750]) OR (ON AND [Data.Temp_TC03 < -60])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#3S
+allarms 3,1980,420,SCoil,Allarm.MAX_MAX_TC03_TEMP,(((ON AND [Data.Temp_TC03 > max_max_tc3]) OR (ON AND [Data.Temp_TC03 > 750]) OR (ON AND [Data.Temp_TC03 < -60])) AND Tag_103),조건 성립 시 Set
+allarms 3,1980,425,RCoil,Allarm.MAX_MAX_TC03_TEMP,((ON AND Flag.RESET_ALLARM) AND Allarm.MAX_MAX_TC03_TEMP),조건 성립 시 Reset
+allarms 3,1981,450,SdCoil,Tag_104,((ON AND [Data.Temp_TC04 > Data.TC04_TC05_MAX_ALL]) OR (ON AND [Data.Temp_TC04 > 120]) OR (ON AND [Data.Temp_TC04 < -60])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+allarms 3,1981,455,SCoil,Allarm.MAX_TC04_TEMP,(((ON AND [Data.Temp_TC04 > Data.TC04_TC05_MAX_ALL]) OR (ON AND [Data.Temp_TC04 > 120]) OR (ON AND [Data.Temp_TC04 < -60])) AND Tag_104),조건 성립 시 Set
+allarms 3,1981,471,SdCoil,Tag_105,((ON AND [Data.Temp_TC05 > Data.TC04_TC05_MAX_ALL]) OR (ON AND [Data.Temp_TC05 > 120]) OR (ON AND [Data.Temp_TC05 < -60])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+allarms 3,1981,476,SCoil,Allarm.MAX_TC05_TEMP,((((ON AND [Data.Temp_TC05 > Data.TC04_TC05_MAX_ALL]) OR (ON AND [Data.Temp_TC05 > 120]) OR (ON AND [Data.Temp_TC05 < -60])) AND Tag_105) AND ServiceBit),조건 성립 시 Set
+allarms 3,1981,484,RCoil,Allarm.MAX_TC04_TEMP,((ON AND Flag.RESET_ALLARM) AND Allarm.MAX_TC04_TEMP),조건 성립 시 Reset
+allarms 3,1981,488,RCoil,Allarm.MAX_TC05_TEMP,((ON AND Flag.RESET_ALLARM) AND Allarm.MAX_TC05_TEMP),조건 성립 시 Reset
+allarms 3,1982,490,SCoil,Allarm.Oxigen_Fault,(((ON AND [Data.Oxigen_RO01 <= 0]) OR (ON AND [Data.Oxigen_RO01 >= 200])) AND ServiceBit),조건 성립 시 Set
+allarms 3,1982,501,RCoil,Allarm.Oxigen_Fault,(((ON AND Allarm.Oxigen_Fault) AND [Data.Oxigen_RO01 >= 5]) AND [Data.Oxigen_RO01 <= 195]),조건 성립 시 Reset
+allarms 3,1982,503,SCoil,Flag.STOP_HORN,(((ON AND Allarm.Oxigen_Fault) AND [Data.Oxigen_RO01 >= 5]) AND [Data.Oxigen_RO01 <= 195]),조건 성립 시 Set
+allarms 3,1983,32,Move,Data.RO01_MAX_SETPOINT,[Data.RO01_MAX_SETPOINT > 100],Move 입력 100
+allarms 3,1983,628,SCoil,Allarm.Oxigen_Too_high,(ON AND [Data.Oxigen_RO01 >= Data.RO01_MAX_SETPOINT]),조건 성립 시 Set
+allarms 3,1983,632,RCoil,Allarm.Oxigen_Too_high,((ON AND Allarm.Oxigen_Too_high) AND [Data.Oxigen_RO01 < app05]),조건 성립 시 Reset
+allarms 3,1983,633,SCoil,Flag.STOP_HORN,((ON AND Allarm.Oxigen_Too_high) AND [Data.Oxigen_RO01 < app05]),조건 성립 시 Set
+allarms 3,1984,599,SdCoil,Tag_106,((OFF AND [Manage_TC1_2.PID_Ref_Temp > 650.0]) AND [Data.Oxigen_RO01 <= 5]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+allarms 3,1984,604,SCoil,Allarm.Oxigen_LOW,(((OFF AND [Manage_TC1_2.PID_Ref_Temp > 650.0]) AND [Data.Oxigen_RO01 <= 5]) AND Tag_106),조건 성립 시 Set
+allarms 3,1984,616,RCoil,Allarm.Oxigen_LOW,((((OFF AND Flag.RESET_ALLARM) AND Allarm.Oxigen_LOW) AND [Data.Oxigen_RO01 >= 20]) OR (((OFF AND Flag.RESET_ALLARM) AND Allarm.Oxigen_LOW) AND [Manage_TC1_2.PID_Ref_Temp <= 650.0])),조건 성립 시 Reset
+allarms 3,1985,685,SdCoil,Tag_107,((((ON AND NOT [RO01-RO02control disable]) AND [Manage_TC1_2.PID_Ref_Temp > 650.0]) AND [app01 < -20]) OR (((ON AND NOT [RO01-RO02control disable]) AND [Manage_TC1_2.PID_Ref_Temp > 650.0]) AND [app01 > 20])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+allarms 3,1985,690,SCoil,Allarm.RO01_Signal_Fault,(((((ON AND NOT [RO01-RO02control disable]) AND [Manage_TC1_2.PID_Ref_Temp > 650.0]) AND [app01 < -20]) OR (((ON AND NOT [RO01-RO02control disable]) AND [Manage_TC1_2.PID_Ref_Temp > 650.0]) AND [app01 > 20])) AND Tag_107),조건 성립 시 Set
+allarms 3,1985,695,RCoil,Allarm.RO01_Signal_Fault,((ON AND Flag.RESET_ALLARM) AND Allarm.RO01_Signal_Fault),조건 성립 시 Reset
+allarms 3,1986,770,SdCoil,Tag_108,(((((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC01 > 400]) OR ((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC02 > 400])) AND [app02 < -100]) OR ((((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC01 > 400]) OR ((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC02 > 400])) AND [app02 > 100])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#1M
+allarms 3,1986,775,SCoil,Allarm.TC01_TC02_COMP_FAULT,((((((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC01 > 400]) OR ((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC02 > 400])) AND [app02 < -100]) OR ((((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC01 > 400]) OR ((ON AND NOT [TC01-TC02control disable]) AND [Data.Temp_TC02 > 400])) AND [app02 > 100])) AND Tag_108),조건 성립 시 Set
+allarms 3,1986,780,RCoil,Allarm.TC01_TC02_COMP_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.TC01_TC02_COMP_FAULT),조건 성립 시 Reset
+allarms 3,1987,809,SdCoil,Tag_109,((((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND [Data.PC_01 > -10]) OR (((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND [Data.PC_01 > Data.Min_Pressure_PC_01]) OR (((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND [Data.PC_01 < -800])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#30S
+allarms 3,1987,814,SCoil,Allarm.Low_Aspiration,(((((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND [Data.PC_01 > -10]) OR (((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND [Data.PC_01 > Data.Min_Pressure_PC_01]) OR (((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND [Data.PC_01 < -800])) AND Tag_109),조건 성립 시 Set
+allarms 3,1987,819,RCoil,Allarm.Low_Aspiration,((((ON AND Inputs.FN01 Run) AND Inputs.FN04 Run) AND Flag.RESET_ALLARM) AND Allarm.Low_Aspiration),조건 성립 시 Reset
+allarms 3,1988,857,SdCoil,Tag_110,((OFF AND [Data.ZT_01 > 400]) OR (OFF AND [Data.ZT_01 < -800])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#10S
+allarms 3,1988,862,SCoil,Allarm.ZT01_FN01_Vibration,(((OFF AND [Data.ZT_01 > 400]) OR (OFF AND [Data.ZT_01 < -800])) AND Tag_110),조건 성립 시 Set
+allarms 3,1988,869,RCoil,Allarm.ZT01_FN01_Vibration,((OFF AND Allarm.ZT01_FN01_Vibration) AND [Data.ZT_01 < 380]),조건 성립 시 Reset
+allarms 3,1989,914,SdCoil,Tag_111,(ON AND [Data.PSH_02 >= Data.PSH02_MAX_SETPOINT]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#3M
+allarms 3,1989,919,SCoil,Allarm.MAX_PSH_02,((ON AND [Data.PSH_02 >= Data.PSH02_MAX_SETPOINT]) AND Tag_111),조건 성립 시 Set
+allarms 3,1989,936,RCoil,Allarm.MAX_PSH_02,((ON AND Allarm.MAX_PSH_02) AND [Data.PSH_02 < app06]),조건 성립 시 Reset
+allarms 3,1989,938,SCoil,Flag.STOP_HORN,((ON AND Allarm.MAX_PSH_02) AND [Data.PSH_02 < app06]),조건 성립 시 Set
+allarms 3,1990,929,SCoil,Allarm.HYDROGEN_BOX_FAULT,((ON AND NOT [Inputs.NITROGEN TANK READY]) AND ServiceBit),조건 성립 시 Set
+allarms 3,1990,935,RCoil,Allarm.HYDROGEN_BOX_FAULT,((((ON AND Flag.RESET_ALLARM) AND Allarm.HYDROGEN_BOX_FAULT) AND Inputs.NITROGEN TANK READY) OR (((ON AND Flag.RESET_ALLARM) AND Allarm.HYDROGEN_BOX_FAULT) AND NOT [ServiceBit])),조건 성립 시 Reset
+allarms 3,1991,1049,SCoil,Open false air,(ON AND [Data.TC_09 > Data.TC09_MAX]),조건 성립 시 Set
+allarms 3,1991,1060,SCoil,Allarm.MAX_TC09,(Add UID 1053.eno (블록 동작 확인) AND [Data.TC_09 > app07]),조건 성립 시 Set
+allarms 3,1991,1076,RCoil,Allarm.MAX_TC09,((Sub UID 1064.eno (블록 동작 확인) AND [Data.TC_09 < app03]) AND Allarm.MAX_TC09),조건 성립 시 Reset
+allarms 3,1991,1078,SCoil,Flag.STOP_HORN,((Sub UID 1064.eno (블록 동작 확인) AND [Data.TC_09 < app03]) AND Allarm.MAX_TC09),조건 성립 시 Set
+allarms 3,1991,1082,RCoil,Open false air,(Sub UID 1064.eno (블록 동작 확인) AND [Data.TC_09 < app03]),조건 성립 시 Reset
+allarms 3,1991,1095,SCoil,Allarm.MAX_MAX_TC09,((ON AND [Data.TC_09 > Data.TC09_MAX_MAX]) OR (ON AND [Data.TC_09 > 200]) OR (ON AND [Data.TC_09 < -60])),조건 성립 시 Set
+allarms 3,1991,1100,RCoil,Allarm.MAX_MAX_TC09,((ON AND Flag.RESET_ALLARM) AND Allarm.MAX_MAX_TC09),조건 성립 시 Reset
+allarms 3,1992,1136,SdCoil,Tag_112,((ON AND [Data.DP_01 > 2800]) OR (ON AND [Data.DP_02 > 2800]) OR (ON AND [Data.DP_01 < -100]) OR (ON AND [Data.DP_02 < -100])),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#3M
+allarms 3,1992,1141,SCoil,Allarm.MAX_DP_FILTER,(((ON AND [Data.DP_01 > 2800]) OR (ON AND [Data.DP_02 > 2800]) OR (ON AND [Data.DP_01 < -100]) OR (ON AND [Data.DP_02 < -100])) AND Tag_112),조건 성립 시 Set
+allarms 3,1992,1152,RCoil,Allarm.MAX_DP_FILTER,((((ON AND Flag.RESET_ALLARM) AND Allarm.MAX_DP_FILTER) AND [Data.DP_01 < 2500]) AND [Data.DP_02 < 2500]),조건 성립 시 Reset
+allarms 3,1993,1184,SdCoil,Tag_113,(Add UID 1174.eno (블록 동작 확인) AND [Somma_Perc_alim != 100]),시간 동작 SdCoil; 타이머 의미 추가 확인 / 시간 인자 S5T#5S
+allarms 3,1993,1189,SCoil,Allarm.Formula_Fault,((Add UID 1174.eno (블록 동작 확인) AND [Somma_Perc_alim != 100]) AND Tag_113),조건 성립 시 Set
+allarms 3,1993,1194,RCoil,Allarm.Formula_Fault,((ON AND Flag.RESET_ALLARM) AND Allarm.Formula_Fault),조건 성립 시 Reset
+allarms 3,1994,1217,SCoil,Allarm.PLC_DIAGNOSTIC_FAULT,((ON AND I/O FLT) OR (ON AND OB Fault) OR (ON AND Rack FAULT) OR (ON AND Module Access FLT) OR (ON AND Prog FAULT)),조건 성립 시 Set
+allarms 3,1994,1223,RCoil,Allarm.PLC_DIAGNOSTIC_FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.PLC_DIAGNOSTIC_FAULT),조건 성립 시 Reset
+allarms 3,1994,1225,RCoil,I/O FLT,((ON AND Flag.RESET_ALLARM) AND Allarm.PLC_DIAGNOSTIC_FAULT),조건 성립 시 Reset
+allarms 3,1994,1227,RCoil,OB Fault,((ON AND Flag.RESET_ALLARM) AND Allarm.PLC_DIAGNOSTIC_FAULT),조건 성립 시 Reset
+allarms 3,1994,1229,RCoil,Rack FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.PLC_DIAGNOSTIC_FAULT),조건 성립 시 Reset
+allarms 3,1994,1231,RCoil,Module Access FLT,((ON AND Flag.RESET_ALLARM) AND Allarm.PLC_DIAGNOSTIC_FAULT),조건 성립 시 Reset
+allarms 3,1994,1233,RCoil,Prog FAULT,((ON AND Flag.RESET_ALLARM) AND Allarm.PLC_DIAGNOSTIC_FAULT),조건 성립 시 Reset
+allarms 3,1995,41,SCoil,Allarm.RO03_Min,LRef UID 31.Q (블록 동작 확인),조건 성립 시 Set
+allarms 3,1995,70,SCoil,Allarm.RO03_Max,LRef UID 68.Q (블록 동작 확인),조건 성립 시 Set
+allarms 3,1995,114,RCoil,Allarm.RO03_Min,(Flag.RESET_ALLARM AND Allarm.RO03_Min),조건 성립 시 Reset
+allarms 3,1995,116,RCoil,Allarm.RO03_Max,(Flag.RESET_ALLARM AND Allarm.RO03_Max),조건 성립 시 Reset
+cyc_int5 ogni 100ms,8,32,Move,Data.TC03_SETPOINT,[Data.TC03_SETPOINT < 200],Move 입력 200
+cyc_int5 ogni 100ms,12,362,Coil,VT02Manuale,((ON AND NOT [Flag.MV04_Auto]) OR (ON AND NOT [Start FN02]) OR ON),조건에 따른 Coil 기록

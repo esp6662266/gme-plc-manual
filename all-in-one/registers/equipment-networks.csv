@@ -1,0 +1,1282 @@
+﻿설비 ID,블록,색인 순서,제목,문서 ID,원본 XML,PLF 위치,Parts,Wires,해석 피연산자,전체 피연산자
+BC01,time work motor,17,bc-01,1018,0308-FlgNet.xml,2867938,7,18,12,12
+BC01,time work motor,47,,1048,0335-FlgNet.xml,2901228,6,17,11,11
+BC01,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+BC01,hmi,1,bc01,1178,0357-FlgNet.xml,2938200,1,9,0,8
+BC01,analog output conversion,14,bc01,1692,0473-FlgNet.xml,3093439,6,16,12,12
+BC01,analog input conversion,38,bc-01,1768,0525-FlgNet.xml,3161027,2,9,7,7
+BC01,allarms 1,5,bc01,1785,0422-FlgNet.xml,3036258,16,28,16,16
+BC01,allarms 1,6,bc01,1786,0423-FlgNet.xml,3037394,7,13,7,7
+BC01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+BC01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+BC01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+BC01,motors 1,3,bwf01,1932,0239-FlgNet.xml,2778651,11,21,11,11
+BC01,motors 1,4,bwf02,1933,0240-FlgNet.xml,2779902,11,21,11,11
+BC01,motors 1,5,bwf01/02,1934,0241-FlgNet.xml,2781152,17,29,15,15
+BC01,motors 1,6,bc01,1935,0242-FlgNet.xml,2782579,13,23,11,11
+RD01,time work motor,18,rd-01,1019,0309-FlgNet.xml,2868941,7,18,12,12
+RD01,time work motor,19,rd-01 fan,1020,0310-FlgNet.xml,2870111,7,18,12,12
+RD01,time work motor,48,,1049,0336-FlgNet.xml,2902295,6,17,11,11
+RD01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+RD01,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+RD01,hmi,2,rd01,1179,0358-FlgNet.xml,2939221,1,9,0,8
+RD01,hmi,3,rd01 fan,1180,0359-FlgNet.xml,2940240,1,9,0,8
+RD01,analog output conversion,6,rd-01 cylinder,1684,0465-FlgNet.xml,3084575,6,16,12,12
+RD01,analog input conversion,41,rd-01,1771,0519-FlgNet.xml,3154558,2,9,7,7
+RD01,allarms 1,7,rd01,1787,0424-FlgNet.xml,3038265,16,28,16,16
+RD01,allarms 1,8,fan rd01,1788,0425-FlgNet.xml,3039421,10,19,11,11
+RD01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+RD01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+RD01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+RD01,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+RD01,motors 1,2,block load,1931,0238-FlgNet.xml,2777442,11,21,10,10
+RD01,motors 1,3,bwf01,1932,0239-FlgNet.xml,2778651,11,21,11,11
+RD01,motors 1,4,bwf02,1933,0240-FlgNet.xml,2779902,11,21,11,11
+RD01,motors 1,5,bwf01/02,1934,0241-FlgNet.xml,2781152,17,29,15,15
+RD01,motors 1,7,rd01,1936,0243-FlgNet.xml,2783788,12,23,12,12
+RD01,motors 1,9,rd01,1938,0244-FlgNet.xml,2785045,9,18,11,11
+RD01,motors 1,10,rd01 fan,1939,0245-FlgNet.xml,2786164,9,16,8,8
+RD01,motors 1,26,fn06,1955,0257-FlgNet.xml,2802114,8,14,7,7
+RD01-FAN,time work motor,19,rd-01 fan,1020,0310-FlgNet.xml,2870111,7,18,12,12
+RD01-FAN,time work motor,48,,1049,0336-FlgNet.xml,2902295,6,17,11,11
+RD01-FAN,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+RD01-FAN,hmi,3,rd01 fan,1180,0359-FlgNet.xml,2940240,1,9,0,8
+RD01-FAN,allarms 1,8,fan rd01,1788,0425-FlgNet.xml,3039421,10,19,11,11
+RD01-FAN,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+RD01-FAN,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+RD01-FAN,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+RD01-FAN,motors 1,7,rd01,1936,0243-FlgNet.xml,2783788,12,23,12,12
+RD01-FAN,motors 1,10,rd01 fan,1939,0245-FlgNet.xml,2786164,9,16,8,8
+MC03,time work motor,20,mc-03,1021,0311-FlgNet.xml,2871269,7,18,12,12
+MC03,time work motor,48,,1049,0336-FlgNet.xml,2902295,6,17,11,11
+MC03,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+MC03,hmi,4,spare motor,1181,0360-FlgNet.xml,2941260,1,9,0,8
+MC03,allarms 1,9,spare motor,1789,0426-FlgNet.xml,3040401,10,19,11,11
+MC03,allarms 1,10,spare motor,1790,0427-FlgNet.xml,3041383,7,13,7,7
+MC03,motors 1,11,mc03 spare motor,1940,0246-FlgNet.xml,2787141,10,18,9,9
+MC04,time work motor,21,mc-04,1022,0312-FlgNet.xml,2872428,7,18,12,12
+MC04,time work motor,48,,1049,0336-FlgNet.xml,2902295,6,17,11,11
+MC04,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+MC04,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+MC04,hmi,5,mc04,1182,0361-FlgNet.xml,2942275,1,9,0,8
+MC04,analog output conversion,15,mc04,1693,0474-FlgNet.xml,3094543,6,16,12,12
+MC04,analog input conversion,39,mc04,1769,0526-FlgNet.xml,3162057,2,9,7,7
+MC04,allarms 1,11,mc04,1791,0428-FlgNet.xml,3042258,16,28,16,16
+MC04,allarms 1,12,mc04 deleted,1792,0429-FlgNet.xml,3043432,7,13,7,7
+MC04,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+MC04,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+MC04,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+MC04,r1 scraps gate 2,6,pv-02 rotary drum discharge valve,1916,0280-FlgNet.xml,2831195,20,33,19,19
+MC04,motors 1,11,mc03 spare motor,1940,0246-FlgNet.xml,2787141,10,18,9,9
+MC04,motors 1,12,mc04,1941,0247-FlgNet.xml,2788439,9,16,8,8
+MC05,time work motor,48,,1049,0336-FlgNet.xml,2902295,6,17,11,11
+MC05,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+MC05,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VS01,time work motor,23,vs-01,1024,0313-FlgNet.xml,2874397,7,18,12,12
+VS01,time work motor,49,,1050,0337-FlgNet.xml,2903362,6,17,11,11
+VS01,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+VS01,hmi,7,vs01,1184,0362-FlgNet.xml,2944084,1,9,0,8
+VS01,allarms 1,14,vs01,1794,0430-FlgNet.xml,3044964,16,28,16,16
+VS01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+VS01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VS01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+VS01,motors 1,12,mc04,1941,0247-FlgNet.xml,2788439,9,16,8,8
+VS01,motors 1,14,vs01,1943,0248-FlgNet.xml,2790370,7,12,6,6
+VS01,motors 1,15,vs01 brake (off),1944,0249-FlgNet.xml,2791450,15,27,15,15
+SC12,time work motor,49,,1050,0337-FlgNet.xml,2903362,6,17,11,11
+BR01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+BR01,simulation,14,,1092,0412-FlgNet.xml,3006139,18,42,31,31
+BR01,hmi,42,br-01,1219,0395-FlgNet.xml,2980335,4,7,0,4
+BR01,main,9,motors valve and burner,1620,0549-FlgNet.xml,3193266,7,3,1,1
+BR01,analog output conversion,8,br01 burner,1686,0467-FlgNet.xml,3086852,8,20,15,15
+BR01,analog output conversion,9,br01 burner - gas,1687,0468-FlgNet.xml,3088048,8,21,15,15
+BR01,valve control loop,5,mv03 controlled by psh03,1706,0345-FlgNet.xml,2917460,41,73,36,36
+BR01,cyc_int2 ogni 1s,3,,1721,0416-FlgNet.xml,3027928,5,12,8,8
+BR01,cyc_int2 ogni 1s,4,,1722,0023-FlgNet.xml,3028845,2,6,3,4
+BR01,cyc_int2 ogni 1s,6,delayed burner flow rate variation,1724,0417-FlgNet.xml,3031189,5,15,11,11
+BR01,analog input conversion,22,gas br-01 - position,1752,0502-FlgNet.xml,3133531,2,9,7,7
+BR01,analog input conversion,23,air br-01 - position,1753,0503-FlgNet.xml,3134593,2,9,7,7
+BR01,analog input conversion,24,max flow gas - flowmeter,1754,0504-FlgNet.xml,3135659,4,14,11,11
+BR01,analog input conversion,25,max flow air - flowmeter,1755,0505-FlgNet.xml,3136872,2,9,7,7
+BR01,control_stechio,1,calculate the gas flow rate based on the theoretical ramp,1830,0194-FlgNet.xml,2712947,41,103,81,81
+BR01,control_stechio,5,verify range sent by gas,1834,0196-FlgNet.xml,2719443,5,13,9,9
+BR01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+BR01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+BR01,burner control,1,burner control box fault,1854,0171-FlgNet.xml,2677001,20,34,23,23
+BR01,burner control,2,burner servomotor not in minimal position,1855,0172-FlgNet.xml,2678712,10,18,9,9
+BR01,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+BR01,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+BR01,burner control,6,counter minutes of burner work,1859,0176-FlgNet.xml,2683711,9,20,13,13
+BR01,burner control,7,counter burner off during preheating or production,1860,0193-FlgNet.xml,2711213,21,44,28,29
+BR01,burner control,8,programmed burner shutdown every 24 hours,1861,0177-FlgNet.xml,2685009,5,11,7,7
+BR01,burner control,9,a 56.6 start high flameburner,1862,0178-FlgNet.xml,2686142,25,51,33,33
+BR01,burner control,10,enable relay forceed spark,1863,0179-FlgNet.xml,2688129,13,23,14,14
+BR01,burner control,12,burner lock,1865,0181-FlgNet.xml,2690615,17,31,15,15
+BR01,burner control,13,burner start sequence,1866,0182-FlgNet.xml,2691950,9,16,9,9
+BR01,burner control,14,for viewing washing time in supervisor,1867,0183-FlgNet.xml,2693095,5,12,8,8
+BR01,burner control,15,enable burner cleaning sequence,1868,0184-FlgNet.xml,2694397,71,151,113,113
+BR01,burner control,16,burner start fault reset,1869,0185-FlgNet.xml,2698281,3,6,3,3
+BR01,burner control,17,burner servomotor control fb41 pid mode,1870,0186-FlgNet.xml,2699396,15,29,15,15
+BR01,burner control,18,if on auto send pid result to the module,1871,0187-FlgNet.xml,2700749,2,6,4,4
+BR01,burner control,19,burner air range limits,1872,0188-FlgNet.xml,2701901,14,32,21,21
+BR01,burner control,20,simulation,1873,0008-FlgNet.xml,2703252,2,5,2,3
+FN01,time work motor,27,fn-01,1028,0316-FlgNet.xml,2878671,7,18,12,12
+FN01,time work motor,49,,1050,0337-FlgNet.xml,2903362,6,17,11,11
+FN01,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+FN01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+FN01,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+FN01,hmi,17,fn01,1194,0371-FlgNet.xml,2954769,1,9,0,8
+FN01,analog output conversion,7,fn-01 ventilator,1685,0466-FlgNet.xml,3085714,6,16,12,12
+FN01,analog input conversion,42,fn-01,1772,0520-FlgNet.xml,3155607,2,9,7,7
+FN01,allarms 1,18,fn01,1798,0433-FlgNet.xml,3048880,16,28,16,16
+FN01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+FN01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+FN01,auto start motors,5,set points fn01,1845,0169-FlgNet.xml,2672928,24,63,38,43
+FN01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+FN01,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+FN01,motors 1,21,preallarm fn01,1950,0252-FlgNet.xml,2796606,12,22,12,12
+FN01,motors 1,22,fn01,1951,0253-FlgNet.xml,2797818,11,21,11,11
+FN01,allarms 3,9,pc-01 low depressure,1987,0535-FlgNet.xml,3174355,13,27,16,16
+FN01,allarms 3,10,high vibrations fn-01,1988,0536-FlgNet.xml,3175515,10,21,13,13
+FN02,time work motor,25,fn-02,1026,0314-FlgNet.xml,2876360,7,18,12,12
+FN02,time work motor,49,,1050,0337-FlgNet.xml,2903362,6,17,11,11
+FN02,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+FN02,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+FN02,hmi,15,fn02,1192,0368-FlgNet.xml,2951594,1,9,0,8
+FN02,analog output conversion,10,fn02 ventilation of secondary air,1688,0469-FlgNet.xml,3089306,6,16,12,12
+FN02,analog input conversion,37,fn-02 fan,1767,0517-FlgNet.xml,3152458,2,9,7,7
+FN02,analog input conversion,40,fn-02 aspirator,1770,0518-FlgNet.xml,3153512,2,9,7,7
+FN02,allarms 1,16,fn02,1796,0431-FlgNet.xml,3046777,16,28,16,16
+FN02,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+FN02,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+FN02,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+FN02,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+FN02,motors 1,19,fn02,1948,0250-FlgNet.xml,2794501,8,15,8,8
+FN02,cyc_int5 ogni 100ms,9,disable pid control on vt02,12,0478-FlgNet.xml,3103591,6,11,5,5
+FN03,time work motor,30,fn-03,1031,0319-FlgNet.xml,2882151,7,18,12,12
+FN03,time work motor,50,,1051,0338-FlgNet.xml,2904427,6,17,11,11
+FN03,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+FN03,hmi,20,fn03,1197,0374-FlgNet.xml,2957803,1,9,0,8
+FN03,allarms 1,21,fn03,1801,0436-FlgNet.xml,3051937,24,43,26,26
+FN03,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+FN03,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+FN03,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+FN03,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+FN03,burner control,13,burner start sequence,1866,0182-FlgNet.xml,2691950,9,16,9,9
+FN03,motors 1,25,fn03,1954,0256-FlgNet.xml,2801064,7,12,6,6
+FN04,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+FN04,time work motor,38,fn-04,1039,0326-FlgNet.xml,2891254,7,18,12,12
+FN04,time work motor,52,,1053,0340-FlgNet.xml,2906560,6,17,11,11
+FN04,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+FN04,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+FN04,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+FN04,hmi,28,fn04 ????,1205,0381-FlgNet.xml,2965683,1,9,0,8
+FN04,analog output conversion,11,module aspirator fn-04,1689,0470-FlgNet.xml,3090295,6,16,12,12
+FN04,analog input conversion,40,fn-02 aspirator,1770,0518-FlgNet.xml,3153512,2,9,7,7
+FN04,allarms 1,29,fn04,1809,0443-FlgNet.xml,3059801,16,28,16,16
+FN04,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+FN04,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+FN04,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+FN04,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+FN04,filter,19,speed fn-04 at start,1900,0213-FlgNet.xml,2749416,3,7,4,4
+FN04,filter,20,dp-01 control loop,1901,0214-FlgNet.xml,2750415,11,30,22,22
+FN04,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+FN04,motors 1,36,fn04,1965,0265-FlgNet.xml,2812098,10,19,10,10
+FN04,motors 1,41,fn05,1970,0270-FlgNet.xml,2817203,8,14,7,7
+FN04,allarms 3,9,pc-01 low depressure,1987,0535-FlgNet.xml,3174355,13,27,16,16
+FN05,time work motor,43,fn-05,1044,0331-FlgNet.xml,2896906,7,18,12,12
+FN05,time work motor,53,,1054,0018-FlgNet.xml,2907633,2,5,2,3
+FN05,simulation,8,motors simulated,1086,0406-FlgNet.xml,3000331,10,15,10,10
+FN05,hmi,33,fn05,1210,0386-FlgNet.xml,2970744,1,9,0,8
+FN05,allarms 1,34,fn05,1814,0448-FlgNet.xml,3064790,9,17,10,10
+FN05,motors 1,41,fn05,1970,0270-FlgNet.xml,2817203,8,14,7,7
+FN05,motors 1,42,er01,1971,0271-FlgNet.xml,2818300,10,18,9,9
+FN06,time work motor,31,fn-06,1032,0320-FlgNet.xml,2883306,7,18,12,12
+FN06,time work motor,50,,1051,0338-FlgNet.xml,2904427,6,17,11,11
+FN06,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+FN06,hmi,21,fn06,1198,0375-FlgNet.xml,2958817,1,9,0,8
+FN06,allarms 1,22,fn06,1802,0437-FlgNet.xml,3053416,9,17,10,10
+FN06,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+FN06,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+FN06,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+FN06,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+FN06,motors 1,26,fn06,1955,0257-FlgNet.xml,2802114,8,14,7,7
+FN01-FAN,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+FN01-FAN,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+CH01,time work motor,29,ch-01,1030,0318-FlgNet.xml,2880985,7,18,12,12
+CH01,time work motor,50,,1051,0338-FlgNet.xml,2904427,6,17,11,11
+CH01,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+CH01,hmi,19,ch01,1196,0373-FlgNet.xml,2956793,1,9,0,8
+CH01,analog input conversion,31,store current position value at power-off,1761,0511-FlgNet.xml,3143677,6,13,11,11
+CH01,analog input conversion,33,data management mv02,1763,0513-FlgNet.xml,3146169,10,28,22,22
+CH01,allarms 1,20,ch01,1800,0435-FlgNet.xml,3050984,9,17,10,10
+CH01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+CH01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+CH01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+CH01,motors 1,24,ch01,1953,0255-FlgNet.xml,2799983,9,16,10,10
+MV01,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+MV01,simulation,5,mv,1083,0403-FlgNet.xml,2993682,70,151,110,110
+MV01,hmi,13,mv01,1190,0367-FlgNet.xml,2950454,1,15,0,14
+MV01,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+MV01,valve control loop,1,mv01 controlled by tc03,1702,0342-FlgNet.xml,2912054,35,61,28,29
+MV01,valve control loop,2,calibration encoder mv01,1703,0354-FlgNet.xml,2934685,6,13,7,7
+MV01,valve control loop,12,motorized valve pulse generator for rotation control,1713,0351-FlgNet.xml,2928046,42,95,74,74
+MV01,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+MV01,analog input conversion,26,reading encoder mv01,1756,0506-FlgNet.xml,3137984,3,28,6,25
+MV01,analog input conversion,32,data management mv01,1762,0512-FlgNet.xml,3144592,10,28,22,22
+MV01,cyc_int5 ogni 100ms,8,controll tc03 moduling mv01,11,0477-FlgNet.xml,3102013,13,46,24,33
+MV02,cyc_int4 ogni 200ms,1,for test trends,396,0146-FlgNet.xml,2628567,4,11,8,8
+MV02,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+MV02,simulation,5,mv,1083,0403-FlgNet.xml,2993682,70,151,110,110
+MV02,hmi,12,mv02,1189,0366-FlgNet.xml,2949311,1,15,0,14
+MV02,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+MV02,valve control loop,3,mv02 controlled by psh-01,1704,0343-FlgNet.xml,2914090,33,57,27,27
+MV02,valve control loop,12,motorized valve pulse generator for rotation control,1713,0351-FlgNet.xml,2928046,42,95,74,74
+MV02,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+MV02,analog input conversion,27,reading encoder mv02,1757,0507-FlgNet.xml,3139119,3,28,4,25
+MV02,analog input conversion,33,data management mv02,1763,0513-FlgNet.xml,3146169,10,28,22,22
+MV02,cyc_int5 ogni 100ms,4,controll pc01 moduling mv02,7,0476-FlgNet.xml,3098984,5,30,16,25
+MV03,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+MV03,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+MV03,simulation,5,mv,1083,0403-FlgNet.xml,2993682,70,151,110,110
+MV03,hmi,14,mv03,1191,0369-FlgNet.xml,2952612,1,15,0,14
+MV03,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+MV03,valve control loop,4,mv03 controlled by psh03,1705,0344-FlgNet.xml,2916055,11,24,17,17
+MV03,valve control loop,5,mv03 controlled by psh03,1706,0345-FlgNet.xml,2917460,41,73,36,36
+MV03,valve control loop,6,calibration encoder mv03,1707,0353-FlgNet.xml,2933605,6,13,7,7
+MV03,valve control loop,12,motorized valve pulse generator for rotation control,1713,0351-FlgNet.xml,2928046,42,95,74,74
+MV03,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+MV03,analog input conversion,28,reading encoder mv03,1758,0508-FlgNet.xml,3140257,3,28,4,25
+MV03,analog input conversion,34,mv03 data management,1764,0514-FlgNet.xml,3147722,10,28,22,22
+MV03,burner control,15,enable burner cleaning sequence,1868,0184-FlgNet.xml,2694397,71,151,113,113
+MV03,cyc_int5 ogni 100ms,12,control pc02 moduling mv03 - not used,15,0479-FlgNet.xml,3107292,7,33,17,26
+MV04,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+MV04,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+MV04,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+MV04,analog input conversion,39,mc04,1769,0526-FlgNet.xml,3162057,2,9,7,7
+MV04,cyc_int5 ogni 100ms,9,disable pid control on vt02,12,0478-FlgNet.xml,3103591,6,11,5,5
+MV05,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+MV05,simulation,5,mv,1083,0403-FlgNet.xml,2993682,70,151,110,110
+MV05,hmi,11,mv05,1188,0365-FlgNet.xml,2948167,1,15,0,14
+MV05,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+MV05,valve control loop,7,mv05 controlled by ro-01,1708,0346-FlgNet.xml,2919662,34,60,28,29
+MV05,valve control loop,12,motorized valve pulse generator for rotation control,1713,0351-FlgNet.xml,2928046,42,95,74,74
+MV05,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+MV05,analog input conversion,29,reading encoder mv05,1759,0509-FlgNet.xml,3141397,3,28,4,25
+MV05,analog input conversion,35,mv05 data management,1765,0515-FlgNet.xml,3149303,10,28,22,22
+MV05,cyc_int5 ogni 100ms,2,controll ro01 moduling mv05 - pid,5,0475-FlgNet.xml,3096758,8,35,18,27
+MV06,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+MV06,simulation,5,mv,1083,0403-FlgNet.xml,2993682,70,151,110,110
+MV06,hmi,10,mv06,1187,0364-FlgNet.xml,2947021,1,15,0,14
+MV06,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+MV06,valve control loop,8,mv06 controlled by psh02,1709,0347-FlgNet.xml,2921692,12,27,19,19
+MV06,valve control loop,9,the working tool has a low range,1710,0348-FlgNet.xml,2923037,20,39,25,25
+MV06,valve control loop,10,mv06 controlled by psh02,1711,0349-FlgNet.xml,2924860,33,59,29,29
+MV06,valve control loop,12,motorized valve pulse generator for rotation control,1713,0351-FlgNet.xml,2928046,42,95,74,74
+MV06,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+MV06,analog input conversion,30,reading encoder mv06,1760,0510-FlgNet.xml,3142526,3,28,4,25
+MV06,analog input conversion,36,mv06 data management,1766,0516-FlgNet.xml,3150892,10,28,22,22
+PV01,startup only,5,default,405,0150-FlgNet.xml,2638765,6,8,6,6
+PV01,simulation,12,pv01,1090,0410-FlgNet.xml,3004133,8,13,8,8
+PV01,hmi,38,pv01,1215,0391-FlgNet.xml,2975859,1,21,0,20
+PV01,allarms 1,35,pv01,1815,0449-FlgNet.xml,3065746,17,31,19,19
+PV01,allarms 1,36,pv01,1816,0450-FlgNet.xml,3066972,17,31,19,19
+PV01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+PV01,r1 scraps gate 2,1,pv-01,1911,0276-FlgNet.xml,2825244,19,31,18,18
+PV01,r1 scraps gate 2,3,r1 gate loop pv-01,1913,0277-FlgNet.xml,2826604,33,65,49,49
+PV01,r1 scraps gate 2,4,evr4 scraps discharge door and gates selector pv-01,1914,0278-FlgNet.xml,2828818,5,9,5,5
+PV01,r1 scraps gate 2,5,a 48.4 ev-02 valvecommand,1915,0279-FlgNet.xml,2829797,12,21,10,10
+PV01,r1 scraps gate 2,11,pv01,1921,0286-FlgNet.xml,2839163,15,25,13,13
+PV01,r1 scraps gate 2,12,pv01,1922,0287-FlgNet.xml,2840479,17,29,15,15
+PV02,startup only,5,default,405,0150-FlgNet.xml,2638765,6,8,6,6
+PV02,simulation,13,pv02,1091,0411-FlgNet.xml,3005151,8,13,8,8
+PV02,hmi,39,pv02,1216,0392-FlgNet.xml,2977056,1,21,0,20
+PV02,allarms 1,37,pv02,1817,0451-FlgNet.xml,3068197,17,31,19,19
+PV02,allarms 1,38,pv02,1818,0452-FlgNet.xml,3069419,17,31,19,19
+PV02,r1 scraps gate 2,6,pv-02 rotary drum discharge valve,1916,0280-FlgNet.xml,2831195,20,33,19,19
+PV02,r1 scraps gate 2,8,r1 gate loop pv-02,1918,0281-FlgNet.xml,2832770,33,65,49,49
+PV02,r1 scraps gate 2,9,evr4 scraps discharge door and gates selector pv-02,1919,0282-FlgNet.xml,2834851,5,9,5,5
+PV02,r1 scraps gate 2,10,a 56.4 ev-05 valvecommand,1920,0283-FlgNet.xml,2835833,11,19,9,9
+PV02,r1 scraps gate 2,13,pv02,1923,0288-FlgNet.xml,2841872,15,25,13,13
+PV02,r1 scraps gate 2,14,pv02,1924,0289-FlgNet.xml,2843187,15,25,13,13
+PV03,startup only,5,default,405,0150-FlgNet.xml,2638765,6,8,6,6
+PV03,simulation,9,pv03,1087,0407-FlgNet.xml,3001379,4,7,4,4
+PV03,hmi,40,pv03,1217,0393-FlgNet.xml,2978247,1,13,0,12
+PV03,allarms 1,39,pv03,1819,0453-FlgNet.xml,3070646,17,31,19,19
+PV03,r1 scraps gate 2,15,pv03,1925,0290-FlgNet.xml,2844510,17,29,15,15
+PV03,motors 1,43,pv03,1972,0272-FlgNet.xml,2819468,7,12,6,6
+PV03,motors 1,44,liw feeder,1973,0273-FlgNet.xml,2820528,13,24,14,14
+PV04,simulation,10,pv04,1088,0408-FlgNet.xml,3002293,4,7,4,4
+PV04,hmi,41,pv04,1218,0394-FlgNet.xml,2979325,1,13,0,12
+PV04,motors 1,18,,1947,0013-FlgNet.xml,2823716,1,4,3,3
+PV05,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+PV05,allarms 3,12,hydrogen box not ready,1990,0538-FlgNet.xml,3177675,10,18,9,9
+PV06,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+PV06,allarms 3,12,hydrogen box not ready,1990,0538-FlgNet.xml,3177675,10,18,9,9
+PV14,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+PV14,simulation,11,pv14,1089,0409-FlgNet.xml,3003212,4,7,4,4
+PV14,hmi,35,pv14,1212,0388-FlgNet.xml,2972702,4,7,0,4
+PV14,filter,21,pv-14 cold air filter fault,1902,0215-FlgNet.xml,2751965,12,22,12,12
+PV14,filter,22,valve air false pv-14,1903,0216-FlgNet.xml,2753212,10,18,9,9
+PV14,allarms 3,13,tc-09 filter inlet temperature,1991,0539-FlgNet.xml,3178700,20,43,29,29
+VR01,time work motor,26,vr-01,1027,0315-FlgNet.xml,2877512,7,18,12,12
+VR01,time work motor,49,,1050,0337-FlgNet.xml,2903362,6,17,11,11
+VR01,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+VR01,hmi,16,vr01,1193,0370-FlgNet.xml,2953756,1,9,0,8
+VR01,allarms 1,17,vr01,1797,0432-FlgNet.xml,3047931,9,17,10,10
+VR01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+VR01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VR01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+VR01,motors 1,20,vr01,1949,0251-FlgNet.xml,2795471,5,9,5,5
+VR01,motors 1,21,preallarm fn01,1950,0252-FlgNet.xml,2796606,12,22,12,12
+VR02,time work motor,28,vr-02,1029,0317-FlgNet.xml,2879830,7,18,12,12
+VR02,time work motor,50,,1051,0338-FlgNet.xml,2904427,6,17,11,11
+VR02,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+VR02,hmi,18,vr02,1195,0372-FlgNet.xml,2955782,1,9,0,8
+VR02,allarms 1,19,vr02,1799,0434-FlgNet.xml,3050037,9,17,10,10
+VR02,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+VR02,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VR02,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+VR02,motors 1,21,preallarm fn01,1950,0252-FlgNet.xml,2796606,12,22,12,12
+VR02,motors 1,23,vr02,1952,0254-FlgNet.xml,2798885,5,9,5,5
+VR03,time work motor,39,vr-03,1040,0327-FlgNet.xml,2892412,7,18,12,12
+VR03,time work motor,52,,1053,0340-FlgNet.xml,2906560,6,17,11,11
+VR03,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+VR03,hmi,29,vr03,1206,0382-FlgNet.xml,2966701,1,9,0,8
+VR03,allarms 1,30,vr03,1810,0444-FlgNet.xml,3060973,9,17,10,10
+VR03,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+VR03,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VR03,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+VR03,motors 1,27,sc01,1956,0258-FlgNet.xml,2803212,8,14,7,7
+VR03,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+VR03,motors 1,37,vr03,1966,0266-FlgNet.xml,2813126,5,9,5,5
+VR04,time work motor,40,vr-04,1041,0328-FlgNet.xml,2893575,7,18,12,12
+VR04,time work motor,52,,1053,0340-FlgNet.xml,2906560,6,17,11,11
+VR04,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+VR04,hmi,30,vr04,1207,0383-FlgNet.xml,2967715,1,9,0,8
+VR04,allarms 1,31,vr04,1811,0445-FlgNet.xml,3061927,9,17,10,10
+VR04,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+VR04,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VR04,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+VR04,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+VR04,motors 1,33,sc10,1962,0262-FlgNet.xml,2808528,8,14,7,7
+VR04,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+VR04,motors 1,38,vr04,1967,0267-FlgNet.xml,2814073,5,9,5,5
+VR05,time work motor,41,vr-05,1042,0329-FlgNet.xml,2894579,7,18,12,12
+VR05,time work motor,52,,1053,0340-FlgNet.xml,2906560,6,17,11,11
+VR05,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+VR05,hmi,31,vr05,1208,0384-FlgNet.xml,2968724,1,9,0,8
+VR05,allarms 1,32,vr05,1812,0446-FlgNet.xml,3062874,9,17,10,10
+VR05,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+VR05,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+VR05,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+VR05,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+VR05,motors 1,34,sc11,1963,0263-FlgNet.xml,2809612,8,14,7,7
+VR05,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+VR05,motors 1,39,vr05,1968,0268-FlgNet.xml,2815019,5,9,5,5
+VR06,time work motor,42,vr-06,1043,0330-FlgNet.xml,2895738,7,18,12,12
+VR06,time work motor,52,,1053,0340-FlgNet.xml,2906560,6,17,11,11
+VR06,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+VR06,hmi,32,vr06,1209,0385-FlgNet.xml,2969733,1,9,0,8
+VR06,allarms 1,33,vr06,1813,0447-FlgNet.xml,3063836,9,17,10,10
+VR06,motors 1,29,ld01,1958,0259-FlgNet.xml,2805114,9,16,8,8
+VR06,motors 1,32,ld01,1961,0261-FlgNet.xml,2807334,12,21,10,10
+VR06,motors 1,40,vr06,1969,0269-FlgNet.xml,2815963,8,14,7,7
+SC01,time work motor,32,sc-01,1033,0321-FlgNet.xml,2884473,7,18,12,12
+SC01,time work motor,50,,1051,0338-FlgNet.xml,2904427,6,17,11,11
+SC01,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+SC01,hmi,22,sc1,1199,0376-FlgNet.xml,2959826,1,9,0,8
+SC01,allarms 1,23,sc01,1803,0438-FlgNet.xml,3054367,9,17,10,10
+SC01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SC01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SC01,motors 1,27,sc01,1956,0258-FlgNet.xml,2803212,8,14,7,7
+SC01,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+SC10,time work motor,36,sc-10,1037,0324-FlgNet.xml,2888932,7,18,12,12
+SC10,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+SC10,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+SC10,hmi,26,sc10,1203,0379-FlgNet.xml,2963655,1,9,0,8
+SC10,allarms 1,27,sc10,1807,0441-FlgNet.xml,3057891,9,17,10,10
+SC10,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SC10,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SC10,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+SC10,filter,7,filter work,1888,0202-FlgNet.xml,2729196,9,19,13,13
+SC10,motors 1,33,sc10,1962,0262-FlgNet.xml,2808528,8,14,7,7
+SC10,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+SC11,time work motor,37,sc-11,1038,0325-FlgNet.xml,2890091,7,18,12,12
+SC11,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+SC11,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+SC11,hmi,27,sc11,1204,0380-FlgNet.xml,2964666,1,9,0,8
+SC11,allarms 1,28,sc11,1808,0442-FlgNet.xml,3058850,9,17,10,10
+SC11,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SC11,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SC11,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+SC11,filter,7,filter work,1888,0202-FlgNet.xml,2729196,9,19,13,13
+SC11,motors 1,34,sc11,1963,0263-FlgNet.xml,2809612,8,14,7,7
+SC11,motors 1,35,preallarm fn04,1964,0264-FlgNet.xml,2810738,13,24,13,13
+BF01,analog input conversion,43,dp-01,1773,0521-FlgNet.xml,3156654,2,9,7,7
+BF01,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+BF01,filter,6,work pause times for filter valves,1887,0201-FlgNet.xml,2728124,10,20,13,13
+BF01,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+BF01,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+BF01,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+BF01,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+BF01,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+BF01,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+BF01,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+BF01,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+BF02,analog input conversion,44,dp-02,1774,0522-FlgNet.xml,3157701,2,9,7,7
+BF02,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+BF02,filter,6,work pause times for filter valves,1887,0201-FlgNet.xml,2728124,10,20,13,13
+BF02,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+BF02,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+BF02,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+BF02,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+BF02,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+BF02,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+BF02,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+BF02,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+LD01,time work motor,34,ld-01,1035,0322-FlgNet.xml,2886450,7,18,12,12
+LD01,time work motor,35,ld-01 vib,1036,0323-FlgNet.xml,2887772,7,18,12,12
+LD01,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+LD01,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+LD01,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+LD01,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+LD01,hmi,24,ld01 mf,1201,0377-FlgNet.xml,2961633,1,9,0,8
+LD01,hmi,25,ld01 vb,1202,0378-FlgNet.xml,2962645,1,9,0,8
+LD01,allarms 2,3,ld-01 low lime level,1228,0161-FlgNet.xml,2655881,8,16,8,9
+LD01,allarms 1,25,ld01,1805,0439-FlgNet.xml,3055977,9,17,10,10
+LD01,allarms 1,26,ld01 vibrator,1806,0440-FlgNet.xml,3056934,9,17,10,10
+LD01,motors 1,29,ld01,1958,0259-FlgNet.xml,2805114,9,16,8,8
+LD01,motors 1,30,,1959,0274-FlgNet.xml,2821926,2,8,6,6
+LD01,motors 1,31,ld01,1960,0260-FlgNet.xml,2806240,8,16,10,10
+LD01,motors 1,32,ld01,1961,0261-FlgNet.xml,2807334,12,21,10,10
+LD01A,time work motor,35,ld-01 vib,1036,0323-FlgNet.xml,2887772,7,18,12,12
+LD01A,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+LD01A,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+LD01A,hmi,25,ld01 vb,1202,0378-FlgNet.xml,2962645,1,9,0,8
+LD01A,allarms 1,26,ld01 vibrator,1806,0440-FlgNet.xml,3056934,9,17,10,10
+LD01A,motors 1,32,ld01,1961,0261-FlgNet.xml,2807334,12,21,10,10
+ER01,simulation,8,motors simulated,1086,0406-FlgNet.xml,3000331,10,15,10,10
+ER01,hmi,34,er01,1211,0387-FlgNet.xml,2971754,1,9,0,8
+ER01,allarms 1,42,er01,1822,0456-FlgNet.xml,3074473,8,16,8,9
+ER01,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+ER01,motors 1,40,vr06,1969,0269-FlgNet.xml,2815963,8,14,7,7
+ER01,motors 1,42,er01,1971,0271-FlgNet.xml,2818300,10,18,9,9
+BWF01,allarm manager,9,clear values of report at the end of the recording,935,0157-FlgNet.xml,2647895,5,11,7,7
+BWF01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+BWF01,simulation,8,motors simulated,1086,0406-FlgNet.xml,3000331,10,15,10,10
+BWF01,hmi,36,bwf01,1213,0389-FlgNet.xml,2973609,10,17,0,9
+BWF01,analog output conversion,1,plant limits,1679,0460-FlgNet.xml,3077924,21,61,46,47
+BWF01,analog output conversion,2,bwf01 client feeder,1680,0461-FlgNet.xml,3079789,5,13,9,9
+BWF01,analog output conversion,3,bwf01 speed calculation,1681,0462-FlgNet.xml,3080743,13,39,30,30
+BWF01,analog input conversion,5,client 1 bwf01 flow rate,1735,0485-FlgNet.xml,3114625,9,26,19,19
+BWF01,analog input conversion,7,client 3 level indicator bwf01,1737,0487-FlgNet.xml,3117663,2,9,7,7
+BWF01,analog input conversion,46,contactor ton passed in bwf,1776,0524-FlgNet.xml,3159868,7,17,11,11
+BWF01,allarms 1,1,bwf01,1781,0418-FlgNet.xml,3032148,13,24,13,13
+BWF01,allarms 1,2,bwf01,1782,0419-FlgNet.xml,3033234,11,19,11,11
+BWF01,allarms 1,40,bwf01/bwf02,1820,0454-FlgNet.xml,3071877,16,29,18,18
+BWF01,auto start motors,9,production counters,1849,0170-FlgNet.xml,2675012,21,65,48,48
+BWF01,motors 1,3,bwf01,1932,0239-FlgNet.xml,2778651,11,21,11,11
+BWF01,motors 1,5,bwf01/02,1934,0241-FlgNet.xml,2781152,17,29,15,15
+BWF01,motors 1,44,liw feeder,1973,0273-FlgNet.xml,2820528,13,24,14,14
+BWF01,allarms 3,2,low tc03 temperature,1980,0528-FlgNet.xml,3164619,35,74,51,51
+BWF01,allarms 3,15,incorrect scraps feeder formula,1993,0541-FlgNet.xml,3181557,11,24,15,15
+BWF02,motor/alarm client,16,client motor 18 allarm bwf02---------------,425,0235-FlgNet.xml,2774303,6,11,6,6
+BWF02,allarm manager,9,clear values of report at the end of the recording,935,0157-FlgNet.xml,2647895,5,11,7,7
+BWF02,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+BWF02,simulation,8,motors simulated,1086,0406-FlgNet.xml,3000331,10,15,10,10
+BWF02,hmi,37,bwf02,1214,0390-FlgNet.xml,2974713,10,17,0,9
+BWF02,analog output conversion,1,plant limits,1679,0460-FlgNet.xml,3077924,21,61,46,47
+BWF02,analog output conversion,4,bwf02 client feeder,1682,0463-FlgNet.xml,3082296,7,18,13,13
+BWF02,analog output conversion,5,bwf02 speed calculation,1683,0464-FlgNet.xml,3083376,8,23,18,18
+BWF02,analog input conversion,6,client 2 bwf02 flow rate,1736,0486-FlgNet.xml,3116141,9,26,19,19
+BWF02,analog input conversion,8,client 4 level indicator bwf02,1738,0488-FlgNet.xml,3118729,2,9,7,7
+BWF02,analog input conversion,46,contactor ton passed in bwf,1776,0524-FlgNet.xml,3159868,7,17,11,11
+BWF02,allarms 1,3,bwf02,1783,0420-FlgNet.xml,3034203,13,24,13,13
+BWF02,allarms 1,4,bwf02,1784,0421-FlgNet.xml,3035292,11,19,11,11
+BWF02,allarms 1,40,bwf01/bwf02,1820,0454-FlgNet.xml,3071877,16,29,18,18
+BWF02,auto start motors,9,production counters,1849,0170-FlgNet.xml,2675012,21,65,48,48
+BWF02,motors 1,4,bwf02,1933,0240-FlgNet.xml,2779902,11,21,11,11
+BWF02,motors 1,5,bwf01/02,1934,0241-FlgNet.xml,2781152,17,29,15,15
+BWF02,motors 1,44,liw feeder,1973,0273-FlgNet.xml,2820528,13,24,14,14
+BWF02,allarms 3,2,low tc03 temperature,1980,0528-FlgNet.xml,3164619,35,74,51,51
+BWF02,allarms 3,15,incorrect scraps feeder formula,1993,0541-FlgNet.xml,3181557,11,24,15,15
+LIW,time work motor,15,client motor 17,1016,0306-FlgNet.xml,2865597,7,18,12,12
+LIW,analog output conversion,13,send output to perifery,1691,0472-FlgNet.xml,3092424,4,11,8,8
+LIW,motors 1,44,liw feeder,1973,0273-FlgNet.xml,2820528,13,24,14,14
+CLIENT-CL01,motor/alarm client,1,apron conveyor fault (cl01),410,0220-FlgNet.xml,2758901,6,11,6,6
+CLIENT-CL01,time work motor,1,client motor 1,1002,0292-FlgNet.xml,2849081,7,18,12,12
+CLIENT-CL02,motor/alarm client,2,client motor 2 allarm,411,0221-FlgNet.xml,2759923,6,11,6,6
+CLIENT-CL02,time work motor,2,client motor 2,1003,0293-FlgNet.xml,2850257,7,18,12,12
+CLIENT-CL03,motor/alarm client,3,client motor 3 allarm,412,0222-FlgNet.xml,2760943,6,11,6,6
+CLIENT-CL03,time work motor,3,client motor 3,1004,0294-FlgNet.xml,2851280,7,18,12,12
+CLIENT-CL04,motor/alarm client,4,client motor 4 allarm,413,0223-FlgNet.xml,2761966,6,11,6,6
+CLIENT-CL04,time work motor,4,client motor 4,1005,0295-FlgNet.xml,2852611,7,18,12,12
+CLIENT-CL05,motor/alarm client,5,client motor 5 allarm,414,0224-FlgNet.xml,2762986,6,11,6,6
+CLIENT-CL05,time work motor,5,client motor 5,1006,0296-FlgNet.xml,2853789,7,18,12,12
+CLIENT-CL06,motor/alarm client,6,client motor 6 allarm,415,0225-FlgNet.xml,2764009,6,11,6,6
+CLIENT-CL06,time work motor,6,client motor 6,1007,0297-FlgNet.xml,2854969,7,18,12,12
+CLIENT-CL07,motor/alarm client,7,client motor 7 allarm,416,0226-FlgNet.xml,2765032,6,11,6,6
+CLIENT-CL07,time work motor,7,client motor 7,1008,0298-FlgNet.xml,2856152,7,18,12,12
+CLIENT-CL08,motor/alarm client,8,client motor 8 allarm,417,0227-FlgNet.xml,2766053,6,11,6,6
+CLIENT-CL08,time work motor,8,client motor 8,1009,0299-FlgNet.xml,2857331,7,18,12,12
+CLIENT-CL09,motor/alarm client,9,client motor 9 allarm,418,0228-FlgNet.xml,2767078,6,11,6,6
+CLIENT-CL09,time work motor,9,client motor 9,1010,0300-FlgNet.xml,2858512,7,18,12,12
+CLIENT-CL10,motor/alarm client,10,client motor 10 allarm,419,0229-FlgNet.xml,2768103,6,11,6,6
+CLIENT-CL10,time work motor,10,client motor 10,1011,0301-FlgNet.xml,2859692,7,18,12,12
+CLIENT-CL13,motor/alarm client,11,client motor 13 allarm,420,0230-FlgNet.xml,2769130,6,11,6,6
+CLIENT-CL13,time work motor,11,client motor 13,1012,0302-FlgNet.xml,2860880,7,18,12,12
+CLIENT-CL14,motor/alarm client,12,client motor 14 allarm,421,0231-FlgNet.xml,2770154,6,11,6,6
+CLIENT-CL14,time work motor,12,client motor 14,1013,0303-FlgNet.xml,2862054,7,18,12,12
+CLIENT-CL15,motor/alarm client,13,client motor 15 allarm,422,0232-FlgNet.xml,2771183,6,11,6,6
+CLIENT-CL15,time work motor,13,client motor 15,1014,0304-FlgNet.xml,2863237,7,18,12,12
+CLIENT-CL16,motor/alarm client,14,client motor 16 allarm,423,0233-FlgNet.xml,2772211,6,11,6,6
+CLIENT-CL16,time work motor,14,client motor 16,1015,0305-FlgNet.xml,2864417,7,18,12,12
+CLIENT-CL17,motor/alarm client,15,client motor 17 allarm,424,0234-FlgNet.xml,2773236,6,11,6,6
+CLIENT-CL17,time work motor,15,client motor 17,1016,0306-FlgNet.xml,2865597,7,18,12,12
+CLIENT-CL18,motor/alarm client,16,client motor 18 allarm bwf02---------------,425,0235-FlgNet.xml,2774303,6,11,6,6
+CLIENT-CL19,motor/alarm client,17,primary shradder fault (cl19),426,0236-FlgNet.xml,2775489,6,11,6,6
+CLIENT-CL19,time work motor,16,client motor 19,1017,0307-FlgNet.xml,2866776,7,18,12,12
+TC01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC01,simulation,14,,1092,0412-FlgNet.xml,3006139,18,42,31,31
+TC01,analog input conversion,9,tc-01,1739,0489-FlgNet.xml,3119776,2,9,7,7
+TC01,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+TC01,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+TC01,auto start motors,5,set points fn01,1845,0169-FlgNet.xml,2672928,24,63,38,43
+TC01,burner control,3,a 56.3 max.temperaturefilter,1856,0173-FlgNet.xml,2679770,4,8,4,4
+TC01,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+TC01,burner control,9,a 56.6 start high flameburner,1862,0178-FlgNet.xml,2686142,25,51,33,33
+TC01,burner control,11,reduce speed mn01 se tc01 > 30°c the setpoint,1864,0180-FlgNet.xml,2689406,8,19,14,14
+TC01,burner control,12,burner lock,1865,0181-FlgNet.xml,2690615,17,31,15,15
+TC01,burner control,15,enable burner cleaning sequence,1868,0184-FlgNet.xml,2694397,71,151,113,113
+TC01,burner control,17,burner servomotor control fb41 pid mode,1870,0186-FlgNet.xml,2699396,15,29,15,15
+TC01,burner control,22,dryout warm first ramp,1875,0190-FlgNet.xml,2706100,23,58,45,45
+TC01,burner control,23,dryout warm second ramp,1876,0191-FlgNet.xml,2708086,9,23,17,17
+TC01,burner control,24,dryout warm third ramp,1877,0192-FlgNet.xml,2709469,13,33,25,25
+TC01,allarms 3,1,max tc01 temperature,1979,0527-FlgNet.xml,3162942,21,45,31,31
+TC01,allarms 3,6,ro01 oxigen low limit,1984,0532-FlgNet.xml,3170627,12,26,16,16
+TC01,allarms 3,7,ro01-ro02 signal compare fault,1985,0533-FlgNet.xml,3171791,13,28,18,18
+TC01,allarms 3,8,tc01/tc02 signal compare fault,1986,0534-FlgNet.xml,3173006,15,32,20,20
+TC02,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC02,simulation,14,,1092,0412-FlgNet.xml,3006139,18,42,31,31
+TC02,analog input conversion,10,tc-02,1740,0490-FlgNet.xml,3120820,2,9,7,7
+TC02,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+TC02,allarms 3,8,tc01/tc02 signal compare fault,1986,0534-FlgNet.xml,3173006,15,32,20,20
+TC03,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC03,valve control loop,1,mv01 controlled by tc03,1702,0342-FlgNet.xml,2912054,35,61,28,29
+TC03,analog input conversion,11,tc-03,1741,0491-FlgNet.xml,3121864,2,9,7,7
+TC03,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+TC03,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+TC03,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+TC03,burner control,9,a 56.6 start high flameburner,1862,0178-FlgNet.xml,2686142,25,51,33,33
+TC03,burner control,12,burner lock,1865,0181-FlgNet.xml,2690615,17,31,15,15
+TC03,burner control,17,burner servomotor control fb41 pid mode,1870,0186-FlgNet.xml,2699396,15,29,15,15
+TC03,motors 1,2,block load,1931,0238-FlgNet.xml,2777442,11,21,10,10
+TC03,allarms 3,2,low tc03 temperature,1980,0528-FlgNet.xml,3164619,35,74,51,51
+TC03,cyc_int5 ogni 100ms,5,,8,0480-FlgNet.xml,3109630,2,6,4,4
+TC03,cyc_int5 ogni 100ms,8,controll tc03 moduling mv01,11,0477-FlgNet.xml,3102013,13,46,24,33
+TC04,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC04,analog input conversion,1,tc04,1731,0481-FlgNet.xml,3110424,2,9,7,7
+TC04,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+TC04,motors 1,21,preallarm fn01,1950,0252-FlgNet.xml,2796606,12,22,12,12
+TC04,allarms 3,3,max tc04 temperature,1981,0529-FlgNet.xml,3166897,21,43,27,27
+TC05,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC05,analog input conversion,2,tc-05,1732,0482-FlgNet.xml,3111467,2,9,7,7
+TC05,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+TC05,motors 1,21,preallarm fn01,1950,0252-FlgNet.xml,2796606,12,22,12,12
+TC05,allarms 3,3,max tc04 temperature,1981,0529-FlgNet.xml,3166897,21,43,27,27
+TC06,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC06,analog input conversion,12,tc-06,1742,0492-FlgNet.xml,3122905,2,9,7,7
+TC07,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+TC07,analog input conversion,13,tc-07,1743,0493-FlgNet.xml,3123948,2,9,7,7
+TC09,analog input conversion,3,tc-09,1733,0483-FlgNet.xml,3112512,2,9,7,7
+TC09,burner control,3,a 56.3 max.temperaturefilter,1856,0173-FlgNet.xml,2679770,4,8,4,4
+TC09,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+TC09,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+TC09,filter,22,valve air false pv-14,1903,0216-FlgNet.xml,2753212,10,18,9,9
+TC09,motors 1,2,block load,1931,0238-FlgNet.xml,2777442,11,21,10,10
+TC09,motors 1,36,fn04,1965,0265-FlgNet.xml,2812098,10,19,10,10
+TC09,allarms 3,13,tc-09 filter inlet temperature,1991,0539-FlgNet.xml,3178700,20,43,29,29
+TC10,analog input conversion,4,tc-10,1734,0484-FlgNet.xml,3113558,2,9,7,7
+RO01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+RO01,valve control loop,7,mv05 controlled by ro-01,1708,0346-FlgNet.xml,2919662,34,60,28,29
+RO01,analog input conversion,18,r0-01,1748,0498-FlgNet.xml,3129181,2,9,7,7
+RO01,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+RO01,burner control,15,enable burner cleaning sequence,1868,0184-FlgNet.xml,2694397,71,151,113,113
+RO01,allarms 3,4,oxigen analyzer out of range,1982,0530-FlgNet.xml,3168394,11,23,14,14
+RO01,allarms 3,5,oxigen too high,1983,0531-FlgNet.xml,3169490,10,22,16,16
+RO01,allarms 3,6,ro01 oxigen low limit,1984,0532-FlgNet.xml,3170627,12,26,16,16
+RO01,allarms 3,7,ro01-ro02 signal compare fault,1985,0533-FlgNet.xml,3171791,13,28,18,18
+RO01,cyc_int5 ogni 100ms,2,controll ro01 moduling mv05 - pid,5,0475-FlgNet.xml,3096758,8,35,18,27
+RO02,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+RO02,analog input conversion,19,r0-02,1749,0499-FlgNet.xml,3130229,2,9,7,7
+RO02,analog input conversion,20,r0-03,1750,0500-FlgNet.xml,3131275,4,14,11,11
+RO02,allarms 3,7,ro01-ro02 signal compare fault,1985,0533-FlgNet.xml,3171791,13,28,18,18
+RO03,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+RO03,analog input conversion,20,r0-03,1750,0500-FlgNet.xml,3131275,4,14,11,11
+RO03,allarms 3,17,ro03,1995,0543-FlgNet.xml,3183793,13,27,15,17
+RO04,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+RO04,analog input conversion,21,r0-04,1751,0501-FlgNet.xml,3132467,2,9,7,7
+PSH01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+PSH01,valve control loop,3,mv02 controlled by psh-01,1704,0343-FlgNet.xml,2914090,33,57,27,27
+PSH01,analog input conversion,15,psh-01,1745,0495-FlgNet.xml,3126047,2,9,7,7
+PSH02,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+PSH02,valve control loop,8,mv06 controlled by psh02,1709,0347-FlgNet.xml,2921692,12,27,19,19
+PSH02,valve control loop,9,the working tool has a low range,1710,0348-FlgNet.xml,2923037,20,39,25,25
+PSH02,valve control loop,10,mv06 controlled by psh02,1711,0349-FlgNet.xml,2924860,33,59,29,29
+PSH02,analog input conversion,16,psh-02,1746,0496-FlgNet.xml,3127093,2,9,7,7
+PSH02,allarms 3,11,max pressure psh-02,1989,0537-FlgNet.xml,3176591,10,21,15,15
+PSH03,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+PSH03,valve control loop,4,mv03 controlled by psh03,1705,0344-FlgNet.xml,2916055,11,24,17,17
+PSH03,valve control loop,5,mv03 controlled by psh03,1706,0345-FlgNet.xml,2917460,41,73,36,36
+PSH03,analog input conversion,17,psh-03,1747,0497-FlgNet.xml,3128137,2,9,7,7
+PC01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+PC01,analog input conversion,15,psh-01,1745,0495-FlgNet.xml,3126047,2,9,7,7
+PC01,analog input conversion,45,pc-01,1775,0523-FlgNet.xml,3158747,2,9,7,7
+PC01,filter,20,dp-01 control loop,1901,0214-FlgNet.xml,2750415,11,30,22,22
+PC01,allarms 3,9,pc-01 low depressure,1987,0535-FlgNet.xml,3174355,13,27,16,16
+PC01,cyc_int5 ogni 100ms,4,controll pc01 moduling mv02,7,0476-FlgNet.xml,3098984,5,30,16,25
+PC02,cyc_int5 ogni 100ms,12,control pc02 moduling mv03 - not used,15,0479-FlgNet.xml,3107292,7,33,17,26
+DP01,analog input conversion,43,dp-01,1773,0521-FlgNet.xml,3156654,2,9,7,7
+DP01,filter,1,,1882,0217-FlgNet.xml,2754422,2,8,6,6
+DP01,filter,2,time work/pause by dp01,1883,0198-FlgNet.xml,2723000,20,55,39,39
+DP01,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+DP01,filter,6,work pause times for filter valves,1887,0201-FlgNet.xml,2728124,10,20,13,13
+DP01,filter,20,dp-01 control loop,1901,0214-FlgNet.xml,2750415,11,30,22,22
+DP01,allarms 3,14,max filter depressure,1992,0540-FlgNet.xml,3180219,14,32,20,20
+DP02,analog input conversion,44,dp-02,1774,0522-FlgNet.xml,3157701,2,9,7,7
+DP02,filter,3,time work/pause by dp02,1884,0199-FlgNet.xml,2724898,20,55,38,39
+DP02,filter,5,enabling sleeve washing,1886,0219-FlgNet.xml,2757634,15,29,15,15
+DP02,allarms 3,14,max filter depressure,1992,0540-FlgNet.xml,3180219,14,32,20,20
+ZT01,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+ZT01,analog input conversion,14,zt-01,1744,0494-FlgNet.xml,3124996,2,9,7,7
+ZT01,motors 1,21,preallarm fn01,1950,0252-FlgNet.xml,2796606,12,22,12,12
+ZT01,allarms 3,10,high vibrations fn-01,1988,0536-FlgNet.xml,3175515,10,21,13,13
+LT01,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+LT01,allarms 2,3,ld-01 low lime level,1228,0161-FlgNet.xml,2655881,8,16,8,9
+PSL05,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+PSL05,allarms 2,2,psl-04 low air pressure,1227,0160-FlgNet.xml,2654772,7,13,7,7
+EV01,r1 scraps gate 2,4,evr4 scraps discharge door and gates selector pv-01,1914,0278-FlgNet.xml,2828818,5,9,5,5
+EV01,r1 scraps gate 2,11,pv01,1921,0286-FlgNet.xml,2839163,15,25,13,13
+EV02,r1 scraps gate 2,4,evr4 scraps discharge door and gates selector pv-01,1914,0278-FlgNet.xml,2828818,5,9,5,5
+EV02,r1 scraps gate 2,5,a 48.4 ev-02 valvecommand,1915,0279-FlgNet.xml,2829797,12,21,10,10
+EV02,r1 scraps gate 2,12,pv01,1922,0287-FlgNet.xml,2840479,17,29,15,15
+EV03,hmi,43,ev03,1220,0396-FlgNet.xml,2981236,4,7,2,4
+EV03,motors 1,8,,1937,0275-FlgNet.xml,2822950,2,8,6,6
+EV03,motors 1,9,rd01,1938,0244-FlgNet.xml,2785045,9,18,11,11
+EV04,r1 scraps gate 2,13,pv02,1923,0288-FlgNet.xml,2841872,15,25,13,13
+EV05,r1 scraps gate 2,10,a 56.4 ev-05 valvecommand,1920,0283-FlgNet.xml,2835833,11,19,9,9
+EV05,r1 scraps gate 2,14,pv02,1924,0289-FlgNet.xml,2843187,15,25,13,13
+EV11,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV12,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV13,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV14,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV15,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV16,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV17,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV18,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV19,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV20,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV21,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV22,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV23,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV24,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV25,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV26,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV27,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV28,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV29,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV30,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV31,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV32,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV33,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV34,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV35,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV36,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV37,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV38,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV39,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV40,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV41,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV42,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV43,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV44,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV45,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV46,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV47,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV48,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV49,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV50,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV51,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV52,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV53,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV54,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV55,filter,10,a0.0 filter 1 valve bf01first sector,1891,0205-FlgNet.xml,2733120,32,65,42,42
+EV56,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV57,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV58,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV59,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV60,filter,11,wash filter,1892,0206-FlgNet.xml,2735154,32,65,42,42
+EV61,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV62,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV63,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV64,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV65,filter,12,wash filter,1893,0207-FlgNet.xml,2737190,32,65,42,42
+EV66,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV67,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV68,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV69,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV70,filter,13,wash filter,1894,0208-FlgNet.xml,2739221,32,65,42,42
+EV71,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV72,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV73,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV74,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV75,filter,14,wash filter,1895,0209-FlgNet.xml,2741254,32,65,42,42
+EV76,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV77,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV78,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV79,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV80,filter,15,wash filter,1896,0210-FlgNet.xml,2743284,32,65,42,42
+EV81,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV82,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV83,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV84,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV85,filter,16,wash filter,1897,0211-FlgNet.xml,2745319,32,65,42,42
+EV86,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV87,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV88,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV89,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+EV90,filter,17,wash filter,1898,0212-FlgNet.xml,2747352,32,65,42,42
+LS02,simulation,12,pv01,1090,0410-FlgNet.xml,3004133,8,13,8,8
+LS02,hmi,38,pv01,1215,0391-FlgNet.xml,2975859,1,21,0,20
+LS02,r1 scraps gate 2,11,pv01,1921,0286-FlgNet.xml,2839163,15,25,13,13
+LS06,simulation,12,pv01,1090,0410-FlgNet.xml,3004133,8,13,8,8
+LS06,hmi,38,pv01,1215,0391-FlgNet.xml,2975859,1,21,0,20
+LS06,r1 scraps gate 2,12,pv01,1922,0287-FlgNet.xml,2840479,17,29,15,15
+SYS-POWER,allarms 1,43,presence 110v,1823,0457-FlgNet.xml,3075437,5,9,5,5
+SYS-SAFETY,startup only,2,reset all flag start motors,402,0147-FlgNet.xml,2635203,9,25,1,17
+SYS-SAFETY,startup only,3,reset all flag allarms,403,0148-FlgNet.xml,2636397,10,27,1,19
+SYS-SAFETY,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+SYS-SAFETY,startup only,5,default,405,0150-FlgNet.xml,2638765,6,8,6,6
+SYS-SAFETY,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+SYS-SAFETY,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+SYS-SAFETY,main,1,simulation,1612,0029-FlgNet.xml,3185396,2,3,1,1
+SYS-SAFETY,main,2,,1613,0030-FlgNet.xml,3186330,5,6,1,1
+SYS-SAFETY,main,3,word input,1614,0544-FlgNet.xml,3187770,4,12,8,8
+SYS-SAFETY,main,4,,1615,0545-FlgNet.xml,3188618,3,9,6,6
+SYS-SAFETY,main,5,word output,1616,0546-FlgNet.xml,3189450,4,12,8,8
+SYS-SAFETY,main,6,,1617,0547-FlgNet.xml,3190297,4,12,8,8
+SYS-SAFETY,main,7,,1618,0548-FlgNet.xml,3191142,3,9,6,6
+SYS-SAFETY,main,8,analog conversion and allarms,1619,0031-FlgNet.xml,3191994,5,3,1,1
+SYS-SAFETY,main,9,motors valve and burner,1620,0549-FlgNet.xml,3193266,7,3,1,1
+SYS-SAFETY,main,10,motorized valve,1621,0032-FlgNet.xml,3194091,3,3,1,1
+SYS-SAFETY,main,11,allarm manager and siren,1622,0033-FlgNet.xml,3195167,2,3,1,1
+SYS-SAFETY,main,12,cpu clock,1623,0034-FlgNet.xml,3196129,3,7,5,5
+SYS-SAFETY,main,13,trasfering bit of maintenance,1624,0550-FlgNet.xml,3197544,3,7,5,5
+SYS-SAFETY,main,15,maintenance period limits,1626,0551-FlgNet.xml,3199360,4,8,4,4
+SYS-SAFETY,analog input conversion,26,reading encoder mv01,1756,0506-FlgNet.xml,3137984,3,28,6,25
+SYS-SAFETY,analog input conversion,27,reading encoder mv02,1757,0507-FlgNet.xml,3139119,3,28,4,25
+SYS-SAFETY,analog input conversion,28,reading encoder mv03,1758,0508-FlgNet.xml,3140257,3,28,4,25
+SYS-SAFETY,analog input conversion,29,reading encoder mv05,1759,0509-FlgNet.xml,3141397,3,28,4,25
+SYS-SAFETY,analog input conversion,30,reading encoder mv06,1760,0510-FlgNet.xml,3142526,3,28,4,25
+SYS-SAFETY,analog input conversion,31,store current position value at power-off,1761,0511-FlgNet.xml,3143677,6,13,11,11
+SYS-SAFETY,analog input conversion,32,data management mv01,1762,0512-FlgNet.xml,3144592,10,28,22,22
+SYS-SAFETY,analog input conversion,33,data management mv02,1763,0513-FlgNet.xml,3146169,10,28,22,22
+SYS-SAFETY,analog input conversion,34,mv03 data management,1764,0514-FlgNet.xml,3147722,10,28,22,22
+SYS-SAFETY,analog input conversion,35,mv05 data management,1765,0515-FlgNet.xml,3149303,10,28,22,22
+SYS-SAFETY,analog input conversion,36,mv06 data management,1766,0516-FlgNet.xml,3150892,10,28,22,22
+SYS-SAFETY,allarms 1,44,module emergenzy ok,1824,0458-FlgNet.xml,3076274,5,9,5,5
+SYS-SAFETY,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SYS-SAFETY,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SYS-SAFETY,auto start motors,5,set points fn01,1845,0169-FlgNet.xml,2672928,24,63,38,43
+SYS-SAFETY,auto start motors,6,emergency stop,1846,0168-FlgNet.xml,2671649,4,11,7,7
+SYS-SAFETY,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+SYS-SAFETY,burner control,3,a 56.3 max.temperaturefilter,1856,0173-FlgNet.xml,2679770,4,8,4,4
+SYS-SAFETY,filter,22,valve air false pv-14,1903,0216-FlgNet.xml,2753212,10,18,9,9
+SYS-SAFETY,motors 1,42,er01,1971,0271-FlgNet.xml,2818300,10,18,9,9
+SYS-PLC-IO,hmi output,1,,356,0401-FlgNet.xml,2990671,12,33,12,24
+SYS-PLC-IO,i/o_flt1,1,,434,0000-FlgNet.xml,2629488,2,4,2,2
+SYS-PLC-IO,mod_err,1,,439,0001-FlgNet.xml,2630622,2,4,2,2
+SYS-PLC-IO,prog_err,1,,444,0002-FlgNet.xml,2631756,2,4,2,2
+SYS-PLC-IO,rack_flt,1,,765,0003-FlgNet.xml,2632838,2,4,2,2
+SYS-PLC-IO,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+SYS-PLC-IO,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+SYS-PLC-IO,main,1,simulation,1612,0029-FlgNet.xml,3185396,2,3,1,1
+SYS-PLC-IO,main,2,,1613,0030-FlgNet.xml,3186330,5,6,1,1
+SYS-PLC-IO,main,3,word input,1614,0544-FlgNet.xml,3187770,4,12,8,8
+SYS-PLC-IO,main,4,,1615,0545-FlgNet.xml,3188618,3,9,6,6
+SYS-PLC-IO,main,5,word output,1616,0546-FlgNet.xml,3189450,4,12,8,8
+SYS-PLC-IO,main,6,,1617,0547-FlgNet.xml,3190297,4,12,8,8
+SYS-PLC-IO,main,7,,1618,0548-FlgNet.xml,3191142,3,9,6,6
+SYS-PLC-IO,main,8,analog conversion and allarms,1619,0031-FlgNet.xml,3191994,5,3,1,1
+SYS-PLC-IO,main,9,motors valve and burner,1620,0549-FlgNet.xml,3193266,7,3,1,1
+SYS-PLC-IO,main,10,motorized valve,1621,0032-FlgNet.xml,3194091,3,3,1,1
+SYS-PLC-IO,main,11,allarm manager and siren,1622,0033-FlgNet.xml,3195167,2,3,1,1
+SYS-PLC-IO,main,12,cpu clock,1623,0034-FlgNet.xml,3196129,3,7,5,5
+SYS-PLC-IO,main,13,trasfering bit of maintenance,1624,0550-FlgNet.xml,3197544,3,7,5,5
+SYS-PLC-IO,main,15,maintenance period limits,1626,0551-FlgNet.xml,3199360,4,8,4,4
+SYS-PLC-IO,signal linearization,1,,1658,0291-FlgNet.xml,2845895,15,43,29,29
+SYS-PLC-IO,signal linearization,2,,1659,0014-FlgNet.xml,2847353,2,5,3,3
+SYS-PLC-IO,analog output conversion,1,plant limits,1679,0460-FlgNet.xml,3077924,21,61,46,47
+SYS-PLC-IO,analog output conversion,2,bwf01 client feeder,1680,0461-FlgNet.xml,3079789,5,13,9,9
+SYS-PLC-IO,analog output conversion,3,bwf01 speed calculation,1681,0462-FlgNet.xml,3080743,13,39,30,30
+SYS-PLC-IO,analog output conversion,4,bwf02 client feeder,1682,0463-FlgNet.xml,3082296,7,18,13,13
+SYS-PLC-IO,analog output conversion,5,bwf02 speed calculation,1683,0464-FlgNet.xml,3083376,8,23,18,18
+SYS-PLC-IO,analog output conversion,6,rd-01 cylinder,1684,0465-FlgNet.xml,3084575,6,16,12,12
+SYS-PLC-IO,analog output conversion,7,fn-01 ventilator,1685,0466-FlgNet.xml,3085714,6,16,12,12
+SYS-PLC-IO,analog output conversion,8,br01 burner,1686,0467-FlgNet.xml,3086852,8,20,15,15
+SYS-PLC-IO,analog output conversion,9,br01 burner - gas,1687,0468-FlgNet.xml,3088048,8,21,15,15
+SYS-PLC-IO,analog output conversion,10,fn02 ventilation of secondary air,1688,0469-FlgNet.xml,3089306,6,16,12,12
+SYS-PLC-IO,analog output conversion,11,module aspirator fn-04,1689,0470-FlgNet.xml,3090295,6,16,12,12
+SYS-PLC-IO,analog output conversion,12,salt system,1690,0471-FlgNet.xml,3091476,5,12,8,8
+SYS-PLC-IO,analog output conversion,13,send output to perifery,1691,0472-FlgNet.xml,3092424,4,11,8,8
+SYS-PLC-IO,analog output conversion,14,bc01,1692,0473-FlgNet.xml,3093439,6,16,12,12
+SYS-PLC-IO,analog output conversion,15,mc04,1693,0474-FlgNet.xml,3094543,6,16,12,12
+SYS-PLC-IO,analog input conversion,1,tc04,1731,0481-FlgNet.xml,3110424,2,9,7,7
+SYS-PLC-IO,analog input conversion,2,tc-05,1732,0482-FlgNet.xml,3111467,2,9,7,7
+SYS-PLC-IO,analog input conversion,3,tc-09,1733,0483-FlgNet.xml,3112512,2,9,7,7
+SYS-PLC-IO,analog input conversion,4,tc-10,1734,0484-FlgNet.xml,3113558,2,9,7,7
+SYS-PLC-IO,analog input conversion,5,client 1 bwf01 flow rate,1735,0485-FlgNet.xml,3114625,9,26,19,19
+SYS-PLC-IO,analog input conversion,6,client 2 bwf02 flow rate,1736,0486-FlgNet.xml,3116141,9,26,19,19
+SYS-PLC-IO,analog input conversion,7,client 3 level indicator bwf01,1737,0487-FlgNet.xml,3117663,2,9,7,7
+SYS-PLC-IO,analog input conversion,8,client 4 level indicator bwf02,1738,0488-FlgNet.xml,3118729,2,9,7,7
+SYS-PLC-IO,analog input conversion,9,tc-01,1739,0489-FlgNet.xml,3119776,2,9,7,7
+SYS-PLC-IO,analog input conversion,10,tc-02,1740,0490-FlgNet.xml,3120820,2,9,7,7
+SYS-PLC-IO,analog input conversion,11,tc-03,1741,0491-FlgNet.xml,3121864,2,9,7,7
+SYS-PLC-IO,analog input conversion,12,tc-06,1742,0492-FlgNet.xml,3122905,2,9,7,7
+SYS-PLC-IO,analog input conversion,13,tc-07,1743,0493-FlgNet.xml,3123948,2,9,7,7
+SYS-PLC-IO,analog input conversion,14,zt-01,1744,0494-FlgNet.xml,3124996,2,9,7,7
+SYS-PLC-IO,analog input conversion,15,psh-01,1745,0495-FlgNet.xml,3126047,2,9,7,7
+SYS-PLC-IO,analog input conversion,16,psh-02,1746,0496-FlgNet.xml,3127093,2,9,7,7
+SYS-PLC-IO,analog input conversion,17,psh-03,1747,0497-FlgNet.xml,3128137,2,9,7,7
+SYS-PLC-IO,analog input conversion,18,r0-01,1748,0498-FlgNet.xml,3129181,2,9,7,7
+SYS-PLC-IO,analog input conversion,19,r0-02,1749,0499-FlgNet.xml,3130229,2,9,7,7
+SYS-PLC-IO,analog input conversion,20,r0-03,1750,0500-FlgNet.xml,3131275,4,14,11,11
+SYS-PLC-IO,analog input conversion,21,r0-04,1751,0501-FlgNet.xml,3132467,2,9,7,7
+SYS-PLC-IO,analog input conversion,22,gas br-01 - position,1752,0502-FlgNet.xml,3133531,2,9,7,7
+SYS-PLC-IO,analog input conversion,23,air br-01 - position,1753,0503-FlgNet.xml,3134593,2,9,7,7
+SYS-PLC-IO,analog input conversion,24,max flow gas - flowmeter,1754,0504-FlgNet.xml,3135659,4,14,11,11
+SYS-PLC-IO,analog input conversion,25,max flow air - flowmeter,1755,0505-FlgNet.xml,3136872,2,9,7,7
+SYS-PLC-IO,analog input conversion,26,reading encoder mv01,1756,0506-FlgNet.xml,3137984,3,28,6,25
+SYS-PLC-IO,analog input conversion,27,reading encoder mv02,1757,0507-FlgNet.xml,3139119,3,28,4,25
+SYS-PLC-IO,analog input conversion,28,reading encoder mv03,1758,0508-FlgNet.xml,3140257,3,28,4,25
+SYS-PLC-IO,analog input conversion,29,reading encoder mv05,1759,0509-FlgNet.xml,3141397,3,28,4,25
+SYS-PLC-IO,analog input conversion,30,reading encoder mv06,1760,0510-FlgNet.xml,3142526,3,28,4,25
+SYS-PLC-IO,analog input conversion,31,store current position value at power-off,1761,0511-FlgNet.xml,3143677,6,13,11,11
+SYS-PLC-IO,analog input conversion,32,data management mv01,1762,0512-FlgNet.xml,3144592,10,28,22,22
+SYS-PLC-IO,analog input conversion,33,data management mv02,1763,0513-FlgNet.xml,3146169,10,28,22,22
+SYS-PLC-IO,analog input conversion,34,mv03 data management,1764,0514-FlgNet.xml,3147722,10,28,22,22
+SYS-PLC-IO,analog input conversion,35,mv05 data management,1765,0515-FlgNet.xml,3149303,10,28,22,22
+SYS-PLC-IO,analog input conversion,36,mv06 data management,1766,0516-FlgNet.xml,3150892,10,28,22,22
+SYS-PLC-IO,analog input conversion,37,fn-02 fan,1767,0517-FlgNet.xml,3152458,2,9,7,7
+SYS-PLC-IO,analog input conversion,38,bc-01,1768,0525-FlgNet.xml,3161027,2,9,7,7
+SYS-PLC-IO,analog input conversion,39,mc04,1769,0526-FlgNet.xml,3162057,2,9,7,7
+SYS-PLC-IO,analog input conversion,40,fn-02 aspirator,1770,0518-FlgNet.xml,3153512,2,9,7,7
+SYS-PLC-IO,analog input conversion,41,rd-01,1771,0519-FlgNet.xml,3154558,2,9,7,7
+SYS-PLC-IO,analog input conversion,42,fn-01,1772,0520-FlgNet.xml,3155607,2,9,7,7
+SYS-PLC-IO,analog input conversion,43,dp-01,1773,0521-FlgNet.xml,3156654,2,9,7,7
+SYS-PLC-IO,analog input conversion,44,dp-02,1774,0522-FlgNet.xml,3157701,2,9,7,7
+SYS-PLC-IO,analog input conversion,45,pc-01,1775,0523-FlgNet.xml,3158747,2,9,7,7
+SYS-PLC-IO,analog input conversion,46,contactor ton passed in bwf,1776,0524-FlgNet.xml,3159868,7,17,11,11
+SYS-HMI,hmi output,1,,356,0401-FlgNet.xml,2990671,12,33,12,24
+SYS-HMI,hmi inputs,1,,1070,0397-FlgNet.xml,2982554,33,62,31,42
+SYS-HMI,hmi inputs,2,analog,1071,0398-FlgNet.xml,2984584,28,78,56,56
+SYS-HMI,hmi,1,bc01,1178,0357-FlgNet.xml,2938200,1,9,0,8
+SYS-HMI,hmi,2,rd01,1179,0358-FlgNet.xml,2939221,1,9,0,8
+SYS-HMI,hmi,3,rd01 fan,1180,0359-FlgNet.xml,2940240,1,9,0,8
+SYS-HMI,hmi,4,spare motor,1181,0360-FlgNet.xml,2941260,1,9,0,8
+SYS-HMI,hmi,5,mc04,1182,0361-FlgNet.xml,2942275,1,9,0,8
+SYS-HMI,hmi,7,vs01,1184,0362-FlgNet.xml,2944084,1,9,0,8
+SYS-HMI,hmi,9,auxiliary inverter,1186,0363-FlgNet.xml,2945907,3,12,1,10
+SYS-HMI,hmi,10,mv06,1187,0364-FlgNet.xml,2947021,1,15,0,14
+SYS-HMI,hmi,11,mv05,1188,0365-FlgNet.xml,2948167,1,15,0,14
+SYS-HMI,hmi,12,mv02,1189,0366-FlgNet.xml,2949311,1,15,0,14
+SYS-HMI,hmi,13,mv01,1190,0367-FlgNet.xml,2950454,1,15,0,14
+SYS-HMI,hmi,14,mv03,1191,0369-FlgNet.xml,2952612,1,15,0,14
+SYS-HMI,hmi,15,fn02,1192,0368-FlgNet.xml,2951594,1,9,0,8
+SYS-HMI,hmi,16,vr01,1193,0370-FlgNet.xml,2953756,1,9,0,8
+SYS-HMI,hmi,17,fn01,1194,0371-FlgNet.xml,2954769,1,9,0,8
+SYS-HMI,hmi,18,vr02,1195,0372-FlgNet.xml,2955782,1,9,0,8
+SYS-HMI,hmi,19,ch01,1196,0373-FlgNet.xml,2956793,1,9,0,8
+SYS-HMI,hmi,20,fn03,1197,0374-FlgNet.xml,2957803,1,9,0,8
+SYS-HMI,hmi,21,fn06,1198,0375-FlgNet.xml,2958817,1,9,0,8
+SYS-HMI,hmi,22,sc1,1199,0376-FlgNet.xml,2959826,1,9,0,8
+SYS-HMI,hmi,24,ld01 mf,1201,0377-FlgNet.xml,2961633,1,9,0,8
+SYS-HMI,hmi,25,ld01 vb,1202,0378-FlgNet.xml,2962645,1,9,0,8
+SYS-HMI,hmi,26,sc10,1203,0379-FlgNet.xml,2963655,1,9,0,8
+SYS-HMI,hmi,27,sc11,1204,0380-FlgNet.xml,2964666,1,9,0,8
+SYS-HMI,hmi,28,fn04 ????,1205,0381-FlgNet.xml,2965683,1,9,0,8
+SYS-HMI,hmi,29,vr03,1206,0382-FlgNet.xml,2966701,1,9,0,8
+SYS-HMI,hmi,30,vr04,1207,0383-FlgNet.xml,2967715,1,9,0,8
+SYS-HMI,hmi,31,vr05,1208,0384-FlgNet.xml,2968724,1,9,0,8
+SYS-HMI,hmi,32,vr06,1209,0385-FlgNet.xml,2969733,1,9,0,8
+SYS-HMI,hmi,33,fn05,1210,0386-FlgNet.xml,2970744,1,9,0,8
+SYS-HMI,hmi,34,er01,1211,0387-FlgNet.xml,2971754,1,9,0,8
+SYS-HMI,hmi,35,pv14,1212,0388-FlgNet.xml,2972702,4,7,0,4
+SYS-HMI,hmi,36,bwf01,1213,0389-FlgNet.xml,2973609,10,17,0,9
+SYS-HMI,hmi,37,bwf02,1214,0390-FlgNet.xml,2974713,10,17,0,9
+SYS-HMI,hmi,38,pv01,1215,0391-FlgNet.xml,2975859,1,21,0,20
+SYS-HMI,hmi,39,pv02,1216,0392-FlgNet.xml,2977056,1,21,0,20
+SYS-HMI,hmi,40,pv03,1217,0393-FlgNet.xml,2978247,1,13,0,12
+SYS-HMI,hmi,41,pv04,1218,0394-FlgNet.xml,2979325,1,13,0,12
+SYS-HMI,hmi,42,br-01,1219,0395-FlgNet.xml,2980335,4,7,0,4
+SYS-HMI,hmi,43,ev03,1220,0396-FlgNet.xml,2981236,4,7,2,4
+SYS-HMI,analog output conversion,14,bc01,1692,0473-FlgNet.xml,3093439,6,16,12,12
+SYS-HMI,analog output conversion,15,mc04,1693,0474-FlgNet.xml,3094543,6,16,12,12
+SYS-HMI,valve control loop,1,mv01 controlled by tc03,1702,0342-FlgNet.xml,2912054,35,61,28,29
+SYS-HMI,valve control loop,2,calibration encoder mv01,1703,0354-FlgNet.xml,2934685,6,13,7,7
+SYS-HMI,valve control loop,5,mv03 controlled by psh03,1706,0345-FlgNet.xml,2917460,41,73,36,36
+SYS-HMI,valve control loop,6,calibration encoder mv03,1707,0353-FlgNet.xml,2933605,6,13,7,7
+SYS-HMI,analog input conversion,38,bc-01,1768,0525-FlgNet.xml,3161027,2,9,7,7
+SYS-HMI,analog input conversion,39,mc04,1769,0526-FlgNet.xml,3162057,2,9,7,7
+SYS-HMI,auto start motors,5,set points fn01,1845,0169-FlgNet.xml,2672928,24,63,38,43
+SYS-HMI,auto start motors,9,production counters,1849,0170-FlgNet.xml,2675012,21,65,48,48
+SYS-HMI,burner control,7,counter burner off during preheating or production,1860,0193-FlgNet.xml,2711213,21,44,28,29
+SYS-ALARM,motor/alarm client,1,apron conveyor fault (cl01),410,0220-FlgNet.xml,2758901,6,11,6,6
+SYS-ALARM,motor/alarm client,2,client motor 2 allarm,411,0221-FlgNet.xml,2759923,6,11,6,6
+SYS-ALARM,motor/alarm client,3,client motor 3 allarm,412,0222-FlgNet.xml,2760943,6,11,6,6
+SYS-ALARM,motor/alarm client,4,client motor 4 allarm,413,0223-FlgNet.xml,2761966,6,11,6,6
+SYS-ALARM,motor/alarm client,5,client motor 5 allarm,414,0224-FlgNet.xml,2762986,6,11,6,6
+SYS-ALARM,motor/alarm client,6,client motor 6 allarm,415,0225-FlgNet.xml,2764009,6,11,6,6
+SYS-ALARM,motor/alarm client,7,client motor 7 allarm,416,0226-FlgNet.xml,2765032,6,11,6,6
+SYS-ALARM,motor/alarm client,8,client motor 8 allarm,417,0227-FlgNet.xml,2766053,6,11,6,6
+SYS-ALARM,motor/alarm client,9,client motor 9 allarm,418,0228-FlgNet.xml,2767078,6,11,6,6
+SYS-ALARM,motor/alarm client,10,client motor 10 allarm,419,0229-FlgNet.xml,2768103,6,11,6,6
+SYS-ALARM,motor/alarm client,11,client motor 13 allarm,420,0230-FlgNet.xml,2769130,6,11,6,6
+SYS-ALARM,motor/alarm client,12,client motor 14 allarm,421,0231-FlgNet.xml,2770154,6,11,6,6
+SYS-ALARM,motor/alarm client,13,client motor 15 allarm,422,0232-FlgNet.xml,2771183,6,11,6,6
+SYS-ALARM,motor/alarm client,14,client motor 16 allarm,423,0233-FlgNet.xml,2772211,6,11,6,6
+SYS-ALARM,motor/alarm client,15,client motor 17 allarm,424,0234-FlgNet.xml,2773236,6,11,6,6
+SYS-ALARM,motor/alarm client,16,client motor 18 allarm bwf02---------------,425,0235-FlgNet.xml,2774303,6,11,6,6
+SYS-ALARM,motor/alarm client,17,primary shradder fault (cl19),426,0236-FlgNet.xml,2775489,6,11,6,6
+SYS-ALARM,allarm manager,1,,927,0151-FlgNet.xml,2640687,13,26,12,21
+SYS-ALARM,allarm manager,2,com_w3 bit11 (new_allarm),928,0152-FlgNet.xml,2642098,12,32,11,20
+SYS-ALARM,allarm manager,3,com_w3 bit9 (run_horn),929,0153-FlgNet.xml,2643554,5,9,5,5
+SYS-ALARM,allarm manager,4,com_w3 bit8 (reset_allarm),930,0158-FlgNet.xml,2649214,14,23,12,14
+SYS-ALARM,allarm manager,5,com_w3 bit8 (reset_allarm),931,0154-FlgNet.xml,2644538,8,13,8,8
+SYS-ALARM,allarm manager,6,,932,0005-FlgNet.xml,2650564,1,4,3,3
+SYS-ALARM,allarm manager,7,a 57.6 siren alarms,933,0155-FlgNet.xml,2645615,9,15,9,9
+SYS-ALARM,allarm manager,8,send report every 10 minutes,934,0156-FlgNet.xml,2646785,6,12,7,7
+SYS-ALARM,allarm manager,9,clear values of report at the end of the recording,935,0157-FlgNet.xml,2647895,5,11,7,7
+SYS-ALARM,allarms 2,1,mv-01 motorized valve fault,1226,0159-FlgNet.xml,2651927,59,103,59,59
+SYS-ALARM,allarms 2,2,psl-04 low air pressure,1227,0160-FlgNet.xml,2654772,7,13,7,7
+SYS-ALARM,allarms 2,3,ld-01 low lime level,1228,0161-FlgNet.xml,2655881,8,16,8,9
+SYS-ALARM,main,11,allarm manager and siren,1622,0033-FlgNet.xml,3195167,2,3,1,1
+SYS-ALARM,main,15,maintenance period limits,1626,0551-FlgNet.xml,3199360,4,8,4,4
+SYS-ALARM,analog input conversion,26,reading encoder mv01,1756,0506-FlgNet.xml,3137984,3,28,6,25
+SYS-ALARM,allarms 1,1,bwf01,1781,0418-FlgNet.xml,3032148,13,24,13,13
+SYS-ALARM,allarms 1,2,bwf01,1782,0419-FlgNet.xml,3033234,11,19,11,11
+SYS-ALARM,allarms 1,3,bwf02,1783,0420-FlgNet.xml,3034203,13,24,13,13
+SYS-ALARM,allarms 1,4,bwf02,1784,0421-FlgNet.xml,3035292,11,19,11,11
+SYS-ALARM,allarms 1,5,bc01,1785,0422-FlgNet.xml,3036258,16,28,16,16
+SYS-ALARM,allarms 1,6,bc01,1786,0423-FlgNet.xml,3037394,7,13,7,7
+SYS-ALARM,allarms 1,7,rd01,1787,0424-FlgNet.xml,3038265,16,28,16,16
+SYS-ALARM,allarms 1,8,fan rd01,1788,0425-FlgNet.xml,3039421,10,19,11,11
+SYS-ALARM,allarms 1,9,spare motor,1789,0426-FlgNet.xml,3040401,10,19,11,11
+SYS-ALARM,allarms 1,10,spare motor,1790,0427-FlgNet.xml,3041383,7,13,7,7
+SYS-ALARM,allarms 1,11,mc04,1791,0428-FlgNet.xml,3042258,16,28,16,16
+SYS-ALARM,allarms 1,12,mc04 deleted,1792,0429-FlgNet.xml,3043432,7,13,7,7
+SYS-ALARM,allarms 1,14,vs01,1794,0430-FlgNet.xml,3044964,16,28,16,16
+SYS-ALARM,allarms 1,16,fn02,1796,0431-FlgNet.xml,3046777,16,28,16,16
+SYS-ALARM,allarms 1,17,vr01,1797,0432-FlgNet.xml,3047931,9,17,10,10
+SYS-ALARM,allarms 1,18,fn01,1798,0433-FlgNet.xml,3048880,16,28,16,16
+SYS-ALARM,allarms 1,19,vr02,1799,0434-FlgNet.xml,3050037,9,17,10,10
+SYS-ALARM,allarms 1,20,ch01,1800,0435-FlgNet.xml,3050984,9,17,10,10
+SYS-ALARM,allarms 1,21,fn03,1801,0436-FlgNet.xml,3051937,24,43,26,26
+SYS-ALARM,allarms 1,22,fn06,1802,0437-FlgNet.xml,3053416,9,17,10,10
+SYS-ALARM,allarms 1,23,sc01,1803,0438-FlgNet.xml,3054367,9,17,10,10
+SYS-ALARM,allarms 1,25,ld01,1805,0439-FlgNet.xml,3055977,9,17,10,10
+SYS-ALARM,allarms 1,26,ld01 vibrator,1806,0440-FlgNet.xml,3056934,9,17,10,10
+SYS-ALARM,allarms 1,27,sc10,1807,0441-FlgNet.xml,3057891,9,17,10,10
+SYS-ALARM,allarms 1,28,sc11,1808,0442-FlgNet.xml,3058850,9,17,10,10
+SYS-ALARM,allarms 1,29,fn04,1809,0443-FlgNet.xml,3059801,16,28,16,16
+SYS-ALARM,allarms 1,30,vr03,1810,0444-FlgNet.xml,3060973,9,17,10,10
+SYS-ALARM,allarms 1,31,vr04,1811,0445-FlgNet.xml,3061927,9,17,10,10
+SYS-ALARM,allarms 1,32,vr05,1812,0446-FlgNet.xml,3062874,9,17,10,10
+SYS-ALARM,allarms 1,33,vr06,1813,0447-FlgNet.xml,3063836,9,17,10,10
+SYS-ALARM,allarms 1,34,fn05,1814,0448-FlgNet.xml,3064790,9,17,10,10
+SYS-ALARM,allarms 1,35,pv01,1815,0449-FlgNet.xml,3065746,17,31,19,19
+SYS-ALARM,allarms 1,36,pv01,1816,0450-FlgNet.xml,3066972,17,31,19,19
+SYS-ALARM,allarms 1,37,pv02,1817,0451-FlgNet.xml,3068197,17,31,19,19
+SYS-ALARM,allarms 1,38,pv02,1818,0452-FlgNet.xml,3069419,17,31,19,19
+SYS-ALARM,allarms 1,39,pv03,1819,0453-FlgNet.xml,3070646,17,31,19,19
+SYS-ALARM,allarms 1,40,bwf01/bwf02,1820,0454-FlgNet.xml,3071877,16,29,18,18
+SYS-ALARM,allarms 1,41,auxiliary inverter,1821,0455-FlgNet.xml,3073189,14,26,14,15
+SYS-ALARM,allarms 1,42,er01,1822,0456-FlgNet.xml,3074473,8,16,8,9
+SYS-ALARM,allarms 1,43,presence 110v,1823,0457-FlgNet.xml,3075437,5,9,5,5
+SYS-ALARM,allarms 1,44,module emergenzy ok,1824,0458-FlgNet.xml,3076274,5,9,5,5
+SYS-ALARM,allarms 1,45,simulation enabled,1825,0459-FlgNet.xml,3077106,5,9,5,5
+SYS-ALARM,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SYS-ALARM,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SYS-ALARM,burner control,1,burner control box fault,1854,0171-FlgNet.xml,2677001,20,34,23,23
+SYS-ALARM,burner control,2,burner servomotor not in minimal position,1855,0172-FlgNet.xml,2678712,10,18,9,9
+SYS-ALARM,burner control,16,burner start fault reset,1869,0185-FlgNet.xml,2698281,3,6,3,3
+SYS-ALARM,burner control,21,stoichiometry out of range,1874,0189-FlgNet.xml,2704861,12,22,12,12
+SYS-ALARM,filter,21,pv-14 cold air filter fault,1902,0215-FlgNet.xml,2751965,12,22,12,12
+SYS-ALARM,allarms 3,1,max tc01 temperature,1979,0527-FlgNet.xml,3162942,21,45,31,31
+SYS-ALARM,allarms 3,2,low tc03 temperature,1980,0528-FlgNet.xml,3164619,35,74,51,51
+SYS-ALARM,allarms 3,3,max tc04 temperature,1981,0529-FlgNet.xml,3166897,21,43,27,27
+SYS-ALARM,allarms 3,4,oxigen analyzer out of range,1982,0530-FlgNet.xml,3168394,11,23,14,14
+SYS-ALARM,allarms 3,5,oxigen too high,1983,0531-FlgNet.xml,3169490,10,22,16,16
+SYS-ALARM,allarms 3,6,ro01 oxigen low limit,1984,0532-FlgNet.xml,3170627,12,26,16,16
+SYS-ALARM,allarms 3,7,ro01-ro02 signal compare fault,1985,0533-FlgNet.xml,3171791,13,28,18,18
+SYS-ALARM,allarms 3,8,tc01/tc02 signal compare fault,1986,0534-FlgNet.xml,3173006,15,32,20,20
+SYS-ALARM,allarms 3,9,pc-01 low depressure,1987,0535-FlgNet.xml,3174355,13,27,16,16
+SYS-ALARM,allarms 3,10,high vibrations fn-01,1988,0536-FlgNet.xml,3175515,10,21,13,13
+SYS-ALARM,allarms 3,11,max pressure psh-02,1989,0537-FlgNet.xml,3176591,10,21,15,15
+SYS-ALARM,allarms 3,12,hydrogen box not ready,1990,0538-FlgNet.xml,3177675,10,18,9,9
+SYS-ALARM,allarms 3,13,tc-09 filter inlet temperature,1991,0539-FlgNet.xml,3178700,20,43,29,29
+SYS-ALARM,allarms 3,14,max filter depressure,1992,0540-FlgNet.xml,3180219,14,32,20,20
+SYS-ALARM,allarms 3,15,incorrect scraps feeder formula,1993,0541-FlgNet.xml,3181557,11,24,15,15
+SYS-ALARM,allarms 3,16,plc hardware diagnostic fault fault,1994,0542-FlgNet.xml,3182698,16,25,15,15
+SYS-ALARM,allarms 3,17,ro03,1995,0543-FlgNet.xml,3183793,13,27,15,17
+SYS-AUTO,startup only,2,reset all flag start motors,402,0147-FlgNet.xml,2635203,9,25,1,17
+SYS-AUTO,startup only,3,reset all flag allarms,403,0148-FlgNet.xml,2636397,10,27,1,19
+SYS-AUTO,startup only,4,plants defaults,404,0149-FlgNet.xml,2637819,10,14,10,10
+SYS-AUTO,startup only,5,default,405,0150-FlgNet.xml,2638765,6,8,6,6
+SYS-AUTO,main,1,simulation,1612,0029-FlgNet.xml,3185396,2,3,1,1
+SYS-AUTO,main,2,,1613,0030-FlgNet.xml,3186330,5,6,1,1
+SYS-AUTO,main,3,word input,1614,0544-FlgNet.xml,3187770,4,12,8,8
+SYS-AUTO,main,4,,1615,0545-FlgNet.xml,3188618,3,9,6,6
+SYS-AUTO,main,5,word output,1616,0546-FlgNet.xml,3189450,4,12,8,8
+SYS-AUTO,main,6,,1617,0547-FlgNet.xml,3190297,4,12,8,8
+SYS-AUTO,main,7,,1618,0548-FlgNet.xml,3191142,3,9,6,6
+SYS-AUTO,main,8,analog conversion and allarms,1619,0031-FlgNet.xml,3191994,5,3,1,1
+SYS-AUTO,main,9,motors valve and burner,1620,0549-FlgNet.xml,3193266,7,3,1,1
+SYS-AUTO,main,10,motorized valve,1621,0032-FlgNet.xml,3194091,3,3,1,1
+SYS-AUTO,main,11,allarm manager and siren,1622,0033-FlgNet.xml,3195167,2,3,1,1
+SYS-AUTO,main,12,cpu clock,1623,0034-FlgNet.xml,3196129,3,7,5,5
+SYS-AUTO,main,13,trasfering bit of maintenance,1624,0550-FlgNet.xml,3197544,3,7,5,5
+SYS-AUTO,main,15,maintenance period limits,1626,0551-FlgNet.xml,3199360,4,8,4,4
+SYS-AUTO,auto start motors,1,increment seconds count,1841,0162-FlgNet.xml,2658556,5,12,7,8
+SYS-AUTO,auto start motors,2,status display in supervisor,1842,0163-FlgNet.xml,2659691,5,11,7,7
+SYS-AUTO,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SYS-AUTO,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SYS-AUTO,auto start motors,5,set points fn01,1845,0169-FlgNet.xml,2672928,24,63,38,43
+SYS-AUTO,auto start motors,6,emergency stop,1846,0168-FlgNet.xml,2671649,4,11,7,7
+SYS-AUTO,auto start motors,7,presetting sequence 5: complete engine stop,1847,0166-FlgNet.xml,2667930,53,87,54,54
+SYS-AUTO,auto start motors,8,presetting sequence 6: no sequence,1848,0167-FlgNet.xml,2670435,6,14,9,9
+SYS-AUTO,auto start motors,9,production counters,1849,0170-FlgNet.xml,2675012,21,65,48,48
+SYS-AUTO,r1 scraps gate 2,5,a 48.4 ev-02 valvecommand,1915,0279-FlgNet.xml,2829797,12,21,10,10
+SYS-AUTO,r1 scraps gate 2,6,pv-02 rotary drum discharge valve,1916,0280-FlgNet.xml,2831195,20,33,19,19
+SYS-AUTO,r1 scraps gate 2,10,a 56.4 ev-05 valvecommand,1920,0283-FlgNet.xml,2835833,11,19,9,9
+SYS-AUTO,motors 1,1,maintenance,1930,0237-FlgNet.xml,2776348,4,7,4,4
+SYS-AUTO,motors 1,2,block load,1931,0238-FlgNet.xml,2777442,11,21,10,10
+SYS-AUTO,motors 1,6,bc01,1935,0242-FlgNet.xml,2782579,13,23,11,11
+SYS-AUTO,motors 1,7,rd01,1936,0243-FlgNet.xml,2783788,12,23,12,12
+SYS-AUTO,motors 1,10,rd01 fan,1939,0245-FlgNet.xml,2786164,9,16,8,8
+SYS-AUTO,motors 1,11,mc03 spare motor,1940,0246-FlgNet.xml,2787141,10,18,9,9
+SYS-AUTO,motors 1,12,mc04,1941,0247-FlgNet.xml,2788439,9,16,8,8
+SYS-PID,valve control loop,1,mv01 controlled by tc03,1702,0342-FlgNet.xml,2912054,35,61,28,29
+SYS-PID,valve control loop,2,calibration encoder mv01,1703,0354-FlgNet.xml,2934685,6,13,7,7
+SYS-PID,valve control loop,3,mv02 controlled by psh-01,1704,0343-FlgNet.xml,2914090,33,57,27,27
+SYS-PID,valve control loop,4,mv03 controlled by psh03,1705,0344-FlgNet.xml,2916055,11,24,17,17
+SYS-PID,valve control loop,5,mv03 controlled by psh03,1706,0345-FlgNet.xml,2917460,41,73,36,36
+SYS-PID,valve control loop,6,calibration encoder mv03,1707,0353-FlgNet.xml,2933605,6,13,7,7
+SYS-PID,valve control loop,7,mv05 controlled by ro-01,1708,0346-FlgNet.xml,2919662,34,60,28,29
+SYS-PID,valve control loop,8,mv06 controlled by psh02,1709,0347-FlgNet.xml,2921692,12,27,19,19
+SYS-PID,valve control loop,9,the working tool has a low range,1710,0348-FlgNet.xml,2923037,20,39,25,25
+SYS-PID,valve control loop,10,mv06 controlled by psh02,1711,0349-FlgNet.xml,2924860,33,59,29,29
+SYS-PID,valve control loop,11,motorized valve work time pulse generator,1712,0350-FlgNet.xml,2926727,7,14,9,9
+SYS-PID,valve control loop,12,motorized valve pulse generator for rotation control,1713,0351-FlgNet.xml,2928046,42,95,74,74
+SYS-PID,valve control loop,13,motorized valve fault,1714,0352-FlgNet.xml,2930761,43,87,67,67
+SYS-PID,cyc_int2 ogni 1s,3,,1721,0416-FlgNet.xml,3027928,5,12,8,8
+SYS-PID,cyc_int2 ogni 1s,4,,1722,0023-FlgNet.xml,3028845,2,6,3,4
+SYS-PID,cyc_int2 ogni 1s,5,auto start/stop motors and presetting,1723,0024-FlgNet.xml,3030217,2,3,1,1
+SYS-PID,cyc_int2 ogni 1s,6,delayed burner flow rate variation,1724,0417-FlgNet.xml,3031189,5,15,11,11
+SYS-PID,control_stechio,1,calculate the gas flow rate based on the theoretical ramp,1830,0194-FlgNet.xml,2712947,41,103,81,81
+SYS-PID,control_stechio,3,run pid block,1832,0195-FlgNet.xml,2717027,7,45,26,38
+SYS-PID,control_stechio,5,verify range sent by gas,1834,0196-FlgNet.xml,2719443,5,13,9,9
+SYS-PID,control_stechio,6,check stoichiometric ratio correction range,1835,0197-FlgNet.xml,2720615,5,11,7,7
+SYS-PID,burner control,1,burner control box fault,1854,0171-FlgNet.xml,2677001,20,34,23,23
+SYS-PID,burner control,2,burner servomotor not in minimal position,1855,0172-FlgNet.xml,2678712,10,18,9,9
+SYS-PID,burner control,3,a 56.3 max.temperaturefilter,1856,0173-FlgNet.xml,2679770,4,8,4,4
+SYS-PID,burner control,4,start gas test,1857,0174-FlgNet.xml,2680876,12,23,11,11
+SYS-PID,burner control,5,burner stop,1858,0175-FlgNet.xml,2682087,21,40,19,19
+SYS-PID,burner control,6,counter minutes of burner work,1859,0176-FlgNet.xml,2683711,9,20,13,13
+SYS-PID,burner control,7,counter burner off during preheating or production,1860,0193-FlgNet.xml,2711213,21,44,28,29
+SYS-PID,burner control,8,programmed burner shutdown every 24 hours,1861,0177-FlgNet.xml,2685009,5,11,7,7
+SYS-PID,burner control,9,a 56.6 start high flameburner,1862,0178-FlgNet.xml,2686142,25,51,33,33
+SYS-PID,burner control,10,enable relay forceed spark,1863,0179-FlgNet.xml,2688129,13,23,14,14
+SYS-PID,burner control,11,reduce speed mn01 se tc01 > 30°c the setpoint,1864,0180-FlgNet.xml,2689406,8,19,14,14
+SYS-PID,burner control,12,burner lock,1865,0181-FlgNet.xml,2690615,17,31,15,15
+SYS-PID,burner control,13,burner start sequence,1866,0182-FlgNet.xml,2691950,9,16,9,9
+SYS-PID,burner control,14,for viewing washing time in supervisor,1867,0183-FlgNet.xml,2693095,5,12,8,8
+SYS-PID,burner control,15,enable burner cleaning sequence,1868,0184-FlgNet.xml,2694397,71,151,113,113
+SYS-PID,burner control,16,burner start fault reset,1869,0185-FlgNet.xml,2698281,3,6,3,3
+SYS-PID,burner control,17,burner servomotor control fb41 pid mode,1870,0186-FlgNet.xml,2699396,15,29,15,15
+SYS-PID,burner control,18,if on auto send pid result to the module,1871,0187-FlgNet.xml,2700749,2,6,4,4
+SYS-PID,burner control,19,burner air range limits,1872,0188-FlgNet.xml,2701901,14,32,21,21
+SYS-PID,burner control,20,simulation,1873,0008-FlgNet.xml,2703252,2,5,2,3
+SYS-PID,burner control,21,stoichiometry out of range,1874,0189-FlgNet.xml,2704861,12,22,12,12
+SYS-PID,burner control,22,dryout warm first ramp,1875,0190-FlgNet.xml,2706100,23,58,45,45
+SYS-PID,burner control,23,dryout warm second ramp,1876,0191-FlgNet.xml,2708086,9,23,17,17
+SYS-PID,burner control,24,dryout warm third ramp,1877,0192-FlgNet.xml,2709469,13,33,25,25
+SYS-PID,cyc_int5 ogni 100ms,2,controll ro01 moduling mv05 - pid,5,0475-FlgNet.xml,3096758,8,35,18,27
+SYS-PID,cyc_int5 ogni 100ms,4,controll pc01 moduling mv02,7,0476-FlgNet.xml,3098984,5,30,16,25
+SYS-PID,cyc_int5 ogni 100ms,5,,8,0480-FlgNet.xml,3109630,2,6,4,4
+SYS-PID,cyc_int5 ogni 100ms,8,controll tc03 moduling mv01,11,0477-FlgNet.xml,3102013,13,46,24,33
+SYS-PID,cyc_int5 ogni 100ms,9,disable pid control on vt02,12,0478-FlgNet.xml,3103591,6,11,5,5
+SYS-PID,cyc_int5 ogni 100ms,12,control pc02 moduling mv03 - not used,15,0479-FlgNet.xml,3107292,7,33,17,26
+SYS-PID,cyc_int5 ogni 100ms,13,executes gas flow calculation block,16,0028-FlgNet.xml,3108589,2,3,1,1
+SYS-RECIPES,main,2,,1613,0030-FlgNet.xml,3186330,5,6,1,1
+SYS-SIMULATION,cyc_int4 ogni 200ms,1,for test trends,396,0146-FlgNet.xml,2628567,4,11,8,8
+SYS-SIMULATION,simulation,1,,1079,0413-FlgNet.xml,3008257,3,7,3,4
+SYS-SIMULATION,simulation,2,,1080,0415-FlgNet.xml,3010186,7,9,7,7
+SYS-SIMULATION,simulation,3,,1081,0414-FlgNet.xml,3009254,3,7,3,4
+SYS-SIMULATION,simulation,4,motors simulated,1082,0402-FlgNet.xml,2992518,14,22,14,14
+SYS-SIMULATION,simulation,5,mv,1083,0403-FlgNet.xml,2993682,70,151,110,110
+SYS-SIMULATION,simulation,6,motors simulated,1084,0404-FlgNet.xml,2997665,16,25,16,16
+SYS-SIMULATION,simulation,7,motors simulated,1085,0405-FlgNet.xml,2998953,19,29,19,19
+SYS-SIMULATION,simulation,8,motors simulated,1086,0406-FlgNet.xml,3000331,10,15,10,10
+SYS-SIMULATION,simulation,9,pv03,1087,0407-FlgNet.xml,3001379,4,7,4,4
+SYS-SIMULATION,simulation,10,pv04,1088,0408-FlgNet.xml,3002293,4,7,4,4
+SYS-SIMULATION,simulation,11,pv14,1089,0409-FlgNet.xml,3003212,4,7,4,4
+SYS-SIMULATION,simulation,12,pv01,1090,0410-FlgNet.xml,3004133,8,13,8,8
+SYS-SIMULATION,simulation,13,pv02,1091,0411-FlgNet.xml,3005151,8,13,8,8
+SYS-SIMULATION,simulation,14,,1092,0412-FlgNet.xml,3006139,18,42,31,31
+SYS-SIMULATION,main,1,simulation,1612,0029-FlgNet.xml,3185396,2,3,1,1
+SYS-SIMULATION,main,2,,1613,0030-FlgNet.xml,3186330,5,6,1,1
+SYS-SIMULATION,valve control loop,7,mv05 controlled by ro-01,1708,0346-FlgNet.xml,2919662,34,60,28,29
+SYS-SIMULATION,analog input conversion,26,reading encoder mv01,1756,0506-FlgNet.xml,3137984,3,28,6,25
+SYS-SIMULATION,analog input conversion,27,reading encoder mv02,1757,0507-FlgNet.xml,3139119,3,28,4,25
+SYS-SIMULATION,analog input conversion,28,reading encoder mv03,1758,0508-FlgNet.xml,3140257,3,28,4,25
+SYS-SIMULATION,analog input conversion,29,reading encoder mv05,1759,0509-FlgNet.xml,3141397,3,28,4,25
+SYS-SIMULATION,analog input conversion,30,reading encoder mv06,1760,0510-FlgNet.xml,3142526,3,28,4,25
+SYS-SIMULATION,allarms 1,45,simulation enabled,1825,0459-FlgNet.xml,3077106,5,9,5,5
+SYS-SIMULATION,burner control,20,simulation,1873,0008-FlgNet.xml,2703252,2,5,2,3
+SYS-SIMULATION,r1 scraps gate 2,1,pv-01,1911,0276-FlgNet.xml,2825244,19,31,18,18
+SYS-SIMULATION,motors 1,1,maintenance,1930,0237-FlgNet.xml,2776348,4,7,4,4
+SYS-SIMULATION,motors 1,6,bc01,1935,0242-FlgNet.xml,2782579,13,23,11,11
+SYS-SIMULATION,motors 1,7,rd01,1936,0243-FlgNet.xml,2783788,12,23,12,12
+SYS-SIMULATION,motors 1,10,rd01 fan,1939,0245-FlgNet.xml,2786164,9,16,8,8
+SYS-SIMULATION,motors 1,11,mc03 spare motor,1940,0246-FlgNet.xml,2787141,10,18,9,9
+SYS-SIMULATION,motors 1,22,fn01,1951,0253-FlgNet.xml,2797818,11,21,11,11
+SYS-SIMULATION,motors 1,26,fn06,1955,0257-FlgNet.xml,2802114,8,14,7,7
+SYS-SIMULATION,motors 1,27,sc01,1956,0258-FlgNet.xml,2803212,8,14,7,7
+SYS-SIMULATION,motors 1,29,ld01,1958,0259-FlgNet.xml,2805114,9,16,8,8
+SYS-SIMULATION,motors 1,32,ld01,1961,0261-FlgNet.xml,2807334,12,21,10,10
+SYS-SIMULATION,motors 1,33,sc10,1962,0262-FlgNet.xml,2808528,8,14,7,7
+SYS-SIMULATION,motors 1,34,sc11,1963,0263-FlgNet.xml,2809612,8,14,7,7
+SYS-SIMULATION,motors 1,40,vr06,1969,0269-FlgNet.xml,2815963,8,14,7,7
+SYS-SIMULATION,motors 1,41,fn05,1970,0270-FlgNet.xml,2817203,8,14,7,7
+SYS-SIMULATION,motors 1,42,er01,1971,0271-FlgNet.xml,2818300,10,18,9,9
+SYS-SIMULATION,cyc_int5 ogni 100ms,2,controll ro01 moduling mv05 - pid,5,0475-FlgNet.xml,3096758,8,35,18,27
+SYS-RUNHOURS,time work motor,1,client motor 1,1002,0292-FlgNet.xml,2849081,7,18,12,12
+SYS-RUNHOURS,time work motor,2,client motor 2,1003,0293-FlgNet.xml,2850257,7,18,12,12
+SYS-RUNHOURS,time work motor,3,client motor 3,1004,0294-FlgNet.xml,2851280,7,18,12,12
+SYS-RUNHOURS,time work motor,4,client motor 4,1005,0295-FlgNet.xml,2852611,7,18,12,12
+SYS-RUNHOURS,time work motor,5,client motor 5,1006,0296-FlgNet.xml,2853789,7,18,12,12
+SYS-RUNHOURS,time work motor,6,client motor 6,1007,0297-FlgNet.xml,2854969,7,18,12,12
+SYS-RUNHOURS,time work motor,7,client motor 7,1008,0298-FlgNet.xml,2856152,7,18,12,12
+SYS-RUNHOURS,time work motor,8,client motor 8,1009,0299-FlgNet.xml,2857331,7,18,12,12
+SYS-RUNHOURS,time work motor,9,client motor 9,1010,0300-FlgNet.xml,2858512,7,18,12,12
+SYS-RUNHOURS,time work motor,10,client motor 10,1011,0301-FlgNet.xml,2859692,7,18,12,12
+SYS-RUNHOURS,time work motor,11,client motor 13,1012,0302-FlgNet.xml,2860880,7,18,12,12
+SYS-RUNHOURS,time work motor,12,client motor 14,1013,0303-FlgNet.xml,2862054,7,18,12,12
+SYS-RUNHOURS,time work motor,13,client motor 15,1014,0304-FlgNet.xml,2863237,7,18,12,12
+SYS-RUNHOURS,time work motor,14,client motor 16,1015,0305-FlgNet.xml,2864417,7,18,12,12
+SYS-RUNHOURS,time work motor,15,client motor 17,1016,0306-FlgNet.xml,2865597,7,18,12,12
+SYS-RUNHOURS,time work motor,16,client motor 19,1017,0307-FlgNet.xml,2866776,7,18,12,12
+SYS-RUNHOURS,time work motor,17,bc-01,1018,0308-FlgNet.xml,2867938,7,18,12,12
+SYS-RUNHOURS,time work motor,18,rd-01,1019,0309-FlgNet.xml,2868941,7,18,12,12
+SYS-RUNHOURS,time work motor,19,rd-01 fan,1020,0310-FlgNet.xml,2870111,7,18,12,12
+SYS-RUNHOURS,time work motor,20,mc-03,1021,0311-FlgNet.xml,2871269,7,18,12,12
+SYS-RUNHOURS,time work motor,21,mc-04,1022,0312-FlgNet.xml,2872428,7,18,12,12
+SYS-RUNHOURS,time work motor,23,vs-01,1024,0313-FlgNet.xml,2874397,7,18,12,12
+SYS-RUNHOURS,time work motor,25,fn-02,1026,0314-FlgNet.xml,2876360,7,18,12,12
+SYS-RUNHOURS,time work motor,26,vr-01,1027,0315-FlgNet.xml,2877512,7,18,12,12
+SYS-RUNHOURS,time work motor,27,fn-01,1028,0316-FlgNet.xml,2878671,7,18,12,12
+SYS-RUNHOURS,time work motor,28,vr-02,1029,0317-FlgNet.xml,2879830,7,18,12,12
+SYS-RUNHOURS,time work motor,29,ch-01,1030,0318-FlgNet.xml,2880985,7,18,12,12
+SYS-RUNHOURS,time work motor,30,fn-03,1031,0319-FlgNet.xml,2882151,7,18,12,12
+SYS-RUNHOURS,time work motor,31,fn-06,1032,0320-FlgNet.xml,2883306,7,18,12,12
+SYS-RUNHOURS,time work motor,32,sc-01,1033,0321-FlgNet.xml,2884473,7,18,12,12
+SYS-RUNHOURS,time work motor,34,ld-01,1035,0322-FlgNet.xml,2886450,7,18,12,12
+SYS-RUNHOURS,time work motor,35,ld-01 vib,1036,0323-FlgNet.xml,2887772,7,18,12,12
+SYS-RUNHOURS,time work motor,36,sc-10,1037,0324-FlgNet.xml,2888932,7,18,12,12
+SYS-RUNHOURS,time work motor,37,sc-11,1038,0325-FlgNet.xml,2890091,7,18,12,12
+SYS-RUNHOURS,time work motor,38,fn-04,1039,0326-FlgNet.xml,2891254,7,18,12,12
+SYS-RUNHOURS,time work motor,39,vr-03,1040,0327-FlgNet.xml,2892412,7,18,12,12
+SYS-RUNHOURS,time work motor,40,vr-04,1041,0328-FlgNet.xml,2893575,7,18,12,12
+SYS-RUNHOURS,time work motor,41,vr-05,1042,0329-FlgNet.xml,2894579,7,18,12,12
+SYS-RUNHOURS,time work motor,42,vr-06,1043,0330-FlgNet.xml,2895738,7,18,12,12
+SYS-RUNHOURS,time work motor,43,fn-05,1044,0331-FlgNet.xml,2896906,7,18,12,12
+SYS-RUNHOURS,time work motor,44,,1045,0332-FlgNet.xml,2898032,6,17,11,11
+SYS-RUNHOURS,time work motor,45,,1046,0333-FlgNet.xml,2899094,6,17,11,11
+SYS-RUNHOURS,time work motor,46,,1047,0334-FlgNet.xml,2900160,6,17,11,11
+SYS-RUNHOURS,time work motor,47,,1048,0335-FlgNet.xml,2901228,6,17,11,11
+SYS-RUNHOURS,time work motor,48,,1049,0336-FlgNet.xml,2902295,6,17,11,11
+SYS-RUNHOURS,time work motor,49,,1050,0337-FlgNet.xml,2903362,6,17,11,11
+SYS-RUNHOURS,time work motor,50,,1051,0338-FlgNet.xml,2904427,6,17,11,11
+SYS-RUNHOURS,time work motor,51,,1052,0339-FlgNet.xml,2905492,6,17,11,11
+SYS-RUNHOURS,time work motor,52,,1053,0340-FlgNet.xml,2906560,6,17,11,11
+SYS-RUNHOURS,time work motor,53,,1054,0018-FlgNet.xml,2907633,2,5,2,3
+SYS-RUNHOURS,time work motor,54,reset working hours after recording the data in the db,1055,0341-FlgNet.xml,2909265,8,15,9,9
+SYS-RUNHOURS,time work motor,55,every 1 minutes,1056,0019-FlgNet.xml,2910355,2,5,3,3
+SYS-RUNHOURS,cyc_int2 ogni 1s,3,,1721,0416-FlgNet.xml,3027928,5,12,8,8
+SYS-RUNHOURS,cyc_int2 ogni 1s,4,,1722,0023-FlgNet.xml,3028845,2,6,3,4
+SYS-RUNHOURS,cyc_int2 ogni 1s,5,auto start/stop motors and presetting,1723,0024-FlgNet.xml,3030217,2,3,1,1
+SYS-RUNHOURS,cyc_int2 ogni 1s,6,delayed burner flow rate variation,1724,0417-FlgNet.xml,3031189,5,15,11,11
+SYS-COUNTERS,allarm manager,9,clear values of report at the end of the recording,935,0157-FlgNet.xml,2647895,5,11,7,7
+SYS-COUNTERS,analog input conversion,1,tc04,1731,0481-FlgNet.xml,3110424,2,9,7,7
+SYS-COUNTERS,analog input conversion,2,tc-05,1732,0482-FlgNet.xml,3111467,2,9,7,7
+SYS-COUNTERS,analog input conversion,3,tc-09,1733,0483-FlgNet.xml,3112512,2,9,7,7
+SYS-COUNTERS,analog input conversion,4,tc-10,1734,0484-FlgNet.xml,3113558,2,9,7,7
+SYS-COUNTERS,analog input conversion,5,client 1 bwf01 flow rate,1735,0485-FlgNet.xml,3114625,9,26,19,19
+SYS-COUNTERS,analog input conversion,6,client 2 bwf02 flow rate,1736,0486-FlgNet.xml,3116141,9,26,19,19
+SYS-COUNTERS,analog input conversion,7,client 3 level indicator bwf01,1737,0487-FlgNet.xml,3117663,2,9,7,7
+SYS-COUNTERS,analog input conversion,8,client 4 level indicator bwf02,1738,0488-FlgNet.xml,3118729,2,9,7,7
+SYS-COUNTERS,analog input conversion,9,tc-01,1739,0489-FlgNet.xml,3119776,2,9,7,7
+SYS-COUNTERS,analog input conversion,10,tc-02,1740,0490-FlgNet.xml,3120820,2,9,7,7
+SYS-COUNTERS,analog input conversion,11,tc-03,1741,0491-FlgNet.xml,3121864,2,9,7,7
+SYS-COUNTERS,analog input conversion,12,tc-06,1742,0492-FlgNet.xml,3122905,2,9,7,7
+SYS-COUNTERS,analog input conversion,13,tc-07,1743,0493-FlgNet.xml,3123948,2,9,7,7
+SYS-COUNTERS,analog input conversion,14,zt-01,1744,0494-FlgNet.xml,3124996,2,9,7,7
+SYS-COUNTERS,analog input conversion,15,psh-01,1745,0495-FlgNet.xml,3126047,2,9,7,7
+SYS-COUNTERS,analog input conversion,16,psh-02,1746,0496-FlgNet.xml,3127093,2,9,7,7
+SYS-COUNTERS,analog input conversion,17,psh-03,1747,0497-FlgNet.xml,3128137,2,9,7,7
+SYS-COUNTERS,analog input conversion,18,r0-01,1748,0498-FlgNet.xml,3129181,2,9,7,7
+SYS-COUNTERS,analog input conversion,19,r0-02,1749,0499-FlgNet.xml,3130229,2,9,7,7
+SYS-COUNTERS,analog input conversion,20,r0-03,1750,0500-FlgNet.xml,3131275,4,14,11,11
+SYS-COUNTERS,analog input conversion,21,r0-04,1751,0501-FlgNet.xml,3132467,2,9,7,7
+SYS-COUNTERS,analog input conversion,22,gas br-01 - position,1752,0502-FlgNet.xml,3133531,2,9,7,7
+SYS-COUNTERS,analog input conversion,23,air br-01 - position,1753,0503-FlgNet.xml,3134593,2,9,7,7
+SYS-COUNTERS,analog input conversion,24,max flow gas - flowmeter,1754,0504-FlgNet.xml,3135659,4,14,11,11
+SYS-COUNTERS,analog input conversion,25,max flow air - flowmeter,1755,0505-FlgNet.xml,3136872,2,9,7,7
+SYS-COUNTERS,analog input conversion,26,reading encoder mv01,1756,0506-FlgNet.xml,3137984,3,28,6,25
+SYS-COUNTERS,analog input conversion,27,reading encoder mv02,1757,0507-FlgNet.xml,3139119,3,28,4,25
+SYS-COUNTERS,analog input conversion,28,reading encoder mv03,1758,0508-FlgNet.xml,3140257,3,28,4,25
+SYS-COUNTERS,analog input conversion,29,reading encoder mv05,1759,0509-FlgNet.xml,3141397,3,28,4,25
+SYS-COUNTERS,analog input conversion,30,reading encoder mv06,1760,0510-FlgNet.xml,3142526,3,28,4,25
+SYS-COUNTERS,analog input conversion,31,store current position value at power-off,1761,0511-FlgNet.xml,3143677,6,13,11,11
+SYS-COUNTERS,analog input conversion,32,data management mv01,1762,0512-FlgNet.xml,3144592,10,28,22,22
+SYS-COUNTERS,analog input conversion,33,data management mv02,1763,0513-FlgNet.xml,3146169,10,28,22,22
+SYS-COUNTERS,analog input conversion,34,mv03 data management,1764,0514-FlgNet.xml,3147722,10,28,22,22
+SYS-COUNTERS,analog input conversion,35,mv05 data management,1765,0515-FlgNet.xml,3149303,10,28,22,22
+SYS-COUNTERS,analog input conversion,36,mv06 data management,1766,0516-FlgNet.xml,3150892,10,28,22,22
+SYS-COUNTERS,analog input conversion,37,fn-02 fan,1767,0517-FlgNet.xml,3152458,2,9,7,7
+SYS-COUNTERS,analog input conversion,38,bc-01,1768,0525-FlgNet.xml,3161027,2,9,7,7
+SYS-COUNTERS,analog input conversion,39,mc04,1769,0526-FlgNet.xml,3162057,2,9,7,7
+SYS-COUNTERS,analog input conversion,40,fn-02 aspirator,1770,0518-FlgNet.xml,3153512,2,9,7,7
+SYS-COUNTERS,analog input conversion,41,rd-01,1771,0519-FlgNet.xml,3154558,2,9,7,7
+SYS-COUNTERS,analog input conversion,42,fn-01,1772,0520-FlgNet.xml,3155607,2,9,7,7
+SYS-COUNTERS,analog input conversion,43,dp-01,1773,0521-FlgNet.xml,3156654,2,9,7,7
+SYS-COUNTERS,analog input conversion,44,dp-02,1774,0522-FlgNet.xml,3157701,2,9,7,7
+SYS-COUNTERS,analog input conversion,45,pc-01,1775,0523-FlgNet.xml,3158747,2,9,7,7
+SYS-COUNTERS,analog input conversion,46,contactor ton passed in bwf,1776,0524-FlgNet.xml,3159868,7,17,11,11
+SYS-COUNTERS,cyc_int5 ogni 100ms,2,controll ro01 moduling mv05 - pid,5,0475-FlgNet.xml,3096758,8,35,18,27
+SYS-COUNTERS,cyc_int5 ogni 100ms,4,controll pc01 moduling mv02,7,0476-FlgNet.xml,3098984,5,30,16,25
+SYS-COUNTERS,cyc_int5 ogni 100ms,5,,8,0480-FlgNet.xml,3109630,2,6,4,4
+SYS-COUNTERS,cyc_int5 ogni 100ms,8,controll tc03 moduling mv01,11,0477-FlgNet.xml,3102013,13,46,24,33
+SYS-COUNTERS,cyc_int5 ogni 100ms,9,disable pid control on vt02,12,0478-FlgNet.xml,3103591,6,11,5,5
+SYS-COUNTERS,cyc_int5 ogni 100ms,12,control pc02 moduling mv03 - not used,15,0479-FlgNet.xml,3107292,7,33,17,26
+SYS-COUNTERS,cyc_int5 ogni 100ms,13,executes gas flow calculation block,16,0028-FlgNet.xml,3108589,2,3,1,1
+SYS-LEGACY,analog output conversion,6,rd-01 cylinder,1684,0465-FlgNet.xml,3084575,6,16,12,12
+SYS-LEGACY,analog output conversion,7,fn-01 ventilator,1685,0466-FlgNet.xml,3085714,6,16,12,12
+SYS-LEGACY,auto start motors,3,preheating,1843,0164-FlgNet.xml,2661004,67,121,89,90
+SYS-LEGACY,auto start motors,4,production,1844,0165-FlgNet.xml,2664527,60,113,86,86
+SYS-LEGACY,auto start motors,5,set points fn01,1845,0169-FlgNet.xml,2672928,24,63,38,43
+SYS-LEGACY,burner control,11,reduce speed mn01 se tc01 > 30°c the setpoint,1864,0180-FlgNet.xml,2689406,8,19,14,14
+SYS-LEGACY,motors 1,7,rd01,1936,0243-FlgNet.xml,2783788,12,23,12,12
+SYS-LEGACY,motors 1,22,fn01,1951,0253-FlgNet.xml,2797818,11,21,11,11

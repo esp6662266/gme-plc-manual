@@ -15,7 +15,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
-    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
 
 [[headers]]
   for = "/library/*"
@@ -31,3 +30,6 @@
   from = "/library"
   to = "/library/"
   status = 301
+
+# Per-route CSP is generated in dist/_headers by scripts/headers.mjs.
+# Existing homepage/library retain the original policy.

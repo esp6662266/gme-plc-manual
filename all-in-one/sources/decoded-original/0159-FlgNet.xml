@@ -1,0 +1,586 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="513" Gate="Contact" />
+    <Part UId="515" Gate="Contact" />
+    <Part UId="517" Gate="Contact" />
+    <Part UId="594" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="519" Gate="Contact" />
+    <Part UId="590" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="242" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="249" Gate="SdCoil" />
+    <Part UId="523" Gate="Contact" />
+    <Part UId="254" Gate="SCoil" />
+    <Part UId="525" Gate="Contact" />
+    <Part UId="527" Gate="Contact" />
+    <Part UId="531" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="529" Gate="Contact" />
+    <Part UId="26" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="28" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="265" Gate="SdCoil" />
+    <Part UId="533" Gate="Contact" />
+    <Part UId="270" Gate="SCoil" />
+    <Part UId="535" Gate="Contact" />
+    <Part UId="537" Gate="Contact" />
+    <Part UId="541" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="539" Gate="Contact" />
+    <Part UId="34" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="36" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="281" Gate="SdCoil" />
+    <Part UId="543" Gate="Contact" />
+    <Part UId="286" Gate="SCoil" />
+    <Part UId="555" Gate="Contact" />
+    <Part UId="557" Gate="Contact" />
+    <Part UId="561" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="559" Gate="Contact" />
+    <Part UId="58" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="60" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="313" Gate="SdCoil" />
+    <Part UId="563" Gate="Contact" />
+    <Part UId="318" Gate="SCoil" />
+    <Part UId="565" Gate="Contact" />
+    <Part UId="567" Gate="Contact" />
+    <Part UId="571" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="569" Gate="Contact" />
+    <Part UId="50" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="52" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="329" Gate="SdCoil" />
+    <Part UId="573" Gate="Contact" />
+    <Part UId="334" Gate="SCoil" />
+    <Part UId="575" Gate="Contact" />
+    <Part UId="577" Gate="Contact" />
+    <Part UId="342" Gate="RCoil" />
+    <Part UId="579" Gate="Contact" />
+    <Part UId="346" Gate="RCoil" />
+    <Part UId="581" Gate="Contact" />
+    <Part UId="350" Gate="RCoil" />
+    <Part UId="583" Gate="Contact" />
+    <Part UId="354" Gate="RCoil" />
+    <Part UId="585" Gate="Contact" />
+    <Part UId="358" Gate="RCoil" />
+    <Part UId="587" Gate="Contact" />
+    <Part UId="362" Gate="RCoil" />
+    <ORef UId="363" RefId="1" />
+    <ORef UId="364" RefId="1" />
+    <ORef UId="365" RefId="3" />
+    <ORef UId="595" RefId="59" />
+    <ORef UId="366" RefId="4" />
+    <ORef UId="591" RefId="60" />
+    <ORef UId="369" RefId="9" />
+    <ORef UId="368" RefId="77" />
+    <ORef UId="370" RefId="9" />
+    <ORef UId="371" RefId="11" />
+    <ORef UId="372" RefId="1" />
+    <ORef UId="373" RefId="12" />
+    <ORef UId="375" RefId="61" />
+    <ORef UId="374" RefId="13" />
+    <ORef UId="27" RefId="62" />
+    <ORef UId="377" RefId="15" />
+    <ORef UId="376" RefId="8" />
+    <ORef UId="378" RefId="15" />
+    <ORef UId="379" RefId="16" />
+    <ORef UId="380" RefId="1" />
+    <ORef UId="381" RefId="17" />
+    <ORef UId="383" RefId="63" />
+    <ORef UId="382" RefId="18" />
+    <ORef UId="35" RefId="64" />
+    <ORef UId="385" RefId="20" />
+    <ORef UId="384" RefId="83" />
+    <ORef UId="386" RefId="20" />
+    <ORef UId="387" RefId="21" />
+    <ORef UId="396" RefId="1" />
+    <ORef UId="397" RefId="27" />
+    <ORef UId="399" RefId="67" />
+    <ORef UId="398" RefId="28" />
+    <ORef UId="59" RefId="68" />
+    <ORef UId="401" RefId="30" />
+    <ORef UId="400" RefId="8" />
+    <ORef UId="402" RefId="30" />
+    <ORef UId="403" RefId="31" />
+    <ORef UId="404" RefId="1" />
+    <ORef UId="405" RefId="32" />
+    <ORef UId="407" RefId="69" />
+    <ORef UId="406" RefId="33" />
+    <ORef UId="51" RefId="70" />
+    <ORef UId="409" RefId="35" />
+    <ORef UId="408" RefId="8" />
+    <ORef UId="410" RefId="35" />
+    <ORef UId="411" RefId="36" />
+    <ORef UId="412" RefId="38" />
+    <ORef UId="413" RefId="11" />
+    <ORef UId="414" RefId="11" />
+    <ORef UId="415" RefId="16" />
+    <ORef UId="416" RefId="16" />
+    <ORef UId="417" RefId="21" />
+    <ORef UId="418" RefId="21" />
+    <ORef UId="419" RefId="26" />
+    <ORef UId="420" RefId="26" />
+    <ORef UId="421" RefId="31" />
+    <ORef UId="422" RefId="31" />
+    <ORef UId="423" RefId="36" />
+    <ORef UId="424" RefId="36" />
+  </Parts>
+  <Wires>
+    <Wire UId="589">
+      <Powerrail />
+      <PCon UId="513" PinName="in" />
+    </Wire>
+    <Wire UId="425">
+      <OCon UId="363" />
+      <PCon UId="513" PinName="operand" />
+    </Wire>
+    <Wire UId="514">
+      <PCon UId="513" PinName="out" />
+      <PCon UId="515" PinName="in" />
+      <PCon UId="525" PinName="in" />
+      <PCon UId="535" PinName="in" />
+      <PCon UId="555" PinName="in" />
+      <PCon UId="565" PinName="in" />
+      <PCon UId="575" PinName="in" />
+    </Wire>
+    <Wire UId="426">
+      <OCon UId="364" />
+      <PCon UId="515" PinName="operand" />
+    </Wire>
+    <Wire UId="516">
+      <PCon UId="515" PinName="out" />
+      <PCon UId="517" PinName="in" />
+      <PCon UId="519" PinName="in" />
+    </Wire>
+    <Wire UId="427">
+      <OCon UId="365" />
+      <PCon UId="517" PinName="operand" />
+    </Wire>
+    <Wire UId="518">
+      <PCon UId="517" PinName="out" />
+      <PCon UId="594" PinName="in" />
+    </Wire>
+    <Wire UId="597">
+      <OCon UId="595" />
+      <PCon UId="594" PinName="operand" />
+    </Wire>
+    <Wire UId="22">
+      <PCon UId="594" PinName="out" />
+      <PCon UId="242" PinName="in1" />
+    </Wire>
+    <Wire UId="428">
+      <OCon UId="366" />
+      <PCon UId="519" PinName="operand" />
+    </Wire>
+    <Wire UId="520">
+      <PCon UId="519" PinName="out" />
+      <PCon UId="590" PinName="in" />
+    </Wire>
+    <Wire UId="593">
+      <OCon UId="591" />
+      <PCon UId="590" PinName="operand" />
+    </Wire>
+    <Wire UId="21">
+      <PCon UId="590" PinName="out" />
+      <PCon UId="242" PinName="in2" />
+    </Wire>
+    <Wire UId="522">
+      <PCon UId="242" PinName="out" />
+      <PCon UId="249" PinName="in" />
+      <PCon UId="523" PinName="in" />
+    </Wire>
+    <Wire UId="431">
+      <OCon UId="368" />
+      <PCon UId="249" PinName="value" />
+    </Wire>
+    <Wire UId="432">
+      <OCon UId="369" />
+      <PCon UId="249" PinName="operand" />
+    </Wire>
+    <Wire UId="433">
+      <OCon UId="370" />
+      <PCon UId="523" PinName="operand" />
+    </Wire>
+    <Wire UId="524">
+      <PCon UId="523" PinName="out" />
+      <PCon UId="254" PinName="in" />
+    </Wire>
+    <Wire UId="435">
+      <OCon UId="371" />
+      <PCon UId="254" PinName="operand" />
+    </Wire>
+    <Wire UId="437">
+      <OCon UId="372" />
+      <PCon UId="525" PinName="operand" />
+    </Wire>
+    <Wire UId="526">
+      <PCon UId="525" PinName="out" />
+      <PCon UId="527" PinName="in" />
+      <PCon UId="529" PinName="in" />
+    </Wire>
+    <Wire UId="438">
+      <OCon UId="373" />
+      <PCon UId="527" PinName="operand" />
+    </Wire>
+    <Wire UId="23">
+      <PCon UId="527" PinName="out" />
+      <PCon UId="531" PinName="in" />
+    </Wire>
+    <Wire UId="441">
+      <OCon UId="375" />
+      <PCon UId="531" PinName="operand" />
+    </Wire>
+    <Wire UId="29">
+      <PCon UId="531" PinName="out" />
+      <PCon UId="28" PinName="in1" />
+    </Wire>
+    <Wire UId="439">
+      <OCon UId="374" />
+      <PCon UId="529" PinName="operand" />
+    </Wire>
+    <Wire UId="24">
+      <PCon UId="529" PinName="out" />
+      <PCon UId="26" PinName="in" />
+    </Wire>
+    <Wire UId="25">
+      <OCon UId="27" />
+      <PCon UId="26" PinName="operand" />
+    </Wire>
+    <Wire UId="30">
+      <PCon UId="26" PinName="out" />
+      <PCon UId="28" PinName="in2" />
+    </Wire>
+    <Wire UId="532">
+      <PCon UId="28" PinName="out" />
+      <PCon UId="265" PinName="in" />
+      <PCon UId="533" PinName="in" />
+    </Wire>
+    <Wire UId="442">
+      <OCon UId="376" />
+      <PCon UId="265" PinName="value" />
+    </Wire>
+    <Wire UId="443">
+      <OCon UId="377" />
+      <PCon UId="265" PinName="operand" />
+    </Wire>
+    <Wire UId="444">
+      <OCon UId="378" />
+      <PCon UId="533" PinName="operand" />
+    </Wire>
+    <Wire UId="534">
+      <PCon UId="533" PinName="out" />
+      <PCon UId="270" PinName="in" />
+    </Wire>
+    <Wire UId="446">
+      <OCon UId="379" />
+      <PCon UId="270" PinName="operand" />
+    </Wire>
+    <Wire UId="448">
+      <OCon UId="380" />
+      <PCon UId="535" PinName="operand" />
+    </Wire>
+    <Wire UId="536">
+      <PCon UId="535" PinName="out" />
+      <PCon UId="537" PinName="in" />
+      <PCon UId="539" PinName="in" />
+    </Wire>
+    <Wire UId="449">
+      <OCon UId="381" />
+      <PCon UId="537" PinName="operand" />
+    </Wire>
+    <Wire UId="31">
+      <PCon UId="537" PinName="out" />
+      <PCon UId="541" PinName="in" />
+    </Wire>
+    <Wire UId="452">
+      <OCon UId="383" />
+      <PCon UId="541" PinName="operand" />
+    </Wire>
+    <Wire UId="37">
+      <PCon UId="541" PinName="out" />
+      <PCon UId="36" PinName="in1" />
+    </Wire>
+    <Wire UId="450">
+      <OCon UId="382" />
+      <PCon UId="539" PinName="operand" />
+    </Wire>
+    <Wire UId="32">
+      <PCon UId="539" PinName="out" />
+      <PCon UId="34" PinName="in" />
+    </Wire>
+    <Wire UId="33">
+      <OCon UId="35" />
+      <PCon UId="34" PinName="operand" />
+    </Wire>
+    <Wire UId="38">
+      <PCon UId="34" PinName="out" />
+      <PCon UId="36" PinName="in2" />
+    </Wire>
+    <Wire UId="542">
+      <PCon UId="36" PinName="out" />
+      <PCon UId="281" PinName="in" />
+      <PCon UId="543" PinName="in" />
+    </Wire>
+    <Wire UId="453">
+      <OCon UId="384" />
+      <PCon UId="281" PinName="value" />
+    </Wire>
+    <Wire UId="454">
+      <OCon UId="385" />
+      <PCon UId="281" PinName="operand" />
+    </Wire>
+    <Wire UId="455">
+      <OCon UId="386" />
+      <PCon UId="543" PinName="operand" />
+    </Wire>
+    <Wire UId="544">
+      <PCon UId="543" PinName="out" />
+      <PCon UId="286" PinName="in" />
+    </Wire>
+    <Wire UId="457">
+      <OCon UId="387" />
+      <PCon UId="286" PinName="operand" />
+    </Wire>
+    <Wire UId="470">
+      <OCon UId="396" />
+      <PCon UId="555" PinName="operand" />
+    </Wire>
+    <Wire UId="556">
+      <PCon UId="555" PinName="out" />
+      <PCon UId="557" PinName="in" />
+      <PCon UId="559" PinName="in" />
+    </Wire>
+    <Wire UId="471">
+      <OCon UId="397" />
+      <PCon UId="557" PinName="operand" />
+    </Wire>
+    <Wire UId="55">
+      <PCon UId="557" PinName="out" />
+      <PCon UId="561" PinName="in" />
+    </Wire>
+    <Wire UId="474">
+      <OCon UId="399" />
+      <PCon UId="561" PinName="operand" />
+    </Wire>
+    <Wire UId="61">
+      <PCon UId="561" PinName="out" />
+      <PCon UId="60" PinName="in1" />
+    </Wire>
+    <Wire UId="472">
+      <OCon UId="398" />
+      <PCon UId="559" PinName="operand" />
+    </Wire>
+    <Wire UId="56">
+      <PCon UId="559" PinName="out" />
+      <PCon UId="58" PinName="in" />
+    </Wire>
+    <Wire UId="57">
+      <OCon UId="59" />
+      <PCon UId="58" PinName="operand" />
+    </Wire>
+    <Wire UId="62">
+      <PCon UId="58" PinName="out" />
+      <PCon UId="60" PinName="in2" />
+    </Wire>
+    <Wire UId="562">
+      <PCon UId="60" PinName="out" />
+      <PCon UId="313" PinName="in" />
+      <PCon UId="563" PinName="in" />
+    </Wire>
+    <Wire UId="475">
+      <OCon UId="400" />
+      <PCon UId="313" PinName="value" />
+    </Wire>
+    <Wire UId="476">
+      <OCon UId="401" />
+      <PCon UId="313" PinName="operand" />
+    </Wire>
+    <Wire UId="477">
+      <OCon UId="402" />
+      <PCon UId="563" PinName="operand" />
+    </Wire>
+    <Wire UId="564">
+      <PCon UId="563" PinName="out" />
+      <PCon UId="318" PinName="in" />
+    </Wire>
+    <Wire UId="479">
+      <OCon UId="403" />
+      <PCon UId="318" PinName="operand" />
+    </Wire>
+    <Wire UId="481">
+      <OCon UId="404" />
+      <PCon UId="565" PinName="operand" />
+    </Wire>
+    <Wire UId="566">
+      <PCon UId="565" PinName="out" />
+      <PCon UId="567" PinName="in" />
+      <PCon UId="569" PinName="in" />
+    </Wire>
+    <Wire UId="482">
+      <OCon UId="405" />
+      <PCon UId="567" PinName="operand" />
+    </Wire>
+    <Wire UId="47">
+      <PCon UId="567" PinName="out" />
+      <PCon UId="571" PinName="in" />
+    </Wire>
+    <Wire UId="485">
+      <OCon UId="407" />
+      <PCon UId="571" PinName="operand" />
+    </Wire>
+    <Wire UId="53">
+      <PCon UId="571" PinName="out" />
+      <PCon UId="52" PinName="in1" />
+    </Wire>
+    <Wire UId="483">
+      <OCon UId="406" />
+      <PCon UId="569" PinName="operand" />
+    </Wire>
+    <Wire UId="48">
+      <PCon UId="569" PinName="out" />
+      <PCon UId="50" PinName="in" />
+    </Wire>
+    <Wire UId="49">
+      <OCon UId="51" />
+      <PCon UId="50" PinName="operand" />
+    </Wire>
+    <Wire UId="54">
+      <PCon UId="50" PinName="out" />
+      <PCon UId="52" PinName="in2" />
+    </Wire>
+    <Wire UId="572">
+      <PCon UId="52" PinName="out" />
+      <PCon UId="329" PinName="in" />
+      <PCon UId="573" PinName="in" />
+    </Wire>
+    <Wire UId="486">
+      <OCon UId="408" />
+      <PCon UId="329" PinName="value" />
+    </Wire>
+    <Wire UId="487">
+      <OCon UId="409" />
+      <PCon UId="329" PinName="operand" />
+    </Wire>
+    <Wire UId="488">
+      <OCon UId="410" />
+      <PCon UId="573" PinName="operand" />
+    </Wire>
+    <Wire UId="574">
+      <PCon UId="573" PinName="out" />
+      <PCon UId="334" PinName="in" />
+    </Wire>
+    <Wire UId="490">
+      <OCon UId="411" />
+      <PCon UId="334" PinName="operand" />
+    </Wire>
+    <Wire UId="492">
+      <OCon UId="412" />
+      <PCon UId="575" PinName="operand" />
+    </Wire>
+    <Wire UId="576">
+      <PCon UId="575" PinName="out" />
+      <PCon UId="577" PinName="in" />
+      <PCon UId="579" PinName="in" />
+      <PCon UId="581" PinName="in" />
+      <PCon UId="583" PinName="in" />
+      <PCon UId="585" PinName="in" />
+      <PCon UId="587" PinName="in" />
+    </Wire>
+    <Wire UId="493">
+      <OCon UId="413" />
+      <PCon UId="577" PinName="operand" />
+    </Wire>
+    <Wire UId="578">
+      <PCon UId="577" PinName="out" />
+      <PCon UId="342" PinName="in" />
+    </Wire>
+    <Wire UId="495">
+      <OCon UId="414" />
+      <PCon UId="342" PinName="operand" />
+    </Wire>
+    <Wire UId="496">
+      <OCon UId="415" />
+      <PCon UId="579" PinName="operand" />
+    </Wire>
+    <Wire UId="580">
+      <PCon UId="579" PinName="out" />
+      <PCon UId="346" PinName="in" />
+    </Wire>
+    <Wire UId="498">
+      <OCon UId="416" />
+      <PCon UId="346" PinName="operand" />
+    </Wire>
+    <Wire UId="499">
+      <OCon UId="417" />
+      <PCon UId="581" PinName="operand" />
+    </Wire>
+    <Wire UId="582">
+      <PCon UId="581" PinName="out" />
+      <PCon UId="350" PinName="in" />
+    </Wire>
+    <Wire UId="501">
+      <OCon UId="418" />
+      <PCon UId="350" PinName="operand" />
+    </Wire>
+    <Wire UId="502">
+      <OCon UId="419" />
+      <PCon UId="583" PinName="operand" />
+    </Wire>
+    <Wire UId="584">
+      <PCon UId="583" PinName="out" />
+      <PCon UId="354" PinName="in" />
+    </Wire>
+    <Wire UId="504">
+      <OCon UId="420" />
+      <PCon UId="354" PinName="operand" />
+    </Wire>
+    <Wire UId="505">
+      <OCon UId="421" />
+      <PCon UId="585" PinName="operand" />
+    </Wire>
+    <Wire UId="586">
+      <PCon UId="585" PinName="out" />
+      <PCon UId="358" PinName="in" />
+    </Wire>
+    <Wire UId="507">
+      <OCon UId="422" />
+      <PCon UId="358" PinName="operand" />
+    </Wire>
+    <Wire UId="508">
+      <OCon UId="423" />
+      <PCon UId="587" PinName="operand" />
+    </Wire>
+    <Wire UId="588">
+      <PCon UId="587" PinName="out" />
+      <PCon UId="362" PinName="in" />
+    </Wire>
+    <Wire UId="510">
+      <OCon UId="424" />
+      <PCon UId="362" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

@@ -1,0 +1,4386 @@
+[
+  {
+    "id": "BC01",
+    "name": "드럼 투입 컨베이어",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      18,
+      19
+    ],
+    "role": "원료를 PV01 투입 게이트까지 이송한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "belt conveyor bc01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "RD01",
+    "name": "회전 드럼",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      20,
+      21
+    ],
+    "role": "원료의 회전·체류를 담당한다. 투입·배출 게이트와 함께 운전 조건을 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "RD01-FAN",
+    "name": "드럼 모터 냉각팬",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      22
+    ],
+    "role": "RD01 구동 모터 냉각 보조장치.",
+    "parent": "RD01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "fan rd01",
+      "rd01f",
+      "rd_01_fan"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "MC03",
+    "name": "예비 모터 MC03",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      23
+    ],
+    "role": "PLC의 예비 모터 및 토크 감시 항목.",
+    "parent": "",
+    "status": "예비·실물 동일성 확인",
+    "aliases": [
+      "mc03",
+      "mc_03",
+      "spare motor"
+    ],
+    "pid": false,
+    "note": "P&ID에서 주설비 태그로 확인되지 않는다. Q0.3과 MC03/SS09 참조를 별도 예비 장치로 보관한다."
+  },
+  {
+    "id": "MC04",
+    "name": "금속 컨베이어",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      24,
+      25
+    ],
+    "role": "PV02 배출 원료를 VS01 방향으로 이송한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "MC05",
+    "name": "금속 컨베이어 MC05",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      26
+    ],
+    "role": "전기도면과 PLC 입출력에는 남아 있는 이송 장치.",
+    "parent": "",
+    "status": "삭제 제목·예비 여부 확인",
+    "aliases": [],
+    "pid": false,
+    "note": "Motors 1에는 mc05 deleted 제목이 있다. 입출력과 도면의 잔존만으로 현재 설치·사용 상태를 결정하지 않는다."
+  },
+  {
+    "id": "VS01",
+    "name": "진동 스크린",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      27,
+      28
+    ],
+    "role": "배출 원료를 선별한다. VS01/VS01A 공통 피드백을 분리 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "vs01a",
+      "vs_01a"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SC12",
+    "name": "드럼 배출실 스크루",
+    "kind": "motor",
+    "group": "원료 이송",
+    "fgs": [
+      29
+    ],
+    "role": "드럼 배출실 측 원료 배출 스크루.",
+    "parent": "",
+    "status": "SPARE·삭제 제목",
+    "aliases": [],
+    "pid": true,
+    "note": "P&ID에 존재하지만 전기 회로 SPARE와 sc12 deleted 제목이 확인됐다. 설치 상태와 유지되는 배선을 확인한다."
+  },
+  {
+    "id": "CC01",
+    "name": "드럼 투입실",
+    "kind": "passive",
+    "group": "공정 본체",
+    "fgs": [],
+    "role": "PV01과 RD01 입구 사이의 투입 챔버. 기밀·퇴적·게이트 간섭을 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "UC01",
+    "name": "드럼 배출실",
+    "kind": "passive",
+    "group": "공정 본체",
+    "fgs": [],
+    "role": "RD01 출구, PV02 및 배출 경로를 구성하는 챔버.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "AB01",
+    "name": "연소 챔버",
+    "kind": "passive",
+    "group": "연소·열회수",
+    "fgs": [],
+    "role": "BR01의 연소와 TC01/02 온도 감시가 연결되는 공정 챔버.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "BR01",
+    "name": "가스 버너",
+    "kind": "burner",
+    "group": "연소·열회수",
+    "fgs": [
+      97,
+      98,
+      99,
+      100
+    ],
+    "role": "연소 상태·락아웃·가스/공기 조건·변조 값을 외부 버너 시스템과 교환한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "burner",
+      "brurner",
+      "br01",
+      "br_01"
+    ],
+    "pid": true,
+    "note": "버너 전용 상세 도면 및 제조사 연소 제어 절차는 별도 문서가 필요하다. 이 매뉴얼의 일반 PLC 해석을 버너 안전 시퀀스로 대체하지 않는다."
+  },
+  {
+    "id": "HE01",
+    "name": "열교환기",
+    "kind": "passive",
+    "group": "연소·열회수",
+    "fgs": [],
+    "role": "P&ID의 열교환 본체. MV01/MV04와 FN02의 연결 경로를 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN01",
+    "name": "순환 블로어",
+    "kind": "motor",
+    "group": "연소·열회수",
+    "fgs": [
+      47,
+      48
+    ],
+    "role": "TC04/TC05 베어링 온도, ZT01 및 전류 감시와 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN02",
+    "name": "열회수 블로어",
+    "kind": "motor",
+    "group": "연소·열회수",
+    "fgs": [
+      42,
+      43
+    ],
+    "role": "열회수 경로의 송풍과 아날로그 속도 설정을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN03",
+    "name": "연소 공기 블로어",
+    "kind": "motor",
+    "group": "연소·열회수",
+    "fgs": [
+      51
+    ],
+    "role": "BR01 측 연소 공기 공급 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN04",
+    "name": "집진 배기팬",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      59,
+      60
+    ],
+    "role": "CY·BF 집진 경로의 흡인 및 압력 제어와 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN05",
+    "name": "석회 계통 송풍기",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      65
+    ],
+    "role": "LD01/ER01 석회 계통 송풍 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN06",
+    "name": "보조 블로어",
+    "kind": "motor",
+    "group": "연소·열회수",
+    "fgs": [
+      52
+    ],
+    "role": "P&ID의 AB01 하부 보조 송풍 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "FN01-FAN",
+    "name": "FN01 모터 냉각팬",
+    "kind": "motor",
+    "group": "연소·열회수",
+    "fgs": [
+      54
+    ],
+    "role": "FN01 구동부 냉각 보조장치.",
+    "parent": "FN01",
+    "status": "SPARE·삭제 제목",
+    "aliases": [
+      "star fan fn01",
+      "fn01f",
+      "fn_01_fan"
+    ],
+    "pid": true,
+    "note": "Q3.5/I4.5 잔존과 SPARE 표기를 따로 기록한다."
+  },
+  {
+    "id": "CH01",
+    "name": "냉각기",
+    "kind": "motor",
+    "group": "연소·열회수",
+    "fgs": [
+      50
+    ],
+    "role": "FN01 측 냉각 계통. PLC 내부 시작 요청과 별도 원격 기동 출력 경로를 구분한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "chiller"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "MV01",
+    "name": "모터 구동 밸브",
+    "kind": "motorvalve",
+    "group": "제어 밸브",
+    "fgs": [
+      44,
+      45
+    ],
+    "role": "TC03 관련 열회수 경로 제어.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "MV02",
+    "name": "모터 구동 밸브",
+    "kind": "motorvalve",
+    "group": "제어 밸브",
+    "fgs": [
+      30,
+      31,
+      36,
+      37
+    ],
+    "role": "PSH01 관련 배기/압력 경로 제어.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "공통 전원 MV02/05/06은 개별 구동 피드백과 분리한다."
+  },
+  {
+    "id": "MV03",
+    "name": "모터 구동 밸브",
+    "kind": "motorvalve",
+    "group": "제어 밸브",
+    "fgs": [
+      38,
+      39
+    ],
+    "role": "PSH03 관련 오버플로 경로 제어.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "MV04",
+    "name": "모터 구동 밸브",
+    "kind": "motorvalve",
+    "group": "제어 밸브",
+    "fgs": [
+      40,
+      41
+    ],
+    "role": "FN02/HE01 경로의 모터 밸브. M18A/M18B 두 구동부를 구분한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "MV05",
+    "name": "모터 구동 밸브",
+    "kind": "motorvalve",
+    "group": "제어 밸브",
+    "fgs": [
+      30,
+      31,
+      34,
+      35
+    ],
+    "role": "RO01 관련 산소 제어 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "공통 전원 MV02/05/06은 개별 구동 피드백과 분리한다."
+  },
+  {
+    "id": "MV06",
+    "name": "모터 구동 밸브",
+    "kind": "motorvalve",
+    "group": "제어 밸브",
+    "fgs": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "role": "PSH02 관련 오버플로 경로 제어.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "공통 전원 MV02/05/06은 개별 구동 피드백과 분리한다."
+  },
+  {
+    "id": "PV01",
+    "name": "공압 게이트/분기 밸브",
+    "kind": "gate",
+    "group": "공압 밸브",
+    "fgs": [
+      69,
+      70
+    ],
+    "role": "드럼 투입 A/B 게이트. EV01/02, CL01~04 및 위치 센서와 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev01",
+      "ev02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PV02",
+    "name": "공압 게이트/분기 밸브",
+    "kind": "gate",
+    "group": "공압 밸브",
+    "fgs": [
+      71,
+      72
+    ],
+    "role": "드럼 배출 A/B 게이트. EV04/05, CL05~08 및 위치 센서와 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev04",
+      "ev05"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PV03",
+    "name": "공압 게이트/분기 밸브",
+    "kind": "gate",
+    "group": "공압 밸브",
+    "fgs": [
+      73
+    ],
+    "role": "스크린 배출 분기 밸브. EV06, CL09/10에 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev06"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PV04",
+    "name": "공압 게이트/분기 밸브",
+    "kind": "gate",
+    "group": "공압 밸브",
+    "fgs": [
+      74
+    ],
+    "role": "드럼 배출실 밸브. EV07, CL11에 연결된다.",
+    "parent": "",
+    "status": "예비 표기·삭제 제목",
+    "aliases": [
+      "ev07",
+      "button open pv-0000",
+      "74sb1"
+    ],
+    "pid": true,
+    "note": "회로 및 출력 SPARE와 pv04 deleted 제목을 확인해야 한다."
+  },
+  {
+    "id": "PV05",
+    "name": "질소 주입 밸브",
+    "kind": "nitrogen",
+    "group": "공압 밸브",
+    "fgs": [
+      96
+    ],
+    "role": "질소 비상 주입 계통. 탱크 준비 입력과 공통 주입 요청 출력을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "nitrogen"
+    ],
+    "pid": true,
+    "note": "두 밸브의 개별 PLC 출력으로 단정하지 않는다. 외부 릴레이·타이머 박스 회로가 포함된다."
+  },
+  {
+    "id": "PV06",
+    "name": "질소 주입 밸브",
+    "kind": "nitrogen",
+    "group": "공압 밸브",
+    "fgs": [
+      96
+    ],
+    "role": "질소 비상 주입 계통. 탱크 준비 입력과 공통 주입 요청 출력을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "nitrogen"
+    ],
+    "pid": true,
+    "note": "두 밸브의 개별 PLC 출력으로 단정하지 않는다. 외부 릴레이·타이머 박스 회로가 포함된다."
+  },
+  {
+    "id": "PV14",
+    "name": "필터 냉풍 유입 밸브",
+    "kind": "gate",
+    "group": "공압 밸브",
+    "fgs": [
+      168
+    ],
+    "role": "집진 필터 냉풍 유입. 열림/닫힘 입력과 필터 과온 대응을 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "false air",
+      "cold air"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CY01",
+    "name": "사이클론",
+    "kind": "passive",
+    "group": "집진·석회",
+    "fgs": [],
+    "role": "P&ID의 분진 분리 본체. 배출 로터리 밸브 또는 SC01 경로와 연결해 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CY02",
+    "name": "사이클론",
+    "kind": "passive",
+    "group": "집진·석회",
+    "fgs": [],
+    "role": "P&ID의 분진 분리 본체. 배출 로터리 밸브 또는 SC01 경로와 연결해 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CY03",
+    "name": "사이클론",
+    "kind": "passive",
+    "group": "집진·석회",
+    "fgs": [],
+    "role": "P&ID의 분진 분리 본체. 배출 로터리 밸브 또는 SC01 경로와 연결해 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CY04",
+    "name": "사이클론",
+    "kind": "passive",
+    "group": "집진·석회",
+    "fgs": [],
+    "role": "P&ID의 분진 분리 본체. 배출 로터리 밸브 또는 SC01 경로와 연결해 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CY05",
+    "name": "사이클론",
+    "kind": "passive",
+    "group": "집진·석회",
+    "fgs": [],
+    "role": "P&ID의 분진 분리 본체. 배출 로터리 밸브 또는 SC01 경로와 연결해 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "VR01",
+    "name": "로터리 밸브",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      46
+    ],
+    "role": "사이클론·필터·석회 경로에서 배출 및 공기 차단을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "VR02",
+    "name": "로터리 밸브",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      49
+    ],
+    "role": "사이클론·필터·석회 경로에서 배출 및 공기 차단을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "VR03",
+    "name": "로터리 밸브",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      61
+    ],
+    "role": "사이클론·필터·석회 경로에서 배출 및 공기 차단을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "VR04",
+    "name": "로터리 밸브",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      62
+    ],
+    "role": "사이클론·필터·석회 경로에서 배출 및 공기 차단을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "VR05",
+    "name": "로터리 밸브",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      63
+    ],
+    "role": "사이클론·필터·석회 경로에서 배출 및 공기 차단을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "VR06",
+    "name": "로터리 밸브",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      64
+    ],
+    "role": "사이클론·필터·석회 경로에서 배출 및 공기 차단을 담당한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SC01",
+    "name": "사이클론 분진 스크루",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      53
+    ],
+    "role": "분진을 해당 로터리 밸브로 이송한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "sc-1"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SC10",
+    "name": "BF01 분진 스크루",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      57
+    ],
+    "role": "분진을 해당 로터리 밸브로 이송한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SC11",
+    "name": "BF02 분진 스크루",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      58
+    ],
+    "role": "분진을 해당 로터리 밸브로 이송한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "BF01",
+    "name": "백 필터",
+    "kind": "filter",
+    "group": "집진·석회",
+    "fgs": [
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      "180A",
+      "180B"
+    ],
+    "role": "DP 차압 감시, 분진 스크루·로터리 밸브, 펄스 세정 밸브가 연결되는 집진 장치.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "pr_bf01",
+      "pr_br01",
+      "bf_01",
+      "filter 1"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "BF02",
+    "name": "백 필터",
+    "kind": "filter",
+    "group": "집진·석회",
+    "fgs": [
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204
+    ],
+    "role": "DP 차압 감시, 분진 스크루·로터리 밸브, 펄스 세정 밸브가 연결되는 집진 장치.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "pr_bf02",
+      "pr_br02",
+      "bf_02",
+      "filter 2"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LD01",
+    "name": "석회 마이크로피더",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      55,
+      170
+    ],
+    "role": "석회 투입 장치. VR06 운전, 점검 도어, 저레벨 및 현장 셀렉터를 함께 점검한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LD01A",
+    "name": "석회 사일로 진동기",
+    "kind": "motor",
+    "group": "집진·석회",
+    "fgs": [
+      56
+    ],
+    "role": "LD01의 간헐 운전/정지 타이머와 현장 요청에 연결되는 진동기.",
+    "parent": "LD01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ld_01_vib",
+      "ld01v",
+      "vibrator ld-01",
+      "ld-01a"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ER01",
+    "name": "전기 히터",
+    "kind": "heater",
+    "group": "집진·석회",
+    "fgs": [
+      66
+    ],
+    "role": "FN05와 석회 투입 공기 가열 경로. 온도 허용 및 피드백을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CM01",
+    "name": "집진 배기 스택",
+    "kind": "passive",
+    "group": "공정 본체",
+    "fgs": [],
+    "role": "FN04 후단의 대기 배출 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CM02",
+    "name": "상부 배기 스택",
+    "kind": "passive",
+    "group": "공정 본체",
+    "fgs": [],
+    "role": "MV02 측 대기 배출 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CR01",
+    "name": "운전 제어반",
+    "kind": "passive",
+    "group": "공정 본체",
+    "fgs": [],
+    "role": "P&ID의 운전 캐비닛. 전기 계통·보조전원·운전 표시와 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "BWF01",
+    "name": "고객 설비 계량 피더",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "외부 피더의 준비·운전·고장·레벨·유량과 원격 운전 허가를 교환한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "bwf 01",
+      "bwf1",
+      "bwf_01"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "BWF02",
+    "name": "고객 설비 계량 피더",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "외부 피더의 준비·운전·고장·레벨·유량과 원격 운전 허가를 교환한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "bwf 02",
+      "bwf2",
+      "bwf_02"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "LIW",
+    "name": "외부 LIW 피더",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "고객 피더 시스템 원격 시작과 속도 설정. BWF 계통 및 배출 분기 상태와 교차 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "liw",
+      "autoreader"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "CLIENT-CL01",
+    "name": "Apron conveyor A",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 01. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_01",
+      "client motor 1",
+      "cl01",
+      "apron conveyor a"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL02",
+    "name": "Impactor",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 02. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_02",
+      "client motor 2",
+      "cl02",
+      "impactor"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL03",
+    "name": "Impact vibration feeder",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 03. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_03",
+      "client motor 3",
+      "cl03",
+      "impact vibrationfeeder"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL04",
+    "name": "Belt conveyor A",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 04. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_04",
+      "client motor 4",
+      "cl04",
+      "belt conveyor a"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL05",
+    "name": "Air knife",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 05. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_05",
+      "client motor 5",
+      "cl05",
+      "air knife"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL06",
+    "name": "Belt conveyor B",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 06. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_06",
+      "client motor 6",
+      "cl06",
+      "belt conveyor b"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL07",
+    "name": "Shredder 1",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 07. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_07",
+      "client motor 7",
+      "cl07",
+      "shredder 1"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL08",
+    "name": "Shredder vibration feeder",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 08. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_08",
+      "client motor 8",
+      "cl08",
+      "shredder vibrationfeeder"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL09",
+    "name": "Belt conveyor C",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 09. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_09",
+      "client motor 9",
+      "cl09",
+      "belt conveyor c"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL10",
+    "name": "Rotex screen",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 10. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_10",
+      "client motor 10",
+      "cl10",
+      "rotex screen"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL13",
+    "name": "Apron conveyor B",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 13. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_13",
+      "client motor 13",
+      "cl13",
+      "apron conveyor b"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL14",
+    "name": "Shredder 2",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 14. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_14",
+      "client motor 14",
+      "cl14",
+      "shredder 2"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL15",
+    "name": "Belt conveyor D",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 15. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_15",
+      "client motor 15",
+      "cl15",
+      "belt coveyor d"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL16",
+    "name": "Belt conveyor E",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 16. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_16",
+      "client motor 16",
+      "cl16",
+      "belt conveyor e"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL17",
+    "name": "Weighing hopper 2",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 17. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_17",
+      "client motor 17",
+      "cl17",
+      "weighting hopper 2fault"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL18",
+    "name": "Hopper conveyor 2",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 18. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_18",
+      "client motor 18",
+      "cl18",
+      "hopper conveyor 2fault"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "CLIENT-CL19",
+    "name": "Primary shredder",
+    "kind": "client",
+    "group": "외부 연동",
+    "fgs": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "role": "PLC 외부 모터/설비 채널 19. 원격 신호와 실제 외부 제어반 상태를 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "motor_client_19",
+      "client motor 19",
+      "cl19",
+      "primaryshredder"
+    ],
+    "pid": false,
+    "note": "P&ID의 공압 실린더 CL 번호와 다른 이름 공간으로 보관한다."
+  },
+  {
+    "id": "TC01",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      77
+    ],
+    "role": "AB01 챔버 온도.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC02",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      77
+    ],
+    "role": "AB01 안전 온도 채널.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC03",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      77
+    ],
+    "role": "배출 가스 온도·MV01 관련 제어 값.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_03"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC04",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      79
+    ],
+    "role": "FN01 베어링 PT100 온도.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_04"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC05",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      79
+    ],
+    "role": "FN01 다른 베어링 PT100 온도.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_05"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC06",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      78
+    ],
+    "role": "AB01 출구 온도.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_06"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC07",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      78
+    ],
+    "role": "유입 가스 온도. 도면 SPARE 표기 확인.",
+    "parent": "",
+    "status": "예비·운영 상태 확인",
+    "aliases": [
+      "tc_07"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC09",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      171
+    ],
+    "role": "백 필터 유입 온도.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_09"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "TC10",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      171
+    ],
+    "role": "백업에 예비 온도 입력으로 남아 있는 채널.",
+    "parent": "",
+    "status": "예비·운영 상태 확인",
+    "aliases": [
+      "tc_10"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "TC11",
+    "name": "온도 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [],
+    "role": "P&ID ER01 계통의 로컬 온도 표시. PLC 대응은 식별되지 않았다.",
+    "parent": "",
+    "status": "P&ID 로컬 계측",
+    "aliases": [
+      "tc_11"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "RO01",
+    "name": "산소 분석 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      80
+    ],
+    "role": "연소·순환 가스 산소 분석. 데이터 변환과 대체값/시험 조건을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "r0-01",
+      "r001",
+      "r0_01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "RO02",
+    "name": "산소 분석 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      80
+    ],
+    "role": "연소·순환 가스 산소 분석. 데이터 변환과 대체값/시험 조건을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "r0-02",
+      "r002",
+      "r0_02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "RO03",
+    "name": "산소 분석 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      81
+    ],
+    "role": "연소·순환 가스 산소 분석. 데이터 변환과 대체값/시험 조건을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "r0-03",
+      "r003",
+      "r0_03"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "RO04",
+    "name": "산소 분석 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      81
+    ],
+    "role": "연소·순환 가스 산소 분석. 데이터 변환과 대체값/시험 조건을 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "r0-04",
+      "r004",
+      "r0_04"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PSH01",
+    "name": "압력 측정 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      75
+    ],
+    "role": "P&ID의 압력 제어 위치와 관련 MV 제어 루프를 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "psh_01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PSH02",
+    "name": "압력 측정 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      75
+    ],
+    "role": "P&ID의 압력 제어 위치와 관련 MV 제어 루프를 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "psh_02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PSH03",
+    "name": "압력 측정 채널",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      75
+    ],
+    "role": "P&ID의 압력 제어 위치와 관련 MV 제어 루프를 함께 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "psh_03"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PC01",
+    "name": "집진 흡인 압력",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      76
+    ],
+    "role": "PC01 4~20mA 입력과 FN04 압력 제어 경로.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "pc_01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PC02",
+    "name": "소프트웨어 압력 루프 명칭",
+    "kind": "software",
+    "group": "계측",
+    "fgs": [],
+    "role": "백업의 PC02 관련 데이터 명칭. PSH02와 물리 센서 동일성은 별도 검증한다.",
+    "parent": "",
+    "status": "소프트웨어 명칭·물리 태그 확인",
+    "aliases": [
+      "pc_02"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "DP01",
+    "name": "백 필터 차압",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      169
+    ],
+    "role": "BF01의 차압 감시. 세정 허가·주기·경보 기준과 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "dp_01",
+      "pr_bf01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "DP02",
+    "name": "백 필터 차압",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      169
+    ],
+    "role": "BF02의 차압 감시. 세정 허가·주기·경보 기준과 연결된다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "dp_02",
+      "pr_br02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ZT01",
+    "name": "FN01 진동 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      82
+    ],
+    "role": "FN01 진동 채널. 전기 회로 SPARE와 변환 네트워크 시험 조건을 확인한다.",
+    "parent": "",
+    "status": "SPARE·활성 조건 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ZT02",
+    "name": "P&ID 밸브 위치 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [],
+    "role": "P&ID MV01 위치 계측 태그. 현재 엔코더/TM 채널과 동일성은 확인 항목으로 남긴다.",
+    "parent": "MV01",
+    "status": "P&ID·현재 엔코더 동일성 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ZT03",
+    "name": "P&ID 밸브 위치 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [],
+    "role": "P&ID MV02 위치 계측 태그. 현재 엔코더/TM 채널과 동일성은 확인 항목으로 남긴다.",
+    "parent": "MV02",
+    "status": "P&ID·현재 엔코더 동일성 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ZT04",
+    "name": "P&ID 밸브 위치 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [],
+    "role": "P&ID MV03 위치 계측 태그. 현재 엔코더/TM 채널과 동일성은 확인 항목으로 남긴다.",
+    "parent": "MV03",
+    "status": "P&ID·현재 엔코더 동일성 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ZT05",
+    "name": "P&ID 밸브 위치 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [],
+    "role": "P&ID MV05 위치 계측 태그. 현재 엔코더/TM 채널과 동일성은 확인 항목으로 남긴다.",
+    "parent": "MV05",
+    "status": "P&ID·현재 엔코더 동일성 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "ZT06",
+    "name": "P&ID 밸브 위치 계측",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [],
+    "role": "P&ID MV06 위치 계측 태그. 현재 엔코더/TM 채널과 동일성은 확인 항목으로 남긴다.",
+    "parent": "MV06",
+    "status": "P&ID·현재 엔코더 동일성 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LT01",
+    "name": "석회 사일로 레벨",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      170
+    ],
+    "role": "LD01 사일로의 P&ID 레벨 태그. PLC 저레벨 입력과 현장 센서 동일성을 확인한다.",
+    "parent": "LD01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ll_ld01",
+      "low level",
+      "lime level"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SS01",
+    "name": "이송 장치 감시 스위치",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      18,
+      19
+    ],
+    "role": "트립와이어·회전 또는 토크 감시의 실제 장치 종류와 접점 방향을 확인한다.",
+    "parent": "BC01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "bc01_tripwire",
+      "bc01_prox",
+      "ssl-01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SS09",
+    "name": "이송 장치 감시 스위치",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      23
+    ],
+    "role": "트립와이어·회전 또는 토크 감시의 실제 장치 종류와 접점 방향을 확인한다.",
+    "parent": "MC03",
+    "status": "자료에서 확인",
+    "aliases": [
+      "mc03_torque"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SS10",
+    "name": "이송 장치 감시 스위치",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      24,
+      25
+    ],
+    "role": "트립와이어·회전 또는 토크 감시의 실제 장치 종류와 접점 방향을 확인한다.",
+    "parent": "MC04",
+    "status": "자료에서 확인",
+    "aliases": [
+      "mc04_torque"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "SS11",
+    "name": "이송 장치 감시 스위치",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      26
+    ],
+    "role": "트립와이어·회전 또는 토크 감시의 실제 장치 종류와 접점 방향을 확인한다.",
+    "parent": "MC05",
+    "status": "자료에서 확인",
+    "aliases": [
+      "mc05_torque"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "PSL05",
+    "name": "압축공기 저압 스위치",
+    "kind": "sensor",
+    "group": "계측",
+    "fgs": [
+      76
+    ],
+    "role": "공압 계통의 저압 입력. 게이트 구동 가능 여부와 알람을 대조한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "low pressure air",
+      "psl-05"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV01",
+    "name": "공압 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      69
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "PV01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV02",
+    "name": "공압 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      69
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "PV01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV03",
+    "name": "드럼 윤활 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      20
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "RD01",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev03"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV04",
+    "name": "공압 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      71
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "PV02",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev04"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV05",
+    "name": "공압 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      71
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "PV02",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev05"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV06",
+    "name": "공압 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      73
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "PV03",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev06"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV07",
+    "name": "공압 솔레노이드",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      74
+    ],
+    "role": "상위 장치 요청·중간 릴레이·현장 코일을 연결해 점검한다.",
+    "parent": "PV04",
+    "status": "자료에서 확인",
+    "aliases": [
+      "ev07"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV11",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      154
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV12",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      154
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV13",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      154
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV14",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      155
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV15",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      155
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV16",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      155
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV17",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      156
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV18",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      156
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV19",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      156
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV20",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      157
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV21",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      157
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV22",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      157
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV23",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      158
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV24",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      158
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV25",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      158
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV26",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      159
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV27",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      159
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV28",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      159
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV29",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      160
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV30",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      160
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV31",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      160
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV32",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      161
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV33",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      161
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV34",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      161
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV35",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      162
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV36",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      162
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV37",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      162
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV38",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      163
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV39",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      163
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV40",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      163
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV41",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      164
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV42",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      164
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV43",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      164
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV44",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      165
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV45",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      165
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV46",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      165
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV47",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      166
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV48",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      166
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV49",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      166
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV50",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      167
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV51",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      183
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV52",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      183
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV53",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      183
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV54",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      184
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV55",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      184
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV56",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      184
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV57",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      185
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV58",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      185
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV59",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      185
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV60",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      186
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV61",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      186
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV62",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      186
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV63",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      187
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV64",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      187
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV65",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      187
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV66",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      188
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV67",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      188
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV68",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      188
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV69",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      189
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV70",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      189
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV71",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      189
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV72",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      190
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV73",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      190
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV74",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      190
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV75",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      191
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV76",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      191
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV77",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      191
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV78",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      192
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV79",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      192
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV80",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      192
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV81",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      193
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV82",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      193
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV83",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      193
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV84",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      194
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV85",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      194
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV86",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      194
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV87",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      195
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV88",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      195
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV89",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      195
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "EV90",
+    "name": "필터 펄스 세정 밸브",
+    "kind": "pulse",
+    "group": "필터 세정 밸브",
+    "fgs": [
+      196
+    ],
+    "role": "개별 세정 펄스 출력 채널. 순서 번호를 출력 주소와 별도로 기록한다.",
+    "parent": "BF02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "CYL-CL01",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL01과 별개다."
+  },
+  {
+    "id": "CYL-CL02",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL02과 별개다."
+  },
+  {
+    "id": "CYL-CL03",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL03과 별개다."
+  },
+  {
+    "id": "CYL-CL04",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV01",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL04과 별개다."
+  },
+  {
+    "id": "CYL-CL05",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL05과 별개다."
+  },
+  {
+    "id": "CYL-CL06",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL06과 별개다."
+  },
+  {
+    "id": "CYL-CL07",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL07과 별개다."
+  },
+  {
+    "id": "CYL-CL08",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV02",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL08과 별개다."
+  },
+  {
+    "id": "CYL-CL09",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV03",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL09과 별개다."
+  },
+  {
+    "id": "CYL-CL10",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV03",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL10과 별개다."
+  },
+  {
+    "id": "CYL-CL11",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV04",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL11과 별개다."
+  },
+  {
+    "id": "CYL-CL12",
+    "name": "공압 실린더",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [],
+    "role": "P&ID의 실린더. 독립 PLC 출력으로 단정하지 않고 상위 밸브 구동 관계를 점검한다.",
+    "parent": "PV14",
+    "status": "자료에서 확인",
+    "aliases": [],
+    "pid": true,
+    "note": "외부 모터 CLIENT-CL12과 별개다."
+  },
+  {
+    "id": "LS01",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      69,
+      70
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV01",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-01",
+      "ls.01"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS02",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      69,
+      70
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV01",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-02",
+      "ls.02"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS05",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      69,
+      70
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV01",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-05",
+      "ls.05"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS06",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      69,
+      70
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV01",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-06",
+      "ls.06"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS09",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      73
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV03",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-09",
+      "ls.09"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS10",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      73
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV03",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-10",
+      "ls.10"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS15",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      34,
+      35
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV05",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-15",
+      "ls.15"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS16",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      34,
+      35
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV05",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-16",
+      "ls.16"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS17",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      36,
+      37
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV02",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-17",
+      "ls.17"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS18",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      36,
+      37
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV02",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-18",
+      "ls.18"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS19",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      38,
+      39
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV03",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-19",
+      "ls.19"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS20",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      38,
+      39
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV03",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-20",
+      "ls.20"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS21A",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      40,
+      41
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV04",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-21a",
+      "ls.21a"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS21B",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      40,
+      41
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV04",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-21b",
+      "ls.21b"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS22A",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      40,
+      41
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV04",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-22a",
+      "ls.22a"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS22B",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      40,
+      41
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV04",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-22b",
+      "ls.22b"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS23",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      44,
+      45
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV01",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-23",
+      "ls.23"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS24",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      44,
+      45
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV01",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-24",
+      "ls.24"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS25",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      71,
+      72
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV02",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-25",
+      "ls.25"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS26",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      71,
+      72
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV02",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-26",
+      "ls.26"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS29",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      71,
+      72
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV02",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-29",
+      "ls.29"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS30",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      71,
+      72
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV02",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-30",
+      "ls.30"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS32",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      74
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV04",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-32",
+      "ls.32"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS33",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      74
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "PV04",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-33",
+      "ls.33"
+    ],
+    "pid": true,
+    "note": ""
+  },
+  {
+    "id": "LS34",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV06",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-34",
+      "ls.34"
+    ],
+    "pid": true,
+    "note": "MV06은 P&ID LS34/35와 백업 LS40/41 표기가 다르다."
+  },
+  {
+    "id": "LS35",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV06",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-35",
+      "ls.35"
+    ],
+    "pid": true,
+    "note": "MV06은 P&ID LS34/35와 백업 LS40/41 표기가 다르다."
+  },
+  {
+    "id": "LS40",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV06",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-40",
+      "ls.40"
+    ],
+    "pid": false,
+    "note": "MV06은 P&ID LS34/35와 백업 LS40/41 표기가 다르다."
+  },
+  {
+    "id": "LS41",
+    "name": "밸브 위치 리미트 스위치",
+    "kind": "component",
+    "group": "하위 구성품",
+    "fgs": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "role": "개방/폐쇄 위치 센서. 번호·방향·단자·PLC 입력을 상위 장치와 대조한다.",
+    "parent": "MV06",
+    "status": "P&ID/전기/백업 번호 대조",
+    "aliases": [
+      "ls-41",
+      "ls.41"
+    ],
+    "pid": false,
+    "note": "MV06은 P&ID LS34/35와 백업 LS40/41 표기가 다르다."
+  },
+  {
+    "id": "SYS-POWER",
+    "name": "주전원·보조전원·제어반",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      16,
+      84
+    ],
+    "role": "주전원·110Vac·24Vdc·제어반 냉각과 서비스 릴레이를 관리한다. 표지 전압과 회로 제목의 차이를 확인한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "presence 110v",
+      "presence voltage"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-SAFETY",
+    "name": "비상정지·일반 안전 회로",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [
+      12,
+      13,
+      14,
+      15,
+      99,
+      236
+    ],
+    "role": "비상정지와 일반 허가, 온도 허가 회로의 물리·논리 경로를 검토한다. CPU 형식이나 일반 PLC 접점만으로 안전 인증을 판단하지 않는다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "em_ok",
+      "em_ok",
+      "emergency",
+      "temperature interlock",
+      "177t1_ok"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-PLC-IO",
+    "name": "CPU·분산 I/O·신호 변환",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      153,
+      182
+    ],
+    "role": "CPU·I/O 구성, 원시 입력/출력, 단위 환산, 엔코더/TM 및 진단 상태를 관리한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "mod_err",
+      "prog_err",
+      "rack_flt"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-HMI",
+    "name": "HMI·통신·가공 상태",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "기본 HMI의 화면·태그·PLC 주소·상태 가공과 운전 요청 경로를 관리한다. 전체 782개 설정 대장을 제공한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "hmi_db"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-ALARM",
+    "name": "알람·경광등·사이렌·Reset",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [
+      17
+    ],
+    "role": "원인·유지·확인·Reset·통합 알람 및 출력 표시를 연결한다. HMI Reset 요청과 내부 Reset 비트를 별도 신호로 추적한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "resetalarms",
+      "reset_allarm",
+      "acknowledg",
+      "siren",
+      "blinking ligh"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-AUTO",
+    "name": "자동 기동·정지·유지보수",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "운전 허가·기동 단계·대기·유지보수 모드의 호출 및 출력 관계를 관리한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "abilitaauto",
+      "abilitamaintenance",
+      "standby",
+      "maintenance"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-PID",
+    "name": "온도·압력·산소·비율 제어",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "주기 OB의 PID 호출, 채널 선택, 수동/자동, 제한과 밸브·버너 출력 경로를 관리한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "tc_pid_ref",
+      "stechiometro"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-RECIPES",
+    "name": "레시피·설정값 관리",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "레시피 선택·편집·적용값·현재 설정 DB를 추적한다. 화면 편집 값과 실제 적용 값의 전달 경로를 구분한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "recipe",
+      "recipes",
+      "editor_"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-SIMULATION",
+    "name": "기존 시험·시뮬레이션 블록",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "백업에 남은 Simulation 블록과 시험 비트가 실제 입력 대체·자동 조건에 미치는 영향을 검토한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "simulation",
+      "under testing"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-RUNHOURS",
+    "name": "모터 운전시간·정비 이력",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "Time work motor 관련 카운트·유지보수 값·Reset 경로를 관리한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "hours motors",
+      "hours_motor"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-COUNTERS",
+    "name": "생산량·가스·유량 계수",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "BWF 펄스·생산량·가스/유량·Reset·스케일과 누적값을 관리한다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "reset_prod_count",
+      "reset_gas_count",
+      "conta_prod",
+      "conta_gas",
+      "count_rep"
+    ],
+    "pid": false,
+    "note": ""
+  },
+  {
+    "id": "SYS-LEGACY",
+    "name": "과거 태그·이름 대응",
+    "kind": "software",
+    "group": "공통 시스템",
+    "fgs": [],
+    "role": "MN01 속도 감소 참조와 PC03/TR01/FR01/VT01 등 과거 이름을 현재 설비와 대조한다. 이름만으로 장치를 병합하지 않는다. DB 인터페이스 설명 원문은 block_summary.json 및 live_index.json에 보존했다.",
+    "parent": "",
+    "status": "자료에서 확인",
+    "aliases": [
+      "mn01",
+      "pc03",
+      "pc_03",
+      "tr01",
+      "fr01",
+      "vt01",
+      "mn02",
+      "mn03",
+      "mn04"
+    ],
+    "pid": false,
+    "note": ""
+  }
+]

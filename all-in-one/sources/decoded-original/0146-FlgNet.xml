@@ -1,0 +1,70 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC">
+  <Parts>
+    <Part UId="92" Gate="Contact" />
+    <Part UId="61" Gate="Add">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="67" Gate="Gt">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="70" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <ORef UId="73" RefId="1" />
+    <ORef UId="74" RefId="5" />
+    <ORef UId="75" RefId="6" />
+    <ORef UId="76" RefId="5" />
+    <ORef UId="77" RefId="5" />
+    <ORef UId="78" RefId="7" />
+    <ORef UId="79" RefId="9" />
+    <ORef UId="80" RefId="5" />
+  </Parts>
+  <Wires>
+    <Wire UId="81">
+      <OCon UId="73" />
+      <PCon UId="92" PinName="operand" />
+    </Wire>
+    <Wire UId="82">
+      <OCon UId="74" />
+      <PCon UId="61" PinName="in1" />
+    </Wire>
+    <Wire UId="83">
+      <OCon UId="75" />
+      <PCon UId="61" PinName="in2" />
+    </Wire>
+    <Wire UId="84">
+      <PCon UId="61" PinName="out" />
+      <OCon UId="76" />
+    </Wire>
+    <Wire UId="85">
+      <OCon UId="77" />
+      <PCon UId="67" PinName="in1" />
+    </Wire>
+    <Wire UId="86">
+      <OCon UId="78" />
+      <PCon UId="67" PinName="in2" />
+    </Wire>
+    <Wire UId="87">
+      <PCon UId="67" PinName="out" />
+      <PCon UId="70" PinName="en" />
+    </Wire>
+    <Wire UId="89">
+      <OCon UId="79" />
+      <PCon UId="70" PinName="in" />
+    </Wire>
+    <Wire UId="90">
+      <PCon UId="70" PinName="out1" />
+      <OCon UId="80" />
+    </Wire>
+    <Wire UId="93">
+      <PCon UId="92" PinName="out" />
+      <PCon UId="61" PinName="en" />
+      <PCon UId="67" PinName="pre" />
+    </Wire>
+    <Wire UId="94">
+      <Powerrail />
+      <PCon UId="92" PinName="in" />
+    </Wire>
+  </Wires>
+</FlgNet>

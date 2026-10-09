@@ -1,0 +1,53 @@
+{
+  "status": "reviewed",
+  "date": "2026-10-09",
+  "reviewer": "/root/body_independent_review",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "read_only": true,
+  "confirmed_errors": 0,
+  "reviewed_networks": [
+    424,
+    425,
+    1932,
+    1933
+  ],
+  "source_hashes": {
+    "sources/decoded-original/0234-FlgNet.xml": "4fa899449ab66d4a852be7c21085590393a8ad11c65d265222c3bfcd649dfc64",
+    "sources/decoded-original/0235-FlgNet.xml": "1a4913d7a151824d6318edcd43bd4d496bee11b83a75f1d8f5d4cb04dd01b71c",
+    "sources/decoded-original/0239-FlgNet.xml": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599",
+    "sources/decoded-original/0240-FlgNet.xml": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33",
+    "sources/decoded-original/0599-IdentXmlPart.xml": "32a693fe12134febbd9f5c7da10c3469ef4d5b164ab8b6bd9ea3867c358936c1",
+    "sources/decoded-original/0601-IdentXmlPart.xml": "04c9481f7381284de689ef5c7ff40d7aea93f2004cd877a4e4f27e47baa6d862",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0605-IdentXmlPart.xml": "0ff6e2228dbfbc9f657359fe1055083ce621365084ea24c4160e4969b3eaac8b",
+    "sources/decoded-original/0606-IdentXmlPart.xml": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd"
+  },
+  "findings": [
+    {
+      "scope": "424/425",
+      "result": "Global Input AO132/133; ON AND Fault Set; ON AND NOT Fault AND RESET_ALLARM Reset; no timer/Run/Ready/start in selected networks; title bwf02 does not prove identity"
+    },
+    {
+      "scope": "1932/1933",
+      "result": "Six OR request-reset branches; ON AND Flag ConsentStart Output AO50/51; exact Global/Local/Int0 scopes separated"
+    },
+    {
+      "scope": "P14 PDF1/31/58",
+      "result": "Two different cyclone groups; M21 VR01/M23 VR02/CY02 lamp and button; cable8_16 UC01 FLO4TB1 to CY02 17HL1 DC CVV3G; identity remains unverified"
+    }
+  ],
+  "excluded_after_user_instruction": [
+    "MV04",
+    "P22",
+    "P23"
+  ],
+  "related_review_stopped": true,
+  "field_verified": false,
+  "tia_verified": false,
+  "plc_changes": 0,
+  "simulator_execution": 0
+}

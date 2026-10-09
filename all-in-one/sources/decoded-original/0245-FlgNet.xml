@@ -1,0 +1,97 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="307" Gate="Contact" />
+    <Part UId="309" Gate="Contact" />
+    <Part UId="311" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="313" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="318" Gate="Contact">
+      <Negated PinName="operand" />
+    </Part>
+    <Part UId="278" Gate="O">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part UId="283" Gate="RCoil" />
+    <Part UId="315" Gate="Contact" />
+    <Part UId="287" Gate="Coil" />
+    <ORef UId="288" RefId="1" />
+    <ORef UId="289" RefId="54" />
+    <ORef UId="290" RefId="46" />
+    <ORef UId="291" RefId="11" />
+    <ORef UId="319" RefId="4" />
+    <ORef UId="292" RefId="55" />
+    <ORef UId="293" RefId="55" />
+    <ORef UId="294" RefId="56" />
+  </Parts>
+  <Wires>
+    <Wire UId="317">
+      <Powerrail />
+      <PCon UId="307" PinName="in" />
+    </Wire>
+    <Wire UId="295">
+      <OCon UId="288" />
+      <PCon UId="307" PinName="operand" />
+    </Wire>
+    <Wire UId="308">
+      <PCon UId="307" PinName="out" />
+      <PCon UId="309" PinName="in" />
+      <PCon UId="311" PinName="in" />
+      <PCon UId="315" PinName="in" />
+    </Wire>
+    <Wire UId="296">
+      <OCon UId="289" />
+      <PCon UId="309" PinName="operand" />
+    </Wire>
+    <Wire UId="310">
+      <PCon UId="309" PinName="out" />
+      <PCon UId="278" PinName="in1" />
+    </Wire>
+    <Wire UId="297">
+      <OCon UId="290" />
+      <PCon UId="311" PinName="operand" />
+    </Wire>
+    <Wire UId="312">
+      <PCon UId="311" PinName="out" />
+      <PCon UId="313" PinName="in" />
+    </Wire>
+    <Wire UId="298">
+      <OCon UId="291" />
+      <PCon UId="313" PinName="operand" />
+    </Wire>
+    <Wire UId="21">
+      <PCon UId="313" PinName="out" />
+      <PCon UId="318" PinName="in" />
+    </Wire>
+    <Wire UId="321">
+      <OCon UId="319" />
+      <PCon UId="318" PinName="operand" />
+    </Wire>
+    <Wire UId="22">
+      <PCon UId="318" PinName="out" />
+      <PCon UId="278" PinName="in2" />
+    </Wire>
+    <Wire UId="300">
+      <PCon UId="278" PinName="out" />
+      <PCon UId="283" PinName="in" />
+    </Wire>
+    <Wire UId="302">
+      <OCon UId="292" />
+      <PCon UId="283" PinName="operand" />
+    </Wire>
+    <Wire UId="303">
+      <OCon UId="293" />
+      <PCon UId="315" PinName="operand" />
+    </Wire>
+    <Wire UId="316">
+      <PCon UId="315" PinName="out" />
+      <PCon UId="287" PinName="in" />
+    </Wire>
+    <Wire UId="305">
+      <OCon UId="294" />
+      <PCon UId="287" PinName="operand" />
+    </Wire>
+  </Wires>
+</FlgNet>

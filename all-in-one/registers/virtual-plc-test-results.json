@@ -1,0 +1,3497 @@
+{
+  "version": 1,
+  "updated": "2026-10-07T12:17:51.346Z",
+  "engine_version": "0.1.0",
+  "model_version": "0.1.0",
+  "model_sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+  "passed": 19,
+  "failed": 0,
+  "full_design_tests_passed": 0,
+  "plc_connected": false,
+  "tia_verified": false,
+  "scope": "지원 명령과 선택한 원본 네트워크의 가상 모델 행동 시험. 실제 Q/I 전달, 전체 호출, 전원 재시작과 현장 수락 시험은 포함하지 않음.",
+  "results": [
+    {
+      "id": "BC01-V01",
+      "equipment": "BC01",
+      "title": "정상 기동과 가상 피드백 응답",
+      "design": "BC01-SIM-01",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 1000,
+        "scans": 11,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": true,
+          "start bc01": true,
+          "inputs.bc01 run": true,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": false,
+          "allarm.bc01_inv": false,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": true,
+            "value": true
+          }
+        ],
+        "trace": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V02",
+      "equipment": "BC01",
+      "title": "피드백 감시 시간 전후의 알람과 정지",
+      "design": "BC01-SIM-02",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 2100,
+        "scans": 23,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": false,
+          "start bc01": false,
+          "inputs.bc01 run": false,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": true,
+          "allarm.bc01_inv": false,
+          "tag_51": true
+        },
+        "timers": {
+          "tag_51": {
+            "active": true,
+            "since": 100,
+            "preset": 2000,
+            "elapsed": 2000,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 2100,
+            "scan": 23,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V03",
+      "equipment": "BC01",
+      "title": "운전 중 인버터 이상 래치",
+      "design": "BC01-SIM-03",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 3200,
+        "scans": 33,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": false,
+          "start bc01": false,
+          "inputs.bc01 run": false,
+          "inputs.bc01_all_inv": true,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": true,
+          "allarm.bc01_inv": true,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": true,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": false,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 3100,
+            "scan": 32,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 3100,
+            "scan": 32,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 3100,
+            "scan": 32,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 3100,
+            "scan": 32,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 3100,
+            "scan": 32,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 3200,
+            "scan": 33,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V04",
+      "equipment": "BC01",
+      "title": "원인 해제만으로 래치 해소·재기동하지 않음",
+      "design": "BC01-SIM-05",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 4300,
+        "scans": 45,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": true,
+          "start bc01": true,
+          "inputs.bc01 run": true,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": false,
+          "allarm.bc01_inv": false,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 4300,
+            "scan": 45,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": true,
+            "value": true
+          }
+        ],
+        "trace": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2200,
+            "scan": 23,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2200,
+            "scan": 23,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2200,
+            "scan": 23,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 2200,
+            "scan": 23,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 2300,
+            "scan": 24,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 3300,
+            "scan": 35,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 3400,
+            "scan": 36,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V05",
+      "equipment": "BC01",
+      "title": "미확인 기동 Flag를 0으로 단정하지 않음",
+      "design": "",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 100,
+        "scans": 2,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": null,
+          "start bc01": null,
+          "inputs.bc01 run": false,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": false,
+          "allarm.bc01_inv": false,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": false,
+            "before": null,
+            "value": null
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": null,
+            "before": false,
+            "value": null
+          }
+        ],
+        "trace": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": null,
+            "before": false,
+            "value": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V06",
+      "equipment": "BC01",
+      "title": "정지 요청으로 가상 출력과 피드백 해제",
+      "design": "BC01-SIM-03",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 1200,
+        "scans": 13,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": false,
+          "start bc01": false,
+          "inputs.bc01 run": false,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": false,
+          "allarm.bc01_inv": false,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": false,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 1100,
+            "scan": 12,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V01",
+      "equipment": "FN04",
+      "title": "정상 기동과 가상 피드백 응답",
+      "design": "FN04-SIM-01",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 1000,
+        "scans": 11,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": true,
+          "start fn04": true,
+          "inputs.fn04 run": true,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": false,
+          "allarm.fn04_inv": false,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 1000,
+            "scan": 11,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": true,
+            "value": true
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V02",
+      "equipment": "FN04",
+      "title": "피드백 감시 시간 전후의 알람과 정지",
+      "design": "FN04-SIM-02",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 17100,
+        "scans": 173,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": false,
+          "start fn04": false,
+          "inputs.fn04 run": false,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": true,
+          "allarm.fn04_inv": false,
+          "tag_74": true,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": true,
+            "since": 100,
+            "preset": 17000,
+            "elapsed": 17000,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 0,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 17100,
+            "scan": 173,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V03",
+      "equipment": "FN04",
+      "title": "운전 중 인버터 이상 래치",
+      "design": "FN04-SIM-03",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 18200,
+        "scans": 183,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": false,
+          "start fn04": false,
+          "inputs.fn04 run": false,
+          "inputs.fn04_all_inv": true,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": true,
+          "allarm.fn04_inv": true,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 18100,
+            "scan": 182,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 18100,
+            "scan": 182,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 18100,
+            "scan": 182,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 18100,
+            "scan": 182,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 18100,
+            "scan": 182,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 18200,
+            "scan": 183,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V04",
+      "equipment": "FN04",
+      "title": "원인 해제만으로 래치 해소·재기동하지 않음",
+      "design": "FN04-SIM-05",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 19300,
+        "scans": 195,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": true,
+          "start fn04": true,
+          "inputs.fn04 run": true,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": false,
+          "allarm.fn04_inv": false,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 19300,
+            "scan": 195,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": true,
+            "value": true
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17200,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17200,
+            "scan": 173,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 17200,
+            "scan": 173,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 17200,
+            "scan": 173,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 17300,
+            "scan": 174,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 18300,
+            "scan": 185,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 18400,
+            "scan": 186,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V05",
+      "equipment": "FN04",
+      "title": "미확인 기동 Flag를 0으로 단정하지 않음",
+      "design": "",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 100,
+        "scans": 2,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": null,
+          "start fn04": null,
+          "inputs.fn04 run": false,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": false,
+          "allarm.fn04_inv": false,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": false,
+            "before": null,
+            "value": null
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": null,
+            "before": false,
+            "value": null
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": null,
+            "before": false,
+            "value": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V06",
+      "equipment": "FN04",
+      "title": "정지 요청으로 가상 출력과 피드백 해제",
+      "design": "FN04-SIM-03",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 1200,
+        "scans": 13,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": false,
+          "start fn04": false,
+          "inputs.fn04 run": false,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": false,
+          "allarm.fn04_inv": false,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 1100,
+            "scan": 12,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V07",
+      "equipment": "BC01",
+      "title": "세 허가 경로가 모두 없으면 출력 억제",
+      "design": "BC01-SIM-04",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 2000,
+        "scans": 21,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": false,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": true,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": true,
+          "start bc01": true,
+          "inputs.bc01 run": true,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": false,
+          "allarm.bc01_inv": false,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 2000,
+            "scan": 21,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": true,
+            "value": true
+          }
+        ],
+        "trace": [
+          {
+            "time": 1100,
+            "scan": 12,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "BC01-V08",
+      "equipment": "BC01",
+      "title": "트립와이어 래치·조건부 리셋",
+      "design": "BC01-SIM-03",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1785,
+          1786,
+          1935
+        ],
+        "time": 1100,
+        "scans": 14,
+        "values": {
+          "on": true,
+          "flag.r1_gate_loop_on": true,
+          "memocmd_bc01_startup": false,
+          "flag.maintenance_on": false,
+          "under testing": false,
+          "inputs.bc01 trip wire": false,
+          "allarm.bc_01_fc": false,
+          "flag.m_bc_01": false,
+          "start bc01": false,
+          "inputs.bc01 run": false,
+          "inputs.bc01_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.bc_01_fault": false,
+          "allarm.bc01_inv": false,
+          "tag_51": false
+        },
+        "timers": {
+          "tag_51": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1785,
+            "uid": "217"
+          }
+        },
+        "writes": [
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1785,
+            "uid": "217",
+            "gate": "SdCoil",
+            "name": "Tag_51",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1785,
+            "uid": "223",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1785,
+            "uid": "27",
+            "gate": "SCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1785,
+            "uid": "228",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1785,
+            "uid": "267",
+            "gate": "RCoil",
+            "name": "Allarm.BC01_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": false,
+            "before": true,
+            "value": true
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": false,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 1100,
+            "scan": 12,
+            "network": 1786,
+            "uid": "234",
+            "gate": "SCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 1100,
+            "scan": 12,
+            "network": 1935,
+            "uid": "198",
+            "gate": "RCoil",
+            "name": "Flag.M_BC_01",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 12,
+            "network": 1935,
+            "uid": "202",
+            "gate": "Coil",
+            "name": "Start BC01",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 1100,
+            "scan": 14,
+            "network": 1786,
+            "uid": "240",
+            "gate": "RCoil",
+            "name": "Allarm.BC_01_FC",
+            "condition": true,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V07",
+      "equipment": "FN04",
+      "title": "풍량 설정 0과 TC09 상상한 조건에서 요청 해제",
+      "design": "FN04-SIM-04",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 1200,
+        "scans": 13,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": true,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": true,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": false,
+          "start fn04": false,
+          "inputs.fn04 run": true,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": false,
+          "allarm.fn04_inv": false,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 200,
+            "scan": 3,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 1200,
+            "scan": 13,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "FN04-V08",
+      "equipment": "FN04",
+      "title": "관련 설비 피드백 상실의 90분 지연 정지",
+      "design": "FN04-SIM-04",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "networks": [
+          1809,
+          1964,
+          1965
+        ],
+        "time": 5401100,
+        "scans": 5414,
+        "values": {
+          "on": true,
+          "data.set_perc_fn04": 70,
+          "stop_fan_fn04": false,
+          "allarm.max_max_tc09": false,
+          "inputs.feedbackmotor sc-01": true,
+          "inputs.vr03 run": false,
+          "inputs.feedbackmotor sc-10": true,
+          "inputs.vr04 run": true,
+          "inputs.feedbackmotor sc-11": true,
+          "inputs.vr05 run": true,
+          "allarm.prealarms_fn04": false,
+          "flag.m_fn_04": false,
+          "start fn04": false,
+          "inputs.fn04 run": false,
+          "inputs.fn04_all_inv": false,
+          "flag.reset_allarm": false,
+          "allarm.fn_04_fault": false,
+          "allarm.fn04_inv": false,
+          "tag_74": false,
+          "tag_126": false
+        },
+        "timers": {
+          "tag_74": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1809,
+            "uid": "1055"
+          },
+          "tag_126": {
+            "active": false,
+            "since": null,
+            "preset": null,
+            "elapsed": 0,
+            "network": 1964,
+            "uid": "985"
+          }
+        },
+        "writes": [
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1809,
+            "uid": "1055",
+            "gate": "SdCoil",
+            "name": "Tag_74",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1809,
+            "uid": "1061",
+            "gate": "SCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1809,
+            "uid": "1105",
+            "gate": "SCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1809,
+            "uid": "1066",
+            "gate": "RCoil",
+            "name": "Allarm.FN_04_FAULT",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1809,
+            "uid": "1113",
+            "gate": "RCoil",
+            "name": "Allarm.FN04_INV",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": false,
+            "before": false,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": false,
+            "value": false
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 100,
+            "scan": 2,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 1000,
+            "scan": 12,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 5401000,
+            "scan": 5413,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 5401000,
+            "scan": 5413,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 5401000,
+            "scan": 5413,
+            "network": 1965,
+            "uid": "1010",
+            "gate": "RCoil",
+            "name": "Flag.M_FN_04",
+            "condition": true,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401000,
+            "scan": 5413,
+            "network": 1965,
+            "uid": "1014",
+            "gate": "Coil",
+            "name": "Start FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1964,
+            "uid": "982",
+            "gate": "Coil",
+            "name": "Allarm.Prealarms_FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1964,
+            "uid": "985",
+            "gate": "SdCoil",
+            "name": "Tag_126",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 5401100,
+            "scan": 5414,
+            "network": 1964,
+            "uid": "990",
+            "gate": "Coil",
+            "name": "Stop_Fan_FN04",
+            "condition": false,
+            "before": true,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "SD-V01",
+      "equipment": "",
+      "title": "SD 시간 경계·입력 해제·다시 시작",
+      "design": "",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "time": 7000,
+        "scans": 7,
+        "values": {
+          "in": true,
+          "pt": 5000,
+          "t": true
+        },
+        "timers": {
+          "t": {
+            "active": true,
+            "since": 2000,
+            "preset": 5000,
+            "elapsed": 5000,
+            "network": "fixture",
+            "uid": "1"
+          }
+        },
+        "writes": [
+          {
+            "time": 7000,
+            "scan": 7,
+            "network": "fixture",
+            "uid": "1",
+            "gate": "SdCoil",
+            "name": "T",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ],
+        "trace": [
+          {
+            "time": 0,
+            "scan": 1,
+            "network": "fixture",
+            "uid": "1",
+            "gate": "SdCoil",
+            "name": "T",
+            "condition": true,
+            "before": null,
+            "value": false
+          },
+          {
+            "time": 2000,
+            "scan": 3,
+            "network": "fixture",
+            "uid": "1",
+            "gate": "SdCoil",
+            "name": "T",
+            "condition": true,
+            "before": false,
+            "value": true
+          },
+          {
+            "time": 2000,
+            "scan": 4,
+            "network": "fixture",
+            "uid": "1",
+            "gate": "SdCoil",
+            "name": "T",
+            "condition": false,
+            "before": true,
+            "value": false
+          },
+          {
+            "time": 7000,
+            "scan": 7,
+            "network": "fixture",
+            "uid": "1",
+            "gate": "SdCoil",
+            "name": "T",
+            "condition": true,
+            "before": false,
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "BOOL-V01",
+      "equipment": "",
+      "title": "미확인 조건의 3값 논리 진리표",
+      "design": "",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "truth_table": "unknown preserved; boolean and numeric types not coerced"
+      }
+    },
+    {
+      "id": "BLOCK-V01",
+      "equipment": "",
+      "title": "미지원 네트워크는 시간·메모리 변경 전에 실행 보류",
+      "design": "",
+      "status": "passed",
+      "scope": "가상 모델 부분 시험",
+      "evidence": {
+        "network": 336,
+        "reasons": [
+          "ORef 24 미해석",
+          "ORef 28 미해석",
+          "쓰기 대상 미해석: 27.operand"
+        ]
+      }
+    }
+  ]
+}

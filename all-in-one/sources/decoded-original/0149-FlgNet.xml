@@ -1,0 +1,88 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC">
+  <Parts>
+    <Part UId="337" Gate="Contact" />
+    <Part UId="293" Gate="SCoil" />
+    <Part UId="339" Gate="Contact" />
+    <Part UId="297" Gate="SCoil" />
+    <Part UId="300" Gate="SCoil" />
+    <Part UId="341" Gate="Contact" />
+    <Part UId="304" Gate="SCoil" />
+    <Part UId="307" Gate="SCoil" />
+    <Part UId="310" Gate="SCoil" />
+    <Part UId="313" Gate="SCoil" />
+    <ORef UId="314" RefId="1" />
+    <ORef UId="315" RefId="42" />
+    <ORef UId="316" RefId="1" />
+    <ORef UId="317" RefId="43" />
+    <ORef UId="318" RefId="44" />
+    <ORef UId="319" RefId="1" />
+    <ORef UId="320" RefId="45" />
+    <ORef UId="321" RefId="46" />
+    <ORef UId="322" RefId="47" />
+    <ORef UId="323" RefId="48" />
+  </Parts>
+  <Wires>
+    <Wire UId="324">
+      <OCon UId="314" />
+      <PCon UId="337" PinName="operand" />
+    </Wire>
+    <Wire UId="325">
+      <OCon UId="315" />
+      <PCon UId="293" PinName="operand" />
+    </Wire>
+    <Wire UId="326">
+      <OCon UId="316" />
+      <PCon UId="339" PinName="operand" />
+    </Wire>
+    <Wire UId="328">
+      <OCon UId="317" />
+      <PCon UId="297" PinName="operand" />
+    </Wire>
+    <Wire UId="329">
+      <OCon UId="318" />
+      <PCon UId="300" PinName="operand" />
+    </Wire>
+    <Wire UId="330">
+      <OCon UId="319" />
+      <PCon UId="341" PinName="operand" />
+    </Wire>
+    <Wire UId="332">
+      <OCon UId="320" />
+      <PCon UId="304" PinName="operand" />
+    </Wire>
+    <Wire UId="333">
+      <OCon UId="321" />
+      <PCon UId="307" PinName="operand" />
+    </Wire>
+    <Wire UId="334">
+      <OCon UId="322" />
+      <PCon UId="310" PinName="operand" />
+    </Wire>
+    <Wire UId="335">
+      <OCon UId="323" />
+      <PCon UId="313" PinName="operand" />
+    </Wire>
+    <Wire UId="338">
+      <PCon UId="337" PinName="out" />
+      <PCon UId="293" PinName="in" />
+      <PCon UId="339" PinName="in" />
+      <PCon UId="300" PinName="in" />
+      <PCon UId="341" PinName="in" />
+      <PCon UId="307" PinName="in" />
+      <PCon UId="310" PinName="in" />
+      <PCon UId="313" PinName="in" />
+    </Wire>
+    <Wire UId="340">
+      <PCon UId="339" PinName="out" />
+      <PCon UId="297" PinName="in" />
+    </Wire>
+    <Wire UId="342">
+      <PCon UId="341" PinName="out" />
+      <PCon UId="304" PinName="in" />
+    </Wire>
+    <Wire UId="343">
+      <Powerrail />
+      <PCon UId="337" PinName="in" />
+    </Wire>
+  </Wires>
+</FlgNet>

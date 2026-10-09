@@ -1,0 +1,205 @@
+<FlgNet xmlns="http://www.siemens.com/automation/2015/FunctionLadderDiagram" Version="14.0.0.2" Lang="LAD_CLASSIC" Routed="true">
+  <Parts>
+    <Part UId="1789" Gate="Contact" />
+    <Part UId="1680" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1683" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1688" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1691" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1696" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1699" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1704" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1707" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1712" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1715" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part UId="1720" Gate="Eq">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part UId="1723" Gate="Move">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <ORef UId="1726" RefId="80" />
+    <ORef UId="1727" RefId="48" />
+    <ORef UId="1728" RefId="198" />
+    <ORef UId="1729" RefId="200" />
+    <ORef UId="1730" RefId="59" />
+    <ORef UId="1731" RefId="48" />
+    <ORef UId="1732" RefId="201" />
+    <ORef UId="1733" RefId="203" />
+    <ORef UId="1734" RefId="59" />
+    <ORef UId="1735" RefId="48" />
+    <ORef UId="1736" RefId="204" />
+    <ORef UId="1737" RefId="183" />
+    <ORef UId="1738" RefId="59" />
+    <ORef UId="1739" RefId="48" />
+    <ORef UId="1740" RefId="206" />
+    <ORef UId="1741" RefId="208" />
+    <ORef UId="1742" RefId="59" />
+    <ORef UId="1743" RefId="48" />
+    <ORef UId="1744" RefId="209" />
+    <ORef UId="1745" RefId="211" />
+    <ORef UId="1746" RefId="59" />
+    <ORef UId="1747" RefId="48" />
+    <ORef UId="1748" RefId="212" />
+    <ORef UId="1749" RefId="188" />
+    <ORef UId="1750" RefId="59" />
+  </Parts>
+  <Wires>
+    <Wire UId="1791">
+      <Powerrail />
+      <PCon UId="1789" PinName="in" />
+    </Wire>
+    <Wire UId="1751">
+      <OCon UId="1726" />
+      <PCon UId="1789" PinName="operand" />
+    </Wire>
+    <Wire UId="1790">
+      <PCon UId="1789" PinName="out" />
+      <PCon UId="1680" PinName="pre" />
+      <PCon UId="1688" PinName="pre" />
+      <PCon UId="1696" PinName="pre" />
+      <PCon UId="1704" PinName="pre" />
+      <PCon UId="1712" PinName="pre" />
+      <PCon UId="1720" PinName="pre" />
+    </Wire>
+    <Wire UId="1752">
+      <OCon UId="1727" />
+      <PCon UId="1680" PinName="in1" />
+    </Wire>
+    <Wire UId="1753">
+      <OCon UId="1728" />
+      <PCon UId="1680" PinName="in2" />
+    </Wire>
+    <Wire UId="1754">
+      <PCon UId="1680" PinName="out" />
+      <PCon UId="1683" PinName="en" />
+    </Wire>
+    <Wire UId="1756">
+      <OCon UId="1729" />
+      <PCon UId="1683" PinName="in" />
+    </Wire>
+    <Wire UId="1757">
+      <PCon UId="1683" PinName="out1" />
+      <OCon UId="1730" />
+    </Wire>
+    <Wire UId="1758">
+      <OCon UId="1731" />
+      <PCon UId="1688" PinName="in1" />
+    </Wire>
+    <Wire UId="1759">
+      <OCon UId="1732" />
+      <PCon UId="1688" PinName="in2" />
+    </Wire>
+    <Wire UId="1760">
+      <PCon UId="1688" PinName="out" />
+      <PCon UId="1691" PinName="en" />
+    </Wire>
+    <Wire UId="1762">
+      <OCon UId="1733" />
+      <PCon UId="1691" PinName="in" />
+    </Wire>
+    <Wire UId="1763">
+      <PCon UId="1691" PinName="out1" />
+      <OCon UId="1734" />
+    </Wire>
+    <Wire UId="1764">
+      <OCon UId="1735" />
+      <PCon UId="1696" PinName="in1" />
+    </Wire>
+    <Wire UId="1765">
+      <OCon UId="1736" />
+      <PCon UId="1696" PinName="in2" />
+    </Wire>
+    <Wire UId="1766">
+      <PCon UId="1696" PinName="out" />
+      <PCon UId="1699" PinName="en" />
+    </Wire>
+    <Wire UId="1768">
+      <OCon UId="1737" />
+      <PCon UId="1699" PinName="in" />
+    </Wire>
+    <Wire UId="1769">
+      <PCon UId="1699" PinName="out1" />
+      <OCon UId="1738" />
+    </Wire>
+    <Wire UId="1770">
+      <OCon UId="1739" />
+      <PCon UId="1704" PinName="in1" />
+    </Wire>
+    <Wire UId="1771">
+      <OCon UId="1740" />
+      <PCon UId="1704" PinName="in2" />
+    </Wire>
+    <Wire UId="1772">
+      <PCon UId="1704" PinName="out" />
+      <PCon UId="1707" PinName="en" />
+    </Wire>
+    <Wire UId="1774">
+      <OCon UId="1741" />
+      <PCon UId="1707" PinName="in" />
+    </Wire>
+    <Wire UId="1775">
+      <PCon UId="1707" PinName="out1" />
+      <OCon UId="1742" />
+    </Wire>
+    <Wire UId="1776">
+      <OCon UId="1743" />
+      <PCon UId="1712" PinName="in1" />
+    </Wire>
+    <Wire UId="1777">
+      <OCon UId="1744" />
+      <PCon UId="1712" PinName="in2" />
+    </Wire>
+    <Wire UId="1778">
+      <PCon UId="1712" PinName="out" />
+      <PCon UId="1715" PinName="en" />
+    </Wire>
+    <Wire UId="1780">
+      <OCon UId="1745" />
+      <PCon UId="1715" PinName="in" />
+    </Wire>
+    <Wire UId="1781">
+      <PCon UId="1715" PinName="out1" />
+      <OCon UId="1746" />
+    </Wire>
+    <Wire UId="1782">
+      <OCon UId="1747" />
+      <PCon UId="1720" PinName="in1" />
+    </Wire>
+    <Wire UId="1783">
+      <OCon UId="1748" />
+      <PCon UId="1720" PinName="in2" />
+    </Wire>
+    <Wire UId="1784">
+      <PCon UId="1720" PinName="out" />
+      <PCon UId="1723" PinName="en" />
+    </Wire>
+    <Wire UId="1786">
+      <OCon UId="1749" />
+      <PCon UId="1723" PinName="in" />
+    </Wire>
+    <Wire UId="1787">
+      <PCon UId="1723" PinName="out1" />
+      <OCon UId="1750" />
+    </Wire>
+  </Wires>
+</FlgNet>

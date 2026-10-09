@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "date": "2026-10-08",
+  "guides": 6,
+  "selected_signals": 32,
+  "impact_sha256": "45607b76ceae16d0c390f5d246561b1999cb9045a3fdee1e4c97a4ee4a60c607",
+  "unique_pin_references": 490,
+  "unique_named_call_sites": 12,
+  "native_parts_checked": 97,
+  "other_scope_references_preserved": 1,
+  "source_hashes_checked": 313,
+  "document_routes": 290,
+  "field_verified": false,
+  "tia_verified": false,
+  "plc_changes": 0,
+  "simulator_development": "stopped_by_user",
+  "simulator_behavior_tests": "not_rerun",
+  "scope": "Exact source scope, native pin/wire/ref identities and call declarations; not execution"
+}
