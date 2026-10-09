@@ -1,6 +1,6 @@
 import { verifyAllInOne } from './verify-all-in-one.mjs';
 import { buildHeaders } from './headers.mjs';
-import { mkdir, cp, readFile, writeFile, readdir, stat } from 'node:fs/promises';
+import { mkdir, cp, readFile, writeFile, readdir, stat, rm } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
@@ -8,6 +8,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 await verifyAllInOne(root);
 const source = resolve(root, 'manual');
 const destination = resolve(root, 'dist');
+// Recreate only generated output; cached platform config must not be republished.
+await rm(destination, { recursive: true, force: true });
 await mkdir(destination, { recursive: true });
 await cp(source, destination, { recursive: true });
 for (const name of ['index.html', 'manual.html']) {

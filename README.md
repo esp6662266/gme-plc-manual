@@ -37,4 +37,4 @@ Node.js 24를 사용한다. `npm ci`, `npm test`, `npm run build`를 실행한�
 - MV04·SC12·PV04·GSS·85톤로와 EV01~EV90의 추가 상세 매뉴얼은 제외합니다. 시뮬레이터 작성·수정·실행과 실제 PLC 변경은 중지합니다.
 - 시뮬레이터/모델5개 파일과 원본을 해시로 보존합니다. `npm run build`는 검증된 정적 자료를 복사하며 PLC나 시뮬레이터를 실행하지 않습니다.
 - 수리 기록은 브라우저·호스트·포트별 로컬 저장입니다. 기존Mac localhost 기록이 이 홈페이지로 자동 이동하지 않습니다. JSON으로 별도 보관합니다.
-- `scripts/headers.mjs`는 새 문서의 원문 inline script SHA256만 허용합니다. 생성한 경로별 CSP를 netlify.toml 한곳에 보존하며 dist/_headers의 이전 규칙 재병합을 피합니다. 로컬 빌드 뒤 갱신된 netlify.toml도 함께 커밋합니다. Netlify에서 생성 정책이 달라지면 빌드를 차단해 이전 스크립트 해시로 게시하지 않습니다. 기존 홈페이지/자료실의 CSP와 자료실 인증·저장 코드는 보존합니다.
+- `scripts/headers.mjs`는 새 문서의 원문 inline script SHA256만 허용합니다. 빌드는 생성 폴더 dist를 재생성해 이전 배포 설정이 섞이지 않게 합니다. 생성한 경로별 CSP를 netlify.toml 한곳에 보존하며 dist/_headers의 이전 규칙 재병합을 피합니다. 로컬 빌드 뒤 갱신된 netlify.toml도 함께 커밋합니다. Netlify에서 생성 정책이 달라지면 빌드를 차단해 이전 스크립트 해시로 게시하지 않습니다. 기존 홈페이지/자료실의 CSP와 자료실 인증·저장 코드는 보존합니다.
