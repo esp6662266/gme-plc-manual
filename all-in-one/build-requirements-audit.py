@@ -15,7 +15,8 @@ def load(path):return json.loads(source(path).read_text())
 def link(path,label):
     if path.split('#')[0] in {'index.html','requirements-audit.html','operator-guide.html'}:assert (ROOT/path.split('#')[0]).is_file()
     else:source(path.split('#')[0])
-    return '<a href="'+esc(path,quote=True)+'">'+esc(str(label))+'</a>'
+    target=' target="_top"' if path.startswith('index.html#view=drawings&') else ''
+    return '<a href="'+esc(path,quote=True)+'"'+target+'>'+esc(str(label))+'</a>'
 def table(headers,rows):
     return '<div class="table-wrap"><table><thead><tr>'+''.join('<th>'+esc(h)+'</th>' for h in headers)+'</tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
 def tr(cells,anchor='',attrs=''):

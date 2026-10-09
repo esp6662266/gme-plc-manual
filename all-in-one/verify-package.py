@@ -17,6 +17,9 @@ class Links(HTMLParser):
         if tag in ('a','link') and 'href' in a:self.refs.append(a['href'])
         if tag in ('img','script') and 'src' in a:self.refs.append(a['src'])
 
+guide=(ROOT/'operator-guide.html').read_text()
+for key in ['P01','P02']:
+    assert f'href="index.html#view=drawings&amp;equipment={key}&amp;scope=priority" target="_top"' in guide,key
 errors=[];link_count=0;htmlfiles=list(ROOT.rglob('*.html'))
 parsers={}
 for p in htmlfiles:
