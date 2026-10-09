@@ -31,5 +31,205 @@
   to = "/library/"
   status = 301
 
-# Per-route CSP is generated in dist/_headers by scripts/headers.mjs.
+# Per-route CSP is maintained in the generated block below by scripts/headers.mjs.
 # Existing homepage/library retain the original policy.
+
+# BEGIN GENERATED GME CSP
+[[headers]]
+  for = "/all-in-one/"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/all-in-one/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/all-in-one"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/CHANGELOG.md"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/GME_HMI_PLC_manual.pdf"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/PLC_communication_check_20261007.md"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/README.md"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/execution_structure.png"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/execution_structure.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/improvement_architecture.png"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/improvement_architecture.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/maintenance_logic.png"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/maintenance_logic.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/pv01_diagnostics.png"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/pv01_diagnostics.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/system_architecture.png"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/assets/system_architecture.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/auth-callback.js"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/index"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library/"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library/index"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library/index.html"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library/library.css"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/library/library.js"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/manual"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/manual.html"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/manual.md"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/references/blocks.csv"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/references/hmi_plc_tags.csv"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/references/hmi_windows.csv"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/references/networks.csv"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/references/verification.csv"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/site.css"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/site.js"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/배포_상태_안내.md"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+# END GENERATED GME CSP

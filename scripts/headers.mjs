@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { readdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 const legacy="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'";
@@ -9,7 +9,7 @@ export async function buildHeaders(destination) {
       const f=join(folder,entry.name); if(entry.isDirectory()) await walk(f);
       else {
         const path=relative(destination,f).replaceAll('\\','/');
-        if(!path.startsWith('all-in-one/')) oldFiles.push(path);
+        if(!path.startsWith('all-in-one/') && path!=='_headers') oldFiles.push(path);
         else if(path.endsWith('.html')) {
           const html=await readFile(f,'utf8');
           for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
@@ -23,10 +23,17 @@ export async function buildHeaders(destination) {
   const rules=new Set(['/','/index.html','/index','/manual','/library','/library/','/library/*']);
   for(const file of oldFiles) { rules.add('/'+file); if(file.endsWith('.html')) rules.add('/'+file.slice(0,-5)); }
   const own="default-src 'self'; script-src 'self' "+[...hashes].sort().join(' ')+"; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'";
-  let text='# Generated; legacy authentication documents retain their original CSP.\n';
-  // Put the dedicated workspace policy before the legacy root fallback.
-  for(const route of ['/all-in-one/','/all-in-one/*','/all-in-one']) text+=route+'\n  Content-Security-Policy: '+own+'\n  Cache-Control: no-cache\n\n';
-  for(const route of [...rules].sort()) text+=route+'\n  Content-Security-Policy: '+legacy+'\n\n';
-  await writeFile(join(destination,'_headers'),text);
-  console.log(`CSP: ${hashes.size} exact inline script hashes; legacy policy retained`);
+  const entries=[...['/all-in-one/','/all-in-one/*','/all-in-one'].map(route=>({route,policy:own,cache:'no-cache'})),...[...rules].sort().map(route=>({route,policy:legacy}))];
+  const begin='# BEGIN GENERATED GME CSP', end='# END GENERATED GME CSP';
+  const configFile=join(destination,'..','netlify.toml');
+  let config=await readFile(configFile,'utf8');
+  const beginAt=config.indexOf(begin),endAt=config.indexOf(end);
+  if(beginAt>=0 && endAt>=beginAt) config=config.slice(0,beginAt)+config.slice(endAt+end.length);
+  const block=entries.map(({route,policy,cache})=>'[[headers]]\n  for = '+JSON.stringify(route)+'\n  [headers.values]\n    Content-Security-Policy = '+JSON.stringify(policy)+(cache?'\n    Cache-Control = '+JSON.stringify(cache):'')).join('\n\n');
+  const nextConfig=config.trimEnd()+'\n\n'+begin+'\n'+block+'\n'+end+'\n';
+  if(process.env.NETLIFY==='true' && nextConfig!==await readFile(configFile,'utf8')) throw new Error('CSP generation changed: run npm run build locally and commit netlify.toml before deploying.');
+  await writeFile(configFile,nextConfig);
+  // A single committed config avoids remerging stale publish-folder rules.
+  await rm(join(destination,'_headers'),{force:true});
+  console.log(`CSP: ${hashes.size} exact inline script hashes; ${entries.length} scoped policies in netlify.toml; legacy policy retained`);
 }
