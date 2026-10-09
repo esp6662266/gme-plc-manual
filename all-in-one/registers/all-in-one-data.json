@@ -103098,6 +103098,1171 @@
       "field_verified": false,
       "simulator_model_ready": false
     },
+    "control_conditions": {
+      "1018:1118": {
+        "network": 1018,
+        "file": "sources/decoded-original/0308-FlgNet.xml",
+        "action": {
+          "uid": "1118",
+          "gate": "Move",
+          "name": "hours motors.BC_01_HOUR",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": true
+                      },
+                      {
+                        "op": "read",
+                        "key": "tag_47",
+                        "name": "Tag_47"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "bc01_fbk",
+                    "name": "BC01_Fbk"
+                  }
+                ]
+              },
+              {
+                "op": "ge",
+                "left": {
+                  "op": "read",
+                  "key": "hours motors.bc_01_min",
+                  "name": "hours motors.BC_01_MIN"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 60,
+                  "literal": "60"
+                }
+              }
+            ]
+          },
+          "value": {
+            "op": "const",
+            "value": 1,
+            "literal": "1"
+          }
+        }
+      },
+      "1018:1121": {
+        "network": 1018,
+        "file": "sources/decoded-original/0308-FlgNet.xml",
+        "action": {
+          "uid": "1121",
+          "gate": "Move",
+          "name": "hours motors.BC_01_MIN",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": true
+                      },
+                      {
+                        "op": "read",
+                        "key": "tag_47",
+                        "name": "Tag_47"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "bc01_fbk",
+                    "name": "BC01_Fbk"
+                  }
+                ]
+              },
+              {
+                "op": "ge",
+                "left": {
+                  "op": "read",
+                  "key": "hours motors.bc_01_min",
+                  "name": "hours motors.BC_01_MIN"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 60,
+                  "literal": "60"
+                }
+              }
+            ]
+          },
+          "value": {
+            "op": "const",
+            "value": 0,
+            "literal": "0"
+          }
+        }
+      },
+      "1048:2772": {
+        "network": 1048,
+        "file": "sources/decoded-original/0335-FlgNet.xml",
+        "action": {
+          "uid": "2772",
+          "gate": "Move",
+          "name": "hours motors.BC_01_HOUR",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "const",
+                "value": true
+              },
+              {
+                "op": "read",
+                "key": "tag_48",
+                "name": "Tag_48"
+              }
+            ]
+          },
+          "value": {
+            "op": "const",
+            "value": 0,
+            "literal": "0"
+          }
+        }
+      },
+      "1082:33": {
+        "network": 1082,
+        "file": "sources/decoded-original/0402-FlgNet.xml",
+        "action": {
+          "uid": "33",
+          "gate": "Coil",
+          "name": "Inputs.BC01 run",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "const",
+                "value": true
+              },
+              {
+                "op": "read",
+                "key": "flag.m_bc_01",
+                "name": "Flag.M_BC_01"
+              }
+            ]
+          }
+        }
+      },
+      "1692:36": {
+        "network": 1692,
+        "file": "sources/decoded-original/0473-FlgNet.xml",
+        "action": {
+          "uid": "36",
+          "gate": "Move",
+          "name": "HMI_DB.SET_PERC_BC01",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": true
+                  },
+                  {
+                    "op": "read",
+                    "key": "on",
+                    "name": "ON"
+                  }
+                ]
+              },
+              {
+                "op": "lt",
+                "left": {
+                  "op": "read",
+                  "key": "hmi_db.set_perc_bc01",
+                  "name": "HMI_DB.SET_PERC_BC01"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 10,
+                  "literal": "10"
+                }
+              }
+            ]
+          },
+          "value": {
+            "op": "const",
+            "value": 10,
+            "literal": "10"
+          }
+        }
+      },
+      "1692:38": {
+        "network": 1692,
+        "file": "sources/decoded-original/0473-FlgNet.xml",
+        "action": {
+          "uid": "38",
+          "gate": "Move",
+          "name": "HMI_DB.SET_PERC_BC01",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": true
+                  },
+                  {
+                    "op": "read",
+                    "key": "on",
+                    "name": "ON"
+                  }
+                ]
+              },
+              {
+                "op": "gt",
+                "left": {
+                  "op": "read",
+                  "key": "hmi_db.set_perc_bc01",
+                  "name": "HMI_DB.SET_PERC_BC01"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 100,
+                  "literal": "100"
+                }
+              }
+            ]
+          },
+          "value": {
+            "op": "const",
+            "value": 100,
+            "literal": "100"
+          }
+        }
+      },
+      "1785:223": {
+        "network": 1785,
+        "file": "sources/decoded-original/0422-FlgNet.xml",
+        "action": {
+          "uid": "223",
+          "gate": "SCoil",
+          "name": "Allarm.BC_01_FAULT",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "start bc01",
+                        "name": "Start BC01"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "tag_51",
+                    "name": "Tag_51"
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "read",
+                  "key": "inputs.bc01 run",
+                  "name": "Inputs.BC01 run"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "1785:27": {
+        "network": 1785,
+        "file": "sources/decoded-original/0422-FlgNet.xml",
+        "action": {
+          "uid": "27",
+          "gate": "SCoil",
+          "name": "Allarm.BC01_INV",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "start bc01",
+                        "name": "Start BC01"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "tag_51",
+                    "name": "Tag_51"
+                  }
+                ]
+              },
+              {
+                "op": "read",
+                "key": "inputs.bc01_all_inv",
+                "name": "Inputs.BC01_All_inv"
+              }
+            ]
+          }
+        }
+      },
+      "1785:228": {
+        "network": 1785,
+        "file": "sources/decoded-original/0422-FlgNet.xml",
+        "action": {
+          "uid": "228",
+          "gate": "RCoil",
+          "name": "Allarm.BC_01_FAULT",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": true
+                      },
+                      {
+                        "op": "read",
+                        "key": "on",
+                        "name": "ON"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "flag.reset_allarm",
+                    "name": "Flag.RESET_ALLARM"
+                  }
+                ]
+              },
+              {
+                "op": "read",
+                "key": "allarm.bc_01_fault",
+                "name": "Allarm.BC_01_FAULT"
+              }
+            ]
+          }
+        }
+      },
+      "1785:267": {
+        "network": 1785,
+        "file": "sources/decoded-original/0422-FlgNet.xml",
+        "action": {
+          "uid": "267",
+          "gate": "RCoil",
+          "name": "Allarm.BC01_INV",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": true
+                      },
+                      {
+                        "op": "read",
+                        "key": "on",
+                        "name": "ON"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "flag.reset_allarm",
+                    "name": "Flag.RESET_ALLARM"
+                  }
+                ]
+              },
+              {
+                "op": "read",
+                "key": "allarm.bc01_inv",
+                "name": "Allarm.BC01_INV"
+              }
+            ]
+          }
+        }
+      },
+      "1786:234": {
+        "network": 1786,
+        "file": "sources/decoded-original/0423-FlgNet.xml",
+        "action": {
+          "uid": "234",
+          "gate": "SCoil",
+          "name": "Allarm.BC_01_FC",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": true
+                  },
+                  {
+                    "op": "read",
+                    "key": "on",
+                    "name": "ON"
+                  }
+                ]
+              },
+              {
+                "op": "read",
+                "key": "inputs.bc01 trip wire",
+                "name": "Inputs.BC01 trip wire"
+              }
+            ]
+          }
+        }
+      },
+      "1786:240": {
+        "network": 1786,
+        "file": "sources/decoded-original/0423-FlgNet.xml",
+        "action": {
+          "uid": "240",
+          "gate": "RCoil",
+          "name": "Allarm.BC_01_FC",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "flag.reset_allarm",
+                        "name": "Flag.RESET_ALLARM"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "not",
+                    "arg": {
+                      "op": "read",
+                      "key": "inputs.bc01 trip wire",
+                      "name": "Inputs.BC01 trip wire"
+                    }
+                  }
+                ]
+              },
+              {
+                "op": "read",
+                "key": "allarm.bc_01_fc",
+                "name": "Allarm.BC_01_FC"
+              }
+            ]
+          }
+        }
+      },
+      "1843:492": {
+        "network": 1843,
+        "file": "sources/decoded-original/0164-FlgNet.xml",
+        "action": {
+          "uid": "492",
+          "gate": "SCoil",
+          "name": "Flag.M_BC_01",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "and",
+                            "args": [
+                              {
+                                "op": "const",
+                                "value": true
+                              },
+                              {
+                                "op": "read",
+                                "key": "on",
+                                "name": "ON"
+                              }
+                            ]
+                          },
+                          {
+                            "op": "not",
+                            "arg": {
+                              "op": "read",
+                              "key": "allarm.emergency_module_fault",
+                              "name": "Allarm.Emergency_module_fault"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "op": "eq",
+                        "left": {
+                          "op": "read",
+                          "key": "data.tipo_preset",
+                          "name": "Data.Tipo_preset"
+                        },
+                        "right": {
+                          "op": "const",
+                          "value": 1,
+                          "literal": "1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "flag.auto_on1",
+                    "name": "Flag.Auto_ON1"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "read",
+                  "key": "data.tempo_presetting",
+                  "name": "Data.Tempo_presetting"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 24,
+                  "literal": "24"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "1843:102": {
+        "network": 1843,
+        "file": "sources/decoded-original/0164-FlgNet.xml",
+        "action": {
+          "uid": "102",
+          "gate": "SCoil",
+          "name": "MemoCMD_BC01_Startup",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "and",
+                            "args": [
+                              {
+                                "op": "const",
+                                "value": true
+                              },
+                              {
+                                "op": "read",
+                                "key": "on",
+                                "name": "ON"
+                              }
+                            ]
+                          },
+                          {
+                            "op": "not",
+                            "arg": {
+                              "op": "read",
+                              "key": "allarm.emergency_module_fault",
+                              "name": "Allarm.Emergency_module_fault"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "op": "eq",
+                        "left": {
+                          "op": "read",
+                          "key": "data.tipo_preset",
+                          "name": "Data.Tipo_preset"
+                        },
+                        "right": {
+                          "op": "const",
+                          "value": 1,
+                          "literal": "1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "flag.auto_on1",
+                    "name": "Flag.Auto_ON1"
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "read",
+                  "key": "data.tempo_presetting",
+                  "name": "Data.Tempo_presetting"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 24,
+                  "literal": "24"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "1843:828": {
+        "network": 1843,
+        "file": "sources/decoded-original/0164-FlgNet.xml",
+        "action": {
+          "uid": "828",
+          "gate": "RCoil",
+          "name": "MemoCMD_BC01_Startup",
+          "condition": {
+            "op": "not",
+            "arg": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "const",
+                          "value": true
+                        },
+                        {
+                          "op": "read",
+                          "key": "on",
+                          "name": "ON"
+                        }
+                      ]
+                    },
+                    {
+                      "op": "not",
+                      "arg": {
+                        "op": "read",
+                        "key": "allarm.emergency_module_fault",
+                        "name": "Allarm.Emergency_module_fault"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "op": "eq",
+                  "left": {
+                    "op": "read",
+                    "key": "data.tipo_preset",
+                    "name": "Data.Tipo_preset"
+                  },
+                  "right": {
+                    "op": "const",
+                    "value": 1,
+                    "literal": "1"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "1844:1162": {
+        "network": 1844,
+        "file": "sources/decoded-original/0165-FlgNet.xml",
+        "action": {
+          "uid": "1162",
+          "gate": "SCoil",
+          "name": "Flag.M_BC_01",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "and",
+                            "args": [
+                              {
+                                "op": "const",
+                                "value": true
+                              },
+                              {
+                                "op": "read",
+                                "key": "on",
+                                "name": "ON"
+                              }
+                            ]
+                          },
+                          {
+                            "op": "not",
+                            "arg": {
+                              "op": "read",
+                              "key": "allarm.emergency_module_fault",
+                              "name": "Allarm.Emergency_module_fault"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "flag.auto_on1",
+                        "name": "Flag.Auto_ON1"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "eq",
+                    "left": {
+                      "op": "read",
+                      "key": "data.tipo_preset",
+                      "name": "Data.Tipo_preset"
+                    },
+                    "right": {
+                      "op": "const",
+                      "value": 2,
+                      "literal": "2"
+                    }
+                  }
+                ]
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "read",
+                  "key": "data.tempo_presetting",
+                  "name": "Data.Tempo_presetting"
+                },
+                "right": {
+                  "op": "const",
+                  "value": 43,
+                  "literal": "43"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "1847:927": {
+        "network": 1847,
+        "file": "sources/decoded-original/0166-FlgNet.xml",
+        "action": {
+          "uid": "927",
+          "gate": "RCoil",
+          "name": "Flag.M_BC_01",
+          "condition": {
+            "op": "or",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "flag.auto_on1",
+                            "name": "Flag.Auto_ON1"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "eq",
+                        "left": {
+                          "op": "read",
+                          "key": "data.tipo_preset",
+                          "name": "Data.Tipo_preset"
+                        },
+                        "right": {
+                          "op": "const",
+                          "value": 5,
+                          "literal": "5"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "op": "eq",
+                    "left": {
+                      "op": "read",
+                      "key": "data.tempo_presetting",
+                      "name": "Data.Tempo_presetting"
+                    },
+                    "right": {
+                      "op": "const",
+                      "value": 13,
+                      "literal": "13"
+                    }
+                  }
+                ]
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "flag.auto_on1",
+                            "name": "Flag.Auto_ON1"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "eq",
+                        "left": {
+                          "op": "read",
+                          "key": "data.tipo_preset",
+                          "name": "Data.Tipo_preset"
+                        },
+                        "right": {
+                          "op": "const",
+                          "value": 5,
+                          "literal": "5"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "allarm.emergency_module_fault",
+                    "name": "Allarm.Emergency_module_fault"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "1935:198": {
+        "network": 1935,
+        "file": "sources/decoded-original/0242-FlgNet.xml",
+        "action": {
+          "uid": "198",
+          "gate": "RCoil",
+          "name": "Flag.M_BC_01",
+          "condition": {
+            "op": "or",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": true
+                      },
+                      {
+                        "op": "read",
+                        "key": "on",
+                        "name": "ON"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "allarm.bc_01_fault",
+                    "name": "Allarm.BC_01_FAULT"
+                  }
+                ]
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": true
+                      },
+                      {
+                        "op": "read",
+                        "key": "on",
+                        "name": "ON"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "allarm.bc01_inv",
+                    "name": "Allarm.BC01_INV"
+                  }
+                ]
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "allarm.bc_01_fc",
+                        "name": "Allarm.BC_01_FC"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "not",
+                    "arg": {
+                      "op": "read",
+                      "key": "under testing",
+                      "name": "UNDER TESTING"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "1935:202": {
+        "network": 1935,
+        "file": "sources/decoded-original/0242-FlgNet.xml",
+        "action": {
+          "uid": "202",
+          "gate": "Coil",
+          "name": "Start BC01",
+          "condition": {
+            "op": "or",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "flag.m_bc_01",
+                        "name": "Flag.M_BC_01"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "flag.r1_gate_loop_on",
+                    "name": "Flag.R1_GATE_LOOP_ON"
+                  }
+                ]
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "flag.m_bc_01",
+                        "name": "Flag.M_BC_01"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "memocmd_bc01_startup",
+                    "name": "MemoCMD_BC01_Startup"
+                  }
+                ]
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "and",
+                        "args": [
+                          {
+                            "op": "const",
+                            "value": true
+                          },
+                          {
+                            "op": "read",
+                            "key": "on",
+                            "name": "ON"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "read",
+                        "key": "flag.m_bc_01",
+                        "name": "Flag.M_BC_01"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "read",
+                    "key": "flag.maintenance_on",
+                    "name": "Flag.Maintenance_ON"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
     "alarm": {
       "id": "BC01",
       "priority_key": "P01",
@@ -106949,6 +108114,7 @@
       "note": "자동 단계의 요청 Set 이후에도 R1_GATE_LOOP_ON·MemoCMD_BC01_Startup·Flag.Maintenance_ON의 OR 허가를 확인합니다. 트립와이어와 근접센서는 다른 입력입니다."
     },
     "source_hashes": {
+      "registers/program-model.json": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
       "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
       "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
       "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",

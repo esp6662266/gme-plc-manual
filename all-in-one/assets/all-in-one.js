@@ -29,7 +29,7 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:''};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard'};
   let lastRenderedRoute = null;
   let bc01Wide = false;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
@@ -79,7 +79,7 @@
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
     if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
-    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);}
+    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Text==='large')params.set('text','large');}
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -106,6 +106,8 @@
       state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';
       const items=bc01Items(state.bc01Section);
       state.bc01Item=items.find(x=>x.id===params.get('item'))?.id || items[0]?.id || '';
+      state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';
+      state.bc01Text=params.get('text')==='large'?'large':'standard';
       bc01LastItems.set(state.bc01Section,state.bc01Item);
     }
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
@@ -482,7 +484,7 @@
     if(section==='io')return [...spec.inputs.map((raw,i)=>({id:'input-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'물리 입력'})),...spec.outputs.map((raw,i)=>({id:'output-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'물리 출력'})),...spec.internal.map((raw,i)=>({id:'memory-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'내부 기억'})),...spec.hmi.map((raw,i)=>({id:'hmi-'+i,title:raw['HMI 태그'],raw,role:'HMI 저장 태그'}))];
     if(section==='control')return [{id:'request',title:'자동 단계·운전 요청',networks:[1843,1844,1847]},{id:'output',title:'최종 출력의 OR 허가',networks:[1935]},{id:'reset',title:'고장에 따른 요청 해제',networks:[1935]},{id:'speed',title:'속도 설정·다른 쓰기',networks:[1692]},{id:'other',title:'응답·시간·다른 관련 쓰기'}];
     if(section==='circuits')return (circuit?.paths || []).map((path,i)=>({id:'path-'+i,title:path.signal,path}));
-    if(section==='alarms')return (alarms?.alarms || []).map((alarm,i)=>({id:'alarm-'+i,title:alarm.name,alarm}));
+    if(section==='alarms')return (alarms?.alarms || []).map((alarm,i)=>({id:'alarm-'+i,title:({'Allarm.BC_01_FAULT':'운전 응답 고장','Allarm.BC01_INV':'인버터 이상','Allarm.BC_01_FC':'트립와이어 감시'})[alarm.name] || alarm.name,alarm}));
     if(section==='repair')return repairRecordMap.get('P01').steps.map(step=>({id:step.id,title:step.title,step}));
     return [{id:'documentation',title:'문서·근거 표준'},{id:'cpu',title:'현재 PLC·HMI 대응'},{id:'field',title:'실물·접속·정상 극성'},{id:'recovery',title:'복구·재기동 증거'},{id:'scope',title:'중단·제외 작업'}];
   }
@@ -495,8 +497,60 @@
     if(['eq','ne','gt','ge','lt','le'].includes(node.op))return '('+staticCondition(node.left)+' '+({eq:'=',ne:'<>',gt:'>',ge:'>=',lt:'<',le:'<='}[node.op])+' '+staticCondition(node.right)+')';
     return '[미해석: '+(node.reason || node.op)+']';
   }
+  const bc01SignalLabels={
+    'on':'ON 공통 조건', 'start bc01':'BC01 기동 출력', 'flag.m_bc_01':'BC01 운전 요청',
+    'inputs.bc01 run':'처리된 운전 응답', 'inputs.bc01_all_inv':'처리된 인버터 이상',
+    'inputs.bc01 trip wire':'처리된 트립와이어 감시', 'tag_51':'기동 감시 타이머 비트',
+    'flag.reset_allarm':'공통 알람 리셋 요청', 'allarm.bc_01_fault':'운전 응답 고장 래치',
+    'allarm.bc01_inv':'인버터 이상 래치', 'allarm.bc_01_fc':'트립와이어 래치',
+    'hmi_db.set_perc_bc01':'BC01 속도 설정값', 'flag.maintenance_on':'정비 모드 신호'
+  };
+  function bc01SignalLabel(name) {return bc01SignalLabels[String(name).toLowerCase()] || name;}
+  function bc01ConditionTree(node) {
+    if(!node)return '<p class="bc01-unknown">조건 추가 확인</p>';
+    if(['and','or'].includes(node.op)) {
+      const flatten=n=>n.op===node.op?n.args.flatMap(flatten):[n];
+      const terms=flatten(node), constants=terms.filter(n=>node.op==='and' && n.op==='const' && n.value===true);
+      const visible=terms.filter(n=>!(node.op==='and' && n.op==='const' && n.value===true));
+      return `<section class="bc01-logic-group" data-logic-op="${node.op}"><h5>${node.op==='and'?'모두 충족해야 함':'아래 경로 중 하나 이상 충족'} <span>${node.op.toUpperCase()}</span></h5>${constants.length?'<small class="bc01-constant" data-logic-constant="true">원본 시작 상수 1(TRUE)'+(constants.length>1?' × '+constants.length:'')+'</small>':''}<ul>${visible.map((n,i)=>'<li>'+(node.op==='or'?'<p class="bc01-branch-title">경로 '+(i+1)+'</p>':'')+bc01ConditionTree(n)+'</li>').join('')}</ul></section>`;
+    }
+    const negated=node.op==='not' && node.arg?.op==='read', read=negated?node.arg:node;
+    if(read.op==='read')return `<div class="bc01-contact" data-logic-op="${negated?'not':'read'}"><div><strong>${esc(bc01SignalLabel(read.name))}</strong><code>${esc(read.name)}</code></div><span class="bc01-required">${negated?'0 · 거짓 / NOT':'1 · 참'}</span></div>`;
+    if(node.op==='not')return `<section class="bc01-logic-group" data-logic-op="not"><h5>아래 조건 전체를 반전 <span>NOT</span></h5>${bc01ConditionTree(node.arg)}</section>`;
+    if(['eq','ne','gt','ge','lt','le'].includes(node.op))return `<div class="bc01-comparison" data-logic-op="${node.op}"><strong>${({eq:'같음',ne:'같지 않음',gt:'보다 큼',ge:'이상',lt:'보다 작음',le:'이하'})[node.op]} 비교</strong><code>${esc(staticCondition(node))}</code></div>`;
+    if(node.op==='const')return `<div class="bc01-comparison" data-logic-op="const"><strong>원본 상수</strong><code>${esc(staticCondition(node))}</code></div>`;
+    return '<div class="bc01-unknown" data-logic-op="unknown">미해석 조건 · '+esc(node.reason || node.op)+'</div>';
+  }
+  function bc01ConditionPanel(condition, original) {
+    return `<p class="bc01-logic-caption">보존 백업의 조건 · 1은 참, 0은 거짓 · 현재값 표시 아님</p>${condition?bc01ConditionTree(condition):'<p class="bc01-unknown">구조화 조건 추가 확인 · 아래 보존 조건식 전문을 확인합니다.</p>'}<details class="bc01-original"><summary>정적 조건식 전문 보기</summary><p class="bc01-condition"><code>${esc(original || staticCondition(condition))}</code></p></details>`;
+  }
+  function bc01ReadingGuide() {
+    return `<details class="bc01-reading-guide"><summary>조건식 읽는 법 · 1/0, AND/OR, Set/Reset</summary><dl><dt>1 · 참 / 0 · 거짓</dt><dd>조건에서 요구하는 PLC 논리값입니다. 현재값 표시가 아니며 현장 접점의 정상 극성은 별도 확인합니다.</dd><dt>AND · 모두 충족</dt><dd>같은 묶음의 모든 조건이 참이어야 합니다.</dd><dt>OR · 하나 이상 충족</dt><dd>표시된 경로 중 한 경로가 참이면 됩니다. 경로 내부의 AND 조건은 모두 필요합니다.</dd><dt>NOT · 반전</dt><dd>뒤에 있는 조건을 반대로 읽습니다. 신호명만으로 실제 접점의 정상/고장을 확정하지 않습니다.</dd><dt>Set / Reset</dt><dd>기억 비트를 설정(1)하거나 해제(0)하는 경로입니다. 원인 해소·새 운전 요청·실제 복구는 별도 단계입니다.</dd></dl><p>같은 AND/OR는 묶어 표시하고, 원본 시작 상수 1(TRUE)는 묶음 위에 남깁니다. 조건을 계산하거나 PLC를 실행하지 않습니다.</p></details>`;
+  }
+  function bc01GateExplanation(gate) {
+    return ({SCoil:'조건 충족 시 대상 기억 비트를 설정(1)하는 경로입니다. 발생 조건이 사라져도 별도 Reset 경로를 확인해야 합니다.',RCoil:'조건 충족 시 대상 기억 비트를 해제(0)하는 경로입니다. 해제만으로 기동이나 실제 복구가 완료되는 것은 아닙니다.',Coil:'이 네트워크의 조건 참/거짓을 출력 코일에 반영하는 경로입니다. 실제 기동과 응답은 별도로 확인합니다.',Move:'조건 충족 시 입력값을 대상에 쓰는 경로입니다. 같은 대상의 다른 쓰기도 확인합니다.'})[gate] || '보존 원본의 정적 동작 경로입니다. 현재 호출·실행은 별도 확인합니다.';
+  }
   function bc01RuleCards(rules) {
-    return rules.map(r=>`<article class="bc01-rule"><div class="status-row"><strong>${esc(r['동작'])} · ${esc(r['대상'])}</strong><span class="badge">LAD ${esc(r['네트워크 문서'])} · UID ${esc(r['Part UID'])}</span></div><p class="bc01-condition"><code>${esc(r['정적 조건식'])}</code></p><p>${esc(r['내용'])}</p><p class="muted">${esc(r.execution_status)}${r.opaque?' · 미해석 요소 포함':''}</p>${docButton('이 조건의 원본 래더','networks/network-'+r['네트워크 문서']+'.html')}</article>`).join('');
+    return bc01ReadingGuide()+rules.map(r=> {
+      const action=data.bc01_standard.control_conditions[r.rule_id]?.action;
+      return `<article class="bc01-rule"><div class="status-row"><strong>${esc(r['동작'])} · ${esc(bc01SignalLabel(r['대상']))}</strong><span class="badge">LAD ${esc(r['네트워크 문서'])} · UID ${esc(r['Part UID'])}</span></div><code class="bc01-target">${esc(r['대상'])}</code><p class="bc01-explanation">${esc(bc01GateExplanation(r['동작']))}</p>${r.opaque?'<div class="bc01-unknown">선행 명령의 ENO/out 연결 · 동작 해석 대기. 이 경로를 완전한 조건 묶음으로 표시하지 않습니다.</div><p class="bc01-condition"><code>'+esc(r['정적 조건식'])+'</code></p>':bc01ConditionPanel(action?.condition,r['정적 조건식'])}<p>${esc(r['내용'])}</p><p class="muted">${esc(r.execution_status)}${r.opaque?' · 미해석 요소 포함':''}</p>${docButton('이 조건의 원본 래더','networks/network-'+r['네트워크 문서']+'.html')}</article>`;
+    }).join('');
+  }
+  function bc01AlarmBody(alarm, profile) {
+    const descriptions={
+      'Allarm.BC_01_FAULT':['운전 응답 고장','공통 ON 조건·기동 출력·기동 감시 타이머 비트가 모두 1인데, 처리된 운전 응답은 0일 때 알람을 기억하는 경로입니다.','공통 ON 조건·리셋 요청·해당 알람 기억이 모두 1이면 알람 기억을 지우는 경로입니다. 이 Reset에는 운전 응답 정상화 접점이 직접 포함되지 않습니다.'],
+      'Allarm.BC01_INV':['인버터 이상','공통 ON 조건·기동 출력·기동 감시 타이머 비트가 모두 1이고, 처리된 인버터 이상도 1일 때 알람을 기억하는 경로입니다.','공통 ON 조건·리셋 요청·해당 알람 기억이 모두 1이면 알람 기억을 지우는 경로입니다. 이 Reset에는 인버터 이상 해소 접점이 직접 포함되지 않습니다.'],
+      'Allarm.BC_01_FC':['트립와이어 감시','공통 ON 조건과 처리된 트립와이어 신호가 모두 1일 때 알람을 기억하는 경로입니다.','공통 ON 조건·리셋 요청·해당 알람 기억이 모두 1이고, 처리된 트립와이어 신호는 0일 때 알람 기억을 지우는 경로입니다. 거짓(0)의 실제 정상 극성은 현장 확인 전입니다.']
+    };
+    const description=descriptions[alarm.name], step=state.bc01AlarmStep;
+    const actions=alarm.actions.filter(a=>step==='set'?a.gate==='SCoil':step==='reset'?a.gate==='RCoil':false);
+    let body=`<code class="bc01-target">${esc(alarm.name)}</code><p class="muted bc01-signal-boundary">Inputs.*는 보존 백업의 처리 신호입니다. 원시 I/O와의 연결·현재 쓰기/호출은 확인 전이며 실제 센서값으로 단정하지 않습니다.</p><div class="bc01-alarm-steps" role="group" aria-label="알람 확인 단계">${[['set','1. 발생 조건'],['reset','2. 리셋 조건'],['restart','3. 재기동 확인']].map(([id,label])=>`<button type="button" data-bc01-alarm-step="${id}" aria-pressed="${step===id}">${label}</button>`).join('')}</div>`;
+    if(step==='restart')body+=`<section class="bc01-explanation"><h4>알람 해제와 재기동을 따로 확인합니다</h4><p>원인 신호의 정상화 → 알람 래치 해제 → 운전 요청·허가 → Q0.0·현장 DI1 → 실제 운전 응답·연동 영향의 증거를 각각 확인합니다. 리셋은 새 운전 요청이나 실제 복구를 보장하지 않습니다.</p></section><ol class="bc01-path">${['최초 알람·원인 입력과 관찰 시각을 기록','원인 정상화 근거와 알람 래치 해제를 각각 확인','요청과 최종 출력의 별도 조건·다른 쓰기 확인','현장 기동 전달·실제 응답·재발 여부 기록'].map(s=>'<li>'+s+'</li>').join('')}</ol><button type="button" data-bc01-jump="control/output">출력·허가 조건 확인</button> ${button('관찰 근거 기록','repair-record')}`;
+    else {
+      body+=`<p class="bc01-explanation">${esc(description?.[step==='set'?1:2] || bc01GateExplanation(actions[0]?.gate))}</p>${step==='reset'?'<div class="notice">원인 해소와 래치 해제는 다른 확인입니다. 아래는 백업의 Reset 조건이며, 실제 수리 완료나 재기동 허가를 뜻하지 않습니다.</div>':''}${bc01ReadingGuide()}${actions.map(action=>`<article class="bc01-rule"><div class="status-row"><strong>${step==='set'?'발생 시 알람을 기억 · Set (1)':'알람 기억을 해제 · Reset (0)'}</strong><span class="badge">LAD ${action.network} · UID ${esc(action.uid)}</span></div>${bc01ConditionPanel(action.condition)}${docButton('원본 접점·배선 확인','networks/network-'+action.network+'.html')}</article>`).join('')}`;
+      if(step==='set')body+=profile.timers.filter(t=>actions.some(a=>a.network===t.network)).map(t=>`<details class="bc01-timer"><summary>Tag_51의 기동 감시 조건 · ${esc(staticCondition(t.preset))}</summary><p>보존 원본의 시간 선언입니다. 실제 경과시간·현재 타이머 상태는 확인 전입니다.</p>${bc01ConditionPanel(t.condition)}${docButton('타이머 원본 LAD '+t.network+' · UID '+t.uid,'networks/network-'+t.network+'.html')}</details>`).join('');
+    }
+    return body+`<details><summary>알람 간 Reset 차이와 원본 참조 ${alarm.usages.length}개</summary><p>${esc(profile.note)}</p>${table(['원본 위치','읽기/쓰기 · 신호'],alarm.usages.map(u=>[docButton('LAD '+u.network+' · Part '+u.part+' / ORef '+u.oref,'networks/network-'+u.network+'.html'),esc(u.scope+' · '+u.role+' · '+u.name)]))}</details>`;
   }
   function renderBC01Manual() {
     const standard=data.bc01_standard;
@@ -532,7 +586,7 @@
       sources=[['단자·기동·응답 전체 회로','circuit-guides/BC01.html'],['시공·케이블 근거','construction-guides/BC01.html'],['해당 원본 PDF',drawing.sheets.find(s=>s.id==='oem-'+path.fg).source+'#page='+pdfPage(path.fg)]];
     } else if(state.bc01Section==='alarms') {
       const a=current.alarm;
-      body=`<p class="bc01-lead"><code>${esc(a.name)}</code></p><div class="notice">${esc(alarm.note)}</div>${a.actions.map(action=>`<article class="bc01-rule"><strong>${action.gate==='SCoil'?'발생 · Set':'해제 · Reset'} · LAD ${action.network} · UID ${esc(action.uid)}</strong><p class="bc01-condition"><code>${esc(staticCondition(action.condition))}</code></p>${docButton('원본 접점·배선 확인','networks/network-'+action.network+'.html')}</article>`).join('')}${alarm.timers.some(t=>a.actions.some(action=>action.network===t.network))?'<h4>같은 원본 네트워크의 기동 감시 타이머</h4>':''}${alarm.timers.filter(t=>a.actions.some(action=>action.network===t.network)).map(t=>`<article class="bc01-rule"><strong>${esc(t.name)} · ${esc(t.gate)} · ${esc(staticCondition(t.preset))}</strong><p class="bc01-condition"><code>${esc(staticCondition(t.condition))}</code></p><p>원본 시간 선언입니다. 현재 호출·타이머 상태·동시 Set/Reset과 실제 복구는 추가 확인합니다.</p>${docButton('LAD '+t.network+' · UID '+t.uid,'networks/network-'+t.network+'.html')}</article>`).join('')}<details><summary>이 알람의 읽기·쓰기 참조 ${a.usages.length}개</summary>${table(['원본 위치','읽기/쓰기 · 신호'],a.usages.map(u=>[docButton('LAD '+u.network+' · Part '+u.part+' / ORef '+u.oref,'networks/network-'+u.network+'.html'),esc(u.scope+' · '+u.role+' · '+u.name)]))}</details><div class="notice info">원인 정상화 → 래치 해제 → 허가·새 요청 → 출력 → 실제 응답·연동 영향의 증거를 각각 기록합니다. Reset만으로 복구 완료를 판정하지 않습니다.</div>`;
+      body=bc01AlarmBody(a,alarm);
       sources=[['알람 발생·해제 원본 근거','alarm-guides/BC01.html'],['재기동 판단 작업지','repair-guides/P01.html#recovery'],['공통 리셋·다른 쓰기','common-control.html#checks']];
     } else if(state.bc01Section==='repair') {
       const step=current.step, evidence=schema.evidence_plan.steps.find(s=>s.step_id===step.id);
@@ -546,8 +600,10 @@
       else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
       sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
     }
+    const itemIndex=items.findIndex(i=>i.id===current.id), sectionTitle=bc01Sections.find(s=>s[0]===state.bc01Section)[1];
+    const itemNav=`<div class="bc01-item-nav"><span><b>${itemIndex+1} / ${items.length}</b> · ${esc(sectionTitle)}</span><div><button type="button" data-bc01-move="prev" ${itemIndex===0?'disabled':''}>이전 항목</button><button type="button" data-bc01-move="next" ${itemIndex===items.length-1?'disabled':''}>다음 항목</button></div></div>`;
     const selectedPath=current.path, fg=selectedPath?.fg || 19, preview=drawing.sheets.find(s=>s.id==='oem-'+fg);
-    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions"><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 단독 표준화 · 다른 설비 확대 보류 · 현재 CPU/실물/현장 복구 확인 전</div><div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map(i=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}">${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content"><p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title">${esc(current.title)}</h3>${body}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel"><h3>관련 전기도면</h3><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
+    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}${state.bc01Text==='large'?' bc01-large-text':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions bc01-reader-controls"><div role="group" aria-label="본문 글자 크기"><button type="button" data-bc01-text="standard" aria-pressed="${state.bc01Text==='standard'}">기본 글자</button><button type="button" data-bc01-text="large" aria-pressed="${state.bc01Text==='large'}">큰 글자</button></div><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 단독 표준화 · 다른 설비 확대 보류 · 현재 CPU/실물/현장 복구 확인 전</div><div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><p class="bc01-mobile-hint">세부 항목 목록을 좌우로 밀어 선택하세요. 본문의 이전·다음 항목 버튼도 사용할 수 있습니다.</p><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map((i,index)=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}"><span class="bc01-item-number">${String(index+1).padStart(2,'0')}</span> ${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content">${itemNav}<p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title" tabindex="-1">${esc(current.title)}</h3>${body}<details class="bc01-inline-sources"><summary>이 항목의 원본·관련 근거 열기</summary>${links(sources)}</details>${itemNav}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel"><h3>관련 전기도면</h3><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
   }
   function renderRepairWorkspace() {
     const schema=repairRecordMap.get(state.selected), step=schema?.steps.find(s=>s.id===state.repairSymptom);
@@ -653,7 +709,7 @@
     const host = $('workspace-content');
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
-    if(state.view==='manual' && state.selected==='P01')host.innerHTML=renderBC01Manual();
+    if(state.view==='manual' && state.selected==='P01'){host.innerHTML=renderBC01Manual();const rail=host.querySelector('.bc01-library'), selected=rail?.querySelector('[aria-pressed="true"]');if(rail && selected && rail.scrollWidth>rail.clientWidth)rail.scrollLeft=Math.max(0,selected.offsetLeft-rail.offsetLeft-12);}
     else if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();
     else if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
     else if (state.view === 'tests' || state.view === 'checks') {
@@ -725,6 +781,12 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
+    if(state.view==='manual' && state.selected==='P01') {
+      if(b.dataset.bc01Text && ['standard','large'].includes(b.dataset.bc01Text)) {state.bc01Text=b.dataset.bc01Text;route('manual');document.querySelector(`[data-bc01-text="${state.bc01Text}"]`)?.focus({preventScroll:true});return;}
+      if(b.dataset.bc01AlarmStep && ['set','reset','restart'].includes(b.dataset.bc01AlarmStep)) {state.bc01AlarmStep=b.dataset.bc01AlarmStep;route('manual');document.querySelector(`[data-bc01-alarm-step="${state.bc01AlarmStep}"]`)?.focus({preventScroll:true});return;}
+      if(b.dataset.bc01Move) {const items=bc01Items(state.bc01Section), i=items.findIndex(item=>item.id===state.bc01Item), next=items[i+(b.dataset.bc01Move==='prev'?-1:1)];if(next){state.bc01Item=next.id;route('manual');document.querySelector('.bc01-content')?.scrollIntoView({block:'start'});document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
+      if(b.dataset.bc01Jump==='control/output') {state.bc01Section='control';state.bc01Item='output';route('manual');return;}
+    }
     if(b.hasAttribute('data-bc01-wide') && state.selected==='P01'){bc01Wide=!bc01Wide;render();document.querySelector('[data-bc01-wide]')?.focus({preventScroll:true});return;}
     if(b.dataset.bc01Section) {
       if(state.selected!=='P01' || !bc01Sections.some(s=>s[0]===b.dataset.bc01Section))return;

@@ -169,12 +169,21 @@ for item in priority[:21]:
     drawing_profiles.append(dict(key=item['key'],plc_id=item['plc_id'],match=item['match'],sheets=sheets,circuit=circuit,warnings=warnings,identity_verified=False,field_verified=False))
 data['drawing_workspace']=dict(profiles=drawing_profiles,source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/electrical-trace.json','registers/control-spec.json','registers/construction-reference.json','registers/body-manual.json','sources/Electrical_Rev2.pdf','sources/Electrical_Can_Decoating_20241118.pdf','sources/PID_1684n002I.pdf']},preview_hashes={sheet['image']:hashlib.sha256((ROOT/sheet['image']).read_bytes()).hexdigest() for profile in drawing_profiles for sheet in profile['sheets'] if sheet['image']},scope='current21 source-reference display; no new control claims')
 # BC01 alone is the standardization pilot; source records remain unchanged.
+bc01_spec=next(p for p in all_specs if p['id']=='BC01')
+# Display-only source ASTs; never evaluate or modify the preserved model.
+bc01_model=json.loads((ROOT/'registers/program-model.json').read_text())
+bc01_control_conditions={}
+for rule in bc01_spec['direct_rules']:
+    network=next(n for n in bc01_model['networks'] if n['id']==int(rule['네트워크 문서']))
+    action=next(a for a in network['actions'] if a['uid']==rule['Part UID'])
+    bc01_control_conditions[rule['rule_id']]=dict(network=network['id'],file=network['file'],action={k:v for k,v in action.items() if k in ['uid','gate','name','condition','value']})
+
 data['bc01_standard']=dict(version=1,priority_key='P01',scope='BC01 only; other-equipment expansion held by user',
     sections=['overview','io','control','circuits','alarms','repair','completion'],
-    specification=next(p for p in all_specs if p['id']=='BC01'),
+    specification=bc01_spec,control_conditions=bc01_control_conditions,
     alarm=next(p for p in json.loads((ROOT/'registers/alarm-recovery.json').read_text())['profiles'] if p['id']=='BC01'),
     repair=next(p for p in json.loads((ROOT/'registers/repair-decision.json').read_text())['records'] if p['key']=='P01'),
-    source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/control-spec.json','registers/alarm-recovery.json','registers/repair-decision.json','registers/repair-record-forms.json','registers/electrical-trace.json']},
+    source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/program-model.json','registers/control-spec.json','registers/alarm-recovery.json','registers/repair-decision.json','registers/repair-record-forms.json','registers/electrical-trace.json']},
     field_verified=False,tia_verified=False,repairs_completed=0,simulator_work='stopped_by_user')
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')

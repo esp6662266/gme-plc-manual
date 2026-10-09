@@ -2767,5 +2767,54 @@
     "field_verified": false,
     "tia_verified": false,
     "publication_record": "../gme-netlify-publication-verification-20261009.json"
+  },
+  "bc01_readability": {
+    "date": "2026-10-09",
+    "status": "local_ui_passed",
+    "scope": "BC01 conditions and alarm readability only",
+    "sections": 7,
+    "items": 35,
+    "alarm_step_views_checked": 9,
+    "output_or_branches": 3,
+    "opaque_rules_preserved_without_tree": [
+      "1018:1121",
+      "1048:2772",
+      "1843:102"
+    ],
+    "display_only_control_conditions": 19,
+    "text_sizes_px": [
+      17,
+      19
+    ],
+    "mobile_cases": 14,
+    "mobile_page_width": [
+      390,
+      390
+    ],
+    "mobile_body_width": [
+      356,
+      356
+    ],
+    "observations": [
+      "Original condition text preserved",
+      "No undefined/object display",
+      "Required1/0 and NOT match source actions",
+      "Timer only1785 Set steps; S5T#2S unchanged",
+      "Large text and reset stage retained on refresh",
+      "Previous item focus and mobile rail selected position",
+      "Inline source buttons in wide body"
+    ],
+    "independent_review": "Sol Medium UI source inventory; Sol High original source review and fix follow-up",
+    "parent_original_wires": [
+      "0308:1148",
+      "0335:2798",
+      "0164:104"
+    ],
+    "record_writes": 0,
+    "simulator_operations": 0,
+    "plc_changes": 0,
+    "field_verified": false,
+    "tia_verified": false,
+    "publication_record": "../gme-netlify-publication-verification-20261009.json"
   }
 }

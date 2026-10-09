@@ -484,6 +484,14 @@ assert standard['alarm']==next(p for p in alarm_recovery['profiles'] if p['id']=
 assert standard['repair']==next(p for p in repair['records'] if p['key']=='P01')
 assert not standard['field_verified'] and not standard['tia_verified'] and standard['repairs_completed']==0
 assert standard['simulator_work']=='stopped_by_user'
+# Exact source ASTs for the explanatory display; no execution.
+model_networks={n['id']:n for n in json.loads((ROOT/'registers/program-model.json').read_text())['networks']}
+assert set(standard['control_conditions'])=={r['rule_id'] for r in specs['BC01']['direct_rules']}
+for rule in specs['BC01']['direct_rules']:
+    network=model_networks[int(rule['네트워크 문서'])]
+    action=next(a for a in network['actions'] if a['uid']==rule['Part UID'])
+    assert standard['control_conditions'][rule['rule_id']]==dict(network=network['id'],file=network['file'],action={k:v for k,v in action.items() if k in ['uid','gate','name','condition','value']})
+
 for path,digest in standard['source_hashes'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
 # Drawing UI reuses existing evidence, and supports current21 only.
 drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]
