@@ -1,3 +1,4 @@
+import { parseAllHeaders } from '@netlify/headers-parser';
 import { readdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { createHash } from 'node:crypto';
@@ -31,8 +32,15 @@ export async function buildHeaders(destination) {
   if(beginAt>=0 && endAt>=beginAt) config=config.slice(0,beginAt)+config.slice(endAt+end.length);
   const block=entries.map(({route,policy,cache})=>'[[headers]]\n  for = '+JSON.stringify(route)+'\n  [headers.values]\n    Content-Security-Policy = '+JSON.stringify(policy)+(cache?'\n    Cache-Control = '+JSON.stringify(cache):'')).join('\n\n');
   const nextConfig=config.trimEnd()+'\n\n'+begin+'\n'+block+'\n'+end+'\n';
-  if(process.env.NETLIFY==='true' && nextConfig!==await readFile(configFile,'utf8')) throw new Error('CSP generation changed: run npm run build locally and commit netlify.toml before deploying.');
-  await writeFile(configFile,nextConfig);
+  if(process.env.NETLIFY==='true') {
+    const {headers,errors}=await parseAllHeaders({netlifyConfigPath:configFile,minimal:true});
+    if(errors.length) throw new Error('Invalid committed header configuration');
+    const csp=h=>Object.entries(h.values).find(([key])=>key.toLowerCase()==='content-security-policy')?.[1];
+    for(const entry of entries) {
+      const policies=headers.filter(h=>h.for===entry.route).map(csp).filter(Boolean);
+      if(!policies.length || policies.some(policy=>policy!==entry.policy)) throw new Error('CSP generation changed for '+entry.route+': run npm run build locally and commit netlify.toml before deploying.');
+    }
+  } else await writeFile(configFile,nextConfig);
   // A single committed config avoids remerging stale publish-folder rules.
   await rm(join(destination,'_headers'),{force:true});
   console.log(`CSP: ${hashes.size} exact inline script hashes; ${entries.length} scoped policies in netlify.toml; legacy policy retained`);
