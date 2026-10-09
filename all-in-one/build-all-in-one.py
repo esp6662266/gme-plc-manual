@@ -137,6 +137,37 @@ data = dict(
     evidence_review=json.loads((ROOT/'registers/evidence-review.json').read_text()) if (ROOT/'registers/evidence-review.json').exists() else dict(items=[],counts={}),
     repair_record_forms=json.loads((ROOT/'registers/repair-record-forms.json').read_text()) if (ROOT/'registers/repair-record-forms.json').exists() else dict(profiles=[],counts={}),
 )
+# Display existing source references for the current21 only; no new I/O assignments.
+def oem_page(fg):
+    if str(fg) == '5A': return 6
+    if str(fg) == '180A': return 182
+    if str(fg) == '180B': return 183
+    n=int(fg); return n + (n>5) + 2*(n>180)
+circuits_by_id={d['id']:d for d in electrical_trace.get('devices',[])}
+bodies_by_id={d['id']:d for d in json.loads((ROOT/'registers/body-manual.json').read_text())['profiles']}
+specs_by_id={d['id']:d for d in specs}
+drawing_profiles=[]
+for item in priority[:21]:
+    device=specs_by_id.get(item['plc_id'],{})
+    circuit=circuits_by_id.get(item['plc_id'])
+    body=bodies_by_id.get(item['plc_id'])
+    sheets=[]
+    fgs=list(dict.fromkeys(device.get('circuit_fgs',[])+device.get('electrical_fgs',[])))
+    for fg in fgs:
+        image=next((f'assets/{folder}/FG{fg}.png' for folder in ['circuits','sensor-circuits'] if (ROOT/f'assets/{folder}/FG{fg}.png').is_file()),'')
+        sheets.append(dict(id='oem-'+str(fg),kind='OEM 전기',title='FG '+str(fg)+' · PDF '+str(oem_page(fg)),source=electrical_trace['source'],page=oem_page(fg),fg=fg,image=image,extent='원본 한 페이지',status='기존 관련 참조 · 실물 동일성 확인 전',revision='Electrical_Rev2 · 원본 개정란은 PDF에서 확인'))
+    if body:
+        sheets.append(dict(id='pid-detail',kind='P&ID',title=item['plc_id']+' 본체 참고 영역',source='sources/PID_1684n002I.pdf',page=1,image=body['pid_image'],extent='기존 본체 참고 영역 · 주변 설비 포함',status=body['boundary'],revision='1684n002I · 원본 개정란은 PDF에서 확인'))
+    sheets.append(dict(id='pid',kind='P&ID',title='전체 공정 · PDF 1',source='sources/PID_1684n002I.pdf',page=1,image='assets/PID-landscape.png',extent='전체 도면 · 회전 보기',status='공정 전체 참고 · 선택 설비의 전용 회로 아님',revision='1684n002I · 원본 개정란은 PDF에서 확인'))
+    for page in device.get('construction_pages',[]):
+        image=f'assets/construction/P{page:02}.png'
+        sheets.append(dict(id='construction-'+str(page),kind='시공·케이블',title='시공 PDF '+str(page),source=construction['source'],page=page,image=image if (ROOT/image).is_file() else '',extent='원본 한 페이지 · 공유 배치/케이블 포함',status='FOR APPROVAL · 현재 승인·현행 배선 확인 전',revision='24.11.11 first draft design'))
+    sheets.append(dict(id='hmi',kind='HMI 참고',title='기존 DECOATER 화면',source='assets/HMI_DECOATER.png',page=None,image='assets/HMI_DECOATER.png',extent='제공된 기존 화면 전체',status='촬영 당시 표시값 · 현재 운전값 아님',revision='이미지 · 촬영 시점 미확인'))
+    warnings=[]
+    if item['plc_id']=='BC01': warnings.append('시공 PDF21 SS01 CORE=4와 PDF53 3_18 CORE=5G 표기가 다릅니다. 현행 케이블 사양은 확인 전입니다.')
+    if item['plc_id']=='FN04': warnings.append('C05: 시공 PDF48의 모터 그림 M34/M38·TAG M31/M34·케이블 M31/M36이 혼재합니다. PDF52의 두 케이블 행과 구분하며 실물 대응은 확인 전입니다.')
+    drawing_profiles.append(dict(key=item['key'],plc_id=item['plc_id'],match=item['match'],sheets=sheets,circuit=circuit,warnings=warnings,identity_verified=False,field_verified=False))
+data['drawing_workspace']=dict(profiles=drawing_profiles,source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/electrical-trace.json','registers/control-spec.json','registers/construction-reference.json','registers/body-manual.json','sources/Electrical_Rev2.pdf','sources/Electrical_Can_Decoating_20241118.pdf','sources/PID_1684n002I.pdf']},preview_hashes={sheet['image']:hashlib.sha256((ROOT/sheet['image']).read_bytes()).hexdigest() for profile in drawing_profiles for sheet in profile['sheets'] if sheet['image']},scope='current21 source-reference display; no new control claims')
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 (ROOT / 'assets/all-in-one-data.js').write_text('window.GME_APP_DATA = ' + payload + ';\n', encoding='utf-8')

@@ -475,6 +475,37 @@ for d in data['equipment']:
     for n in d['networks']: routes.add(f"networks/network-{n['문서 ID']}.html")
     if d['parent']: assert d['parent'] in specs
 
+# Drawing UI reuses existing evidence, and supports current21 only.
+drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]
+for path,digest in {**drawing['source_hashes'],**drawing['preview_hashes']}.items():
+    assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
+    assert path in data['resources'],path
+expected_circuits={d['id']:d for d in electrical['devices']}
+for profile in drawing['profiles']:
+    priority=next(p for p in data['priority'] if p['key']==profile['key'])
+    device=next((d for d in data['equipment'] if d['id']==priority['plc_id']),{})
+    assert profile['plc_id']==priority['plc_id'] and profile['match']==priority['match']
+    assert profile['circuit']==expected_circuits.get(priority['plc_id'])
+    assert not profile['identity_verified'] and not profile['field_verified']
+    sheets=profile['sheets'];assert len({s['id'] for s in sheets})==len(sheets)
+    assert [s['fg'] for s in sheets if s['kind']=='OEM 전기']==list(dict.fromkeys(device.get('circuit_fgs',[])+device.get('electrical_fgs',[])))
+    assert [s['page'] for s in sheets if s['kind']=='시공·케이블']==device.get('construction_pages',[])
+    for sheet in sheets:
+        assert sheet['image'] and sheet['image'] in drawing['preview_hashes']
+        assert (ROOT/sheet['image']).read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'
+        if sheet['kind']=='OEM 전기':
+            fg=str(sheet['fg']);n=int(fg) if fg.isdigit() else None
+            expected={'5A':6,'180A':182,'180B':183}.get(fg) or n+(n>5)+2*(n>180)
+            assert sheet['page']==expected and sheet['source']==electrical['source']
+        elif sheet['kind']=='시공·케이블':
+            assert sheet['source']==construction['source'] and sheet['image']==f"assets/construction/P{sheet['page']:02}.png"
+        elif sheet['kind']=='P&ID':assert sheet['source']=='sources/PID_1684n002I.pdf' and sheet['page']==1
+        else:assert sheet['id']=='hmi' and sheet['source']==sheet['image']=='assets/HMI_DECOATER.png'
+        routes.add(sheet['source']+('#page='+str(sheet['page']) if sheet['page'] else ''))
+        routes.add(sheet['image'])
+    if priority['match']=='unknown':assert not profile['circuit'] and {s['id'] for s in sheets}=={'pid','hmi'}
+assert 'C05' in next(p for p in drawing['profiles'] if p['key']=='P02')['warnings'][0]
+assert 'CORE=4' in next(p for p in drawing['profiles'] if p['key']=='P01')['warnings'][0]
 parsers = {}
 for route in routes:
     u = urlsplit(route); p = ROOT / unquote(u.path)
@@ -483,7 +514,7 @@ for route in routes:
     if u.fragment and p.suffix=='.pdf':
         assert re.fullmatch(r'page=\d+',u.fragment),route
         page=int(u.fragment.split('=')[1])
-        pdf_pages={'Electrical_Can_Decoating_20241118.pdf':64,'Electrical_Rev2.pdf':265}
+        pdf_pages={'Electrical_Can_Decoating_20241118.pdf':64,'Electrical_Rev2.pdf':265,'PID_1684n002I.pdf':1}
         assert p.name in pdf_pages and 1<=page<=pdf_pages[p.name],route
     elif u.fragment:
         if p not in parsers:
@@ -496,7 +527,7 @@ for ref in ('assets/all-in-one.css','assets/all-in-one.js','assets/all-in-one-da
 assert "(ROOT/'manual-catalog.html').write_text" in (ROOT / 'build-manual.py').read_text()
 assert "runpy.run_path(str(ROOT / 'build-all-in-one.py')" in (ROOT / 'build-control-spec.py').read_text()
 
-result = dict(body_manual_counts=body_manual['counts'],requirements_audit_counts=audit['counts'],status='passed', equipment=248, priority=23, priority_tag_matches=14,
+result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(drawing['preview_hashes']),drawing_original_source_hashes_checked=True,body_manual_counts=body_manual['counts'],requirements_audit_counts=audit['counts'],status='passed', equipment=248, priority=23, priority_tag_matches=14,
               priority_role_candidates=4, priority_unmatched=5, dynamic_routes_checked=len(routes),
               tests_preserved_unexecuted=577, pending_checks_preserved=1060,
               source_equipment_fields_preserved=True, single_entry='index.html',

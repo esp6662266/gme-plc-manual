@@ -8,6 +8,7 @@
   const deviceMap = new Map(data.equipment.map(d => [d.id, d]));
   const priorityMap = new Map(data.priority.map(p => [p.key, p]));
   const resourceSet = new Set(data.resources);
+  const drawingMap = new Map((data.drawing_workspace?.profiles || []).map(p=>[p.key,p]));
   const reviewItems = data.evidence_review?.items || [];
   const reviewMap = new Map(reviewItems.map(r => [r.id,r]));
   const reviewKinds = {source:'원본 불일치',construction:'시공 검토',common:'공통 확인',improvement:'개선 후보',identity:'설비 동일성'};
@@ -22,7 +23,7 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false};
   let lastRenderedRoute = null;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
   const DRAFT_KEY = 'gme-all-in-one-drafts-v1';
@@ -70,6 +71,7 @@
     const nextScope = selected === state.selected ? state.scope : (priorityMap.has(selected) ? 'priority' : 'all');
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
+    if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
     if (location.hash !== hash) { lastRenderedRoute = null; location.hash = hash; }
@@ -85,10 +87,12 @@
     if (nextView !== state.view || params.get('equipment') !== state.selected) {
       state.tableQuery = ''; state.tableDevice = '';
     }
+    if(nextView!==state.view || params.get('equipment')!==state.selected) state.drawingZoom=1;
     state.view = nextView;
     const key = params.get('equipment');
     state.selected = deviceMap.has(key) || priorityMap.has(key) ? key : 'P01';
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
+    state.drawing = params.get('drawing') || '';
     if (state.view === 'review' && reviewMap.has(params.get('review'))) {
       state.tableQuery = params.get('review'); state.tableDevice = ''; state.reviewKind = '';
     }
@@ -173,8 +177,8 @@
       <p class="card-description">${esc(description)}</p>
       ${excluded ? '<div class="card-boundary">사용자 제공 제외 상태입니다. 상세 조사·새 매뉴얼 보강을 진행하지 않습니다.</div>'+button('제외 안내 보기','summary',p.key) : `<div class="card-boundary">${esc(matchText(p))}. 현재 운전값·알람 상태는 연결되어 있지 않습니다.</div>
       <div class="card-metrics">${[[d?.inputs.length ?? '—','입력 참조'],[d?.outputs.length ?? '—','출력 참조'],[d?.networks.length ?? '—','원본 LAD'],[d?.hmi.length ?? '—','HMI 태그']].map(([n,label])=>`<div><strong>${n}</strong><span>${label}</span></div>`).join('')}</div>
-      <h3>점검·수리 시작</h3><div class="card-main-actions">${button(d?'증상별 수리':'식별·점검 작업지','repair',p.key,'class="card-primary-action"')}${d?docButton('알람·리셋',alarmDoc):docButton('필요한 식별 자료','unresolved-identity.html#identity-'+p.key)}</div>
-      <h3>이 설비의 자료</h3><div class="card-document-actions">${button('매뉴얼','manual',p.key)}${d?button('I/O·HMI','io',p.key)+button('제어 명세','spec',p.key)+button('원본 래더','ladder',p.key):''}${button('도면·HMI','drawings',p.key)}${button('수리 관찰 기록','repair-record',p.key)}</div>
+      <div class="card-drawing-entry">${button('설비별 도면 작업실','drawings',p.key,'class="card-primary-action"')}</div><h3>점검·수리 시작</h3><div class="card-main-actions">${button(d?'증상별 수리':'식별·점검 작업지','repair',p.key,'class="card-primary-action"')}${d?docButton('알람·리셋',alarmDoc):docButton('필요한 식별 자료','unresolved-identity.html#identity-'+p.key)}</div>
+      <h3>이 설비의 자료</h3><div class="card-document-actions">${button('매뉴얼','manual',p.key)}${d?button('I/O·HMI','io',p.key)+button('제어 명세','spec',p.key)+button('원본 래더','ladder',p.key):''}${button('도면·HMI 참고','drawings',p.key)}${button('수리 관찰 기록','repair-record',p.key)}</div>
       ${['CC01','AB01','HE01'].includes(d?.id)?'<div class="card-body-link">'+docButton('본체·계측·증상별 근거','body-manual.html#body-'+d.id)+'</div>':''}
       <details class="card-evidence-detail"><summary>근거와 추가 확인</summary><p>${esc(p.note || '태그명을 참고해 연결한 PLC 자료입니다. 명판·현행 배선·현재 프로그램과의 동일성을 확인해야 합니다.')}</p><p>전기도면 FG: ${esc(d?.electrical_fgs.join(', ') || '설비 대응 확인 후 연결')}</p>${docButton('작성 상태·다음 확인','requirements-audit.html#priority-'+p.key)}${button('설비 요약 전체 보기','summary',p.key)}</details>`}
       <button type="button" class="card-return" data-layout-return>배치도·카드 목록으로 돌아가기</button>
@@ -225,6 +229,30 @@
     return `<h2>원본 래더 · ${esc(d.id)}</h2><p class="muted">관련 네트워크 목록입니다. 목록 순서는 실행·호출 순서가 아닙니다.</p>${table(['블록','제목','네트워크','식별한 피연산자'],d.networks.map(n => [esc(n['블록']),esc(n['제목']),docButton('네트워크 '+n['문서 ID'],'networks/network-'+n['문서 ID']+'.html'),esc(n['해석 피연산자']+'/'+n['전체 피연산자'])]))}<div class="inline-actions">${docButton('PLC 전체 네트워크','plc-networks.html')}${button('제어 명세의 조건식','spec')}</div>`;
   }
   function renderDrawings() {
+    const {p,d,name}=selection();
+    const profile=drawingMap.get(p?.key);
+    if(!profile) return renderReferenceDrawings();
+    const sheet=profile.sheets.find(s=>s.id===state.drawing) || profile.sheets[0];
+    state.drawing=sheet.id;
+    const circuit=profile.circuit;
+    const paths=sheet.kind==='OEM 전기' ? (circuit?.paths || []).filter(r=>String(r.fg)===String(sheet.fg)) : [];
+    const source=sheet.source+(sheet.page?'#page='+sheet.page:'');
+    const groups=[...new Set(profile.sheets.map(s=>s.kind))];
+    const guideLinks=d?`${validDoc('circuit-guides/'+d.id+'.html')?docButton('단자·전체 경로','circuit-guides/'+d.id+'.html'):''}${validDoc('construction-guides/'+d.id+'.html')?docButton('케이블·접속함 근거','construction-guides/'+d.id+'.html'):''}`:'';
+    return `<div class="drawing-heading"><div><span class="eyebrow">DRAWING / SOURCE EVIDENCE</span><h2>${esc(name)} · 도면 작업실</h2><p>도면을 선택하고 단자·케이블·PLC 근거를 함께 확인하세요.</p></div>${button('배치도·설비카드','priority',p.key)}</div>
+      <p class="drawing-boundary">${esc(matchText(p))}. 관련 도면의 공유 참조이며 현재 CPU·실제 접속·복구 상태는 확인 전입니다.</p>
+      <div class="drawing-workspace ${state.drawingWide?'drawing-wide':''}"><nav class="drawing-library" aria-label="설비 관련 도면 목록">${groups.map(kind=>`<section><h3>${esc(kind)}</h3>${profile.sheets.filter(s=>s.kind===kind).map(s=>`<button type="button" data-drawing="${esc(s.id)}" aria-pressed="${s.id===sheet.id}">${s.image?`<img src="${esc(s.image)}" alt="" loading="lazy">`:''}<span><strong>${esc(s.title)}</strong><small>${esc(s.extent)}</small></span></button>`).join('')}</section>`).join('')}</nav>
+      <section class="drawing-main" aria-label="선택한 도면"><div class="drawing-title"><span class="eyebrow">${esc(sheet.kind)}</span><h3>${esc(sheet.title)}</h3><p>${esc(sheet.source.split('/').pop())} · ${esc(sheet.revision)}</p></div>
+      <div class="drawing-toolbar"><div role="group" aria-label="도면 확대 조절"><button type="button" data-drawing-zoom="out" aria-label="도면 축소" ${state.drawingZoom<=1?'disabled':''}>−</button><output id="drawing-zoom-value">${Math.round(state.drawingZoom*100)}%</output><button type="button" data-drawing-zoom="in" aria-label="도면 확대" ${state.drawingZoom>=4?'disabled':''}>＋</button><button type="button" data-drawing-zoom="fit">전체 보기</button></div><div>${`<button type="button" data-drawing-wide aria-pressed="${state.drawingWide}">${state.drawingWide?'근거 함께 보기':'도면 넓게 보기'}</button>`}${docButton('원본 페이지 열기',source)}</div></div>
+      <div class="drawing-viewport" id="drawing-viewport" tabindex="0" aria-label="도면 확대·이동 영역">${sheet.image?`<img id="drawing-image" src="${esc(sheet.image)}" alt="${esc(sheet.title+' · '+sheet.extent)}" style="width:${state.drawingZoom*100}%;max-width:none">`:'<p>미리보기 없이 원본 PDF 페이지로 확인하는 자료입니다.</p>'}</div>
+      <p class="drawing-caption">${esc(sheet.extent)}. 확대 후 도면 안에서 가로·세로로 이동할 수 있습니다.</p><p class="drawing-source-status">${esc(sheet.status)}</p>
+      ${profile.warnings.length?`<div class="drawing-warnings"><strong>원본 대조 · 추가 확인</strong>${profile.warnings.map(w=>`<p>${esc(w)}</p>`).join('')}</div>`:''}</section>
+      <aside class="drawing-evidence" aria-label="선택 도면의 관련 근거"><h3>도면과 신호 경로</h3>${circuit?`<p>${esc(circuit.equipment)}</p><p class="drawing-evidence-boundary">${esc(circuit.distinction)}</p>`:'<p>본체·주변 설비 참고 또는 식별 자료입니다. 직접 I/O 대응을 새로 배정하지 않습니다.</p>'}
+      ${paths.length?paths.map(r=>`<details class="drawing-signal" open><summary>${esc(r.signal)} · ${esc(r.drawing)}</summary><p class="drawing-address">${esc(r.backup)}</p><ol>${r.nodes.map(n=>`<li>${esc(n)}</li>`).join('')}</ol><p>${esc(r.destination)}</p><p class="muted">${esc(r.check)}</p><div class="inline-actions">${(r.native_symbol_references || []).map(n=>docButton('LAD '+n.network+' · UID '+n.uid,'networks/network-'+n.network+'.html')).join('')}</div></details>`).join(''):`<p class="muted">${sheet.kind==='OEM 전기'?'이 페이지의 직접 신호 경로 요약은 기존 작업지에서 확인합니다. 인접 페이지 경로는 전체 회로 근거로 이동하세요.':sheet.kind==='시공·케이블'?'공유 배치·케이블 페이지입니다. 보이는 행과 가림 행의 경계는 케이블·접속함 근거에서 확인하세요.':'공정 위치와 주변 관계를 확인하는 참고 화면입니다.'}</p>`}
+      <div class="drawing-guide-links">${guideLinks}${docButton('미완료 항목·완료 기준','requirements-audit.html#open-'+p.key)}${button(d?'증상별 수리':'식별·점검 작업지','repair',p.key)}${d?button('원본 래더','ladder',p.key):''}${d&&validDoc('alarm-guides/'+d.id+'.html')?docButton('알람·리셋 근거','alarm-guides/'+d.id+'.html'):['CC01','AB01','HE01'].includes(d?.id)?docButton('본체·알람 근거','body-manual.html#body-'+d.id):d?.id==='BR01'?docButton('버너 연동 근거','burner-interface.html'):''}</div>
+      ${circuit?`<details class="drawing-pending"><summary>원본 작업지의 확인 대기 ${circuit.pending.length}항목</summary><ul>${circuit.pending.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></details>`:''}</aside></div>`;
+  }
+  function renderReferenceDrawings() {
     const {d} = selection();
     const construction = data.construction_reference;
     return `<h2>도면과 기본 HMI</h2><div class="doc-buttons">${docButton('기존 DECOATER HMI','assets/HMI_DECOATER.png')}${docButton('P&ID 원본','sources/PID_1684n002I.pdf#page=1')}${docButton('기존 OEM 전기도면','sources/Electrical_Rev2.pdf#page=1')}${docButton('추가 시공도면 · 배관·케이블','construction-guide.html')}${d ? (validDoc(`circuit-guides/${d.id}.html`)?docButton('단자·릴레이 회로 추적',`circuit-guides/${d.id}.html`):'')+[...new Set([...(d.circuit_fgs || []),...d.electrical_fgs])].map(f => docButton('FG '+f+' / PDF '+pdfPage(f),'sources/Electrical_Rev2.pdf#page='+pdfPage(f))).join('') : ''}</div>${construction ? panel('추가 시공도면 · 현재 승인·배선 확인 전', `<p>Can-Decoating_20241118.pdf · 64페이지. 설비 배치·접속함·배관·케이블 양단을 기존 회로·PLC 근거와 함께 봅니다. 표지 FOR APPROVAL, 개정란 24.11.11 first draft design입니다.</p><div class="inline-actions">${docButton('64페이지 색인·확인 대기 '+construction.new_review_items+'건','construction-guide.html')}${docButton('시공도면 원본',construction.source+'#page=1')}${d && validDoc(`construction-guides/${d.id}.html`) ? docButton(d.id+' 케이블·접속함 추적',`construction-guides/${d.id}.html`) : ''}${d ? (d.construction_pages || []).map(p => docButton('시공도면 PDF '+p,construction.source+'#page='+p)).join('') : ''}</div><p class="muted">가림 행은 배선 근거에서 제외합니다. 전체 PLC 대응 미확정 설비는 자동 연결하지 않습니다.</p>`) : ''}<img class="source-image" src="assets/HMI_DECOATER.png" alt="제공된 기존 DECOATER HMI 화면"><p class="diagram-caption">제공된 HMI 이미지입니다. 표시값은 촬영 당시 값이며 현재값이 아닙니다. 설비 선택은 왼쪽 목록에서 유지됩니다.</p>${!d ? unknownPanel() : ''}`;
@@ -476,8 +504,9 @@
         if (url.origin !== base.origin || !url.pathname.startsWith(base.pathname)) return;
         let path;
         try { path = decodeURIComponent(url.pathname.slice(base.pathname.length)) + url.hash; } catch (_) { return; }
-        if(url.pathname.slice(base.pathname.length)==='index.html'){
+        if(url.pathname===base.pathname || url.pathname.slice(base.pathname.length)==='index.html'){
           const params=new URLSearchParams(url.hash.slice(1));
+          if(params.get('view')==='drawings' && drawingMap.has(params.get('equipment'))){e.preventDefault();const requested=params.get('drawing');if(drawingMap.get(params.get('equipment')).sheets.some(s=>s.id===requested))state.drawing=requested;route('drawings',params.get('equipment'));return;}
           if(params.get('view')==='repair-record' && repairRecordMap.has(params.get('equipment'))){e.preventDefault();route('repair-record',params.get('equipment'));return;}
           if(params.get('view')==='review' && priorityMap.has(params.get('equipment'))){e.preventDefault();route('review',params.get('equipment'),'',params.get('review') || '');return;}
         }
@@ -491,7 +520,21 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
-    if (b.dataset.layoutSelect) {
+    if(b.dataset.drawing) {
+      if(!drawingMap.get(selection().p?.key)?.sheets.some(s=>s.id===b.dataset.drawing))return;
+      if(state.drawing===b.dataset.drawing)return;
+      state.drawing=b.dataset.drawing; state.drawingZoom=1; route('drawings');
+      document.querySelector(`[data-drawing="${state.drawing}"]`)?.focus({preventScroll:true});
+    } else if(b.hasAttribute('data-drawing-wide')) {
+      state.drawingWide=!state.drawingWide;render();document.querySelector('[data-drawing-wide]')?.focus({preventScroll:true});
+    } else if(b.dataset.drawingZoom) {
+      const image=$('drawing-image'), viewport=$('drawing-viewport');if(!image || !viewport)return;
+      const action=b.dataset.drawingZoom;state.drawingZoom=action==='fit'?1:Math.max(1,Math.min(4,state.drawingZoom+(action==='in'?0.5:-0.5)));
+      image.style.width=state.drawingZoom*100+'%';$('drawing-zoom-value').textContent=Math.round(state.drawingZoom*100)+'%';
+      document.querySelector('[data-drawing-zoom="out"]').disabled=state.drawingZoom<=1;
+      document.querySelector('[data-drawing-zoom="in"]').disabled=state.drawingZoom>=4;
+      if(action==='fit'){viewport.scrollLeft=0;viewport.scrollTop=0;}
+    } else if (b.dataset.layoutSelect) {
       rememberLayoutScroll(); route('priority',b.dataset.layoutSelect);
       if (window.matchMedia('(max-width:1100px)').matches) {
         $('layout-card-title')?.focus({preventScroll:true});
@@ -515,6 +558,7 @@
       state.scope = b.dataset.scope; state.group = ''; state.listQuery = ''; $('equipment-search').value = ''; syncScope(); renderList();
       const params = new URLSearchParams({view:state.view,equipment:state.selected,scope:state.scope});
       if (state.doc) params.set('doc',state.doc);
+      if(state.view==='drawings' && drawingMap.get(state.selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
       history.replaceState(null,'','#'+params.toString());
     } else if (b.dataset.select) {
       const view = deviceViews.has(state.view) ? state.view : 'summary';

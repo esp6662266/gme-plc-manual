@@ -30,6 +30,12 @@ for p,parser in parsers.items():
         if not target.exists():errors.append(f'Missing link {p.relative_to(ROOT)} -> {value}')
         if target.suffix=='.html' and u.fragment and target in parsers and u.fragment not in parsers[target].ids:
             params=parse_qs(u.fragment)
+            if target==(ROOT/'index.html').resolve() and params.get('view')==['drawings']:
+                profiles=json.loads((ROOT/'registers/all-in-one-data.json').read_text())['drawing_workspace']['profiles']
+                profile=next((r for r in profiles if params.get('equipment')==[r['key']]),None)
+                if profile and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope','drawing'} and ('drawing' not in params or params['drawing'] in [[s['id']] for s in profile['sheets']]):
+                    assert "params.get('view')==='drawings'" in (ROOT/'assets/all-in-one.js').read_text()
+                    continue
             if target==(ROOT/'index.html').resolve() and params.get('view') in [['repair-record'],['review']]:
                 profiles=json.loads((ROOT/'registers/repair-record-forms.json').read_text())['profiles']
                 if params.get('equipment') in [[r['key']] for r in profiles] and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope'}:

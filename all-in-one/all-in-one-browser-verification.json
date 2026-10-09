@@ -2554,5 +2554,77 @@
       "registers/evidence-review.json": "dfbfbfef9f82c0e8c3f2251d139e4c3dc428f2b3781cd81ed66418ab5862e99f",
       "requirements-audit.html": "cdf337a99503f92bf0b6b41ee3cdca7ce6271ecc70f51a4ecb4e8d10df2f5e2d"
     }
+  },
+  "drawing_workspace": {
+    "date": "2026-10-09",
+    "status": "passed",
+    "profiles": 21,
+    "reference_entries": 165,
+    "unique_previews": 62,
+    "desktop_title_image_coverage": "P01-P21 image loaded; no page overflow",
+    "source_review": {
+      "reviewer": "Sol High read only",
+      "oem_fgs": [
+        18,
+        19,
+        59,
+        60
+      ],
+      "oem_pdf_pages": [
+        19,
+        20,
+        60,
+        61
+      ],
+      "construction_visual_pages": [
+        21,
+        48,
+        51,
+        52,
+        53
+      ],
+      "new_preview_visual_pages": [
+        4,
+        5,
+        33
+      ],
+      "new_original_difference": "BC01 PDF21 SS01 CORE4 vs PDF53 3_18 CORE5G; current cable unconfirmed"
+    },
+    "independent_ui_review": {
+      "reviewer": "Sol Medium read only",
+      "fixed": [
+        "scope change preserves drawing hash",
+        "same-sheet reselect preserves zoom"
+      ],
+      "parent_reproduced": true
+    },
+    "browser_checks": [
+      "BC01 FG19 three paths",
+      "FN04 FG59 four paths/shared inverter/C05",
+      "PDF53 original frame path and back",
+      "scope change reload preserves selected page",
+      "zoom same-sheet reselect fit wide mode",
+      "card entry",
+      "P03 unassigned tag/two global references",
+      "AB01 existing reference area"
+    ],
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "page_client_scroll": [
+        375,
+        375
+      ],
+      "zoom_preview_client_scroll": [
+        330,
+        495
+      ],
+      "viewport_restored": true
+    },
+    "console_errors": 0,
+    "records_saved": 0,
+    "simulator_actions": 0,
+    "plc_changes": 0,
+    "scope": "UI/reference integration; not current CPU/field recovery verification"
   }
 }
