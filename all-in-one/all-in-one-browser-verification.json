@@ -2731,5 +2731,41 @@
     "simulator_work_and_behavior_tests": 0,
     "plc_changes": 0,
     "production_verification": "see latest external publication record"
+  },
+  "bc01_standard": {
+    "date": "2026-10-09",
+    "status": "local_ui_passed",
+    "scope": "BC01 only; other-equipment expansion held",
+    "layout": "types / item rail / selected body / source evidence",
+    "sections": 7,
+    "items": 35,
+    "observations": [
+      "All seven types and 35 item titles/routes",
+      "No undefined or object text; S5T#2S literal only matching network",
+      "Per-type last selection and refresh/back preserved",
+      "Drawing round trip and wide body toggle",
+      "390x844 outer width390 and content356, rail horizontal within container",
+      "Selected recovery opens existing diagnosis then blank record"
+    ],
+    "independent_review": "Sol High read-only investigation and separate original reviewer; parent original XML and PDF comparison",
+    "original_checks": {
+      "alarm_parts": 23,
+      "alarm_wires": 41,
+      "output_reset_parts": [
+        "1935:198",
+        "1935:202"
+      ],
+      "timer_literal": "S5T#2S",
+      "pdf_pages": [
+        19,
+        20
+      ]
+    },
+    "record_writes": 0,
+    "simulator_operations": 0,
+    "plc_changes": 0,
+    "field_verified": false,
+    "tia_verified": false,
+    "publication_record": "../gme-netlify-publication-verification-20261009.json"
   }
 }

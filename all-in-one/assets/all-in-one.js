@@ -19,6 +19,8 @@
   const repairRecords = window.GMERepairRecords;
   const repairRecordMap = new Map((data.repair_record_forms?.profiles || []).map(p=>[p.key,p]));
   const repairWorkspaceKeys = new Set(['P01','P02']);
+  const bc01Sections=[['overview','설비·자료 기준'],['io','I/O·HMI'],['control','제어 구조'],['circuits','전기 전달 경로'],['alarms','알람·복구'],['repair','증상별 수리'],['completion','완료 기준']];
+  const bc01LastItems=new Map();
   const validNoteEquipment = new Set([...deviceMap.keys(),...priorityMap.keys()]);
   const base = new URL('./', location.href);
   const views = new Set(['overview','priority','summary','manual','repair','repair-record','io','spec','ladder','structure','drawings','simulator','tests','checks','conflicts','notes','resources','doc','review']);
@@ -27,8 +29,9 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:''};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:''};
   let lastRenderedRoute = null;
+  let bc01Wide = false;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
   const DRAFT_KEY = 'gme-all-in-one-drafts-v1';
   const legacyAnchors = new Set(['purpose','equipment','scope','method','read','workflow','program','conflicts','drawing']);
@@ -76,6 +79,7 @@
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
     if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
+    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);}
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -98,6 +102,12 @@
     state.selected = deviceMap.has(key) || priorityMap.has(key) ? key : 'P01';
     const repairSchema=repairWorkspaceKeys.has(state.selected)?repairRecordMap.get(state.selected):null;
     state.repairSymptom=repairSchema?.steps.find(s=>s.id===params.get('symptom'))?.id || (state.view==='repair' && repairSchema?repairSchema.steps[0]?.id:'') || '';
+    if(state.view==='manual' && state.selected==='P01') {
+      state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';
+      const items=bc01Items(state.bc01Section);
+      state.bc01Item=items.find(x=>x.id===params.get('item'))?.id || items[0]?.id || '';
+      bc01LastItems.set(state.bc01Section,state.bc01Item);
+    }
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
     state.drawing = params.get('drawing') || '';
     if (state.view === 'review' && reviewMap.has(params.get('review'))) {
@@ -465,6 +475,80 @@
       <div class="columns">${panel('메모 작성', `<form id="note-form" class="note-form"><input type="hidden" name="noteId" value="${esc(draft.noteId || '')}"><input type="hidden" name="base_note" value="${esc(draft.base_note || '')}"><input type="hidden" name="review_id" value="${esc(draft.review_id || '')}"><div class="form-row"><label>제목<input name="title" required maxlength="160" value="${esc(draft.title || '')}" placeholder="예: FN04 출력 주소 확인"></label><label>구분<select name="kind">${['확인 사항','수리·증상 기록','개선 후보','프로그램 분석'].map(v => `<option ${draft.kind === v ? 'selected' : ''}>${v}</option>`).join('')}</select></label></div><label>근거 위치<input name="references" maxlength="500" value="${esc(draft.references || '')}" placeholder="도면 FG, 래더 네트워크, I/O 주소"></label><label>내용<textarea name="text" required maxlength="30000" placeholder="관찰한 내용, 원인 후보, 확인할 작업과 결과를 기록합니다.">${esc(draft.text || '')}</textarea></label><div class="inline-actions"><button type="submit">브라우저에 저장</button><button type="button" data-export-notes>전체 메모 백업 (${notes.length})</button></div><p class="muted">작성 중 내용도 이 브라우저에 임시 보관합니다. 메모 저장은 시험 합격·수리 완료 처리가 아닙니다.</p></form>`)}
       ${panel(`저장된 메모 · ${own.length}건`, own.length ? own.map(n => `<article class="saved-note"><span class="badge">${esc(n.kind)}</span><h3>${esc(n.title)}</h3><small>${esc(n.updated)}${reviewMap.has(n.review_id) ? ' · 연결 검토 ' + esc(n.review_id) : ''}${n.references ? ' · '+esc(n.references) : ''}</small><p>${esc(n.text)}</p><button type="button" ${n.repair_observation?'data-edit-repair':'data-edit-note'}="${esc(n.id)}">${n.repair_observation?'이 수리 기록 수정':'이 메모 수정'}</button></article>`).join('') : '<div class="empty">이 설비에 저장된 메모가 없습니다.</div>')}</div>`;
   }
+  function bc01Items(section) {
+    const spec=data.bc01_standard?.specification, alarms=data.bc01_standard?.alarm, circuit=drawingMap.get('P01')?.circuit;
+    if(!spec)return [];
+    if(section==='overview')return [{id:'identity',title:'설비 식별·역할'},{id:'baseline',title:'자료·개정 기준'},{id:'boundary',title:'확인 범위와 미확정'}];
+    if(section==='io')return [...spec.inputs.map((raw,i)=>({id:'input-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'물리 입력'})),...spec.outputs.map((raw,i)=>({id:'output-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'물리 출력'})),...spec.internal.map((raw,i)=>({id:'memory-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'내부 기억'})),...spec.hmi.map((raw,i)=>({id:'hmi-'+i,title:raw['HMI 태그'],raw,role:'HMI 저장 태그'}))];
+    if(section==='control')return [{id:'request',title:'자동 단계·운전 요청',networks:[1843,1844,1847]},{id:'output',title:'최종 출력의 OR 허가',networks:[1935]},{id:'reset',title:'고장에 따른 요청 해제',networks:[1935]},{id:'speed',title:'속도 설정·다른 쓰기',networks:[1692]},{id:'other',title:'응답·시간·다른 관련 쓰기'}];
+    if(section==='circuits')return (circuit?.paths || []).map((path,i)=>({id:'path-'+i,title:path.signal,path}));
+    if(section==='alarms')return (alarms?.alarms || []).map((alarm,i)=>({id:'alarm-'+i,title:alarm.name,alarm}));
+    if(section==='repair')return repairRecordMap.get('P01').steps.map(step=>({id:step.id,title:step.title,step}));
+    return [{id:'documentation',title:'문서·근거 표준'},{id:'cpu',title:'현재 PLC·HMI 대응'},{id:'field',title:'실물·접속·정상 극성'},{id:'recovery',title:'복구·재기동 증거'},{id:'scope',title:'중단·제외 작업'}];
+  }
+  function staticCondition(node) {
+    if(!node)return '[조건 추가 확인]';
+    if(node.op==='const')return String(node.literal??(typeof node.value==='boolean'?Number(node.value):node.value));
+    if(node.op==='read')return node.name;
+    if(node.op==='not')return 'NOT ('+staticCondition(node.arg)+')';
+    if(['and','or'].includes(node.op))return '('+node.args.map(staticCondition).join(node.op==='and'?' AND ':' OR ')+')';
+    if(['eq','ne','gt','ge','lt','le'].includes(node.op))return '('+staticCondition(node.left)+' '+({eq:'=',ne:'<>',gt:'>',ge:'>=',lt:'<',le:'<='}[node.op])+' '+staticCondition(node.right)+')';
+    return '[미해석: '+(node.reason || node.op)+']';
+  }
+  function bc01RuleCards(rules) {
+    return rules.map(r=>`<article class="bc01-rule"><div class="status-row"><strong>${esc(r['동작'])} · ${esc(r['대상'])}</strong><span class="badge">LAD ${esc(r['네트워크 문서'])} · UID ${esc(r['Part UID'])}</span></div><p class="bc01-condition"><code>${esc(r['정적 조건식'])}</code></p><p>${esc(r['내용'])}</p><p class="muted">${esc(r.execution_status)}${r.opaque?' · 미해석 요소 포함':''}</p>${docButton('이 조건의 원본 래더','networks/network-'+r['네트워크 문서']+'.html')}</article>`).join('');
+  }
+  function renderBC01Manual() {
+    const standard=data.bc01_standard;
+    if(!standard)return panel('BC01 표준 자료','<p>자료를 다시 불러와 주세요.</p>');
+    const spec=standard.specification, alarm=standard.alarm, schema=repairRecordMap.get('P01'), drawing=drawingMap.get('P01'), circuit=drawing.circuit;
+    const items=bc01Items(state.bc01Section), current=items.find(i=>i.id===state.bc01Item) || items[0];
+    const links=paths=>`<div class="bc01-source-actions">${paths.filter(p=>validDoc(p[1])).map(p=>docButton(p[0],p[1])).join('')}</div>`;
+    let body='', sources=[];
+    if(state.bc01Section==='overview') {
+      if(current.id==='identity')body=`<p class="bc01-lead">${esc(spec.role)}</p>${table(['구분','자료에서 확인한 내용'],[['현장 카드 명칭',esc(selection().p.name)],['PLC 참조 태그','BC01'],['백업 설비 이름',esc(spec.name)],['계통·역할',esc(spec.group)+' · '+esc(spec.kind)],['모터·구동기',esc(circuit.equipment)],['설비 동일성','태그명 일치 · 실물/명판/위치 확인 전']])}<div class="notice">${esc(circuit.distinction)}</div>`;
+      else if(current.id==='baseline')body=`<p>매뉴얼의 조건과 주소는 아래 보존 자료를 기준으로 합니다. 현재 CPU·준공도·현장 상태와의 일치 여부는 별도 확인합니다.</p>${table(['자료','식별 기준·한계'],[['PLC','보존 백업/복원 XML · 현재 프로젝트와 비교 필요'],['OEM 전기','Electrical_Rev2.pdf · FG18/19 = PDF19/20 · 개정란은 원본에서 확인'],['시공·케이블','Electrical_Can_Decoating_20241118.pdf · FOR APPROVAL · 24.11.11 first draft design'],['P&ID','PID_1684n002I.pdf · 전체 공정 참고'],['HMI','보존된 DDE 태그 설정 · 현재 표시/요청/쓰기 대응 미확정']])}<details><summary>사용한 대장과 SHA256</summary>${table(['입력 대장','SHA256'],Object.entries(standard.source_hashes).map(([path,hash])=>[esc(path),'<code>'+esc(hash)+'</code>']))}</details>`;
+      else body=`<div class="bc01-status-cards"><article><strong>원본·정적 근거</strong><p>보존 자료에 연결</p></article><article><strong>현재 PLC·TIA</strong><p>미검증</p></article><article><strong>실물·현장 복구</strong><p>미확인</p></article></div><ul>${spec.pending.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul><div class="notice">문서·UI 표준화와 실제 수리 완료를 구분합니다. 다른 설비로의 확대는 사용자 요청으로 보류합니다.</div>`;
+      sources=[['기존 설비 자료','devices/BC01.html'],['실물 대응 작업지','priority-guides/P01.html'],['현행 백업 확인','requirements-audit.html#open-P01']];
+    } else if(state.bc01Section==='io') {
+      const raw=current.raw, hmi=current.role==='HMI 저장 태그';
+      body=`<span class="badge">${esc(current.role)}</span>${table(['항목','원본 설정'],hmi?[['HMI 태그',esc(raw['HMI 태그'])],['설정 주소',esc(raw['설정 주소'])],['Access Name',esc(raw['Access Name'])],['내부 태그 ID',esc(raw['내부 ID'])]]:[['심볼',esc(raw['원본 심볼'])],['백업 주소',esc(raw['백업 주소'].toUpperCase())],['자료형',esc(raw['자료형'])],['원본 설명',esc(raw['설명'] || '원본 설명 없음')],['심볼 문서 ID',esc(raw['문서 ID'])]])}<div class="notice info">현재값·정상 극성·현재 CPU 주소는 미취득/미확정입니다. HMI 저장 주소, 원시 I/O와 처리된 Inputs를 임의로 같은 신호로 연결하지 않습니다.</div>`;
+      const path=circuit.paths.find(p=>p.backup.split(' / ')[0].toUpperCase()===(raw['백업 주소'] || '').toUpperCase());
+      if(path)body+=`<h4>연관 도면의 전달 경계</h4><p>${esc(path.destination)}</p><p>${esc(path.check)}</p>`;
+      body+=`<details><summary>별도로 식별한 처리 응답·요청</summary>${table(['역할','원본 이름','참조'],schema.signals.map(s=>[esc(s.role),'<code>'+esc(s.name)+'</code>',s.refs.map(r=>docButton('LAD '+r.network+' · ORef '+r.oref,'networks/network-'+r.network+'.html')).join(' ')]))}</details>`;
+      sources=[['원시/처리 신호·복수 쓰기','signal-guides/BC01.html'],['HMI 전달 근거','hmi-transfer.html#profile-P01'],['전체 I/O·주소','devices/BC01.html']];
+    } else if(state.bc01Section==='control') {
+      let rules=spec.direct_rules;
+      if(current.id==='request')rules=rules.filter(r=>current.networks.includes(Number(r['네트워크 문서'])));
+      else if(current.id==='output')rules=rules.filter(r=>r['네트워크 문서']==='1935' && r['동작']==='Coil');
+      else if(current.id==='reset')rules=rules.filter(r=>r['네트워크 문서']==='1935' && r['동작']==='RCoil');
+      else if(current.id==='speed')rules=rules.filter(r=>r['네트워크 문서']==='1692');
+      else rules=rules.filter(r=>![1843,1844,1847,1935,1692,1785,1786].includes(Number(r['네트워크 문서'])));
+      body=`<p class="bc01-lead">정적 조건을 확인하고 같은 대상의 다른 쓰기·현재 호출 순서를 함께 대조합니다.</p>${current.id==='request'?'<div class="notice">종류·카운터 24/43/13은 원본 비교값입니다. 실제 시간이나 현재 단계로 확정하지 않습니다.</div>':''}${current.id==='output'?'<div class="notice">요청 Set, 최종 Q0.0, 현장 DI1 기동 입력과 실제 운전은 각각 별도 단계입니다.</div>':''}${current.id==='speed'?'<div class="notice">원본 설정 제한 쓰기입니다. 현장 권장값이나 보호값 변경 지시가 아닙니다.</div>':''}${current.id==='other'?'<div class="notice">보존 백업의 simulation 블록 참조는 현재 호출·응답 쓰기 확인 대상입니다. 시뮬레이터를 실행하거나 변경하지 않습니다.</div>':''}${bc01RuleCards(rules)}<details><summary>관련 네트워크 목록 ${spec.networks.length}개</summary>${table(['블록·제목','문서·원본'],spec.networks.map(n=>[esc(n['블록']+' · '+n['제목']),docButton('LAD '+n['문서 ID'],'networks/network-'+n['문서 ID']+'.html')+'<br>'+esc(n['원본 XML'])]))}</details>`;
+      sources=[['전체 제어 명세','control-specs/BC01.html'],['요청·출력의 상세 근거','repair-guides/P01.html#output-evidence'],['설정값의 다른 쓰기','recipe-settings.html#profile-P01']];
+    } else if(state.bc01Section==='circuits') {
+      const path=current.path;
+      body=`<div class="status-row"><span class="badge">${esc(path.drawing)} · ${esc(path.backup)}</span><strong>FG${esc(path.fg)} · PDF${pdfPage(path.fg)}</strong></div><p class="bc01-lead">${esc(path.signal)}의 도면상 전달 경로</p><ol class="bc01-path">${path.nodes.map(node=>'<li>'+esc(node)+'</li>').join('')}</ol><section class="bc01-check"><h4>도착점과 전달 경계</h4><p>${esc(path.destination)}</p><h4>관찰·비교할 항목</h4><p>${esc(path.check)}</p><p class="muted">각 구간의 값·시각·자료 위치를 기록합니다. 현재 접속과 정상 극성은 확인 전입니다.</p></section><button type="button" data-drawing="oem-${esc(path.fg)}">해당 도면 크게 확인</button>${path.native_symbol_references.length?links(path.native_symbol_references.map(r=>['LAD '+r.network+' · ORef '+r.uid,'networks/network-'+r.network+'.html'])):'<p class="muted">이 경로에 직접 배정된 원본 심볼 참조는 없습니다. 물리 입력→처리 신호 전달은 추가 확인합니다.</p>'}`;
+      sources=[['단자·기동·응답 전체 회로','circuit-guides/BC01.html'],['시공·케이블 근거','construction-guides/BC01.html'],['해당 원본 PDF',drawing.sheets.find(s=>s.id==='oem-'+path.fg).source+'#page='+pdfPage(path.fg)]];
+    } else if(state.bc01Section==='alarms') {
+      const a=current.alarm;
+      body=`<p class="bc01-lead"><code>${esc(a.name)}</code></p><div class="notice">${esc(alarm.note)}</div>${a.actions.map(action=>`<article class="bc01-rule"><strong>${action.gate==='SCoil'?'발생 · Set':'해제 · Reset'} · LAD ${action.network} · UID ${esc(action.uid)}</strong><p class="bc01-condition"><code>${esc(staticCondition(action.condition))}</code></p>${docButton('원본 접점·배선 확인','networks/network-'+action.network+'.html')}</article>`).join('')}${alarm.timers.some(t=>a.actions.some(action=>action.network===t.network))?'<h4>같은 원본 네트워크의 기동 감시 타이머</h4>':''}${alarm.timers.filter(t=>a.actions.some(action=>action.network===t.network)).map(t=>`<article class="bc01-rule"><strong>${esc(t.name)} · ${esc(t.gate)} · ${esc(staticCondition(t.preset))}</strong><p class="bc01-condition"><code>${esc(staticCondition(t.condition))}</code></p><p>원본 시간 선언입니다. 현재 호출·타이머 상태·동시 Set/Reset과 실제 복구는 추가 확인합니다.</p>${docButton('LAD '+t.network+' · UID '+t.uid,'networks/network-'+t.network+'.html')}</article>`).join('')}<details><summary>이 알람의 읽기·쓰기 참조 ${a.usages.length}개</summary>${table(['원본 위치','읽기/쓰기 · 신호'],a.usages.map(u=>[docButton('LAD '+u.network+' · Part '+u.part+' / ORef '+u.oref,'networks/network-'+u.network+'.html'),esc(u.scope+' · '+u.role+' · '+u.name)]))}</details><div class="notice info">원인 정상화 → 래치 해제 → 허가·새 요청 → 출력 → 실제 응답·연동 영향의 증거를 각각 기록합니다. Reset만으로 복구 완료를 판정하지 않습니다.</div>`;
+      sources=[['알람 발생·해제 원본 근거','alarm-guides/BC01.html'],['재기동 판단 작업지','repair-guides/P01.html#recovery'],['공통 리셋·다른 쓰기','common-control.html#checks']];
+    } else if(state.bc01Section==='repair') {
+      const step=current.step, evidence=schema.evidence_plan.steps.find(s=>s.step_id===step.id);
+      body=`<ol class="repair-steps">${[['먼저 관찰·기록',step.observe],['원본과 비교',step.compare],['차이와 다음 판단',step.next]].map(([title,text])=>'<li><h4>'+esc(title)+'</h4><p>'+esc(text)+'</p></li>').join('')}</ol><button type="button" data-bc01-diagnose="${esc(step.id)}" class="card-primary-action">이 증상으로 진단·수리 시작</button><details><summary>이 증상에 필요한 자료 ${evidence.requirements.length}항목</summary>${evidence.requirements.map(r=>'<h4>'+esc(r.owner)+'</h4><p>'+esc(r.work)+'</p>').join('')}</details>`;
+      sources=[['선택 증상의 상세 판단',schema.manual+'#'+step.common],...evidence.source_links.map(s=>[s.label,s.path])];
+    } else {
+      if(current.id==='documentation')body='<p>BC01 한 설비의 화면·문서 표준 기준입니다. 원본 정적 대조, 현재 CPU 확인과 실제 수리 완료는 각각 구분합니다.</p>'+table(['표준 항목','완료 기준'],[['찾기·가독성','종류별 선택·세부 항목 목록·본문·근거 분리'],['근거 추적','신호/조건/단자마다 원본 문서·FG/PDF·LAD/UID 연결'],['수리 판단','증상→관찰 위치·값/시각→비교 원본→차이·추가 증거→복구 확인'],['모호한 자료','주소·극성·시공 차이를 확인 대기로 유지'],['검증','최신 파일의 필수 검사·링크·PC/모바일·기록 보존 확인']]);
+      else if(current.id==='cpu')body=`<p>현행 엔지니어링 프로젝트·CPU·HMI 자료를 확보한 뒤 아래 항목을 대조합니다.</p><ul>${spec.pending.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul><div class="notice">현재 TIA 컴파일·온라인 비교·실제 CPU 결과는 미확인입니다. UI와 원본 해시 검사로 대신 판정하지 않습니다.</div>`;
+      else if(current.id==='field')body='<p>기존 회로 작업지의 현장 확인 대기를 보존합니다.</p><ul>'+circuit.pending.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul>'+drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('');
+      else if(current.id==='recovery')body=`<p class="bc01-lead">실제 복구 판정에 필요한 증거</p><ol class="bc01-path">${['최초 알람·원인 입력·관찰 기준 시각','원인 해소 및 실물/처리 신호의 정상화 근거','알람 래치 해제와 기동 허가의 확인','승인된 새 요청·Q0.0·DI1·실제 운전 응답','연동 영향·재발 여부·조치 및 후속 확인'].map(s=>'<li>'+esc(s)+'</li>').join('')}</ol><p>각 항목은 관찰 후 기록합니다. 미취득 값과 원인 후보는 확정 결과로 바꾸지 않습니다.</p>${button('BC01 수리 관찰 기록','repair-record')}`;
+      else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
+      sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
+    }
+    const selectedPath=current.path, fg=selectedPath?.fg || 19, preview=drawing.sheets.find(s=>s.id==='oem-'+fg);
+    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions"><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 단독 표준화 · 다른 설비 확대 보류 · 현재 CPU/실물/현장 복구 확인 전</div><div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map(i=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}">${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content"><p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title">${esc(current.title)}</h3>${body}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel"><h3>관련 전기도면</h3><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
+  }
   function renderRepairWorkspace() {
     const schema=repairRecordMap.get(state.selected), step=schema?.steps.find(s=>s.id===state.repairSymptom);
     if(!step)return unknownPanel();
@@ -473,7 +557,7 @@
     const roles=[['requests','운전 요청'],['outputs','최종 PLC 출력'],['responses','처리된 응답']];
     const links=(items=[])=>items.filter(x=>validDoc(x.path)).map(x=>docButton(x.label,x.path)).join('');
     return `<div class="repair-workspace">
-      <div class="view-heading"><div><p class="eyebrow">REPAIR / SOURCE EVIDENCE</p><h2>${esc(schema.name)} · 진단·수리 작업실</h2><p>증상을 선택하고 점검 순서와 원본 근거를 확인하세요.</p></div>${button('도면 작업실','drawings')}</div>
+      <div class="view-heading"><div><p class="eyebrow">REPAIR / SOURCE EVIDENCE</p><h2>${esc(schema.name)} · 진단·수리 작업실</h2><p>증상을 선택하고 점검 순서와 원본 근거를 확인하세요.</p></div>${button('도면 작업실','drawings')}${state.selected==='P01'?button('BC01 표준 매뉴얼','manual'):''}</div>
       <div class="notice info">기존 백업의 정적 근거를 연결한 점검 안내입니다. 실물 동일성·현재 CPU 동작·현장 복구 상태는 확인 전입니다.</div>
       <section class="panel repair-selector"><h3>1. 현재 증상 선택</h3><div class="repair-symptoms" role="group" aria-label="진단 증상">${schema.steps.map((s,i)=>`<button type="button" data-repair-symptom="${esc(s.id)}" aria-pressed="${s.id===step.id}"><span class="repair-number">${i+1}</span><span>${esc(s.title)}</span></button>`).join('')}</div></section>
       <div class="repair-columns"><div class="repair-main">
@@ -569,7 +653,8 @@
     const host = $('workspace-content');
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
-    if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();
+    if(state.view==='manual' && state.selected==='P01')host.innerHTML=renderBC01Manual();
+    else if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();
     else if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
     else if (state.view === 'tests' || state.view === 'checks') {
       host.innerHTML = `<h2>${state.view === 'tests' ? '시험 설계 · 577건 / 전체 검증 전' : '확인 대장 · 1,060건'}</h2><p class="muted">원본 대장의 상태를 그대로 표시합니다. 부분 가상 시험은 아래 별도 결과에서 확인합니다.</p>` + (state.view==='tests'?renderModelResults():'') + filterUI(state.view === 'tests' ? '시험' : '확인');
@@ -627,6 +712,7 @@
           if(params.get('view')==='drawings' && drawingMap.has(params.get('equipment'))){e.preventDefault();const requested=params.get('drawing');if(drawingMap.get(params.get('equipment')).sheets.some(s=>s.id===requested))state.drawing=requested;route('drawings',params.get('equipment'));return;}
           if(params.get('view')==='repair-record' && repairRecordMap.has(params.get('equipment'))){e.preventDefault();route('repair-record',params.get('equipment'));return;}
           if(params.get('view')==='repair' && repairWorkspaceKeys.has(params.get('equipment'))){e.preventDefault();route('repair',params.get('equipment'));return;}
+          if(params.get('view')==='manual' && params.get('equipment')==='P01'){e.preventDefault();state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';state.bc01Item=bc01Items(state.bc01Section).find(i=>i.id===params.get('item'))?.id || '';route('manual','P01');return;}
           if(params.get('view')==='review' && priorityMap.has(params.get('equipment'))){e.preventDefault();route('review',params.get('equipment'),'',params.get('review') || '');return;}
         }
         if (path.startsWith('index.html')) path = path.replace(/^index\.html/,'manual-catalog.html');
@@ -639,6 +725,20 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
+    if(b.hasAttribute('data-bc01-wide') && state.selected==='P01'){bc01Wide=!bc01Wide;render();document.querySelector('[data-bc01-wide]')?.focus({preventScroll:true});return;}
+    if(b.dataset.bc01Section) {
+      if(state.selected!=='P01' || !bc01Sections.some(s=>s[0]===b.dataset.bc01Section))return;
+      state.bc01Section=b.dataset.bc01Section;state.bc01Item=bc01LastItems.get(state.bc01Section) || bc01Items(state.bc01Section)[0].id;route('manual');
+      document.querySelector(`[data-bc01-section="${state.bc01Section}"]`)?.focus({preventScroll:true});return;
+    }
+    if(b.dataset.bc01Item) {
+      if(state.selected!=='P01' || !bc01Items(state.bc01Section).some(i=>i.id===b.dataset.bc01Item))return;
+      state.bc01Item=b.dataset.bc01Item;route('manual');document.querySelector(`[data-bc01-item="${state.bc01Item}"]`)?.focus({preventScroll:true});return;
+    }
+    if(b.dataset.bc01Diagnose) {
+      if(state.selected!=='P01' || !repairRecordMap.get('P01').steps.some(s=>s.id===b.dataset.bc01Diagnose))return;
+      state.repairSymptom=b.dataset.bc01Diagnose;route('repair');return;
+    }
     if(b.dataset.repairSymptom) {
       if(!repairWorkspaceKeys.has(state.selected) || !repairRecordMap.get(state.selected)?.steps.some(s=>s.id===b.dataset.repairSymptom))return;
       state.repairSymptom=b.dataset.repairSymptom;route('repair');

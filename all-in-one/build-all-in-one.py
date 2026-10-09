@@ -168,6 +168,14 @@ for item in priority[:21]:
     if item['plc_id']=='FN04': warnings.append('C05: 시공 PDF48의 모터 그림 M34/M38·TAG M31/M34·케이블 M31/M36이 혼재합니다. PDF52의 두 케이블 행과 구분하며 실물 대응은 확인 전입니다.')
     drawing_profiles.append(dict(key=item['key'],plc_id=item['plc_id'],match=item['match'],sheets=sheets,circuit=circuit,warnings=warnings,identity_verified=False,field_verified=False))
 data['drawing_workspace']=dict(profiles=drawing_profiles,source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/electrical-trace.json','registers/control-spec.json','registers/construction-reference.json','registers/body-manual.json','sources/Electrical_Rev2.pdf','sources/Electrical_Can_Decoating_20241118.pdf','sources/PID_1684n002I.pdf']},preview_hashes={sheet['image']:hashlib.sha256((ROOT/sheet['image']).read_bytes()).hexdigest() for profile in drawing_profiles for sheet in profile['sheets'] if sheet['image']},scope='current21 source-reference display; no new control claims')
+# BC01 alone is the standardization pilot; source records remain unchanged.
+data['bc01_standard']=dict(version=1,priority_key='P01',scope='BC01 only; other-equipment expansion held by user',
+    sections=['overview','io','control','circuits','alarms','repair','completion'],
+    specification=next(p for p in all_specs if p['id']=='BC01'),
+    alarm=next(p for p in json.loads((ROOT/'registers/alarm-recovery.json').read_text())['profiles'] if p['id']=='BC01'),
+    repair=next(p for p in json.loads((ROOT/'registers/repair-decision.json').read_text())['records'] if p['key']=='P01'),
+    source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/control-spec.json','registers/alarm-recovery.json','registers/repair-decision.json','registers/repair-record-forms.json','registers/electrical-trace.json']},
+    field_verified=False,tia_verified=False,repairs_completed=0,simulator_work='stopped_by_user')
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 (ROOT / 'assets/all-in-one-data.js').write_text('window.GME_APP_DATA = ' + payload + ';\n', encoding='utf-8')

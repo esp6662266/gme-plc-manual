@@ -20,6 +20,7 @@ class Links(HTMLParser):
 guide=(ROOT/'operator-guide.html').read_text()
 for key in ['P01','P02']:
     assert f'href="index.html#view=drawings&amp;equipment={key}&amp;scope=priority" target="_top"' in guide,key
+assert 'href="index.html#view=manual&amp;equipment=P01&amp;scope=priority" target="_top"' in guide
 errors=[];link_count=0;htmlfiles=list(ROOT.rglob('*.html'))
 parsers={}
 for p in htmlfiles:
@@ -38,6 +39,10 @@ for p,parser in parsers.items():
                 profile=next((r for r in profiles if params.get('equipment')==[r['key']]),None)
                 if profile and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope','drawing'} and ('drawing' not in params or params['drawing'] in [[s['id']] for s in profile['sheets']]):
                     assert "params.get('view')==='drawings'" in (ROOT/'assets/all-in-one.js').read_text()
+                    continue
+            if target==(ROOT/'index.html').resolve() and params.get('view')==['manual']:
+                if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
+                    assert "params.get('view')==='manual' && params.get('equipment')==='P01'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
             if target==(ROOT/'index.html').resolve() and params.get('view')==['repair']:
                 profiles=json.loads((ROOT/'registers/repair-record-forms.json').read_text())['profiles']

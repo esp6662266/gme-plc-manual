@@ -475,6 +475,16 @@ for d in data['equipment']:
     for n in d['networks']: routes.add(f"networks/network-{n['문서 ID']}.html")
     if d['parent']: assert d['parent'] in specs
 
+# BC01 pilot exports exact source records, never a new control model.
+standard=data['bc01_standard']
+assert standard['version']==1 and standard['priority_key']=='P01'
+assert standard['sections']==['overview','io','control','circuits','alarms','repair','completion']
+assert standard['specification']==specs['BC01']
+assert standard['alarm']==next(p for p in alarm_recovery['profiles'] if p['id']=='BC01')
+assert standard['repair']==next(p for p in repair['records'] if p['key']=='P01')
+assert not standard['field_verified'] and not standard['tia_verified'] and standard['repairs_completed']==0
+assert standard['simulator_work']=='stopped_by_user'
+for path,digest in standard['source_hashes'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
 # Drawing UI reuses existing evidence, and supports current21 only.
 drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]
 for path,digest in {**drawing['source_hashes'],**drawing['preview_hashes']}.items():
