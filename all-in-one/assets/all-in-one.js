@@ -574,7 +574,7 @@
   function bc01CompletionWorkspace(item,spec,schema,drawing) {
     const plan=schema.evidence_plan, circuit=drawing.circuit, tasks=bc01CompletionTasks(item);
     const current=tasks.find(t=>t.id===state.bc01Check) || tasks[0];
-    let body=`<div class="bc01-completion-status"><strong>현장 확인 준비 · 확인 대기</strong><p>현재 CPU·실물·복구 증거는 아직 확인되지 않았습니다. 아래 자료 요청과 원본 비교를 관찰 결과로 자동 판정하지 않습니다.</p></div>`;
+    let body=`<div class="bc01-completion-status"><strong>현장 확인 준비 · 확인 대기</strong><p>현재 CPU·실물·복구 증거는 아직 확인되지 않았습니다. 아래 자료 요청과 원본 비교를 관찰 결과로 자동 판정하지 않습니다.</p></div><div class="bc01-print-actions"><button type="button" data-bc01-proof-preview>현재 작업지 인쇄 미리보기</button><p class="muted">선택한 작업의 자료 요청·원본·미확정 사항을 펼쳐 인쇄합니다. PDF 저장은 브라우저 인쇄 창에서 선택합니다.</p></div>`;
     if(tasks.length)body+=`<nav class="bc01-check-tabs" aria-label="BC01 확인 작업 선택">${tasks.map(t=>`<button type="button" data-bc01-check="${esc(t.id)}" aria-pressed="${current.id===t.id}">${esc(t.title)}</button>`).join('')}</nav>`;
     if(item==='cpu') {
       const evidence=current.evidence;
@@ -595,6 +595,55 @@
       body+=`<section class="bc01-evidence-task" data-check-task="recovery"><h4>복구 결과를 판정할 증거</h4><p class="bc01-explanation">리셋·새 요청·출력·실제 운전 응답의 증거를 따로 남깁니다. 관찰하지 않은 값과 원인 후보는 확인 결과로 바꾸지 않습니다.</p><ol class="repair-steps">${[['관찰·시각 기록',step.observe],['원본과 비교',step.compare],['복구 판단의 경계',step.next]].map(([title,text])=>'<li><h5>'+esc(title)+'</h5><p>'+esc(text)+'</p></li>').join('')}</ol><h5>필요한 자료 · ${evidence.requirements.length}항목</h5>${bc01EvidenceRequirements(evidence.requirements)}<details><summary>복구 증거를 빠짐없이 확인</summary><ol class="bc01-path">${['최초 알람·원인 입력·관찰 기준 시각','원인 해소 및 실물/처리 신호의 정상화 근거','알람 래치 해제와 기동 허가의 확인','승인된 새 요청·Q0.0·DI1·실제 운전 응답','연동 영향·재발 여부·조치 및 후속 확인'].map(s=>'<li>'+esc(s)+'</li>').join('')}</ol></details>${bc01EvidenceSources(evidence.source_links)}${bc01PendingReviews(evidence.reviews)}</section>`;
     }
     return body+`<section class="bc01-proof-guide"><h4>근거를 남긴 뒤 대조합니다</h4><p>자료명·개정/버전·신호/단자·관찰값·시각·사진/화면 위치와 남은 차이를 기존 수리 기록에 남깁니다. 이 작업판은 자료 안내이며 입력값을 채우거나 확인 완료로 전환하지 않습니다.</p>${button('BC01 수리 관찰 기록','repair-record')} ${docButton('BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01')}</section>`;
+  }
+  function closeBC01ProofPreview() {
+    const dialog=document.getElementById('bc01-proof-preview');
+    if(dialog) {dialog.close();dialog.remove();}
+    document.body.classList.remove('bc01-proof-printing');
+  }
+  function openBC01ProofPreview() {
+    if(state.view!=='manual' || state.selected!=='P01' || state.bc01Section!=='completion')return;
+    const task=document.querySelector('.bc01-evidence-task'), status=document.querySelector('.bc01-completion-status');
+    if(!task || !status)return;
+    closeBC01ProofPreview();
+    const dialog=document.createElement('dialog');
+    dialog.id='bc01-proof-preview';dialog.className='bc01-proof-preview';
+    dialog.setAttribute('aria-labelledby','bc01-proof-title');
+    const printStyle=document.createElement('style');
+    printStyle.textContent='@page {size:A4;margin:14mm 12mm;@bottom-center{content:"BC01 · 확인 대기  |  " counter(page) " / " counter(pages);font:9pt system-ui,sans-serif;color:#52677a}}';
+    dialog.innerHTML='<div class="bc01-proof-toolbar"><strong>인쇄 미리보기 · 선택한 BC01 작업</strong><div><button type="button" data-bc01-proof-print>인쇄 / PDF 저장</button><button type="button" data-bc01-proof-close>닫기</button></div></div><article class="bc01-proof-paper"><header><p>GME / BC01 · 현장 자료 요청·확인 작업지</p><h1 id="bc01-proof-title"></h1><p class="bc01-proof-baseline">보존 백업 GME_20250506.zap18 기준 · 현재 CPU·실물·복구 미확인</p></header></article>';
+    dialog.querySelector('#bc01-proof-title').textContent=document.getElementById('bc01-content-title').textContent+' / '+task.querySelector('h4').textContent;
+    const paper=dialog.querySelector('.bc01-proof-paper');
+    paper.append(status.cloneNode(true),task.cloneNode(true));
+    paper.querySelectorAll('details').forEach(d=>d.open=true);
+    paper.querySelectorAll('button').forEach(b=> {
+      let path=b.dataset.doc;
+      if(b.dataset.drawing) {
+        const sheet=drawingMap.get('P01').sheets.find(s=>s.id===b.dataset.drawing);
+        path=sheet?sheet.source+(sheet.page?'#page='+sheet.page:''):'';
+      }
+      if(path && validDoc(path)) {
+        const a=document.createElement('a');a.className='bc01-proof-source';
+        a.href=new URL(path,document.baseURI).href;a.target='_blank';a.rel='noopener';
+        a.textContent=b.textContent+' · '+path;b.replaceWith(a);
+      } else b.remove();
+    });
+    const notes=document.createElement('section');notes.className='bc01-proof-notes';
+    notes.innerHTML='<h2>자료 수집 메모 · 자동 저장 없음</h2><p>자료명·개정/버전, 확인자·일시, 사진/화면 위치를 남깁니다. 실제 관찰은 기존 수리 기록에 별도로 입력합니다.</p>';
+    ['자료명·개정/버전','확인자·일시·시간대','신호/단자·관찰값·사진/화면 위치','원본과의 차이·미확정 사항·후속 확인'].forEach(label=> {
+      const row=document.createElement('div');row.className='bc01-proof-note-row';
+      const title=document.createElement('strong');title.textContent=label;
+      row.append(title,document.createElement('span'));notes.append(row);
+    });
+    const boundary=document.createElement('section');boundary.className='bc01-proof-context';
+    const heading=document.createElement('h2');heading.textContent='설비·회로의 미확정 경계';boundary.append(heading);
+    document.querySelectorAll('.bc01-evidence .panel:last-child p, .bc01-evidence .panel:last-child .notice').forEach(n=>boundary.append(n.cloneNode(true)));
+    paper.append(boundary,notes);
+    const footer=document.createElement('p');footer.className='bc01-proof-boundary';
+    footer.textContent='자료 수집은 원인 확정·수리 완료·재기동 승인 판정이 아닙니다. 시뮬레이터 실행·실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다.';
+    paper.append(footer);
+    dialog.addEventListener('close',()=>{document.body.classList.remove('bc01-proof-printing');document.querySelector('[data-bc01-proof-preview]')?.focus({preventScroll:true});dialog.remove();});
+    dialog.append(printStyle);document.body.append(dialog);dialog.showModal();document.body.classList.add('bc01-proof-printing');
   }
   function renderBC01Manual() {
     const standard=data.bc01_standard;
@@ -741,6 +790,7 @@
     $('document-frame').title = label || '통합 자료 보기';
   }
   function render() {
+    closeBC01ProofPreview();
     window.GMESimulatorWorkspace?.cleanup();
     $('workspace-content').onclick = null;
     $('workspace-content').onchange = null;
@@ -823,7 +873,10 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
+    if(b.hasAttribute('data-bc01-proof-close')) {closeBC01ProofPreview();return;}
+    if(b.hasAttribute('data-bc01-proof-print')) {if(document.getElementById('bc01-proof-preview')?.open)window.print();return;}
     if(state.view==='manual' && state.selected==='P01') {
+      if(b.hasAttribute('data-bc01-proof-preview')) {openBC01ProofPreview();return;}
       if(b.dataset.bc01Text && ['standard','large'].includes(b.dataset.bc01Text)) {state.bc01Text=b.dataset.bc01Text;route('manual');document.querySelector(`[data-bc01-text="${state.bc01Text}"]`)?.focus({preventScroll:true});return;}
       if(b.dataset.bc01AlarmStep && ['set','reset','restart'].includes(b.dataset.bc01AlarmStep)) {state.bc01AlarmStep=b.dataset.bc01AlarmStep;route('manual');document.querySelector(`[data-bc01-alarm-step="${state.bc01AlarmStep}"]`)?.focus({preventScroll:true});return;}
       if(b.dataset.bc01Check) {if(state.selected==='P01' && state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===b.dataset.bc01Check)){state.bc01Check=b.dataset.bc01Check;route('manual');document.querySelector('.bc01-check-tabs [aria-pressed="true"]')?.focus({preventScroll:true});}return;}

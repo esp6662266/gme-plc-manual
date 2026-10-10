@@ -2852,5 +2852,51 @@
     "tia_verified": false,
     "simulator_execution": false,
     "actual_plc_changes": 0
+  },
+  "bc01_proof_print": {
+    "status": "passed",
+    "date": "2026-10-11",
+    "equipment": "P01 BC01 only",
+    "ui_views": 12,
+    "mobile_views": 12,
+    "mobile_width": 390,
+    "overflow": 0,
+    "source_links_checked": 201,
+    "selected_work_and_review_exact": true,
+    "source_details_expanded": true,
+    "blank_handwritten_fields": 4,
+    "observation_inputs_or_saves": 0,
+    "close_focus_selection_and_details_preserved": true,
+    "escape_and_route_restore": true,
+    "temporary_page_style_removed": true,
+    "source_less_paths": [
+      "path-2",
+      "path-3",
+      "path-4"
+    ],
+    "original_condition_and_records_preserved": 1641,
+    "protected_renderers_unchanged": 3,
+    "independent_review": {
+      "model": "Sol High",
+      "blockers": 0,
+      "orphan_field_fixed_and_rechecked": true
+    },
+    "pdf_rendering": {
+      "browser": "Chromium CDP printToPDF",
+      "a4_request_pages": 6,
+      "a4_field_path2_pages": 2,
+      "all_rendered_pages_visually_reviewed": 8,
+      "page_numbers_verified": true,
+      "last_note_orphan_fixed": true
+    },
+    "native_print": {
+      "request_attempted": true,
+      "request_click_cdp_timed_out": true,
+      "qa_tab_closed": true,
+      "physical_printer_output_verified": false
+    },
+    "simulator_work": "stopped_by_user",
+    "plc_or_field_changes": 0,
+    "console_errors_latest_local": 0
   }
 }
