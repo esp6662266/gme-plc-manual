@@ -492,6 +492,31 @@ for rule in specs['BC01']['direct_rules']:
     action=next(a for a in network['actions'] if a['uid']==rule['Part UID'])
     assert standard['control_conditions'][rule['rule_id']]==dict(network=network['id'],file=network['file'],action={k:v for k,v in action.items() if k in ['uid','gate','name','condition','value']})
 
+# Verify the three annotations against raw pins and scoped declarations.
+assert set(standard['pin_evidence'])=={'1018:1121','1048:2772','1843:102'}
+expected_pins={'1018:1121':('1148','1118','eno','1121','en'),'1048:2772':('2798','2769','eno','2772','en'),'1843:102':('104','492','out','102','in')}
+for key,evidence in standard['pin_evidence'].items():
+    assert evidence['status']=='static_pin_connection_only' and not evidence['execution_verified']
+    xml=ET.parse(ROOT/evidence['file']).getroot();ns={'s':'http://www.siemens.com/automation/2015/FunctionLadderDiagram'}
+    wire,source_uid,source_pin,target_uid,target_pin=expected_pins[key]
+    assert evidence['wire']==wire
+    actual=next(w for w in xml.findall('.//s:Wire',ns) if w.get('UId')==wire)
+    assert {(c.get('UId'),c.get('PinName')) for c in actual}=={(source_uid,source_pin),(target_uid,target_pin)}
+    for side,uid,pin in [('source',source_uid,source_pin),('target',target_uid,target_pin)]:
+        part=evidence[side];assert part['uid']==uid and part['pin']==pin
+        assert next(p for p in xml.findall('s:Parts/s:Part',ns) if p.get('UId')==uid).get('Gate')==part['gate']
+        for role,ref in [(k,v) for k,v in part.items() if k in ('target','value')]:
+            pname='in' if role=='value' else 'out1' if part['gate']=='Move' else 'operand'
+            binding=[w for w in xml.findall('.//s:Wire',ns) if any(c.get('UId')==uid and c.get('PinName')==pname for c in w)]
+            assert len(binding)==1 and any(c.tag.endswith('OCon') and c.get('UId')==ref['oref'] for c in binding[0])
+            oref=next(o for o in xml.findall('s:Parts/s:ORef',ns) if o.get('UId')==ref['oref']);assert oref.get('RefId')==ref['ref_id']
+            access=[a for a in ET.parse(ROOT/ref['identifier_file']).getroot() if any(c.tag.endswith('ID') and c.get('RID')==ref['ref_id'] and c.get('S')==ref['scope'] and any(d.get('NID')==ref['nid'] and d.get('UID')==ref['oref'] for d in c.iter()) for c in a)]
+            assert len(access)==1
+            ident=next(c for c in access[0] if c.tag.endswith('ID'));literal=next((c for c in access[0].iter() if c.tag.endswith('CB')),None)
+            names=[c.get('N') for c in access[0].iter() if c.tag.endswith('AO')]
+            name=literal.get('V') if literal is not None else '.'.join(names) if names else ident.get('N')
+            assert name==ref['name'],(key,role,ref)
+
 for path,digest in standard['source_hashes'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
 # Drawing UI reuses existing evidence, and supports current21 only.
 drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]

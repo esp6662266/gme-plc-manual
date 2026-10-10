@@ -3364,5 +3364,151 @@
     "local_console_warnings": 0,
     "status": "passed",
     "source_analysis": "existing mapping reused; no new input"
+  },
+  "bc01_pin_evidence": {
+    "desktop": [
+      {
+        "item": "request",
+        "brokenText": false,
+        "cards": [
+          {
+            "id": "1843:102",
+            "links": [
+              "sources/decoded-original/0164-FlgNet.xml",
+              "sources/decoded-original/0577-IdentXmlPart.xml",
+              "sources/decoded-original/0575-IdentXmlPart.xml"
+            ],
+            "text": "원본에서 확인한 연결\n\n아래는 정적 핀 배선입니다. 현재값·실행 결과는 확인 전입니다.\n\n선행 명령\n\nSet 코일 · Flag.M_BC_01\n\n명령 사이 연결\n\nUID 492.out → UID 102.in\n\n다음 명령의 대상\n\nSet 코일 · MemoCMD_BC01_Startup\n\nWire·ORef·선언 근거 확인\n추가 확인: ENO/out의 실제 전달 상태, 현재 블록 호출·다른 쓰기와의 순서, 대상 값 변화가 필요합니다. 핀 연결을 선행 접점 조건과 동일하게 계산하거나 실제 운전·복구로 판정하지 않습니다.",
+            "tree": false
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "item": "other",
+        "brokenText": false,
+        "cards": [
+          {
+            "id": "1018:1121",
+            "links": [
+              "sources/decoded-original/0308-FlgNet.xml",
+              "sources/decoded-original/0615-IdentXmlPart.xml",
+              "sources/decoded-original/0616-IdentXmlPart.xml"
+            ],
+            "text": "원본에서 확인한 연결\n\n아래는 정적 핀 배선입니다. 현재값·실행 결과는 확인 전입니다.\n\n선행 명령\n\nMOVE · 상수 1 → hours motors.BC_01_HOUR\n\n명령 사이 연결\n\nUID 1118.eno → UID 1121.en\n\n다음 명령의 대상\n\nMOVE · 상수 0 → hours motors.BC_01_MIN\n\nWire·ORef·선언 근거 확인\n추가 확인: ENO/out의 실제 전달 상태, 현재 블록 호출·다른 쓰기와의 순서, 대상 값 변화가 필요합니다. 핀 연결을 선행 접점 조건과 동일하게 계산하거나 실제 운전·복구로 판정하지 않습니다.",
+            "tree": false
+          },
+          {
+            "id": "1048:2772",
+            "links": [
+              "sources/decoded-original/0335-FlgNet.xml",
+              "sources/decoded-original/0615-IdentXmlPart.xml",
+              "sources/decoded-original/0616-IdentXmlPart.xml"
+            ],
+            "text": "원본에서 확인한 연결\n\n아래는 정적 핀 배선입니다. 현재값·실행 결과는 확인 전입니다.\n\n선행 명령\n\nMOVE · 상수 0 → hours motors.CLIENT_MOTOR_19_HOUR\n\n명령 사이 연결\n\nUID 2769.eno → UID 2772.en\n\n다음 명령의 대상\n\nMOVE · 상수 0 → hours motors.BC_01_HOUR\n\nWire·ORef·선언 근거 확인\n추가 확인: ENO/out의 실제 전달 상태, 현재 블록 호출·다른 쓰기와의 순서, 대상 값 변화가 필요합니다. 핀 연결을 선행 접점 조건과 동일하게 계산하거나 실제 운전·복구로 판정하지 않습니다.",
+            "tree": false
+          }
+        ],
+        "overflow": false
+      }
+    ],
+    "mobile": [
+      {
+        "item": "request",
+        "text": "standard",
+        "cards": [
+          {
+            "client": 279,
+            "id": "1843:102",
+            "scroll": 279
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "item": "request",
+        "text": "large",
+        "cards": [
+          {
+            "client": 279,
+            "id": "1843:102",
+            "scroll": 279
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "item": "other",
+        "text": "standard",
+        "cards": [
+          {
+            "client": 279,
+            "id": "1018:1121",
+            "scroll": 279
+          },
+          {
+            "client": 279,
+            "id": "1048:2772",
+            "scroll": 279
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "item": "other",
+        "text": "large",
+        "cards": [
+          {
+            "client": 279,
+            "id": "1018:1121",
+            "scroll": 279
+          },
+          {
+            "client": 279,
+            "id": "1048:2772",
+            "scroll": 279
+          }
+        ],
+        "overflow": false
+      }
+    ],
+    "raw_xml_link_verified": true,
+    "back_title": "응답·시간·다른 관련 쓰기",
+    "large_reload_verified": true,
+    "errors": 0,
+    "warnings": 0,
+    "status": "passed",
+    "date": "2026-10-11",
+    "scope": "P01 BC01 only",
+    "source_reviewers": [
+      "Sol High analysis",
+      "Sol High independent raw-source review"
+    ],
+    "review_blockers": 0,
+    "source_pin_annotations": 3,
+    "protected_files": 1636,
+    "protected_functions": 5,
+    "simulator_execution": false,
+    "plc_changes": 0,
+    "manufacturer_revision_notice": {
+      "status": "passed",
+      "source": "user_report_2026_10_11",
+      "current_manufacturer": "ABB",
+      "legacy_site_manufacturer": "Mitsubishi",
+      "exact_model_rating_wiring_verified": false,
+      "desktop_width": 1280,
+      "mobile_width": 390,
+      "views_tested": 8,
+      "scopes": [
+        "overview/identity",
+        "overview/baseline",
+        "circuits/path-2",
+        "completion/field/path-2"
+      ],
+      "notice_count_per_view": 1,
+      "horizontal_overflow": false,
+      "independent_review_blockers": 0,
+      "print_clone_scope_unchanged": true
+    }
   }
 }

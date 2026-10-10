@@ -532,10 +532,19 @@
   function bc01GateExplanation(gate) {
     return ({SCoil:'조건 충족 시 대상 기억 비트를 설정(1)하는 경로입니다. 발생 조건이 사라져도 별도 Reset 경로를 확인해야 합니다.',RCoil:'조건 충족 시 대상 기억 비트를 해제(0)하는 경로입니다. 해제만으로 기동이나 실제 복구가 완료되는 것은 아닙니다.',Coil:'이 네트워크의 조건 참/거짓을 출력 코일에 반영하는 경로입니다. 실제 기동과 응답은 별도로 확인합니다.',Move:'조건 충족 시 입력값을 대상에 쓰는 경로입니다. 같은 대상의 다른 쓰기도 확인합니다.'})[gate] || '보존 원본의 정적 동작 경로입니다. 현재 호출·실행은 별도 확인합니다.';
   }
+  function bc01PinEvidence(rule) {
+    const evidence=data.bc01_standard.pin_evidence?.[rule.rule_id];
+    if(!evidence)return '';
+    const source=evidence.source, target=evidence.target;
+    const command=p=>p.gate==='Move'?'MOVE · 상수 '+p.value.name+' → '+p.target.name:'Set 코일 · '+p.target.name;
+    const refs=[source.target,target.target,source.value,target.value].filter(Boolean);
+    const files=[...new Set(refs.map(r=>r.identifier_file))];
+    return `<section class="bc01-pin-evidence" data-pin-rule="${esc(rule.rule_id)}"><h4>원본에서 확인한 연결</h4><p class="muted">아래는 정적 핀 배선입니다. 현재값·실행 결과는 확인 전입니다.</p><ol class="bc01-path"><li><strong>선행 명령</strong><p>${esc(command(source))}</p></li><li><strong>명령 사이 연결</strong><p><code>UID ${esc(source.uid)}.${esc(source.pin)} → UID ${esc(target.uid)}.${esc(target.pin)}</code></p></li><li><strong>다음 명령의 대상</strong><p>${esc(command(target))}</p></li></ol><details><summary>Wire·ORef·선언 근거 확인</summary><p>LAD ${esc(evidence.network)} · Wire ${esc(evidence.wire)}</p>${refs.map(r=>'<p><code>'+esc(r.name)+'</code><br>ORef '+esc(r.oref)+' · RID '+esc(r.ref_id)+' · NID '+esc(r.nid)+' · '+esc(r.scope)+'</p>').join('')}${docButton('원본 XML 핀 배선',evidence.file)} ${files.map(f=>docButton('식별 선언 '+f.split('/').pop(),f)).join(' ')}</details><div class="notice">추가 확인: ENO/out의 실제 전달 상태, 현재 블록 호출·다른 쓰기와의 순서, 대상 값 변화가 필요합니다. 핀 연결을 선행 접점 조건과 동일하게 계산하거나 실제 운전·복구로 판정하지 않습니다.</div></section>`;
+  }
   function bc01RuleCards(rules) {
     return bc01ReadingGuide()+rules.map(r=> {
       const action=data.bc01_standard.control_conditions[r.rule_id]?.action;
-      return `<article class="bc01-rule"><div class="status-row"><strong>${esc(r['동작'])} · ${esc(bc01SignalLabel(r['대상']))}</strong><span class="badge">LAD ${esc(r['네트워크 문서'])} · UID ${esc(r['Part UID'])}</span></div><code class="bc01-target">${esc(r['대상'])}</code><p class="bc01-explanation">${esc(bc01GateExplanation(r['동작']))}</p>${r.opaque?'<div class="bc01-unknown">선행 명령의 ENO/out 연결 · 동작 해석 대기. 이 경로를 완전한 조건 묶음으로 표시하지 않습니다.</div><p class="bc01-condition"><code>'+esc(r['정적 조건식'])+'</code></p>':bc01ConditionPanel(action?.condition,r['정적 조건식'])}<p>${esc(r['내용'])}</p><p class="muted">${esc(r.execution_status)}${r.opaque?' · 미해석 요소 포함':''}</p>${docButton('이 조건의 원본 래더','networks/network-'+r['네트워크 문서']+'.html')}</article>`;
+      return `<article class="bc01-rule"><div class="status-row"><strong>${esc(r['동작'])} · ${esc(bc01SignalLabel(r['대상']))}</strong><span class="badge">LAD ${esc(r['네트워크 문서'])} · UID ${esc(r['Part UID'])}</span></div><code class="bc01-target">${esc(r['대상'])}</code><p class="bc01-explanation">${esc(bc01GateExplanation(r['동작']))}</p>${r.opaque?'<div class="bc01-unknown">선행 명령의 ENO/out 연결 · 동작 해석 대기. 이 경로를 완전한 조건 묶음으로 표시하지 않습니다.</div><p class="bc01-condition"><code>'+esc(r['정적 조건식'].replace('(블록 동작 확인)','(원본 핀 연결 · 실행 의미 확인 전)'))+'</code></p>'+bc01PinEvidence(r):bc01ConditionPanel(action?.condition,r['정적 조건식'])}<p>${esc(r['내용'])}</p><p class="muted">${esc(r.execution_status)}${r.opaque?' · 미해석 요소 포함':''}</p>${docButton('이 조건의 원본 래더','networks/network-'+r['네트워크 문서']+'.html')}</article>`;
     }).join('');
   }
   function bc01AlarmBody(alarm, profile) {
@@ -691,6 +700,7 @@
       else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
       sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
     }
+    if((state.bc01Section==='overview' && ['identity','baseline'].includes(current.id)) || state.bc01Section==='circuits' || (state.bc01Section==='completion' && current.id==='field'))body+=`<div class="notice info bc01-inverter-revision"><strong>인버터 자료의 개정 구분</strong><p>2026-10-11 사용자 확인: 현재 인버터 제작사는 ABB이며, SEJIN의 미쓰비시 등록 자료는 구버전입니다.</p><p class="muted">사용자 확인과 원본 도면 표기를 구분합니다. 현재 ABB의 정확한 모델·정격·단자 배선은 명판·현행 접속도 확인 전이며, 구버전 사양을 현재 설정으로 적용하지 않습니다.</p></div>`;
     const itemIndex=items.findIndex(i=>i.id===current.id), sectionTitle=bc01Sections.find(s=>s[0]===state.bc01Section)[1];
     const itemNav=`<div class="bc01-item-nav"><span><b>${itemIndex+1} / ${items.length}</b> · ${esc(sectionTitle)}</span><div><button type="button" data-bc01-move="prev" ${itemIndex===0?'disabled':''}>이전 항목</button><button type="button" data-bc01-move="next" ${itemIndex===items.length-1?'disabled':''}>다음 항목</button></div></div>`;
     const fieldPath=state.bc01Section==='completion' && current.id==='field'?bc01CompletionTasks('field').find(t=>t.id===state.bc01Check)?.path:null;

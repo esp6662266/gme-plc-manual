@@ -104263,6 +104263,139 @@
         }
       }
     },
+    "pin_evidence": {
+      "1018:1121": {
+        "network": 1018,
+        "file": "sources/decoded-original/0308-FlgNet.xml",
+        "wire": "1148",
+        "source": {
+          "uid": "1118",
+          "gate": "Move",
+          "pin": "eno",
+          "target": {
+            "oref": "1133",
+            "ref_id": "126",
+            "nid": "20",
+            "identifier_file": "sources/decoded-original/0615-IdentXmlPart.xml",
+            "name": "hours motors.BC_01_HOUR",
+            "scope": "Global"
+          },
+          "value": {
+            "oref": "1132",
+            "ref_id": "7",
+            "nid": "20",
+            "identifier_file": "sources/decoded-original/0616-IdentXmlPart.xml",
+            "name": "1",
+            "scope": "Constant"
+          }
+        },
+        "target": {
+          "uid": "1121",
+          "gate": "Move",
+          "pin": "en",
+          "target": {
+            "oref": "1135",
+            "ref_id": "124",
+            "nid": "20",
+            "identifier_file": "sources/decoded-original/0615-IdentXmlPart.xml",
+            "name": "hours motors.BC_01_MIN",
+            "scope": "Global"
+          },
+          "value": {
+            "oref": "1134",
+            "ref_id": "12",
+            "nid": "20",
+            "identifier_file": "sources/decoded-original/0616-IdentXmlPart.xml",
+            "name": "0",
+            "scope": "Constant"
+          }
+        },
+        "status": "static_pin_connection_only",
+        "execution_verified": false
+      },
+      "1048:2772": {
+        "network": 1048,
+        "file": "sources/decoded-original/0335-FlgNet.xml",
+        "wire": "2798",
+        "source": {
+          "uid": "2769",
+          "gate": "Move",
+          "pin": "eno",
+          "target": {
+            "oref": "2783",
+            "ref_id": "120",
+            "nid": "50",
+            "identifier_file": "sources/decoded-original/0615-IdentXmlPart.xml",
+            "name": "hours motors.CLIENT_MOTOR_19_HOUR",
+            "scope": "Global"
+          },
+          "value": {
+            "oref": "2782",
+            "ref_id": "12",
+            "nid": "50",
+            "identifier_file": "sources/decoded-original/0616-IdentXmlPart.xml",
+            "name": "0",
+            "scope": "Constant"
+          }
+        },
+        "target": {
+          "uid": "2772",
+          "gate": "Move",
+          "pin": "en",
+          "target": {
+            "oref": "2785",
+            "ref_id": "126",
+            "nid": "50",
+            "identifier_file": "sources/decoded-original/0615-IdentXmlPart.xml",
+            "name": "hours motors.BC_01_HOUR",
+            "scope": "Global"
+          },
+          "value": {
+            "oref": "2784",
+            "ref_id": "12",
+            "nid": "50",
+            "identifier_file": "sources/decoded-original/0616-IdentXmlPart.xml",
+            "name": "0",
+            "scope": "Constant"
+          }
+        },
+        "status": "static_pin_connection_only",
+        "execution_verified": false
+      },
+      "1843:102": {
+        "network": 1843,
+        "file": "sources/decoded-original/0164-FlgNet.xml",
+        "wire": "104",
+        "source": {
+          "uid": "492",
+          "gate": "SCoil",
+          "pin": "out",
+          "target": {
+            "oref": "628",
+            "ref_id": "45",
+            "nid": "3",
+            "identifier_file": "sources/decoded-original/0577-IdentXmlPart.xml",
+            "name": "Flag.M_BC_01",
+            "scope": "Global"
+          }
+        },
+        "target": {
+          "uid": "102",
+          "gate": "SCoil",
+          "pin": "in",
+          "target": {
+            "oref": "106",
+            "ref_id": "115",
+            "nid": "3",
+            "identifier_file": "sources/decoded-original/0575-IdentXmlPart.xml",
+            "name": "MemoCMD_BC01_Startup",
+            "scope": "Global"
+          }
+        },
+        "status": "static_pin_connection_only",
+        "execution_verified": false
+      }
+    },
     "alarm": {
       "id": "BC01",
       "priority_key": "P01",
@@ -108119,7 +108252,15 @@
       "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
       "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
       "registers/repair-record-forms.json": "1a341e5b4911cfb4977a948164e939e8bfc530c5faeedaf67bd00e627751da94",
-      "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039"
+      "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+      "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+      "sources/decoded-original/0164-FlgNet.xml": "15884b2b362842279b626b669a484b1daa269f5ecd99112b8391bb0387382491",
+      "sources/decoded-original/0308-FlgNet.xml": "4594c2942fa2de3937b61830619fbd26c17b59a2617fec33f76d8cefebecab80",
+      "sources/decoded-original/0335-FlgNet.xml": "6f0214de436cfaac95750cc25ba3d6f306d33174472618754fac38ad4caf4781",
+      "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
+      "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
+      "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
+      "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d"
     },
     "field_verified": false,
     "tia_verified": false,

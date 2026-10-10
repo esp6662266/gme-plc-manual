@@ -7,6 +7,7 @@ from pathlib import Path
 import csv
 import json
 import hashlib
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent
 
@@ -178,12 +179,53 @@ for rule in bc01_spec['direct_rules']:
     action=next(a for a in network['actions'] if a['uid']==rule['Part UID'])
     bc01_control_conditions[rule['rule_id']]=dict(network=network['id'],file=network['file'],action={k:v for k,v in action.items() if k in ['uid','gate','name','condition','value']})
 
+# Pin evidence is a read-only annotation, not an executable condition.
+bc01_pin_evidence={}
+bc01_network_map={n['document_id']:n for n in json.loads((ROOT/'sources/decoded-original/network-map.json').read_text())}
+lad_ns={'s':'http://www.siemens.com/automation/2015/FunctionLadderDiagram'}
+for rule in [r for r in bc01_spec['direct_rules'] if r['opaque']]:
+    network=bc01_network_map[int(rule['네트워크 문서'])]
+    file='sources/decoded-original/'+network['xml_file']
+    xml=ET.parse(ROOT/file).getroot()
+    parts={p.get('UId'):p for p in xml.find('s:Parts',lad_ns)}
+    wires=list(xml.find('s:Wires',lad_ns))
+    uid=rule['Part UID'];gate=parts[uid].get('Gate');target_pin='en' if gate=='Move' else 'in'
+    incoming=[w for w in wires if any(c.get('UId')==uid and c.get('PinName')==target_pin for c in w)]
+    assert len(incoming)==1
+    wire=incoming[0];upstream=[c for c in wire if c.tag.endswith('PCon') and c.get('UId')!=uid]
+    assert len(upstream)==1
+    source_uid=upstream[0].get('UId');source_pin=upstream[0].get('PinName')
+    assert source_pin in ('eno','out')
+    def pin_reference(part_uid,pin):
+        found=[c for w in wires if any(c.get('UId')==part_uid and c.get('PinName')==pin for c in w) for c in w if c.tag.endswith('OCon')]
+        assert len(found)==1
+        oref=found[0].get('UId');ref_id=parts[oref].get('RefId');resolved=network['resolved_operands'][oref]
+        declarations=[]
+        for filename in resolved['identifier_files']:
+            path='sources/decoded-original/'+filename
+            for access in ET.parse(ROOT/path).getroot():
+                ident=next((c for c in access if c.tag.endswith('ID') and c.get('RID')==ref_id),None)
+                if ident is not None and any(c.get('UID')==oref and c.get('NID')==network['inferred_original_nid'] for c in ident.iter()):
+                    literal=next((c for c in access.iter() if c.tag.endswith('CB')),None)
+                    aos=next((c for c in access.iter() if c.tag.endswith('AOS')),None)
+                    name=literal.get('V') if literal is not None else '.'.join(c.get('N') for c in aos if c.tag.endswith('AO')) if aos is not None and len(aos) else ident.get('N')
+                    assert name==resolved['name']
+                    declarations.append(dict(oref=oref,ref_id=ref_id,nid=network['inferred_original_nid'],identifier_file=path,name=name,scope=ident.get('S')))
+        assert len(declarations)==1
+        return declarations[0]
+    source_gate=parts[source_uid].get('Gate')
+    source=dict(uid=source_uid,gate=source_gate,pin=source_pin,target=pin_reference(source_uid,'out1' if source_gate=='Move' else 'operand'))
+    target=dict(uid=uid,gate=gate,pin=target_pin,target=pin_reference(uid,'out1' if gate=='Move' else 'operand'))
+    if source_gate=='Move':source['value']=pin_reference(source_uid,'in')
+    if gate=='Move':target['value']=pin_reference(uid,'in')
+    bc01_pin_evidence[rule['rule_id']]=dict(network=network['document_id'],file=file,wire=wire.get('UId'),source=source,target=target,status='static_pin_connection_only',execution_verified=False)
+
 data['bc01_standard']=dict(version=1,priority_key='P01',scope='BC01 only; other-equipment expansion held by user',
     sections=['overview','io','control','circuits','alarms','repair','completion'],
-    specification=bc01_spec,control_conditions=bc01_control_conditions,
+    specification=bc01_spec,control_conditions=bc01_control_conditions,pin_evidence=bc01_pin_evidence,
     alarm=next(p for p in json.loads((ROOT/'registers/alarm-recovery.json').read_text())['profiles'] if p['id']=='BC01'),
     repair=next(p for p in json.loads((ROOT/'registers/repair-decision.json').read_text())['records'] if p['key']=='P01'),
-    source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/program-model.json','registers/control-spec.json','registers/alarm-recovery.json','registers/repair-decision.json','registers/repair-record-forms.json','registers/electrical-trace.json']},
+    source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/program-model.json','registers/control-spec.json','registers/alarm-recovery.json','registers/repair-decision.json','registers/repair-record-forms.json','registers/electrical-trace.json','sources/decoded-original/network-map.json']+sorted({e['file'] for e in bc01_pin_evidence.values()} | {ref['identifier_file'] for e in bc01_pin_evidence.values() for part in [e['source'],e['target']] for key,ref in part.items() if key in ('target','value')})},
     field_verified=False,tia_verified=False,repairs_completed=0,simulator_work='stopped_by_user')
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
