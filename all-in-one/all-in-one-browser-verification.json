@@ -2898,5 +2898,471 @@
     "simulator_work": "stopped_by_user",
     "plc_or_field_changes": 0,
     "console_errors_latest_local": 0
+  },
+  "bc01_drawing_binding": {
+    "desktop": [
+      {
+        "section": "overview",
+        "item": "identity",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "설비 식별·역할"
+      },
+      {
+        "section": "overview",
+        "item": "baseline",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "자료·개정 기준"
+      },
+      {
+        "section": "overview",
+        "item": "boundary",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "확인 범위와 미확정"
+      },
+      {
+        "section": "io",
+        "item": "input-0",
+        "context": "path",
+        "drawing": "oem-18",
+        "image": "BC01 FG18 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "%I0.1 · bc01_all_inv"
+      },
+      {
+        "section": "io",
+        "item": "input-1",
+        "context": "path",
+        "drawing": "oem-18",
+        "image": "BC01 FG18 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "%I0.0 · bc01_fbk"
+      },
+      {
+        "section": "io",
+        "item": "input-2",
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "%I6.2 · bc01_tripwire"
+      },
+      {
+        "section": "io",
+        "item": "input-3",
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "%I6.3 · bc01_prox"
+      },
+      {
+        "section": "io",
+        "item": "output-0",
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "%Q0.0 · start bc01"
+      },
+      {
+        "section": "io",
+        "item": "memory-0",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "%M180.7 · memocmd_bc01_startup"
+      },
+      {
+        "section": "io",
+        "item": "hmi-0",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "BC_01\\RispostaA"
+      },
+      {
+        "section": "io",
+        "item": "hmi-1",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "BC_01\\Flag"
+      },
+      {
+        "section": "io",
+        "item": "hmi-2",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "BC_01\\Allarme1"
+      },
+      {
+        "section": "control",
+        "item": "request",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "자동 단계·운전 요청"
+      },
+      {
+        "section": "control",
+        "item": "output",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "최종 출력의 OR 허가"
+      },
+      {
+        "section": "control",
+        "item": "reset",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "고장에 따른 요청 해제"
+      },
+      {
+        "section": "control",
+        "item": "speed",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "속도 설정·다른 쓰기"
+      },
+      {
+        "section": "control",
+        "item": "other",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "응답·시간·다른 관련 쓰기"
+      },
+      {
+        "section": "circuits",
+        "item": "path-0",
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "기동 명령"
+      },
+      {
+        "section": "circuits",
+        "item": "path-1",
+        "context": "path",
+        "drawing": "oem-18",
+        "image": "BC01 FG18 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "운전 응답"
+      },
+      {
+        "section": "circuits",
+        "item": "path-2",
+        "context": "path",
+        "drawing": "oem-18",
+        "image": "BC01 FG18 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "인버터 이상"
+      },
+      {
+        "section": "circuits",
+        "item": "path-3",
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "트립와이어 감시"
+      },
+      {
+        "section": "circuits",
+        "item": "path-4",
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "회전 감시 예비"
+      },
+      {
+        "section": "alarms",
+        "item": "alarm-0",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "운전 응답 고장"
+      },
+      {
+        "section": "alarms",
+        "item": "alarm-1",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "인버터 이상"
+      },
+      {
+        "section": "alarms",
+        "item": "alarm-2",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "트립와이어 감시"
+      },
+      {
+        "section": "repair",
+        "item": "request",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "section": "repair",
+        "item": "permit",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "요청은 있지만 최종 출력이 없음"
+      },
+      {
+        "section": "repair",
+        "item": "response",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "출력은 있지만 현장 응답이 없음"
+      },
+      {
+        "section": "repair",
+        "item": "stop",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "운전 중 정지하거나 연관 설비와 함께 정지함"
+      },
+      {
+        "section": "repair",
+        "item": "recovery",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "리셋 후 재기동되지 않거나 같은 알람이 반복됨"
+      },
+      {
+        "section": "completion",
+        "item": "documentation",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "문서·근거 표준"
+      },
+      {
+        "section": "completion",
+        "item": "cpu",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "현재 PLC·HMI 대응"
+      },
+      {
+        "section": "completion",
+        "item": "field",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "실물·접속·정상 극성"
+      },
+      {
+        "section": "completion",
+        "item": "recovery",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "복구·재기동 증거"
+      },
+      {
+        "section": "completion",
+        "item": "scope",
+        "context": "reference",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "overflow": false,
+        "title": "중단·제외 작업"
+      }
+    ],
+    "field": [
+      {
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "task": "path-0"
+      },
+      {
+        "context": "path",
+        "drawing": "oem-18",
+        "image": "BC01 FG18 원본 페이지 미리보기",
+        "task": "path-1"
+      },
+      {
+        "context": "path",
+        "drawing": "oem-18",
+        "image": "BC01 FG18 원본 페이지 미리보기",
+        "task": "path-2"
+      },
+      {
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "task": "path-3"
+      },
+      {
+        "context": "path",
+        "drawing": "oem-19",
+        "image": "BC01 FG19 원본 페이지 미리보기",
+        "task": "path-4"
+      }
+    ],
+    "mobile": [
+      {
+        "section": "io",
+        "item": "input-0",
+        "context": "path",
+        "drawing": "oem-18",
+        "overflow": false
+      },
+      {
+        "section": "io",
+        "item": "input-1",
+        "context": "path",
+        "drawing": "oem-18",
+        "overflow": false
+      },
+      {
+        "section": "io",
+        "item": "input-2",
+        "context": "path",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "io",
+        "item": "input-3",
+        "context": "path",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "io",
+        "item": "output-0",
+        "context": "path",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "io",
+        "item": "memory-0",
+        "context": "reference",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "io",
+        "item": "hmi-0",
+        "context": "reference",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "circuits",
+        "item": "path-0",
+        "context": "path",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "circuits",
+        "item": "path-1",
+        "context": "path",
+        "drawing": "oem-18",
+        "overflow": false
+      },
+      {
+        "section": "circuits",
+        "item": "path-2",
+        "context": "path",
+        "drawing": "oem-18",
+        "overflow": false
+      },
+      {
+        "section": "circuits",
+        "item": "path-3",
+        "context": "path",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "circuits",
+        "item": "path-4",
+        "context": "path",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "completion",
+        "item": "field",
+        "context": "reference",
+        "drawing": "oem-19",
+        "overflow": false
+      },
+      {
+        "section": "completion",
+        "item": "path-1",
+        "drawing": "oem-18",
+        "overflow": false
+      },
+      {
+        "section": "completion",
+        "item": "path-2",
+        "drawing": "oem-18",
+        "overflow": false
+      }
+    ],
+    "preview_link": "oem-18",
+    "back_task": "path-2",
+    "reviewer": "no blockers; existing original drawing mappings match",
+    "scope": "BC01 static documentation only",
+    "protected_files": 1607,
+    "protected_functions": 5,
+    "local_console_errors": 0,
+    "local_console_warnings": 0,
+    "status": "passed",
+    "source_analysis": "existing mapping reused; no new input"
   }
 }
