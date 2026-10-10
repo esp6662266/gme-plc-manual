@@ -2816,5 +2816,41 @@
     "field_verified": false,
     "tia_verified": false,
     "publication_record": "../gme-netlify-publication-verification-20261009.json"
+  },
+  "bc01_completion_evidence": {
+    "date": "2026-10-11",
+    "status": "local_ui_passed",
+    "scope": "BC01 only, existing completion cpu/field/recovery evidence presentation",
+    "task_views": 12,
+    "sections_preserved": 7,
+    "items_preserved": 35,
+    "original_requirements_reviews_paths_exact_match": true,
+    "mobile_cases": 24,
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "mobile_document_width": 375,
+    "mobile_body_width": 341,
+    "mobile_overflow_cases": 0,
+    "text_sizes_px": [
+      17,
+      19
+    ],
+    "check_url_refresh_and_back": true,
+    "circuit_jump_and_focus": true,
+    "drawing_navigation_and_back": true,
+    "operator_guide_check_deep_link": true,
+    "repair_record_observations_remain_blank": true,
+    "record_writes": 0,
+    "console_errors_or_warnings": 0,
+    "protected_files_hash_unchanged": 1188,
+    "simulator_and_repair_renderers_unchanged": 3,
+    "reviewer_fixed_links": 2,
+    "reviewer_remaining_blockers": 0,
+    "field_verified": false,
+    "tia_verified": false,
+    "simulator_execution": false,
+    "actual_plc_changes": 0
   }
 }

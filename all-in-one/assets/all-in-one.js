@@ -29,7 +29,7 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard'};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:''};
   let lastRenderedRoute = null;
   let bc01Wide = false;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
@@ -79,7 +79,7 @@
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
     if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
-    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Text==='large')params.set('text','large');}
+    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Text==='large')params.set('text','large');if(state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===state.bc01Check))params.set('check',state.bc01Check);}
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -108,6 +108,8 @@
       state.bc01Item=items.find(x=>x.id===params.get('item'))?.id || items[0]?.id || '';
       state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';
       state.bc01Text=params.get('text')==='large'?'large':'standard';
+      const checks=state.bc01Section==='completion'?bc01CompletionTasks(state.bc01Item):[];
+      state.bc01Check=checks.find(t=>t.id===params.get('check'))?.id || checks[0]?.id || '';
       bc01LastItems.set(state.bc01Section,state.bc01Item);
     }
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
@@ -552,6 +554,48 @@
     }
     return body+`<details><summary>알람 간 Reset 차이와 원본 참조 ${alarm.usages.length}개</summary><p>${esc(profile.note)}</p>${table(['원본 위치','읽기/쓰기 · 신호'],alarm.usages.map(u=>[docButton('LAD '+u.network+' · Part '+u.part+' / ORef '+u.oref,'networks/network-'+u.network+'.html'),esc(u.scope+' · '+u.role+' · '+u.name)]))}</details>`;
   }
+  function bc01CompletionTasks(item) {
+    const schema=repairRecordMap.get('P01'), plan=schema?.evidence_plan;
+    if(!plan)return [];
+    if(item==='cpu')return [{id:'baseline',title:'자료 기준',evidence:plan.preflight},...['request','permit','response','stop'].map(id=>({id,title:({request:'요청·HMI',permit:'출력·허가',response:'입력·처리',stop:'정지·시간'})[id],evidence:plan.steps.find(s=>s.step_id===id)}))];
+    if(item==='field')return [{id:'baseline',title:'실물 식별'},...(drawingMap.get('P01')?.circuit?.paths || []).map((path,i)=>({id:'path-'+i,title:path.signal,path}))];
+    return [];
+  }
+  function bc01EvidenceRequirements(requirements) {
+    return `<div class="bc01-evidence-requirements">${requirements.map((r,i)=>`<article class="bc01-evidence-requirement"><div class="status-row"><strong>${String(i+1).padStart(2,'0')} · ${esc(r.owner)}</strong><span class="badge">자료 필요</span></div><p class="bc01-required-work">${esc(r.work)}</p></article>`).join('')}</div>`;
+  }
+  function bc01PendingReviews(reviews) {
+    return `<details class="bc01-pending-reviews"><summary>기존 검토 항목 · ${reviews.length}건 · 원본 상태 유지</summary>${reviews.map(r=>`<article class="bc01-pending-review" data-review-source="${esc(r.id)}"><h5>${esc(r.title)}</h5><p><span class="badge">${esc(r.status)}</span> <code>${esc(r.id)}</code></p><p>${esc(r.observation)}</p><p><strong>다음 확인</strong> · ${esc(r.next_check)}</p><div class="bc01-source-actions">${r.links.filter(l=>validDoc(l.path)).map(l=>docButton(l.label,l.path)).join('')}</div></article>`).join('')}<p class="muted">보존 대장의 요구 사항입니다. 시뮬레이터·행동 시험과 실제 PLC 변경은 현재 중단 범위를 유지합니다.</p></details>`;
+  }
+  function bc01EvidenceSources(links) {
+    if(!links.length)return '<p class="muted">이 경로에 직접 배정된 원본 래더 참조는 없습니다. 도면과 현재 입력 전달 위치를 별도로 대조합니다.</p>';
+    return `<details class="bc01-check-sources"><summary>비교할 원본 · ${links.length}개 참조</summary><div class="bc01-source-actions">${links.filter(l=>validDoc(l.path)).map(l=>docButton(l.label,l.path)).join('')}</div></details>`;
+  }
+  function bc01CompletionWorkspace(item,spec,schema,drawing) {
+    const plan=schema.evidence_plan, circuit=drawing.circuit, tasks=bc01CompletionTasks(item);
+    const current=tasks.find(t=>t.id===state.bc01Check) || tasks[0];
+    let body=`<div class="bc01-completion-status"><strong>현장 확인 준비 · 확인 대기</strong><p>현재 CPU·실물·복구 증거는 아직 확인되지 않았습니다. 아래 자료 요청과 원본 비교를 관찰 결과로 자동 판정하지 않습니다.</p></div>`;
+    if(tasks.length)body+=`<nav class="bc01-check-tabs" aria-label="BC01 확인 작업 선택">${tasks.map(t=>`<button type="button" data-bc01-check="${esc(t.id)}" aria-pressed="${current.id===t.id}">${esc(t.title)}</button>`).join('')}</nav>`;
+    if(item==='cpu') {
+      const evidence=current.evidence;
+      body+=`<section class="bc01-evidence-task" data-check-task="${current.id}"><h4>${esc(current.title)} · 현행 자료와 대조</h4><p class="bc01-explanation">${current.id==='baseline'?'비교할 백업·현재 프로젝트·CPU와 설비를 먼저 식별합니다.':'필요한 자료를 모은 뒤 해당 신호의 현재 호출·다른 쓰기·관찰 시각을 원본과 비교합니다.'}</p><h5>필요한 자료 · ${evidence.requirements.length}항목</h5>${bc01EvidenceRequirements(evidence.requirements)}`;
+      if(current.id==='baseline')body+=`<details><summary>보존 제어 명세의 미확정 ${spec.pending.length}항목</summary><ul>${spec.pending.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul></details>`;
+      else body+=`<details><summary>요청·출력·처리 응답의 백업 참조</summary>${table(['역할','원본 신호·백업 주소','원본 위치'],schema.signals.map(s=>[esc(({requests:'운전 요청',outputs:'최종 PLC 출력',responses:'처리된 응답'})[s.role] || s.role),'<code>'+esc(s.name)+'</code><br>'+esc(s.addresses.join(' / ') || '주소·현재 DB 대응 추가 확인'),s.refs.map(r=>docButton('LAD '+r.network+' · ORef '+r.oref,'networks/network-'+r.network+'.html')).join(' ')]))}<p class="muted">원시 I/O→처리 Inputs 전달·반전은 미확정이며 HMI 저장 태그와 임의로 연결하지 않습니다.</p></details>`;
+      body+=bc01EvidenceSources(evidence.source_links || [{label:'원본 불일치 대장',path:'registers/source-conflict-review.csv'},{label:'실물 대응 작업지',path:'priority-guides/P01.html'}])+bc01PendingReviews(evidence.reviews)+'</section>';
+    } else if(item==='field') {
+      body+=`<section class="bc01-evidence-task" data-check-task="${current.id}"><h4>${esc(current.title)} · 실물·접속 확인</h4>`;
+      if(current.id==='baseline')body+=bc01EvidenceRequirements(plan.preflight.requirements.filter(r=>r.owner==='현장·설비 자료'))+`<h5>현장 응답·제작사 자료 · 기존 요구 ${plan.steps.find(s=>s.step_id==='response').requirements.length}항목</h5><details><summary>구동기·센서·입력 전달 자료 요청 보기</summary>${bc01EvidenceRequirements(plan.steps.find(s=>s.step_id==='response').requirements)}</details>`+bc01EvidenceSources([{label:'실물 대응 작업지',path:'priority-guides/P01.html'},{label:'회로·단자 전체 근거',path:'circuit-guides/BC01.html'},{label:'시공·케이블 원본 근거',path:'construction-guides/BC01.html'}]);
+      else {
+        const path=current.path;
+        body+=`<div class="status-row"><span class="badge">보존 도면 ${esc(path.drawing)} · ${esc(path.backup)}</span><span>FG${esc(path.fg)} · PDF${pdfPage(path.fg)}</span></div><article class="bc01-evidence-requirement"><h5>현장에서 확인할 항목</h5><p class="bc01-required-work">${esc(path.check)}</p></article><article class="bc01-evidence-requirement"><h5>도착점과 미확정 경계</h5><p>${esc(path.destination)}</p></article><details><summary>비교할 도면상 경로</summary><ol class="bc01-path">${path.nodes.map(n=>'<li>'+esc(n)+'</li>').join('')}</ol></details><div class="bc01-source-actions"><button type="button" data-drawing="oem-${esc(path.fg)}">해당 도면 크게 확인</button><button type="button" data-bc01-jump="circuits/${esc(current.id)}">전기 전달 경로 전체 확인</button></div>`+bc01EvidenceSources(path.native_symbol_references.map(r=>({label:'LAD '+r.network+' · ORef '+r.uid,path:'networks/network-'+r.network+'.html'})));
+      }
+      body+=`<details><summary>회로 작업지의 확인 대기 · ${circuit.pending.length}항목</summary><ul>${circuit.pending.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul></details>${drawing.warnings.map(w=>'<div class="notice">기존 기록상 불일치 · '+esc(w)+'</div>').join('')}</section>`;
+    } else {
+      const evidence=plan.steps.find(s=>s.step_id==='recovery'), step=schema.steps.find(s=>s.id==='recovery');
+      body+=`<section class="bc01-evidence-task" data-check-task="recovery"><h4>복구 결과를 판정할 증거</h4><p class="bc01-explanation">리셋·새 요청·출력·실제 운전 응답의 증거를 따로 남깁니다. 관찰하지 않은 값과 원인 후보는 확인 결과로 바꾸지 않습니다.</p><ol class="repair-steps">${[['관찰·시각 기록',step.observe],['원본과 비교',step.compare],['복구 판단의 경계',step.next]].map(([title,text])=>'<li><h5>'+esc(title)+'</h5><p>'+esc(text)+'</p></li>').join('')}</ol><h5>필요한 자료 · ${evidence.requirements.length}항목</h5>${bc01EvidenceRequirements(evidence.requirements)}<details><summary>복구 증거를 빠짐없이 확인</summary><ol class="bc01-path">${['최초 알람·원인 입력·관찰 기준 시각','원인 해소 및 실물/처리 신호의 정상화 근거','알람 래치 해제와 기동 허가의 확인','승인된 새 요청·Q0.0·DI1·실제 운전 응답','연동 영향·재발 여부·조치 및 후속 확인'].map(s=>'<li>'+esc(s)+'</li>').join('')}</ol></details>${bc01EvidenceSources(evidence.source_links)}${bc01PendingReviews(evidence.reviews)}</section>`;
+    }
+    return body+`<section class="bc01-proof-guide"><h4>근거를 남긴 뒤 대조합니다</h4><p>자료명·개정/버전·신호/단자·관찰값·시각·사진/화면 위치와 남은 차이를 기존 수리 기록에 남깁니다. 이 작업판은 자료 안내이며 입력값을 채우거나 확인 완료로 전환하지 않습니다.</p>${button('BC01 수리 관찰 기록','repair-record')} ${docButton('BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01')}</section>`;
+  }
   function renderBC01Manual() {
     const standard=data.bc01_standard;
     if(!standard)return panel('BC01 표준 자료','<p>자료를 다시 불러와 주세요.</p>');
@@ -594,9 +638,7 @@
       sources=[['선택 증상의 상세 판단',schema.manual+'#'+step.common],...evidence.source_links.map(s=>[s.label,s.path])];
     } else {
       if(current.id==='documentation')body='<p>BC01 한 설비의 화면·문서 표준 기준입니다. 원본 정적 대조, 현재 CPU 확인과 실제 수리 완료는 각각 구분합니다.</p>'+table(['표준 항목','완료 기준'],[['찾기·가독성','종류별 선택·세부 항목 목록·본문·근거 분리'],['근거 추적','신호/조건/단자마다 원본 문서·FG/PDF·LAD/UID 연결'],['수리 판단','증상→관찰 위치·값/시각→비교 원본→차이·추가 증거→복구 확인'],['모호한 자료','주소·극성·시공 차이를 확인 대기로 유지'],['검증','최신 파일의 필수 검사·링크·PC/모바일·기록 보존 확인']]);
-      else if(current.id==='cpu')body=`<p>현행 엔지니어링 프로젝트·CPU·HMI 자료를 확보한 뒤 아래 항목을 대조합니다.</p><ul>${spec.pending.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul><div class="notice">현재 TIA 컴파일·온라인 비교·실제 CPU 결과는 미확인입니다. UI와 원본 해시 검사로 대신 판정하지 않습니다.</div>`;
-      else if(current.id==='field')body='<p>기존 회로 작업지의 현장 확인 대기를 보존합니다.</p><ul>'+circuit.pending.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul>'+drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('');
-      else if(current.id==='recovery')body=`<p class="bc01-lead">실제 복구 판정에 필요한 증거</p><ol class="bc01-path">${['최초 알람·원인 입력·관찰 기준 시각','원인 해소 및 실물/처리 신호의 정상화 근거','알람 래치 해제와 기동 허가의 확인','승인된 새 요청·Q0.0·DI1·실제 운전 응답','연동 영향·재발 여부·조치 및 후속 확인'].map(s=>'<li>'+esc(s)+'</li>').join('')}</ol><p>각 항목은 관찰 후 기록합니다. 미취득 값과 원인 후보는 확정 결과로 바꾸지 않습니다.</p>${button('BC01 수리 관찰 기록','repair-record')}`;
+      else if(['cpu','field','recovery'].includes(current.id))body=bc01CompletionWorkspace(current.id,spec,schema,drawing);
       else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
       sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
     }
@@ -768,7 +810,7 @@
           if(params.get('view')==='drawings' && drawingMap.has(params.get('equipment'))){e.preventDefault();const requested=params.get('drawing');if(drawingMap.get(params.get('equipment')).sheets.some(s=>s.id===requested))state.drawing=requested;route('drawings',params.get('equipment'));return;}
           if(params.get('view')==='repair-record' && repairRecordMap.has(params.get('equipment'))){e.preventDefault();route('repair-record',params.get('equipment'));return;}
           if(params.get('view')==='repair' && repairWorkspaceKeys.has(params.get('equipment'))){e.preventDefault();route('repair',params.get('equipment'));return;}
-          if(params.get('view')==='manual' && params.get('equipment')==='P01'){e.preventDefault();state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';state.bc01Item=bc01Items(state.bc01Section).find(i=>i.id===params.get('item'))?.id || '';route('manual','P01');return;}
+          if(params.get('view')==='manual' && params.get('equipment')==='P01'){e.preventDefault();state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';state.bc01Item=bc01Items(state.bc01Section).find(i=>i.id===params.get('item'))?.id || '';state.bc01Check=bc01CompletionTasks(state.bc01Item).find(t=>t.id===params.get('check'))?.id || '';if(params.has('text'))state.bc01Text=params.get('text')==='large'?'large':'standard';if(params.has('alarmStep'))state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';route('manual','P01');return;}
           if(params.get('view')==='review' && priorityMap.has(params.get('equipment'))){e.preventDefault();route('review',params.get('equipment'),'',params.get('review') || '');return;}
         }
         if (path.startsWith('index.html')) path = path.replace(/^index\.html/,'manual-catalog.html');
@@ -784,8 +826,10 @@
     if(state.view==='manual' && state.selected==='P01') {
       if(b.dataset.bc01Text && ['standard','large'].includes(b.dataset.bc01Text)) {state.bc01Text=b.dataset.bc01Text;route('manual');document.querySelector(`[data-bc01-text="${state.bc01Text}"]`)?.focus({preventScroll:true});return;}
       if(b.dataset.bc01AlarmStep && ['set','reset','restart'].includes(b.dataset.bc01AlarmStep)) {state.bc01AlarmStep=b.dataset.bc01AlarmStep;route('manual');document.querySelector(`[data-bc01-alarm-step="${state.bc01AlarmStep}"]`)?.focus({preventScroll:true});return;}
+      if(b.dataset.bc01Check) {if(state.selected==='P01' && state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===b.dataset.bc01Check)){state.bc01Check=b.dataset.bc01Check;route('manual');document.querySelector('.bc01-check-tabs [aria-pressed="true"]')?.focus({preventScroll:true});}return;}
       if(b.dataset.bc01Move) {const items=bc01Items(state.bc01Section), i=items.findIndex(item=>item.id===state.bc01Item), next=items[i+(b.dataset.bc01Move==='prev'?-1:1)];if(next){state.bc01Item=next.id;route('manual');document.querySelector('.bc01-content')?.scrollIntoView({block:'start'});document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
       if(b.dataset.bc01Jump==='control/output') {state.bc01Section='control';state.bc01Item='output';route('manual');return;}
+      if(b.dataset.bc01Jump?.startsWith('circuits/')) {const item=b.dataset.bc01Jump.slice('circuits/'.length);if(bc01Items('circuits').some(i=>i.id===item)){state.bc01Section='circuits';state.bc01Item=item;route('manual');document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
     }
     if(b.hasAttribute('data-bc01-wide') && state.selected==='P01'){bc01Wide=!bc01Wide;render();document.querySelector('[data-bc01-wide]')?.focus({preventScroll:true});return;}
     if(b.dataset.bc01Section) {

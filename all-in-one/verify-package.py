@@ -44,6 +44,12 @@ for p,parser in parsers.items():
                 if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
                     assert "params.get('view')==='manual' && params.get('equipment')==='P01'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
+                if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and params.get('section')==['completion'] and set(params)<={'view','equipment','scope','section','item','check'}:
+                    item=params.get('item',[None])[0]
+                    allowed={'cpu':['baseline','request','permit','response','stop'],'field':['baseline']+[f'path-{i}' for i in range(5)],'recovery':[]}
+                    if item in allowed and ('check' not in params or params['check'] in [[c] for c in allowed[item]]):
+                        assert 'state.bc01Check=bc01CompletionTasks(state.bc01Item).find' in (ROOT/'assets/all-in-one.js').read_text()
+                        continue
             if target==(ROOT/'index.html').resolve() and params.get('view')==['repair']:
                 profiles=json.loads((ROOT/'registers/repair-record-forms.json').read_text())['profiles']
                 profile=next((r for r in profiles if r['key'] in ['P01','P02'] and params.get('equipment')==[r['key']]),None)
