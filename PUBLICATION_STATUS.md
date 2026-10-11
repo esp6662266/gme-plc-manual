@@ -1,3 +1,27 @@
+# v1.5.0 · FN01 표준 매뉴얼 — 게시 검증 완료
+
+FN01(P15)을7영역47항목으로 작성하고 도면·래더5경로, 수리 관찰 기록과 전후 비교·보고서/PDF를 연결했다. BC01/FN04·전체 설비 통합 JSON 백업·복원·기록키·원본을 보존한다.
+
+| 확인 항목 | 실제 결과 |
+|---|---|
+| 기능·패키지 커밋 | 0c07210026f3b9236856f22c5c7c505f368de0a5 |
+| 고정 배포판 | [v1.5.0 tag/Release](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.5.0) |
+| Netlify | 6acb12f64509ac00083da961 · ready · commit_ref 일치 · 2026-10-11T04:39:38.835Z · error 없음 |
+| 게시 사이트 | https://gme-plc-manual.netlify.app/all-in-one/ |
+| 새 GitHub clone | Node24.19.0 npm ci·8테스트·BC01/설비검사·NETLIFY=true 빌드 passed · Git변경0 |
+| 패키지 | 필수14+설비2 검사 · 2801파일 · ZIP CRC/전체SHA · 원본730/추가3/중지5 보존 |
+| ZIP SHA256 | b39b8f1102132851d6232705b1f8d329d81abd22d113c7f24ef08e168abda8f1 · Release asset digest/size52753690 일치 |
+| 화면·기록·PDF | BC01/FN04/FN01 PC·모바일/기본·큰글자528화면·넘침0, 원본5쌍, 격리저장·복원3→4건·재열기·미지항목/다른기록/초안·실패/동시변경·전후비교·보고서변경차단·A4 PDF3쪽 |
+| 게시 대조 | 51파일:31정확SHA,20HTML Netlify pretty URL 정규화 후 동등. 실제P15매뉴얼·Part689최종출력행·통합백업창 확인 |
+| 실제 운영 자료 | 작성0; 격리8876 IAB/Chrome notes/drafts null·임시패치 제거 |
+| TIA/현재CPU/현장/시뮬레이터 | 실행·변경0. 현장 확인은 별도 미수행 |
+
+FN01 주팬/별도SPARE 냉각팬, Tag_63 2초와 별도90분 정지·10초/OFF 진동, 예열 관련 미해석5쓰기·TC05 상충·전용조절루프 미확보를 구분한다. 보존 백업의 문서 검사로 실제 CPU·실물·복구를 확정하지 않는다. 이번 게시탭 콘솔error/warn0 관측은 과거 출처 없는 브라우저 오류 이력을 소급 해소하지 않는다.
+
+[상세 검증](V1.5.0-VERIFICATION.md) · [FN01 기록](docs/equipment-standard/work-items/FN01.md) · [다음 작업](EXPANSION-WORK.md). 후속 root 상태 갱신은 패키지/기능/원본 바이트를 변경하지 않는다. 승인 목표1번 FN01을 마쳤고 다음2번 FN02(P16)부터 High 채팅의 active 목표를 계속한다.
+
+---
+
 # v1.4.0 · FN04 시범·모든 설비 통합 백업 — 게시 검증 완료
 
 모든 설비의 저장 메모·수리 기록을 JSON 한 파일로 백업·복원하도록 변경했습니다. 기존 전체/개별 JSON 호환, 설비/기록 필터·50건 페이지, 충돌 선택, 잠금·동시 변경·저장 후 재읽기/같은 화면 재열기를 확인했습니다. BC01을 보존한 공통 구조와 FN04(P02)의7영역49항목 시범도 함께 게시했습니다.

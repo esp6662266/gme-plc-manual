@@ -6,7 +6,390 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "pending",
+  "publication": {
+    "status": "verified",
+    "commit": "0c07210026f3b9236856f22c5c7c505f368de0a5",
+    "deploy": {
+      "id": "6acb12f64509ac00083da961",
+      "state": "ready",
+      "commit_ref": "0c07210026f3b9236856f22c5c7c505f368de0a5",
+      "published_at": "2026-10-11T04:39:38.835Z",
+      "error_message": null
+    },
+    "url": "https://gme-plc-manual.netlify.app/all-in-one/",
+    "files": [
+      {
+        "path": "ACTIVE-WORK.md",
+        "status": 200,
+        "sha256": "7ca3d1f968688d35feabfe873d80450fdb2fea7e61f7c73b95e58cb92ddb93a4",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "ALL-IN-ONE.md",
+        "status": 200,
+        "sha256": "13cd112b03e774d06eccb1202e53e03cd1d418e6ca8fa79e71177086035c8e2c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "VERSION.json",
+        "status": 200,
+        "sha256": "ea371fbc7a9016d35b02fa5a6c8ff235f40523653dc288bee034c11453d859b3",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "all-in-one-package-manifest.json",
+        "status": 200,
+        "sha256": "78bfe1c51ee173a6a29539a878fb07391a953ead7c2cd41b4fd13ea9d70242b4",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/all-in-one-data.js",
+        "status": 200,
+        "sha256": "b46ef4ea473a431edf306b5a0c66115e6130a256d7b95a6ab1e4a4c877e65fe2",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/all-in-one.js",
+        "status": 200,
+        "sha256": "50a79dc5f04ae1fa181de2bdbfab1d0e960e876eb0537a06586d3cf85c3800f5",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/bc01-tools.css",
+        "status": 200,
+        "sha256": "c7528b9443010c430ee3532e08d3eaeaa2acf973c8e3032375b55b9dd735589d",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/bc01-tools.js",
+        "status": 200,
+        "sha256": "69fd27f90fc788a7d3bbc0e44f0214fa4ec9a1be199060a17aa42dd46b96fd0e",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/equipment-standard.js",
+        "status": 200,
+        "sha256": "ce7172227b1c32b8447d00e5cc7af124290a95cfb64fea82eee8b76cd479a559",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "build-all-in-one.py",
+        "status": 200,
+        "sha256": "2876fcc86530e725f5ceb8e3e491b9cc3bec891e2dac2cb4a0f7246b061f8250",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "build-requirements-audit.py",
+        "status": 200,
+        "sha256": "070f7e2cf23a6dd0afdde739a7576106de5e3171804d3e7a2e9fe845f1801702",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "equipment_standard_profiles.py",
+        "status": 200,
+        "sha256": "079e1ecebbb426bd1b176196d12e924192c19378763d36f7e788644ab797444b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "1050c52aa4d418c2654f12b987eeef847b2d8f709dc3bdbf3444f28ec95d7424",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1028.html",
+        "status": 200,
+        "sha256": "c61df669ddc02ba9aa6ae9b7b023ebcf9ba1f9d29fa36d2c5790049faca67f07",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1050.html",
+        "status": 200,
+        "sha256": "695b9c0593ce7da55711f73047e0514f1728fb54e339749b978ff6c85e4b014c",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1052.html",
+        "status": 200,
+        "sha256": "7ae735e74b1aaa72b7bd01ffe28df5556aea5afc4b4ef1728893c09a2f062dfa",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1071.html",
+        "status": 200,
+        "sha256": "964141d081bdf77904cb978651eab13b03f88a84fbfda8ef69eb0b8226de5b3d",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1084.html",
+        "status": 200,
+        "sha256": "189fe960d74038f49754551a28f1d02a3b445977a62ee71e861235d3aa196377",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1685.html",
+        "status": 200,
+        "sha256": "555bb80ed6b0f828331d3528ea44f7eaa92a118c600393ca00a99679105fc557",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1772.html",
+        "status": 200,
+        "sha256": "a3abf2569c41efdaa5e90c4c972eadc148810910d8811d8d687098522b593704",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1798.html",
+        "status": 200,
+        "sha256": "665a355ab75b5d7b57b0acaf29b26a88883db2425d742dfaa85ee8665314cfac",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1843.html",
+        "status": 200,
+        "sha256": "3bbc409669c7d2b8bde617061e6bc57bfa53569a285394575617e1aa36b3cef3",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1844.html",
+        "status": 200,
+        "sha256": "8efe087dec47fbe4e6bfa2897437d75858fca253b119e1a57cf408a011ffee09",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1845.html",
+        "status": 200,
+        "sha256": "e1ee64e1deed70cd92c3e909df2754790edc47a0bb54f93a94922dda6dc94ffc",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1847.html",
+        "status": 200,
+        "sha256": "47784082c8bf5a019e9ef800717aa0b636285736c41d286612adaca51b22df04",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1857.html",
+        "status": 200,
+        "sha256": "6eb17390d6f8e4e98cb09871326aa579aed1e60a343a9f42fefa1c14b48525ac",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1950.html",
+        "status": 200,
+        "sha256": "80604d54365c4f04d75cf6dc4b8fb16c2900fc5effa7a0552815b60dc5aaa282",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1951.html",
+        "status": 200,
+        "sha256": "13d2e833115b0d4f0f1ee395b06c456c8e3b5e7206fd407c6d8fb9763eb04bf3",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1987.html",
+        "status": 200,
+        "sha256": "95535fd282fda88c460e5d9c11e4b2e388c7c0eed47be4795c77265d8a78a6cb",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1988.html",
+        "status": 200,
+        "sha256": "88eab633ff9a3828331f3551d086e124200b81c35e1d522bc7c6a46a22b94767",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "operator-guide.html",
+        "status": 200,
+        "sha256": "2e6a41d719d0a45aeb740c6d8ddd0353719c3f6eaa58ff6e706eb31e55c0fd2d",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "registers/all-in-one-data.json",
+        "status": 200,
+        "sha256": "ad988cfa179854b9bcdba51227828881ad548c408a317940258bb44c8419a2e6",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/requirements-audit.json",
+        "status": 200,
+        "sha256": "2895338b4c95fe065dea8c5d671dbe76164fc0bb64c586ee744db8a945073360",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "requirements-audit-verification.json",
+        "status": 200,
+        "sha256": "795ccd9ebcc7f46151d8729f01b7f455b05f7229ec19e977fd553d3fa22081d0",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "requirements-audit.html",
+        "status": 200,
+        "sha256": "5c57761f2f33312139cae93cc6f078c9081191a569669753e2bf8089f5145911",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "verification-result.json",
+        "status": 200,
+        "sha256": "53dac78c9a2824389335259f51019ffc2cc215e0e42ca6d2a2fd664ef9266600",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "verify-equipment-standards.cjs",
+        "status": 200,
+        "sha256": "42f45460fc57465aebf3883bf655b998de1ba349c98ea72a124b8407429cfbe2",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "verify-package.py",
+        "status": 200,
+        "sha256": "c78dd830b1cf32d2256b01bbd2d4d8bf1af4bfdecef81c1cce4571f8cd5d329f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "verify-requirements-audit.py",
+        "status": 200,
+        "sha256": "990c4c31334b58593a06236547983bf0b9ea427ca2d3085a38a28d80df9751bf",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/program-model.json",
+        "status": 200,
+        "sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/program-model-data.js",
+        "status": 200,
+        "sha256": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/virtual-plc.js",
+        "status": 200,
+        "sha256": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/simulator-workspace.js",
+        "status": 200,
+        "sha256": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/virtual-plc-test-results.json",
+        "status": 200,
+        "sha256": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/circuits/FG47.png",
+        "status": 200,
+        "sha256": "50bfdb5e53118fd6dd48748da6d7cc6bbadaea7d7aa7c2088734f63709f99ac4",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/circuits/FG48.png",
+        "status": 200,
+        "sha256": "9f46b4aa5c5c540531aabb26da4a8ce4ac2b32de50cf3261e112da1fb3e1b13c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/circuits/FG54.png",
+        "status": 200,
+        "sha256": "626886cada92544340113d91122ef85aa7f7e9a9a813a36fbe82fe60e020fd54",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0253-FlgNet.xml",
+        "status": 200,
+        "sha256": "2d35470eb44fff79916b93fcf57a597b2b9a03211e8493c2283706dc2c875154",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0433-FlgNet.xml",
+        "status": 200,
+        "sha256": "c728c28ec295639398dd2cd28b163885f3a78a43861c9e392ae2fbfaa9294b76",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0466-FlgNet.xml",
+        "status": 200,
+        "sha256": "4e4461435e68831cab0be6171c58c8f25803a5f3da811001a73ae0bd3fe43e61",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0520-FlgNet.xml",
+        "status": 200,
+        "sha256": "b23c3423dc1ba4640597b4b9d8a8f5659d92cdab5f0a5c75aa270f2382150813",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      }
+    ],
+    "ui": {
+      "version": "1.5.0",
+      "equipment": "P15",
+      "manual47": true,
+      "source_row": "689 Coil operand = Start FN01",
+      "source_row_visible": true,
+      "backup_dialog": true,
+      "console": [],
+      "notes_written": 0
+    },
+    "release_url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.5.0",
+    "asset_digest": "sha256:b39b8f1102132851d6232705b1f8d329d81abd22d113c7f24ef08e168abda8f1",
+    "asset_bytes": 52753690
+  },
   "screens": {
     "total": 528,
     "BC01": 144,
@@ -57,7 +440,16 @@
     "source_checks": 14,
     "equipment_checks": 2
   },
-  "fresh_clone": "pending",
+  "fresh_clone": {
+    "status": "passed",
+    "commit": "0c07210026f3b9236856f22c5c7c505f368de0a5",
+    "node": "24.19.0",
+    "npm_ci": true,
+    "tests": 8,
+    "bc01_and_equipment_checks": true,
+    "netlify_build": true,
+    "git_changes": 0
+  },
   "plc_changes": 0,
   "simulator_execution": 0,
   "field_recovery": "not_performed",
@@ -75,5 +467,6 @@
     "wide_desktop_mobile_overflow": 0,
     "iframe_FN01_manual_navigation": "passed",
     "invalid_URL_state": "fallback displayed; invalid URL parameters retained until next selection"
-  }
+  },
+  "next": "FN02(P16)"
 }
