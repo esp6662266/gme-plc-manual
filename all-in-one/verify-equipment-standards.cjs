@@ -230,6 +230,25 @@ for(const [section] of standard.sections)for(const item of standard.items(data,'
 const h09=standard.render(data,'P09',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});for(const x of ['M11.0','Q49.5','T60','T69','NOT INV가없고','HOUR+1이아닙니다','8바인딩','두모터'])assert.ok(h09.includes(x),x);
 const schema09=data.repair_record_forms.profiles.find(p=>p.key==='P09');assert.equal(schema09.signals.length,4);const note09={...fn01Note,id:'qa-vs01',equipment:'P09',repair_observation:plain(repair.collect(schema09,{first_symptom:'QA VS01',[schema09.signals[0].id+'_value']:'0'}))};assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note08,note09],data,'2026-10-11T06:30:00Z','P09')),store.decodeNotes,valid,schema09)).notes,[note09]);assert.notEqual(tools.referenceContext(data,'P09').source_bundle_sha256,p08.source_bundle_sha256);
 
+
+const p05=standard.profile(data,'P05');assert.ok(p05);assert.equal(p05.type,'pneumatic_double_gate');assert.equal(p05.specification.direct_rules.length,39);assert.equal(p05.source_pairs.length,8);
+assert.deepEqual(plain(standard.sections.map(([s])=>standard.items(data,'P05',s).length)),[3,4,40,8,6,5,5]);
+assert.deepEqual(plain(p05.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='PV01'));assert.deepEqual(plain(p05.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='PV01'));
+assert.deepEqual(p05.alarm.timers.map(t=>[t.uid,t.preset.literal]),[['1453','S5T#4S'],['1471','S5T#4S'],['1517','S5T#7S'],['1535','S5T#7S']]);
+const pvXML=f=>fs.readFileSync(__dirname+'/sources/decoded-original/'+f+'-FlgNet.xml','utf8');
+assert.match(pvXML('0279'),/<Part UId="418" Gate="Contact" \/>/);assert.match(pvXML('0279'),/<ORef UId="389" RefId="48" \/>/);assert.match(pvXML('0279'),/<Wire UId="419">\s*<PCon UId="418" PinName="out" \/>\s*<PCon UId="372" PinName="in4" \/>/);
+for(const [wire,contact,move]of [['562','561','345'],['568','567','401']])assert.match(pvXML('0277'),new RegExp('<Wire UId="'+wire+'">\\s*<PCon UId="'+contact+'" PinName="out" \\/>\\s*<PCon UId="'+move+'" PinName="en" \\/>'));
+const pvDecl=(f,rid)=>fs.readFileSync(__dirname+'/sources/decoded-original/'+f+'-IdentXmlPart.xml','utf8').split(/<(?=SimpleAccess>|GlobalAccess>|LiteralConstant>|DepDBBlock>)/).find(s=>s.includes(' RID="'+rid+'"'));
+for(const [rid,region,offset]of [['47','Memory','645'],['48','Memory','1'],['49','Output','43'],['50','Output','42'],['124','Input','70'],['126','Input','71']]){const t=pvDecl('0607',rid);assert.ok(t.includes('AO="'+offset+'"'));assert.ok(t.includes('R="'+region+'"'));}
+assert.ok(pvDecl('0610','130').includes('SV="false" V="0"'));assert.ok(pvDecl('0610','24').includes('SV="S5T_x0023_1S"'));assert.ok(pvDecl('0656','320').includes('SV="S5T_x0023_7S"'));assert.ok(pvDecl('0656','322').includes('SV="S5T_x0023_4S"'));
+assert.match(pvXML('0397'),/<Wire UId="55">\s*<OCon UId="47" \/>\s*<PCon UId="43" PinName="in" \/>/);assert.match(pvXML('0397'),/<Wire UId="57">\s*<PCon UId="43" PinName="out1" \/>\s*<OCon UId="48" \/>/);assert.ok(pvDecl('0627','15').includes('AO="64"'));assert.ok(pvDecl('0629','16').includes('BIRID="4"'));assert.ok(pvDecl('0628','4').includes('N="13"'));
+for(const f of ['0060','0061','0578','0607','0608','0609','0610','0623','0624','0626','0627','0628','0629','0631','0655'])assert.ok(p05.source_hashes['sources/decoded-original/'+f+'-IdentXmlPart.xml']);
+for(const [f,h]of Object.entries(p05.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p05.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+for(const [section]of standard.sections)for(const item of standard.items(data,'P05',section)){const html=standard.render(data,'P05',{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(!html.includes('undefined'));assert.ok(html.includes('standard-content-title'));}
+const pvControl=standard.render(data,'P05',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});for(const s of ['M80.5','OFF Contact418','1초','SEC은Bool','HMI','17바인딩','DB13 Word8'])assert.ok(pvControl.includes(s),s);
+const schema05=data.repair_record_forms.profiles.find(p=>p.key==='P05');const note05={...fn01Note,id:'qa-pv01',equipment:'P05',repair_observation:plain(repair.collect(schema05,{first_symptom:'QA PV01',[schema05.signals[0].id+'_value']:'0'}))};const parsed05=plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note09,note05],data,'2026-10-11T07:00:00Z','P05')),store.decodeNotes,valid,schema05));assert.deepEqual(parsed05.notes,[note05]);assert.equal(parsed05.skipped,1);assert.notEqual(tools.referenceContext(data,'P05').source_bundle_sha256,p09.source_bundle_sha256);
+
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));

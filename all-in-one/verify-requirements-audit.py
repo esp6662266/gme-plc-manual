@@ -80,16 +80,17 @@ for cr,r in zip(csvrows,a['equipment']):
 anchors=ids('requirements-audit.html')
 work=a['priority_open_work']
 assert [r['key'] for r in work]==['P'+str(i).zfill(2) for i in range(1,22)]
-assert Counter(r['lane'] for r in work)=={'BC01 기준 보존':1,'FN04 시범 표준화':1,'현행 자료·관찰 보강':6,'FN01 표준화':1,'FN02 표준화':1,'FN03 표준화':1,'FN06 표준화':1,'MC04 표준화':1,'VS01 표준화':1,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
+assert Counter(r['lane'] for r in work)=={'BC01 기준 보존':1,'FN04 시범 표준화':1,'현행 자료·관찰 보강':5,'FN01 표준화':1,'FN02 표준화':1,'FN03 표준화':1,'FN06 표준화':1,'MC04 표준화':1,'VS01 표준화':1,'PV01 표준화':1,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
 assert work[0]['lane']=='BC01 기준 보존' and 'BC01 표준 매뉴얼' in work[0]['document_work']
 assert work[1]['lane']=='FN04 시범 표준화' and 'FN04 기존 완료 분석' in work[1]['document_work']
 assert work[14]['key']=='P15' and work[14]['lane']=='FN01 표준화' and '7영역47항목' in work[14]['document_work']
 assert work[15]['key']=='P16' and work[15]['lane']=='FN02 표준화' and '7영역42항목' in work[15]['document_work']
 assert work[16]['key']=='P17' and work[16]['lane']=='FN03 표준화' and '7영역39항목' in work[16]['document_work']
+assert work[4]['key']=='P05' and work[4]['lane']=='PV01 표준화' and '7영역71항목' in work[4]['document_work']
 assert work[8]['key']=='P09' and work[8]['lane']=='VS01 표준화' and '7영역41항목' in work[8]['document_work']
 assert work[7]['key']=='P08' and work[7]['lane']=='MC04 표준화' and '7영역45항목' in work[7]['document_work']
 assert work[17]['key']=='P18' and work[17]['lane']=='FN06 표준화' and '7영역32항목' in work[17]['document_work']
-assert all('GME-STD-1.0.0의 설비별 후속 확장 대상' in r['document_work'] for r in work[2:] if r['key'] not in ('P15','P16','P17','P18','P08','P09'))
+assert all('GME-STD-1.0.0의 설비별 후속 확장 대상' in r['document_work'] for r in work[2:] if r['key'] not in ('P15','P16','P17','P18','P08','P09','P05'))
 assert {'priority-open-work'}|{'open-'+r['key'] for r in work}<=anchors
 identity={r['key']:r for r in load('registers/unresolved-identity.json')['profiles']}
 alarms={r['id']:r for r in load('registers/alarm-recovery.json')['profiles']}

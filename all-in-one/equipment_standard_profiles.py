@@ -364,3 +364,54 @@ def build_vs01_profile(root,data,source_rows):
             timer_title='공유 Tag_59 / T60 · S5T#2S 운전 감시',related_title='별도OFF브레이크·두모터·MC04소비·시간',related_links=[['OFF브레이크1944','networks/network-1944.html'],['MC04소비1941','networks/network-1941.html'],['시간1024','networks/network-1024.html'],['첫Move초기화1050','networks/network-1050.html'],['미해석HMI1184','networks/network-1184.html']],
             field_title='스크린·공통인버터·각모터·브레이크 존재와 정상극성',alarm_recovery='드라이브원인회복·PLC래치Reset·DI4Reset·새요청·공통Q/RUN/ALARM·두모터각각의회전/진동·상류MC04복구를같은시각근거로구분합니다. 브레이크활성/철거와현재OFF값을추정하지않습니다.',
             search_examples='Q0.6, I1.1, I1.2, Tag_59, T60, Tag_117, T69, M11.0, Q49.5, VS01A')))
+
+def build_pv01_profile(root,data,source_rows):
+    spec=next(p for p in json.loads((root/'registers/control-spec.json').read_text())['specifications'] if p['id']=='PV01')
+    control=dict(applicability='PV01 pneumatic two-gate valve command, memory and six-state sequence; no motor/PID ownership',
+        chain=[
+            'P05/PV01는 드럼투입 A/B 공압게이트 후보입니다. OEM EV01/EV02·P&ID compressed air→CL01/02,CL03/04와 기계 GATE A/B 상하형상은 실물대응확인전입니다. 인버터/모터/유압설정을복제하지않습니다.',
+            '1911/0276: ON AND (ON OR UNDER TESTING) AND [(Enable AND !A_NOT_OPEN AND !B_NOT_OPEN) OR (!Enable AND A_MEM_OPEN AND B_MEM_OPEN)]→Coil115 R1GateON M10.5/Coil117 LOOP_ON DB2X4.7. 두NOT_CLOSE를자동허용부에추가하지않고중복ON을삭제하지않습니다.',
+            '1911 ON·NOT R1GateON Contact206 W207→State0 Move125와 OpenA01/OpenB01/CloseA01/CloseB01 Reset130/133/136/139. local00·maintenance writer를초기화하는조건으로확대하지않습니다.',
+            '1914/0278: ON·EV01_Sel_Open I9.2→Coil343 OpenA00 M20.0, ON·EV02_Sel_Open I9.3→Coil347 OpenB00 M20.1. PB15 공통70SB1와70SA1 A/B선택·HMI버튼을구분합니다.',
+            '1915/0279 최종Q5.2 Coil384 = ON AND (OpenA00 OR OpenA01 OR maintenance PV01 M80.5), Q5.3 Coil377 = ON AND (OpenB00 OR OpenB01 OR maintenance PV01 OR OFF M0.1). OFF Contact418은비반전/메모리읽기이며false상수가아닙니다. Enable해제만으로모든출력차단을확정하지않습니다.',
+            '1913/0277 pre ON555→Enable557→R1GateON559 W560. State0:CloseA Set334/OpenA Reset337→SD340 Tag163/T100 S5T#1S→Contact561 W562→Move345 State1. A닫힘기억직렬접점은없습니다.',
+            'State1:OpenB Set356/CloseB Reset359→B_MEM_OPEN Contact563 W564→Move363 State2. State2 SD374 Tag164/T56 value SET_EVR1B_Open_time DB1W44→Contact565 W566→Move379 State3. 체류단위/현재값미확정입니다.',
+            'State3:CloseB Set390/OpenB Reset393→SD396 Tag165/T102 S5T#1S→Contact567 W568→Move401 State4. B닫힘기억직렬접점은없습니다. State4 OpenA Set412/CloseA Reset415→A_MEM_OPEN569→Move419 State5. State5 SD430 Tag166/T57 DB1W16→Contact571→Move435 State0. 한스캔전이/안전성/실제시간검증이아닙니다.',
+            '1912/0285 KF_KT CRef35:Data.PV_01B Int DB1W302→KF,W39 SEC literal0(Bool),KT W41→DB1W44 Word. ENO W45→CRef44.en,Data.PV-01a Int DB1W300→KF,SEC0→KT DB1W16. 0061 RID122 SEC은Bool이며함수몸체/단위/변환범위미확정입니다.',
+            '1921/0286 A MEM:ON·Q_A·(I8.6 OR Inputs DB13X8.6)→S26 OPEN DB2X8.1;ON·!Q_A→R28. ON·!Q_A·(I8.7 OR DB13X8.7)→S33 CLOSE DB2X8.0;ON·Q_A→R35. raw/DB/순간위치/래치를합치지않습니다.',
+            '1922/0287 B MEM:ON·Q_B·[I9.0 OR (false AND I9.1) OR DB13X9.0]→S28 OPEN DB2X8.3;ON·!Q_B→R30. ON·!Q_B·(I9.1 OR DB13X9.1)→S35 CLOSE DB2X8.2;ON·Q_B→R37.0610 RID130 NID12UID41 literalfalse와OFF는별개입니다.405/0150 ON326 W327→S307/309 초기CLOSE기억은물리닫힘증거가아닙니다.',
+            '1070/0397 Move43 W55/ORef47 Tag181 Word IW8→W57/ORef48 Inputs DB13 Word8.0627 RID15 Input AO64·0629 RID16 BAD4 AO64/Word·0628 RID4 TOD13와0608 RID86 같은DB13/CID를대조했습니다. I8.6/8.7/9.0/9.1 raw와DB의현재값/극성/다른쓰기는미확정입니다.',
+            '1613/0030 Recipes ENO W32→HMI ENO W33→HMI Output ENO W42→NOT Simulation(1)37 W43→HMI Inputs CRef28.en·0692 RID140 M180.0는정적호출경계입니다. 시뮬레이터를실행하지않고현재CPU/ENO를확정하지않습니다.',
+            '1815/0449 A SD1453/1471 Tag80/T103·Tag81/T104 S5T#4S(0656 RID322 NID42UID1485/1494).1816/0450 B SD1517/1535 Tag82/T105·Tag83/T106 S5T#7S(RID320 NID43UID1549/1558). 열림ON·Q·!MEM_OPEN/닫힘ON·!Q·!MEM_CLOSE 감시이며S코일은별도ON·Q방향·timer접점입니다. 원시센서직접감시나모든게이트같은시간이아닙니다.',
+            'A 알람DB3X10.1/10.2 Set1459/1477 Reset1464/1482, B DB3X10.3/10.4 Set1523/1541 Reset1528/1546. 각Reset ON·Flag.RESET_ALLARM·ownAlarm.930/0158 OR Inputs.Reset_allarmi/Flag.Reset_Allarms_HMI→S33 RESET/R40 HMI요청해제. 3초TOF를PV감시/복구시간으로복제하지않습니다.',
+            '1843/0164 예열preset1·Auto_ON1·Tempo26→Enable S506/MemoStartup S34;예열상위W33 별도가지 Enable833·Memo834→TON835 PT0578RID118 T#1M→R837/838.1844 생산preset2/Tempo40 Set1158,1847 Auto_ON1·preset5·(Tempo15 OR Emergency) Reset941. 공통Enable DB2X5.0과HMI쓰기우선순위·M180.6작성/현재값미확정;26/40/15를초로가정하지않습니다.',
+            '1935/0242 BC01소유 ON·Flag.M_BC_01·(R1_GATE_LOOP_ON OR MemoCMD_BC01_Startup OR Maintenance_ON)→Start BC01 Coil202. PV01 루프응답소비와BC01출력소유를분리하며PV01만으로BC01전체가항상운전/정지한다고확대하지않습니다.',
+            '1215/0391 HMI PV_2Gate CodeBlock31/CRef32 0623/0624 NID39 RID715/716·20핀. Allarm5/6/7 ORef54/56/58→0626 RID48 FALSE만결속,나머지17바인딩은미해석.347/0400 공통Local함수와CSV DB11X76.0~76.6·DB2X5.0를실인수/현재이벤트로확정하지않습니다.'
+        ],
+        repair=['FG141 MOD15 단자13/Q5.2→FG69 69KA1 DC코일;110Vac9.7→69KA1 1/9→X1 126(5x20/2A F)→EV01 A1/A2→127/0Vac9.9. B 단자14/Q5.3→69KA2 DC코일·접점1/9→128/EV02→129/0Vac. 출력/접점/밸브/공압·기계/위치단계를구분합니다.',
+            'FG70 LS01/02/05/06 13/14·X1 130~137→FG124 MOD10단자7/8 I8.6/8.7·FG125단자11/12 I9.0/9.1. LS02는FG124 SPARE와FG70배선/원본I8.7모두보존하며삭제/극성/실사용을추정하지않습니다.',
+            'PB15 +24V→X1 138→70SB1→70SA1 A/B→139/I9.2·140/I9.3. 시공ENT2TB2/3·LS01~08 추가/ENT2TB3 A GATE반복설명·OEM↔심선미확정. 현장반/게이트위치를이름만으로확정하지않습니다.'],
+        pending=['현행CPU/프로젝트·ON/OFF/UNDER TESTING/ENO·raw/DB·모든writer·스캔우선순위',
+            'LS02 SPARE 실물/극성/배선·OEM X1↔ENT2TB 개별심선·LS03/04/07/08관계',
+            'EV01/EV02 모델·110Vac정격·공압손실/정전복귀·CL01~04/기계A/B 실물동일성',
+            'KF_KT 본체/SEC 단위·범위·현재DB1 체류값·고정1초전이설계검토',
+            'HMI1215 미결속17실인수/DB11 멤버·객체이벤트·Maintenance공통과M80.5소유',
+            '현재4/7초설정·실제원인/조치·MEM/센서/출력·복구/상류BC01증거'],
+        native=[347,405,930,1070,1215,1613,1843,1844,1847,1815,1816,1911,1912,1913,1914,1915,1921,1922,1935],native_refs=spec['direct_rules'])
+    pairs=[]
+    for signal,n,u,label in [('게이트 A 밸브 명령',1915,'384','A 최종출력 Q5.2'),('게이트 B 밸브 명령',1915,'377','B 최종출력 Q5.3·OFF 병렬'),('게이트 A 열림 위치',1921,'23','A raw EV01_Open'),('게이트 A 닫힘 위치',1921,'30','A raw EV01_Close·SPARE상충'),('게이트 B 열림 위치',1922,'23','B raw EV02_Open'),('게이트 B 닫힘 위치',1922,'32','B raw EV02_Close'),('현장 게이트 A 선택',1914,'343','I9.2→A local00 요청'),('현장 게이트 B 선택',1914,'347','I9.3→B local00 요청')]:
+        pairs.append(dict(signal=signal,network=n,uid=u,label=label,boundary='원시입력/DB처리/위치기억/자동·현장·유지보수·OFF출력/EV·공압기계응답을구분합니다. 현재극성/배선·실물·CPU/복구미확정입니다.'))
+    extra=[]
+    selected={1911:('186 188 192 104 194 196 198 200 202 204 109 115 117 206 125','159 160 163 164 165 166 167 169 170 171 173 174 175 177 207 178 179'),1913:('555 557 559 328 350 368 384 406 424 340 561 345 563 363 374 565 379 396 567 401 569 419 430 571 435','487 488 489 560 492 495 496 497 562 504 507 564 514 515 516 517 566 524 527 528 529 568 536 539 570 546 547 548 549 572'),1912:('','37 39 41 45 46 48 50'),1915:('410 412 414 416 418 372 377 420 422 424 380 384','395 411 396 397 398 399 400 402 403 405 406 408'),1921:('21 22 23 24 25 26 27 28 29 30 31 32 33 34 35','49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73'),1922:('21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37','53 54 55 57 58 59 60 61 62 63 64 65 66 67 70 72 73 74 75 76 77 78 81 88 90 91 93 95 96'),1070:('43','53 55 56 57'),1613:('37','32 33 42 43 44'),1215:('','33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71'),1843:('506 34 833 834 837 838','28 33 849 850 851 854'),1844:('1158','1087 1161'),1847:('941','1062 1064'),1935:('242 41 26 43 202','36 45')}
+    for n,(parts,wires) in selected.items():extra.extend((n,'part',u)for u in parts.split());extra.extend((n,'wire',u)for u in wires.split())
+    return build_static_profile(root,data,source_rows,dict(catalog_id='PV01',priority_key='P05',type='pneumatic_double_gate',control_reference=control,source_pairs=pairs,extra_locations=extra,
+        extra_sources=['sources/decoded-original/'+f+'-IdentXmlPart.xml' for f in ['0060','0061','0563','0565','0575','0577','0578','0580','0607','0608','0609','0610','0623','0624','0626','0627','0628','0629','0631','0655','0688','0692','0694']]+['PV01-detail/PV01-manual.md','PV01-detail/PV01-io-map.csv','PV01-detail/PV01-hmi-map.csv','PV01-detail/PV01-internal-tags.csv','PV01-detail/PV01-verification.csv','PV01-detail/sources/pv01-evidence.json'],
+        internal_names=['R1 Gate ON','Open EV A 00 PV-01','Open EV B 00  PV-01','Open EV A 01  PV-01','Open EV B 01  PV-01','Close EV A 01  PV-01','Close EV B 01  PV-01','maintenance PV01','ON','OFF','UNDER TESTING','WorkData.R1State','Data.PV-01a','Data.PV_01B','Data.SET_EVR1A_Open_time','Data.SET_EVR1B_Open_time'],
+        related_alarm_boundary='4개位置감시 알람은A4초/B7초로서원시센서와MEM래치를구분합니다. 공통비상/Enable복수쓰기·BC01소비·Reset/HMI통합표시는별도. startupCLOSE기억·Q0·래치Reset이물리복구완료가아닙니다.'.replace('位置','위치'),
+        presentation=dict(identity_title='드럼 투입 A/B 공압게이트·밸브와 실물 식별',identity_pending='PV01 본체/기계A/B 상하·EV01/02·CL01~04·PB15/ENT2TB2/3 현행대응미확정',
+            oem_baseline='Electrical_Rev2.pdf:FG69/PDF70·FG70/PDF71·FG125/PDF126 개정란공란·기본DATE27.05.2024;FG124/PDF125·FG141/PDF142 Rev2 17.03.2025. EV110Vac/PLC릴레이DC·LS/PB15 24Vdc. 2A퓨즈는도면값·현행설정아님',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf PDF21/53·24.11.11firstdraft. row3_8/9 ENT2TB2 DC CVV12G1.0 SPARE3/AC CVV3G1.0;3_10/11 ENT2TB3·LS05~08/EV02 E220/E320. LS01/02 E211/212 EV01 E213 LS05/06 E221/222 EV02 E323·A GATE반복설명·OEM개별심선미확정',
+            control_title='자동 0~5 순서·현장/유지보수·위치기억과 제어 소유',control_links=[['최종출력1915','networks/network-1915.html'],['순서1913','networks/network-1913.html'],['A기억1921','networks/network-1921.html'],['B기억1922','networks/network-1922.html']],
+            timer_title='A Tag80/81 T103/104 4초 · B Tag82/83 T105/106 7초',related_title='초기 닫힘기억·공통 Enable/Reset·BC01·HMI 미해석',related_links=[['startup405','networks/network-405.html'],['Reset930','networks/network-930.html'],['자동예열1843','networks/network-1843.html'],['HMI1215','networks/network-1215.html']],
+            field_title='EV·공압·실린더·A/B 위치와 LS02 SPARE 실물 경계',alarm_recovery='알람Reset·요청/최종Q·원시센서/Inputs DB·위치MEM·실제EV/게이트회복·Enable/BC01연동을같은시각증거로구분합니다. Q0이나startupCLOSE기억만으로복구를확정하지않습니다.',
+            search_examples='Q5.2, Q5.3, I8.7, LS02, SPARE, M80.5, OFF, T103, T105, KF_KT, R1State')))

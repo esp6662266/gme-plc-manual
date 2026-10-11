@@ -1,8 +1,12 @@
+# v1.11.0 PV01 — 게시 확인 대기
+
+7영역71항목·8쌍·UI1608·격리합성기록·A4 PDF3쪽passed. 패키지/새clone/실제게시확인중. 마지막확인된배포는아래v1.10.0이다. [검증](V1.11.0-VERIFICATION.md).
+
 # v1.10.0 VS01 표준 매뉴얼 — 실제 게시 완료
 
 기능 0259e491a3b0c4fec9823b42053a75efe60a3497 · v1.10.0 tag/Release ZIP digest/53086035바이트일치. Netlify 6acb2fb4160bd0000822daaf ready/commit_ref일치 · 2026-10-11T06:42:24.123Z. 새clone Node24.19 npm ci/8테스트/BC01/설비/NETLIFY 빌드passed·Git변경0. 게시45파일30정확SHA/15HTML prettyURL동등. 실제P09 v1.10/41항목·FG28/PDF29/1943Part381 StartVS01·통합0건창·warn/error0. 운영작성0.
 
-7영역41항목·3원본쌍·1324UI·격리합성기록/복원/保존/충돌/Quota/比較/보고서변경차단·A4 PDF3쪽·필수14+2/2801파일ZIP. 기존7설비·원본730/추가3/중지5보존. TIA/현재CPU/현장미수행. 시뮬레이터변경/실행0. [검증](V1.10.0-VERIFICATION.md).
+7영역41항목·3원본쌍·1324UI·격리합성기록/복원/보존/충돌/Quota/비교/보고서변경차단·A4 PDF3쪽·필수14+2/2801파일ZIP. 기존7설비·원본730/추가3/중지5보존. TIA/현재CPU/현장미수행. 시뮬레이터변경/실행0. [검증](V1.10.0-VERIFICATION.md).
 
 # v1.10.0 VS01 — 게시 확인 대기
 
