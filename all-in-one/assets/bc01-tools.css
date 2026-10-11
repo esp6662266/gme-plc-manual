@@ -15,3 +15,5 @@
 
 .bc01-report code{white-space:normal;overflow-wrap:anywhere}.bc01-report dd small{display:block;color:#42566b}
 @media print{body.bc01-printing .bc01-report-signals th:nth-child(1){width:22%}body.bc01-printing .bc01-report-signals th:nth-child(2){width:12%}body.bc01-printing .bc01-report-signals th:nth-child(3){width:20%}body.bc01-printing .bc01-report-signals th:nth-child(4){width:46%}body.bc01-printing .bc01-report ul{break-inside:avoid}}
+
+@media print{body.bc01-printing .bc01-report-sources{break-inside:avoid}}

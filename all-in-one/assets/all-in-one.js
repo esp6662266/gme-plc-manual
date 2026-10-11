@@ -18,7 +18,7 @@
   const noteStore = window.GMENoteStore;
   const repairRecords = window.GMERepairRecords;
   const repairRecordMap = new Map((data.repair_record_forms?.profiles || []).map(p=>[p.key,p]));
-  const repairWorkspaceKeys = new Set(['P01','P02']);
+  const repairWorkspaceKeys = new Set((data.equipment_standards?.profiles || []).filter(p=>p.tools?.report && repairRecordMap.has(p.priority_key)).map(p=>p.priority_key));
   const bc01Sections=[['overview','설비·자료 기준'],['io','I/O·HMI'],['control','제어 구조'],['circuits','전기 전달 경로'],['alarms','알람·복구'],['repair','증상별 수리'],['completion','완료 기준']];
   const bc01LastItems=new Map();
   const validNoteEquipment = new Set([...deviceMap.keys(),...priorityMap.keys()]);
@@ -849,7 +849,7 @@
     const roles=[['requests','운전 요청'],['outputs','최종 PLC 출력'],['responses','처리된 응답']];
     const links=(items=[])=>items.filter(x=>validDoc(x.path)).map(x=>docButton(x.label,x.path)).join('');
     return `<div class="repair-workspace">
-      <div class="view-heading"><div><p class="eyebrow">REPAIR / SOURCE EVIDENCE</p><h2>${esc(schema.name)} · 진단·수리 작업실</h2><p>증상을 선택하고 점검 순서와 원본 근거를 확인하세요.</p></div>${button('도면 작업실','drawings')}${state.selected==='P01'?button('BC01 표준 매뉴얼','manual'):''}</div>
+      <div class="view-heading"><div><p class="eyebrow">REPAIR / SOURCE EVIDENCE</p><h2>${esc(schema.name)} · 진단·수리 작업실</h2><p>증상을 선택하고 점검 순서와 원본 근거를 확인하세요.</p></div>${button('도면 작업실','drawings')}${window.GMEEquipmentStandard.profile(data,state.selected)?button(window.GMEEquipmentStandard.profile(data,state.selected).catalog_id+' 표준 매뉴얼','manual'):''}</div>
       <div class="notice info">기존 백업의 정적 근거를 연결한 점검 안내입니다. 실물 동일성·현재 CPU 동작·현장 복구 상태는 확인 전입니다.</div>
       <section class="panel repair-selector"><h3>1. 현재 증상 선택</h3><div class="repair-symptoms" role="group" aria-label="진단 증상">${schema.steps.map((s,i)=>`<button type="button" data-repair-symptom="${esc(s.id)}" aria-pressed="${s.id===step.id}"><span class="repair-number">${i+1}</span><span>${esc(s.title)}</span></button>`).join('')}</div></section>
       <div class="repair-columns"><div class="repair-main">
@@ -1020,6 +1020,7 @@
           if(params.get('view')==='repair-record' && repairRecordMap.has(params.get('equipment'))){e.preventDefault();route('repair-record',params.get('equipment'));return;}
           if(params.get('view')==='repair' && repairWorkspaceKeys.has(params.get('equipment'))){e.preventDefault();route('repair',params.get('equipment'));return;}
           if(params.get('view')==='manual' && params.get('equipment')==='P01'){e.preventDefault();state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';state.bc01Item=bc01Items(state.bc01Section).find(i=>i.id===params.get('item'))?.id || '';state.bc01Check=bc01CompletionTasks(state.bc01Item).find(t=>t.id===params.get('check'))?.id || '';state.bc01Find=(params.get('find') || '').trim().slice(0,160);state.bc01Relation=data.bc01_standard.relationships.nodes.find(n=>n.id===params.get('relation'))?.id || 'request';if(params.has('text'))state.bc01Text=params.get('text')==='large'?'large':'standard';if(params.has('alarmStep'))state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';route('manual','P01');return;}
+          if(params.get('view')==='manual' && params.get('equipment')!=='P01' && window.GMEEquipmentStandard.profile(data,params.get('equipment'))){e.preventDefault();const key=params.get('equipment'),manual=window.GMEEquipmentStandard.normalize(data,key,params);manualStates.set(key,{...manualDefaults,...manual});if(key===state.selected)Object.assign(state,manual);route('manual',key);return;}
           if(params.get('view')==='review' && priorityMap.has(params.get('equipment'))){e.preventDefault();route('review',params.get('equipment'),'',params.get('review') || '');return;}
         }
         if (path.startsWith('index.html')) path = path.replace(/^index\.html/,'manual-catalog.html');

@@ -1,0 +1,79 @@
+{
+  "version": "1.5.0",
+  "date": "2026-10-11",
+  "timezone": "Asia/Seoul",
+  "base_commit": "119fcf232ae431b40d080841001b6e39091a0319",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "publication": "pending",
+  "screens": {
+    "total": 528,
+    "BC01": 144,
+    "FN04": 196,
+    "FN01": 188,
+    "sizes": [
+      1280,
+      390
+    ],
+    "fonts": [
+      "standard",
+      "large"
+    ],
+    "overflow": 0
+  },
+  "records": {
+    "isolated_origin": "http://127.0.0.1:8876",
+    "restore_before": 3,
+    "restore_after": 4,
+    "drafts_equal": true,
+    "foreign_notes_equal": true,
+    "unknown_fields_rows_preserved": true,
+    "zero_blank_distinct": true,
+    "same_screen_reopen": true,
+    "save_failure_preserved": true,
+    "stale_row_blocked": true,
+    "report_changed_blocked": true,
+    "qa_notes_drafts_cleared": true
+  },
+  "pdf": {
+    "format": "A4",
+    "artifact": "/tmp/gme-fn01-qa/gme-fn01-v1.5.0.pdf",
+    "visual": "passed all 3 rendered pages after refreshed CSS cache key",
+    "sources_pagination_fixed": true,
+    "pages": 3,
+    "sha256": "eaecaf8a8a52f0538c8b2deae773d40988fba56a48d0f98f548e047844a1eea3"
+  },
+  "package": {
+    "status": "passed",
+    "version": "1.5.0",
+    "files": 2801,
+    "bytes": 52753690,
+    "sha256": "b39b8f1102132851d6232705b1f8d329d81abd22d113c7f24ef08e168abda8f1",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "source_checks": 14,
+    "equipment_checks": 2
+  },
+  "fresh_clone": "pending",
+  "plc_changes": 0,
+  "simulator_execution": 0,
+  "field_recovery": "not_performed",
+  "npm_test": {
+    "passed": 8,
+    "failed": 0
+  },
+  "netlify_build": {
+    "status": "passed",
+    "csp_inline_hashes": 6,
+    "scoped_policies": 39,
+    "public_files": 2830
+  },
+  "ui_extra": {
+    "wide_desktop_mobile_overflow": 0,
+    "iframe_FN01_manual_navigation": "passed",
+    "invalid_URL_state": "fallback displayed; invalid URL parameters retained until next selection"
+  }
+}

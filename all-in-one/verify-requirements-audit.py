@@ -80,10 +80,11 @@ for cr,r in zip(csvrows,a['equipment']):
 anchors=ids('requirements-audit.html')
 work=a['priority_open_work']
 assert [r['key'] for r in work]==['P'+str(i).zfill(2) for i in range(1,22)]
-assert Counter(r['lane'] for r in work)=={'BC01 기준 보존':1,'FN04 시범 표준화':1,'현행 자료·관찰 보강':12,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
+assert Counter(r['lane'] for r in work)=={'BC01 기준 보존':1,'FN04 시범 표준화':1,'현행 자료·관찰 보강':11,'FN01 표준화':1,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
 assert work[0]['lane']=='BC01 기준 보존' and 'BC01 표준 매뉴얼' in work[0]['document_work']
 assert work[1]['lane']=='FN04 시범 표준화' and 'FN04 기존 완료 분석' in work[1]['document_work']
-assert all('GME-STD-1.0.0의 설비별 후속 확장 대상' in r['document_work'] for r in work[2:])
+assert work[14]['key']=='P15' and work[14]['lane']=='FN01 표준화' and '7영역47항목' in work[14]['document_work']
+assert all('GME-STD-1.0.0의 설비별 후속 확장 대상' in r['document_work'] for r in work[2:] if r['key']!='P15')
 assert {'priority-open-work'}|{'open-'+r['key'] for r in work}<=anchors
 identity={r['key']:r for r in load('registers/unresolved-identity.json')['profiles']}
 alarms={r['id']:r for r in load('registers/alarm-recovery.json')['profiles']}

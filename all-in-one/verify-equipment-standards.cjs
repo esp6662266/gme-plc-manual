@@ -33,6 +33,32 @@ if(p02){
  for(const loc of p02.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
  const route=standard.normalize(data,'P02',new URLSearchParams('section=bad&item=bad&text=bad'));assert.equal(route.bc01Section,'overview');assert.equal(route.bc01Text,'standard');
 }
+const p15=standard.profile(data,'P15');assert.ok(p15,'FN01 profile is required in v1.5.0');
+const readRegister=f=>JSON.parse(fs.readFileSync(__dirname+'/registers/'+f));
+assert.deepEqual(plain(p15.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='FN01'));
+assert.deepEqual(plain(p15.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='FN01'));
+assert.equal(p15.regulation,null);assert.equal(p15.specification.direct_rules.length,20);assert.equal(p15.specification.direct_rules.filter(r=>r.opaque).length,3);
+assert.equal(p15.alarm.alarms.length,2);assert.equal(p15.alarm.timers.length,1);assert.equal(p15.alarm.timers[0].preset.literal,'S5T#2S');
+assert.deepEqual(p15.control_reference.native_refs.map(r=>r.rule_id),['1845:60','1845:65','1845:70','1845:74','1845:78']);assert.ok(p15.control_reference.native_refs.every(r=>r.opaque));
+assert.equal(p15.specification.direct_rules.find(r=>r.rule_id==='1951:685')['정적 조건식'],'((ON AND Allarm.FN_01_FAULT) OR (ON AND Allarm.FN01_INV) OR (ON AND [Data.SET_PERC_VT01 = 0]) OR (ON AND Stop_Fan_FN01) OR ((ON AND Allarm.HYDROGEN_BOX_FAULT) AND NOT [UNDER TESTING]))');
+assert.deepEqual(p15.source_pairs.map(p=>p.path),['networks/network-1951.html#gme-fn01-part-689','networks/network-1798.html#gme-fn01-part-740','networks/network-1798.html#gme-fn01-part-744','networks/network-1685.html#gme-fn01-wire-504','networks/network-1772.html#gme-fn01-wire-1531']);
+assert.equal(data.repair_record_forms.profiles.find(p=>p.key==='P15').signals.length,4);
+const resetXML=fs.readFileSync(__dirname+'/sources/decoded-original/0253-FlgNet.xml','utf8');
+assert.match(resetXML,/<Part UId="724" Gate="Contact">\s*<Negated PinName="operand" \/>/);assert.match(resetXML,/<Wire UId="725">\s*<PCon UId="724" PinName="out" \/>\s*<PCon UId="676" PinName="in5" \/>/);
+assert.match(resetXML,/<Wire UId="709">\s*<PCon UId="676" PinName="out" \/>\s*<PCon UId="685" PinName="in" \/>/);
+const native2s=fs.readFileSync(__dirname+'/sources/decoded-original/0656-IdentXmlPart.xml','utf8');const timerDeclaration=native2s.split('</LiteralConstant>').find(s=>s.includes('RID="28"'));assert.ok(timerDeclaration.includes('NID="20" UID="695"'));assert.ok(timerDeclaration.includes('SV="S5T_x0023_2S"'));
+const crypto15=require('node:crypto');for(const [f,h] of Object.entries(p15.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p15.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+assert.deepEqual(plain(standard.sections.map(([section])=>standard.items(data,'P15',section).length)),[3,4,21,5,4,5,5]);
+for(const [key,total] of [['P02',49],['P15',47]]){let rendered=0;for(const [section] of standard.sections)for(const item of standard.items(data,key,section)){const html=standard.render(data,key,{bc01Section:section,bc01Item:item.id,bc01Text:'standard',bc01Find:''});assert.ok(html.includes('standard-content-title'));assert.ok(!html.includes('undefined'));rendered++;}assert.equal(rendered,total);}
+const fn01Overview=standard.render(data,'P15',{bc01Section:'overview',bc01Item:'baseline',bc01Text:'standard',bc01Find:''});assert.ok(fn01Overview.includes('FG47/48'));assert.ok(!fn01Overview.includes('FG59/60'));
+const fn01Timer=standard.render(data,'P15',{bc01Section:'alarms',bc01Item:'timer',bc01Text:'large',bc01Find:'Tag_63'});assert.ok(fn01Timer.includes('S5T#2S'));assert.ok(!fn01Timer.includes('S5T#17S'));
+const fn01Schema=data.repair_record_forms.profiles.find(p=>p.key==='P15');
+const fn01Note={id:'qa-fn01',equipment:'P15',title:'QA FN01',text:'',updated:'old',future:{retained:1},repair_observation:plain(repair.collect(fn01Schema,{first_symptom:'QA FN01',[fn01Schema.signals[0].id+'_value']:'0'}))};
+const fn01Incoming=plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note,fn01Note],data,'2026-10-11T05:00:00Z','P15')),store.decodeNotes,valid,fn01Schema));assert.deepEqual(fn01Incoming.notes,[fn01Note]);assert.equal(fn01Incoming.skipped,1);
+assert.throws(()=>tools.parseBackup(JSON.stringify(tools.backupEnvelope([{...fn01Note,repair_observation:{...fn01Note.repair_observation,equipment:'P02'}}],data,'2026-10-11T05:00:00Z','P15')),store.decodeNotes,valid,fn01Schema));
+assert.equal(tools.referenceContext(data,'P15').source_bundle_sha256,p15.source_bundle_sha256);assert.notEqual(p15.source_bundle_sha256,p02.source_bundle_sha256);
+
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));

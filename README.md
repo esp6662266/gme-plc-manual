@@ -4,7 +4,7 @@
 
 [BC01 기반 작업표준](docs/equipment-standard/WORK-STANDARD.md) · [GPT-6.1 Sol / Ultra 시작](docs/equipment-standard/START-GPT61.md) · [현재 진행/다음 작업](EXPANSION-WORK.md) · [공유 스킬](.agents/skills/gme-equipment-rollout/SKILL.md). 우선23행과 전체248 ID를 대조하고 기존 제외를 유지한 2차133개 후보를 관리합니다. 표준 준비와 실제 설비 구현 완료는 구분합니다.
 
-## 현재 프로그램: GME All-in-One v1.4.0 · 설비 공통 구조·FN04 시범
+## 현재 프로그램: GME All-in-One v1.5.0 · FN01 표준 매뉴얼
 
 [다른 컴퓨터에서 재개](WORKSPACE-HANDOFF.md) · [작업 지침](AGENTS.md) · [현재 작업](all-in-one/ACTIVE-WORK.md) · [v1.3 보완 안내](all-in-one/BC01-PRESERVATION-20261011.md) · [네 도구 안내](all-in-one/BC01-RECORD-TOOLS-20261011.md) · [버전](VERSION.json). 프로그램과 원본·MD·생성기·검증 파일은 이 저장소에서 함께 관리합니다.
 

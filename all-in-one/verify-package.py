@@ -49,9 +49,9 @@ for p,parser in parsers.items():
                     assert "params.get('view')==='drawings'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
             if target==(ROOT/'index.html').resolve() and params.get('view')==['manual']:
-                if params.get('equipment')==['P02'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
+                if params.get('equipment')!=['P01'] and params.get('scope')==['priority'] and all(len(v)==1 for v in params.values()) and set(params)=={'view','equipment','scope'}:
                     profiles=json.loads((ROOT/'registers/all-in-one-data.json').read_text())['equipment_standards']['profiles']
-                    assert any(p['priority_key']=='P02' and p['catalog_id']=='FN04' for p in profiles)
+                    assert any(params.get('equipment')==[p['priority_key']] and p.get('tools',{}).get('report') for p in profiles)
                     assert 'GMEEquipmentStandard.normalize(data,state.selected,params)' in (ROOT/'assets/all-in-one.js').read_text()
                     continue
                 if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
@@ -71,7 +71,9 @@ for p,parser in parsers.items():
                         continue
             if target==(ROOT/'index.html').resolve() and params.get('view')==['repair']:
                 profiles=json.loads((ROOT/'registers/repair-record-forms.json').read_text())['profiles']
-                profile=next((r for r in profiles if r['key'] in ['P01','P02'] and params.get('equipment')==[r['key']]),None)
+                registered=json.loads((ROOT/'registers/all-in-one-data.json').read_text())['equipment_standards']['profiles']
+                supported={p['priority_key'] for p in registered if p.get('tools',{}).get('report')}
+                profile=next((r for r in profiles if r['key'] in supported and params.get('equipment')==[r['key']]),None)
                 if profile and params.get('scope')==['priority'] and set(params)<={'view','equipment','scope','symptom'} and ('symptom' not in params or params['symptom'] in [[s['id']] for s in profile['steps']]):
                     assert "params.get('view')==='repair'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
