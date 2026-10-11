@@ -1,0 +1,100 @@
+{
+  "batch": "BATCH02",
+  "version": "1.17.0",
+  "status": "local_verified_publication_pending",
+  "targets": [
+    "HE01/P13",
+    "P03 identification",
+    "P04 identification",
+    "P14 identification"
+  ],
+  "equipment_profiles": 18,
+  "unresolved_identification_reports": 3,
+  "physically_identified_new_assets": 0,
+  "final_HE_bundle": "2e798c6b1d4a1ff816e0de8483fd427e63bc8c24aad508c5629e799d5a1db4c6",
+  "HE_record_checkpoint": "8117dda9c8ad91df09f7747fad8b7f986152a60c19ab66c168cfbb1f713b19bf",
+  "checkpoint_boundary": "Record/PDF checkpoint hashes retained; final reference-only alarm flags, unique drawing sheets and identification report return links verified separately.",
+  "HE_local": {
+    "seven_areas": 34,
+    "UI_views": 136,
+    "source_pair_views": 26,
+    "save_edit_restore_reopened": true,
+    "PDF_pages": 2
+  },
+  "identification_local": {
+    "seven_areas_each": true,
+    "UI_views": 6,
+    "save_reopened": 3,
+    "PDF_pages": 6,
+    "assigned_signals": 0,
+    "identity_verified": 0
+  },
+  "preservation": {
+    "baseline_commit": "98f3f3d5243e8fe64cd0146b3f5f623f3b394a24",
+    "previous_profiles": 17,
+    "record_schemas": 23,
+    "original_source_files": 712,
+    "raw_register_files": 91,
+    "original_package_files": 730,
+    "additional_originals": 3,
+    "frozen_files": 5,
+    "operational_record_changes": 0
+  },
+  "CC01": "Dedicated data unavailable; no assumed identity or repeated absence search until new evidence.",
+  "local_final_smoke": {
+    "version": "1.17.0",
+    "profiles": 18,
+    "HE_bundle": "2e798c6b1d4a1ff816e0de8483fd427e63bc8c24aad508c5629e799d5a1db4c6",
+    "reference_only": true,
+    "undefined": false,
+    "notes": null,
+    "drafts": null
+  },
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T11:56:36.468552+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.17.0.zip",
+    "version": "1.17.0",
+    "files": 2819,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 54636330,
+    "sha256": "e684ab3f8cd0cb099883b65829d3d527f3f822289d3138dd49998bff0f993a62",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "npm_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "NETLIFY_build": {
+    "status": "passed",
+    "public_files": 2848,
+    "inline_CSP_hashes": 6,
+    "scoped_CSP_policies": 39
+  },
+  "git_feature_commit": null,
+  "github_release": "pending",
+  "netlify_deployment": "pending",
+  "published_file_check": "pending",
+  "fresh_clone": "pending",
+  "actual_published_before_this_release": {
+    "manuals": 17,
+    "unresolved_identification_reports": 0
+  },
+  "scope": {
+    "phase2_imported": 0,
+    "tia_compile": "not_performed",
+    "live_cpu": "not_performed",
+    "field_recovery": "not_performed",
+    "simulator_changes": 0,
+    "simulator_behavior_tests": "not_run",
+    "PLC_field_protection_SEJIN_changes": 0
+  }
+}

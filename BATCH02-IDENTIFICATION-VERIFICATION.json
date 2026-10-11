@@ -1,0 +1,99 @@
+{
+  "version": "1.17.0",
+  "status": "local_identification_reports_verified_with_gaps",
+  "keys": [
+    "P03",
+    "P04",
+    "P14"
+  ],
+  "fixed_draft_commit": "abcf31c5030bc7ef8749ed8e869a857f2387a28a",
+  "fixed_file_hash_matches": {
+    "P03": 60,
+    "P04": 36
+  },
+  "external_attachment_hash_matches": [
+    {
+      "file": "GME-CATALOG-OVERLAP-REVIEW.md",
+      "sha256": "51ecc3d631967fafdb75570ed989ccf8fa1759f3eaeb786b4f5dfa90bba352ca",
+      "role": "reference only, not primary source or local phase2 import"
+    },
+    {
+      "file": "GME-CATALOG-OVERLAP-REVIEW.json",
+      "sha256": "027c2d89b034f3681dced7db98146ffd77eecfad116a1a94cac035ccbd598967",
+      "role": "reference only, not primary source or local phase2 import"
+    },
+    {
+      "file": "SC01-DOTS-DRAFT.md",
+      "sha256": "9a9540d01cb9e0705572fe10d51d44281dcbae99569d12e6f0afbd722ad4a337",
+      "role": "reference only, not primary source or local phase2 import"
+    }
+  ],
+  "native_review_scope": [
+    "0234",
+    "0235",
+    "0239",
+    "0240",
+    "0251",
+    "0254",
+    "0258",
+    "0266",
+    "0420",
+    "0432",
+    "0434",
+    "0444"
+  ],
+  "source_hashes": 27,
+  "selected_PDF_pages": 19,
+  "unchanged_PDF_pages_reused": 2,
+  "whole_logic_review_claim": false,
+  "wide_narrow_views": 6,
+  "UI_failures": 0,
+  "actual_integrated_P03_report_navigation": true,
+  "existing_observation_forms": {
+    "actual_save_reopen": 3,
+    "signal_channels": 0,
+    "identity_and_field_false": true,
+    "earlier_foreign_records_preserved": true,
+    "standard_profiles_created": 0,
+    "common_backup_tools": "unchanged, existing common regression applies; no new equipment-standard four-tool claim"
+  },
+  "reports": [
+    {
+      "key": "P03",
+      "pages": 2,
+      "all_pages_visually_reviewed": true,
+      "bytes": 344472,
+      "sha256": "308cd4503b0dbd796aa4333e0e2cea8fab6a7dee625af066f91efaf4378e7424"
+    },
+    {
+      "key": "P04",
+      "pages": 2,
+      "all_pages_visually_reviewed": true,
+      "bytes": 354665,
+      "sha256": "3d582b1e3bd68c377249799e9d483a5e0cab2ec35566173758391eac02bcd3b6"
+    },
+    {
+      "key": "P14",
+      "pages": 2,
+      "all_pages_visually_reviewed": true,
+      "bytes": 355093,
+      "sha256": "e26a34b596a6028c1e39667872d276e40110cc65cc055e46b01dc7d95fa97f36"
+    }
+  ],
+  "cleanup": {
+    "notes": null,
+    "drafts": null,
+    "removed_QA": 3
+  },
+  "raw_registers_and_schemas_preserved": true,
+  "assigned_signals": 0,
+  "identity_verified": 0,
+  "phase2_imported": 0,
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "simulator_changes": 0,
+  "simulator_tests": "not_run",
+  "PLC_SEJIN_operational_record_changes": 0,
+  "publication": "pending BATCH02"
+}

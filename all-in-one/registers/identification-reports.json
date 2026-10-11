@@ -1,0 +1,8367 @@
+{
+  "version": "1.17.0",
+  "date": "2026-10-11",
+  "status": "independent selected-source identification review",
+  "profiles": [
+    {
+      "key": "P03",
+      "title": "웨잉호퍼1",
+      "candidates": [
+        "CLIENT-CL17",
+        "CLIENT-CL18",
+        "BWF01",
+        "BWF02"
+      ],
+      "networks": [
+        "0234",
+        "0235",
+        "0239",
+        "0240"
+      ],
+      "oem_pages": [
+        95,
+        133
+      ],
+      "construction_pages": [
+        1,
+        3,
+        21,
+        50,
+        51
+      ],
+      "areas": [
+        [
+          "overview",
+          "식별과 제공 자료",
+          "배치도 명칭은 웨잉호퍼1이다. 백업의 WEIGHTING HOPPER 2FAULT는 호퍼2 외부 고장 입력이다. 이름과 번호가 달라 CLIENT-CL17 또는 BWF01을 P03으로 확정하지 않는다. 대장 부모/자식 연결도 새로 만들지 않는다."
+        ],
+        [
+          "io",
+          "후보 입력·HMI 경계",
+          "0234 LAD424/NID17, 0599 RID38 UID341/343 Global Input AO132=SAD Input/SAM None, I16.4. 0601 RID39 UID342/345는 Allarm.motor_client_17_fault AO129 쓰기다. 원시 입력과 알람 기억을 구분한다. I16.5/CLIENT-CL18과 BWF01/02 입력·처리DB·HMI는 별도 경로이며 P03의 계량값/단위/로드셀 채널로 배정하지 않는다."
+        ],
+        [
+          "control",
+          "외부 요청과 내부 제어",
+          "0239/0240 LAD1932/1933는 BWF01/02의 별도 인터페이스다. ON 아래 자기 Fault, ControlFault, SET_PERC=Int0, NOT 처리 BWF OK, NOT 처리 BC01 run, Local Disable_Load_RD01의6 OR→자기 M_BWF 요청 Reset. 별도 ON AND M_BWF→Consent Start Q6.2/Q6.3 Coil. 허가 출력과 실제 Run/계량 내부 순서가 다르다. 다른 쓰기·호출순서·외부반 기동순서 미확보."
+        ],
+        [
+          "circuit",
+          "원본·시공 전달 경계",
+          "OEM FG94/PDF95: +24Vdc10.7→X1:350(2A F)→외부 고장 접점→351→E16.4. FG132/PDF133: CPU515/MOD12 단자5, WEIGHTING HOPPER 2FAULT. 외부반 접점·단자·케이블·호퍼 명판은 미확보다. 시공은 FOR APPROVAL/첫 초안24.11.11이며 PDF21/51 BC01 M02 경로를 P03 계량기 회로로 복제하지 않는다. PDF50 길이17은 예시이고 PDF51 1_1 길이22 표기와 구분한다."
+        ],
+        [
+          "alarms",
+          "후보 알람과 Reset",
+          "LAD424: ON355→Fault357→Wire358→S334. Reset은 ON355→NOT Fault359→RESET_ALLARM361→Wire362→R339. 6개의 Gate Part와11Wire이며 타이머/Ready/Run/기동 Coil이 없다. 이 선택 네트워크의 범위만 확인한 것이며 전체 외부 제어기의 부재를 뜻하지 않는다. 기억 해제와 외부 고장 해소·허가 회복·계량 정확도 복구는 별도다."
+        ],
+        [
+          "completion",
+          "실물 확인과 필요한 자료",
+          "호퍼1/2 번호·명판·위치 사진, 로드셀/인디케이터 모델, 전용반·CPU·통신/단자도, 투입·배출 경로가 필요하다. 후보 문서 확인은 실물 동일성·TIA 컴파일·현재 CPU·현장 복구 확인이 아니다. 제조사/보호값/기동순서를 임의 채우지 않는다."
+        ],
+        [
+          "repair",
+          "증상에서 관찰할 순서",
+          "계량/배출 불능: 실물 ID·시각→전용 계량기 최초 알람→로드셀/게이트/컨베이어 경계→확인된 연동 요청/응답→전용 원본 비교. 기존 관찰 기록 양식은 신호0·미확정 상태로 보존한다. 새 측정·수리·복구를 수행한 기록이 아니다."
+        ]
+      ],
+      "plc_id": null,
+      "catalog_id": null,
+      "match": "unknown",
+      "identity_verified": false,
+      "assigned_signals": [],
+      "assigned_alarms": [],
+      "assigned_timers": [],
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0,
+      "documentation": "complete_with_gaps",
+      "tools": {
+        "observation_form": "existing identity-unresolved form; no assigned signal channels",
+        "backup_restore_compare": "existing common tools; no equipment-standard profile created",
+        "A4": "read-only identification dossier",
+        "source_comparison": "explicit PDF/XML links; no owned-body source-pair claim"
+      }
+    },
+    {
+      "key": "P04",
+      "title": "웨잉호퍼배출컨베이어",
+      "candidates": [
+        "CLIENT-CL18",
+        "BWF02",
+        "BWF01",
+        "BC01"
+      ],
+      "networks": [
+        "0235",
+        "0239",
+        "0240",
+        "0420"
+      ],
+      "oem_pages": [
+        95,
+        133
+      ],
+      "construction_pages": [
+        1,
+        3,
+        21,
+        50,
+        51,
+        53
+      ],
+      "areas": [
+        [
+          "overview",
+          "식별과 제공 자료",
+          "일반 명칭과 LAD425의 bwf02 제목만으로 CLIENT-CL18=BWF02=P04라고 확정하지 않는다. BC01은 기존 P01/SS01 경로로 유지한다. CLIENT-CL17은 인접 외부 입력이다. 부모/자식 관계 및 PLC 태그를 새로 배정하지 않는다."
+        ],
+        [
+          "io",
+          "별도 물리 입력·처리응답",
+          "0235/NID18의 0599 RID40 UID359/361, HOPPER CONVEYOR 2FAULT, SAD Input AO133=I16.5. 0601 RID41 UID360/363는 Allarm.motor_client_18_fault AO130 쓰기다. BWF02의 처리 RUN/Fault DB, Q6.3 Consent Start와 다른 채널이다. 현행 정상 극성·외부반 Ready/Run/Fault의 주체는 미확정."
+        ],
+        [
+          "control",
+          "요청·허가·실제 Run",
+          "BWF02 LAD1933 OR135→Wire176→R147 M_BWF02; 별도 ON183→접점197→Wire198→Coil151 Q6.3. 여섯 요청 해제 조건에 Local Disable_Load_RD01과 NOT 처리 BC01 run이 포함된다. P04 기동 출력으로 배정하지 않는다. 외부반 내부 Reset→요청→허가→실제 Run의 순서와 다른 쓰기는 미확보."
+        ],
+        [
+          "circuit",
+          "고장 입력과 시공의 한계",
+          "FG94/PDF95: +24Vdc10.7→X1:352(2A F)→외부 접점→353→E16.5. FG132/PDF133 MOD12 단자6 HOPPER CONVEYOR 2FAULT. 외부 모터/인버터/접점/케이블 양끝은 미확보다. 시공21/51 BC01 M02를 P04 회로로 복제하지 않는다. PDF50 CANDC-CONS-G002-050 표기법과 예시, PDF51 실제 목록을 구분한다. PDF53의3_5 검은 가림은 활성 배선으로 복원하지 않는다."
+        ],
+        [
+          "alarms",
+          "CLIENT와 BWF 고장 소유",
+          "LAD425: ON373 AND Fault375→S352; ON373 AND NOT Fault377 AND RESET379→R357. 타이머·기동 출력은 이 네트워크에 없다. 별도 BWF02 LAD1783: ON193→Consent195→NOT 처리RUN210→SD147 Tag50 S5T#10S; 허가+타이머+NOT RUN 또는 허가+처리Fault가 고장 Set156. Reset162는 ON/RESET/자기래치/NOT 처리Fault다. Tag50의 Timer AO121과 상수 저장4352는10초이며 P04 보호값으로 배정하지 않는다."
+        ],
+        [
+          "completion",
+          "식별에 필요한 자료",
+          "본체·모터·감속기 명판, 전용 기동반/VFD 표시, 케이블번호·양단 단자, 상하류 경로 사진, Ready/Run/Fault/허가의 소유·정상 극성이 필요하다. 자료명 일치만으로 현재 사용·실물 대응·안전 재기동을 확정하지 않는다."
+        ],
+        [
+          "repair",
+          "증상에서 관찰할 순서",
+          "미기동: 실물 ID→자기 기동반/VFD 최초 상태→명령과 실제 Run 구분→상하류 허가/Fault 변화→확인된 케이블/단자 비교. 운전 중 강제출력이나 보호값 조정을 제안하지 않는다. 기존 신호0 관찰 양식과 미지 필드를 유지한다."
+        ]
+      ],
+      "plc_id": null,
+      "catalog_id": null,
+      "match": "unknown",
+      "identity_verified": false,
+      "assigned_signals": [],
+      "assigned_alarms": [],
+      "assigned_timers": [],
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0,
+      "documentation": "complete_with_gaps",
+      "tools": {
+        "observation_form": "existing identity-unresolved form; no assigned signal channels",
+        "backup_restore_compare": "existing common tools; no equipment-standard profile created",
+        "A4": "read-only identification dossier",
+        "source_comparison": "explicit PDF/XML links; no owned-body source-pair claim"
+      }
+    },
+    {
+      "key": "P14",
+      "title": "2사이클론",
+      "candidates": [
+        "CY01",
+        "CY03",
+        "CY02",
+        "CY04",
+        "CY05",
+        "VR01",
+        "VR02",
+        "VR03",
+        "SC01"
+      ],
+      "networks": [
+        "0251",
+        "0254",
+        "0258",
+        "0266",
+        "0432",
+        "0434",
+        "0444"
+      ],
+      "oem_pages": [
+        47,
+        50,
+        54,
+        62,
+        7,
+        18,
+        97,
+        144
+      ],
+      "construction_pages": [
+        31,
+        35,
+        50,
+        51,
+        58,
+        64
+      ],
+      "areas": [
+        [
+          "overview",
+          "두 후보 공정군",
+          "숫자2의 의미가 장치번호/수량/단계 중 무엇인지 미확정이다. P&ID의 HE01→CY01/CY03 병렬→FN01과 별도 CY02/CY04/CY05→SC01→VR03을 구분한다. CY02 또는 CY01+CY03으로 배정하지 않는다. M21/M23/M37은 각각 VR 구동이며 CY 본체 모터로 바꾸지 않는다."
+        ],
+        [
+          "io",
+          "구동·경보의 소유 경계",
+          "VR01/02/03 Start Q2.6/Q3.0/Q4.3과 처리 RUN·Fault는 서로 별도 피연산자다. CY 본체 차압/막힘/분리효율 채널은 미확보다. 시공 CY02 위치17HL1과 원본 Q7.7 Blinking Ligh는 공통 표시 경로이며 위치만으로 P14 전용 알람/센서로 만들지 않는다."
+        ],
+        [
+          "control",
+          "VR와 SC01 최소 원본 대조",
+          "LAD1949: ON622→FAULT624→W625→R604 M_VR01; 별도 ON622→M_VR01 626→W627→Coil608. LAD1952는 ON711/FAULT713/R693/Coil697, LAD1966은 ON1038/FAULT1040/R1020/Coil1024다. LAD1956 SC01은 (ON AND SC01_FAULT) OR (ON AND NOT 처리VR03_Run AND NOT UNDER_TESTING)→OR790/W812→R795 M_SC01; 별도 ON819/M_SC01 827→Coil799. 시험 비트를 변경하지 않는다. SC01 전체 자동/HMI/공유 타이머 논리 재검증으로 세지 않는다."
+        ],
+        [
+          "circuit",
+          "구동과 주변 회로",
+          "FG46/49/53/61(PDF47/50/54/62): 각 QM→KM→XM U/V/W→QS→M21/M23/M28/M37 전력 경로와 A2.6/A3.0/A3.4/A4.3 명령, E3.4/E3.7/E4.4/E5.4 접촉기 응답을 구분한다. 응답은 실제 분진 흐름 정상의 증거가 아니다. 시공31/35 구역,51의1_16/17/22/23는 별도 케이블이다. 시공58 8_16은 UC01 FLO4TB1→CY02 17HL1/DC CVV3G1.0이며 FG17 A7.7→X1:42/43와 준공 양끝 연결은 미확보. 시공31의14_6 A와64의14_6 B 상충 유지. FG6/96의6SB3 별도 접점과 질소110V 분기를 시공 DC 분류에 임의 결합하지 않는다. 검은 가림은 유지한다."
+        ],
+        [
+          "alarms",
+          "VR 고장과 본체 고장의 구분",
+          "LAD1797/1799/1810의 각 ON AND Start AND NOT 처리RUN→SD Tag62/64/75 S5T#2S; ON AND Start AND Timer→자기 고장 Set. ON AND RESET_ALLARM AND 자기FAULT→Reset이며 Reset 가지에 처리RUN 정상 확인이 없다. 원문 S5Time 저장512를512ms로 읽지 않는다. 세 VR 알람/타이머는 P14 본체에 배정하지 않는다. 래치 해제·요청·허가·축회전·분진 배출 정상은 별도 확인한다."
+        ],
+        [
+          "completion",
+          "식별에 필요한 자료",
+          "원 배치도에서 숫자2의 의미, 본체 명판/태그, 입출구·하부 배출 사진, 최신 P&ID/기계도, 주변 구동·센서 목록이 필요하다. 도면 정격과 QM 범위를 현행 보호 설정으로 사용하지 않는다. CY 대장 parent null·기존 제외와2차133 범위를 유지한다."
+        ],
+        [
+          "repair",
+          "증상에서 관찰할 순서",
+          "분리/배출 이상: 실제 본체 식별→가스/고형물 유로와 발생 위치→배출 구동/팬/계측 소유→제작사 기준·관련 장치 근거 비교. 비상/질소 회로 시험·안전 우회·실제 현장 조치는 수행하지 않는다. 기존 신호0 관찰 양식을 유지한다."
+        ]
+      ],
+      "plc_id": null,
+      "catalog_id": null,
+      "match": "unknown",
+      "identity_verified": false,
+      "assigned_signals": [],
+      "assigned_alarms": [],
+      "assigned_timers": [],
+      "field_verified": false,
+      "tia_verified": false,
+      "repairs_completed": 0,
+      "documentation": "complete_with_gaps",
+      "tools": {
+        "observation_form": "existing identity-unresolved form; no assigned signal channels",
+        "backup_restore_compare": "existing common tools; no equipment-standard profile created",
+        "A4": "read-only identification dossier",
+        "source_comparison": "explicit PDF/XML links; no owned-body source-pair claim"
+      }
+    }
+  ],
+  "native": {
+    "0234": {
+      "network": 424,
+      "nid": "17",
+      "parts": [
+        {
+          "UId": "355",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "357",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "334",
+          "Gate": "SCoil",
+          "children": []
+        },
+        {
+          "UId": "359",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "361",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "339",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "340",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "341",
+          "RefId": "38",
+          "children": []
+        },
+        {
+          "UId": "342",
+          "RefId": "39",
+          "children": []
+        },
+        {
+          "UId": "343",
+          "RefId": "38",
+          "children": []
+        },
+        {
+          "UId": "344",
+          "RefId": "7",
+          "children": []
+        },
+        {
+          "UId": "345",
+          "RefId": "39",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "363",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "355",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "346",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "340"
+            },
+            {
+              "kind": "PCon",
+              "UId": "355",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "356",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "355",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "357",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "359",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "347",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "341"
+            },
+            {
+              "kind": "PCon",
+              "UId": "357",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "358",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "357",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "334",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "349",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "342"
+            },
+            {
+              "kind": "PCon",
+              "UId": "334",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "350",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "343"
+            },
+            {
+              "kind": "PCon",
+              "UId": "359",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "360",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "359",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "361",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "351",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "344"
+            },
+            {
+              "kind": "PCon",
+              "UId": "361",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "362",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "361",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "339",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "353",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "345"
+            },
+            {
+              "kind": "PCon",
+              "UId": "339",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "4fa899449ab66d4a852be7c21085590393a8ad11c65d265222c3bfcd649dfc64",
+      "declarations": [
+        {
+          "uid": "344",
+          "file": "0601-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "7",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "17",
+            "UID": "344",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "48",
+                "SO": "0",
+                "MID": "99"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "RESET_ALLARM",
+                "RIDI": "",
+                "BO": "48",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "342",
+          "file": "0601-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "39",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "17",
+            "UID": "342",
+            "OID": "7",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "129",
+                "SO": "0",
+                "MID": "180"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "motor_client_17_fault",
+                "RIDI": "",
+                "BO": "129",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "345",
+          "file": "0601-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "39",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "17",
+            "UID": "345",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "129",
+                "SO": "0",
+                "MID": "180"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "motor_client_17_fault",
+                "RIDI": "",
+                "BO": "129",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "340",
+          "file": "0599-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "17",
+            "UID": "340",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2024-07-04T15:22:22.3536243Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "341",
+          "file": "0599-IdentXmlPart.xml",
+          "id": {
+            "N": "WEIGHTING HOPPER 2FAULT",
+            "S": "Global",
+            "RID": "38",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "17",
+            "UID": "341",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "132",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Input",
+                "MT": "2024-07-04T15:57:45.3062262Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "343",
+          "file": "0599-IdentXmlPart.xml",
+          "id": {
+            "N": "WEIGHTING HOPPER 2FAULT",
+            "S": "Global",
+            "RID": "38",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "17",
+            "UID": "343",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "132",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Input",
+                "MT": "2024-07-04T15:57:45.3062262Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0235": {
+      "network": 425,
+      "nid": "18",
+      "parts": [
+        {
+          "UId": "373",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "375",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "352",
+          "Gate": "SCoil",
+          "children": []
+        },
+        {
+          "UId": "377",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "379",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "357",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "358",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "359",
+          "RefId": "40",
+          "children": []
+        },
+        {
+          "UId": "360",
+          "RefId": "41",
+          "children": []
+        },
+        {
+          "UId": "361",
+          "RefId": "40",
+          "children": []
+        },
+        {
+          "UId": "362",
+          "RefId": "7",
+          "children": []
+        },
+        {
+          "UId": "363",
+          "RefId": "41",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "381",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "373",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "364",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "358"
+            },
+            {
+              "kind": "PCon",
+              "UId": "373",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "374",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "373",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "375",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "377",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "365",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "359"
+            },
+            {
+              "kind": "PCon",
+              "UId": "375",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "376",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "375",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "352",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "367",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "360"
+            },
+            {
+              "kind": "PCon",
+              "UId": "352",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "368",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "361"
+            },
+            {
+              "kind": "PCon",
+              "UId": "377",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "378",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "377",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "379",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "369",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "362"
+            },
+            {
+              "kind": "PCon",
+              "UId": "379",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "380",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "379",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "357",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "371",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "363"
+            },
+            {
+              "kind": "PCon",
+              "UId": "357",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "1a4913d7a151824d6318edcd43bd4d496bee11b83a75f1d8f5d4cb04dd01b71c",
+      "declarations": [
+        {
+          "uid": "362",
+          "file": "0601-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "7",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "18",
+            "UID": "362",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "48",
+                "SO": "0",
+                "MID": "99"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "RESET_ALLARM",
+                "RIDI": "",
+                "BO": "48",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "360",
+          "file": "0601-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "41",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "18",
+            "UID": "360",
+            "OID": "7",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "130",
+                "SO": "0",
+                "MID": "181"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "motor_client_18_fault",
+                "RIDI": "",
+                "BO": "130",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "363",
+          "file": "0601-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "41",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "18",
+            "UID": "363",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "130",
+                "SO": "0",
+                "MID": "181"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "motor_client_18_fault",
+                "RIDI": "",
+                "BO": "130",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "358",
+          "file": "0599-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "18",
+            "UID": "358",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2024-07-04T15:22:22.3536243Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "359",
+          "file": "0599-IdentXmlPart.xml",
+          "id": {
+            "N": "HOPPER CONVEYOR 2FAULT",
+            "S": "Global",
+            "RID": "40",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "18",
+            "UID": "359",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "133",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Input",
+                "MT": "2024-07-04T15:57:45.3062262Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "361",
+          "file": "0599-IdentXmlPart.xml",
+          "id": {
+            "N": "HOPPER CONVEYOR 2FAULT",
+            "S": "Global",
+            "RID": "40",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "18",
+            "UID": "361",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "133",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Input",
+                "MT": "2024-07-04T15:57:45.3062262Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0239": {
+      "network": 1932,
+      "nid": "3",
+      "parts": [
+        {
+          "UId": "145",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "147",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "149",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "100",
+          "Gate": "Eq",
+          "children": [
+            {
+              "kind": "TemplateValue",
+              "Name": "SrcType",
+              "Type": "Type",
+              "text": "Int"
+            }
+          ]
+        },
+        {
+          "UId": "22",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "26",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "155",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "97",
+          "Gate": "O",
+          "children": [
+            {
+              "kind": "TemplateValue",
+              "Name": "Card",
+              "Type": "Cardinality",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "UId": "109",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "159",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "113",
+          "Gate": "Coil",
+          "children": []
+        },
+        {
+          "UId": "114",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "115",
+          "RefId": "18",
+          "children": []
+        },
+        {
+          "UId": "116",
+          "RefId": "19",
+          "children": []
+        },
+        {
+          "UId": "117",
+          "RefId": "21",
+          "children": []
+        },
+        {
+          "UId": "118",
+          "RefId": "22",
+          "children": []
+        },
+        {
+          "UId": "23",
+          "RefId": "230",
+          "children": []
+        },
+        {
+          "UId": "27",
+          "RefId": "231",
+          "children": []
+        },
+        {
+          "UId": "121",
+          "RefId": "16",
+          "children": []
+        },
+        {
+          "UId": "123",
+          "RefId": "25",
+          "children": []
+        },
+        {
+          "UId": "124",
+          "RefId": "25",
+          "children": []
+        },
+        {
+          "UId": "125",
+          "RefId": "26",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "161",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "145",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "126",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "114"
+            },
+            {
+              "kind": "PCon",
+              "UId": "145",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "146",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "145",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "149",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "100",
+              "PinName": "pre"
+            },
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "26",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "155",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "159",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "127",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "115"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "148",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "in1"
+            }
+          ]
+        },
+        {
+          "UId": "128",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "116"
+            },
+            {
+              "kind": "PCon",
+              "UId": "149",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "150",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "149",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "in2"
+            }
+          ]
+        },
+        {
+          "UId": "129",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "117"
+            },
+            {
+              "kind": "PCon",
+              "UId": "100",
+              "PinName": "in1"
+            }
+          ]
+        },
+        {
+          "UId": "130",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "118"
+            },
+            {
+              "kind": "PCon",
+              "UId": "100",
+              "PinName": "in2"
+            }
+          ]
+        },
+        {
+          "UId": "131",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "100",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "in3"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "23"
+            },
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "30",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "in4"
+            }
+          ]
+        },
+        {
+          "UId": "25",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "27"
+            },
+            {
+              "kind": "PCon",
+              "UId": "26",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "28",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "26",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "in5"
+            }
+          ]
+        },
+        {
+          "UId": "134",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "121"
+            },
+            {
+              "kind": "PCon",
+              "UId": "155",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "156",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "155",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "in6"
+            }
+          ]
+        },
+        {
+          "UId": "138",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "97",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "109",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "140",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "123"
+            },
+            {
+              "kind": "PCon",
+              "UId": "109",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "141",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "124"
+            },
+            {
+              "kind": "PCon",
+              "UId": "159",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "160",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "159",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "113",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "143",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "125"
+            },
+            {
+              "kind": "PCon",
+              "UId": "113",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599",
+      "declarations": [
+        {
+          "uid": "121",
+          "file": "0605-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Local",
+            "RID": "16",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "121",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "D",
+                "AA": "C",
+                "AO": "1",
+                "SO": "0",
+                "MID": "53"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Disable_Load_RD01",
+                "RIDI": "",
+                "BO": "1",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "115",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "18",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "115",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "95",
+                "SO": "0",
+                "MID": "146"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF01_FAULT",
+                "RIDI": "",
+                "BO": "95",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "116",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "19",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "116",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "132",
+                "SO": "0",
+                "MID": "183"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF01_Fault_Control",
+                "RIDI": "",
+                "BO": "132",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "117",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "21",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "117"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": "51"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Data",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "SET_PERC_BWF01",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "123",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "25",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "123",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "96",
+                "SO": "0",
+                "MID": "147"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_BWF01",
+                "RIDI": "",
+                "BO": "96",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "124",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "25",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "124",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "96",
+                "SO": "0",
+                "MID": "147"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_BWF01",
+                "RIDI": "",
+                "BO": "96",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "23",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "230",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "23",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "89",
+                "SO": "0",
+                "MID": "145"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF01 OK",
+                "RIDI": "",
+                "BO": "89",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "27",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "231",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "27",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": "51"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BC01 run",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "118",
+          "file": "0606-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Constant",
+            "RID": "22",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "118"
+          },
+          "attributes": [
+            {
+              "kind": "CB",
+              "attributes": {
+                "ST": "Number",
+                "T": "Int",
+                "SV": "_x0030_",
+                "V": "0"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "114",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "114",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-01-24T05:37:42.8141992Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "125",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "Consent Start BWF01",
+            "S": "Global",
+            "RID": "26",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "125",
+            "OID": "9",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "50",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2025-01-22T04:32:05.6051097Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0240": {
+      "network": 1933,
+      "nid": "4",
+      "parts": [
+        {
+          "UId": "183",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "185",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "187",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "138",
+          "Gate": "Eq",
+          "children": [
+            {
+              "kind": "TemplateValue",
+              "Name": "SrcType",
+              "Type": "Type",
+              "text": "Int"
+            }
+          ]
+        },
+        {
+          "UId": "22",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "26",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "193",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "135",
+          "Gate": "O",
+          "children": [
+            {
+              "kind": "TemplateValue",
+              "Name": "Card",
+              "Type": "Cardinality",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "UId": "147",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "197",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "151",
+          "Gate": "Coil",
+          "children": []
+        },
+        {
+          "UId": "152",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "153",
+          "RefId": "27",
+          "children": []
+        },
+        {
+          "UId": "154",
+          "RefId": "28",
+          "children": []
+        },
+        {
+          "UId": "155",
+          "RefId": "29",
+          "children": []
+        },
+        {
+          "UId": "156",
+          "RefId": "22",
+          "children": []
+        },
+        {
+          "UId": "23",
+          "RefId": "232",
+          "children": []
+        },
+        {
+          "UId": "27",
+          "RefId": "231",
+          "children": []
+        },
+        {
+          "UId": "159",
+          "RefId": "16",
+          "children": []
+        },
+        {
+          "UId": "161",
+          "RefId": "31",
+          "children": []
+        },
+        {
+          "UId": "162",
+          "RefId": "31",
+          "children": []
+        },
+        {
+          "UId": "163",
+          "RefId": "32",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "199",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "183",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "164",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "152"
+            },
+            {
+              "kind": "PCon",
+              "UId": "183",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "184",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "183",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "185",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "187",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "138",
+              "PinName": "pre"
+            },
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "26",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "193",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "197",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "165",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "153"
+            },
+            {
+              "kind": "PCon",
+              "UId": "185",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "186",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "185",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "in1"
+            }
+          ]
+        },
+        {
+          "UId": "166",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "154"
+            },
+            {
+              "kind": "PCon",
+              "UId": "187",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "188",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "187",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "in2"
+            }
+          ]
+        },
+        {
+          "UId": "167",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "155"
+            },
+            {
+              "kind": "PCon",
+              "UId": "138",
+              "PinName": "in1"
+            }
+          ]
+        },
+        {
+          "UId": "168",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "156"
+            },
+            {
+              "kind": "PCon",
+              "UId": "138",
+              "PinName": "in2"
+            }
+          ]
+        },
+        {
+          "UId": "169",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "138",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "in3"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "23"
+            },
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "30",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "in4"
+            }
+          ]
+        },
+        {
+          "UId": "25",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "27"
+            },
+            {
+              "kind": "PCon",
+              "UId": "26",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "28",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "26",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "in5"
+            }
+          ]
+        },
+        {
+          "UId": "172",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "159"
+            },
+            {
+              "kind": "PCon",
+              "UId": "193",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "194",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "193",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "in6"
+            }
+          ]
+        },
+        {
+          "UId": "176",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "135",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "178",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "161"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "179",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "162"
+            },
+            {
+              "kind": "PCon",
+              "UId": "197",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "198",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "197",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "151",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "181",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "163"
+            },
+            {
+              "kind": "PCon",
+              "UId": "151",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33",
+      "declarations": [
+        {
+          "uid": "159",
+          "file": "0605-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Local",
+            "RID": "16",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "159",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "D",
+                "AA": "C",
+                "AO": "1",
+                "SO": "0",
+                "MID": "53"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Disable_Load_RD01",
+                "RIDI": "",
+                "BO": "1",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "153",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "27",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "153",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "100",
+                "SO": "0",
+                "MID": "151"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02_FAULT",
+                "RIDI": "",
+                "BO": "100",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "154",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "28",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "154",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "133",
+                "SO": "0",
+                "MID": "184"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02_Fault_Control",
+                "RIDI": "",
+                "BO": "133",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "155",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "29",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "155"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "16",
+                "SO": "0",
+                "MID": "52"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Data",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "SET_PERC_BWF02",
+                "RIDI": "",
+                "BO": "16",
+                "BS": "16"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "161",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "31",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "161",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "101",
+                "SO": "0",
+                "MID": "152"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_BWF02",
+                "RIDI": "",
+                "BO": "101",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "162",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "31",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "162",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "101",
+                "SO": "0",
+                "MID": "152"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_BWF02",
+                "RIDI": "",
+                "BO": "101",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "27",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "231",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "27",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": "51"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BC01 run",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "23",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "232",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "23",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "94",
+                "SO": "0",
+                "MID": "150"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02 OK",
+                "RIDI": "",
+                "BO": "94",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "156",
+          "file": "0606-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Constant",
+            "RID": "22",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "156"
+          },
+          "attributes": [
+            {
+              "kind": "CB",
+              "attributes": {
+                "ST": "Number",
+                "T": "Int",
+                "SV": "_x0030_",
+                "V": "0"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "152",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "152",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-01-24T05:37:42.8141992Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "163",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "Consent Start BWF02",
+            "S": "Global",
+            "RID": "32",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "4",
+            "UID": "163",
+            "OID": "9",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "51",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2025-01-22T04:32:05.6051097Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0251": {
+      "network": 1949,
+      "nid": "20",
+      "parts": [
+        {
+          "UId": "622",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "624",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "604",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "626",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "608",
+          "Gate": "Coil",
+          "children": []
+        },
+        {
+          "UId": "609",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "610",
+          "RefId": "102",
+          "children": []
+        },
+        {
+          "UId": "611",
+          "RefId": "103",
+          "children": []
+        },
+        {
+          "UId": "612",
+          "RefId": "103",
+          "children": []
+        },
+        {
+          "UId": "613",
+          "RefId": "104",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "628",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "622",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "614",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "609"
+            },
+            {
+              "kind": "PCon",
+              "UId": "622",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "623",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "622",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "624",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "626",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "615",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "610"
+            },
+            {
+              "kind": "PCon",
+              "UId": "624",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "625",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "624",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "604",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "617",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "611"
+            },
+            {
+              "kind": "PCon",
+              "UId": "604",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "618",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "612"
+            },
+            {
+              "kind": "PCon",
+              "UId": "626",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "627",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "626",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "608",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "620",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "613"
+            },
+            {
+              "kind": "PCon",
+              "UId": "608",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "6446b2b475b59f69889a408df794d2ed43cc6343f999045c00243b6d0663e017",
+      "declarations": [
+        {
+          "uid": "610",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "102",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "20",
+            "UID": "610",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "9",
+                "SO": "0",
+                "MID": "60"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_01_FAULT",
+                "RIDI": "",
+                "BO": "9",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "611",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "103",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "20",
+            "UID": "611",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "9",
+                "SO": "0",
+                "MID": "60"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_VR_01",
+                "RIDI": "",
+                "BO": "9",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "612",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "103",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "20",
+            "UID": "612",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "9",
+                "SO": "0",
+                "MID": "60"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_VR_01",
+                "RIDI": "",
+                "BO": "9",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "609",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "20",
+            "UID": "609",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-01-24T05:37:42.8141992Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "613",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "Start VR01",
+            "S": "Global",
+            "RID": "104",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "20",
+            "UID": "613",
+            "OID": "9",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "22",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2024-07-08T08:55:47.5451356Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0254": {
+      "network": 1952,
+      "nid": "23",
+      "parts": [
+        {
+          "UId": "711",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "713",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "693",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "715",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "697",
+          "Gate": "Coil",
+          "children": []
+        },
+        {
+          "UId": "698",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "699",
+          "RefId": "119",
+          "children": []
+        },
+        {
+          "UId": "700",
+          "RefId": "120",
+          "children": []
+        },
+        {
+          "UId": "701",
+          "RefId": "120",
+          "children": []
+        },
+        {
+          "UId": "702",
+          "RefId": "121",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "717",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "711",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "703",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "698"
+            },
+            {
+              "kind": "PCon",
+              "UId": "711",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "712",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "711",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "713",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "715",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "704",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "699"
+            },
+            {
+              "kind": "PCon",
+              "UId": "713",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "714",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "713",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "693",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "706",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "700"
+            },
+            {
+              "kind": "PCon",
+              "UId": "693",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "707",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "701"
+            },
+            {
+              "kind": "PCon",
+              "UId": "715",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "716",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "715",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "697",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "709",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "702"
+            },
+            {
+              "kind": "PCon",
+              "UId": "697",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "568a4cfb029a4f1a8babf2e3ad2c515d9ca52655890bf65446cca2f796859258",
+      "declarations": [
+        {
+          "uid": "699",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "119",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "23",
+            "UID": "699",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "11",
+                "SO": "0",
+                "MID": "62"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_02_FAULT",
+                "RIDI": "",
+                "BO": "11",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "700",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "120",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "23",
+            "UID": "700",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "11",
+                "SO": "0",
+                "MID": "62"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_VR_02",
+                "RIDI": "",
+                "BO": "11",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "701",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "120",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "23",
+            "UID": "701",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "11",
+                "SO": "0",
+                "MID": "62"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_VR_02",
+                "RIDI": "",
+                "BO": "11",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "698",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "23",
+            "UID": "698",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-01-24T05:37:42.8141992Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "702",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "Start VR02",
+            "S": "Global",
+            "RID": "121",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "23",
+            "UID": "702",
+            "OID": "9",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "24",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2024-07-08T08:47:31.9817046Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0258": {
+      "network": 1956,
+      "nid": "27",
+      "parts": [
+        {
+          "UId": "819",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "821",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "22",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "825",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "790",
+          "Gate": "O",
+          "children": [
+            {
+              "kind": "TemplateValue",
+              "Name": "Card",
+              "Type": "Cardinality",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "UId": "795",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "827",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "799",
+          "Gate": "Coil",
+          "children": []
+        },
+        {
+          "UId": "800",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "801",
+          "RefId": "134",
+          "children": []
+        },
+        {
+          "UId": "23",
+          "RefId": "219",
+          "children": []
+        },
+        {
+          "UId": "803",
+          "RefId": "4",
+          "children": []
+        },
+        {
+          "UId": "804",
+          "RefId": "136",
+          "children": []
+        },
+        {
+          "UId": "805",
+          "RefId": "136",
+          "children": []
+        },
+        {
+          "UId": "806",
+          "RefId": "137",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "829",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "819",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "807",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "800"
+            },
+            {
+              "kind": "PCon",
+              "UId": "819",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "820",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "819",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "821",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "827",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "808",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "801"
+            },
+            {
+              "kind": "PCon",
+              "UId": "821",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "822",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "821",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "790",
+              "PinName": "in1"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "23"
+            },
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "24",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "22",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "825",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "810",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "803"
+            },
+            {
+              "kind": "PCon",
+              "UId": "825",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "826",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "825",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "790",
+              "PinName": "in2"
+            }
+          ]
+        },
+        {
+          "UId": "812",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "790",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "795",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "814",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "804"
+            },
+            {
+              "kind": "PCon",
+              "UId": "795",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "815",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "805"
+            },
+            {
+              "kind": "PCon",
+              "UId": "827",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "828",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "827",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "799",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "817",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "806"
+            },
+            {
+              "kind": "PCon",
+              "UId": "799",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "d585f05c02cf6d0579ece6f4081e9c52a3135fd8c4720f915f0dfdc0d510ac9b",
+      "declarations": [
+        {
+          "uid": "801",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "134",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "801",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "14",
+                "SO": "0",
+                "MID": "65"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "SC_01_FAULT",
+                "RIDI": "",
+                "BO": "14",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "804",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "136",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "804",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "14",
+                "SO": "0",
+                "MID": "65"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_SC_01",
+                "RIDI": "",
+                "BO": "14",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "805",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "136",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "805",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "14",
+                "SO": "0",
+                "MID": "65"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_SC_01",
+                "RIDI": "",
+                "BO": "14",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "23",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "219",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "23",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "44",
+                "SO": "0",
+                "MID": "97"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR03 Run",
+                "RIDI": "",
+                "BO": "44",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "800",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "800",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-01-24T05:37:42.8141992Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "803",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "UNDER TESTING",
+            "S": "Global",
+            "RID": "4",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "803",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "45",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2024-10-09T13:10:55.3065071Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "806",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "Start SC01",
+            "S": "Global",
+            "RID": "137",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "27",
+            "UID": "806",
+            "OID": "9",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "28",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2024-07-08T08:46:25.6848269Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0266": {
+      "network": 1966,
+      "nid": "36",
+      "parts": [
+        {
+          "UId": "1038",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1040",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1020",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "1042",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1024",
+          "Gate": "Coil",
+          "children": []
+        },
+        {
+          "UId": "1025",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "1026",
+          "RefId": "175",
+          "children": []
+        },
+        {
+          "UId": "1027",
+          "RefId": "176",
+          "children": []
+        },
+        {
+          "UId": "1028",
+          "RefId": "176",
+          "children": []
+        },
+        {
+          "UId": "1029",
+          "RefId": "177",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "1044",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1038",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1030",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1025"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1038",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1039",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1038",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1040",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1042",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1031",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1026"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1040",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1041",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1040",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1020",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1033",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1027"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1020",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1034",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1028"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1042",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1043",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1042",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1024",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1036",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1029"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1024",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "f11ba1455884c2b0a1085f1892445a86325760be78cd8c9cd70f8ede77f9a992",
+      "declarations": [
+        {
+          "uid": "1026",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "175",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "36",
+            "UID": "1026",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "21",
+                "SO": "0",
+                "MID": "72"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_03_FAULT",
+                "RIDI": "",
+                "BO": "21",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1027",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "176",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "36",
+            "UID": "1027",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "21",
+                "SO": "0",
+                "MID": "72"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_VR_03",
+                "RIDI": "",
+                "BO": "21",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1028",
+          "file": "0604-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "176",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "36",
+            "UID": "1028",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "21",
+                "SO": "0",
+                "MID": "72"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "M_VR_03",
+                "RIDI": "",
+                "BO": "21",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1025",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "36",
+            "UID": "1025",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-01-24T05:37:42.8141992Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1029",
+          "file": "0602-IdentXmlPart.xml",
+          "id": {
+            "N": "Start VR03",
+            "S": "Global",
+            "RID": "177",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "36",
+            "UID": "1029",
+            "OID": "9",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "35",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2024-07-08T08:49:43.091109Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0420": {
+      "network": 1783,
+      "nid": "3",
+      "parts": [
+        {
+          "UId": "193",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "195",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "210",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "147",
+          "Gate": "SdCoil",
+          "children": []
+        },
+        {
+          "UId": "197",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "199",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "201",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "155",
+          "Gate": "O",
+          "children": [
+            {
+              "kind": "TemplateValue",
+              "Name": "Card",
+              "Type": "Cardinality",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "UId": "156",
+          "Gate": "SCoil",
+          "children": []
+        },
+        {
+          "UId": "203",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "205",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "207",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "162",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "163",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "164",
+          "RefId": "18",
+          "children": []
+        },
+        {
+          "UId": "211",
+          "RefId": "260",
+          "children": []
+        },
+        {
+          "UId": "166",
+          "RefId": "19",
+          "children": []
+        },
+        {
+          "UId": "165",
+          "RefId": "6",
+          "children": []
+        },
+        {
+          "UId": "167",
+          "RefId": "19",
+          "children": []
+        },
+        {
+          "UId": "168",
+          "RefId": "260",
+          "children": []
+        },
+        {
+          "UId": "169",
+          "RefId": "261",
+          "children": []
+        },
+        {
+          "UId": "170",
+          "RefId": "22",
+          "children": []
+        },
+        {
+          "UId": "171",
+          "RefId": "13",
+          "children": []
+        },
+        {
+          "UId": "172",
+          "RefId": "22",
+          "children": []
+        },
+        {
+          "UId": "173",
+          "RefId": "261",
+          "children": []
+        },
+        {
+          "UId": "174",
+          "RefId": "22",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "209",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "193",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "175",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "163"
+            },
+            {
+              "kind": "PCon",
+              "UId": "193",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "194",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "193",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "195",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "203",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "176",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "164"
+            },
+            {
+              "kind": "PCon",
+              "UId": "195",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "196",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "195",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "210",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "197",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "201",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "213",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "211"
+            },
+            {
+              "kind": "PCon",
+              "UId": "210",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "210",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "177",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "165"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "value"
+            }
+          ]
+        },
+        {
+          "UId": "178",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "166"
+            },
+            {
+              "kind": "PCon",
+              "UId": "147",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "179",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "167"
+            },
+            {
+              "kind": "PCon",
+              "UId": "197",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "198",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "197",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "199",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "180",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "168"
+            },
+            {
+              "kind": "PCon",
+              "UId": "199",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "200",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "199",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "155",
+              "PinName": "in1"
+            }
+          ]
+        },
+        {
+          "UId": "182",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "169"
+            },
+            {
+              "kind": "PCon",
+              "UId": "201",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "202",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "201",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "155",
+              "PinName": "in2"
+            }
+          ]
+        },
+        {
+          "UId": "183",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "155",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "156",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "185",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "170"
+            },
+            {
+              "kind": "PCon",
+              "UId": "156",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "187",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "171"
+            },
+            {
+              "kind": "PCon",
+              "UId": "203",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "204",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "203",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "205",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "188",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "172"
+            },
+            {
+              "kind": "PCon",
+              "UId": "205",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "206",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "205",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "207",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "189",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "173"
+            },
+            {
+              "kind": "PCon",
+              "UId": "207",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "208",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "207",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "162",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "191",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "174"
+            },
+            {
+              "kind": "PCon",
+              "UId": "162",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "d99455768914d77d4233ea8fd95281f695674d44a7b9ca23d252e3b68e257a21",
+      "declarations": [
+        {
+          "uid": "171",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "13",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "171",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "48",
+                "SO": "0",
+                "MID": "99"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "RESET_ALLARM",
+                "RIDI": "",
+                "BO": "48",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "170",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "22",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "170",
+            "OID": "7",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "100",
+                "SO": "0",
+                "MID": "151"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02_FAULT",
+                "RIDI": "",
+                "BO": "100",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "172",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "22",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "172",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "100",
+                "SO": "0",
+                "MID": "151"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02_FAULT",
+                "RIDI": "",
+                "BO": "100",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "174",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "22",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "174",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "100",
+                "SO": "0",
+                "MID": "151"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02_FAULT",
+                "RIDI": "",
+                "BO": "100",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "168",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "260",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "168",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "95",
+                "SO": "0",
+                "MID": "151"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF 02 RUN",
+                "RIDI": "",
+                "BO": "95",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "211",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "260",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "211",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "95",
+                "SO": "0",
+                "MID": "151"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF 02 RUN",
+                "RIDI": "",
+                "BO": "95",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "169",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "261",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "169",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "96",
+                "SO": "0",
+                "MID": "153"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02 FAULT",
+                "RIDI": "",
+                "BO": "96",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "173",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "261",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "173",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "96",
+                "SO": "0",
+                "MID": "153"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "BWF02 FAULT",
+                "RIDI": "",
+                "BO": "96",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "163",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "163",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "164",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Consent Start BWF02",
+            "S": "Global",
+            "RID": "18",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "164",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "51",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "166",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_50",
+            "S": "Global",
+            "RID": "19",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "166",
+            "OID": "45",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "121",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "167",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_50",
+            "S": "Global",
+            "RID": "19",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "167",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "121",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "165",
+          "file": "0656-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Constant",
+            "RID": "6",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "3",
+            "UID": "165",
+            "OID": "45"
+          },
+          "attributes": [
+            {
+              "kind": "CB",
+              "attributes": {
+                "ST": "Number",
+                "T": "S5Time",
+                "SV": "S5T_x0023_10S",
+                "V": "4352"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0432": {
+      "network": 1797,
+      "nid": "19",
+      "parts": [
+        {
+          "UId": "683",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "685",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "696",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "647",
+          "Gate": "SdCoil",
+          "children": []
+        },
+        {
+          "UId": "687",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "653",
+          "Gate": "SCoil",
+          "children": []
+        },
+        {
+          "UId": "691",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "693",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "658",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "659",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "660",
+          "RefId": "77",
+          "children": []
+        },
+        {
+          "UId": "697",
+          "RefId": "284",
+          "children": []
+        },
+        {
+          "UId": "662",
+          "RefId": "78",
+          "children": []
+        },
+        {
+          "UId": "661",
+          "RefId": "28",
+          "children": []
+        },
+        {
+          "UId": "663",
+          "RefId": "78",
+          "children": []
+        },
+        {
+          "UId": "665",
+          "RefId": "80",
+          "children": []
+        },
+        {
+          "UId": "666",
+          "RefId": "13",
+          "children": []
+        },
+        {
+          "UId": "667",
+          "RefId": "80",
+          "children": []
+        },
+        {
+          "UId": "668",
+          "RefId": "80",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "695",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "683",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "669",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "659"
+            },
+            {
+              "kind": "PCon",
+              "UId": "683",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "684",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "683",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "685",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "691",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "670",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "660"
+            },
+            {
+              "kind": "PCon",
+              "UId": "685",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "686",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "685",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "696",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "687",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "699",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "697"
+            },
+            {
+              "kind": "PCon",
+              "UId": "696",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "696",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "647",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "671",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "661"
+            },
+            {
+              "kind": "PCon",
+              "UId": "647",
+              "PinName": "value"
+            }
+          ]
+        },
+        {
+          "UId": "672",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "662"
+            },
+            {
+              "kind": "PCon",
+              "UId": "647",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "673",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "663"
+            },
+            {
+              "kind": "PCon",
+              "UId": "687",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "22",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "687",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "653",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "676",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "665"
+            },
+            {
+              "kind": "PCon",
+              "UId": "653",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "678",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "666"
+            },
+            {
+              "kind": "PCon",
+              "UId": "691",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "692",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "691",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "693",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "679",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "667"
+            },
+            {
+              "kind": "PCon",
+              "UId": "693",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "694",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "693",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "658",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "681",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "668"
+            },
+            {
+              "kind": "PCon",
+              "UId": "658",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "a002d92b22e40a8fc12270f2995291f329392f9b7894f09f3b607b11caeb4c65",
+      "declarations": [
+        {
+          "uid": "666",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "13",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "666",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "48",
+                "SO": "0",
+                "MID": "99"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "RESET_ALLARM",
+                "RIDI": "",
+                "BO": "48",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "665",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "80",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "665",
+            "OID": "7",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "9",
+                "SO": "0",
+                "MID": "60"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_01_FAULT",
+                "RIDI": "",
+                "BO": "9",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "667",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "80",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "667",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "9",
+                "SO": "0",
+                "MID": "60"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_01_FAULT",
+                "RIDI": "",
+                "BO": "9",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "668",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "80",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "668",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "9",
+                "SO": "0",
+                "MID": "60"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_01_FAULT",
+                "RIDI": "",
+                "BO": "9",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "697",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "284",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "697",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "28",
+                "SO": "0",
+                "MID": "80"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR-01 RUN",
+                "RIDI": "",
+                "BO": "28",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "659",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "659",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "660",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Start VR01",
+            "S": "Global",
+            "RID": "77",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "660",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "22",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "662",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_62",
+            "S": "Global",
+            "RID": "78",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "662",
+            "OID": "45",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "63",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "663",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_62",
+            "S": "Global",
+            "RID": "78",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "663",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "63",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "661",
+          "file": "0656-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Constant",
+            "RID": "28",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "19",
+            "UID": "661",
+            "OID": "45"
+          },
+          "attributes": [
+            {
+              "kind": "CB",
+              "attributes": {
+                "ST": "Number",
+                "T": "S5Time",
+                "SV": "S5T_x0023_2S",
+                "V": "512"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0434": {
+      "network": 1799,
+      "nid": "21",
+      "parts": [
+        {
+          "UId": "751",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "753",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "764",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "715",
+          "Gate": "SdCoil",
+          "children": []
+        },
+        {
+          "UId": "755",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "721",
+          "Gate": "SCoil",
+          "children": []
+        },
+        {
+          "UId": "759",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "761",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "726",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "727",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "728",
+          "RefId": "85",
+          "children": []
+        },
+        {
+          "UId": "765",
+          "RefId": "287",
+          "children": []
+        },
+        {
+          "UId": "730",
+          "RefId": "86",
+          "children": []
+        },
+        {
+          "UId": "729",
+          "RefId": "28",
+          "children": []
+        },
+        {
+          "UId": "731",
+          "RefId": "86",
+          "children": []
+        },
+        {
+          "UId": "733",
+          "RefId": "88",
+          "children": []
+        },
+        {
+          "UId": "734",
+          "RefId": "13",
+          "children": []
+        },
+        {
+          "UId": "735",
+          "RefId": "88",
+          "children": []
+        },
+        {
+          "UId": "736",
+          "RefId": "88",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "763",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "751",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "737",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "727"
+            },
+            {
+              "kind": "PCon",
+              "UId": "751",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "752",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "751",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "753",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "759",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "738",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "728"
+            },
+            {
+              "kind": "PCon",
+              "UId": "753",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "754",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "753",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "764",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "755",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "767",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "765"
+            },
+            {
+              "kind": "PCon",
+              "UId": "764",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "764",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "715",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "739",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "729"
+            },
+            {
+              "kind": "PCon",
+              "UId": "715",
+              "PinName": "value"
+            }
+          ]
+        },
+        {
+          "UId": "740",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "730"
+            },
+            {
+              "kind": "PCon",
+              "UId": "715",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "741",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "731"
+            },
+            {
+              "kind": "PCon",
+              "UId": "755",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "22",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "755",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "721",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "744",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "733"
+            },
+            {
+              "kind": "PCon",
+              "UId": "721",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "746",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "734"
+            },
+            {
+              "kind": "PCon",
+              "UId": "759",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "760",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "759",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "761",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "747",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "735"
+            },
+            {
+              "kind": "PCon",
+              "UId": "761",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "762",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "761",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "726",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "749",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "736"
+            },
+            {
+              "kind": "PCon",
+              "UId": "726",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "31c8de50439465d356d0735765fa0ab0983585e0f1fbfab6bf614b054566f3f9",
+      "declarations": [
+        {
+          "uid": "734",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "13",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "734",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "48",
+                "SO": "0",
+                "MID": "99"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "RESET_ALLARM",
+                "RIDI": "",
+                "BO": "48",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "733",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "88",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "733",
+            "OID": "7",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "11",
+                "SO": "0",
+                "MID": "62"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_02_FAULT",
+                "RIDI": "",
+                "BO": "11",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "735",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "88",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "735",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "11",
+                "SO": "0",
+                "MID": "62"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_02_FAULT",
+                "RIDI": "",
+                "BO": "11",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "736",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "88",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "736",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "11",
+                "SO": "0",
+                "MID": "62"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_02_FAULT",
+                "RIDI": "",
+                "BO": "11",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "765",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "287",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "765",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "31",
+                "SO": "0",
+                "MID": "83"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR02 Run",
+                "RIDI": "",
+                "BO": "31",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "727",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "727",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "728",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Start VR02",
+            "S": "Global",
+            "RID": "85",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "728",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "24",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "730",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_64",
+            "S": "Global",
+            "RID": "86",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "730",
+            "OID": "45",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "67",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "731",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_64",
+            "S": "Global",
+            "RID": "86",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "731",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "67",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "729",
+          "file": "0656-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Constant",
+            "RID": "28",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "21",
+            "UID": "729",
+            "OID": "45"
+          },
+          "attributes": [
+            {
+              "kind": "CB",
+              "attributes": {
+                "ST": "Number",
+                "T": "S5Time",
+                "SV": "S5T_x0023_2S",
+                "V": "512"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "0444": {
+      "network": 1810,
+      "nid": "32",
+      "parts": [
+        {
+          "UId": "1125",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1127",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1138",
+          "Gate": "Contact",
+          "children": [
+            {
+              "kind": "Negated",
+              "PinName": "operand",
+              "text": null
+            }
+          ]
+        },
+        {
+          "UId": "1089",
+          "Gate": "SdCoil",
+          "children": []
+        },
+        {
+          "UId": "1129",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1095",
+          "Gate": "SCoil",
+          "children": []
+        },
+        {
+          "UId": "1133",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1135",
+          "Gate": "Contact",
+          "children": []
+        },
+        {
+          "UId": "1100",
+          "Gate": "RCoil",
+          "children": []
+        },
+        {
+          "UId": "1101",
+          "RefId": "1",
+          "children": []
+        },
+        {
+          "UId": "1102",
+          "RefId": "130",
+          "children": []
+        },
+        {
+          "UId": "1139",
+          "RefId": "300",
+          "children": []
+        },
+        {
+          "UId": "1104",
+          "RefId": "131",
+          "children": []
+        },
+        {
+          "UId": "1103",
+          "RefId": "28",
+          "children": []
+        },
+        {
+          "UId": "1105",
+          "RefId": "131",
+          "children": []
+        },
+        {
+          "UId": "1107",
+          "RefId": "133",
+          "children": []
+        },
+        {
+          "UId": "1108",
+          "RefId": "13",
+          "children": []
+        },
+        {
+          "UId": "1109",
+          "RefId": "133",
+          "children": []
+        },
+        {
+          "UId": "1110",
+          "RefId": "133",
+          "children": []
+        }
+      ],
+      "wires": [
+        {
+          "UId": "1137",
+          "ends": [
+            {
+              "kind": "Powerrail"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1125",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1111",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1101"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1125",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1126",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1125",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1127",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1133",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1112",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1102"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1127",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1128",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1127",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1138",
+              "PinName": "in"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1129",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1141",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1139"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1138",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "21",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1138",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1089",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1113",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1103"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1089",
+              "PinName": "value"
+            }
+          ]
+        },
+        {
+          "UId": "1114",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1104"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1089",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1115",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1105"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1129",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "22",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1129",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1095",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1118",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1107"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1095",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1120",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1108"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1133",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1134",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1133",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1135",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1121",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1109"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1135",
+              "PinName": "operand"
+            }
+          ]
+        },
+        {
+          "UId": "1136",
+          "ends": [
+            {
+              "kind": "PCon",
+              "UId": "1135",
+              "PinName": "out"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1100",
+              "PinName": "in"
+            }
+          ]
+        },
+        {
+          "UId": "1123",
+          "ends": [
+            {
+              "kind": "OCon",
+              "UId": "1110"
+            },
+            {
+              "kind": "PCon",
+              "UId": "1100",
+              "PinName": "operand"
+            }
+          ]
+        }
+      ],
+      "sha256": "718076435066a62dc890a414988dc00824025a94d5757799a519071fb69b694c",
+      "declarations": [
+        {
+          "uid": "1108",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "13",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1108",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "48",
+                "SO": "0",
+                "MID": "99"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Flag",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "RESET_ALLARM",
+                "RIDI": "",
+                "BO": "48",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1107",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "133",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1107",
+            "OID": "7",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "21",
+                "SO": "0",
+                "MID": "72"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_03_FAULT",
+                "RIDI": "",
+                "BO": "21",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1109",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "133",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1109",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "21",
+                "SO": "0",
+                "MID": "72"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_03_FAULT",
+                "RIDI": "",
+                "BO": "21",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1110",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "133",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1110",
+            "OID": "8",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "21",
+                "SO": "0",
+                "MID": "72"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Allarm",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR_03_FAULT",
+                "RIDI": "",
+                "BO": "21",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1139",
+          "file": "0657-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Global",
+            "RID": "300",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1139",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "S",
+                "AA": "C",
+                "AO": "44",
+                "SO": "0",
+                "MID": "97"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "Inputs",
+                "RIDI": "",
+                "BO": "0",
+                "BS": "16"
+              }
+            },
+            {
+              "kind": "AO",
+              "attributes": {
+                "N": "VR03 Run",
+                "RIDI": "",
+                "BO": "44",
+                "BS": "1"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1101",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "ON",
+            "S": "Global",
+            "RID": "1",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1101",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "0",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Memory",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1102",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Start VR03",
+            "S": "Global",
+            "RID": "130",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1102",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "35",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Output",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1104",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_75",
+            "S": "Global",
+            "RID": "131",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1104",
+            "OID": "45",
+            "AK": "Write"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "84",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1105",
+          "file": "0658-IdentXmlPart.xml",
+          "id": {
+            "N": "Tag_75",
+            "S": "Global",
+            "RID": "131",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1105",
+            "OID": "1"
+          },
+          "attributes": [
+            {
+              "kind": "SSD",
+              "attributes": {
+                "S": "U",
+                "AA": "C",
+                "AO": "84",
+                "SO": "0",
+                "MID": ""
+              }
+            },
+            {
+              "kind": "SAD",
+              "attributes": {
+                "R": "Timer",
+                "MT": "2025-02-13T07:47:18.4840885Z",
+                "SAM": "None"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "1103",
+          "file": "0656-IdentXmlPart.xml",
+          "id": {
+            "N": "",
+            "S": "Constant",
+            "RID": "28",
+            "IS": "1"
+          },
+          "occurrence": {
+            "NID": "32",
+            "UID": "1103",
+            "OID": "45"
+          },
+          "attributes": [
+            {
+              "kind": "CB",
+              "attributes": {
+                "ST": "Number",
+                "T": "S5Time",
+                "SV": "S5T_x0023_2S",
+                "V": "512"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    "sources/decoded-original/0234-FlgNet.xml": "4fa899449ab66d4a852be7c21085590393a8ad11c65d265222c3bfcd649dfc64",
+    "sources/decoded-original/0601-IdentXmlPart.xml": "04c9481f7381284de689ef5c7ff40d7aea93f2004cd877a4e4f27e47baa6d862",
+    "sources/decoded-original/0599-IdentXmlPart.xml": "32a693fe12134febbd9f5c7da10c3469ef4d5b164ab8b6bd9ea3867c358936c1",
+    "sources/decoded-original/0235-FlgNet.xml": "1a4913d7a151824d6318edcd43bd4d496bee11b83a75f1d8f5d4cb04dd01b71c",
+    "sources/decoded-original/0239-FlgNet.xml": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599",
+    "sources/decoded-original/0605-IdentXmlPart.xml": "0ff6e2228dbfbc9f657359fe1055083ce621365084ea24c4160e4969b3eaac8b",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0606-IdentXmlPart.xml": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0240-FlgNet.xml": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33",
+    "sources/decoded-original/0420-FlgNet.xml": "d99455768914d77d4233ea8fd95281f695674d44a7b9ca23d252e3b68e257a21",
+    "sources/decoded-original/0657-IdentXmlPart.xml": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b",
+    "sources/decoded-original/0658-IdentXmlPart.xml": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+    "sources/decoded-original/0656-IdentXmlPart.xml": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592",
+    "sources/decoded-original/0251-FlgNet.xml": "6446b2b475b59f69889a408df794d2ed43cc6343f999045c00243b6d0663e017",
+    "sources/decoded-original/0254-FlgNet.xml": "568a4cfb029a4f1a8babf2e3ad2c515d9ca52655890bf65446cca2f796859258",
+    "sources/decoded-original/0258-FlgNet.xml": "d585f05c02cf6d0579ece6f4081e9c52a3135fd8c4720f915f0dfdc0d510ac9b",
+    "sources/decoded-original/0266-FlgNet.xml": "f11ba1455884c2b0a1085f1892445a86325760be78cd8c9cd70f8ede77f9a992",
+    "sources/decoded-original/0432-FlgNet.xml": "a002d92b22e40a8fc12270f2995291f329392f9b7894f09f3b607b11caeb4c65",
+    "sources/decoded-original/0434-FlgNet.xml": "31c8de50439465d356d0735765fa0ab0983585e0f1fbfab6bf614b054566f3f9",
+    "sources/decoded-original/0444-FlgNet.xml": "718076435066a62dc890a414988dc00824025a94d5757799a519071fb69b694c",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "registers/priority-equipment.csv": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba",
+    "registers/equipment.json": "7870325dff32bbca90fa34507b301c4aad3347d669fddcd03b910343663996fa",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa"
+  },
+  "PDF_pages_visually_reviewed": [
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 95,
+      "image": "oem-95.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 133,
+      "image": "oem-133.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 47,
+      "image": "oem-47.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 50,
+      "image": "oem-50.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 54,
+      "image": "oem-54.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 62,
+      "image": "oem-62.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 7,
+      "image": "oem-7.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 18,
+      "image": "oem-18.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 97,
+      "image": "oem-97.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 144,
+      "image": "oem-144.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 1,
+      "image": "construction-1.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 21,
+      "image": "construction-21.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 50,
+      "image": "construction-50.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 51,
+      "image": "construction-51.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 53,
+      "image": "construction-53.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 31,
+      "image": "construction-31.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 35,
+      "image": "construction-35.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 58,
+      "image": "construction-58.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 64,
+      "image": "construction-64.png"
+    }
+  ],
+  "shared_PDF_pages_reused": [
+    {
+      "source": "PID_1684n002I.pdf",
+      "page": 1,
+      "proof": "HE01 same unchanged original"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 3,
+      "proof": "HE01 same unchanged original"
+    }
+  ],
+  "draft_hash_boundary": "P03 60 + P04 36 fixed-commit file hashes and P14 3 external attachments matched. Hash counts are not whole-logic reviews. External overlap/SC01 drafts are references only; phase2 not imported.",
+  "assigned_signals": 0,
+  "identity_verified": 0,
+  "field_verified": false,
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "simulator_changes": 0,
+  "PLC_SEJIN_changes": 0
+}

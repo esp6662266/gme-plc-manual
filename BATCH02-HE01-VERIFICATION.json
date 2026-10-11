@@ -1,0 +1,135 @@
+{
+  "version": "1.17.0",
+  "equipment": "HE01/P13",
+  "baseline_commit": "98f3f3d5243e8fe64cd0146b3f5f623f3b394a24",
+  "status": "local_document_static_ui_records_pdf_verified",
+  "source_bundle_at_record_test": "8117dda9c8ad91df09f7747fad8b7f986152a60c19ab66c168cfbb1f713b19bf",
+  "locations": 1090,
+  "source_hashes": 84,
+  "native_review": {
+    "selected_full_core_xml": [
+      "0491",
+      "0495",
+      "0497",
+      "0528"
+    ],
+    "surrounding_networks": 22,
+    "shared_scope": "Reviewed relevant wiring/pins; reused unchanged FC63/damper/fan/BR01/RD01 prior evidence. All 22 networks are not claimed as complete logic reviews.",
+    "plc_execution": false
+  },
+  "original_PDF_pages": [
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 76,
+      "image": "oem-76.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 78,
+      "image": "oem-78.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 107,
+      "image": "oem-107.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 108,
+      "image": "oem-108.png"
+    },
+    {
+      "source": "Electrical_Rev2.pdf",
+      "page": 109,
+      "image": "oem-109.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 3,
+      "image": "construction-3.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 6,
+      "image": "construction-6.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 56,
+      "image": "construction-56.png"
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118.pdf",
+      "page": 57,
+      "image": "construction-57.png"
+    },
+    {
+      "source": "PID_1684n002I.pdf",
+      "page": 1,
+      "image": "pid-1.png"
+    }
+  ],
+  "screen_matrix": {
+    "wide": 68,
+    "narrow": 68,
+    "failures": 0
+  },
+  "source_pair_ui": {
+    "wide": 13,
+    "narrow": 13,
+    "failures": 0
+  },
+  "records": {
+    "first_saved_reopened": 1,
+    "edited_reopened": 3,
+    "restore_preview": 4,
+    "restored_reopened": 4,
+    "own_after_restore": 2,
+    "foreign_records_unchanged": true,
+    "drafts_unchanged": true,
+    "unknown_fields_zero_blank_false_preserved": true,
+    "actual_download_bytes": 55030,
+    "actual_download_sha256": "4172ca4fc25268bca405efc1096cdae3e4074c43052358a098b666086d02938e",
+    "comparison_differences": 3,
+    "canonical_unknown_value_before": "0",
+    "canonical_unknown_value_after": "1",
+    "cached_summary_is_not_canonical": true
+  },
+  "report": {
+    "actual_print_button_calls": 1,
+    "pages": 2,
+    "all_pages_visually_reviewed": true,
+    "bytes": 310116,
+    "sha256": "f10bd9b6a0ec623ec6df0cbf273bd8470e1521887ec8a6402e40b7e26a6e8649"
+  },
+  "cleanup": {
+    "notes": null,
+    "drafts": null,
+    "printing": false,
+    "printPatch": "undefined",
+    "logs": []
+  },
+  "preservation": {
+    "previous_profiles": 17,
+    "repair_record_schemas": true,
+    "original_source_files": 712,
+    "frozen_files": 5,
+    "operational_record_writes": 0
+  },
+  "boundary": {
+    "owned_body_signals": 0,
+    "owned_body_alarms": 0,
+    "owned_body_timers": 0,
+    "reference_pairs": 13,
+    "reference_TC03_alarms": 3,
+    "reference_TC03_timers": 3,
+    "field_verified": false,
+    "tia_compile": "not_performed",
+    "live_cpu": "not_performed",
+    "field_recovery": "not_performed",
+    "simulator_changes": 0,
+    "simulator_tests": "not_run",
+    "PLC_SEJIN_changes": 0
+  },
+  "publication": "pending BATCH02"
+}

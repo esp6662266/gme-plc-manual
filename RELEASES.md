@@ -1,3 +1,11 @@
+# BATCH02 v1.17.0 — HE01·미확정 식별3 로컬 검증 완료 / 공통 패키지·게시 대기
+
+HE01(P13) 7영역34항목·13참고 원본쌍·1090위치/84해시, 선택 핵심 XML/원본 PDF10쪽 독립 대조 및 화면136/원본쌍26/격리 저장·복원·실제 JSON55030B/비교3/A4 PDF2 passed. 본체 전용 신호/알람/타이머·기록 신호0 유지, TC03/PSH01/PSH03·댐퍼·팬·RD01/BR01 주변 소유를 구분한다. 기존17프로파일/양식/원본712·대장89/중지5·저장키/초안/미지필드 보존. 기록/PDF의 당시 source_bundle은 보존하고 최종 audit/hash는 묶음 검증에 별도 기록한다.
+
+P03/P04/P14 각각7영역 식별 보고서 complete_with_gaps. 고정 초안60/36·외부 첨부3 SHA 대조;12선택 XML·원본 PDF19쪽+변경 없는2쪽 재사용의 독립 검토. 1280/390 6화면·실제 P03 식별 작업지→보고서 연결·기존 관찰양식3개 저장/재열기·각 A4 2쪽/총6쪽 확인. PLC/catalog ID·신호/알람/타이머 배정0·실물 동일성 미확정. 전용 설비 표준 프로파일/4도구 구현으로 세지 않는다. 이전 unresolved JSON과 전체 양식은 보존, HTML 보고서 링크만 추가한다. 재생성은 build-unresolved-identity.py 다음 build-identification-reports.py로 링크를 복원한다. 두 생성기는 시뮬레이터/PLC 실행을 하지 않는다.
+
+문서/프로그램18매뉴얼+식별3보고서가 로컬 검증되었고, 실제 게시 완료는 아직 BATCH01의17매뉴얼이다. 최종 필수14+2·npm8·NETLIFY build·ZIP·GitHub·실제 Netlify를 이번 묶음1회 확인한다. CC01 전용자료 미확보/새자료 전 반복 부재 검색 없음. 2차133 로컬 제외·Dots 연구분모를 편입하지 않음. 운영기록/시뮬레이터/PLC/현장/보호값/SEJIN 변경0·TIA/현재 CPU/현장복구 미수행. 상세 BATCH02-HE01-VERIFICATION.json 및 BATCH02-IDENTIFICATION-VERIFICATION.json.
+
 # BATCH01 v1.16.0 실제 게시 완료 — 2026-10-11
 
 MV06/RD01/BR01/CC01/AB01 문서·정적·UI기록·PDF·최종14+2·npm8·NETLIFY build 검증완료. GitHub ZIP2808파일/54519136B/SHA25680cac514006d4ae67301a5dd456e844f2ecbccbe9fe89320d3f754aba8987473·asset630533977일치. Netlify6acb6e546a59be00083a0b94 ready 2026-10-11T11:09:29.045Z / feature aab32a48f8cfcd5523a0fc43047e7be5627bfa1a. 새clone8/BC01/설비17/NETLIFY build/Git변경0·게시348파일(260exact+88HTML동등)·실제5설비/원본5쌍강조·운영기록/초안null·warnerror0. 원본730/추가3/중지5/기존완료·저장키보존. CC01 전용데이터미확보유지·사용자안내반영·새자료전반복검색안함. AB01 본체후보/주변계측·알람·BR01소유 분리.

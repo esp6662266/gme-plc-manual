@@ -678,7 +678,7 @@ for profile in drawing['profiles']:
     device=next((d for d in data['equipment'] if d['id']==priority['plc_id']),{})
     assert profile['plc_id']==priority['plc_id'] and profile['match']==priority['match']
     raw_circuit=expected_circuits.get(priority['plc_id'])
-    batch_paths={'P06':8,'P11':19,'P10':4,'P12':15}
+    batch_paths={'P06':8,'P11':19,'P10':4,'P12':15,'P13':13}
     if profile['key'] in batch_paths:
         circuit=profile['circuit']
         assert circuit['id']==priority['plc_id'] and len(circuit['paths'])==batch_paths[profile['key']]
@@ -695,13 +695,17 @@ for profile in drawing['profiles']:
         assert profile['circuit']==raw_circuit
     assert not profile['identity_verified'] and not profile['field_verified']
     sheets=profile['sheets'];assert len({s['id'] for s in sheets})==len(sheets)
-    reference_kinds={'P10':{'주변 OEM 전기','시공 구역'},'P12':{'주변 OEM 전기','시공 케이블'}}.get(profile['key'],set())
+    reference_kinds={'P10':{'주변 OEM 전기','시공 구역'},'P12':{'주변 OEM 전기','시공 케이블'},'P13':{'주변 OEM 전기','시공 케이블'}}.get(profile['key'],set())
     assert {s['kind'] for s in sheets}<={'OEM 전기','P&ID','시공·케이블','HMI 참고'}|reference_kinds,profile['key']
     extra_fgs={'P06':[22],'P11':[111,114,142,143]}.get(profile['key'],[])
     assert [s['fg'] for s in sheets if s['kind']=='OEM 전기']==list(dict.fromkeys(device.get('circuit_fgs',[])+device.get('electrical_fgs',[])+extra_fgs))
     assert [s['page'] for s in sheets if s['kind']=='시공·케이블']==device.get('construction_pages',[])
-    assert [s['fg'] for s in sheets if s['kind']=='주변 OEM 전기']=={'P10':[78,81,106,110],'P12':[77,78,80,97,99,106,107,110]}.get(profile['key'],[])
+    assert [s['fg'] for s in sheets if s['kind']=='주변 OEM 전기']=={'P10':[78,81,106,110],'P12':[77,78,80,97,99,106,107,110],'P13':[75,77,106,107,108]}.get(profile['key'],[])
     assert [s['page'] for s in sheets if s['kind'] in {'시공 구역','시공 케이블'}]=={'P10':[3],'P12':[56]}.get(profile['key'],[])
+    if profile['key']=='P13':
+        for number in [56,57]:
+            sheet=next(s for s in sheets if s['id']=='construction-'+str(number))
+            assert sheet['kind']=='시공·케이블' and sheet['page']==number and '주변 참고' in sheet['status']
     for sheet in sheets:
         assert sheet['image'] and sheet['image'] in drawing['preview_hashes']
         assert (ROOT/sheet['image']).read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'

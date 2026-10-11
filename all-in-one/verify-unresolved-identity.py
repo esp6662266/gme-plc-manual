@@ -78,6 +78,31 @@ for path in page.refs:
  if u.fragment and f.endswith('.html'):
   if f=='index.html' and '=' in u.fragment:assert parse_qs(u.fragment)['equipment'][0] in ['P03','P04','P14']
   else:assert unquote(u.fragment) in html(f).ids,path
-result=dict(status='passed',json_sha256=sha('registers/unresolved-identity.json'),html_sha256=sha('unresolved-identity.html'),profiles=3,native_networks=4,source_hashes=len(b['sources']),links=len(page.refs),original_xml_checked=True,critical_pins_and_declarations_checked=True,identity_assigned=0,scope_exclusions_checked=['MV04','SC12','PV04','P22','P23'],simulator_files_unchanged=True,simulator_behavior_tests='not_rerun',field_verified=False)
+# The extended dossiers add reviewed candidates without changing priority I/O,
+# form provenance or the original unresolved-identity record.
+reports=load('registers/identification-reports.json')
+assert reports['assigned_signals']==0 and reports['identity_verified']==0
+for f,h in reports['source_hashes'].items():assert sha(f)==h,f
+for p in reports['profiles']:
+ assert p['plc_id'] is None and p['catalog_id'] is None and p['match']=='unknown' and not p['identity_verified']
+ assert not p['assigned_signals'] and not p['assigned_alarms'] and not p['assigned_timers']
+ assert {x[0] for x in p['areas']}=={'overview','io','control','circuit','alarms','completion','repair'}
+ f='identification-guides/'+p['key']+'.html';report_page=html(f)
+ assert {x[0]for x in p['areas']}|{'sources','tools'}<=report_page.ids
+ assert f in page.refs
+ for ref in report_page.refs:
+  u=urlsplit(ref);target=(R/Path(f).parent/unquote(u.path)).resolve() if u.path else R/f
+  assert target.is_relative_to(R) and target.is_file(),ref
+  if u.fragment and target.suffix=='.html':
+   if target.name=='index.html' and '='in u.fragment:assert parse_qs(u.fragment)['equipment'][0]==p['key']
+   else:assert unquote(u.fragment) in html(str(target.relative_to(R))).ids,ref
+# Separate VR outputs and Reset branches are not CY-body commands. SC01's
+# negated processed VR03 response and testing contact remain explicit.
+for file,nid,uid,rid,ao,reset_w,reset_part,out_w,out_part in [('0251-FlgNet.xml','20','613','104','22','625','604','627','608'),('0254-FlgNet.xml','23','702','121','24','714','693','716','697'),('0266-FlgNet.xml','36','1029','177','35','1041','1020','1043','1024')]:
+ root=original(file);wire(root,reset_w,('PCon',reset_part,'in'));wire(root,out_w,('PCon',out_part,'in'));declaration('0602-IdentXmlPart.xml',rid,nid,uid,'Global','Output',ao)
+sc=original('0258-FlgNet.xml')
+for uid in ['22','825']:assert any(tag(c)=='Negated'for x in sc.iter()if tag(x)=='Part'and x.get('UId')==uid for c in x)
+wire(sc,'24',('PCon','22','out'),('PCon','825','in'));wire(sc,'812',('PCon','790','out'),('PCon','795','in'))
+result=dict(status='passed',json_sha256=sha('registers/unresolved-identity.json'),html_sha256=sha('unresolved-identity.html'),profiles=3,native_networks=4,source_hashes=len(b['sources']),links=len(page.refs),identification_reports=3,identification_reports_sha256=sha('registers/identification-reports.json'),original_xml_checked=True,critical_pins_and_declarations_checked=True,identity_assigned=0,scope_exclusions_checked=['MV04','SC12','PV04','P22','P23'],simulator_files_unchanged=True,simulator_behavior_tests='not_rerun',field_verified=False)
 (R/'unresolved-identity-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(result,ensure_ascii=False))

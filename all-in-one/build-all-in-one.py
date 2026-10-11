@@ -464,7 +464,7 @@ data['equipment_standards']=dict(schema_version=1,profiles=[dict(
         dict(signal='인버터 이상',path='networks/network-1785.html#bc01-part-27',label='처리 신호 알람 참고 · 원시 입력 직접 대응 미확정',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
         dict(signal='트립와이어 감시',path='networks/network-1786.html#bc01-part-234',label='처리 신호 알람 참고 · 원시 입력 직접 대응 미확정',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
         dict(signal='회전 감시 예비',path='',label='예비 입력 · 직접 대응 없음',boundary='예비 표기와 직접 대응 없음 상태를 보존합니다.')])])
-from equipment_standard_profiles import build_fn04_profile,build_fn01_profile,build_fn02_profile,build_fn03_profile,build_fn06_profile,build_mc04_profile,build_vs01_profile,build_pv01_profile,build_pv02_profile,build_mv01_profile,build_mv03_profile,build_mv06_profile,build_rd01_profile,build_br01_profile,build_cc01_profile,build_ab01_profile
+from equipment_standard_profiles import build_fn04_profile,build_fn01_profile,build_fn02_profile,build_fn03_profile,build_fn06_profile,build_mc04_profile,build_vs01_profile,build_pv01_profile,build_pv02_profile,build_mv01_profile,build_mv03_profile,build_mv06_profile,build_rd01_profile,build_br01_profile,build_cc01_profile,build_ab01_profile,build_he01_profile
 data['equipment_standards']['profiles'].append(build_fn04_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_fn01_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_fn02_profile(ROOT,data,BC01SourceRows))
@@ -481,6 +481,7 @@ data['equipment_standards']['profiles'].append(build_rd01_profile(ROOT,data,BC01
 data['equipment_standards']['profiles'].append(build_br01_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_cc01_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_ab01_profile(ROOT,data,BC01SourceRows))
+data['equipment_standards']['profiles'].append(build_he01_profile(ROOT,data,BC01SourceRows))
 # Profiles may add reviewed source sheets after the initial drawing inventory.
 data['drawing_workspace']['preview_hashes']={sheet['image']:hashlib.sha256((ROOT/sheet['image']).read_bytes()).hexdigest() for profile in drawing_profiles for sheet in profile['sheets'] if sheet['image']}
 dump(ROOT / 'registers/all-in-one-data.json', data)

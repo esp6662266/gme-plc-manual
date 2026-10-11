@@ -1,0 +1,306 @@
+{
+  "source_commit": "abcf31c5030bc7ef8749ed8e869a857f2387a28a",
+  "scope": "Evidence and navigation sources; a hash is not substantive validation of every item in a source.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3325,
+      "sha256": "0bdd77713c49fe21f60de00994be4805db90719857c4326a946bb1b93d15c2c2"
+    },
+    {
+      "path": "VERSION.json",
+      "bytes": 481,
+      "sha256": "5eda2586eb97d69cf158683579043910ad4735dcc731cc7e3ad940985f1adef7"
+    },
+    {
+      "path": ".agents/skills/gme-equipment-rollout/SKILL.md",
+      "bytes": 3997,
+      "sha256": "fb917fe49dbdafed32c7360bc015179d75008a90d8b2ddd8d1dcf68f5100510b"
+    },
+    {
+      "path": "docs/equipment-standard/WORK-STANDARD.md",
+      "bytes": 19003,
+      "sha256": "05a57f4525bc1d59dab35ef841b64b0138a6ff08b10760ade64d9a688ee15e99"
+    },
+    {
+      "path": "docs/equipment-standard/WORK-ITEM-TEMPLATE.md",
+      "bytes": 2318,
+      "sha256": "4239b60b02270cd0db344b6f664395733f2587cf4d81c16ae629886b5a92c586"
+    },
+    {
+      "path": "docs/equipment-standard/INVENTORY.json",
+      "bytes": 114378,
+      "sha256": "720fa0066b926acd519f8aa0746f0c20acf3f02bac5b7a2fa5a8be43b77743dc"
+    },
+    {
+      "path": "all-in-one/registers/priority-equipment.csv",
+      "bytes": 2551,
+      "sha256": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba"
+    },
+    {
+      "path": "all-in-one/registers/equipment.json",
+      "bytes": 102810,
+      "sha256": "7870325dff32bbca90fa34507b301c4aad3347d669fddcd03b910343663996fa"
+    },
+    {
+      "path": "all-in-one/registers/equipment-io.csv",
+      "bytes": 30021,
+      "sha256": "a7a1f27dc453af25b2b729074cac5266d6dd53c0945a6a1a4afe2dd1e9153b6a"
+    },
+    {
+      "path": "all-in-one/registers/equipment-hmi.csv",
+      "bytes": 10186,
+      "sha256": "2cdce600aa0138cc5025022e57d9d61a948afb237f70c70e2d11e8300e73286a"
+    },
+    {
+      "path": "all-in-one/registers/plc-symbols.csv",
+      "bytes": 36712,
+      "sha256": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f"
+    },
+    {
+      "path": "all-in-one/sources/PID_1684n002I.pdf",
+      "bytes": 351856,
+      "sha256": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b"
+    },
+    {
+      "path": "all-in-one/sources/Electrical_Rev2.pdf",
+      "bytes": 9003792,
+      "sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6"
+    },
+    {
+      "path": "all-in-one/sources/Electrical_Can_Decoating_20241118.pdf",
+      "bytes": 4896074,
+      "sha256": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd"
+    },
+    {
+      "path": "all-in-one/sources/hmi_plc_tags.csv",
+      "bytes": 61005,
+      "sha256": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
+    },
+    {
+      "path": "all-in-one/sources/PEData.plf",
+      "bytes": 5156745,
+      "sha256": "647de7ea123daced41c27bec8f81aeb93c712cac714d4754d7da5c528abb016a"
+    },
+    {
+      "path": "all-in-one/sources/GME_20250506.zap18",
+      "bytes": 3217661,
+      "sha256": "00c79b6d986e68298f65b172c1807115bc5d9e450a74fcc989d0796d8d8a4ea8"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/network-map.json",
+      "bytes": 1571837,
+      "sha256": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/identifier-declarations.json",
+      "bytes": 1448909,
+      "sha256": "0f74123ad80664acdeeb10c29f3e1e73a98d76e5d22169723977371a88768944"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0234-FlgNet.xml",
+      "bytes": 1892,
+      "sha256": "4fa899449ab66d4a852be7c21085590393a8ad11c65d265222c3bfcd649dfc64"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0235-FlgNet.xml",
+      "bytes": 1892,
+      "sha256": "1a4913d7a151824d6318edcd43bd4d496bee11b83a75f1d8f5d4cb04dd01b71c"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0239-FlgNet.xml",
+      "bytes": 3728,
+      "sha256": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0240-FlgNet.xml",
+      "bytes": 3736,
+      "sha256": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0241-FlgNet.xml",
+      "bytes": 5058,
+      "sha256": "d421ef5ba9bdcd5aff218c47b1a5ab4663a23b6a0de9fdaa8b2a5dccc3cf15bd"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0389-FlgNet.xml",
+      "bytes": 2930,
+      "sha256": "fbc80d419442a3d23bb9634dadea482d861d8902da079a9023476f66990fab0d"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0390-FlgNet.xml",
+      "bytes": 2930,
+      "sha256": "06aeb71f19e50116b67b7652f88570e464e4dfc07760da8a3739add74ee94193"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0418-FlgNet.xml",
+      "bytes": 3113,
+      "sha256": "1f33185c3b4df4733f388115c337428dce2825352eea1038d32cb0adae057425"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0419-FlgNet.xml",
+      "bytes": 2521,
+      "sha256": "0dcab34ed1a6548574fb500924b6437d753db735b13b85ef108d59df35333fbd"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0420-FlgNet.xml",
+      "bytes": 3155,
+      "sha256": "d99455768914d77d4233ea8fd95281f695674d44a7b9ca23d252e3b68e257a21"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0421-FlgNet.xml",
+      "bytes": 2522,
+      "sha256": "11ba7d6aad03f6518ace22d8e92b718c825a7cc655330a0e6902e1728873af67"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0461-FlgNet.xml",
+      "bytes": 1862,
+      "sha256": "50bdf21c978cb87d2b9048aaeb427dee393365d2dc0ec2661dc6e0c57f91b95c"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0462-FlgNet.xml",
+      "bytes": 5527,
+      "sha256": "056ac8985c21f77541008d49a73fd1ab83fe168249a77320c50f3023942fa217"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0463-FlgNet.xml",
+      "bytes": 3318,
+      "sha256": "ed64a900253f8548cd9e9b41db84bdb323f87f61ff1a03da31e48523dba18b56"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0464-FlgNet.xml",
+      "bytes": 3349,
+      "sha256": "9d4989722de7b5d5bc19dba41c72034e58c4bdd25003601eb77aef35bab029ba"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0485-FlgNet.xml",
+      "bytes": 4417,
+      "sha256": "bb533c3ffb079c544e8072efaba05f720766b474de46cb312853f36cfa47afaf"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0486-FlgNet.xml",
+      "bytes": 4418,
+      "sha256": "ca0f8ee20a2c6afd8ecb974608d6773bbca6a3fd25248f8cb827a3e4e970d5d8"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0487-FlgNet.xml",
+      "bytes": 1501,
+      "sha256": "646f210ede91a079a98aa74f84bb1ea4469c9a29f88e7caee11583d2d115e0c0"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0488-FlgNet.xml",
+      "bytes": 1500,
+      "sha256": "525cbb9abf4f8ee646850887c7cfd411c4abec39f0ceebd02b79860b81d8fb1e"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0555-IdentXmlPart.xml",
+      "bytes": 35593,
+      "sha256": "46c36333e249dd775c1db94a1f6e80a36cf1a5a9c998b7d0980ae01d862901e6"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0558-IdentXmlPart.xml",
+      "bytes": 6203,
+      "sha256": "45d49d53b6b41312960bb2a329663e87d8803e28d7832308424a6bf5091e6d1b"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0599-IdentXmlPart.xml",
+      "bytes": 6642,
+      "sha256": "32a693fe12134febbd9f5c7da10c3469ef4d5b164ab8b6bd9ea3867c358936c1"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0601-IdentXmlPart.xml",
+      "bytes": 10447,
+      "sha256": "04c9481f7381284de689ef5c7ff40d7aea93f2004cd877a4e4f27e47baa6d862"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0602-IdentXmlPart.xml",
+      "bytes": 18283,
+      "sha256": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0604-IdentXmlPart.xml",
+      "bytes": 62627,
+      "sha256": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0605-IdentXmlPart.xml",
+      "bytes": 1809,
+      "sha256": "0ff6e2228dbfbc9f657359fe1055083ce621365084ea24c4160e4969b3eaac8b"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0606-IdentXmlPart.xml",
+      "bytes": 2186,
+      "sha256": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0627-IdentXmlPart.xml",
+      "bytes": 14186,
+      "sha256": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0629-IdentXmlPart.xml",
+      "bytes": 21675,
+      "sha256": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0635-IdentXmlPart.xml",
+      "bytes": 57411,
+      "sha256": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0656-IdentXmlPart.xml",
+      "bytes": 3533,
+      "sha256": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0657-IdentXmlPart.xml",
+      "bytes": 66366,
+      "sha256": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0658-IdentXmlPart.xml",
+      "bytes": 26539,
+      "sha256": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0661-IdentXmlPart.xml",
+      "bytes": 3984,
+      "sha256": "90672199fee355011f581d3287046894772f3f3b4cb78bbe0dd0d71bd488ac93"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0662-IdentXmlPart.xml",
+      "bytes": 8474,
+      "sha256": "1838040bfee800fdb3f13b126eaf69a9d178b17cecc0d59ae03e9185216a48a5"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0663-IdentXmlPart.xml",
+      "bytes": 4674,
+      "sha256": "d3980b88d3cd3e49854439d0778c58ed131bae46a6bc3e65ab70e81f766ac03d"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0664-IdentXmlPart.xml",
+      "bytes": 5745,
+      "sha256": "68c614e1c6a7fcadeee3f0b2ddc54910c3b337e66074d7a113b9cbc834c271ed"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0675-IdentXmlPart.xml",
+      "bytes": 2285,
+      "sha256": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0676-IdentXmlPart.xml",
+      "bytes": 89237,
+      "sha256": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0677-IdentXmlPart.xml",
+      "bytes": 4717,
+      "sha256": "69922fcc5c67d00cdf1c5f712efa3db7638d20c88318d35fe6196467796ab1e3"
+    },
+    {
+      "path": "all-in-one/sources/decoded-original/0678-IdentXmlPart.xml",
+      "bytes": 16877,
+      "sha256": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382"
+    }
+  ]
+}
