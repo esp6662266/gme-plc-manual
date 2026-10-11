@@ -1,0 +1,551 @@
+{
+  "version": "1.13.0",
+  "target": "MV01/P19",
+  "baseline_commit": "abcf31c5030bc7ef8749ed8e869a857f2387a28a",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "source_locations": 494,
+  "source_hashes": {
+    "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+    "registers/construction-reference.json": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+    "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+    "registers/hmi-transfer.json": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+    "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+    "registers/regulation-manual.json": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+    "registers/requirements-audit.json": "163bfadb6400ad916d3ac84a9a97bd3e743ba41c131035f5c3acee06af3bdd40",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+    "registers/vendor-reference-review.json": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/decoded-original/0014-FlgNet.xml": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+    "sources/decoded-original/0030-FlgNet.xml": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "sources/decoded-original/0047-IdentXmlPart.xml": "2e53bb895dd1ad2a74efaeb1ef16dfd61e62b1b2d7aa34cec8612f1b9cb0928e",
+    "sources/decoded-original/0149-FlgNet.xml": "bc2519cdad49a7268006b194e8e5e1160744ff221f04b83e710f31f57bc617f9",
+    "sources/decoded-original/0159-FlgNet.xml": "5598abbad86ed26fa8dd17fc3eca3e1c0b7941a2798db6ae1e2472a7ca448d2a",
+    "sources/decoded-original/0291-FlgNet.xml": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+    "sources/decoded-original/0342-FlgNet.xml": "9ef93abad16cc055509ef98c388417c716cb03d23cb02aed6d95888beb43bef8",
+    "sources/decoded-original/0350-FlgNet.xml": "3f426a4ba9455160b8113df968b1052752a7b72cdfca8e57bdfd466340d691ff",
+    "sources/decoded-original/0351-FlgNet.xml": "1448cd179747074ae5ac3647c52e47950d18e0d90fa2f1cb155dbb24af50a7f6",
+    "sources/decoded-original/0352-FlgNet.xml": "03e2d68dda289fcb7e7738c2f52e675890b252f5b526cab1ec2049323ab30d75",
+    "sources/decoded-original/0354-FlgNet.xml": "626eb4d21b9409ae50ed32436972c8a4284fcc029c10db5c5529463544b2ffbd",
+    "sources/decoded-original/0367-FlgNet.xml": "7e1a0c6776177463d5ffe7307a991484f97e8e5c5863f00d9597950458482bc5",
+    "sources/decoded-original/0397-FlgNet.xml": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+    "sources/decoded-original/0403-FlgNet.xml": "77b03e38aa857ac8dd404f2f66a56256939b4e7924b41334a7981b86089c1e6b",
+    "sources/decoded-original/0477-FlgNet.xml": "e7b5b0cb95c60d1112081f6129a3127f8413e1b1d2a4c67d0e203d36ea0a711a",
+    "sources/decoded-original/0480-FlgNet.xml": "c14d2fee14b38b7c597edb46626676f0cf550b5831668884cb2fac341b559273",
+    "sources/decoded-original/0506-FlgNet.xml": "71b9ac920eb891ec8965506c40ae3f1d050a2f8a899f79f6afdc81f669717fbe",
+    "sources/decoded-original/0512-FlgNet.xml": "9437caf0fc524d25925ca5beb3c3bf1a2a0709a478a2981e42e5abe1e4471795",
+    "sources/decoded-original/0563-IdentXmlPart.xml": "86cf35b6baebc079cb5a092baf53ec3364c377ea7318eb263ab69c8b4550b4ad",
+    "sources/decoded-original/0570-IdentXmlPart.xml": "9fed133006458c3b43b1d5f2c15107a5a86b4fb7cdbaf3743bf88f0e5a105495",
+    "sources/decoded-original/0571-IdentXmlPart.xml": "4a9deeb65a22e497e284fe6d98929e1d201ef5939e4aeca5805b4eb7e007d398",
+    "sources/decoded-original/0572-IdentXmlPart.xml": "5ecd18f84e12d702bb46f759b23994dacfa2d97d50fe51e766ca0cf43f75bb4c",
+    "sources/decoded-original/0573-IdentXmlPart.xml": "a22cc24a974e0c792f32e356a14b277a847e2bb204c91bce01c37d1714ddb56c",
+    "sources/decoded-original/0611-IdentXmlPart.xml": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+    "sources/decoded-original/0612-IdentXmlPart.xml": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+    "sources/decoded-original/0617-IdentXmlPart.xml": "10bcf85169cb2512f55acadaef299a3d46b4b4cecd88032d739cfeba23e94aa9",
+    "sources/decoded-original/0618-IdentXmlPart.xml": "0c6762de9cdf0e294317f7463bea3d8e6df5673d333d9b1826ebd17a7ded044c",
+    "sources/decoded-original/0619-IdentXmlPart.xml": "85694bb5b696e31e6a1217431112e5b750516c4f94078d6e127d4394a8b80456",
+    "sources/decoded-original/0620-IdentXmlPart.xml": "da97226a148a1a8babaea67db412761a718b7e7537212b7807e8ea27d000d2d3",
+    "sources/decoded-original/0623-IdentXmlPart.xml": "4acd00406ea92466169e57e59fc90b0da4d9ec55fd19e2e96c9556e939cb83a6",
+    "sources/decoded-original/0624-IdentXmlPart.xml": "24607c0827fbde428bccf8637ef4ae490798a69a7c2f3b87861d0749082d367a",
+    "sources/decoded-original/0626-IdentXmlPart.xml": "a9d7fbea345eca70325a8c2e44058c23e96add1b7207eabbb09445118b18188b",
+    "sources/decoded-original/0627-IdentXmlPart.xml": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "sources/decoded-original/0628-IdentXmlPart.xml": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "sources/decoded-original/0629-IdentXmlPart.xml": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "sources/decoded-original/0635-IdentXmlPart.xml": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457",
+    "sources/decoded-original/0636-IdentXmlPart.xml": "ec3d79f03e2748f8def4409ad676a97b98e28b9d8e68f6a64b3fe894466832ca",
+    "sources/decoded-original/0637-IdentXmlPart.xml": "3fb68f57dbe2a877c4ad5aa1b3316810cf84958f2d13b5b1d7d321e0915271c7",
+    "sources/decoded-original/0665-IdentXmlPart.xml": "50e88d5f50f555151b35cfb17225e766c34ef6b490bd3a48e0a4e335fd17e3dd",
+    "sources/decoded-original/0667-IdentXmlPart.xml": "ef924ced3e0e2b17e9c8440eb4946cd50d55df644c6ec24a1c4fd288fa6b73a3",
+    "sources/decoded-original/0668-IdentXmlPart.xml": "2248e994a0a02cd37c5c5edaca199b3421068feea91e2e8616560e814ef9f6ed",
+    "sources/decoded-original/0669-IdentXmlPart.xml": "754c513339d00918717010047b8f9d865d8674c6978a6f86c6f1fa5d683506e2",
+    "sources/decoded-original/0670-IdentXmlPart.xml": "e56f3f0c4f2a86dd18578dedd4453915c2a51cd25e2cd9feced8538171a00841",
+    "sources/decoded-original/0671-IdentXmlPart.xml": "26cb51706305c372d512c19770648bb0dbb74df8bd2277b1e0da1b8c88cca293",
+    "sources/decoded-original/0672-IdentXmlPart.xml": "6bfc2ba142d6270c39eb1f13b2886204865af6d46eadc5f410c26981b8da9222",
+    "sources/decoded-original/0673-IdentXmlPart.xml": "450ef74e2d2fb65dfbb5f6bad9e28ccacf6bf0caf64327a0e20aff84d6e40f58",
+    "sources/decoded-original/0674-IdentXmlPart.xml": "4770702f519bacda69202bb2f7733d983074bda90964360c238f990d9d08fd84",
+    "sources/decoded-original/0675-IdentXmlPart.xml": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+    "sources/decoded-original/0676-IdentXmlPart.xml": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+    "sources/decoded-original/0677-IdentXmlPart.xml": "69922fcc5c67d00cdf1c5f712efa3db7638d20c88318d35fe6196467796ab1e3",
+    "sources/decoded-original/0678-IdentXmlPart.xml": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+    "sources/decoded-original/0679-IdentXmlPart.xml": "d0fcb93e188c8ae2ae0c0423f0b78b129bf3c168e33a6855262d34b8682b9b56",
+    "sources/decoded-original/0680-IdentXmlPart.xml": "fd551ad5d47bbd66c6bcdcc1949aaddf68cc086a3ddf6fb337adc767954c2b95",
+    "sources/decoded-original/0692-IdentXmlPart.xml": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "sources/decoded-original/0694-IdentXmlPart.xml": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "sources/live_index.json": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1"
+  },
+  "source_bundle_sha256": "726b715afc5d199b7798c38e6b7534703c42ce29b43de700222fbc4e85e76d15",
+  "preservation": {
+    "original_source_files": 712,
+    "raw_register_files": 89,
+    "common_record_logic_and_registers_unchanged": true,
+    "existing_profile_content_unchanged": 10,
+    "simulator_frozen_files": 5,
+    "source_locations": 494,
+    "hashes": 74,
+    "bundle": "726b715afc5d199b7798c38e6b7534703c42ce29b43de700222fbc4e85e76d15",
+    "immutable_package_source_assets": 730
+  },
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "screens": 2068,
+    "matrix": [
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          },
+          {
+            "count": 90,
+            "key": "P08"
+          }
+        ],
+        "views": 316,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 82,
+            "key": "P09"
+          },
+          {
+            "count": 142,
+            "key": "P05"
+          },
+          {
+            "count": 142,
+            "key": "P07"
+          },
+          {
+            "count": 88,
+            "key": "P19"
+          }
+        ],
+        "views": 454,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 390
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          },
+          {
+            "count": 90,
+            "key": "P08"
+          }
+        ],
+        "views": 316,
+        "width": 390
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 82,
+            "key": "P09"
+          },
+          {
+            "count": 142,
+            "key": "P05"
+          },
+          {
+            "count": 142,
+            "key": "P07"
+          },
+          {
+            "count": 88,
+            "key": "P19"
+          }
+        ],
+        "views": 454,
+        "width": 390
+      }
+    ],
+    "source_pairs": [
+      {
+        "hash": "gme-mv01-part-143",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 0,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "143\tCoil\t\toperand = Start Open MV-01",
+        "signal": "열기 방향 명령 · %Q2.4 / start open mv-01",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-part-156",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 1,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "156\tCoil\t\toperand = Start Close MV-01",
+        "signal": "닫기 방향 명령 · %Q2.5 / start close mv-01",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-part-594",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 2,
+        "lad": "http://127.0.0.1:8877/networks/network-1226.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "594\tContact\toperand\toperand = Inputs.MV01 Run_Opening",
+        "signal": "열기 접촉기 응답 · %I3.2 / mv01_fbk_opening",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-part-590",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 3,
+        "lad": "http://127.0.0.1:8877/networks/network-1226.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "590\tContact\toperand\toperand = Inputs.MV01 Run_Closing",
+        "signal": "닫기 접촉기 응답 · %I3.3 / mv01_fbk_closing",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-part-256",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG45.png",
+        "index": 4,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=46",
+        "row": "256\tContact\toperand\toperand = Inputs.MV01 Open",
+        "signal": "열림 끝단 위치 · %I8.1 / mv01_open",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-part-270",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG45.png",
+        "index": 5,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=46",
+        "row": "270\tContact\toperand\toperand = Inputs.MV01 Close",
+        "signal": "닫힘 끝단 위치 · %I8.2 / mv01_close",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-wire-75",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG45.png",
+        "index": 6,
+        "lad": "http://127.0.0.1:8877/networks/network-1756.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=46",
+        "row": "75\tPart 23.CountValue ↔ ORef 47 (fill_unit1.ACT_CNTV0)",
+        "signal": "엔코더 위치 채널 · 주소 미확정 · ",
+        "width": 1280
+      },
+      {
+        "hash": "gme-mv01-part-143",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 0,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "143\tCoil\t\toperand = Start Open MV-01",
+        "signal": "열기 방향 명령 · %Q2.4 / start open mv-01",
+        "width": 390
+      },
+      {
+        "hash": "gme-mv01-part-156",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 1,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "156\tCoil\t\toperand = Start Close MV-01",
+        "signal": "닫기 방향 명령 · %Q2.5 / start close mv-01",
+        "width": 390
+      },
+      {
+        "hash": "gme-mv01-part-594",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 2,
+        "lad": "http://127.0.0.1:8877/networks/network-1226.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "594\tContact\toperand\toperand = Inputs.MV01 Run_Opening",
+        "signal": "열기 접촉기 응답 · %I3.2 / mv01_fbk_opening",
+        "width": 390
+      },
+      {
+        "hash": "gme-mv01-part-590",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG44.png",
+        "index": 3,
+        "lad": "http://127.0.0.1:8877/networks/network-1226.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=45",
+        "row": "590\tContact\toperand\toperand = Inputs.MV01 Run_Closing",
+        "signal": "닫기 접촉기 응답 · %I3.3 / mv01_fbk_closing",
+        "width": 390
+      },
+      {
+        "hash": "gme-mv01-part-256",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG45.png",
+        "index": 4,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=46",
+        "row": "256\tContact\toperand\toperand = Inputs.MV01 Open",
+        "signal": "열림 끝단 위치 · %I8.1 / mv01_open",
+        "width": 390
+      },
+      {
+        "hash": "gme-mv01-part-270",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG45.png",
+        "index": 5,
+        "lad": "http://127.0.0.1:8877/networks/network-1702.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=46",
+        "row": "270\tContact\toperand\toperand = Inputs.MV01 Close",
+        "signal": "닫힘 끝단 위치 · %I8.2 / mv01_close",
+        "width": 390
+      },
+      {
+        "hash": "gme-mv01-wire-75",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG45.png",
+        "index": 6,
+        "lad": "http://127.0.0.1:8877/networks/network-1756.html",
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=46",
+        "row": "75\tPart 23.CountValue ↔ ORef 47 (fill_unit1.ACT_CNTV0)",
+        "signal": "엔코더 위치 채널 · 주소 미확정 · ",
+        "width": 390
+      }
+    ],
+    "search": [
+      {
+        "payloadImages": 0,
+        "resultText": "6개 일치 항목",
+        "search": "ZT02"
+      },
+      {
+        "payloadImages": 0,
+        "resultText": "7개 일치 항목",
+        "search": "150"
+      },
+      {
+        "payloadImages": 0,
+        "resultText": "7개 일치 항목",
+        "search": "2000"
+      },
+      {
+        "payloadImages": 0,
+        "resultText": "2개 일치 항목",
+        "search": "SetCountValue"
+      },
+      {
+        "payloadImages": 0,
+        "resultText": "2개 일치 항목",
+        "search": "CH0.A"
+      },
+      {
+        "payloadImages": 0,
+        "resultText": "0개 일치 항목",
+        "search": "<img src=x onerror=alert(1)>"
+      }
+    ],
+    "bad_route_returns_overview": true,
+    "wide_body": true,
+    "saved_reopened": true,
+    "notes_before_restore": 3,
+    "notes_after_restore": 4,
+    "foreign_records_preserved": 2,
+    "unknown_fields_signals_drafts_preserved": true,
+    "zero_and_blank_distinct": true,
+    "compare_zero_to_one": true,
+    "comparison_differences": 3,
+    "concurrent_change_blocked": true,
+    "quota_failure_preserves_latest_and_draft": true,
+    "stale_report_print_calls": 0,
+    "fresh_report": {
+      "calls": 1,
+      "printing": true
+    },
+    "restore_workflow": "actual unified file chooser, foreign conflicts kept, only one new MV01 selected and committed",
+    "pdf": {
+      "file": "gme-mv01-v1.13.0-a4.pdf",
+      "sha256": "df35e8b5013544b8a0b12a0e2d724e41d81e6c2168ecc50cf4c76c1377db0d60",
+      "bytes": 386585,
+      "pages": [
+        {
+          "page": 1,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "chars": 897
+        },
+        {
+          "page": 2,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "chars": 1608
+        },
+        {
+          "page": 3,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "chars": 596
+        }
+      ],
+      "all_pages_visually_reviewed": true,
+      "saved_source_bundle": "726b715afc5d199b7798c38e6b7534703c42ce29b43de700222fbc4e85e76d15"
+    },
+    "cleanup": {
+      "drafts": null,
+      "notes": null,
+      "printPatch": "undefined",
+      "printing": false,
+      "storagePatch": "undefined",
+      "logs": []
+    }
+  },
+  "qa_directory": "/tmp/gme-mv01-qa",
+  "draft_hashes_matched": 78,
+  "simulator_frozen_files": 5,
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "operational_record_writes": 0,
+  "PLC_field_SEJIN_changes": 0,
+  "next": "MV03/P20 received, independent review pending",
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T08:09:26.388263+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.13.0.zip",
+    "version": "1.13.0",
+    "files": 2801,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 53363097,
+    "sha256": "7b97a40d00b6b9a99924806a72b30d0ce7d488ac57745ba26abbc13718882bd7",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "node_tests": {
+    "passed": 8,
+    "node": "24.19.0",
+    "NETLIFY_build": "passed",
+    "files": 2830
+  }
+}

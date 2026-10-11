@@ -1,3 +1,7 @@
+# MV01 v1.13.0 통합·검증 진행 — 2026-10-11
+
+PV02 v1.12.0 실제게시완료. MV01(P19) 7영역·7원본쌍·개폐반대출력/끝단차단·150ms응답/±2000명령누적 공통FAULT·엔코더리셋·HSC4결속/19미결속·CONT_S9미결속·HMI4FALSE/10미해석·ZT02 A/B펄스대시공AI를 연결한다. Dots고정78해시·15고유/공통XML와선언·PDF9쪽 독립대조. 기존10설비/712원본·89대장/미확정/운영기록/중지5보존. UI/기록/PDF/패키지/게시검증진행중. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV03(P20) 수신초안.
+
 # v1.12.0 PV02 — 실제 게시 완료
 
 PV02 v1.12.0 실제게시완료: feature a2c4d601cce2ac02c40a399a5e31a6a2fa5bbde4, GitHub v1.12.0 ZIP53268558bytes/2801파일/SHA8adc5ef8e2bb83c7d0e071c4c50bc8cc5b0a948b848925361fcaa32fc4000582 일치. Netlify6acb3d916af9a700081c73cb ready/동일commit/2026-10-11T07:41:31.900Z. 새clone8테스트/BC01/설비/NETLIFYbuildpassed·Git변경0. 게시61파일40exact+21HTML동등·실제P07 71항목/FG71PDF72/Part724강조/통합기록0/warnerror0. 기존9/원본730/공통기록/중지5보존. 다음MV01 독립검토·통합, Dots MV03조사. TIA/CPU/현장미수행·시뮬레이터/PLC/SEJIN변경0. 전체goal active.

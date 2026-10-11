@@ -477,3 +477,63 @@ def build_pv02_profile(root,data,source_rows):
             timer_title='Tag84/85/86/87 T107~110 · 네 위치MEM 감시7초',related_title='startup·Enable Reset/Set·RD01/팬·HMI 미해석',related_links=[['startup405','networks/network-405.html'],['Enable1843/1844','networks/network-1843.html'],['RD01 Reset1936','networks/network-1936.html'],['HMI1216','networks/network-1216.html']],
             field_title='EV·공압·A/B 위치·LS 번호/케이블 상충과 현장 경계',alarm_recovery='원인 raw/Inputs DB·위치MEM·요청/최종Q·EV/실제게이트·알람Reset·MC04/RD01/팬연동을 같은 시각 증거로 구분합니다. 출력0/초기닫힘기억만으로 물리복구를 확정하지 않습니다.',
             search_examples='Q5.4, Q5.5, I9.4, I10.0, LS25, CORE26, M80.6, S5T#300MS, S5T#800MS, S5T#7S, KF_KT, W7')))
+
+def build_mv01_profile(root,data,source_rows):
+    spec=next(p for p in json.loads((root/'registers/control-spec.json').read_text())['specifications'] if p['id']=='MV01')
+    regulation=next(p for p in json.loads((root/'registers/regulation-manual.json').read_text())['loops'] if p['id']=='MV01')
+    control=json.loads(json.dumps(regulation))
+    control['chain'] += [
+        'P19/MV01은 HE01 계통 온도제어 댐퍼 후보·M20·LS23/24·ZT02로 연결합니다. P&ID 2.2kW440V와 OEM M20 2.2kW4.31A는 도면값이며 실물 동일성·밸브/감속기/커플링 소유는 확인 전입니다.',
+        '1702/0342 ON226의 요청Reset 가지와 ON·!FAULT242의 출력 가지를 구분합니다. Open요청 R119는 Open230 OR Close232 OR Auto234,Close요청 R126은 Inputs.Close236 OR Open238 OR Auto240입니다. 현재 요청 writer/호출순서는 미확정입니다.',
+        'Q2.4 Coil143: ON·!FAULT→[(Auto244 AND UP_PID246) OR Open248]→(MV WORK PULSE250 OR ON252)→!Q2.5 Contact254→!Inputs.Open256→!RESET_ENC23. 0617 RID1/NID1 UID172·180은 실제 ON M0.0 선언이며 원시 direct_rule의 불투명 표기는 보존합니다.',
+        'Q2.5 Coil156: ON·!FAULT→[(((Auto258 AND DOWN_PID260) OR Close262) AND (Pulse264 OR ON266)) OR RESET_ENC273(W276)]→!Q2.4 Contact268→!Inputs.Close270. 리셋은 닫힘요청 병렬가지이며 실제 닫힘/원점완료가 아닙니다. Pulse OR ON을 항상 필수 펄스조건으로 해석하지 않습니다.',
+        '1703/0354 RESET_ENC21·Inputs.Close22→Move23(en W38,IN DInt0 W39,out W41)→Memory_encoder.MV01.NewCountValue. ENO W40→!SetCountValue Contact24 W42→Coil25 W44→R26 RESET_ENC W46. S=S NewCount와 S=IO SetCount 선언을 임의 DB주소로 환산하거나 미해석 ENO를 실행결과로 확정하지 않습니다.',
+        '1712/0350 ON·!Tag154→SD813 Tag155 T79 S5T#200MS,Tag155→SD818 Tag154 T78 S5T#2S,!Tag155→Coil823 MV WORK PULSE M10.0. PID PULSE_TM500MS/BREAK_TM1S와 이 공통 주기를 합치지 않습니다.',
+        '1713/0351 Tag157 T119/Tag156 T118의10ms SD1225/1230→!Tag1571645→PBox1235 M50.7→ON1647→Q2.4 Add1248 WorkData.W33 DB6W66+1 및Move1254 W34=0;Q2.5 Sub1263 W34 DB6W68−1 및Move1269 W33=0. 명령 누적과 실제 ZT02카운트는 다른 값이며 실제 시간/스캔을 추정하지 않습니다.',
+        '1714/0352 ON1943·ON1945→Gt1592 W33>2000→S1598 Allarm.MV01_FAULT DB3X4.7·Move1601 W33=0. Lt1606 W34<−2000→S1612 같은FAULT·Move1615 W34=0. 엄격비교 두 원인이 하나의 래치에 합쳐지며 카운트0 기록은 고장Reset이 아닙니다.',
+        '1226/0159 ON513·ON515→[(Qopen517 AND !Inputs.RunOpening594) OR (Qclose519 AND !Inputs.RunClosing590)] OR242→SD249 Tag92 T4 S5T#150mS(0571 RID77,NID1 UID368)→Contact523→S254 같은FAULT. 접촉기 응답이지 모터 회전/끝단 감시가 아닙니다. ON513·RESET_ALLARM575·자기FAULT577→R342에는 정상응답 복귀조건이 직렬로 없습니다.',
+        '1756/0506 !Simulation21·EM_OK22(I19.4)→HSC Instruction330 Call23/Instance24 encoder15. 23핀 중4핀 SwGate/ErrorAck/EventAck/CountValue만 결속되고19핀은 ORef에 RefId없음. SetCountValue W60/ORef32를1703의동명변수와 임의 연결하거나 FALSE/0으로 채우지 않습니다.',
+        '1762/0512 EM_OK1113·!raw MV01_Close1115 I8.2→gate fill_unit1 Coil1025,Add1030 Encoder.CH00 DInt DB8D0+ACT_CNTV0→Local CNT_Act_0,ENO→Div1034 DInt100→CNTV0_100,ENO→Move1038 Int Encoder.CH00_10 DB8W36. 인코더 모델/하드웨어 채널 주소·물리단위/현재카운트는 미확정입니다.',
+        '같은EM_OK·!gate1117→Move1047 CH00_10=Int0와Move1052 CH00에 INT#0 literal327(0675) 병렬. DInt 대상/Int 상수의 원문을 보존합니다. 같은EM_OK→Signal linearization CRef1059(0672 FC5),IN0=ON,Analog=CH00_10,Coeff=DB4W206,Zero=DB4W204,Out=Pot_MV01 DB1W148,OFR=DB3X24.6.',
+        '1658/0291 IN0·Analog Int>−1382·Analog≤32767→Convert DInt164/167→Add170→Convert Coeff174→Mul177→Div181 DInt28000→Move185 Out Int. 범위 밖 >32767 OR≤−1382→Move193 −9999→ENO→ordinary Coil23 OFR. Int 상한을 고려하고 OFR를고장래치로확대하지않습니다.1659/0014 !IN0→Move162 Out=0.',
+        '원본11/0477 CONT_S366 en ON463,Instance412 PIDMV01 DB21(0665 RID71). COM_RST=!Flag.MV01_Auto DB2X7.2,SP/PV=0669 block Local Real 변수입니다. 색인STL10의 ITD/DTR는 백업검색텍스트이며 네이티브 명령/줄바꿈/주석·현재값 검증을 대신하지않습니다.',
+        'LMNR_HS=(ON·Inputs.Open) OR (ON·OFF·Pot_MV01≥100 Ge352);LMNR_LS=(ON·Inputs.Close) OR (ON·OFF·Pot_MV01≤10 Le361). OFF는 비반전 변수이며 현재상태 가정 금지.9핀 LMNS_ON/LMNUP/LMNDN/PVPER_ON/PV_PER/PV_FAC/PV_OFF/PV/ER 미결속;QLMNUP/DN만 M12.0/12.1 명령으로 연결합니다.',
+        '8/0480 Data.TC03_SETPOINT Int DB1W50<200 Lt22→Move32 같은값200.0667 RID137 NID16 UID30/36·0668 RID45 UID29/37 Write. 원본 자동보정 분기이지 현장 보호값 변경이나 현재 설정 권고가 아닙니다.',
+        '404/0149 ON337 W338→S293 Flag.MV01_Auto(0563 RID42,NID4 UID315) startup 기억.1070/0397 Move27 IW2→Inputs DB13W2(W31/W32)·Move43 IW8→DB13W8(W55/W57),각 선행 ENO 직렬. raw I3.2/3.3/I8.1/8.2와 처리DB입력 및정상극성/실제스캔을구분합니다.',
+        '1190/0367 HMI_MotorizedValve14핀:0626 RID20/48 FALSE 4핀,나머지10실인수 미해석. CSV9태그의 DB11X18.0~18.4·DB2X3.3/3.4/7.2·RESET_ENC DB41X50.5를 physicalQ2.4/Q2.5나FAULT DB3X4.7과 동일주소로대체하지않습니다. 현재화면/이벤트/Reset권한 미확정입니다.',
+        '1613/0030 CRef21 Recipes ENO W32→CRef23 HMI ENO W33→CRef25 HMI Output ENO W42→NOT Simulation37 M180.0→HMI Inputs CRef28.en. 정적호출경계이며 시뮬레이터 실행/행동검증과 현재CPU확인은 하지않습니다.'
+    ]
+    control['repair'] += [
+        'FG138 MOD14 term25 Q2.4→44KM2 NC31/32→44.1→44KM1 A1/A2;term26 Q2.5→44KM1 NC31/32→44.2→44KM2. 공통 A2→44.3→44QM1보조→44.4→XS29→44QS1보조→XS30→−0Vdc10.6. QM/QS 보조 번호는 원본에 명시되지 않아 채우지 않습니다.',
+        '3상440V60Hz8.3L1/L2/L3→44QM1 조정범위3.5~5A→44KM1/2역상→XM44U1/V1/W1→44QS1→M20 2.2kW4.31A PE. 범위와 실제보호설정은 별개입니다. +24V→KM1/2 보조13/14→E3.2/3.3→FG119 MOD8term33/34는접촉기피드백.',
+        'FG45 +24V→X1 112(5×20/2A)→45.3→LS23 NC11/12→113 I8.1→FG124 MOD10term2;114→45.4→LS24 NC11/12→115 I8.2→term3. 원본NC심벌·PLC반전·실물정상극성을구분합니다.',
+        'ZT02 B+24→107/37.1→FG144term9;C0V→108/37.2→term10;D→109/45.1→term1 CH0.A,E→110/45.2→term2 CH0.B;shield111/45SCH1접지. CH0.Nterm3 미표시·E20.0/.1/.2 SPARE는 카운트주소가 아닙니다.',
+        '시공PDF51 No1_11 =FLA+MV01-M20A CR→M20GAC/CV4core1.5spare0 LEN49. PDF57 shared7_1 HE01-FLO2TB1A CVV25G1spare8;7_8/7_9 LS23A/24A DC2C1,E110/120 LEN5;7_10 ZT02A AI4S1 E330 LEN6. OEM A/B펄스와 시공AI 상충·개별심선/준공승인/실물은 미확정입니다.'
+    ]
+    control['pending'] += ['HSC19미결속핀·SetCountValue동명실인수·HW TM채널/분해능/방향/단위','150ms감시/10ms명령누적·실제스캔·FAULT세원인과복구','HMI10미해석핀/DB11내부멤버·이벤트·Reset권한','44QM1실제설정·QM/QS보조단자·접촉기/모터/댐퍼실물·OEM↔시공심선']
+    control['native']=sorted(set(control['native']+[404,1070,1190,1226,1613,1658,1659,1703,1712,1713,1714,1756,1762]))
+    pairs=[dict(signal=s,network=n,uid=u,label=l,boundary='명령/접촉기응답/끝단/엔코더를 구분합니다. 도면번호·정상극성·전달·HW TM채널/실물/현재CPU/현장복구는 확인전입니다.') for s,n,u,l in [
+        ('열기 방향 명령',1702,'143','Q2.4 최종열기 명령'),('닫기 방향 명령',1702,'156','Q2.5 최종닫기 명령'),
+        ('열기 접촉기 응답',1226,'594','Inputs.MV01 RunOpening 부정접점'),('닫기 접촉기 응답',1226,'590','Inputs.MV01 RunClosing 부정접점'),
+        ('열림 끝단 위치',1702,'256','Inputs.MV01_Open 부정접점'),('닫힘 끝단 위치',1702,'270','Inputs.MV01_Close 부정접점'),
+        ('엔코더 위치 채널 · 주소 미확정',1756,'75','HSC CountValue 출력/미결속19핀')]]
+    pairs[-1]['kind']='wire'
+    extra=[];mapping=json.loads((root/'sources/decoded-original/network-map.json').read_text())
+    for n in [8,11,1190,1658,1659,1702,1703,1712,1756]:
+        m=next(x for x in mapping if x['document_id']==n);xml=ET.parse(root/'sources/decoded-original'/m['xml_file']).getroot();ns={'s':xml.tag.split('}')[0][1:]}
+        extra.extend((n,'part',p.get('UId')) for p in xml.findall('s:Parts/s:Part',ns));extra.extend((n,'wire',w.get('UId')) for w in xml.findall('s:Wires/s:Wire',ns))
+    for n,parts in [(404,'337 293'),(1070,'27 43'),(1613,'37'),(1226,'513 515 517 594 519 590 242 249 523 254 575 577 342'),(1713,'1639 1641 1225 1643 1230 1645 1235 1647 1649 1248 1254 1651 1263 1269'),(1714,'1943 1945 1592 1598 1601 1606 1612 1615'),(1762,'1113 1115 1025 1030 1034 1038 1117 1047 1052')]:
+        m=next(x for x in mapping if x['document_id']==n);xml=ET.parse(root/'sources/decoded-original'/m['xml_file']).getroot();ns={'s':xml.tag.split('}')[0][1:]};ids=set(parts.split());extra.extend((n,'part',p)for p in ids)
+        extra.extend((n,'wire',w.get('UId'))for w in xml.findall('s:Wires/s:Wire',ns)if any(e.get('UId')in ids for e in w))
+    extra += [(1070,'wire',p)for p in ['31','32','55','57']]+[(1613,'wire',p)for p in ['32','33','42','43','44']]+[(1762,'wire',p)for p in ['1107','1108','1109','1110','1111','24']]
+    return build_static_profile(root,data,source_rows,dict(catalog_id='MV01',priority_key='P19',type='motorized_valve',control_reference=control,source_pairs=pairs,extra_locations=extra,
+        extra_sources=['sources/live_index.json']+['sources/decoded-original/'+f+'-IdentXmlPart.xml'for f in ['0563','0570','0571','0572','0573','0611','0612','0617','0618','0619','0620','0623','0624','0626','0627','0628','0629','0665','0667','0668','0669','0670','0671','0672','0673','0674','0675','0676','0677','0678','0679','0680','0692','0694']],
+        internal_names=['ON','OFF','UP MV01 PID','DOWN MV01 PID','MV WORK PULSE','Flag.MV01_Auto','Flag.MV01_Open','Flag.MV01_Close','HMI_DB.Reset_ENC_MV01','Data.Pot_MV01','WorkData.W33','WorkData.W34','Memory_encoder.MV01.NewCountValue','Memory_encoder.MV01.SetCountValue'],
+        related_alarm_boundary='FAULT DB3X4.7 하나에150ms접촉기응답실패와명령누적 >2000/<−2000 두원인이합쳐집니다. Reset은응답정상조건을추가하지않습니다. 위치환산OFR DB3X24.6 ordinaryCoil·PID9미결속·HSC19미결속·HMI10미해석은별도입니다. 실제회전/댐퍼이동/원점/현장복구미확정.',
+        presentation=dict(identity_title='온도제어 댐퍼·M20·LS23/24·ZT02 실물 식별',identity_pending='HE01/TC03 계통 후보·명판/감속기/댐퍼/공유TB·현재실물미확정',
+            oem_baseline='Electrical_Rev2.pdf FG44/45/119/144 개정란공란 DATE27.05.2024;FG124/138 Rev2 17.03.2025. M20 2.2kW4.31A·440V60Hz·QM범위3.5~5A 도면값,실제설정미확정',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf PDF51/57·24.11.11firstdraft. M20 CV4core1.5·HE01-FLO2TB1A shared25G1·LS23/24 DC2C1·ZT02 AI4S1 대OEM A/B펄스;개별심선/준공미확정',
+            control_title='PID·개폐 차단·엔코더 리셋·명령 누적 소유',control_links=[['최종출력1702','networks/network-1702.html'],['교정1703','networks/network-1703.html'],['HSC1756','networks/network-1756.html'],['CONT_S11','networks/network-11.html']],
+            timer_title='Tag92 T4 · 접촉기 응답150ms와명령누적고장',related_title='HSC/선형환산OFR·PID/HMI핀·startup·복수쓰기',related_links=[['FAULT1226','networks/network-1226.html'],['누적1714','networks/network-1714.html'],['환산1762','networks/network-1762.html'],['HMI1190','networks/network-1190.html']],
+            field_title='접촉기·전력·끝단·ZT02 A/B·AI 표기 상충',alarm_recovery='Q/접촉기응답/raw·처리끝단/명령누적/실제카운트/Pot/OFR/FAULT/Reset/실물댐퍼를같은시각에구분합니다. Reset비트0·초기Auto·카운트0만으로원점/안전/현장복구를확정하지않습니다.',
+            search_examples='Q2.4, I3.2, I8.2, ZT02, S5T#150mS, WorkData.W33, SetCountValue, CH0.A, CONT_S, DB3X4.7')))
