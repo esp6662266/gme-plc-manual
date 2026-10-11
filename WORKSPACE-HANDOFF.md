@@ -1,3 +1,7 @@
+# v1.12.0 PV02 — 실제 게시 완료
+
+PV02 v1.12.0 실제게시완료: feature a2c4d601cce2ac02c40a399a5e31a6a2fa5bbde4, GitHub v1.12.0 ZIP53268558bytes/2801파일/SHA8adc5ef8e2bb83c7d0e071c4c50bc8cc5b0a948b848925361fcaa32fc4000582 일치. Netlify6acb3d916af9a700081c73cb ready/동일commit/2026-10-11T07:41:31.900Z. 새clone8테스트/BC01/설비/NETLIFYbuildpassed·Git변경0. 게시61파일40exact+21HTML동등·실제P07 71항목/FG71PDF72/Part724강조/통합기록0/warnerror0. 기존9/원본730/공통기록/중지5보존. 다음MV01 독립검토·통합, Dots MV03조사. TIA/CPU/현장미수행·시뮬레이터/PLC/SEJIN변경0. 전체goal active.
+
 # PV02 v1.12.0 통합·검증 진행 — 2026-10-11
 
 PV01 v1.11.1 정정 실제게시완료. PV02(P07) 7영역·8원본쌍·39직접규칙·MC04 OR허가·300/800ms전이·7초알람4·raw/Inputs/MEM·KF_KT SEC Bool0·Enable 예열Reset/생산Set·RD01/팬요청소유·HMI17미결속을 연결한다. Dots65원본해시 일치 및 핵심XML/선언·PDF9쪽 독립검토. 릴레이부하접점5/9로 정정하고 수신원문보존. 기존9설비/원본/미확정/운영기록/중지5보존. UI/기록/PDF/패키지/게시검증진행중. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV01(P19) Dots조사.

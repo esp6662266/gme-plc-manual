@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "pending",
+  "publication": "verified",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -556,5 +556,34 @@
     "passed": 8,
     "node": "24.19.0"
   },
-  "netlify_local_build": "passed:2830 public files,6 inline hashes,39 scoped CSP policies"
+  "netlify_local_build": "passed:2830 public files,6 inline hashes,39 scoped CSP policies",
+  "feature_commit": "a2c4d601cce2ac02c40a399a5e31a6a2fa5bbde4",
+  "netlify": {
+    "id": "6acb3d916af9a700081c73cb",
+    "state": "ready",
+    "commit_ref": "a2c4d601cce2ac02c40a399a5e31a6a2fa5bbde4",
+    "published_at": "2026-10-11T07:41:31.900Z",
+    "error_message": null
+  },
+  "github_release": {
+    "tag": "v1.12.0",
+    "target_commit": "a2c4d601cce2ac02c40a399a5e31a6a2fa5bbde4",
+    "asset_size_digest_verified": true
+  },
+  "fresh_clone": "passed npm ci/8 tests/BC01/equipment/NETLIFY build, git clean",
+  "published_files": {
+    "count": 61,
+    "exact": 40,
+    "HTML_semantic": 21
+  },
+  "published_ui": {
+    "version": "1.12.0",
+    "items": 71,
+    "part": "724 Coil PV-02 GATE A EV",
+    "highlight": true,
+    "PDF": "Electrical_Rev2.pdf#page=72",
+    "unified_notes": 0,
+    "logs": [],
+    "screenshot": "/tmp/gme-pv02-qa/published-pv02.png"
+  }
 }
