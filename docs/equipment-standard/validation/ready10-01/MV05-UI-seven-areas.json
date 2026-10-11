@@ -1,0 +1,102 @@
+[
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=overview&item=review-1",
+    "text": false,
+    "title": "설비·자료 기준"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=overview&item=review-source-hashes",
+    "text": false,
+    "title": "검토 원본·해시와 자료 기준"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=io&item=review-2-1",
+    "text": false,
+    "title": "물리·처리·요청의 분리"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=io&item=review-2-2",
+    "text": false,
+    "title": "HMI 8개 설정과 미결속 호출"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=control&item=review-3-1",
+    "text": false,
+    "title": "main 호출과 NOT ON 내부 경계"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=control&item=review-3-2",
+    "text": false,
+    "title": "수동 요청 Reset과 방향 출력"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=control&item=review-3-3",
+    "text": false,
+    "title": "산소 PID: CONT_S·개별 상수·미결속9개"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=control&item=review-3-4",
+    "text": false,
+    "title": "엔코더 취득: MV05 고유 CH03"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=control&item=review-3-5",
+    "text": false,
+    "title": "엔코더 누적·0쓰기·환산"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=control&item=review-startup-word",
+    "text": false,
+    "title": "Word0 초기화·Auto 후속Set·OFR 범위 밖"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=circuits&item=review-4-1",
+    "text": false,
+    "title": "공유 인버터와 개별 모터 분리"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=circuits&item=review-4-2",
+    "text": false,
+    "title": "M15 정역 전력·코일·피드백"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=circuits&item=review-4-3",
+    "text": false,
+    "title": "리미트·엔코더 끝점"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=circuits&item=review-4-4",
+    "text": false,
+    "title": "시공도와 ZT05/ZT06 상충"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=alarms&item=review-5-1",
+    "text": false,
+    "title": "MV05 전용 응답 고장"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=alarms&item=review-5-2",
+    "text": false,
+    "title": "방향 누적 고장: ±700은 시간 단위가 아님"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=alarms&item=review-5-3",
+    "text": false,
+    "title": "공유 인버터 고장과 상충"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=alarms&item=review-5-4",
+    "text": false,
+    "title": "산소 고장의 방향 영향과 자동 해제"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=repair&item=review-6",
+    "text": false,
+    "title": "증상별 확인·수리 문서 경계"
+  },
+  {
+    "hash": "#view=manual&equipment=MV05&scope=all&section=completion&item=review-completion-current",
+    "text": false,
+    "title": "현재 근거 공백과 판정 기준"
+  }
+]

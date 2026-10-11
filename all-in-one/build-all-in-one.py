@@ -142,6 +142,8 @@ data = dict(
     evidence_review=json.loads((ROOT/'registers/evidence-review.json').read_text()) if (ROOT/'registers/evidence-review.json').exists() else dict(items=[],counts={}),
     repair_record_forms=json.loads((ROOT/'registers/repair-record-forms.json').read_text()) if (ROOT/'registers/repair-record-forms.json').exists() else dict(profiles=[],counts={}),
 )
+# Preserve the historical priority scope and record the separately authorized catalog rollout.
+data['catalog_rollout_scope']=dict(batch='READY10-01',phase='phase2_source_review',catalog_ids=['FN05','SC01','PV03','MV02','MV05','ER01','CH01','VR01','VR02','VR03'],previous_priority_manuals=18,identity_reports=3,physical_identity_verified=False,tia_verified=False,field_verified=False,publication='See repository PUBLICATION_STATUS.md; generation is not publication proof')
 # Display existing source references for the current21 only; no new I/O assignments.
 def oem_page(fg):
     if str(fg) == '5A': return 6
@@ -482,6 +484,8 @@ data['equipment_standards']['profiles'].append(build_br01_profile(ROOT,data,BC01
 data['equipment_standards']['profiles'].append(build_cc01_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_ab01_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_he01_profile(ROOT,data,BC01SourceRows))
+from catalog_standard_profiles import add_catalog_profiles
+add_catalog_profiles(ROOT,data,BC01SourceRows)
 # Profiles may add reviewed source sheets after the initial drawing inventory.
 data['drawing_workspace']['preview_hashes']={sheet['image']:hashlib.sha256((ROOT/sheet['image']).read_bytes()).hexdigest() for profile in drawing_profiles for sheet in profile['sheets'] if sheet['image']}
 dump(ROOT / 'registers/all-in-one-data.json', data)

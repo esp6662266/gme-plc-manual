@@ -1,0 +1,160 @@
+{
+  "catalog_id": "VR03",
+  "checked_items": [
+    {
+      "area": 0,
+      "item": "설비와 자료의 소유 경계",
+      "title": "설비와 자료의 소유 경계"
+    },
+    {
+      "area": 0,
+      "item": "검토 원본·해시와 자료 기준",
+      "title": "검토 원본·해시와 자료 기준"
+    },
+    {
+      "area": 1,
+      "item": "직접 신호와 처리 메모리",
+      "title": "직접 신호와 처리 메모리"
+    },
+    {
+      "area": 1,
+      "item": "원시 입력과 처리 응답 전달",
+      "title": "원시 입력과 처리 응답 전달"
+    },
+    {
+      "area": 1,
+      "item": "HMI 설정과 원본 호출의 결속 한계",
+      "title": "HMI 설정과 원본 호출의 결속 한계"
+    },
+    {
+      "area": 1,
+      "item": "HMI 4개 데이터와 4개 상수 후보",
+      "title": "HMI 4개 데이터와 4개 상수 후보"
+    },
+    {
+      "area": 2,
+      "item": "직접 요청 해제와 출력",
+      "title": "직접 요청 해제와 출력"
+    },
+    {
+      "area": 2,
+      "item": "자동 요청의 Set과 Reset",
+      "title": "자동 요청의 Set과 Reset"
+    },
+    {
+      "area": 2,
+      "item": "SC01과 FN04에 미치는 영향",
+      "title": "SC01과 FN04에 미치는 영향"
+    },
+    {
+      "area": 2,
+      "item": "호출과 실행순서의 경계",
+      "title": "호출과 실행순서의 경계"
+    },
+    {
+      "area": 2,
+      "item": "요청·고장 Word2 포함과 OB/Retain 한계",
+      "title": "요청·고장 Word2 포함과 OB/Retain 한계"
+    },
+    {
+      "area": 3,
+      "item": "전기 전달 경로",
+      "title": "전기 전달 경로"
+    },
+    {
+      "area": 3,
+      "item": "정격 표기와 부품 목록",
+      "title": "정격 표기와 부품 목록"
+    },
+    {
+      "area": 3,
+      "item": "도면 관계에서 오해하지 말아야 할 항목",
+      "title": "도면 관계에서 오해하지 말아야 할 항목"
+    },
+    {
+      "area": 4,
+      "item": "VR03 전용 고장",
+      "title": "VR03 전용 고장"
+    },
+    {
+      "area": 4,
+      "item": "고장 해제와 운전 복구의 차이",
+      "title": "고장 해제와 운전 복구의 차이"
+    },
+    {
+      "area": 4,
+      "item": "공유 예고장과 시간 기록",
+      "title": "공유 예고장과 시간 기록"
+    },
+    {
+      "area": 5,
+      "item": "증상별 관찰과 수리 판단",
+      "title": "증상별 관찰과 수리 판단"
+    },
+    {
+      "area": 6,
+      "item": "현재 근거 공백과 판정 기준",
+      "title": "현재 근거 공백과 판정 기준"
+    }
+  ],
+  "pairs": [
+    {
+      "network": 1966,
+      "part": 1024,
+      "href": "http://127.0.0.1:8877/networks/network-1966.html#gme-vr03-part-1024",
+      "cell": "1024"
+    },
+    {
+      "network": 1070,
+      "part": 35,
+      "href": "http://127.0.0.1:8877/networks/network-1070.html#gme-fn06-part-35",
+      "cell": "35"
+    },
+    {
+      "network": 1810,
+      "part": 1089,
+      "href": "http://127.0.0.1:8877/networks/network-1810.html#gme-vr03-part-1089",
+      "cell": "1089"
+    },
+    {
+      "network": 1810,
+      "part": 1095,
+      "href": "http://127.0.0.1:8877/networks/network-1810.html#gme-vr03-part-1095",
+      "cell": "1095"
+    },
+    {
+      "network": 1810,
+      "part": 1100,
+      "href": "http://127.0.0.1:8877/networks/network-1810.html#gme-vr03-part-1100",
+      "cell": "1100"
+    },
+    {
+      "network": 1956,
+      "part": 795,
+      "href": "http://127.0.0.1:8877/networks/network-1956.html#gme-sc01-part-795",
+      "cell": "795"
+    }
+  ],
+  "widths": [
+    {
+      "client": 1012,
+      "inner": 1024,
+      "scroll": 1012
+    },
+    {
+      "client": 300,
+      "inner": 312,
+      "scroll": 300
+    }
+  ],
+  "zero_saved_reload": true,
+  "restored_blank_comparison": true,
+  "unknown_fields_whole_export_pending": true,
+  "report": {
+    "bundle": "67d6fbf244e35e491f0fc6307a54d9af900e8afdec980dea5f19bc27cf250a61"
+  },
+  "new_published": 0,
+  "report_pdf_pages": 3,
+  "report_pdf_bytes": 419337,
+  "whole_backup_preservation": "passed"
+}

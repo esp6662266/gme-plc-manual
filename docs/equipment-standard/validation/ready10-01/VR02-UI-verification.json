@@ -1,0 +1,172 @@
+{
+  "catalog_id": "VR02",
+  "checked_items": [
+    {
+      "area": 0,
+      "item": "확인한 관계와 확인하지 못한 관계",
+      "title": "확인한 관계와 확인하지 못한 관계"
+    },
+    {
+      "area": 0,
+      "item": "자료의 용도",
+      "title": "자료의 용도"
+    },
+    {
+      "area": 0,
+      "item": "검토 원본·해시와 자료 기준",
+      "title": "검토 원본·해시와 자료 기준"
+    },
+    {
+      "area": 1,
+      "item": "주소와 선언",
+      "title": "주소와 선언"
+    },
+    {
+      "area": 1,
+      "item": "원시 I3.7 → 처리 DB13.X3.7",
+      "title": "원시 I3.7 → 처리 DB13.X3.7"
+    },
+    {
+      "area": 1,
+      "item": "HMI 설정과 미결속 호출",
+      "title": "HMI 설정과 미결속 호출"
+    },
+    {
+      "area": 2,
+      "item": "요청 Reset과 출력은 두 가지 쓰기",
+      "title": "요청 Reset과 출력은 두 가지 쓰기"
+    },
+    {
+      "area": 2,
+      "item": "자동 요청 세 곳",
+      "title": "자동 요청 세 곳"
+    },
+    {
+      "area": 2,
+      "item": "호출·다른 쓰기·소유 경계",
+      "title": "호출·다른 쓰기·소유 경계"
+    },
+    {
+      "area": 2,
+      "item": "FN01에 주는 영향은 FN01 소유",
+      "title": "FN01에 주는 영향은 FN01 소유"
+    },
+    {
+      "area": 2,
+      "item": "운전시간의 원문을 그대로 보존",
+      "title": "운전시간의 원문을 그대로 보존"
+    },
+    {
+      "area": 2,
+      "item": "요청·고장 Word0 포함과 OB/Retain 한계",
+      "title": "요청·고장 Word0 포함과 OB/Retain 한계"
+    },
+    {
+      "area": 3,
+      "item": "전기 전달 경로: 실제 원본 렌더 확인",
+      "title": "전기 전달 경로: 실제 원본 렌더 확인"
+    },
+    {
+      "area": 3,
+      "item": "동력 경로 — FG49/PDF50",
+      "title": "동력 경로 — FG49/PDF50"
+    },
+    {
+      "area": 3,
+      "item": "명령의 양 끝점 — FG139/PDF140 ↔ FG49/PDF50",
+      "title": "명령의 양 끝점 — FG139/PDF140 ↔ FG49/PDF50"
+    },
+    {
+      "area": 3,
+      "item": "피드백의 양 끝점 — FG49/PDF50 ↔ FG119/PDF120",
+      "title": "피드백의 양 끝점 — FG49/PDF50 ↔ FG119/PDF120"
+    },
+    {
+      "area": 3,
+      "item": "자재표와 시공안",
+      "title": "자재표와 시공안"
+    },
+    {
+      "area": 4,
+      "item": "전용 VR02 고장",
+      "title": "전용 VR02 고장"
+    },
+    {
+      "area": 4,
+      "item": "공통 Reset 입력 경계",
+      "title": "공통 Reset 입력 경계"
+    },
+    {
+      "area": 5,
+      "item": "증상별 관찰·원인 배제 초안",
+      "title": "증상별 관찰·원인 배제 초안"
+    },
+    {
+      "area": 6,
+      "item": "현재 근거 공백과 판정 기준",
+      "title": "현재 근거 공백과 판정 기준"
+    }
+  ],
+  "pairs": [
+    {
+      "network": 1952,
+      "part": 697,
+      "href": "http://127.0.0.1:8877/networks/network-1952.html#gme-vr02-part-697",
+      "cell": "697"
+    },
+    {
+      "network": 1070,
+      "part": 27,
+      "href": "http://127.0.0.1:8877/networks/network-1070.html#gme-mv01-part-27",
+      "cell": "27"
+    },
+    {
+      "network": 1799,
+      "part": 715,
+      "href": "http://127.0.0.1:8877/networks/network-1799.html#gme-vr02-part-715",
+      "cell": "715"
+    },
+    {
+      "network": 1799,
+      "part": 721,
+      "href": "http://127.0.0.1:8877/networks/network-1799.html#gme-vr02-part-721",
+      "cell": "721"
+    },
+    {
+      "network": 1799,
+      "part": 726,
+      "href": "http://127.0.0.1:8877/networks/network-1799.html#gme-vr02-part-726",
+      "cell": "726"
+    },
+    {
+      "network": 1951,
+      "part": 685,
+      "href": "http://127.0.0.1:8877/networks/network-1951.html#gme-fn01-part-685",
+      "cell": "685"
+    }
+  ],
+  "widths": [
+    {
+      "client": 1012,
+      "inner": 1024,
+      "scroll": 1012
+    },
+    {
+      "client": 300,
+      "inner": 312,
+      "scroll": 300
+    }
+  ],
+  "zero_saved_reload": true,
+  "restored_blank_comparison": true,
+  "unknown_fields_whole_export_pending": true,
+  "report": {
+    "pages": 3,
+    "bytes": 418093,
+    "bundle": "c0e6f3b4d98c46ff01b3b4c93671a4e7abfc54852a398c83acf1b70395257345"
+  },
+  "new_published": 0,
+  "report_pdf_pages": 3,
+  "report_pdf_bytes": 418093,
+  "whole_backup_preservation": "passed"
+}

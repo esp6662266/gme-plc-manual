@@ -1,0 +1,164 @@
+{
+  "status": "passed",
+  "areas": [
+    {
+      "area": 0,
+      "item": 0,
+      "title": "설비·자료 기준과 소유 경계",
+      "content": "설비·자료 기준과 소유 경계"
+    },
+    {
+      "area": 0,
+      "item": 1,
+      "title": "검토 원본·해시와 자료 기준",
+      "content": "검토 원본·해시와 자료 기준"
+    },
+    {
+      "area": 1,
+      "item": 0,
+      "title": "I/O·HMI와 데이터 전달",
+      "content": "I/O·HMI와 데이터 전달"
+    },
+    {
+      "area": 1,
+      "item": 1,
+      "title": "I3.4 → 처리 DB13.X3.4의 Word 경로",
+      "content": "I3.4 → 처리 DB13.X3.4의 Word 경로"
+    },
+    {
+      "area": 1,
+      "item": 2,
+      "title": "HMI 설정과 미결속",
+      "content": "HMI 설정과 미결속"
+    },
+    {
+      "area": 2,
+      "item": 0,
+      "title": "전용 모터 로직: 1949/0251, motors 1 NID20",
+      "content": "전용 모터 로직: 1949/0251, motors 1 NID20"
+    },
+    {
+      "area": 2,
+      "item": 1,
+      "title": "자동 요청: 서로 다른 Set 두 곳과 Reset 한 곳",
+      "content": "자동 요청: 서로 다른 Set 두 곳과 Reset 한 곳"
+    },
+    {
+      "area": 2,
+      "item": 2,
+      "title": "Main 호출과 실행 범위",
+      "content": "Main 호출과 실행 범위"
+    },
+    {
+      "area": 2,
+      "item": 3,
+      "title": "다른 쓰기: 처리입력과 운전시간",
+      "content": "다른 쓰기: 처리입력과 운전시간"
+    },
+    {
+      "area": 2,
+      "item": 4,
+      "title": "요청·고장 Word0 포함과 OB/Retain 한계",
+      "content": "요청·고장 Word0 포함과 OB/Retain 한계"
+    },
+    {
+      "area": 3,
+      "item": 0,
+      "title": "전기 전달 경로: 실제 PDF 렌더 확인",
+      "content": "전기 전달 경로: 실제 PDF 렌더 확인"
+    },
+    {
+      "area": 4,
+      "item": 0,
+      "title": "VR01 전용 FAULT: 1797/0432, allarms 1 NID19",
+      "content": "VR01 전용 FAULT: 1797/0432, allarms 1 NID19"
+    },
+    {
+      "area": 4,
+      "item": 1,
+      "title": "FN01 Prealarm은 VR01 전용 FAULT와 별도",
+      "content": "FN01 Prealarm은 VR01 전용 FAULT와 별도"
+    },
+    {
+      "area": 4,
+      "item": 2,
+      "title": "복구 판정",
+      "content": "복구 판정"
+    },
+    {
+      "area": 5,
+      "item": 0,
+      "title": "증상별 관찰·수리 검토 초안",
+      "content": "증상별 관찰·수리 검토 초안"
+    },
+    {
+      "area": 6,
+      "item": 0,
+      "title": "현재 근거 공백과 판정 기준",
+      "content": "현재 근거 공백과 판정 기준"
+    }
+  ],
+  "pairs": [
+    {
+      "n": 1949,
+      "u": "608",
+      "href": "http://127.0.0.1:8877/networks/network-1949.html#gme-vr01-part-608",
+      "cell": "608"
+    },
+    {
+      "n": 1070,
+      "u": "27",
+      "href": "http://127.0.0.1:8877/networks/network-1070.html#gme-mv01-part-27",
+      "cell": "27"
+    },
+    {
+      "n": 1797,
+      "u": "647",
+      "href": "http://127.0.0.1:8877/networks/network-1797.html#gme-vr01-part-647",
+      "cell": "647"
+    },
+    {
+      "n": 1797,
+      "u": "653",
+      "href": "http://127.0.0.1:8877/networks/network-1797.html#gme-vr01-part-653",
+      "cell": "653"
+    },
+    {
+      "n": 1797,
+      "u": "658",
+      "href": "http://127.0.0.1:8877/networks/network-1797.html#gme-vr01-part-658",
+      "cell": "658"
+    },
+    {
+      "n": 1950,
+      "u": "656",
+      "href": "http://127.0.0.1:8877/networks/network-1950.html#gme-fn01-part-656",
+      "cell": "656"
+    }
+  ],
+  "widths": [
+    {
+      "requested": 1280,
+      "scroll": 1012,
+      "title": "전기 전달 경로: 실제 PDF 렌더 확인",
+      "width": 1012
+    },
+    {
+      "requested": 390,
+      "scroll": 300,
+      "title": "전기 전달 경로: 실제 PDF 렌더 확인",
+      "width": 300
+    }
+  ],
+  "record_original": "085adb21-8c18-4949-8114-a13fbf84179f",
+  "record_after": "qa-vr01-after-20261012",
+  "comparison": "0→미기록",
+  "report": {
+    "bytes": 415985,
+    "pages": 3,
+    "a4": true,
+    "visually_reviewed": 3
+  },
+  "whole_backup_preservation": "pending final batch export",
+  "publication": "not_published"
+}

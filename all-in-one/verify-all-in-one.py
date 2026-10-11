@@ -380,7 +380,11 @@ record_forms=json.loads((ROOT/'registers/repair-record-forms.json').read_text())
 hub=json.loads((ROOT/'registers/evidence-review.json').read_text())
 hub_by_id={r['id']:r for r in hub['items']}
 evidence_steps=0
-assert data['repair_record_forms']==record_forms
+catalog_keys={p['selection_key'] for p in data['equipment_standards']['profiles'] if p.get('selection_key')}
+assert {k:v for k,v in data['repair_record_forms'].items() if k not in {'profiles','counts'}}=={k:v for k,v in record_forms.items() if k not in {'profiles','counts'}}
+assert [p for p in data['repair_record_forms']['profiles'] if p['key'] not in catalog_keys]==record_forms['profiles']
+assert {p['key']for p in data['repair_record_forms']['profiles'] if p['key'] in catalog_keys}==catalog_keys
+assert data['repair_record_forms']['counts']==dict(profiles=len(data['repair_record_forms']['profiles']),signals=sum(len(p['signals'])for p in data['repair_record_forms']['profiles']),steps=sum(len(p['steps'])for p in data['repair_record_forms']['profiles']))
 assert len(record_forms['profiles'])==23 and len({p['key'] for p in record_forms['profiles']})==23
 assert record_forms['source']['sha256']==hashlib.sha256((ROOT/record_forms['source']['path']).read_bytes()).hexdigest()
 assert not record_forms['field_verified'] and record_forms['repairs_completed']==record_forms['plc_changes']==0
@@ -668,12 +672,24 @@ for path,digest in standard['source_hashes'].items():assert hashlib.sha256((ROOT
 assert standard['source_bundle_sha256']==hashlib.sha256(json.dumps(standard['source_hashes'],sort_keys=True,separators=(',',':')).encode()).hexdigest()
 assert all(standard['source_hashes'].get(path)==digest for path,digest in next(p for p in data['repair_record_forms']['profiles'] if p['key']=='P01')['additional_signal_sources'].items())
 # Drawing UI reuses existing evidence, and supports current21 only.
-drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]
+drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles'] if p['key'] not in catalog_keys]==[p['key'] for p in data['priority'][:21]]
+assert {p['key']for p in drawing['profiles'] if p['key'] in catalog_keys}==catalog_keys
 for path,digest in {**drawing['source_hashes'],**drawing['preview_hashes']}.items():
     assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
     assert path in data['resources'],path
 expected_circuits={d['id']:d for d in electrical['devices']}
 for profile in drawing['profiles']:
+    if profile['key'] in catalog_keys:
+        config=json.loads((ROOT/'catalog-profiles'/str(profile['key']+'.json')).read_text())
+        assert profile==dict(config['drawing'],identity_verified=False,field_verified=False)
+        assert profile['plc_id']==profile['key'] and profile['circuit']['id']==profile['key']
+        for sheet in profile['sheets']:
+            assert (ROOT/sheet['source']).is_file() and sheet['image'] in drawing['preview_hashes']
+            routes.add(sheet['source'])
+        for standard_profile in data['equipment_standards']['profiles']:
+            if standard_profile.get('selection_key')==profile['key']:
+                for pair in standard_profile['source_pairs']:routes.add(pair['path'])
+        continue
     priority=next(p for p in data['priority'] if p['key']==profile['key'])
     device=next((d for d in data['equipment'] if d['id']==priority['plc_id']),{})
     assert profile['plc_id']==priority['plc_id'] and profile['match']==priority['match']

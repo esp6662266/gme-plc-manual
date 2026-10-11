@@ -1,0 +1,164 @@
+[
+  {
+    "area": "overview",
+    "id": "review-1",
+    "title": "설비·자료 기준",
+    "length": 807
+  },
+  {
+    "area": "overview",
+    "id": "review-1-1",
+    "title": "이름과 제어 소유의 경계",
+    "length": 640
+  },
+  {
+    "area": "overview",
+    "id": "review-1-2",
+    "title": "자료 시점과 충돌",
+    "length": 692
+  },
+  {
+    "area": "overview",
+    "id": "review-1-3",
+    "title": "7영역 적용표",
+    "length": 385
+  },
+  {
+    "area": "overview",
+    "id": "review-source-hashes",
+    "title": "검토 원본·해시와 자료 기준",
+    "length": 8074
+  },
+  {
+    "area": "io",
+    "id": "review-2",
+    "title": "I/O·HMI",
+    "length": 237
+  },
+  {
+    "area": "io",
+    "id": "review-2-1",
+    "title": "원본 선언 주소",
+    "length": 1299
+  },
+  {
+    "area": "io",
+    "id": "review-2-2",
+    "title": "원시 입력의 Word 전달과 대체 쓰기",
+    "length": 1042
+  },
+  {
+    "area": "io",
+    "id": "review-2-3",
+    "title": "출력 상태의 전달 방향",
+    "length": 514
+  },
+  {
+    "area": "io",
+    "id": "review-2-4",
+    "title": "HMI 설정과 원본 호출의 결속 한계",
+    "length": 1297
+  },
+  {
+    "area": "control",
+    "id": "review-3-1",
+    "title": "CH01 고유 출력과 알람 시 요청 해제",
+    "length": 1202
+  },
+  {
+    "area": "control",
+    "id": "review-3-2",
+    "title": "자동 시퀀스의 세 요청쓰기",
+    "length": 1298
+  },
+  {
+    "area": "control",
+    "id": "review-3-3",
+    "title": "호출·실행 순서 경계",
+    "length": 682
+  },
+  {
+    "area": "control",
+    "id": "review-3-4",
+    "title": "읽기/쓰기 조사 요약",
+    "length": 558
+  },
+  {
+    "area": "control",
+    "id": "review-3-5",
+    "title": "운전시간은 원시 I4.0을 읽으며 HOUR에 Move1을 쓴다",
+    "length": 1016
+  },
+  {
+    "area": "control",
+    "id": "review-3-6",
+    "title": "Encoder_CH01 오배정 방지",
+    "length": 861
+  },
+  {
+    "area": "control",
+    "id": "review-startup-word",
+    "title": "요청·고장 Word0 포함과 OB/Retain 한계",
+    "length": 284
+  },
+  {
+    "area": "circuits",
+    "id": "review-4",
+    "title": "전기 전달 경로",
+    "length": 249
+  },
+  {
+    "area": "circuits",
+    "id": "review-4-1",
+    "title": "주전원·보호·기기 전원",
+    "length": 501
+  },
+  {
+    "area": "circuits",
+    "id": "review-4-2",
+    "title": "Q3.1 접촉기 코일 명령",
+    "length": 546
+  },
+  {
+    "area": "circuits",
+    "id": "review-4-3",
+    "title": "접촉기 응답",
+    "length": 383
+  },
+  {
+    "area": "circuits",
+    "id": "review-4-4",
+    "title": "Q6.0 별도 원격기동",
+    "length": 623
+  },
+  {
+    "area": "circuits",
+    "id": "review-4-5",
+    "title": "참고 시공도 케이블",
+    "length": 673
+  },
+  {
+    "area": "alarms",
+    "id": "review-5-1",
+    "title": "CH_01_FAULT의2초 검출과 래치",
+    "length": 1055
+  },
+  {
+    "area": "alarms",
+    "id": "review-5-2",
+    "title": "Reset 요청의 공통 출처와 표시",
+    "length": 785
+  },
+  {
+    "area": "repair",
+    "id": "review-6",
+    "title": "증상별 수리·관찰 초안",
+    "length": 1543
+  },
+  {
+    "area": "completion",
+    "id": "review-completion-current",
+    "title": "현재 근거 공백과 판정 기준",
+    "length": 517
+  }
+]

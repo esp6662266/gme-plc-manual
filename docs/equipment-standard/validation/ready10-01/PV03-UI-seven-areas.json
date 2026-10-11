@@ -1,0 +1,134 @@
+[
+  {
+    "section": "overview",
+    "id": "review-1-1",
+    "title": "식별, 역할, 소유 경계",
+    "bytes": 1681
+  },
+  {
+    "section": "overview",
+    "id": "review-1-2",
+    "title": "기존 자료 보존 및 누락",
+    "bytes": 1149
+  },
+  {
+    "section": "overview",
+    "id": "review-1-3",
+    "title": "근거 식별 규칙",
+    "bytes": 1204
+  },
+  {
+    "section": "overview",
+    "id": "review-source-hashes",
+    "title": "검토 원본·해시와 자료 기준",
+    "bytes": 9226
+  },
+  {
+    "section": "io",
+    "id": "review-2-1",
+    "title": "물리 신호와 전기 끝점",
+    "bytes": 1603
+  },
+  {
+    "section": "io",
+    "id": "review-2-2",
+    "title": "내부 신호 및 알람 주소",
+    "bytes": 1943
+  },
+  {
+    "section": "io",
+    "id": "review-2-3",
+    "title": "raw→Inputs 전달과 다른 쓰기",
+    "bytes": 1589
+  },
+  {
+    "section": "io",
+    "id": "review-2-4",
+    "title": "HMI CSV와 실제 호출 경계",
+    "bytes": 2274
+  },
+  {
+    "section": "control",
+    "id": "review-3",
+    "title": "제어 구조",
+    "bytes": 884
+  },
+  {
+    "section": "control",
+    "id": "review-3-1",
+    "title": "명령→출력: LAD1972 /0272/NID42",
+    "bytes": 1432
+  },
+  {
+    "section": "control",
+    "id": "review-3-2",
+    "title": "실제 입력과 위치 기억: LAD1925 /0290/NID15",
+    "bytes": 1597
+  },
+  {
+    "section": "control",
+    "id": "review-3-3",
+    "title": "startup 및 호출 경계",
+    "bytes": 1395
+  },
+  {
+    "section": "control",
+    "id": "review-3-4",
+    "title": "외부 소유 연동: LIW feeder",
+    "bytes": 1521
+  },
+  {
+    "section": "control",
+    "id": "review-startup-word",
+    "title": "초기 Word 쓰기와 후속 닫힘 기억 Set",
+    "bytes": 1039
+  },
+  {
+    "section": "circuits",
+    "id": "review-4-1",
+    "title": "FG73/PDF74: 출력·코일·부하·센서",
+    "bytes": 1629
+  },
+  {
+    "section": "circuits",
+    "id": "review-4-2",
+    "title": "모듈·공통 전원 끝점",
+    "bytes": 1578
+  },
+  {
+    "section": "circuits",
+    "id": "review-4-3",
+    "title": "시공 케이블: 참고 설계와 승인 상태 분리",
+    "bytes": 1984
+  },
+  {
+    "section": "circuits",
+    "id": "review-4-4",
+    "title": "보존할 상충 및 빠진 자료",
+    "bytes": 1483
+  },
+  {
+    "section": "alarms",
+    "id": "review-5-1",
+    "title": "PV03 전용 두 도달 감시",
+    "bytes": 2033
+  },
+  {
+    "section": "alarms",
+    "id": "review-5-2",
+    "title": "공통 Reset 전달",
+    "bytes": 1427
+  },
+  {
+    "section": "repair",
+    "id": "review-6",
+    "title": "증상별 수리·관찰 초안",
+    "bytes": 2178
+  },
+  {
+    "section": "completion",
+    "id": "review-completion-current",
+    "title": "현재 근거 공백과 판정 기준",
+    "bytes": 1005
+  }
+]

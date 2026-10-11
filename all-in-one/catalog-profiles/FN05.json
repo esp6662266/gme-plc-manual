@@ -1,0 +1,2734 @@
+{
+  "catalog_id": "FN05",
+  "selection_key": "FN05",
+  "priority_key": null,
+  "type": "motor_fan",
+  "draft": "catalog-sources/FN05-DOTS-DRAFT.md",
+  "draft_sha256": "61a115a7cbedfdbd501e7a3a43fc212f21862e7303477f67e21db4a8314d9bb4",
+  "source_pairs": [
+    {
+      "signal": "기동 명령",
+      "network": 1970,
+      "uid": "1106",
+      "label": "ON·요청 → Start FN05",
+      "boundary": "Q4.7 명령과65QS1/QM1 허가·65KM1 코일·실제 팬 회전을 분리합니다."
+    },
+    {
+      "signal": "운전 응답",
+      "network": 1814,
+      "uid": "1274",
+      "label": "반전 처리응답 → 2초 감시",
+      "boundary": "I6.0 접촉기 보조접점과 DB13.X6.0 처리Run·실제 송풍은 별개입니다."
+    },
+    {
+      "signal": "입력 전달",
+      "network": 1070,
+      "uid": "42",
+      "label": "IW6 → DB13.DBW6 Word 복사",
+      "boundary": "HMI Inputs 호출·선행 ENO·현재값/갱신은 확인 전입니다."
+    }
+  ],
+  "extra_locations": [
+    [
+      1970,
+      "part",
+      "1126"
+    ],
+    [
+      1970,
+      "part",
+      "1128"
+    ],
+    [
+      1970,
+      "part",
+      "22"
+    ],
+    [
+      1970,
+      "part",
+      "1132"
+    ],
+    [
+      1970,
+      "part",
+      "1097"
+    ],
+    [
+      1970,
+      "part",
+      "1102"
+    ],
+    [
+      1970,
+      "part",
+      "1134"
+    ],
+    [
+      1970,
+      "part",
+      "1106"
+    ],
+    [
+      1970,
+      "wire",
+      "1136"
+    ],
+    [
+      1970,
+      "wire",
+      "1114"
+    ],
+    [
+      1970,
+      "wire",
+      "1127"
+    ],
+    [
+      1970,
+      "wire",
+      "1115"
+    ],
+    [
+      1970,
+      "wire",
+      "1129"
+    ],
+    [
+      1970,
+      "wire",
+      "21"
+    ],
+    [
+      1970,
+      "wire",
+      "24"
+    ],
+    [
+      1970,
+      "wire",
+      "1117"
+    ],
+    [
+      1970,
+      "wire",
+      "1133"
+    ],
+    [
+      1970,
+      "wire",
+      "1119"
+    ],
+    [
+      1970,
+      "wire",
+      "1121"
+    ],
+    [
+      1970,
+      "wire",
+      "1122"
+    ],
+    [
+      1970,
+      "wire",
+      "1135"
+    ],
+    [
+      1970,
+      "wire",
+      "1124"
+    ],
+    [
+      1814,
+      "part",
+      "1261"
+    ],
+    [
+      1814,
+      "part",
+      "1263"
+    ],
+    [
+      1814,
+      "part",
+      "1274"
+    ],
+    [
+      1814,
+      "part",
+      "1225"
+    ],
+    [
+      1814,
+      "part",
+      "1265"
+    ],
+    [
+      1814,
+      "part",
+      "1231"
+    ],
+    [
+      1814,
+      "part",
+      "1269"
+    ],
+    [
+      1814,
+      "part",
+      "1271"
+    ],
+    [
+      1814,
+      "part",
+      "1236"
+    ],
+    [
+      1814,
+      "wire",
+      "1273"
+    ],
+    [
+      1814,
+      "wire",
+      "1247"
+    ],
+    [
+      1814,
+      "wire",
+      "1262"
+    ],
+    [
+      1814,
+      "wire",
+      "1248"
+    ],
+    [
+      1814,
+      "wire",
+      "1264"
+    ],
+    [
+      1814,
+      "wire",
+      "1277"
+    ],
+    [
+      1814,
+      "wire",
+      "21"
+    ],
+    [
+      1814,
+      "wire",
+      "1249"
+    ],
+    [
+      1814,
+      "wire",
+      "1250"
+    ],
+    [
+      1814,
+      "wire",
+      "1251"
+    ],
+    [
+      1814,
+      "wire",
+      "22"
+    ],
+    [
+      1814,
+      "wire",
+      "1254"
+    ],
+    [
+      1814,
+      "wire",
+      "1256"
+    ],
+    [
+      1814,
+      "wire",
+      "1270"
+    ],
+    [
+      1814,
+      "wire",
+      "1257"
+    ],
+    [
+      1814,
+      "wire",
+      "1272"
+    ],
+    [
+      1814,
+      "wire",
+      "1259"
+    ],
+    [
+      1070,
+      "part",
+      "22"
+    ],
+    [
+      1070,
+      "part",
+      "27"
+    ],
+    [
+      1070,
+      "part",
+      "35"
+    ],
+    [
+      1070,
+      "part",
+      "42"
+    ],
+    [
+      1070,
+      "part",
+      "43"
+    ],
+    [
+      1070,
+      "part",
+      "44"
+    ],
+    [
+      1070,
+      "part",
+      "60"
+    ],
+    [
+      1070,
+      "part",
+      "61"
+    ],
+    [
+      1070,
+      "part",
+      "62"
+    ],
+    [
+      1070,
+      "part",
+      "78"
+    ],
+    [
+      1070,
+      "part",
+      "79"
+    ],
+    [
+      1070,
+      "part",
+      "101"
+    ],
+    [
+      1070,
+      "part",
+      "105"
+    ],
+    [
+      1070,
+      "part",
+      "108"
+    ],
+    [
+      1070,
+      "part",
+      "112"
+    ],
+    [
+      1070,
+      "part",
+      "33"
+    ],
+    [
+      1070,
+      "part",
+      "118"
+    ],
+    [
+      1070,
+      "part",
+      "69"
+    ],
+    [
+      1070,
+      "part",
+      "120"
+    ],
+    [
+      1070,
+      "part",
+      "86"
+    ],
+    [
+      1070,
+      "part",
+      "125"
+    ],
+    [
+      1070,
+      "part",
+      "94"
+    ],
+    [
+      1070,
+      "part",
+      "130"
+    ],
+    [
+      1070,
+      "part",
+      "97"
+    ],
+    [
+      1070,
+      "part",
+      "135"
+    ],
+    [
+      1070,
+      "part",
+      "114"
+    ],
+    [
+      1070,
+      "part",
+      "140"
+    ],
+    [
+      1070,
+      "part",
+      "127"
+    ],
+    [
+      1070,
+      "part",
+      "142"
+    ],
+    [
+      1070,
+      "part",
+      "147"
+    ],
+    [
+      1070,
+      "part",
+      "149"
+    ],
+    [
+      1070,
+      "part",
+      "150"
+    ],
+    [
+      1070,
+      "part",
+      "151"
+    ],
+    [
+      1070,
+      "wire",
+      "21"
+    ],
+    [
+      1070,
+      "wire",
+      "23"
+    ],
+    [
+      1070,
+      "wire",
+      "34"
+    ],
+    [
+      1070,
+      "wire",
+      "24"
+    ],
+    [
+      1070,
+      "wire",
+      "31"
+    ],
+    [
+      1070,
+      "wire",
+      "41"
+    ],
+    [
+      1070,
+      "wire",
+      "32"
+    ],
+    [
+      1070,
+      "wire",
+      "39"
+    ],
+    [
+      1070,
+      "wire",
+      "40"
+    ],
+    [
+      1070,
+      "wire",
+      "52"
+    ],
+    [
+      1070,
+      "wire",
+      "53"
+    ],
+    [
+      1070,
+      "wire",
+      "54"
+    ],
+    [
+      1070,
+      "wire",
+      "55"
+    ],
+    [
+      1070,
+      "wire",
+      "56"
+    ],
+    [
+      1070,
+      "wire",
+      "57"
+    ],
+    [
+      1070,
+      "wire",
+      "58"
+    ],
+    [
+      1070,
+      "wire",
+      "59"
+    ],
+    [
+      1070,
+      "wire",
+      "70"
+    ],
+    [
+      1070,
+      "wire",
+      "71"
+    ],
+    [
+      1070,
+      "wire",
+      "72"
+    ],
+    [
+      1070,
+      "wire",
+      "73"
+    ],
+    [
+      1070,
+      "wire",
+      "74"
+    ],
+    [
+      1070,
+      "wire",
+      "75"
+    ],
+    [
+      1070,
+      "wire",
+      "76"
+    ],
+    [
+      1070,
+      "wire",
+      "77"
+    ],
+    [
+      1070,
+      "wire",
+      "88"
+    ],
+    [
+      1070,
+      "wire",
+      "89"
+    ],
+    [
+      1070,
+      "wire",
+      "90"
+    ],
+    [
+      1070,
+      "wire",
+      "91"
+    ],
+    [
+      1070,
+      "wire",
+      "93"
+    ],
+    [
+      1070,
+      "wire",
+      "100"
+    ],
+    [
+      1070,
+      "wire",
+      "103"
+    ],
+    [
+      1070,
+      "wire",
+      "104"
+    ],
+    [
+      1070,
+      "wire",
+      "107"
+    ],
+    [
+      1070,
+      "wire",
+      "110"
+    ],
+    [
+      1070,
+      "wire",
+      "111"
+    ],
+    [
+      1070,
+      "wire",
+      "30"
+    ],
+    [
+      1070,
+      "wire",
+      "116"
+    ],
+    [
+      1070,
+      "wire",
+      "117"
+    ],
+    [
+      1070,
+      "wire",
+      "51"
+    ],
+    [
+      1070,
+      "wire",
+      "124"
+    ],
+    [
+      1070,
+      "wire",
+      "123"
+    ],
+    [
+      1070,
+      "wire",
+      "85"
+    ],
+    [
+      1070,
+      "wire",
+      "129"
+    ],
+    [
+      1070,
+      "wire",
+      "128"
+    ],
+    [
+      1070,
+      "wire",
+      "92"
+    ],
+    [
+      1070,
+      "wire",
+      "134"
+    ],
+    [
+      1070,
+      "wire",
+      "133"
+    ],
+    [
+      1070,
+      "wire",
+      "96"
+    ],
+    [
+      1070,
+      "wire",
+      "139"
+    ],
+    [
+      1070,
+      "wire",
+      "138"
+    ],
+    [
+      1070,
+      "wire",
+      "99"
+    ],
+    [
+      1070,
+      "wire",
+      "144"
+    ],
+    [
+      1070,
+      "wire",
+      "143"
+    ],
+    [
+      1070,
+      "wire",
+      "122"
+    ],
+    [
+      1070,
+      "wire",
+      "137"
+    ],
+    [
+      1070,
+      "wire",
+      "145"
+    ],
+    [
+      1070,
+      "wire",
+      "146"
+    ],
+    [
+      1070,
+      "wire",
+      "155"
+    ],
+    [
+      1070,
+      "wire",
+      "156"
+    ],
+    [
+      1070,
+      "wire",
+      "157"
+    ],
+    [
+      1070,
+      "wire",
+      "158"
+    ],
+    [
+      1044,
+      "part",
+      "2558"
+    ],
+    [
+      1044,
+      "part",
+      "2560"
+    ],
+    [
+      1044,
+      "part",
+      "2512"
+    ],
+    [
+      1044,
+      "part",
+      "2519"
+    ],
+    [
+      1044,
+      "part",
+      "2522"
+    ],
+    [
+      1044,
+      "part",
+      "2525"
+    ],
+    [
+      1044,
+      "part",
+      "2528"
+    ],
+    [
+      1044,
+      "wire",
+      "2562"
+    ],
+    [
+      1044,
+      "wire",
+      "2541"
+    ],
+    [
+      1044,
+      "wire",
+      "2559"
+    ],
+    [
+      1044,
+      "wire",
+      "2542"
+    ],
+    [
+      1044,
+      "wire",
+      "2561"
+    ],
+    [
+      1044,
+      "wire",
+      "2543"
+    ],
+    [
+      1044,
+      "wire",
+      "2544"
+    ],
+    [
+      1044,
+      "wire",
+      "2545"
+    ],
+    [
+      1044,
+      "wire",
+      "2546"
+    ],
+    [
+      1044,
+      "wire",
+      "2547"
+    ],
+    [
+      1044,
+      "wire",
+      "2548"
+    ],
+    [
+      1044,
+      "wire",
+      "2550"
+    ],
+    [
+      1044,
+      "wire",
+      "2552"
+    ],
+    [
+      1044,
+      "wire",
+      "2551"
+    ],
+    [
+      1044,
+      "wire",
+      "2553"
+    ],
+    [
+      1044,
+      "wire",
+      "2555"
+    ],
+    [
+      1044,
+      "wire",
+      "2554"
+    ],
+    [
+      1044,
+      "wire",
+      "2556"
+    ],
+    [
+      1054,
+      "part",
+      "3085"
+    ],
+    [
+      1054,
+      "part",
+      "3076"
+    ],
+    [
+      1054,
+      "wire",
+      "3087"
+    ],
+    [
+      1054,
+      "wire",
+      "3082"
+    ],
+    [
+      1054,
+      "wire",
+      "3086"
+    ],
+    [
+      1054,
+      "wire",
+      "3083"
+    ],
+    [
+      1054,
+      "wire",
+      "3084"
+    ],
+    [
+      1055,
+      "part",
+      "3147"
+    ],
+    [
+      1055,
+      "part",
+      "3149"
+    ],
+    [
+      1055,
+      "part",
+      "3110"
+    ],
+    [
+      1055,
+      "part",
+      "3151"
+    ],
+    [
+      1055,
+      "part",
+      "3153"
+    ],
+    [
+      1055,
+      "part",
+      "3118"
+    ],
+    [
+      1055,
+      "part",
+      "3155"
+    ],
+    [
+      1055,
+      "part",
+      "3123"
+    ],
+    [
+      1055,
+      "wire",
+      "3157"
+    ],
+    [
+      1055,
+      "wire",
+      "3133"
+    ],
+    [
+      1055,
+      "wire",
+      "3148"
+    ],
+    [
+      1055,
+      "wire",
+      "3134"
+    ],
+    [
+      1055,
+      "wire",
+      "3150"
+    ],
+    [
+      1055,
+      "wire",
+      "3136"
+    ],
+    [
+      1055,
+      "wire",
+      "3137"
+    ],
+    [
+      1055,
+      "wire",
+      "3152"
+    ],
+    [
+      1055,
+      "wire",
+      "3139"
+    ],
+    [
+      1055,
+      "wire",
+      "3154"
+    ],
+    [
+      1055,
+      "wire",
+      "3138"
+    ],
+    [
+      1055,
+      "wire",
+      "3141"
+    ],
+    [
+      1055,
+      "wire",
+      "3142"
+    ],
+    [
+      1055,
+      "wire",
+      "3156"
+    ],
+    [
+      1055,
+      "wire",
+      "3144"
+    ],
+    [
+      1056,
+      "part",
+      "3120"
+    ],
+    [
+      1056,
+      "part",
+      "3112"
+    ],
+    [
+      1056,
+      "wire",
+      "3122"
+    ],
+    [
+      1056,
+      "wire",
+      "3118"
+    ],
+    [
+      1056,
+      "wire",
+      "3121"
+    ],
+    [
+      1056,
+      "wire",
+      "3117"
+    ],
+    [
+      1056,
+      "wire",
+      "3119"
+    ],
+    [
+      1613,
+      "part",
+      "37"
+    ],
+    [
+      1613,
+      "wire",
+      "31"
+    ],
+    [
+      1613,
+      "wire",
+      "32"
+    ],
+    [
+      1613,
+      "wire",
+      "33"
+    ],
+    [
+      1613,
+      "wire",
+      "42"
+    ],
+    [
+      1613,
+      "wire",
+      "44"
+    ],
+    [
+      1613,
+      "wire",
+      "43"
+    ],
+    [
+      1619,
+      "part",
+      "282"
+    ],
+    [
+      1619,
+      "wire",
+      "284"
+    ],
+    [
+      1619,
+      "wire",
+      "280"
+    ],
+    [
+      1619,
+      "wire",
+      "283"
+    ],
+    [
+      1620,
+      "part",
+      "350"
+    ],
+    [
+      1620,
+      "wire",
+      "352"
+    ],
+    [
+      1620,
+      "wire",
+      "348"
+    ],
+    [
+      1620,
+      "wire",
+      "351"
+    ],
+    [
+      1210,
+      "wire",
+      "21"
+    ],
+    [
+      1210,
+      "wire",
+      "37"
+    ],
+    [
+      1210,
+      "wire",
+      "39"
+    ],
+    [
+      1210,
+      "wire",
+      "40"
+    ],
+    [
+      1210,
+      "wire",
+      "41"
+    ],
+    [
+      1210,
+      "wire",
+      "42"
+    ],
+    [
+      1210,
+      "wire",
+      "43"
+    ],
+    [
+      1210,
+      "wire",
+      "46"
+    ],
+    [
+      1210,
+      "wire",
+      "48"
+    ],
+    [
+      331,
+      "part",
+      "23"
+    ],
+    [
+      331,
+      "part",
+      "27"
+    ],
+    [
+      331,
+      "part",
+      "33"
+    ],
+    [
+      331,
+      "part",
+      "36"
+    ],
+    [
+      331,
+      "part",
+      "39"
+    ],
+    [
+      331,
+      "part",
+      "46"
+    ],
+    [
+      331,
+      "part",
+      "30"
+    ],
+    [
+      331,
+      "part",
+      "41"
+    ],
+    [
+      331,
+      "part",
+      "59"
+    ],
+    [
+      331,
+      "wire",
+      "21"
+    ],
+    [
+      331,
+      "wire",
+      "22"
+    ],
+    [
+      331,
+      "wire",
+      "25"
+    ],
+    [
+      331,
+      "wire",
+      "26"
+    ],
+    [
+      331,
+      "wire",
+      "32"
+    ],
+    [
+      331,
+      "wire",
+      "42"
+    ],
+    [
+      331,
+      "wire",
+      "35"
+    ],
+    [
+      331,
+      "wire",
+      "43"
+    ],
+    [
+      331,
+      "wire",
+      "38"
+    ],
+    [
+      331,
+      "wire",
+      "44"
+    ],
+    [
+      331,
+      "wire",
+      "45"
+    ],
+    [
+      331,
+      "wire",
+      "48"
+    ],
+    [
+      331,
+      "wire",
+      "29"
+    ],
+    [
+      331,
+      "wire",
+      "49"
+    ],
+    [
+      331,
+      "wire",
+      "57"
+    ],
+    [
+      331,
+      "wire",
+      "58"
+    ],
+    [
+      402,
+      "part",
+      "208"
+    ],
+    [
+      402,
+      "part",
+      "138"
+    ],
+    [
+      402,
+      "part",
+      "141"
+    ],
+    [
+      402,
+      "part",
+      "144"
+    ],
+    [
+      402,
+      "part",
+      "147"
+    ],
+    [
+      402,
+      "part",
+      "155"
+    ],
+    [
+      402,
+      "part",
+      "158"
+    ],
+    [
+      402,
+      "part",
+      "161"
+    ],
+    [
+      402,
+      "part",
+      "164"
+    ],
+    [
+      402,
+      "wire",
+      "184"
+    ],
+    [
+      402,
+      "wire",
+      "185"
+    ],
+    [
+      402,
+      "wire",
+      "186"
+    ],
+    [
+      402,
+      "wire",
+      "187"
+    ],
+    [
+      402,
+      "wire",
+      "188"
+    ],
+    [
+      402,
+      "wire",
+      "189"
+    ],
+    [
+      402,
+      "wire",
+      "190"
+    ],
+    [
+      402,
+      "wire",
+      "191"
+    ],
+    [
+      402,
+      "wire",
+      "192"
+    ],
+    [
+      402,
+      "wire",
+      "193"
+    ],
+    [
+      402,
+      "wire",
+      "194"
+    ],
+    [
+      402,
+      "wire",
+      "195"
+    ],
+    [
+      402,
+      "wire",
+      "196"
+    ],
+    [
+      402,
+      "wire",
+      "197"
+    ],
+    [
+      402,
+      "wire",
+      "198"
+    ],
+    [
+      402,
+      "wire",
+      "199"
+    ],
+    [
+      402,
+      "wire",
+      "200"
+    ],
+    [
+      402,
+      "wire",
+      "201"
+    ],
+    [
+      402,
+      "wire",
+      "202"
+    ],
+    [
+      402,
+      "wire",
+      "203"
+    ],
+    [
+      402,
+      "wire",
+      "204"
+    ],
+    [
+      402,
+      "wire",
+      "205"
+    ],
+    [
+      402,
+      "wire",
+      "206"
+    ],
+    [
+      402,
+      "wire",
+      "209"
+    ],
+    [
+      402,
+      "wire",
+      "210"
+    ],
+    [
+      403,
+      "part",
+      "329"
+    ],
+    [
+      403,
+      "part",
+      "250"
+    ],
+    [
+      403,
+      "part",
+      "253"
+    ],
+    [
+      403,
+      "part",
+      "256"
+    ],
+    [
+      403,
+      "part",
+      "259"
+    ],
+    [
+      403,
+      "part",
+      "267"
+    ],
+    [
+      403,
+      "part",
+      "270"
+    ],
+    [
+      403,
+      "part",
+      "273"
+    ],
+    [
+      403,
+      "part",
+      "276"
+    ],
+    [
+      403,
+      "part",
+      "281"
+    ],
+    [
+      403,
+      "wire",
+      "331"
+    ],
+    [
+      403,
+      "wire",
+      "303"
+    ],
+    [
+      403,
+      "wire",
+      "330"
+    ],
+    [
+      403,
+      "wire",
+      "304"
+    ],
+    [
+      403,
+      "wire",
+      "306"
+    ],
+    [
+      403,
+      "wire",
+      "305"
+    ],
+    [
+      403,
+      "wire",
+      "307"
+    ],
+    [
+      403,
+      "wire",
+      "309"
+    ],
+    [
+      403,
+      "wire",
+      "308"
+    ],
+    [
+      403,
+      "wire",
+      "310"
+    ],
+    [
+      403,
+      "wire",
+      "312"
+    ],
+    [
+      403,
+      "wire",
+      "311"
+    ],
+    [
+      403,
+      "wire",
+      "313"
+    ],
+    [
+      403,
+      "wire",
+      "314"
+    ],
+    [
+      403,
+      "wire",
+      "315"
+    ],
+    [
+      403,
+      "wire",
+      "317"
+    ],
+    [
+      403,
+      "wire",
+      "316"
+    ],
+    [
+      403,
+      "wire",
+      "318"
+    ],
+    [
+      403,
+      "wire",
+      "320"
+    ],
+    [
+      403,
+      "wire",
+      "319"
+    ],
+    [
+      403,
+      "wire",
+      "321"
+    ],
+    [
+      403,
+      "wire",
+      "323"
+    ],
+    [
+      403,
+      "wire",
+      "322"
+    ],
+    [
+      403,
+      "wire",
+      "324"
+    ],
+    [
+      403,
+      "wire",
+      "325"
+    ],
+    [
+      403,
+      "wire",
+      "326"
+    ],
+    [
+      403,
+      "wire",
+      "327"
+    ]
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0047-IdentXmlPart.xml",
+    "sources/decoded-original/0048-IdentXmlPart.xml",
+    "sources/decoded-original/0562-IdentXmlPart.xml",
+    "sources/decoded-original/0563-IdentXmlPart.xml",
+    "catalog-sources/STARTUP-WORD-DOTS-SUPPLEMENT.md",
+    "assets/catalog-circuits/Electrical_Rev2-P066.png",
+    "assets/catalog-circuits/Electrical_Rev2-P123.png",
+    "assets/catalog-circuits/Electrical_Rev2-P141.png",
+    "assets/catalog-circuits/Electrical_Rev2-P257.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P036.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P051.png",
+    "assets/catalog-circuits/PID_1684n002I-P001.png"
+  ],
+  "internal_names": [],
+  "signal_reference": {
+    "id": "FN05",
+    "signals": [
+      {
+        "name": "Flag.M_FN_05",
+        "addresses": [
+          "DB2.DBX3.1"
+        ],
+        "native_refs": [
+          {
+            "network": 1970,
+            "oref": "1111",
+            "source": "sources/decoded-original/0270-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Start FN05",
+        "addresses": [
+          "%Q4.7"
+        ],
+        "native_refs": [
+          {
+            "network": 1970,
+            "oref": "1113",
+            "source": "sources/decoded-original/0270-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "FN05_Fbk",
+        "addresses": [
+          "%I6.0"
+        ],
+        "native_refs": [
+          {
+            "network": 1044,
+            "oref": "2530",
+            "source": "sources/decoded-original/0331-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Inputs.FN-05 RUN",
+        "addresses": [
+          "DB13.DBX6.0"
+        ],
+        "native_refs": [
+          {
+            "network": 1814,
+            "oref": "1275",
+            "source": "sources/decoded-original/0448-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Allarm.FN_05_FAULT",
+        "addresses": [
+          "DB3.DBX3.1"
+        ],
+        "native_refs": [
+          {
+            "network": 1814,
+            "oref": "1243",
+            "source": "sources/decoded-original/0448-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ],
+    "note": "원문 주소/핀은검토된 I/O 영역에서 확인"
+  },
+  "alarm_reference": {
+    "id": "FN05",
+    "timers": [
+      {
+        "network": 1814,
+        "uid": "1225",
+        "name": "Tag_79",
+        "address": "%T96",
+        "preset": "S5T#2S",
+        "condition": "ON AND Start FN05 AND NOT Inputs.FN-05 RUN",
+        "value_oref": "1239",
+        "operand_oref": "1240",
+        "native_upstream": {}
+      }
+    ],
+    "alarms": [
+      {
+        "name": "Allarm.FN_05_FAULT",
+        "address": "DB3.DBX3.1",
+        "actions": [
+          {
+            "network": 1814,
+            "uid": "1231",
+            "kind": "Set",
+            "condition": "ON AND Start FN05 AND Tag_79",
+            "operand_oref": "1243"
+          },
+          {
+            "network": 1814,
+            "uid": "1236",
+            "kind": "Reset",
+            "condition": "ON AND RESET_ALLARM AND Allarm.FN_05_FAULT",
+            "operand_oref": "1246"
+          }
+        ]
+      }
+    ],
+    "note": "원본 정적 핀. 요청Reset1970·startupWord403 중첩·HMI 쓰기/호출 최종값 별도"
+  },
+  "control_reference": {
+    "native": [
+      1970,
+      1814,
+      1070,
+      1044,
+      1054,
+      1055,
+      1056,
+      1613,
+      1619,
+      1620,
+      1210,
+      331,
+      402,
+      403
+    ],
+    "chain": [
+      "ON AND 요청 → Q4.7. 고장 OR (NOT FN04 Run AND NOT UNDER TESTING)은 요청 Reset1970 분기입니다.",
+      "IW6 → DB13.W6 복사와 현재 호출/갱신, 원시 I6.0과 처리Run을 분리합니다.",
+      "운전시간 HOUR는 +1 Add가 아니라 상수1 Move, 별도 Reset1054는 상수0 Move입니다."
+    ],
+    "repair": [
+      "LAD1970의 고장 OR(FN04 미응답 AND 비시험) 분기를 분리. HMI 이벤트가 애초에 요청을 기록했는지 비교",
+      "코일의 ON AND 요청, 같은 네트워크 Reset, 호출 조건을 구별",
+      "출력 bit→모듈→QS/QM→코일→주접점/모터를 나눠 비교. 보호기 트립과 PLC 미출력을 혼동하지 않음",
+      "LAD1814의2초와 맞는 미응답인지. 접촉기13–14/모듈21/원시입력/Word복사 호출을 순서대로 비교",
+      "LAD1070 복사와 LAD1613 호출 조건, HMI 미결속4개를 구분. 표시를 원시값으로 취급하지 않음",
+      "LAD1971의 FN05 반전 분기는 한 조건일 뿐. 팬 보조접점과 실제 송풍이 같다고 가정하지 않음",
+      "LAD1044의 HOUR Move1 및 LAD1054의 Move0, 공통 시간처리 확인",
+      "LAD1814 Reset은 FN05 요청 Set이 아닙니다. LAD1970의FN04 미응답/비시험 분기가 남는지 구분합니다."
+    ],
+    "pending": [
+      "HMI4ORef·현재호출/전체Writer·정격5.5/6.3kW·보호10–16/11–16A·현행단자 미확정"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "FN05",
+    "boundary": "source_linked; actual catalog ID; physical identity unverified",
+    "existing_notes": [
+      "정적 원본 근거; 현재CPU·실물·복구 별도"
+    ],
+    "existing_pending": [
+      "HMI4ORef·현재호출/전체Writer·정격5.5/6.3kW·보호10–16/11–16A·현행단자 미확정"
+    ],
+    "existing_review": []
+  },
+  "repair": {
+    "key": "FN05",
+    "plc_id": "FN05",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "request",
+        "title": "요청이 바로 풀림",
+        "observe": "HMI Flag/DB2.X3.1, ON, DB3.X3.1, FN04 DB13.X22.2, UNDER TESTING",
+        "compare": "LAD1970의 고장 OR(FN04 미응답 AND 비시험) 분기를 분리. HMI 이벤트가 애초에 요청을 기록했는지 비교",
+        "next": "원인 분기와 실제 쓰기 주체가 확인되고, 승인된 재요청 후 요청·출력이 유지되는 별도 기록",
+        "common": "step-request"
+      },
+      {
+        "id": "permit",
+        "title": "요청은 있으나 Q4.7이 없음",
+        "observe": "DB2.X3.1/Q4.7/ON, Motors1 호출, scan/다른 쓰기",
+        "compare": "코일의 ON AND 요청, 같은 네트워크 Reset, 호출 조건을 구별",
+        "next": "백업/현재CPU 일치 및 Trace. 'HMI가 켜짐=출력이 켜짐' 판정 금지",
+        "common": "step-permit"
+      },
+      {
+        "id": "response",
+        "title": "Q4.7은 있으나 접촉기/모터 미동작",
+        "observe": "FG140 단자8, XS67/68, QS/QM 상태, KM A1/A2, 전력경로 관찰 기록",
+        "compare": "출력 bit→모듈→QS/QM→코일→주접점/모터를 나눠 비교. 보호기 트립과 PLC 미출력을 혼동하지 않음",
+        "next": "승인 절차의 전기/기계 점검 보고. 현행명판·보호값 상충 해소 전 임의 설정 금지",
+        "common": "step-response"
+      },
+      {
+        "id": "stop",
+        "title": "기동 후 FAULT 발생",
+        "observe": "Q4.7, I6.0, DB13.X6.0, T96, DB3.X3.1 시각",
+        "compare": "LAD1814의2초와 맞는 미응답인지. 접촉기13–14/모듈21/원시입력/Word복사 호출을 순서대로 비교",
+        "next": "물리 피드백과 처리 응답 차이를 먼저 확인. 타이머 증가로 증상 숨김 금지",
+        "common": "step-stop"
+      },
+      {
+        "id": "hmi",
+        "title": "I6.0은 변하나 화면/처리응답이 다름",
+        "observe": "I6.0/IW6/DB13.W6, HMI 호출·DB11.X66.0/66.1",
+        "compare": "LAD1070 복사와 LAD1613 호출 조건, HMI 미결속4개를 구분. 표시를 원시값으로 취급하지 않음",
+        "next": "원본 HMI 프로젝트·스크립트·태그 연결·현재 런타임 통신 증거",
+        "common": "step-hmi"
+      },
+      {
+        "id": "heater-boundary",
+        "title": "팬은 도는 듯한데 ER01이 정지",
+        "observe": "FN05 처리 Run, ER01 요청/알람/기타 허가 별도",
+        "compare": "LAD1971의 FN05 반전 분기는 한 조건일 뿐. 팬 보조접점과 실제 송풍이 같다고 가정하지 않음",
+        "next": "ER01 전용 문서/고유 회로 검토로 인계; FN05 표준 완료로 ER01까지 완료 처리 금지",
+        "common": "step-heater-boundary"
+      },
+      {
+        "id": "hours",
+        "title": "가동시간이1/0으로 바뀌거나 누계가 맞지 않음",
+        "observe": "DB9.W180/182, T13/T17, Flag_Aggiorna_DB와 외부 저장 수신 기록",
+        "compare": "LAD1044의 HOUR Move1 및 LAD1054의 Move0, 공통 시간처리 확인",
+        "next": "외부 누계/저장 수신부와 실제 기록을 확보. PLC HOUR를 누적시간으로 임의 해석 금지",
+        "common": "step-hours"
+      },
+      {
+        "id": "recovery",
+        "title": "알람 해제·새 요청·실제 송풍 복구",
+        "observe": "FAULT·RESET_ALLARM·FN04 처리Run·요청·출력·접촉기·송풍을 같은 시각에 따로 남깁니다.",
+        "compare": "LAD1814 Reset은 FN05 요청 Set이 아닙니다. LAD1970의FN04 미응답/비시험 분기가 남는지 구분합니다.",
+        "next": "원인 조치·승인된 재요청·실제 송풍·재발 여부와 현재 프로젝트 증거가 확보될 때 별도 판단합니다.",
+        "common": "step-recovery"
+      }
+    ],
+    "bindings": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Flag.M_FN_05",
+        "addresses": [
+          "DB2.DBX3.1"
+        ],
+        "refs": [
+          {
+            "network": 1970,
+            "oref": "1111",
+            "source": "sources/decoded-original/0270-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "command",
+        "role": "outputs",
+        "name": "Start FN05",
+        "addresses": [
+          "%Q4.7"
+        ],
+        "refs": [
+          {
+            "network": 1970,
+            "oref": "1113",
+            "source": "sources/decoded-original/0270-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "raw-run",
+        "role": "raw_inputs",
+        "name": "FN05_Fbk",
+        "addresses": [
+          "%I6.0"
+        ],
+        "refs": [
+          {
+            "network": 1044,
+            "oref": "2530",
+            "source": "sources/decoded-original/0331-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "processed-run",
+        "role": "responses",
+        "name": "Inputs.FN-05 RUN",
+        "addresses": [
+          "DB13.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1814,
+            "oref": "1275",
+            "source": "sources/decoded-original/0448-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.FN_05_FAULT",
+        "addresses": [
+          "DB3.DBX3.1"
+        ],
+        "refs": [
+          {
+            "network": 1814,
+            "oref": "1243",
+            "source": "sources/decoded-original/0448-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "FN05",
+    "name": "FN05 석회 계통 송풍기",
+    "reference_plc_id": "FN05",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Flag.M_FN_05",
+        "addresses": [
+          "DB2.DBX3.1"
+        ],
+        "refs": [
+          {
+            "network": 1970,
+            "oref": "1111",
+            "source": "sources/decoded-original/0270-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "command",
+        "role": "outputs",
+        "name": "Start FN05",
+        "addresses": [
+          "%Q4.7"
+        ],
+        "refs": [
+          {
+            "network": 1970,
+            "oref": "1113",
+            "source": "sources/decoded-original/0270-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "raw-run",
+        "role": "raw_inputs",
+        "name": "FN05_Fbk",
+        "addresses": [
+          "%I6.0"
+        ],
+        "refs": [
+          {
+            "network": 1044,
+            "oref": "2530",
+            "source": "sources/decoded-original/0331-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "processed-run",
+        "role": "responses",
+        "name": "Inputs.FN-05 RUN",
+        "addresses": [
+          "DB13.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1814,
+            "oref": "1275",
+            "source": "sources/decoded-original/0448-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.FN_05_FAULT",
+        "addresses": [
+          "DB3.DBX3.1"
+        ],
+        "refs": [
+          {
+            "network": 1814,
+            "oref": "1243",
+            "source": "sources/decoded-original/0448-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "request",
+        "title": "요청이 바로 풀림",
+        "observe": "HMI Flag/DB2.X3.1, ON, DB3.X3.1, FN04 DB13.X22.2, UNDER TESTING",
+        "compare": "LAD1970의 고장 OR(FN04 미응답 AND 비시험) 분기를 분리. HMI 이벤트가 애초에 요청을 기록했는지 비교",
+        "next": "원인 분기와 실제 쓰기 주체가 확인되고, 승인된 재요청 후 요청·출력이 유지되는 별도 기록",
+        "common": "step-request"
+      },
+      {
+        "id": "permit",
+        "title": "요청은 있으나 Q4.7이 없음",
+        "observe": "DB2.X3.1/Q4.7/ON, Motors1 호출, scan/다른 쓰기",
+        "compare": "코일의 ON AND 요청, 같은 네트워크 Reset, 호출 조건을 구별",
+        "next": "백업/현재CPU 일치 및 Trace. 'HMI가 켜짐=출력이 켜짐' 판정 금지",
+        "common": "step-permit"
+      },
+      {
+        "id": "response",
+        "title": "Q4.7은 있으나 접촉기/모터 미동작",
+        "observe": "FG140 단자8, XS67/68, QS/QM 상태, KM A1/A2, 전력경로 관찰 기록",
+        "compare": "출력 bit→모듈→QS/QM→코일→주접점/모터를 나눠 비교. 보호기 트립과 PLC 미출력을 혼동하지 않음",
+        "next": "승인 절차의 전기/기계 점검 보고. 현행명판·보호값 상충 해소 전 임의 설정 금지",
+        "common": "step-response"
+      },
+      {
+        "id": "stop",
+        "title": "기동 후 FAULT 발생",
+        "observe": "Q4.7, I6.0, DB13.X6.0, T96, DB3.X3.1 시각",
+        "compare": "LAD1814의2초와 맞는 미응답인지. 접촉기13–14/모듈21/원시입력/Word복사 호출을 순서대로 비교",
+        "next": "물리 피드백과 처리 응답 차이를 먼저 확인. 타이머 증가로 증상 숨김 금지",
+        "common": "step-stop"
+      },
+      {
+        "id": "hmi",
+        "title": "I6.0은 변하나 화면/처리응답이 다름",
+        "observe": "I6.0/IW6/DB13.W6, HMI 호출·DB11.X66.0/66.1",
+        "compare": "LAD1070 복사와 LAD1613 호출 조건, HMI 미결속4개를 구분. 표시를 원시값으로 취급하지 않음",
+        "next": "원본 HMI 프로젝트·스크립트·태그 연결·현재 런타임 통신 증거",
+        "common": "step-hmi"
+      },
+      {
+        "id": "heater-boundary",
+        "title": "팬은 도는 듯한데 ER01이 정지",
+        "observe": "FN05 처리 Run, ER01 요청/알람/기타 허가 별도",
+        "compare": "LAD1971의 FN05 반전 분기는 한 조건일 뿐. 팬 보조접점과 실제 송풍이 같다고 가정하지 않음",
+        "next": "ER01 전용 문서/고유 회로 검토로 인계; FN05 표준 완료로 ER01까지 완료 처리 금지",
+        "common": "step-heater-boundary"
+      },
+      {
+        "id": "hours",
+        "title": "가동시간이1/0으로 바뀌거나 누계가 맞지 않음",
+        "observe": "DB9.W180/182, T13/T17, Flag_Aggiorna_DB와 외부 저장 수신 기록",
+        "compare": "LAD1044의 HOUR Move1 및 LAD1054의 Move0, 공통 시간처리 확인",
+        "next": "외부 누계/저장 수신부와 실제 기록을 확보. PLC HOUR를 누적시간으로 임의 해석 금지",
+        "common": "step-hours"
+      },
+      {
+        "id": "recovery",
+        "title": "알람 해제·새 요청·실제 송풍 복구",
+        "observe": "FAULT·RESET_ALLARM·FN04 처리Run·요청·출력·접촉기·송풍을 같은 시각에 따로 남깁니다.",
+        "compare": "LAD1814 Reset은 FN05 요청 Set이 아닙니다. LAD1970의FN04 미응답/비시험 분기가 남는지 구분합니다.",
+        "next": "원인 조치·승인된 재요청·실제 송풍·재발 여부와 현재 프로젝트 증거가 확보될 때 별도 판단합니다.",
+        "common": "step-recovery"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "FN05 independent evidence collection; not control instructions",
+      "sources": {
+        "catalog-sources/FN05-DOTS-DRAFT.md": "61a115a7cbedfdbd501e7a3a43fc212f21862e7303477f67e21db4a8314d9bb4"
+      },
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "실물·현재 자료",
+            "work": "M41/FN05 명판·위치·제어반과 현재 PLC 프로젝트를 식별합니다. 원본 정격/보호값 상충을 유지하며 임의 변경하지 않습니다."
+          },
+          {
+            "owner": "관찰 근거",
+            "work": "원시I6.0·처리DB13.X6.0·요청/출력/알람의 시각과 수집방법을 남기고 실제송풍과 구분합니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "FG65/PDF66",
+            "path": "sources/Electrical_Rev2.pdf#page=66"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "request",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "HMI Flag/DB2.X3.1, ON, DB3.X3.1, FN04 DB13.X22.2, UNDER TESTING"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "원인 분기와 실제 쓰기 주체가 확인되고, 승인된 재요청 후 요청·출력이 유지되는 별도 기록"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "FN05 제어 원본",
+              "path": "networks/network-1970.html"
+            },
+            {
+              "label": "고유 고장2초",
+              "path": "networks/network-1814.html"
+            },
+            {
+              "label": "FG65 · PDF66",
+              "path": "sources/Electrical_Rev2.pdf#page=66"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "permit",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "DB2.X3.1/Q4.7/ON, Motors1 호출, scan/다른 쓰기"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "백업/현재CPU 일치 및 Trace. 'HMI가 켜짐=출력이 켜짐' 판정 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "FN05 제어 원본",
+              "path": "networks/network-1970.html"
+            },
+            {
+              "label": "고유 고장2초",
+              "path": "networks/network-1814.html"
+            },
+            {
+              "label": "FG65 · PDF66",
+              "path": "sources/Electrical_Rev2.pdf#page=66"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "response",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "FG140 단자8, XS67/68, QS/QM 상태, KM A1/A2, 전력경로 관찰 기록"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "승인 절차의 전기/기계 점검 보고. 현행명판·보호값 상충 해소 전 임의 설정 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "FN05 제어 원본",
+              "path": "networks/network-1970.html"
+            },
+            {
+              "label": "고유 고장2초",
+              "path": "networks/network-1814.html"
+            },
+            {
+              "label": "FG65 · PDF66",
+              "path": "sources/Electrical_Rev2.pdf#page=66"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "stop",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "Q4.7, I6.0, DB13.X6.0, T96, DB3.X3.1 시각"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "물리 피드백과 처리 응답 차이를 먼저 확인. 타이머 증가로 증상 숨김 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "FN05 제어 원본",
+              "path": "networks/network-1970.html"
+            },
+            {
+              "label": "고유 고장2초",
+              "path": "networks/network-1814.html"
+            },
+            {
+              "label": "FG65 · PDF66",
+              "path": "sources/Electrical_Rev2.pdf#page=66"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "hmi",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "I6.0/IW6/DB13.W6, HMI 호출·DB11.X66.0/66.1"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "원본 HMI 프로젝트·스크립트·태그 연결·현재 런타임 통신 증거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "원본LAD1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "원본LAD1613",
+              "path": "networks/network-1613.html"
+            },
+            {
+              "label": "원본LAD1210",
+              "path": "networks/network-1210.html"
+            },
+            {
+              "label": "원본LAD331",
+              "path": "networks/network-331.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "heater-boundary",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "FN05 처리 Run, ER01 요청/알람/기타 허가 별도"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "ER01 전용 문서/고유 회로 검토로 인계; FN05 표준 완료로 ER01까지 완료 처리 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "FN05 제어 원본",
+              "path": "networks/network-1970.html"
+            },
+            {
+              "label": "고유 고장2초",
+              "path": "networks/network-1814.html"
+            },
+            {
+              "label": "FG65 · PDF66",
+              "path": "sources/Electrical_Rev2.pdf#page=66"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "hours",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "DB9.W180/182, T13/T17, Flag_Aggiorna_DB와 외부 저장 수신 기록"
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "외부 누계/저장 수신부와 실제 기록을 확보. PLC HOUR를 누적시간으로 임의 해석 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "원본LAD1044",
+              "path": "networks/network-1044.html"
+            },
+            {
+              "label": "원본LAD1054",
+              "path": "networks/network-1054.html"
+            },
+            {
+              "label": "원본LAD1055",
+              "path": "networks/network-1055.html"
+            },
+            {
+              "label": "원본LAD1056",
+              "path": "networks/network-1056.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "recovery",
+          "requirements": [
+            {
+              "owner": "현재 PLC·현장 관찰",
+              "work": "FAULT·RESET_ALLARM·FN04 처리Run·요청·출력·접촉기·송풍을 같은 시각에 따로 남깁니다."
+            },
+            {
+              "owner": "원본·승인 자료",
+              "work": "원인 조치·승인된 재요청·실제 송풍·재발 여부와 현재 프로젝트 증거가 확보될 때 별도 판단합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "FN05 제어 원본",
+              "path": "networks/network-1970.html"
+            },
+            {
+              "label": "고유 고장2초",
+              "path": "networks/network-1814.html"
+            },
+            {
+              "label": "FG65 · PDF66",
+              "path": "sources/Electrical_Rev2.pdf#page=66"
+            }
+          ],
+          "reviews": []
+        }
+      ],
+      "field_verified": false,
+      "circuit_equipment": "M41/FN05 직접기동 · 원문5.5kW/10.3A 대P&ID6.3kW",
+      "circuit_distinction": "FN05·ER01 고유 소유 분리; 정격과보호상충 유지; 현재실물 미확정",
+      "circuit_pages": [
+        {
+          "label": "FG65 · PDF66",
+          "path": "sources/Electrical_Rev2.pdf#page=66"
+        },
+        {
+          "label": "FG122 · PDF123",
+          "path": "sources/Electrical_Rev2.pdf#page=123"
+        },
+        {
+          "label": "FG140 · PDF141",
+          "path": "sources/Electrical_Rev2.pdf#page=141"
+        },
+        {
+          "label": "FG254 · PDF257",
+          "path": "sources/Electrical_Rev2.pdf#page=257"
+        }
+      ],
+      "construction_boundary": "시공도면은 승인·준공·현재 배선 확인 전. M41 FN05 1_27과ER01 1_28은 별도이며 병합하지 않습니다.",
+      "construction_pages": [
+        {
+          "label": "시공·케이블 · PDF36",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+        },
+        {
+          "label": "시공·케이블 · PDF51",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=51"
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "FN05",
+    "plc_id": "FN05",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-65",
+        "kind": "OEM 전기",
+        "title": "FG65 · PDF66",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 66,
+        "fg": 65,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P066.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "기본일자 27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-122",
+        "kind": "OEM 전기",
+        "title": "FG122 · PDF123",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 123,
+        "fg": 122,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P123.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "기본일자 27.05.2024 · Rev 2 · 17.03.2025"
+      },
+      {
+        "id": "oem-140",
+        "kind": "OEM 전기",
+        "title": "FG140 · PDF141",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 141,
+        "fg": 140,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P141.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "기본일자 27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-254",
+        "kind": "OEM 전기",
+        "title": "FG254 · PDF257",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 257,
+        "fg": 254,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P257.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "기본일자 27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "construction-36",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF36",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 36,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P036.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "24.11.11 first draft design · FOR APPROVAL"
+      },
+      {
+        "id": "construction-51",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF51",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 51,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P051.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "24.11.11 first draft design · FOR APPROVAL"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "백업/참고 자료; 현재 실물 확인 전",
+        "revision": "Rev I · 참고 도면"
+      }
+    ],
+    "circuit": {
+      "id": "FN05",
+      "equipment": "M41/FN05 직접기동 · 원문5.5kW/10.3A 대P&ID6.3kW",
+      "distinction": "FN05·ER01 고유 소유 분리; 정격과보호상충 유지; 현재실물 미확정",
+      "paths": [
+        {
+          "signal": "기동 명령",
+          "fg": 65,
+          "drawing": "A4.7 / FG140 MOD15 단자8 → FG65 140/1",
+          "backup": "Q4.7 · Start FN05",
+          "nodes": [
+            "MOD15 단자8 → 65/4",
+            "FG65: XS67 → 65QS1 보조접점 → XS68",
+            "65.1 → 65QM1 보조접점 → 65KM1 A1",
+            "A2 → -0Vdc10.6; 주접점 → XM65U/V/W → 65QS1 → M41"
+          ],
+          "destination": "24Vdc 코일과440V 전력회로·실제 송풍을 분리합니다.",
+          "check": "QS/QM의 원문에 없는 보조접점 번호·현재 정상극성·보호설정은 만들지 않습니다.",
+          "native_symbol_references": [
+            {
+              "network": 1970,
+              "uid": "1113"
+            }
+          ]
+        },
+        {
+          "signal": "운전 응답",
+          "fg": 65,
+          "drawing": "65KM1 13–14 → E6.0 / FG122 MOD9 단자21",
+          "backup": "I6.0 → DB13.X6.0",
+          "nodes": [
+            "+24Vdc10.7 → 65KM1 13–14 (65/4)",
+            "E6.0 → 122/2 → FG122 65/6 → 단자21",
+            "I6.0 → IW6 → DB13.DBW6 → Inputs.FN-05 RUN"
+          ],
+          "destination": "보조접점 응답은 독립 축회전·풍량 증명이 아닙니다.",
+          "check": "원시 I·처리DB·HMI DB11 표시를 같은 시각에 따로 관찰합니다.",
+          "native_symbol_references": [
+            {
+              "network": 1814,
+              "uid": "1275"
+            },
+            {
+              "network": 1070,
+              "uid": "45"
+            }
+          ]
+        },
+        {
+          "signal": "입력 전달",
+          "fg": 122,
+          "drawing": "FG122 E6.0 / MOD9 단자21 → 원시/처리 Word 복사",
+          "backup": "I6.0 → DB13.X6.0",
+          "nodes": [
+            "+24Vdc10.7 → 65KM1 13–14 (65/4)",
+            "E6.0 → 122/2 → FG122 65/6 → 단자21",
+            "I6.0 → IW6 → DB13.DBW6 → Inputs.FN-05 RUN"
+          ],
+          "destination": "보조접점 응답은 독립 축회전·풍량 증명이 아닙니다.",
+          "check": "원시 I·처리DB·HMI DB11 표시를 같은 시각에 따로 관찰합니다.",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "45"
+            },
+            {
+              "network": 1070,
+              "uid": "46"
+            }
+          ]
+        }
+      ],
+      "pending": [
+        "보호10–16A 대 BOM11–16A·현행명판/승인자료",
+        "65QS/QM 보조접점 실제단자·정상극성",
+        "1_27 팬전력과1_28 히터전력은별도"
+      ]
+    },
+    "warnings": [
+      "백업 기준이며 현재 회전·송풍·실제 복구 증명이 아닙니다."
+    ]
+  },
+  "related_alarm_boundary": "FN05 2초고장/요청Reset과ER01 후단허가의 소유를 구분합니다.",
+  "presentation": {
+    "search_examples": "Q4.7, I6.0, DB2.X3.1, Tag_79, S5T#2S, M41, Move1"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "기본 설비 자료",
+        "devices/FN05.html"
+      ],
+      [
+        "P&ID 원본",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "io": [
+      [
+        "원시→처리 Part42",
+        "networks/network-1070.html#gme-fn05-part-42"
+      ],
+      [
+        "HMI 미결속 호출",
+        "networks/network-1210.html"
+      ],
+      [
+        "원본 HMI 설정",
+        "sources/hmi_plc_tags.csv"
+      ]
+    ],
+    "control": [
+      [
+        "출력 Part1106",
+        "networks/network-1970.html#gme-fn05-part-1106"
+      ],
+      [
+        "Reset Part1102",
+        "networks/network-1970.html#gme-fn05-part-1102"
+      ],
+      [
+        "Startup Word 원본402",
+        "networks/network-402.html"
+      ],
+      [
+        "Startup Word 원본403",
+        "networks/network-403.html"
+      ],
+      [
+        "시간 Move1",
+        "networks/network-1044.html#gme-fn05-part-2522"
+      ],
+      [
+        "전원 복귀 원문 보강",
+        "catalog-sources/STARTUP-WORD-DOTS-SUPPLEMENT.md"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG65 · PDF66",
+        "sources/Electrical_Rev2.pdf#page=66"
+      ],
+      [
+        "FG122 · PDF123",
+        "sources/Electrical_Rev2.pdf#page=123"
+      ],
+      [
+        "FG140 · PDF141",
+        "sources/Electrical_Rev2.pdf#page=141"
+      ],
+      [
+        "FG254 · PDF257",
+        "sources/Electrical_Rev2.pdf#page=257"
+      ],
+      [
+        "시공·케이블 · PDF36",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+      ],
+      [
+        "시공·케이블 · PDF51",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=51"
+      ],
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "alarms": [
+      [
+        "SD Part1225",
+        "networks/network-1814.html#gme-fn05-part-1225"
+      ],
+      [
+        "FAULT Set/Reset",
+        "networks/network-1814.html"
+      ],
+      [
+        "별도 ER01 요청",
+        "networks/network-1971.html"
+      ]
+    ],
+    "repair": [
+      [
+        "요청/출력",
+        "networks/network-1970.html"
+      ],
+      [
+        "응답/고장",
+        "networks/network-1814.html"
+      ]
+    ],
+    "completion": [
+      [
+        "자료·관찰 기준",
+        "catalog-guides/FN05.html#completion"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "id": "startup-word",
+        "title": "전원 복귀 Word0쓰기·요청/고장 중첩",
+        "type": "reviewed",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "LAD402/0147: DB2.DBW2의 INT#0은 byte2..3을 포함하여 M_FN_05 DB2.X3.1에 중첩합니다(Part141/out1·Wire189·ORef171/RID9). LAD403/0148: DB3.DBW2의 INT#0이 FN_05_FAULT DB3.X3.1에 중첩합니다(Part253/out1·Wire308·ORef288/RID26). DB2 byte0..15와DB3 byte0..17만 이 선정 Word쓰기에 포함됩니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "ON 및 en/eno와 NID2/NID3 선언을 대조합니다. 상위OB·Warm/Cold·Retain·HMI/외부/다른Writer 우선순위는미확정이므로 현재 기동후 최종값0·전체알람 초기화를 보장하지 않습니다."
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

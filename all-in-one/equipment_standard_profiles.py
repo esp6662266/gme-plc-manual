@@ -4,7 +4,8 @@ import json,hashlib
 import xml.etree.ElementTree as ET
 
 def build_static_profile(root,data,source_rows,config):
-    catalog_id,key=config["catalog_id"],config["priority_key"]
+    catalog_id=config["catalog_id"]
+    key=config.get("selection_key") or config["priority_key"]
     prefix="gme-"+catalog_id.lower()
     def read(file):return json.loads((root/file).read_text(encoding='utf-8'))
     spec=next(p for p in read('registers/control-spec.json')['specifications'] if p['id']==catalog_id)
@@ -13,8 +14,10 @@ def build_static_profile(root,data,source_rows,config):
     regulation=next((p for p in read('registers/regulation-manual.json')['loops'] if p['id']==catalog_id),None)
     control_reference=config.get('control_reference',regulation)
     assert control_reference is not None,(catalog_id,'reviewed control reference required')
-    completion=next(p for p in read('registers/requirements-audit.json')['priority_open_work'] if p['key']==key)
-    repair=next(p for p in read('registers/repair-decision.json')['records'] if p['key']==key)
+    completion=config.get('completion')
+    if completion is None:completion=next(p for p in read('registers/requirements-audit.json')['priority_open_work'] if p['key']==key)
+    repair=config.get('repair')
+    if repair is None:repair=next(p for p in read('registers/repair-decision.json')['records'] if p['key']==key)
     form=next(p for p in data['repair_record_forms']['profiles'] if p['key']==key)
     drawing=next(p for p in data['drawing_workspace']['profiles'] if p['key']==key)
     signal_trace=config.get('signal_reference')
@@ -22,9 +25,10 @@ def build_static_profile(root,data,source_rows,config):
     networks={p['document_id']:p for p in read('sources/decoded-original/network-map.json')}
     allowed={}
     def add(network,kind,uid):allowed.setdefault(int(network),set()).add((kind,str(uid)))
-    for rule in spec['direct_rules']:add(rule['네트워크 문서'],'part',rule['Part UID'])
+    for rule in spec['direct_rules']:
+        if not config.get('reviewed_native_only'):add(rule['네트워크 문서'],'part',rule['Part UID'])
     for entry in alarm['timers']+[a for group in alarm['alarms'] for a in group['actions']]:
-        add(entry['network'],'part',entry['uid'])
+        add(entry['network'],entry.get('location_kind','part'),entry['uid'])
         for part in entry.get('native_upstream',{}).get('parts',[]):add(entry['network'],'part',part)
         for ref in entry.get('native_upstream',{}).get('reference_pins',[]):add(entry['network'],'wire',ref['wire'])
     for network,kind,uid in config.get('extra_locations',[]):add(network,kind,uid)
@@ -41,7 +45,7 @@ def build_static_profile(root,data,source_rows,config):
     sources.extend(config.get('extra_sources',[]))
     # Hash original XML and all declarations in the reviewed network scope.
     native_ids=set(allowed)|set(control_reference['native'])
-    native_ids.update(int(n['문서 ID']) for n in spec['networks'])
+    if not config.get('reviewed_native_only'):native_ids.update(int(n['문서 ID']) for n in spec['networks'])
     for number in sorted(native_ids):
         n=networks[number];sources.append('sources/decoded-original/'+n['xml_file'])
         for operand in n['resolved_operands'].values():sources.extend('sources/decoded-original/'+f for f in operand.get('identifier_files',[]))
@@ -64,7 +68,7 @@ def build_static_profile(root,data,source_rows,config):
         match=next((s for s in locations if s['network']==pair['network'] and s['kind']==pair.get('kind','part') and s['uid']==pair['uid']),None)
         pair['path']=match['path'] if match else f"networks/network-{pair['network']}.html"
     hashes={file:hashlib.sha256((root/file).read_bytes()).hexdigest() for file in sorted(set(sources))}
-    profile=dict(priority_key=key,catalog_id=catalog_id,type=config['type'],version=1,
+    profile=dict(priority_key=config['priority_key'],catalog_id=catalog_id,type=config['type'],version=1,
         scope='preserved '+catalog_id+' analysis linked to seven areas; no new PLC execution or field claims',
         tools=dict(sources=True,restore=True,compare=True,report=True),sections=['overview','io','control','circuits','alarms','repair','completion'],
         specification=spec,signal_trace=signal_trace,alarm=alarm,regulation=regulation,control_reference=control_reference,completion=completion,repair=repair,
@@ -73,6 +77,8 @@ def build_static_profile(root,data,source_rows,config):
         source_bundle_sha256=hashlib.sha256(json.dumps(hashes,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
         field_verified=False,tia_verified=False,repairs_completed=0,
         related_alarm_boundary=config['related_alarm_boundary'])
+    if config.get('selection_key'):profile['selection_key']=key
+    if config.get('reviewed_sections'):profile['reviewed_sections']=config['reviewed_sections']
     return profile
 
 

@@ -49,6 +49,11 @@ for p,parser in parsers.items():
                     assert "params.get('view')==='drawings'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
             if target==(ROOT/'index.html').resolve() and params.get('view')==['manual']:
+                if params.get('scope')==['all'] and all(len(v)==1 for v in params.values()) and set(params)=={'view','equipment','scope'}:
+                    profiles=json.loads((ROOT/'registers/all-in-one-data.json').read_text())['equipment_standards']['profiles']
+                    if any(params.get('equipment')==[profile.get('selection_key')] and profile.get('selection_key')==profile['catalog_id'] and profile.get('tools',{}).get('report') for profile in profiles):
+                        assert 'GMEEquipmentStandard.normalize(data,state.selected,params)' in (ROOT/'assets/all-in-one.js').read_text()
+                        continue
                 if params.get('equipment')!=['P01'] and params.get('scope')==['priority'] and all(len(v)==1 for v in params.values()) and set(params)=={'view','equipment','scope'}:
                     profiles=json.loads((ROOT/'registers/all-in-one-data.json').read_text())['equipment_standards']['profiles']
                     assert any(params.get('equipment')==[p['priority_key']] and p.get('tools',{}).get('report') for p in profiles)
