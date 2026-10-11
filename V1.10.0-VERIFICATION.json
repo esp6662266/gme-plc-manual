@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "pending",
+  "publication": "verified",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -303,5 +303,365 @@
     "bundle": "7ecdcf6b7709ef5f0b8afe3632d022b5e9852d7b25f8a58ee699138b392c054b"
   },
   "local_node_tests": 8,
-  "NETLIFY_build": "passed"
+  "NETLIFY_build": "passed",
+  "feature_commit": "0259e491a3b0c4fec9823b42053a75efe60a3497",
+  "netlify": {
+    "id": "6acb2fb4160bd0000822daaf",
+    "state": "ready",
+    "commit_ref": "0259e491a3b0c4fec9823b42053a75efe60a3497",
+    "published_at": "2026-10-11T06:42:24.123Z",
+    "error_message": null
+  },
+  "github_release": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.10.0",
+  "release_asset_digest_verified": true,
+  "fresh_clone": {
+    "path": "/tmp/gme-vs01-fresh-20261011",
+    "node": "24.19.0",
+    "npm_ci": "passed",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment": "passed",
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "published_files": [
+    {
+      "path": "ACTIVE-WORK.md",
+      "status": 200,
+      "sha256": "69d1222bed3e2fbf685fd7885adfba7fc6b24f0d3ef021e2bb549ce9f27e99d0",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "ALL-IN-ONE.md",
+      "status": 200,
+      "sha256": "e27e2b6c7e46816ab294ae3a287d32d8dc6ed694a6128d5bcec1d0606cc92233",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "VERSION.json",
+      "status": 200,
+      "sha256": "43cf3a23a7294f116a7e366df5929dfb141e88dc3254f8e62e1e11fcd7330691",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "all-in-one-package-manifest.json",
+      "status": 200,
+      "sha256": "93cad2daf7bcb8a0c7f794d772831efe7506074e2aac092068ee943aab878e2d",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/all-in-one-data.js",
+      "status": 200,
+      "sha256": "4dbe67003a9f0e5f5050182e906c189c6305b5cf6a582aa21e08c16d918b073f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "build-all-in-one.py",
+      "status": 200,
+      "sha256": "aa7ababcba28de03e07042b5b175f2e664dcf22ea18007c47c106978312e3858",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "build-requirements-audit.py",
+      "status": 200,
+      "sha256": "1d711afe30bcf03c5280e12761a6f499ce3370d34edb54c531bd1091fd8c8f39",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "equipment_standard_profiles.py",
+      "status": 200,
+      "sha256": "74ea58cda9e1b037da731e9057f93c989a1cb88925bf02d4960f7b1de5a64d2d",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "0eb6436265626928edc22bdeb8b6fd2e8a8938d21b771a22ec560cda6e55c276",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1024.html",
+      "status": 200,
+      "sha256": "0198e1a824a8d68bf405d4f259808a76cfee6970f6773b9c0dcef5bca24c199c",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1050.html",
+      "status": 200,
+      "sha256": "eb469970da9a484240c50d579af87770c027efddab497acf5373a458b1900402",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1070.html",
+      "status": 200,
+      "sha256": "852cc46e040b509f89c5d85dee4fdd5842a28c92f68d117b7c514924e2858e1f",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1082.html",
+      "status": 200,
+      "sha256": "237a5ff727a27ac4d27a529dc499ba8a041d9c7d7b543383f7cd79885d930164",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1184.html",
+      "status": 200,
+      "sha256": "18a745c827dc68d56e16c625defdf5c32492f5c4f5ba959b3e8a64828060aab2",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1613.html",
+      "status": 200,
+      "sha256": "92034685a6d173a1ce387d90a913af73630b5f1894b6a4b6c50a75fa6db80f40",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1794.html",
+      "status": 200,
+      "sha256": "bb66602e2888e04e350d92e3c09ff5d8e79e5315b55c2c09f9b3d57efe8b7407",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1843.html",
+      "status": 200,
+      "sha256": "1921e543725f40b07e65b628b3fb826372b594321e26becae179aa9c0f3e2353",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1844.html",
+      "status": 200,
+      "sha256": "14763c1bb7b30b9ea9b88094b1a9eda1b947ab5bd9a861fe50ac738b9f5c408f",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1847.html",
+      "status": 200,
+      "sha256": "f95615b32690aa3c8873d5fdc3afbd79c281a9ddc80c98f01f0ac4a7757c1608",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1941.html",
+      "status": 200,
+      "sha256": "8c0f52b7d9506192b5c4e4215e09aabc45a3c1232b34c8d7773a4bac207b73b1",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1943.html",
+      "status": 200,
+      "sha256": "d7f0e962163ad0410b16f240270a682772e69bf8967e41eaac65b402c8bae055",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1944.html",
+      "status": 200,
+      "sha256": "4431425734539afdd928c042bedbf9c0d83b5178ca52ee9ba8335a139ed8940f",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "registers/all-in-one-data.json",
+      "status": 200,
+      "sha256": "d6168a1d494a4bde576d37f0a15070ba71a917376813385cb4dc4162d5823d34",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/requirements-audit.json",
+      "status": 200,
+      "sha256": "80161eee56e33677c5ef401ad1f67865d910b4e02a4563abe611bd5d4f9ef24f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit-verification.json",
+      "status": 200,
+      "sha256": "d9deac000210e5e7c9c81382cc5d17d1ba990741780fdc930ddd0f15081e304a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit.html",
+      "status": 200,
+      "sha256": "1c6703b014866d470118a8b0ba2ec3832e6cf02c887c98653a2e634ebde9aae6",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "verify-equipment-standards.cjs",
+      "status": 200,
+      "sha256": "4b895e00def0df3f0f45af1ff8325af0beaaa4d21567e0a857b3dfd3fbe2bda0",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "verify-requirements-audit.py",
+      "status": 200,
+      "sha256": "9e7186115edbca964019d322a11d51d85d302b4472613db5c2e02ac12cbb8aa3",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/program-model.json",
+      "status": 200,
+      "sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/program-model-data.js",
+      "status": 200,
+      "sha256": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/virtual-plc.js",
+      "status": 200,
+      "sha256": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/simulator-workspace.js",
+      "status": 200,
+      "sha256": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/virtual-plc-test-results.json",
+      "status": 200,
+      "sha256": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/circuits/FG27.png",
+      "status": 200,
+      "sha256": "bd048488c71a73a4d2e88eb4f74631f6c57bd50ffafe332f6f6b786a4095145c",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0248-FlgNet.xml",
+      "status": 200,
+      "sha256": "5625b16670c9c66da8d8387851ba511f3f139cca97e0a45d307c1e17bdabf2b7",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0430-FlgNet.xml",
+      "status": 200,
+      "sha256": "d058073f512bcdc1d392d281d9df7932583a15ae90bfd81d903b940e9e2d6599",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0658-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0397-FlgNet.xml",
+      "status": 200,
+      "sha256": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0030-FlgNet.xml",
+      "status": 200,
+      "sha256": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0627-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0628-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0629-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0655-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0688-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0694-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    }
+  ],
+  "published_ui": {
+    "version": "1.10.0",
+    "equipment": "P09",
+    "profile": "VS01",
+    "sections": 7,
+    "items": 41,
+    "source_pair": {
+      "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1943.html",
+      "heading": "전기도면·원본 래더 나란히 보기",
+      "image": [
+        {
+          "alt": "FG 28 · PDF 29",
+          "loaded": true
+        }
+      ],
+      "pdf": "https://gme-plc-manual.netlify.app/all-in-one/sources/Electrical_Rev2.pdf#page=29",
+      "sourceHash": "gme-vs01-part-381"
+    },
+    "unified_dialog": "0 equipment / 0 records",
+    "operational_writes": 0,
+    "logs": [],
+    "screenshot": "/tmp/gme-vs01-qa/published-vs01.png"
+  }
 }
