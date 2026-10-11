@@ -1,0 +1,926 @@
+[
+  {
+    "key": "VR04",
+    "network": 1967,
+    "uid": "1040",
+    "target": "1040\tCoil\t\toperand = Start VR04"
+  },
+  {
+    "key": "VR04",
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "key": "VR04",
+    "network": 1811,
+    "uid": "1123",
+    "target": "1123\tSdCoil\t\tvalue = S5T#2S; operand = Tag_76"
+  },
+  {
+    "key": "VR04",
+    "network": 1811,
+    "uid": "1129",
+    "target": "1129\tSCoil\t\toperand = Allarm.VR_04_FAULT"
+  },
+  {
+    "key": "VR04",
+    "network": 1811,
+    "uid": "1134",
+    "target": "1134\tRCoil\t\toperand = Allarm.VR_04_FAULT"
+  },
+  {
+    "key": "VR04",
+    "network": 1962,
+    "uid": "916",
+    "target": "916\tRCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "key": "VR04",
+    "network": 1886,
+    "uid": "24",
+    "target": "24\tLe\t\tin1 = Data.DP_01; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "VR04",
+    "network": 1885,
+    "uid": "21",
+    "target": "21\tO\t\t"
+  },
+  {
+    "key": "VR05",
+    "network": 1968,
+    "uid": "1056",
+    "target": "1056\tCoil\t\toperand = Start VR05"
+  },
+  {
+    "key": "VR05",
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "key": "VR05",
+    "network": 1812,
+    "uid": "1157",
+    "target": "1157\tSdCoil\t\tvalue = S5T#2S; operand = Tag_77"
+  },
+  {
+    "key": "VR05",
+    "network": 1812,
+    "uid": "1163",
+    "target": "1163\tSCoil\t\toperand = Allarm.VR_05_FAULT"
+  },
+  {
+    "key": "VR05",
+    "network": 1812,
+    "uid": "1168",
+    "target": "1168\tRCoil\t\toperand = Allarm.VR_05_FAULT"
+  },
+  {
+    "key": "VR05",
+    "network": 1963,
+    "uid": "939",
+    "target": "939\tRCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "key": "VR05",
+    "network": 1886,
+    "uid": "30",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "VR05",
+    "network": 1042,
+    "uid": "2414",
+    "target": "2414\tMove\t\tin = 1; out1 = hours motors.VR_05_HOUR"
+  },
+  {
+    "key": "VR05",
+    "network": 1053,
+    "uid": "3079",
+    "target": "3079\tMove\t\tin = 0; out1 = hours motors.VR_05_HOUR"
+  },
+  {
+    "key": "VR06",
+    "network": 1969,
+    "uid": "1083",
+    "target": "1083\tCoil\t\toperand = Start VR06"
+  },
+  {
+    "key": "VR06",
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "key": "VR06",
+    "network": 1813,
+    "uid": "1191",
+    "target": "1191\tSdCoil\t\tvalue = S5T#2S; operand = Tag_78"
+  },
+  {
+    "key": "VR06",
+    "network": 1813,
+    "uid": "1197",
+    "target": "1197\tSCoil\t\toperand = Allarm.VR_06_FAULT"
+  },
+  {
+    "key": "VR06",
+    "network": 1813,
+    "uid": "1202",
+    "target": "1202\tRCoil\t\toperand = Allarm.VR_06_FAULT"
+  },
+  {
+    "key": "VR06",
+    "network": 1969,
+    "uid": "1079",
+    "target": "1079\tRCoil\t\toperand = Flag.M_VR_06"
+  },
+  {
+    "key": "VR06",
+    "network": 1958,
+    "uid": "836",
+    "target": "836\tRCoil\t\toperand = Flag.M_LD_01"
+  },
+  {
+    "key": "VR06",
+    "network": 1961,
+    "uid": "891",
+    "target": "891\tRCoil\t\toperand = Flag.M_LD_01_VIB"
+  },
+  {
+    "key": "VR06",
+    "network": 1043,
+    "uid": "2468",
+    "target": "2468\tMove\t\tin = 1; out1 = hours motors.VR_06_HOUR"
+  },
+  {
+    "key": "VR06",
+    "network": 1053,
+    "uid": "3082",
+    "target": "3082\tMove\t\tin = 0; out1 = hours motors.VR_06_HOUR"
+  },
+  {
+    "key": "SC10",
+    "network": 1962,
+    "uid": "920",
+    "target": "920\tCoil\t\toperand = Start SC10"
+  },
+  {
+    "key": "SC10",
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "key": "SC10",
+    "network": 1807,
+    "uid": "987",
+    "target": "987\tSdCoil\t\tvalue = S5T#2S; operand = Tag_72"
+  },
+  {
+    "key": "SC10",
+    "network": 1807,
+    "uid": "993",
+    "target": "993\tSCoil\t\toperand = Allarm.SC_10_FAULT"
+  },
+  {
+    "key": "SC10",
+    "network": 1807,
+    "uid": "998",
+    "target": "998\tRCoil\t\toperand = Allarm.SC_10_FAULT"
+  },
+  {
+    "key": "SC10",
+    "network": 1962,
+    "uid": "916",
+    "target": "916\tRCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "key": "SC10",
+    "network": 1843,
+    "uid": "434",
+    "target": "434\tSCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "key": "SC10",
+    "network": 1844,
+    "uid": "771",
+    "target": "771\tSCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "key": "SC10",
+    "network": 1886,
+    "uid": "24",
+    "target": "24\tLe\t\tin1 = Data.DP_01; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "SC10",
+    "network": 1888,
+    "uid": "553",
+    "target": "553\tMove\t\tin = 1; out1 = Data.LAVA"
+  },
+  {
+    "key": "SC10",
+    "network": 1037,
+    "uid": "2144",
+    "target": "2144\tMove\t\tin = 1; out1 = hours motors.SC_10_HOUR"
+  },
+  {
+    "key": "SC10",
+    "network": 1052,
+    "uid": "3017",
+    "target": "3017\tMove\t\tin = 0; out1 = hours motors.SC_10_HOUR"
+  },
+  {
+    "key": "SC11",
+    "network": 1963,
+    "uid": "943",
+    "target": "943\tCoil\t\toperand = Start SC11"
+  },
+  {
+    "key": "SC11",
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "key": "SC11",
+    "network": 1808,
+    "uid": "1021",
+    "target": "1021\tSdCoil\t\tvalue = S5T#2S; operand = Tag_73"
+  },
+  {
+    "key": "SC11",
+    "network": 1808,
+    "uid": "1027",
+    "target": "1027\tSCoil\t\toperand = Allarm.SC_11_FAULT"
+  },
+  {
+    "key": "SC11",
+    "network": 1808,
+    "uid": "1032",
+    "target": "1032\tRCoil\t\toperand = Allarm.SC_11_FAULT"
+  },
+  {
+    "key": "SC11",
+    "network": 1963,
+    "uid": "939",
+    "target": "939\tRCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "key": "SC11",
+    "network": 1843,
+    "uid": "436",
+    "target": "436\tSCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "key": "SC11",
+    "network": 1844,
+    "uid": "773",
+    "target": "773\tSCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "key": "SC11",
+    "network": 1886,
+    "uid": "30",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "SC11",
+    "network": 1888,
+    "uid": "559",
+    "target": "559\tMove\t\tin = 2; out1 = Data.LAVA"
+  },
+  {
+    "key": "SC11",
+    "network": 1038,
+    "uid": "2198",
+    "target": "2198\tMove\t\tin = 1; out1 = hours motors.SC_11_HOUR"
+  },
+  {
+    "key": "SC11",
+    "network": 1052,
+    "uid": "3020",
+    "target": "3020\tMove\t\tin = 0; out1 = hours motors.SC_11_HOUR"
+  },
+  {
+    "key": "MC03",
+    "network": 1940,
+    "uid": "318",
+    "target": "318\tCoil\t\toperand = Start Spare Motor"
+  },
+  {
+    "key": "MC03",
+    "network": 1940,
+    "uid": "314",
+    "target": "314\tRCoil\t\toperand = Flag.M_MC_03"
+  },
+  {
+    "key": "MC03",
+    "network": 1070,
+    "uid": "22",
+    "target": "22\tMove\t\tin = Tag_178; out1 = RefId 5 / ORef UID 26"
+  },
+  {
+    "key": "MC03",
+    "network": 1070,
+    "uid": "42",
+    "target": "42\tMove\t\tin = Tag_171; out1 = RefId 14 / ORef UID 46"
+  },
+  {
+    "key": "MC03",
+    "network": 1789,
+    "uid": "383",
+    "target": "383\tSdCoil\t\tvalue = S5T#2S; operand = Tag_56"
+  },
+  {
+    "key": "MC03",
+    "network": 1789,
+    "uid": "389",
+    "target": "389\tSCoil\t\toperand = Allarm.MC_03_FAULT"
+  },
+  {
+    "key": "MC03",
+    "network": 1789,
+    "uid": "394",
+    "target": "394\tRCoil\t\toperand = Allarm.MC_03_FAULT"
+  },
+  {
+    "key": "MC03",
+    "network": 1790,
+    "uid": "400",
+    "target": "400\tSCoil\t\toperand = Allarm.MC_03_TORQUE"
+  },
+  {
+    "key": "MC03",
+    "network": 1790,
+    "uid": "406",
+    "target": "406\tRCoil\t\toperand = Allarm.MC_03_TORQUE"
+  },
+  {
+    "key": "MC03",
+    "network": 1021,
+    "uid": "1280",
+    "target": "1280\tMove\t\tin = 1; out1 = hours motors.MC_03_HOUR"
+  },
+  {
+    "key": "MC03",
+    "network": 1049,
+    "uid": "2828",
+    "target": "2828\tMove\t\tin = 0; out1 = hours motors.MC_03_HOUR"
+  },
+  {
+    "key": "MC05",
+    "network": 1844,
+    "uid": "793",
+    "target": "793\tSCoil\t\toperand = Flag.M_MC_05"
+  },
+  {
+    "key": "MC05",
+    "network": 1843,
+    "uid": "458",
+    "target": "458\tRCoil\t\toperand = Flag.M_MC_05"
+  },
+  {
+    "key": "MC05",
+    "network": 1844,
+    "uid": "1149",
+    "target": "1149\tContact\t\toperand = OFF"
+  },
+  {
+    "key": "MC05",
+    "network": 402,
+    "uid": "138",
+    "target": "138\tMove\t\tin = RefId 54 / ORef UID 168; out1 = RefId 7 / ORef UID 169"
+  },
+  {
+    "key": "MC05",
+    "network": 1070,
+    "uid": "22",
+    "target": "22\tMove\t\tin = Tag_178; out1 = RefId 5 / ORef UID 26"
+  },
+  {
+    "key": "MC05",
+    "network": 1070,
+    "uid": "42",
+    "target": "42\tMove\t\tin = Tag_171; out1 = RefId 14 / ORef UID 46"
+  },
+  {
+    "key": "MC05",
+    "network": 356,
+    "uid": "22",
+    "target": "22\tMove\t\tin = Tag_280; out1 = RefId 27 / ORef UID 34"
+  },
+  {
+    "key": "MC05",
+    "network": 1049,
+    "uid": "2834",
+    "target": "2834\tMove\t\tin = 0; out1 = hours motors.MC_05_HOUR"
+  },
+  {
+    "key": "MC05",
+    "network": 1055,
+    "uid": "3118",
+    "target": "3118\tSdCoil\t\tvalue = S5T#5S; operand = Tag_48"
+  },
+  {
+    "key": "MC05",
+    "network": 1614,
+    "uid": "69",
+    "target": "69\tMove\t\tin = Tag_171; out1 = Word_inputs.word1"
+  },
+  {
+    "key": "MC05",
+    "network": 1616,
+    "uid": "144",
+    "target": "144\tMove\t\tin = Tag_178; out1 = Word_outputs.WORD1"
+  },
+  {
+    "key": "LD01",
+    "network": 1958,
+    "uid": "841",
+    "target": "841\tCoil\t\toperand = Start LD01"
+  },
+  {
+    "key": "LD01",
+    "network": 1958,
+    "uid": "836",
+    "target": "836\tRCoil\t\toperand = Flag.M_LD_01"
+  },
+  {
+    "key": "LD01",
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "key": "LD01",
+    "network": 1070,
+    "uid": "130",
+    "target": "130\tCoil\t\toperand = Inputs.LD-01 Minimo"
+  },
+  {
+    "key": "LD01",
+    "network": 1070,
+    "uid": "135",
+    "target": "135\tCoil\t\toperand = Inputs.LD-01 Inspection LS"
+  },
+  {
+    "key": "LD01",
+    "network": 1070,
+    "uid": "140",
+    "target": "140\tCoil\t\toperand = Inputs.LD-01 Local Button"
+  },
+  {
+    "key": "LD01",
+    "network": 1960,
+    "uid": "871",
+    "target": "871\tCoil\t\toperand = Start_LD01Vib"
+  },
+  {
+    "key": "LD01",
+    "network": 1961,
+    "uid": "900",
+    "target": "900\tCoil\t\toperand = Start Vibrator LD-01"
+  },
+  {
+    "key": "LD01",
+    "network": 1961,
+    "uid": "891",
+    "target": "891\tRCoil\t\toperand = Flag.M_LD_01_VIB"
+  },
+  {
+    "key": "LD01",
+    "network": 1805,
+    "uid": "919",
+    "target": "919\tSdCoil\t\tvalue = S5T#2S; operand = Tag_70"
+  },
+  {
+    "key": "LD01",
+    "network": 1805,
+    "uid": "925",
+    "target": "925\tSCoil\t\toperand = Allarm.LD_01_FAULT"
+  },
+  {
+    "key": "LD01",
+    "network": 1805,
+    "uid": "930",
+    "target": "930\tRCoil\t\toperand = Allarm.LD_01_FAULT"
+  },
+  {
+    "key": "LD01",
+    "network": 1806,
+    "uid": "953",
+    "target": "953\tSdCoil\t\tvalue = S5T#2S; operand = Tag_71"
+  },
+  {
+    "key": "LD01",
+    "network": 1806,
+    "uid": "959",
+    "target": "959\tSCoil\t\toperand = Allarm.LD_01_VIB_FAULT"
+  },
+  {
+    "key": "LD01",
+    "network": 1806,
+    "uid": "964",
+    "target": "964\tRCoil\t\toperand = Allarm.LD_01_VIB_FAULT"
+  },
+  {
+    "key": "LD01",
+    "network": 1228,
+    "uid": "282",
+    "target": "282\tSCoil\t\toperand = Allarm.LD_01_MIN"
+  },
+  {
+    "key": "LD01",
+    "network": 1228,
+    "uid": "288",
+    "target": "288\tRCoil\t\toperand = Allarm.LD_01_MIN"
+  },
+  {
+    "key": "LD01",
+    "network": 1035,
+    "uid": "2036",
+    "target": "2036\tMove\t\tin = 1; out1 = hours motors.LD_01_HOUR"
+  },
+  {
+    "key": "LD01",
+    "network": 1036,
+    "uid": "2090",
+    "target": "2090\tMove\t\tin = 1; out1 = hours motors.LD_01_VIB_HOUR"
+  },
+  {
+    "key": "LD01",
+    "network": 1052,
+    "uid": "3011",
+    "target": "3011\tMove\t\tin = 0; out1 = hours motors.LD_01_HOUR"
+  },
+  {
+    "key": "LD01",
+    "network": 1052,
+    "uid": "3014",
+    "target": "3014\tMove\t\tin = 0; out1 = hours motors.LD_01_VIB_HOUR"
+  },
+  {
+    "key": "LD01",
+    "network": 1959,
+    "uid": "41",
+    "target": "41\tPart 36.eno ↔ Part 44.en"
+  },
+  {
+    "key": "BF01",
+    "network": 1886,
+    "uid": "74",
+    "target": "74\tCoil\t\toperand = BF01_RUN"
+  },
+  {
+    "key": "BF01",
+    "network": 1886,
+    "uid": "27",
+    "target": "27\tCoil\t\toperand = Abilita_lavaggio_BF01"
+  },
+  {
+    "key": "BF01",
+    "network": 1885,
+    "uid": "460",
+    "target": "460\tContact\t\toperand = ON"
+  },
+  {
+    "key": "BF01",
+    "network": 1885,
+    "uid": "428",
+    "target": "428\tCoil\t\toperand = Forza_Lavaggio"
+  },
+  {
+    "key": "BF01",
+    "network": 1885,
+    "uid": "418",
+    "target": "418\tSdCoil\t\tvalue = S5T#2H; operand = Tag_130"
+  },
+  {
+    "key": "BF01",
+    "network": 1885,
+    "uid": "423",
+    "target": "423\tSdCoil\t\tvalue = S5T#10M; operand = Tag_129"
+  },
+  {
+    "key": "BF01",
+    "network": 1887,
+    "uid": "457",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "BF01",
+    "network": 1887,
+    "uid": "468",
+    "target": "468\tSdCoil\t\tvalue = Data.LAVA_PAUSA; operand = Tag_132"
+  },
+  {
+    "key": "BF01",
+    "network": 1887,
+    "uid": "473",
+    "target": "473\tSdCoil\t\tvalue = Data.LAVA_LAVORO; operand = Tag_131"
+  },
+  {
+    "key": "BF01",
+    "network": 1883,
+    "uid": "216",
+    "target": "216\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "BF01",
+    "network": 1884,
+    "uid": "398",
+    "target": "398\tMove\t\tin = Coeff.DP_02_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "BF01",
+    "network": 1888,
+    "uid": "566",
+    "target": "566\tMove\t\tin = 3; out1 = Data.LAVA"
+  },
+  {
+    "key": "BF01",
+    "network": 1889,
+    "uid": "711",
+    "target": "711\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "key": "BF01",
+    "network": 1890,
+    "uid": "695",
+    "target": "695\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "key": "BF01",
+    "network": 1899,
+    "uid": "24",
+    "target": "24\tAdd\t\tin1 = 1; in2 = Data.Ev_filter_on; out = Data.Ev_filter_on"
+  },
+  {
+    "key": "BF01",
+    "network": 1891,
+    "uid": "891",
+    "target": "891\tCoil\t\toperand = EV-11"
+  },
+  {
+    "key": "BF01",
+    "network": 1898,
+    "uid": "1899",
+    "target": "1899\tCoil\t\toperand = EV-50"
+  },
+  {
+    "key": "BF01",
+    "network": 1658,
+    "uid": "185",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "BF01",
+    "network": 1658,
+    "uid": "193",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "BF01",
+    "network": 1659,
+    "uid": "162",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "BF01",
+    "network": 1992,
+    "uid": "1136",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "key": "BF01",
+    "network": 1992,
+    "uid": "1141",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "BF01",
+    "network": 1992,
+    "uid": "1152",
+    "target": "1152\tRCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "BF01",
+    "network": 403,
+    "uid": "267",
+    "target": "267\tMove\t\tin = RefId 54 / ORef UID 293; out1 = RefId 32 / ORef UID 294"
+  },
+  {
+    "key": "BF01",
+    "network": 927,
+    "uid": "147",
+    "target": "147\tMove\t\tin = RefId 21 / ORef UID 181; out1 = WorkData.W4"
+  },
+  {
+    "key": "BF01",
+    "network": 356,
+    "uid": "28",
+    "target": "28\tMove\t\tin = Tag_286; out1 = RefId 55 / ORef UID 46"
+  },
+  {
+    "key": "BF01",
+    "network": 1882,
+    "uid": "28",
+    "target": "28\tMove\t\tin = Tag_286; out1 = RefId 55 / ORef UID 46"
+  },
+  {
+    "key": "BF01",
+    "network": 1773,
+    "uid": "1551",
+    "target": "1551\tORef 1544 (PR_BF01) ↔ Part 1536.Analog_input"
+  },
+  {
+    "key": "BF01",
+    "network": 1620,
+    "uid": "351",
+    "target": "351\tPart 350.out ↔ Part 319.en ↔ Part 322.en ↔ Part 325.en ↔ Part 328.en ↔ Part 331.en ↔ Part 334.en"
+  },
+  {
+    "key": "BF02",
+    "network": 1891,
+    "uid": "898",
+    "target": "898\tCoil\t\toperand = EV-51"
+  },
+  {
+    "key": "BF02",
+    "network": 1898,
+    "uid": "1906",
+    "target": "1906\tCoil\t\toperand = EV-90"
+  },
+  {
+    "key": "BF02",
+    "network": 1992,
+    "uid": "1136",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "key": "BF02",
+    "network": 1992,
+    "uid": "1141",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "BF02",
+    "network": 1992,
+    "uid": "1152",
+    "target": "1152\tRCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "BF02",
+    "network": 403,
+    "uid": "267",
+    "target": "267\tMove\t\tin = RefId 54 / ORef UID 293; out1 = RefId 32 / ORef UID 294"
+  },
+  {
+    "key": "BF02",
+    "network": 927,
+    "uid": "147",
+    "target": "147\tMove\t\tin = RefId 21 / ORef UID 181; out1 = WorkData.W4"
+  },
+  {
+    "key": "BF02",
+    "network": 356,
+    "uid": "31",
+    "target": "31\tMove\t\tin = Tag_289; out1 = RefId 58 / ORef UID 52"
+  },
+  {
+    "key": "BF02",
+    "network": 1882,
+    "uid": "28",
+    "target": "28\tPart 23.eno ↔ Part 32.en"
+  },
+  {
+    "key": "BF02",
+    "network": 1620,
+    "uid": "351",
+    "target": "351\tPart 350.out ↔ Part 319.en ↔ Part 322.en ↔ Part 325.en ↔ Part 328.en ↔ Part 331.en ↔ Part 334.en"
+  },
+  {
+    "key": "BF02",
+    "network": 1774,
+    "uid": "1571",
+    "target": "1571\tORef 1564 (PR_BR02) ↔ Part 1556.Analog_input"
+  },
+  {
+    "key": "BF02",
+    "network": 1774,
+    "uid": "1574",
+    "target": "1574\tPart 1556.OutValue ↔ ORef 1567 (Data.DP_02)"
+  },
+  {
+    "key": "BF02",
+    "network": 1774,
+    "uid": "24",
+    "target": "24\tPart 1556.Out_of_range ↔ ORef 23 (Allarm.BF02_OFR)"
+  },
+  {
+    "key": "BF02",
+    "network": 1889,
+    "uid": "699",
+    "target": "699\tMove\t\tin = 51; out1 = Data.LAVA_START"
+  },
+  {
+    "key": "BF02",
+    "network": 1884,
+    "uid": "458",
+    "target": "458\tMove\t\tin = Coeff.DP_02_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "BF02",
+    "network": 1886,
+    "uid": "78",
+    "target": "78\tCoil\t\toperand = BF02_RUN"
+  },
+  {
+    "key": "BF02",
+    "network": 1886,
+    "uid": "33",
+    "target": "33\tCoil\t\toperand = Abilita_lavaggio_BF02"
+  },
+  {
+    "key": "BF02",
+    "network": 1885,
+    "uid": "460",
+    "target": "460\tContact\t\toperand = ON"
+  },
+  {
+    "key": "BF02",
+    "network": 1885,
+    "uid": "428",
+    "target": "428\tCoil\t\toperand = Forza_Lavaggio"
+  },
+  {
+    "key": "BF02",
+    "network": 1885,
+    "uid": "418",
+    "target": "418\tSdCoil\t\tvalue = S5T#2H; operand = Tag_130"
+  },
+  {
+    "key": "BF02",
+    "network": 1885,
+    "uid": "423",
+    "target": "423\tSdCoil\t\tvalue = S5T#10M; operand = Tag_129"
+  },
+  {
+    "key": "BF02",
+    "network": 1887,
+    "uid": "457",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "BF02",
+    "network": 1887,
+    "uid": "468",
+    "target": "468\tSdCoil\t\tvalue = Data.LAVA_PAUSA; operand = Tag_132"
+  },
+  {
+    "key": "BF02",
+    "network": 1887,
+    "uid": "473",
+    "target": "473\tSdCoil\t\tvalue = Data.LAVA_LAVORO; operand = Tag_131"
+  },
+  {
+    "key": "BF02",
+    "network": 1883,
+    "uid": "216",
+    "target": "216\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "BF02",
+    "network": 1884,
+    "uid": "398",
+    "target": "398\tMove\t\tin = Coeff.DP_02_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "BF02",
+    "network": 1888,
+    "uid": "566",
+    "target": "566\tMove\t\tin = 3; out1 = Data.LAVA"
+  },
+  {
+    "key": "BF02",
+    "network": 1889,
+    "uid": "711",
+    "target": "711\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "key": "BF02",
+    "network": 1890,
+    "uid": "695",
+    "target": "695\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "key": "BF02",
+    "network": 1899,
+    "uid": "24",
+    "target": "24\tAdd\t\tin1 = 1; in2 = Data.Ev_filter_on; out = Data.Ev_filter_on"
+  }
+]

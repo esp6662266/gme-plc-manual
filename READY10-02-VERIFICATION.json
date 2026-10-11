@@ -16,7 +16,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 20,
       "final_source_bundle_sha256": "70a9be203056ab466740b4b803397de159502d878fe27f701847fe147f6bc6e0",
@@ -116,7 +116,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 20,
       "final_source_bundle_sha256": "0f8ee65a460004f37f302ed35da3c53a4f4ade666590b93ebb5d319dade4c4d6",
@@ -219,7 +219,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 20,
       "final_source_bundle_sha256": "fc41b89eb0563318219c12a57fda5247d1c642483e0a0ddf38f88e33e6a1fbff",
@@ -310,7 +310,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 7,
       "final_source_bundle_sha256": "5373d32bb30276856f52462d5c83b41b108624e296b58c0b710a5816efe60231",
@@ -412,7 +412,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 7,
       "final_source_bundle_sha256": "d687f0190893f7154a21d2eb0860d783f1f432cf55e95be6bf4ce23bc65440c3",
@@ -514,7 +514,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 7,
       "final_source_bundle_sha256": "8c1ec61ac5f60760c2f3ac6efb1b1c62a31a704acc67fb547ff09cfcf57427e6",
@@ -600,7 +600,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 7,
       "final_source_bundle_sha256": "01f292b1991760c98bfdadaa1f28ec9346bd78db96ba8d02e12ef375c5eb9d2a",
@@ -677,7 +677,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 7,
       "final_source_bundle_sha256": "a9baf3cc246ca5fa7b276300229281e033be8f6218fe0a8e9418e08692b94c4e",
@@ -795,7 +795,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 7,
       "final_source_bundle_sha256": "2dbf07a9fe7cd1a2d4d3f0eb2ff5a09677acad7d3a79fee1a772de565a00d953",
@@ -928,7 +928,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.19.0",
       "TIA_CPU_field": "not_performed",
       "UI_evidence_rows": 24,
       "final_source_bundle_sha256": "93cc740952b39c95169b214d8f2f0cf5410a427509e931daacfd517015aa794d",
@@ -1074,7 +1074,7 @@
     "simulator_changes": 0,
     "simulator_behavior_tests": "not_run"
   },
-  "status": "local_verified_publication_pending",
+  "status": "publication_verified_complete_with_gaps",
   "package": {
     "fresh_verifiers": 14,
     "fresh_equipment_verifiers": 2,
@@ -1114,10 +1114,462 @@
     "public_files": 3015
   },
   "CC01": "Documentary name exists; dedicated owned I/O/current physical existence/identity unverified. No absence inference.",
-  "git_feature_commit": null,
-  "github_release": "pending",
-  "netlify_deploy": "pending",
-  "published_files": "pending",
-  "published_UI": "pending",
-  "fresh_clone": "pending"
+  "git_feature_commit": "18b3255f3770c888bb6c8bf74baf71c34e90c825",
+  "github_release": {
+    "status": "passed",
+    "tag": "v1.19.0",
+    "url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.19.0",
+    "asset": {
+      "id": 631460523,
+      "name": "GME-All-In-One-v1.19.0.zip",
+      "size": 72228775,
+      "digest": "sha256:07e8b33c9153e105f485adcb41bc32a2cd17556a8b85a276dd9917f75c31a652",
+      "browser_download_url": "https://github.com/esp6662266/gme-plc-manual/releases/download/v1.19.0/GME-All-In-One-v1.19.0.zip"
+    }
+  },
+  "netlify_deploy": {
+    "status": "passed",
+    "id": "6acbd2f2731a5900080d0db4",
+    "state": "ready",
+    "commit_ref": "18b3255f3770c888bb6c8bf74baf71c34e90c825",
+    "published_at": "2026-10-11T18:18:49.080Z",
+    "deploy_ssl_url": "https://main--gme-plc-manual.netlify.app",
+    "ssl_url": "https://gme-plc-manual.netlify.app"
+  },
+  "published_files": {
+    "status": "passed",
+    "count": 560,
+    "exact": 446,
+    "HTML_semantic": 114
+  },
+  "published_UI": {
+    "equipment": [
+      {
+        "key": "VR04",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1692,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI5개 세부 항목",
+            "length": 2675,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조7개 세부 항목",
+            "length": 1451,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로1개 세부 항목",
+            "length": 2431,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구3개 세부 항목",
+            "length": 1550,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 1924,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1214,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "VR05",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1715,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI4개 세부 항목",
+            "length": 2339,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조8개 세부 항목",
+            "length": 1594,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로1개 세부 항목",
+            "length": 2488,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구3개 세부 항목",
+            "length": 1696,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 1966,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1227,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "VR06",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1672,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI4개 세부 항목",
+            "length": 2489,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조6개 세부 항목",
+            "length": 1665,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로3개 세부 항목",
+            "length": 1780,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구3개 세부 항목",
+            "length": 1605,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 1796,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1242,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "SC10",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1685,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI5개 세부 항목",
+            "length": 2400,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조6개 세부 항목",
+            "length": 1679,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로5개 세부 항목",
+            "length": 1511,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구4개 세부 항목",
+            "length": 1568,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 2139,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1354,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "SC11",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1516,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI4개 세부 항목",
+            "length": 2783,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조6개 세부 항목",
+            "length": 1729,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로5개 세부 항목",
+            "length": 1565,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구3개 세부 항목",
+            "length": 1592,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 2251,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1363,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "MC03",
+        "sections": [
+          {
+            "area": "설비·자료 기준3개 세부 항목",
+            "length": 1548,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI4개 세부 항목",
+            "length": 3247,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조6개 세부 항목",
+            "length": 1822,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로6개 세부 항목",
+            "length": 1765,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구3개 세부 항목",
+            "length": 1786,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 2505,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1385,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "MC05",
+        "sections": [
+          {
+            "area": "설비·자료 기준4개 세부 항목",
+            "length": 1525,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI4개 세부 항목",
+            "length": 2057,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조5개 세부 항목",
+            "length": 1802,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로3개 세부 항목",
+            "length": 1817,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구2개 세부 항목",
+            "length": 1301,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 1843,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1314,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "LD01",
+        "sections": [
+          {
+            "area": "설비·자료 기준3개 세부 항목",
+            "length": 1642,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI4개 세부 항목",
+            "length": 3282,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조5개 세부 항목",
+            "length": 1685,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로5개 세부 항목",
+            "length": 1134,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구4개 세부 항목",
+            "length": 1774,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 2161,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1444,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "BF01",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1790,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI3개 세부 항목",
+            "length": 3479,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조7개 세부 항목",
+            "length": 1794,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로5개 세부 항목",
+            "length": 2191,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구3개 세부 항목",
+            "length": 1908,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 2189,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1286,
+            "invalid": false
+          }
+        ]
+      },
+      {
+        "key": "BF02",
+        "sections": [
+          {
+            "area": "설비·자료 기준2개 세부 항목",
+            "length": 1765,
+            "invalid": false
+          },
+          {
+            "area": "I/O·HMI3개 세부 항목",
+            "length": 3110,
+            "invalid": false
+          },
+          {
+            "area": "제어 구조7개 세부 항목",
+            "length": 1851,
+            "invalid": false
+          },
+          {
+            "area": "전기 전달 경로6개 세부 항목",
+            "length": 1278,
+            "invalid": false
+          },
+          {
+            "area": "알람·복구4개 세부 항목",
+            "length": 2133,
+            "invalid": false
+          },
+          {
+            "area": "증상별 수리1개 세부 항목",
+            "length": 2114,
+            "invalid": false
+          },
+          {
+            "area": "완료 기준1개 세부 항목",
+            "length": 1340,
+            "invalid": false
+          }
+        ]
+      }
+    ],
+    "backup": "모든 설비 통합 백업·복원\n닫기\n\n이 브라우저에 저장한 모든 설비의 메모·수리 기록을 JSON 파일 하나로 보관하고 옮깁니다. 작성 중인 초안은 현재 브라우저에 유지합니다.\n\n1. 전체 기록을 한 파일로 백업\n\n0개 설비 · 0건 · 설비 선택과 관계없이 전체를 포함합니다.\n\n모든 설비 통합 JSON 다운로드\n2. 통합 파일 가져오기\n\n기존 전체 백업과 개별 JSON도 가져올 수 있습니다. 미리보기에서 충돌 선택 후 저장합니다. 기존에만 있는 기록과 추가 항목은 보존하며, 저장할 기록을 삭제하지 않습니다.\n\n통합 JSON 백업 파일\n\n최대64MB / 50,000건. 복원은 저장한 메모·수리 기록에 적용합니다.",
+    "version": "1.19.0",
+    "operational_records_written": 0
+  },
+  "fresh_clone": {
+    "fresh_clone": "passed",
+    "commit": "18b3255f3770c888bb6c8bf74baf71c34e90c825",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment_profiles": 38,
+    "catalog_profiles": 20,
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "published_source_pairs": {
+    "status": "passed",
+    "locations": 154,
+    "equipment": 10
+  },
+  "published_counts": {
+    "manuals": 38,
+    "identity_reports": 3,
+    "phase2_cumulative": 20,
+    "phase2_candidates": 133,
+    "physical_new_identifications": 0
+  },
+  "bookkeeping_commit": "Following root documentation-only commit; fixed feature release and historical package content remain immutable"
 }

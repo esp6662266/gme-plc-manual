@@ -1,0 +1,5 @@
+
+> gme-plc-manual@1.19.0 verify:equipment
+> node all-in-one/verify-equipment-standards.cjs
+
+{"status":"passed","scope":"equipment selection, mismatched nested key, foreign record isolation, unknown fields, zero/blank comparison, reference version, unified backup legacy formats, 1001-note round trip, malformed keys/records, cross-equipment ID conflicts, provenance and merged limits, explicit generator and frozen script loading boundaries","registered_profiles":["P01","P02","P15","P16","P17","P18","P08","P09","P05","P07","P19","P20","P21","P06","P11","P10","P12","P13","BF01","BF02","CH01","ER01","FN05","LD01","MC03","MC05","MV02","MV05","PV03","SC01","SC10","SC11","VR01","VR02","VR03","VR04","VR05","VR06"]}

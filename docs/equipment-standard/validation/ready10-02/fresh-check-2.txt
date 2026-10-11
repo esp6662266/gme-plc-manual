@@ -1,0 +1,21 @@
+
+> gme-plc-manual@1.19.0 test
+> node --test tests/*.test.mjs
+
+✔ login is required and another account cannot list or download private files (16.756458ms)
+✔ revisions preserve original content, stale changes are refused, and downloads are attachments (7.244791ms)
+✔ cross-site, invalid file, oversize and storage failures cannot produce visible incomplete records (3.382166ms)
+✔ a concurrent update cannot overwrite an existing revision (1.711958ms)
+✔ Python discovery accepts supported python3, skips old versions, and respects explicit paths (0.676583ms)
+✔ Python CLI forwards child failures and interruption (365.826833ms)
+▶ package inventory rejects extra, missing and symbolic files, and copies only checked bytes
+  ✔ file and directory symbolic links are refused (0.579542ms)
+✔ package inventory rejects extra, missing and symbolic files, and copies only checked bytes (6.858375ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 411.733875
