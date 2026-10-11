@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "pending",
+  "publication": "verified",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -354,5 +354,409 @@
   },
   "node": "24.19.0",
   "tests": 8,
-  "NETLIFY_build": "passed"
+  "NETLIFY_build": "passed",
+  "feature_commit": "4f8ace3c970ecc70e9b2fdc5da46266a952f8cdd",
+  "netlify": {
+    "id": "6acb2a35160bd00008224fc7",
+    "state": "ready",
+    "commit_ref": "4f8ace3c970ecc70e9b2fdc5da46266a952f8cdd",
+    "published_at": "2026-10-11T06:18:52.282Z",
+    "error_message": null
+  },
+  "github_release": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.9.0",
+  "release_asset_digest_verified": true,
+  "fresh_clone": {
+    "path": "/tmp/gme-mc04-fresh-20261011",
+    "node": "24.19.0",
+    "npm_ci": "passed",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment": "passed",
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "published_files": [
+    {
+      "path": "ACTIVE-WORK.md",
+      "status": 200,
+      "sha256": "dd6322934b8ab2a5505796a91647ec46b2a9314782354a798747ab084aad8a56",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "ALL-IN-ONE.md",
+      "status": 200,
+      "sha256": "29de4370ed57384f2d6115e191193bf8c93f4579f3b742a7b7a9d41d8ef7f8ac",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "VERSION.json",
+      "status": 200,
+      "sha256": "9b38dc9a7dc6e6a097eac72f249a14d98a12571f24d796b9408e1deafd8bdc5f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "all-in-one-package-manifest.json",
+      "status": 200,
+      "sha256": "4fb4fbc9227722b0f90d026205a7948ebbd6bc8c997835993a24e83a8092aee4",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/all-in-one-data.js",
+      "status": 200,
+      "sha256": "570c2c4a1eb26473e0ada27374d9649fbd5a4d2477889f65208406682cf23db2",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "build-all-in-one.py",
+      "status": 200,
+      "sha256": "23db9a7a43c22eeb7dbe402bb1baea68be30299362a4a2bd5d8249b5c6cf6b40",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "build-requirements-audit.py",
+      "status": 200,
+      "sha256": "7e88154317d59c50507cfdf226a92239b9a22801184d4182f1c9b2994847ff4c",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "equipment_standard_profiles.py",
+      "status": 200,
+      "sha256": "4025d81925767fa725567f64ae094c2f3b9c0a59be629ba7f875e21e83964a5a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "5f2541797d1bec9cbe26a1a7804748a9125098fd0471e1c2c5c093aa2b0e542a",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1022.html",
+      "status": 200,
+      "sha256": "a1e3e3816f2ea45c7c05feaa90ce67effc41fb5ea1f6fbbbbd606717bf98ecb4",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1049.html",
+      "status": 200,
+      "sha256": "ffa226f3a360ca9b9c7ffd19dca9ce7dcb2d5c1524a22e65b2310e14e6d8a915",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1070.html",
+      "status": 200,
+      "sha256": "c7aa5bbab26d00a7f9479b81da7a36fe6e42d647adb173c7959cddccd1335ff6",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1080.html",
+      "status": 200,
+      "sha256": "a3ce213b0c27b8e6cb28a1ecf858c3006d08461da90ed38757560e1fe8c01738",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1082.html",
+      "status": 200,
+      "sha256": "556746c8e0ee06b86219c058f17fdd4a1fc7ed170dd3d099b319c1d650a1ef9d",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1182.html",
+      "status": 200,
+      "sha256": "224bf03e038f9538c45b45ba5d923c0dc132f3a3c9f26e2a462128d8fca71dae",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1613.html",
+      "status": 200,
+      "sha256": "754f414da86c15e7d7394314836b32492202538f26dcf6bf38997d049c354ed2",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1658.html",
+      "status": 200,
+      "sha256": "57f74397e9113263a405c59953620b413fb651c3189917a885d3f5d87f1b3f9c",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1693.html",
+      "status": 200,
+      "sha256": "ff8ea863f5cadac74e6ea6d51e0d6ea3c6199521ed503a106c71ef1518f27ab5",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1769.html",
+      "status": 200,
+      "sha256": "8eef26b29d9761f30fcbc4bd9e0647ef15a29598b4f74258a5d07d0c5d762297",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1791.html",
+      "status": 200,
+      "sha256": "147ee64eb94c0d0e0c9635f9556c3364d63faed0bcc745038051ebdbffa52a74",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1792.html",
+      "status": 200,
+      "sha256": "9adae0caac77ac43a07be64b2551c59aed845a588bcf51f42fec862c101ff296",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1843.html",
+      "status": 200,
+      "sha256": "9aa8eb039975e93e6fc7c2f946fb76cecdf269580138f43856aecc045a5f30cf",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1844.html",
+      "status": 200,
+      "sha256": "88c747164d9cde312ae9f4ab16e82ea4f5970b368f3e8c14f09e3c148f4d5fc1",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1847.html",
+      "status": 200,
+      "sha256": "3263d802ba430154f52b0e2957dc3dce4449c673fff9a012bf68f83022b9c4c0",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1916.html",
+      "status": 200,
+      "sha256": "42fc833d42688999a8db51adc32df13a1125658cbcb0d858eb5537fe3f96ec07",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1930.html",
+      "status": 200,
+      "sha256": "d4b348ea3425805b52ba56e25a4fe1e50eb2b451202a78c21bed640668b917df",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1940.html",
+      "status": 200,
+      "sha256": "68517e40e536aaa9d8d0889bb979a0dc087b977bf21879472fc557513ca96623",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1941.html",
+      "status": 200,
+      "sha256": "01adb6e16255e6838aeec0b5449421cf4842cb2b3bfbda1ca7be1bbe6c12a064",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "registers/all-in-one-data.json",
+      "status": 200,
+      "sha256": "3e049a25f031a510706b79ea223df1a344c67958ed2fbb919ca3d057459fab84",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/requirements-audit.json",
+      "status": 200,
+      "sha256": "37c6f1a2be70ffa8fe53fa64fa70af03f0861320fca178909a13027b5d820c2e",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit-verification.json",
+      "status": 200,
+      "sha256": "9dd3b33df73c4981e1a9124aa22f22bcb3edf6191e5b7ef5ee6bc2832cfd8339",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit.html",
+      "status": 200,
+      "sha256": "d0f87536a3e0a48a1f1feaa410d96ccb4c9f36bdd54e323a80e22ec78463ee3b",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "verify-equipment-standards.cjs",
+      "status": 200,
+      "sha256": "eee37daca2461125ee687130fb28b2f174d585c1e546db0a505bc7597d259aac",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "verify-requirements-audit.py",
+      "status": 200,
+      "sha256": "3671912be3cd99ae951e631b0593138dbffb4b1ea6e67037aad54b172ee7b11e",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/program-model.json",
+      "status": 200,
+      "sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/program-model-data.js",
+      "status": 200,
+      "sha256": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/virtual-plc.js",
+      "status": 200,
+      "sha256": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/simulator-workspace.js",
+      "status": 200,
+      "sha256": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/virtual-plc-test-results.json",
+      "status": 200,
+      "sha256": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/circuits/FG24.png",
+      "status": 200,
+      "sha256": "7c2238dc7c50d1a2df004688fbfccf3e09ec5f008533f52336178494d62b2194",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0247-FlgNet.xml",
+      "status": 200,
+      "sha256": "104690938ac2ebe32d668f237255a3e957e0af9930bfc6587b9e6624bedf13a1",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0428-FlgNet.xml",
+      "status": 200,
+      "sha256": "cb7015f543d0deb26fe0bf23d045dc787b7c9cbc3d02c2c5623c0283709fa69a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0658-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0397-FlgNet.xml",
+      "status": 200,
+      "sha256": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0030-FlgNet.xml",
+      "status": 200,
+      "sha256": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0627-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0628-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0629-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0655-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0688-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0694-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    }
+  ],
+  "published_ui": {
+    "version": "1.9.0",
+    "equipment": "P08",
+    "profile": "MC04",
+    "sections": 7,
+    "items": 45,
+    "source_pair": {
+      "drawing": "FG25/PDF26",
+      "network": 1941,
+      "part": 344,
+      "operand": "Start MC04",
+      "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1941.html",
+      "image": [
+        {
+          "alt": "FG 25 · PDF 26",
+          "loaded": true
+        }
+      ],
+      "sourceHash": "gme-mc04-part-344"
+    },
+    "unified_dialog": "0 equipment / 0 records",
+    "operational_writes": 0,
+    "logs": [],
+    "screenshot": "/tmp/gme-mc04-qa/published-mc04.png"
+  }
 }

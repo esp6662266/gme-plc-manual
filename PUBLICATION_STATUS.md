@@ -1,6 +1,14 @@
+# v1.9.0 · MC04 표준 매뉴얼 — 게시 검증 완료
+
+기능 4f8ace3c970ecc70e9b2fdc5da46266a952f8cdd · v1.9.0 tag/Release ZIP digest/53020057바이트일치. Netlify 6acb2a35160bd00008224fc7 ready/commit_ref일치 · 2026-10-11T06:18:52.282Z · error없음. 새clone Node24.19 npm ci/8테스트/BC01/설비/NETLIFY 빌드passed·Git변경0. 게시51파일:30정확SHA/21HTML prettyURL정규화동등. 실제P08 v1.9/45항목·FG25/PDF26/1941Part344 StartMC04·통합0건창·warn/error0확인. 운영작성0.
+
+7영역45항목·5원본쌍·실제CSS1280/390 기본/큰글자1160항목·합성기록저장/복원3→4/미지항목/타설비/초안/충돌/Quota/비교/보고서변경차단·A4 PDF3쪽확인. 필수14+설비2·ZIP2801파일·원본730/추가3/중지5보존. ZIP SHA256 1e7d911de85ea9fc1bd2a08fdb05786b85bca51d07c0ac9af8a2d035d6c6d656. TIA/현재CPU/현장복구not_performed·시뮬레이터변경/실행0. [검증](V1.9.0-VERIFICATION.md)·[MC04기록](docs/equipment-standard/work-items/MC04.md)·[다음VS01](EXPANSION-WORK.md).
+
+---
+
 # v1.9.0 · MC04 — 게시 확인 대기
 
-7영역45항목·5쌍·UI1160항목·合成기록/복원/충돌/Quota·A4 PDF3쪽확인. 필수14+2/패키지/새clone/GitHub/Netlify실제게시확인은진행중이다. 마지막확인된배포는아래v1.8.0이다. [검증](V1.9.0-VERIFICATION.md).
+7영역45항목·5쌍·UI1160항목·합성기록/복원/충돌/Quota·A4 PDF3쪽확인. 필수14+2/패키지/새clone/GitHub/Netlify실제게시확인은진행중이다. 마지막확인된배포는아래v1.8.0이다. [검증](V1.9.0-VERIFICATION.md).
 
 ---
 
