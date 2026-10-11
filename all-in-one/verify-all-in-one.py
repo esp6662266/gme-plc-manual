@@ -487,6 +487,12 @@ assert standard['alarm']==next(p for p in alarm_recovery['profiles'] if p['id']=
 assert standard['repair']==next(p for p in repair['records'] if p['key']=='P01')
 assert not standard['field_verified'] and not standard['tia_verified'] and standard['repairs_completed']==0
 assert standard['simulator_work']=='stopped_by_user'
+# Source navigation is a verified card-level link, never an invented history route.
+source_nav=standard['source_navigation'];u=urlsplit(source_nav['url'])
+assert u.scheme=='https' and u.netloc=='sejin-facility-manager.romancetiger.chatgpt.site'
+assert u.path=='/' and u.query=='facility=3&mode=detail' and not u.fragment
+assert source_nav['facility_id']=='3' and source_nav['destination']=='card_detail'
+assert source_nav['tabs']==['작업이력','사진'] and not source_nav['histories_copied'] and not source_nav['automatic_sync']
 # Exact source ASTs for the explanatory display; no execution.
 model_networks={n['id']:n for n in json.loads((ROOT/'registers/program-model.json').read_text())['networks']}
 assert set(standard['control_conditions'])=={r['rule_id'] for r in specs['BC01']['direct_rules']}

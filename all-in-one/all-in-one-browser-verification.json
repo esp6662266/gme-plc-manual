@@ -4453,5 +4453,162 @@
         "assets/all-in-one.js": "401be3dc69f5ef65025dddc4f8737bd429c97cd8fdb4059008d2300ec3814600"
       }
     }
+  },
+  "bc01_source_links_diagnostic_navigation": {
+    "status": "passed",
+    "date": "2026-10-11",
+    "equipment": "BC01/P01 only",
+    "ui": {
+      "latestLayouts": [
+        {
+          "abbBoundary": true,
+          "cards": [
+            {
+              "id": "plc-output",
+              "overflow": false
+            },
+            {
+              "id": "field-start",
+              "overflow": false
+            },
+            {
+              "id": "raw-response",
+              "overflow": false
+            },
+            {
+              "id": "processed-response",
+              "overflow": false
+            }
+          ],
+          "overflow": false,
+          "rawMappingBoundary": true,
+          "sourceLink": "https://sejin-facility-manager.romancetiger.chatgpt.site/?facility=3&mode=detail",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=repair&item=response&text=standard",
+          "width": 1280
+        },
+        {
+          "abbBoundary": true,
+          "cards": [
+            {
+              "id": "plc-output",
+              "overflow": false
+            },
+            {
+              "id": "field-start",
+              "overflow": false
+            },
+            {
+              "id": "raw-response",
+              "overflow": false
+            },
+            {
+              "id": "processed-response",
+              "overflow": false
+            }
+          ],
+          "overflow": false,
+          "rawMappingBoundary": true,
+          "sourceLink": "https://sejin-facility-manager.romancetiger.chatgpt.site/?facility=3&mode=detail",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=repair&item=response&text=large",
+          "width": 1280
+        },
+        {
+          "abbBoundary": true,
+          "cards": [
+            {
+              "id": "plc-output",
+              "overflow": false
+            },
+            {
+              "id": "field-start",
+              "overflow": false
+            },
+            {
+              "id": "raw-response",
+              "overflow": false
+            },
+            {
+              "id": "processed-response",
+              "overflow": false
+            }
+          ],
+          "overflow": false,
+          "rawMappingBoundary": true,
+          "sourceLink": "https://sejin-facility-manager.romancetiger.chatgpt.site/?facility=3&mode=detail",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=repair&item=response&text=standard",
+          "width": 390
+        },
+        {
+          "abbBoundary": true,
+          "cards": [
+            {
+              "id": "plc-output",
+              "overflow": false
+            },
+            {
+              "id": "field-start",
+              "overflow": false
+            },
+            {
+              "id": "raw-response",
+              "overflow": false
+            },
+            {
+              "id": "processed-response",
+              "overflow": false
+            }
+          ],
+          "overflow": false,
+          "rawMappingBoundary": true,
+          "sourceLink": "https://sejin-facility-manager.romancetiger.chatgpt.site/?facility=3&mode=detail",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=repair&item=response&text=large",
+          "width": 390
+        }
+      ],
+      "jumps": [
+        {
+          "title": "최종 출력의 OR 허가",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=control&item=output&text=large"
+        },
+        {
+          "title": "기동 명령",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=circuits&item=path-0&text=large"
+        },
+        {
+          "title": "운전 응답",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=circuits&item=path-1&text=large"
+        },
+        {
+          "title": "%I0.0 · bc01_fbk",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=io&item=input-1&text=large"
+        },
+        {
+          "title": "운전 응답 고장",
+          "url": "http://127.0.0.1:8778/#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set&text=large"
+        }
+      ],
+      "guideRoute": "http://127.0.0.1:8778/index.html#view=manual&equipment=P01&scope=priority&section=repair&item=response",
+      "guideCards": 4,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "sejinCardDestinationVerified": true,
+      "sejinHistoryAndPhotoTabsVerified": true,
+      "simulatorExecuted": false
+    },
+    "independent_original_reviewer": "Sol High; raw XML/identifier declarations/unchanged drawing records checked; no blocking source issue",
+    "navigation_reviewer": "Sol Medium; two missing click handlers fixed and rechecked",
+    "raw_processed_mapping": "unconfirmed",
+    "current_cpu_verified": false,
+    "field_recovery_verified": false,
+    "history_copied": false,
+    "sejin_changes": 0,
+    "simulator_work": 0,
+    "plc_changes": 0,
+    "input_sha256": {
+      "assets/all-in-one.js": "4a4680876a2d398f66380b63ad2fd08b4ffb949cbc7a3472a5d66f066287293c",
+      "assets/all-in-one.css": "3a1dda2839fa590a5ca24d38ee0defa42f59baad3d88725cf7ad7b93dd92ebb5",
+      "registers/all-in-one-data.json": "496c42497d32a23e9fc570307b20e30bd103392e23789d54de263a66ec254ced",
+      "operator-guide.html": "b1042d656013ebdd15c1f256a0901bcd025611a5e143c30fcbbcddf7aeb9d53c"
+    }
   }
 }

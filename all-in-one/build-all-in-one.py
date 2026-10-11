@@ -381,6 +381,11 @@ for evidence in bc01_supplemental:
     bc01_extra_sources.add(evidence['file'])
     bc01_extra_sources.update(r['identifier_file'] for r in evidence['refs']+evidence['enable_refs'])
 for address in bc01_addresses:bc01_extra_sources.update(r['file'] for r in address['declarations'])
+data['bc01_standard']['source_navigation']=dict(
+    facility_id='3',equipment='BC-01(벨트)',
+    url='https://sejin-facility-manager.romancetiger.chatgpt.site/?facility=3&mode=detail',
+    destination='card_detail',tabs=['작업이력','사진'],checked='2026-10-11',
+    histories_copied=False,automatic_sync=False)
 data['bc01_standard']['source_hashes'].update({path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in sorted(bc01_extra_sources)})
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
