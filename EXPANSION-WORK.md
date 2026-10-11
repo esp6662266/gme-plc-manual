@@ -1,6 +1,6 @@
 # GME BC01 기반 확장 — 현재 작업과 인계
 
-표준 **GME-STD-1.0.0** · 작업 프로그램 **v1.5.0** · 2026-10-11
+표준 **GME-STD-1.0.0** · 작업 프로그램 **v1.6.0 작성 중** · 2026-10-11
 
 최신 사용자 승인: 목표모드로 아래1~4번을 설비 한 개씩 진행한다. 원래 Ultra 채팅의 목표는 사용자 명시 요청으로 paused이며 같은 변경의 병행 수정을 중지했다. 기존 이력과 미커밋 FN01을 새 채팅01a12939-4d71-7e12-ab65-5ee9149d00d5로 인계했고, 사용자가 지정한 GPT-6.1 Sol / High에서 남은1~4번 active 목표를 설정했다. FN01 검증·게시를 완료했고 FN02부터 계속한다. 2차133후보는 이번 목표에 포함하지 않는다.
 
@@ -14,13 +14,14 @@
 | PREP-01 공통 구조/금지 자동 호출 분리 | 구현·독립 검토·BC01 회귀·v1.4.0 게시 검증 완료 |
 | FN04(P02) 시범 | 문서 complete_with_gaps, 정적/UI/기록/PDF passed, v1.4.0 게시 verified |
 | FN01(P15) | 47항목 documentation complete_with_gaps · 정적/UI/기록/패키지·v1.5.0 실제 게시 verified |
-| 나머지 1차 | 미착수; 기존 분석·미확정·제외 보존 |
+| FN02(P16) | 42항목 documentation complete_with_gaps · 정적/UI/기록/PDF/패키지/8테스트/빌드 passed · 게시 대기 |
+| 나머지 1차 | FN03 이후 미착수; 기존 분석·미확정·제외 보존 |
 | 2차 | 실제 대장133후보, 미착수 |
 | TIA 컴파일/현재CPU/현장복구 | 미수행, 완료로 합산하지 않음 |
 
 대장은 전체248 ID, 우선23행/대응18, 기존 제외90, 다른 공정2, 제외 부모 하위 보류7, 2차133후보를 유지한다. 233개를 독립 작업 목록으로 만들지 않는다. preflight는 inventory_matches=true이며 requirements-audit/all-in-one-data의 바이트 변경은 현재 범위 안내/새 프로파일을 추가한 결과다. 집계·대응·제외 관계는 동일하다.
 
-현재 작업 기록은 docs/equipment-standard/work-items/PREP-01.md·FN04.md·FN01.md, FN01 검증은 V1.5.0-VERIFICATION.md/.json이다. 프로그램 VERSION(root/all-in-one)/package/lock은1.5.0이며 과거1.3태그/ZIP·원본을 보존한다. 마지막 실제 게시는 PUBLICATION_STATUS.md를 확인한다.
+현재 작업 기록은 docs/equipment-standard/work-items/PREP-01.md·FN04.md·FN01.md·FN02.md, FN01 검증은 V1.5.0-VERIFICATION.md/.json이다. 작성 소스 VERSION(root/all-in-one)/package/lock은1.6.0; 마지막 실제 게시는1.5.0이며 과거1.3태그/ZIP·원본을 보존한다. 마지막 실제 게시는 PUBLICATION_STATUS.md를 확인한다.
 
 ## 다음 한 작업
 

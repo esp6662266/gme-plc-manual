@@ -333,7 +333,7 @@ for evidence in bc01_supplemental:
 class BC01SourceRows(HTMLParser):
     def __init__(self,text,allowed,prefix='bc01'):
         super().__init__(convert_charrefs=True)
-        self.prefix=prefix;self.text=text;self.allowed=allowed;self.edits=[];self.found=set();self.headers=[];self.cells=[];self.cell=None;self.start=None
+        self.prefix=prefix;self.text=text;self.allowed=allowed;self.edits=[];self.found=set();self.anchors={};self.headers=[];self.cells=[];self.cell=None;self.start=None
         self.lines=[0]
         for i,c in enumerate(text):
             if c=='\n':self.lines.append(i+1)
@@ -356,7 +356,13 @@ class BC01SourceRows(HTMLParser):
             if key in self.allowed:
                 assert key not in self.found,key
                 self.found.add(key);pos,original,attrs=self.start;anchor=f'{self.prefix}-{kind}-{self.cells[0]}'
-                assert attrs.get('id') in (None,anchor)
+                existing=attrs.get('id')
+                if existing and existing!=anchor:
+                    # Shared source rows keep the first published equipment anchor.
+                    import re
+                    assert re.fullmatch(r'(?:bc01|gme-[a-z0-9]+)-'+kind+'-'+re.escape(self.cells[0]),existing),(key,existing)
+                    anchor=existing
+                self.anchors[key]=anchor
                 if 'id' not in attrs:self.edits.append((pos,len(original),original[:-1]+' id="'+anchor+'">'))
         if tag=='tr':self.start=None
 
@@ -458,9 +464,10 @@ data['equipment_standards']=dict(schema_version=1,profiles=[dict(
         dict(signal='인버터 이상',path='networks/network-1785.html#bc01-part-27',label='처리 신호 알람 참고 · 원시 입력 직접 대응 미확정',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
         dict(signal='트립와이어 감시',path='networks/network-1786.html#bc01-part-234',label='처리 신호 알람 참고 · 원시 입력 직접 대응 미확정',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
         dict(signal='회전 감시 예비',path='',label='예비 입력 · 직접 대응 없음',boundary='예비 표기와 직접 대응 없음 상태를 보존합니다.')])])
-from equipment_standard_profiles import build_fn04_profile,build_fn01_profile
+from equipment_standard_profiles import build_fn04_profile,build_fn01_profile,build_fn02_profile
 data['equipment_standards']['profiles'].append(build_fn04_profile(ROOT,data,BC01SourceRows))
 data['equipment_standards']['profiles'].append(build_fn01_profile(ROOT,data,BC01SourceRows))
+data['equipment_standards']['profiles'].append(build_fn02_profile(ROOT,data,BC01SourceRows))
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 (ROOT / 'assets/all-in-one-data.js').write_text('window.GME_APP_DATA = ' + payload + ';\n', encoding='utf-8')

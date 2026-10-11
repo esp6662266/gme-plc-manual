@@ -59,6 +59,31 @@ const fn01Incoming=plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([
 assert.throws(()=>tools.parseBackup(JSON.stringify(tools.backupEnvelope([{...fn01Note,repair_observation:{...fn01Note.repair_observation,equipment:'P02'}}],data,'2026-10-11T05:00:00Z','P15')),store.decodeNotes,valid,fn01Schema));
 assert.equal(tools.referenceContext(data,'P15').source_bundle_sha256,p15.source_bundle_sha256);assert.notEqual(p15.source_bundle_sha256,p02.source_bundle_sha256);
 
+const p16=standard.profile(data,'P16');assert.ok(p16,'FN02 profile is required in v1.6.0');
+assert.deepEqual(plain(p16.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='FN02'));
+assert.deepEqual(plain(p16.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='FN02'));
+assert.equal(p16.regulation,null);assert.equal(p16.control_reference.id,'VT02');assert.equal(p16.control_reference.controller_evidence,null);
+assert.equal(p16.specification.direct_rules.length,15);assert.deepEqual(p16.specification.direct_rules.filter(r=>r.opaque).map(r=>r.rule_id),['1026:1553','1050:2890']);
+assert.equal(p16.alarm.alarms.length,2);assert.equal(p16.alarm.timers[0].name,'Tag_61');assert.equal(p16.alarm.timers[0].preset.literal,'S5T#2S');
+assert.deepEqual(p16.source_pairs.map(p=>p.path),['networks/network-1948.html#gme-fn02-part-596','networks/network-1796.html#gme-fn02-part-655','networks/network-1796.html#gme-fn02-part-662','networks/network-1688.html#gme-fn02-wire-671','networks/network-1767.html#gme-fn02-wire-1471']);
+assert.equal(p16.source_locations.find(l=>l.network===1770&&l.kind==='wire'&&l.uid==='1491').path,'networks/network-1770.html#gme-fn04-wire-1491');
+assert.equal(data.repair_record_forms.profiles.find(p=>p.key==='P16').signals.length,4);
+const native16=fs.readFileSync(__dirname+'/sources/decoded-original/0431-FlgNet.xml','utf8');
+assert.match(native16,/<Part UId="655" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+assert.match(native16,/<Wire UId="640">\s*<OCon UId="630" \/>\s*<PCon UId="655" PinName="operand" \/>/);
+const native16timer=fs.readFileSync(__dirname+'/sources/decoded-original/0656-IdentXmlPart.xml','utf8').split('</LiteralConstant>').find(s=>s.includes('RID="28"'));assert.ok(native16timer.includes('NID="18" UID="627"'));assert.ok(native16timer.includes('SV="S5T_x0023_2S"'));
+const off16=fs.readFileSync(__dirname+'/sources/decoded-original/0164-FlgNet.xml','utf8');assert.match(off16,/<Wire UId="31">\s*<PCon UId="794" PinName="out" \/>\s*<PCon UId="539" PinName="in" \/>/);
+assert.ok(p16.control_reference.text_refs.every(r=>r.evidence==='backup_search_index_text_not_compiled_or_native_instruction_listing'));
+for(const [f,h] of Object.entries(p16.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p16.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+assert.deepEqual(plain(standard.sections.map(([section])=>standard.items(data,'P16',section).length)),[3,4,16,5,4,5,5]);
+for(const [section] of standard.sections)for(const item of standard.items(data,'P16',section)){const html=standard.render(data,'P16',{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(html.includes('standard-content-title'));assert.ok(!html.includes('undefined'));}
+const fn02Control=standard.render(data,'P16',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});assert.ok(fn02Control.includes('원본 제어기 실행명령 근거는 미확보'));assert.ok(fn02Control.includes('FN04_Current'));assert.ok(fn02Control.includes('PID하한35'));
+const schema16=data.repair_record_forms.profiles.find(p=>p.key==='P16');const note16={...fn01Note,id:'qa-fn02',equipment:'P16',repair_observation:plain(repair.collect(schema16,{first_symptom:'QA FN02',[schema16.signals[0].id+'_value']:'0'}))};
+assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([fn01Note,note16],data,'2026-10-11T06:00:00Z','P16')),store.decodeNotes,valid,schema16)).notes,[note16]);
+assert.throws(()=>tools.parseBackup(JSON.stringify(tools.backupEnvelope([{...note16,repair_observation:{...note16.repair_observation,equipment:'FN02'}}],data,'2026-10-11T06:00:00Z','P16')),store.decodeNotes,valid,schema16));
+assert.notEqual(tools.referenceContext(data,'P16').source_bundle_sha256,p15.source_bundle_sha256);
+
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));

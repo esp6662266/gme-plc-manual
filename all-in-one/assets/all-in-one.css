@@ -89,3 +89,4 @@ body[data-view=priority] .context,body[data-view=priority] .device-tabs{display:
 .bc01-relation-map{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}.bc01-comparison-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
 
 .standard-data{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
+.bc01-content li{overflow-wrap:anywhere}

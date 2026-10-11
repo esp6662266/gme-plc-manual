@@ -36,6 +36,7 @@ def build_static_profile(root,data,source_rows,config):
              'registers/signal-trace.json','registers/hmi-transfer.json','registers/vendor-reference-review.json',
              'registers/plc-symbols.csv','sources/hmi_plc_tags.csv','sources/Electrical_Rev2.pdf',
              'sources/Electrical_Can_Decoating_20241118.pdf','sources/PID_1684n002I.pdf','sources/decoded-original/network-map.json']
+    sources.extend(config.get('extra_sources',[]))
     # Hash original XML and all declarations in the reviewed network scope.
     native_ids=set(allowed)|set(control_reference['native'])
     native_ids.update(int(n['문서 ID']) for n in spec['networks'])
@@ -55,7 +56,7 @@ def build_static_profile(root,data,source_rows,config):
         style='<style id="'+prefix+'-source-locations">tr[id^="'+prefix+'-"]{scroll-margin-top:65px}tr[id^="'+prefix+'-"]:target td{background:#e0f2e9!important;outline:1px solid #167769}</style>'
         if 'id="'+prefix+'-source-locations"' not in text:text=text.replace('</head>',style+'</head>',1)
         if text!=path.read_text(encoding='utf-8'):path.write_text(text,encoding='utf-8')
-        locations.extend(dict(network=number,kind=kind,uid=uid,path=f'networks/network-{number}.html#{prefix}-{kind}-{uid}',xml=file) for kind,uid in sorted(rows))
+        locations.extend(dict(network=number,kind=kind,uid=uid,path=f'networks/network-{number}.html#{parser.anchors[(kind,uid)]}',xml=file) for kind,uid in sorted(rows))
     pairs=config["source_pairs"]
     for pair in pairs:
         match=next((s for s in locations if s['network']==pair['network'] and s['kind']==pair.get('kind','part') and s['uid']==pair['uid']),None)
@@ -129,3 +130,46 @@ def build_fn01_profile(root,data,source_rows):
             related_links=[['예경보/Local 정지1950','networks/network-1950.html'],['진동/OFF1988','networks/network-1988.html'],['전류1772','networks/network-1772.html'],['관련 명세','control-specs/FN01.html#fault']],
             field_title='실물·주팬/냉각팬SPARE·TC05와 정상 극성',alarm_recovery='Set/Reset 연결은 현재 호출 순서·알람 해제·모터 운전의 증명이 아닙니다. 2초 기동 감시와90분 Local 정지·설정0·수소박스 분기를 구분하고 요청·출력·주팬 응답을 같은 시각에 대조합니다.',
             search_examples='Q2.7, Tag_63, S5T#2S, SET_PERC_VT01, TC05')))
+
+def build_fn02_profile(root,data,source_rows):
+    read=lambda file:json.loads((root/file).read_text(encoding='utf-8'))
+    spec=next(p for p in read('registers/control-spec.json')['specifications'] if p['id']=='FN02')
+    vt02=next(p for p in read('registers/regulation-manual.json')['loops'] if p['id']=='VT02')
+    assert vt02['priority']=='P16' and vt02['controller_evidence'] is None
+    writes=[r for r in spec['scoped_rules'] if r['대상']=='Data.Set_Perc_VT02' and r['네트워크 문서'] in ['1843','1844','1688']]
+    assert {r['rule_id'] for r in writes}=={'1843:495','1844:881','1688:627','1688:635'}
+    control=dict(vt02)
+    control.update(applicability='preserved VT02/FN02 loop; indexed PID text, native controller evidence absent',
+        chain=['VT02/TC03→FN02 출력의 보존 조절 자료입니다. PID는 검색색인 텍스트이며 원본 제어기 실행명령 근거는 미확보입니다. 현재 제어기·빈핀 기본값·실행 결과를 확정하지 않습니다.']+vt02['chain']+[
+            '원본8은 TC03_SETPOINT<200이면200을 씁니다. 검색색인9의 실제 -15와30°C 주석은 상충하며 원본 실행명령으로 단정하지 않습니다.',
+            '1843 예열 종류1/카운터24의 Move495는75,1844 생산 종류2/카운터52의 Move881은80을 Set_Perc_VT02에 씁니다. 단계 수치는 실제 초가 아닙니다.',
+            '1843 카운터33의 FN02 요청 Reset539에는 추가 OFF 접점794가 있습니다. 현재 OFF 값·호출·다른 쓰기 없이 의도나 실행 결과를 확정하지 않습니다.',
+            '1948 설정0은 Flag.M_FN_02 요청 해제 분기입니다. 1688의5/100 제한·PID 하한35·예열75/생산80은 서로 다른 쓰기·단계입니다.',
+            '1767은 FN02_Current→Data.FN_02_FAN 환산과 FN02_Absorbption_OFR입니다. 1071은 원시 FN02_Current→Inputs.FN02_ABSORPTION 전달로 환산값 전달과 구분합니다.',
+            '1770 제목 fn-02 aspirator는 실제 FN04_Current·FN04 계수/출력/OFR을 사용합니다. 이름만으로 FN02 전류 환산에 배정하지 않습니다.'],
+        repair=vt02['repair']+['설정값 전체 쓰기·QW306·AI1 전기 신호·인버터 표시와 요청 해제 시각을 비교합니다.',
+            'Simulation1084의 Flag.M_FN_02→Inputs.FN02 Run은 보존 원본 정적 참조이며 물리 입력 전달의 증명이 아닙니다. 실행하지 않습니다.'],
+        pending=vt02['pending']+['원시 I3.0/I3.1→처리 Inputs의 전달·정상 극성·현재 CPU/HMI 이벤트',
+            '예열/생산/제한/PID/HMI 전체 쓰기 순서·최종값·단위·인버터 AI1/AO2 파라미터',
+            '기동 심볼의 과거 a52.0 주석은 도면 A2.3/Q2.3 주소와 구분; HMI1192 피연산자8개 미해석 유지',
+            'FG42의17KA2 DI3 RESET·14KA2/14KA6 STO 경로는 보존 도면; 현재 PLC 주소·안전 기능 검증 전'],
+        native=sorted(set(vt02['native']+[1843,1844,1767,1770])),native_refs=vt02['native_refs']+writes)
+    pairs=[
+        dict(signal='기동 명령',network=1948,uid='596',label='최종 출력 · Start FN02',boundary='ON·Flag.M_FN_02→Q2.3·43KA1·42AS1 DI1을 비교합니다. Set_Perc_VT02=0 요청 해제와 전기 전달을 구분합니다.'),
+        dict(signal='운전 응답',network=1796,uid='655',label='처리 응답 · Inputs.FN02 Run',boundary='I3.0 원시 응답과 처리 Inputs의 반전 감시 접점을 구분합니다. Simulation1084는 물리 전달 증명이 아니며 현재 CPU·극성 확인 전입니다.'),
+        dict(signal='인버터 이상',network=1796,uid='662',label='처리 입력 · Inputs.FN02_All_Inv',boundary='I3.1 원시 입력과 내부 감시를 구분합니다. 도면 ALARM/RO·현재 극성·원시→처리 전달 확인 전입니다.'),
+        dict(signal='속도 설정',network=1688,kind='wire',uid='671',label='속도 출력 · FN02_SP',boundary='Set_Perc_VT02의5/100 제한·×272→QW306을 보존합니다. PID 하한35·예열75/생산80·설정0 해제와 최종 쓰기를 구분합니다.'),
+        dict(signal='전류 전달',network=1767,kind='wire',uid='1471',label='FN02 전류 환산 · 별도 원시 전달',boundary='IW328→Data.FN_02_FAN/OFR과1071 원시→Inputs 전달은 별도입니다. 제목 FN02인1770의 실제 FN04 전류를 혼입하지 않습니다.')]
+    extra=[(1767,'wire','24'),(1767,'wire','1474'),(1770,'wire','1491'),(12,'part','362'),(12,'wire','372'),(8,'part','32'),(1843,'part','794'),(1843,'wire','31')]
+    extra.extend((int(r['네트워크 문서']),'part',r['Part UID']) for r in writes)
+    return build_static_profile(root,data,source_rows,dict(catalog_id='FN02',priority_key='P16',type='motor_fan',source_pairs=pairs,extra_locations=extra,
+        extra_sources=['sources/live_index.json'],internal_names=['Data.Set_Perc_VT02','Data.FN_02_FAN'],control_reference=control,
+        related_alarm_boundary='직접 FAULT/INV2개는 공유Tag_61 S5T#2S 감시입니다. 1767 전류 범위 오류·1071 원시 전달,설정0 요청 해제·예열 추가OFF·VT02 색인 PID/수동 조건은 별도입니다. 1770은 제목 FN02이나 실제 FN04 신호이며 현재 실행·복구·정상 극성을 확정하지 않습니다.',
+        presentation=dict(identity_title='열회수 블로어·단일 모터와 설비 식별',identity_pending='명판·위치·M19 블로어와 설비 카드 관리 관계 확인 전',
+            oem_baseline='Electrical_Rev2.pdf · FG42/43 = PDF43/44 · Rev.2 17.03.2025 · M19 75kW·123A / 42AS1 ACS580-01-145A-4 / 42QM1 160A와 RATING145A 구분 · 당시 도면값',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf · FOR APPROVAL / first draft design · PDF4/6/51 · 현재 승인·현행 배선 확인 전',
+            control_title='VT02/TC03 조절·단계 설정·제한과 전류 불일치',control_links=[['VT02 조절 근거','regulation-manual.html#loop-VT02'],['설정·전원 복귀','recipe-settings.html#profile-P16'],['전류 제목 불일치1770','networks/network-1770.html']],
+            timer_title='공유 Tag_61 · S5T#2S 기동 감시',related_title='추가 OFF·설정0 해제·전류/제목 불일치',
+            related_links=[['추가 OFF/예열1843','networks/network-1843.html'],['FN02 전류1767','networks/network-1767.html'],['VT02 수동12','networks/network-12.html'],['관련 명세','control-specs/FN02.html#fault']],
+            field_title='실물·単일 블로어·신호 전달과 정상 극성'.replace('単','단'),alarm_recovery='Set/Reset 연결은 현재 호출 순서·알람 해제·모터 운전의 증명이 아닙니다. 2초 감시·설정0·예열 추가OFF·VT02 설정 쓰기를 나누어 요청·출력·원시/처리 응답을 같은 시각에 비교합니다.',
+            search_examples='Q2.3, Tag_61, S5T#2S, Set_Perc_VT02, TC03, VT02')))
