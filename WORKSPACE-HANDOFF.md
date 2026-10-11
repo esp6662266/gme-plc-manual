@@ -1,3 +1,7 @@
+# MV01 v1.13.0 실제 게시 완료 — 2026-10-11
+
+MV01(P19) v1.13.0 실제게시완료. 7영역44항목/7쌍/2068화면·격리저장/통합선택복원3→4/0→1비교/동시성·Quota/보고서/A4 PDF3·14+2/ZIP2801/원본730/Node8/새clone passed. GitHub asset630177314 digest7b97a40d.../53363097B;Netlify6acb4468104cd90008fc7de8 ready08:10:47.897Z/feature192d2cbb420bddc2abafda2ed3cec608521537f2·게시111파일(93exact18HTML)·실제P19/Part143/통합0/운영키null. 시뮬레이터/PLC/현장/보호값/SEJIN변경0,TIA/liveCPU/fieldnot_performed. AON문서는불변ZIP생성시pending기록보존. 다음MV03(P20)독립검토·통합;Dots MV06초안중. 2차133은현재로컬goal제외. 전체goal active.
+
 # MV01 v1.13.0 통합·검증 진행 — 2026-10-11
 
 PV02 v1.12.0 실제게시완료. MV01(P19) 7영역·7원본쌍·개폐반대출력/끝단차단·150ms응답/±2000명령누적 공통FAULT·엔코더리셋·HSC4결속/19미결속·CONT_S9미결속·HMI4FALSE/10미해석·ZT02 A/B펄스대시공AI를 연결한다. Dots고정78해시·15고유/공통XML와선언·PDF9쪽 독립대조. 기존10설비/712원본·89대장/미확정/운영기록/중지5보존. UI/기록/PDF/패키지/게시검증진행중. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV03(P20) 수신초안.

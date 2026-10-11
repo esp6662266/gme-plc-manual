@@ -1,6 +1,6 @@
 # v1.13.0 · MV01 표준 매뉴얼
 
-PV02 v1.12.0 실제게시완료. MV01(P19) 7영역·7원본쌍·개폐반대출력/끝단차단·150ms응답/±2000명령누적 공통FAULT·엔코더리셋·HSC4결속/19미결속·CONT_S9미결속·HMI4FALSE/10미해석·ZT02 A/B펄스대시공AI를 연결한다. Dots고정78해시·15고유/공통XML와선언·PDF9쪽 독립대조. 기존10설비/712원본·89대장/미확정/운영기록/중지5보존. UI/기록/PDF/패키지/게시검증진행중. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV03(P20) 수신초안.
+PV02 v1.12.0 실제게시완료. MV01(P19) 7영역·7원본쌍·개폐반대출력/끝단차단·150ms응답/±2000명령누적 공통FAULT·엔코더리셋·HSC4결속/19미결속·CONT_S9미결속·HMI4FALSE/10미해석·ZT02 A/B펄스대시공AI를 연결한다. Dots고정78해시·15고유/공통XML와선언·PDF9쪽 독립대조. 기존10설비/712원본·89대장/미확정/운영기록/중지5보존. UI/기록/PDF/패키지/실제게시검증완료. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV03(P20) 수신초안.
 
 # v1.12.0 · PV02 표준 매뉴얼
 
@@ -84,3 +84,5 @@ BC01(P01)의 전기도면/원본 래더 비교, 백업 가져오기/선택 복�
 새 GitHub clone에서 설치/테스트/manifest/CSP 빌드를 확인했고 Netlify 게시 파일과 UI를 대조했습니다. 상세 근거는 [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md), 기능 안내는 [BC01-RECORD-TOOLS-20261011.md](all-in-one/BC01-RECORD-TOOLS-20261011.md)입니다.
 
 브라우저 점검 기록은 JSON 백업으로 별도 이동합니다. 시뮬레이터 영구 중지, 실제 PLC/현장 변경0이며 TIA/현재 CPU/실물/현장 복구 확인과 문서 검증을 구분합니다.
+
+MV01 v1.13.0 게시 근거는 [상세검증](V1.13.0-VERIFICATION.md), GitHub v1.13.0·Netlify6acb4468 ready·feature192d2cb.
