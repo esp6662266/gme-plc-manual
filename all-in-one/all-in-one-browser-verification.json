@@ -4080,6 +4080,378 @@
       "build-all-in-one.py": "4e477a082670e20f0491e83d7c03599afbddea6bb76455f24f64687bb3d42bef",
       "verify-all-in-one.py": "8903ed73628fb5aaca292c9771428c7000dc420d7dcf26de8d37336104a7f600",
       "registers/simulator-freeze.json": "bb93c1994effc5609939ba566b7802ce7ed55154a7310f02379b308ac2c8c835"
+    },
+    "tag_wrap_refinement": {
+      "status": "passed",
+      "scope": "calculation card text layout only; original navigation tests unchanged",
+      "view_checks": [
+        {
+          "codes": [
+            {
+              "breaks": 1,
+              "scroll": 158,
+              "text": "HMI_DB.SET_PERC_BC01",
+              "width": 158
+            },
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "설정값 × Int 272",
+              "width": 158
+            },
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "102A5_SPARE0 · %QW288",
+              "width": 158
+            }
+          ],
+          "content": [
+            [
+              481,
+              481
+            ]
+          ],
+          "documentWidth": 1265,
+          "large": false,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=speed",
+          "width": 1280
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "BC_01_MIN + Int 1 → BC_01_MIN",
+              "width": 158
+            },
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "Int 0 → BC_01_MIN",
+              "width": 158
+            }
+          ],
+          "content": [
+            [
+              481,
+              481
+            ]
+          ],
+          "documentWidth": 1265,
+          "large": false,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=other",
+          "width": 1280
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 160,
+              "text": "102A3_SPARE0 / Coeff 10 / Zero 0",
+              "width": 160
+            },
+            {
+              "breaks": 1,
+              "scroll": 160,
+              "text": "HMI_DB.Amp_BC01",
+              "width": 160
+            },
+            {
+              "breaks": 1,
+              "scroll": 160,
+              "text": "Allarm.BC01_Absorbption_OFR",
+              "width": 160
+            }
+          ],
+          "content": [
+            [
+              481,
+              481
+            ]
+          ],
+          "documentWidth": 1265,
+          "large": false,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set",
+          "width": 1280
+        },
+        {
+          "codes": [
+            {
+              "breaks": 1,
+              "scroll": 158,
+              "text": "HMI_DB.SET_PERC_BC01",
+              "width": 158
+            },
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "설정값 × Int 272",
+              "width": 158
+            },
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "102A5_SPARE0 · %QW288",
+              "width": 158
+            }
+          ],
+          "content": [
+            [
+              481,
+              481
+            ]
+          ],
+          "documentWidth": 1265,
+          "large": true,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=speed&text=large",
+          "width": 1280
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "BC_01_MIN + Int 1 → BC_01_MIN",
+              "width": 158
+            },
+            {
+              "breaks": 0,
+              "scroll": 158,
+              "text": "Int 0 → BC_01_MIN",
+              "width": 158
+            }
+          ],
+          "content": [
+            [
+              481,
+              481
+            ]
+          ],
+          "documentWidth": 1265,
+          "large": true,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=other&text=large",
+          "width": 1280
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 160,
+              "text": "102A3_SPARE0 / Coeff 10 / Zero 0",
+              "width": 160
+            },
+            {
+              "breaks": 1,
+              "scroll": 160,
+              "text": "HMI_DB.Amp_BC01",
+              "width": 160
+            },
+            {
+              "breaks": 1,
+              "scroll": 160,
+              "text": "Allarm.BC01_Absorbption_OFR",
+              "width": 160
+            }
+          ],
+          "content": [
+            [
+              481,
+              481
+            ]
+          ],
+          "documentWidth": 1265,
+          "large": true,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set&text=large",
+          "width": 1280
+        },
+        {
+          "codes": [
+            {
+              "breaks": 1,
+              "scroll": 262,
+              "text": "HMI_DB.SET_PERC_BC01",
+              "width": 262
+            },
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "설정값 × Int 272",
+              "width": 262
+            },
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "102A5_SPARE0 · %QW288",
+              "width": 262
+            }
+          ],
+          "content": [
+            [
+              356,
+              356
+            ]
+          ],
+          "documentWidth": 390,
+          "large": false,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=speed",
+          "width": 390
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "BC_01_MIN + Int 1 → BC_01_MIN",
+              "width": 262
+            },
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "Int 0 → BC_01_MIN",
+              "width": 262
+            }
+          ],
+          "content": [
+            [
+              356,
+              356
+            ]
+          ],
+          "documentWidth": 390,
+          "large": false,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=other",
+          "width": 390
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "102A3_SPARE0 / Coeff 10 / Zero 0",
+              "width": 262
+            },
+            {
+              "breaks": 1,
+              "scroll": 262,
+              "text": "HMI_DB.Amp_BC01",
+              "width": 262
+            },
+            {
+              "breaks": 1,
+              "scroll": 262,
+              "text": "Allarm.BC01_Absorbption_OFR",
+              "width": 262
+            }
+          ],
+          "content": [
+            [
+              356,
+              356
+            ]
+          ],
+          "documentWidth": 390,
+          "large": false,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set",
+          "width": 390
+        },
+        {
+          "codes": [
+            {
+              "breaks": 1,
+              "scroll": 262,
+              "text": "HMI_DB.SET_PERC_BC01",
+              "width": 262
+            },
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "설정값 × Int 272",
+              "width": 262
+            },
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "102A5_SPARE0 · %QW288",
+              "width": 262
+            }
+          ],
+          "content": [
+            [
+              356,
+              356
+            ]
+          ],
+          "documentWidth": 390,
+          "large": true,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=speed&text=large",
+          "width": 390
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "BC_01_MIN + Int 1 → BC_01_MIN",
+              "width": 262
+            },
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "Int 0 → BC_01_MIN",
+              "width": 262
+            }
+          ],
+          "content": [
+            [
+              356,
+              356
+            ]
+          ],
+          "documentWidth": 390,
+          "large": true,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=control&item=other&text=large",
+          "width": 390
+        },
+        {
+          "codes": [
+            {
+              "breaks": 0,
+              "scroll": 262,
+              "text": "102A3_SPARE0 / Coeff 10 / Zero 0",
+              "width": 262
+            },
+            {
+              "breaks": 1,
+              "scroll": 262,
+              "text": "HMI_DB.Amp_BC01",
+              "width": 262
+            },
+            {
+              "breaks": 1,
+              "scroll": 262,
+              "text": "Allarm.BC01_Absorbption_OFR",
+              "width": 262
+            }
+          ],
+          "content": [
+            [
+              356,
+              356
+            ]
+          ],
+          "documentWidth": 390,
+          "large": true,
+          "url": "http://127.0.0.1:8777/index.html#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set&text=large",
+          "width": 390
+        }
+      ],
+      "console_errors": 0,
+      "console_warnings": 0,
+      "tag_text_preserved": true,
+      "input_sha256": {
+        "assets/all-in-one.js": "401be3dc69f5ef65025dddc4f8737bd429c97cd8fdb4059008d2300ec3814600"
+      }
     }
   }
 }
