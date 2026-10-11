@@ -1,3 +1,7 @@
+# v1.9.1 MC04 개정란 정정 — 게시 확인 대기
+
+FG136 공란 판독을 Rev2 17.03.2025로 정정한다. 기존v1.9 실제게시검증은배포/기능의증거이며 이 한 문구 오류는v1.9.1에서수정한다.
+
 # v1.9.0 · MC04 표준 매뉴얼 — 게시 검증 완료
 
 기능 4f8ace3c970ecc70e9b2fdc5da46266a952f8cdd · v1.9.0 tag/Release ZIP digest/53020057바이트일치. Netlify 6acb2a35160bd00008224fc7 ready/commit_ref일치 · 2026-10-11T06:18:52.282Z · error없음. 새clone Node24.19 npm ci/8테스트/BC01/설비/NETLIFY 빌드passed·Git변경0. 게시51파일:30정확SHA/21HTML prettyURL정규화동등. 실제P08 v1.9/45항목·FG25/PDF26/1941Part344 StartMC04·통합0건창·warn/error0확인. 운영작성0.
