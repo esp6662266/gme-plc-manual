@@ -5404,5 +5404,14 @@
   "simulator_behavior_tests": "not_run",
   "operational_record_writes": 0,
   "PLC_field_SEJIN_changes": 0,
-  "next": "CC01/P10 independent review; BATCH01 final shared package/publish once"
+  "next": "CC01/P10 independent review; BATCH01 final shared package/publish once",
+  "publication_follow_up": {
+    "status": "passed_batch01",
+    "version": "1.16.0",
+    "feature_commit": "aab32a48f8cfcd5523a0fc43047e7be5627bfa1a",
+    "netlify_deploy": "6acb6e546a59be00083a0b94",
+    "ready_at": "2026-10-11T11:09:29.045Z",
+    "aggregate_report": "BATCH01-VERIFICATION.json",
+    "checkpoint_source_bundle_retained": true
+  }
 }
