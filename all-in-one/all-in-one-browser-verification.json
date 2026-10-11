@@ -3510,5 +3510,30 @@
       "independent_review_blockers": 0,
       "print_clone_scope_unchanged": true
     }
+  },
+  "bc01_media_evidence": {
+    "date": "2026-10-11",
+    "scope": "BC01 read-only reference UI; not field or simulator execution",
+    "photos_visual_reviewed": 12,
+    "groups": 5,
+    "selected_photo_links_checked": 12,
+    "hash_reload_and_back": true,
+    "ss01_path3_navigation": true,
+    "mobile_width": 390,
+    "mobile_document_scroll_width": 390,
+    "large_text_inspected": true,
+    "local_console_errors": 0,
+    "remote_photos_copied": false,
+    "independent_original_pdf_xml_review": "Sol High; important defects0",
+    "protected_functions_unchanged": 5,
+    "simulator_policy": "permanently_stopped",
+    "simulator_behavior_tests": "not_run",
+    "field_verified": false,
+    "input_sha256": {
+      "assets/all-in-one.js": "0e267a9972bfaffa0d88aa958a7d1544268063c15eccf106e6dc6a244eba581b",
+      "assets/all-in-one.css": "531244abab3bec3a8ccec26795259f3c86efee78a0fd6d143ac57cf7052fe0f7",
+      "build-all-in-one.py": "b4e30e51be09f826369b37578de80aa5e531db069204b734eeedf294a80190f6",
+      "registers/simulator-freeze.json": "bb93c1994effc5609939ba566b7802ce7ed55154a7310f02379b308ac2c8c835"
+    }
   }
 }

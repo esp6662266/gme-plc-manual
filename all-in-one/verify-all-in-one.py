@@ -1,3 +1,4 @@
+# coding: utf-8
 """Validate application data contracts and every dynamic document route.
 
 This checks integration and preserved evidence, not PLC or simulator execution.
@@ -44,7 +45,9 @@ assert len(data['verification']) == 1060 and all(v['상태'] == '확인 대기' 
 assert len(data['conflicts']) == 18
 assert data['work_scope']['simulator_development']=='stopped_by_user'
 assert data['work_scope']['simulator_tests']=='frozen'
+assert data['work_scope']['simulator_policy']=='permanently_stopped'
 freeze=json.loads((ROOT/'registers/simulator-freeze.json').read_text())
+assert freeze['policy']=='permanently_stopped' and freeze['policy_updated_date']=='2026-10-11'
 assert all(hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==digest for f,digest in freeze['files'].items())
 construction=json.loads((ROOT/'registers/construction-reference.json').read_text())
 assert data['construction_reference']==construction
@@ -571,6 +574,18 @@ for ref in ('assets/all-in-one.css','assets/all-in-one.js','assets/all-in-one-da
 assert "(ROOT/'manual-catalog.html').write_text" in (ROOT / 'build-manual.py').read_text()
 assert "runpy.run_path(str(ROOT / 'build-all-in-one.py')" in (ROOT / 'build-control-spec.py').read_text()
 
+media=data['bc01_standard']['media_evidence']
+assert media['checked']=='2026-10-11' and not media['raw_images_copied'] and not media['identity_verified'] and not media['field_verified']
+assert len(media['photos'])==12 and len({p['id'] for p in media['photos']})==12
+assert Counter(p['group'] for p in media['photos'])=={'belt':3,'drive':2,'chain':3,'support':1,'reference':3}
+assert [p['source_order'] for p in media['photos']]==list(range(1,13))
+assert all(not p['field_verified'] and p['pending'] and urlsplit(p['original_url']).netloc=='sejin-facility-manager.romancetiger.chatgpt.site' and urlsplit(p['original_url']).path.startswith('/api/photos/') for p in media['photos'])
+assert [p['kind'] for p in media['photos'] if p['group']=='reference']==['test_graphic','technical_drawing_image','unidentified_3d']
+assert len(media['missing'])==3
+bc_paths=next(d for d in electrical['devices'] if d['id']=='BC01')['paths']
+assert all(0<=i<len(bc_paths) for ref in list(media['references'].values())+media['missing'] for i in ref['paths'])
+assert all((ROOT/urlsplit(d[1]).path).is_file() for ref in media['references'].values() for d in ref['documents'])
+
 result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(drawing['preview_hashes']),drawing_original_source_hashes_checked=True,body_manual_counts=body_manual['counts'],requirements_audit_counts=audit['counts'],status='passed', equipment=248, priority=23, priority_tag_matches=14,
               priority_role_candidates=4, priority_unmatched=5, dynamic_routes_checked=len(routes),
               tests_preserved_unexecuted=577, pending_checks_preserved=1060,
@@ -603,7 +618,7 @@ result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(dra
               actuator_alarm_latches=sum(len(p['alarms']) for p in alarm_recovery['profiles'] if p['family']!='motor'),
               construction_pages=64,construction_guides=22,construction_selected_rows=51,
               construction_review_items_pending=7,masked_cable_rows_excluded=9,
-              simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',
+              simulator_development='stopped_by_user',simulator_policy='permanently_stopped',bc01_media_references_checked=12,simulator_behavior_tests='not_rerun',
               simulator_files_hashes_unchanged=True,
               scope='application integration and preserved source data; not PLC/TIA execution')
 (ROOT / 'all-in-one-verification.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')

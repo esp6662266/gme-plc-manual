@@ -25,11 +25,11 @@
   const base = new URL('./', location.href);
   const views = new Set(['overview','priority','summary','manual','repair','repair-record','io','spec','ladder','structure','drawings','simulator','tests','checks','conflicts','notes','resources','doc','review']);
   const deviceViews = new Set(['summary','manual','repair','repair-record','io','spec','ladder','structure','drawings','simulator','tests','checks','review']);
-  const tabs = [['summary','설비 요약'],['manual','매뉴얼'],['repair','진단·수리'],['io','I/O·HMI'],['spec','제어 명세'],['ladder','래더'],['drawings','도면'],['simulator','시뮬레이터 · 개발 중지'],['tests','시험'],['checks','확인 대장']];
+  const tabs = [['summary','설비 요약'],['manual','매뉴얼'],['repair','진단·수리'],['io','I/O·HMI'],['spec','제어 명세'],['ladder','래더'],['drawings','도면'],['simulator','시뮬레이터 · 영구 중지'],['tests','시험'],['checks','확인 대장']];
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:''};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:'',bc01MediaGroup:'belt',bc01Photo:'photo-01'};
   let lastRenderedRoute = null;
   let bc01Wide = false;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
@@ -79,7 +79,7 @@
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
     if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
-    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Text==='large')params.set('text','large');if(state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===state.bc01Check))params.set('check',state.bc01Check);}
+    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Section==='overview' && state.bc01Item==='media'){params.set('media',state.bc01MediaGroup);params.set('photo',state.bc01Photo);}if(state.bc01Text==='large')params.set('text','large');if(state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===state.bc01Check))params.set('check',state.bc01Check);}
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -110,6 +110,7 @@
       state.bc01Text=params.get('text')==='large'?'large':'standard';
       const checks=state.bc01Section==='completion'?bc01CompletionTasks(state.bc01Item):[];
       state.bc01Check=checks.find(t=>t.id===params.get('check'))?.id || checks[0]?.id || '';
+      if(state.bc01Section==='overview' && state.bc01Item==='media')bc01NormalizeMedia(params.get('media'),params.get('photo'));
       bc01LastItems.set(state.bc01Section,state.bc01Item);
     }
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
@@ -482,7 +483,7 @@
   function bc01Items(section) {
     const spec=data.bc01_standard?.specification, alarms=data.bc01_standard?.alarm, circuit=drawingMap.get('P01')?.circuit;
     if(!spec)return [];
-    if(section==='overview')return [{id:'identity',title:'설비 식별·역할'},{id:'baseline',title:'자료·개정 기준'},{id:'boundary',title:'확인 범위와 미확정'}];
+    if(section==='overview')return [{id:'identity',title:'설비 식별·역할'},{id:'baseline',title:'자료·개정 기준'},{id:'boundary',title:'확인 범위와 미확정'},{id:'media',title:'사진·부품·도면 대응'}];
     if(section==='io')return [...spec.inputs.map((raw,i)=>({id:'input-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'물리 입력'})),...spec.outputs.map((raw,i)=>({id:'output-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'물리 출력'})),...spec.internal.map((raw,i)=>({id:'memory-'+i,title:raw['백업 주소'].toUpperCase()+' · '+raw['원본 심볼'],raw,role:'내부 기억'})),...spec.hmi.map((raw,i)=>({id:'hmi-'+i,title:raw['HMI 태그'],raw,role:'HMI 저장 태그'}))];
     if(section==='control')return [{id:'request',title:'자동 단계·운전 요청',networks:[1843,1844,1847]},{id:'output',title:'최종 출력의 OR 허가',networks:[1935]},{id:'reset',title:'고장에 따른 요청 해제',networks:[1935]},{id:'speed',title:'속도 설정·다른 쓰기',networks:[1692]},{id:'other',title:'응답·시간·다른 관련 쓰기'}];
     if(section==='circuits')return (circuit?.paths || []).map((path,i)=>({id:'path-'+i,title:path.signal,path}));
@@ -654,6 +655,20 @@
     dialog.addEventListener('close',()=>{document.body.classList.remove('bc01-proof-printing');document.querySelector('[data-bc01-proof-preview]')?.focus({preventScroll:true});dialog.remove();});
     dialog.append(printStyle);document.body.append(dialog);dialog.showModal();document.body.classList.add('bc01-proof-printing');
   }
+  function bc01NormalizeMedia(group,photo) {
+    const media=data.bc01_standard.media_evidence;
+    state.bc01MediaGroup=media.groups.some(g=>g.id===group)?group:media.groups[0].id;
+    const photos=media.photos.filter(p=>p.group===state.bc01MediaGroup);
+    state.bc01Photo=photos.find(p=>p.id===photo)?.id || photos[0].id;
+  }
+  function bc01MediaBody() {
+    const media=data.bc01_standard.media_evidence;
+    bc01NormalizeMedia(state.bc01MediaGroup,state.bc01Photo);
+    const photos=media.photos.filter(p=>p.group===state.bc01MediaGroup), photo=photos.find(p=>p.id===state.bc01Photo), ref=media.references[state.bc01MediaGroup];
+    const pathButtons=ids=>ids.map(i=>`<button type="button" data-bc01-jump="circuits/path-${i}">${esc(drawingMap.get('P01').circuit.paths[i].signal)} · 도면 경로</button>`).join('');
+    const kinds={photograph:'현장 사진 참고',historical_photograph:'이전 등록 사진',test_graphic:'TEST 그래픽',technical_drawing_image:'부품 도면 이미지',unidentified_3d:'동일성 미확인 3D'};
+    return `<p class="bc01-lead">부품별 자료 선택 → 보이는 내용 → 관련 도면 → 추가 확인</p><p>SEJIN의 BC-01(벨트) 카드 자료12장을 분류했습니다. 사진 원본은 SEJIN에서 열며, 현재 실물 동일성·촬영 시점·고장·복구 상태는 확인 전입니다.</p><div class="bc01-media-groups" role="group" aria-label="사진 자료 종류">${media.groups.map(g=>`<button type="button" data-bc01-media-group="${g.id}" aria-pressed="${g.id===state.bc01MediaGroup}"><strong>${esc(g.title)}</strong><small>${media.photos.filter(p=>p.group===g.id).length}개 자료</small></button>`).join('')}</div><div class="bc01-media-cards" role="group" aria-label="선택 종류의 사진 자료">${photos.map(p=>`<button type="button" data-bc01-photo="${p.id}" aria-pressed="${p.id===photo.id}"><span class="badge">자료 ${String(p.source_order).padStart(2,'0')} · ${esc(kinds[p.kind])}</span><strong>${esc(p.title)}</strong></button>`).join('')}</div><article class="bc01-media-detail" aria-label="선택 사진 근거"><p class="eyebrow">선택한 자료 ${String(photo.source_order).padStart(2,'0')} / 12</p><h4>${esc(photo.title)}</h4><span class="badge">${esc(kinds[photo.kind])}</span><section><h5>사진·이미지에서 보이는 내용</h5><p>${esc(photo.observation)}</p><a class="button-link" href="${esc(photo.original_url)}" target="_blank" rel="noopener noreferrer">SEJIN 원본 이미지 열기 ↗</a><p class="muted">외부 원본 링크 · 사진 파일을 복제하거나 원본 등록을 변경하지 않습니다.</p></section><section><h5>부품·도면을 비교할 위치</h5><p>${esc(ref.description)}</p><div class="bc01-source-actions">${ref.documents.map(d=>docButton(d[0],d[1])).join('')}${pathButtons(ref.paths)}</div></section><section class="notice"><h5>추가 확인</h5><p>${esc(photo.pending)}</p></section>${state.bc01MediaGroup==='chain' || photo.kind==='technical_drawing_image'?`<div class="notice info"><strong>스프로킷 사양·개정 경계</strong><p>${esc(media.part_revision_boundary)}</p></div>`:''}</article><details class="bc01-media-missing"><summary>추가로 필요한 명판·보호장치 사진 3종</summary>${media.missing.map(m=>`<article><h4>${esc(m.title)}</h4><p>${esc(m.text)}</p><div class="bc01-source-actions">${pathButtons(m.paths)}</div></article>`).join('')}</details><p class="muted">확인 기준: 2026-10-11 읽기 전용 원본 화면·이미지 관찰. 등록 태그를 정상·고장·복구 판정으로 사용하지 않습니다.</p>`;
+  }
   function renderBC01Manual() {
     const standard=data.bc01_standard;
     if(!standard)return panel('BC01 표준 자료','<p>자료를 다시 불러와 주세요.</p>');
@@ -664,6 +679,7 @@
     if(state.bc01Section==='overview') {
       if(current.id==='identity')body=`<p class="bc01-lead">${esc(spec.role)}</p>${table(['구분','자료에서 확인한 내용'],[['현장 카드 명칭',esc(selection().p.name)],['PLC 참조 태그','BC01'],['백업 설비 이름',esc(spec.name)],['계통·역할',esc(spec.group)+' · '+esc(spec.kind)],['모터·구동기',esc(circuit.equipment)],['설비 동일성','태그명 일치 · 실물/명판/위치 확인 전']])}<div class="notice">${esc(circuit.distinction)}</div>`;
       else if(current.id==='baseline')body=`<p>매뉴얼의 조건과 주소는 아래 보존 자료를 기준으로 합니다. 현재 CPU·준공도·현장 상태와의 일치 여부는 별도 확인합니다.</p>${table(['자료','식별 기준·한계'],[['PLC','보존 백업/복원 XML · 현재 프로젝트와 비교 필요'],['OEM 전기','Electrical_Rev2.pdf · FG18/19 = PDF19/20 · 개정란은 원본에서 확인'],['시공·케이블','Electrical_Can_Decoating_20241118.pdf · FOR APPROVAL · 24.11.11 first draft design'],['P&ID','PID_1684n002I.pdf · 전체 공정 참고'],['HMI','보존된 DDE 태그 설정 · 현재 표시/요청/쓰기 대응 미확정']])}<details><summary>사용한 대장과 SHA256</summary>${table(['입력 대장','SHA256'],Object.entries(standard.source_hashes).map(([path,hash])=>[esc(path),'<code>'+esc(hash)+'</code>']))}</details>`;
+      else if(current.id==='media')body=bc01MediaBody();
       else body=`<div class="bc01-status-cards"><article><strong>원본·정적 근거</strong><p>보존 자료에 연결</p></article><article><strong>현재 PLC·TIA</strong><p>미검증</p></article><article><strong>실물·현장 복구</strong><p>미확인</p></article></div><ul>${spec.pending.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul><div class="notice">문서·UI 표준화와 실제 수리 완료를 구분합니다. 다른 설비로의 확대는 사용자 요청으로 보류합니다.</div>`;
       sources=[['기존 설비 자료','devices/BC01.html'],['실물 대응 작업지','priority-guides/P01.html'],['현행 백업 확인','requirements-audit.html#open-P01']];
     } else if(state.bc01Section==='io') {
@@ -697,7 +713,7 @@
     } else {
       if(current.id==='documentation')body='<p>BC01 한 설비의 화면·문서 표준 기준입니다. 원본 정적 대조, 현재 CPU 확인과 실제 수리 완료는 각각 구분합니다.</p>'+table(['표준 항목','완료 기준'],[['찾기·가독성','종류별 선택·세부 항목 목록·본문·근거 분리'],['근거 추적','신호/조건/단자마다 원본 문서·FG/PDF·LAD/UID 연결'],['수리 판단','증상→관찰 위치·값/시각→비교 원본→차이·추가 증거→복구 확인'],['모호한 자료','주소·극성·시공 차이를 확인 대기로 유지'],['검증','최신 파일의 필수 검사·링크·PC/모바일·기록 보존 확인']]);
       else if(['cpu','field','recovery'].includes(current.id))body=bc01CompletionWorkspace(current.id,spec,schema,drawing);
-      else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
+      else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터는 이 프로젝트에서 영구 중지입니다. 전체 작업 완료 후에도 자동 재개하지 않습니다. 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
       sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
     }
     if((state.bc01Section==='overview' && ['identity','baseline'].includes(current.id)) || state.bc01Section==='circuits' || (state.bc01Section==='completion' && current.id==='field'))body+=`<div class="notice info bc01-inverter-revision"><strong>인버터 자료의 개정 구분</strong><p>2026-10-11 사용자 확인: 현재 인버터 제작사는 ABB이며, SEJIN의 미쓰비시 등록 자료는 구버전입니다.</p><p class="muted">사용자 확인과 원본 도면 표기를 구분합니다. 현재 ABB의 정확한 모델·정격·단자 배선은 명판·현행 접속도 확인 전이며, 구버전 사양을 현재 설정으로 적용하지 않습니다.</p></div>`;
@@ -892,6 +908,8 @@
       if(b.hasAttribute('data-bc01-proof-preview')) {openBC01ProofPreview();return;}
       if(b.dataset.bc01Text && ['standard','large'].includes(b.dataset.bc01Text)) {state.bc01Text=b.dataset.bc01Text;route('manual');document.querySelector(`[data-bc01-text="${state.bc01Text}"]`)?.focus({preventScroll:true});return;}
       if(b.dataset.bc01AlarmStep && ['set','reset','restart'].includes(b.dataset.bc01AlarmStep)) {state.bc01AlarmStep=b.dataset.bc01AlarmStep;route('manual');document.querySelector(`[data-bc01-alarm-step="${state.bc01AlarmStep}"]`)?.focus({preventScroll:true});return;}
+      if(b.dataset.bc01MediaGroup) {if(state.selected==='P01' && state.bc01Section==='overview' && state.bc01Item==='media'){bc01NormalizeMedia(b.dataset.bc01MediaGroup,'');route('manual');}return;}
+      if(b.dataset.bc01Photo) {if(state.selected==='P01' && state.bc01Section==='overview' && state.bc01Item==='media'){bc01NormalizeMedia(state.bc01MediaGroup,b.dataset.bc01Photo);route('manual');}return;}
       if(b.dataset.bc01Check) {if(state.selected==='P01' && state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===b.dataset.bc01Check)){state.bc01Check=b.dataset.bc01Check;route('manual');document.querySelector('.bc01-check-tabs [aria-pressed="true"]')?.focus({preventScroll:true});}return;}
       if(b.dataset.bc01Move) {const items=bc01Items(state.bc01Section), i=items.findIndex(item=>item.id===state.bc01Item), next=items[i+(b.dataset.bc01Move==='prev'?-1:1)];if(next){state.bc01Item=next.id;route('manual');document.querySelector('.bc01-content')?.scrollIntoView({block:'start'});document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
       if(b.dataset.bc01Jump==='control/output') {state.bc01Section='control';state.bc01Item='output';route('manual');return;}

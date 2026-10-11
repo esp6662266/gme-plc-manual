@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "instruction": "현재 시뮬레이션까지만 마무리하고 추가 시뮬레이션 작성을 중지. 매뉴얼·수리·구조·개선을 우선 진행.",
-  "scope": "BC01/FN04 virtual motor baseline and supported isolated LAD subset; no new device/instruction/response/test scenarios until user requests resume",
+  "scope": "Preserve original simulator assets and hashes; no development, modification, execution, expansion or behavior tests. Continue manual, repair and static source analysis only.",
   "files": {
     "registers/program-model.json": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
     "assets/program-model-data.js": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
@@ -11,6 +11,8 @@
   },
   "development_status": "stopped_by_user",
   "behavior_tests_status": "frozen_no_rerun",
-  "latest_instruction": "시뮬레이션은 내가 따로 작성하라고 하기전엔 작성하지마라.",
-  "resume_rule": "Only a separate explicit user request to author simulation permits resuming development, modification, expansion or behavior test reruns. Goal continuation does not resume simulation."
+  "latest_instruction": "시뮬레이터는 앞으로 영구 중지다. 전체 작업 완료 후에도 자동 재개하지 않는다.",
+  "resume_rule": "Permanently stopped for this project. Completion or goal continuation never resumes simulator work; any future reconsideration is outside the active project scope.",
+  "policy": "permanently_stopped",
+  "policy_updated_date": "2026-10-11"
 }
