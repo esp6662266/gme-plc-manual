@@ -69,3 +69,7 @@ check:python은 Python 준비 확인입니다. 실행기는 Windows py -3, pytho
 ## 다음 채팅 재개 문장
 
 > 이 저장소의 .agents/skills/gme-equipment-rollout/SKILL.md, AGENTS.md, EXPANSION-WORK.md, docs/equipment-standard/WORK-STANDARD.md와 START-GPT61.md를 읽고 최신 Git 상태를 확인해 줘. GPT-6.1 Sol / Ultra로 BC01 기준 확장을 최신 작업 기록의 다음 한 단계부터 진행해. 기존 제외·완료분·원본·미확정·브라우저 기록을 보존하고 문서/화면/현장 확인을 구분해. 시뮬레이터와 실제 PLC/현장/보호값 및 SEJIN 변경은 하지 마. 필요한 검증과 GitHub 인계 기록을 남겨 줘.
+
+## Sparse checkout에서 커밋할 때
+
+현재 작업 체크아웃의 sparse 규칙은 일부 변경/신규 파일의 일반 git add를 제외할 수 있습니다. 적용 중이면 git add --sparse로 검토한 경로를 추가하고 git diff --cached --stat 및 manifest와 Git 추적 파일을 대조한 뒤 커밋합니다. 새 GitHub clone에서 테스트/빌드로 누락을 확인합니다. v1.4.0의 첫 staging 누락은 후속 완전 소스 커밋으로 수정했습니다.

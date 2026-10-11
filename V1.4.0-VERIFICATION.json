@@ -54,7 +54,22 @@
     },
     "qa_storage_cleaned": true
   },
-  "publication": "not_published",
+  "publication": {
+    "status": "verified",
+    "commit": "896377bc9bd8476588c4d95924ace4f31695ae85",
+    "deploy_id": "6acb0a40565b8200084fba4b",
+    "state": "ready",
+    "published_at": "2026-10-11T04:02:30.717Z",
+    "release": "v1.4.0",
+    "asset_digest": "68e4c7881a08d45680576c4c472cb809f43db240dbac109296e1ddbdbaa64bac",
+    "files_checked": 19,
+    "exact_hashes": 16,
+    "html_semantic": 3,
+    "pretty_links_200": 4,
+    "live_dialog_opened": true,
+    "production_data_writes": 0,
+    "source_less_browser_error": "MutationObserver.observe TypeError once; cause unconfirmed"
+  },
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -108,5 +123,15 @@
   },
   "npm_tests_passed": 8,
   "netlify_csp": "6 exact inline hashes, 39 scoped policies",
-  "independent_reviews": "two read-only reviews; all blockers corrected and regression verified"
+  "independent_reviews": "two read-only reviews; all blockers corrected and regression verified",
+  "fresh_clone": {
+    "commit": "896377bc9bd8476588c4d95924ace4f31695ae85",
+    "node": "24.19.0",
+    "install": true,
+    "tests_passed": 8,
+    "bc01_check": true,
+    "equipment_check": true,
+    "netlify_build": true,
+    "git_dirty": false
+  }
 }

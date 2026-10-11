@@ -36,3 +36,7 @@ FN04(P02) 기존 분석을 설비별 7영역·네 기능과 연결하고 전체 
 ## v1.4.0 최종 로컬 검증
 
 문서 complete_with_gaps, 정적 검토 passed, ui_records passed. BC01144/FN04196화면·선택격리/검색·저장/복원/재열기·0/빈칸·미지필드/다른설비/초안·실패/동시탭/닫힌대기복원·PDF A4 2쪽 렌더 통과. 현재 기준과 검증 상세는 루트 V1.4.0-VERIFICATION.md/.json. 게시 확인은 진행 중이며 TIA/현재CPU/현장복구 미수행. 다음 한 작업은 v1.4.0 최종 패키지·GitHub/Netlify 게시 검증, 이후FN01(P15)이다.
+
+## 게시 검증 완료 · v1.4.0
+
+896377bc9bd8476588c4d95924ace4f31695ae85 / Netlify 6acb0a40565b8200084fba4b ready·commit_ref 일치. tag/Release ZIP digest·새 GitHub clone·14+2검사·npm8개/빌드·게시19파일/실제UI 확인. 모든 설비 통합 JSON 백업·복원은4저장키58건→60건/설비별 재열기와 실패·동시성/미지항목·초안 보존 검증을 포함한다. TIA·현재CPU·현장복구 미수행. 다음 구현 대상은 FN01(P15).

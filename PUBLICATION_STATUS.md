@@ -1,6 +1,27 @@
-# v1.4.0 · FN04 시범·모든 설비 통합 백업 — 게시 확인 대기
+# v1.4.0 · FN04 시범·모든 설비 통합 백업 — 게시 검증 완료
 
-PREP-01/FN04 구현·독립 검토·정적 검사와 PC/모바일340화면·저장/복원/재열기·실패/동시성·A4 PDF 검증을 완료했다. 모든 설비 통합 JSON 백업·복원도 구현·두 독립 검토·4설비58건 복원/60건 실제 백업·같은 화면 재열기/실패·동시성 검증을 마쳤다. 최종14+2검사/ZIP·테스트8개/빌드는 통과했고 실제 GitHub/Netlify 커밋·게시 파일/UI·새clone은 진행 중이다. 마지막 확인된 게시는 아래 v1.3.0이며 새 버전 게시 완료로 아직 표시하지 않는다.
+모든 설비의 저장 메모·수리 기록을 JSON 한 파일로 백업·복원하도록 변경했습니다. 기존 전체/개별 JSON 호환, 설비/기록 필터·50건 페이지, 충돌 선택, 잠금·동시 변경·저장 후 재읽기/같은 화면 재열기를 확인했습니다. BC01을 보존한 공통 구조와 FN04(P02)의7영역49항목 시범도 함께 게시했습니다.
+
+| 확인 항목 | 실제 결과 |
+|---|---|
+| 기능·패키지 커밋 | 896377bc9bd8476588c4d95924ace4f31695ae85 |
+| 고정 배포판 | [v1.4.0 tag/Release](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.4.0) |
+| Netlify | 6acb0a40565b8200084fba4b · ready · commit_ref 일치 · 2026-10-11T04:02:30.717Z · error 없음 |
+| 게시 사이트 | https://gme-plc-manual.netlify.app/all-in-one/ |
+| 새 GitHub clone | Node24.19.0 npm ci·테스트8개·BC01/설비 검사·NETLIFY=true 빌드 통과 · Git 변경0 |
+| 패키지 | 필수14+설비2 검사 · 2801파일 · ZIP CRC/전체SHA · 원본730/추가3/중지5 보존 |
+| ZIP SHA256 | 68e4c7881a08d45680576c4c472cb809f43db240dbac109296e1ddbdbaa64bac · GitHub Release asset digest/size 일치 |
+| 통합 기록 | 합성4키58건 복원→저장60건·실제 JSON payload60건·설비별15건 재열기·초안/미지항목 보존·필터/페이지/숨긴 선택 유지·실패/동시성 통과 |
+| 화면/PDF | 기존 BC01/FN04 PC/모바일340화면·A4 PDF2쪽 확인; 새 통합 창 PC/390px 넘침0; 실제 게시본 도구와 통합 창 열기 확인 |
+| 게시 파일 | 19개 대조:16개 정확 SHA, HTML3개는 Netlify pretty URL 정규화 후 구조/텍스트 동등. 소문자 pretty 링크4개 HTTP200 |
+| 실제 운영 자료 | 작성0; 격리8874 QA notes/drafts null·임시 패치 제거 |
+| TIA/현재CPU/현장/시뮬레이터 | 실행·변경0. 현장 확인은 별도 미수행 |
+
+sparse checkout으로 첫 f333873 커밋에서 매뉴얼 파일이 누락되어 해당 Netlify 빌드가 실패했습니다. git add --sparse로 완전한 소스·manifest·검증 파일을896377b에 반영했고 새 GitHub clone과 실제 ready 게시로 수정 결과를 확인했습니다. 실패 게시를 완료로 계산하지 않습니다.
+
+게시 IAB에서 출처 URL 없는 MutationObserver.observe 오류1건을 관측했습니다. 이전 v1.3과 같은 메시지이며 앱 소스에 해당 호출은 없습니다. 원인은 미확정이며 화면 열기·통합 도구 기능을 확인했고 브라우저 전체 오류0으로 주장하지 않습니다.
+
+[상세 검증](V1.4.0-VERIFICATION.md) · [재개 안내](WORKSPACE-HANDOFF.md) · [다음 작업](EXPANSION-WORK.md). 이후 루트 상태 기록 갱신은 기능·원본·패키지 바이트를 변경하지 않습니다.
 
 ---
 
