@@ -1,0 +1,5408 @@
+{
+  "target": "BR01/P11",
+  "batch": "BATCH01",
+  "application_version": "1.16.0",
+  "baseline_commit": "17968e45701aad917714a493e3022cc64b1ee876",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "package": "pending_batch01",
+  "publication": "pending_batch01",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "native_xml_files_scoped_reviewed": 41,
+  "pdf_original_pages_visually_reviewed": 12,
+  "draft_fixed_hashes_matched": 100,
+  "items": 78,
+  "area_items": [
+    3,
+    4,
+    36,
+    19,
+    6,
+    5,
+    5
+  ],
+  "source_locations": 1505,
+  "source_hashes": {
+    "alarm-guides/BR01.html": "79f50b1508a38c47569ecc3fb77383eff19c929ee564d7403ba3bd68a4672768",
+    "assets/circuits/FG111.png": "e184198bfac17f7ab979be6dc3f327d71df1101c7bcf215e55beabce2011a5c0",
+    "assets/circuits/FG114.png": "fdfa7c1ef18efc2cb06b28654df8155ea107d369787dc39b44d91d34dcdf641d",
+    "assets/circuits/FG142.png": "2c2cba69b8f782ce924ac6652502056eb16060a88cba00acad9b7fb63ca8d59f",
+    "assets/circuits/FG143.png": "27c0a982d921b767beee7854892feacad8b63cb8690b992658efe54649c667c9",
+    "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+    "registers/burner-interface.json": "f27c14a85d745fdb864b31864f6744ac58dac1d34b45c951042249c5f210fdfd",
+    "registers/construction-reference.json": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+    "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+    "registers/hmi-transfer.json": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+    "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+    "registers/regulation-manual.json": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+    "registers/requirements-audit.json": "2c0ad009f32d79b8b74a8611908c659e3d8f2d329f3113b5fedc6abf58a0288f",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+    "registers/vendor-reference-review.json": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/decoded-original/0008-FlgNet.xml": "f021ab0829bbb87b97ab7cab973ec207c21fa77b96d0e126cd2bcaba5647ce87",
+    "sources/decoded-original/0014-FlgNet.xml": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+    "sources/decoded-original/0023-FlgNet.xml": "868f9cce5f0759fac0fb4a1a23599fa166ffa29978b430c84d1b8cf03bb3d347",
+    "sources/decoded-original/0030-FlgNet.xml": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "sources/decoded-original/0055-IdentXmlPart.xml": "9baf3104be3c8a3457c3eea021f23fbd6a60c665e81a293bd7f2cae52c64be29",
+    "sources/decoded-original/0063-IdentXmlPart.xml": "9dceae18963ead11293cfc3a70c2eac077faa53ebd28e23bb4e84bc3278c5034",
+    "sources/decoded-original/0065-IdentXmlPart.xml": "c99a9960a364084a8e9f007803db72ebaf0ac0ea9126c1b0692da1e5337b33be",
+    "sources/decoded-original/0164-FlgNet.xml": "15884b2b362842279b626b669a484b1daa269f5ecd99112b8391bb0387382491",
+    "sources/decoded-original/0165-FlgNet.xml": "4513a5f6e77717c99c5e869105483be31f7f62ab280e271dc36cd7a2d3e3bb88",
+    "sources/decoded-original/0171-FlgNet.xml": "e3790f570398abfc8422245fe44bef6563b4c9144ba5debdaad3ce3fe752a4af",
+    "sources/decoded-original/0172-FlgNet.xml": "42dc8e20b3a4a819be3b750235ffe5b037b2b9915229af86999474ca82bc0609",
+    "sources/decoded-original/0173-FlgNet.xml": "b4f2002933f13ad38f8b8bc6daa3f3ef11a9181ea1c2f33f63ef7a3f7305dc07",
+    "sources/decoded-original/0174-FlgNet.xml": "23fb073206f95c69abc4373d3080081a369e4dd5021c2bd1a90d63029bb908d5",
+    "sources/decoded-original/0175-FlgNet.xml": "41279d6aaa157de3be963d010d6ca7dea94811a0ace519c8a3d8baa015f67f97",
+    "sources/decoded-original/0176-FlgNet.xml": "80a479c10365b5d5af6a592e09eda6fdbab66433658d69b0219043ac90a3be78",
+    "sources/decoded-original/0177-FlgNet.xml": "6661adf80ebeb53185a94c177c09880d0d473fe4c3f883ad8aea642e6c0c3c1f",
+    "sources/decoded-original/0178-FlgNet.xml": "36752e04a38e486ad4a0857d6baa8119d9b757678300358bcc95881f23e266c9",
+    "sources/decoded-original/0179-FlgNet.xml": "ee88a6ae9661830d363fcbada7542a9bf829daa7c8515b2335806020ee0b5279",
+    "sources/decoded-original/0181-FlgNet.xml": "98e839ee13a05db05768503e768e9238d892c4788dc7b6c9d3017fc86d3b722b",
+    "sources/decoded-original/0182-FlgNet.xml": "f11326ea7f915ce3d9347f72a4b314635e0943fc251db9a67694aedd3795dd0b",
+    "sources/decoded-original/0183-FlgNet.xml": "7f609f32b756215f62c2d9311d8471ecb4e44f7358d2cefcccff8c9fc5930e18",
+    "sources/decoded-original/0184-FlgNet.xml": "a0a59597c73eb68e1cbdb2f41d640eabccfd05655c4e9c08624be6027974caf3",
+    "sources/decoded-original/0185-FlgNet.xml": "2532fbe9602e3effc1f3992aaeb6749e93841072f0e4d797c4b7a369a849ab61",
+    "sources/decoded-original/0186-FlgNet.xml": "932f8756ee0e4385553944bd166109c45684766a136bfddd68cdf08552a83883",
+    "sources/decoded-original/0187-FlgNet.xml": "0d4e4dd53c729f48c4ad275eba51d89fab582958032f9eae6f722daff808e027",
+    "sources/decoded-original/0188-FlgNet.xml": "8a7aa3d5d5d26de589c1c386f20e1d28cb83244bbc78c5cee17671964bc1ac08",
+    "sources/decoded-original/0189-FlgNet.xml": "db78061a0a5a5568ea188ed6de4e7568c503411afbe811a5afea024a6f74dbbe",
+    "sources/decoded-original/0190-FlgNet.xml": "46722388ab7f69c14436e64051b0bb0c720ba1878b9652c4b859fdb4ddb0bf25",
+    "sources/decoded-original/0191-FlgNet.xml": "28f087b14ff3a0a0f5bcb20e212c41357ad36caf3c8308f8019f4b78d60eb7bd",
+    "sources/decoded-original/0192-FlgNet.xml": "874a8e7d6208c568027f4b03fb0e5e085be7e79b914db9dbef30a43d200ee1d2",
+    "sources/decoded-original/0193-FlgNet.xml": "2aa42ce6e35c90844bc07b302cd12815b20c0008ebf54e9961edf79078c7fd41",
+    "sources/decoded-original/0194-FlgNet.xml": "489de0d7673d1551b77ddf892ea74eee784ac6e5f5ea9860bd2fcaeb9b0c2851",
+    "sources/decoded-original/0195-FlgNet.xml": "fc40707c4c248625ff2a5ec39a7451e02ee2cd9670d41e0354021027d3cc5ea7",
+    "sources/decoded-original/0196-FlgNet.xml": "8dfab60a56115bbf67249db39505dc288e4da875314579c66f7e2f5f1702a274",
+    "sources/decoded-original/0197-FlgNet.xml": "61aedd67b7ec771ea30fe601d5e715c68e6fe5981060da8de7ce4719e5c66e4d",
+    "sources/decoded-original/0291-FlgNet.xml": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+    "sources/decoded-original/0345-FlgNet.xml": "b278a319d4d8cb8d157f449a2365445ff8f172245ebd2a468aa3ee79dba60f93",
+    "sources/decoded-original/0395-FlgNet.xml": "0572d7856681cd5c9fdd87562f1bcc1f04e5234f2505338c4a85a162a3de7fc1",
+    "sources/decoded-original/0397-FlgNet.xml": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+    "sources/decoded-original/0398-FlgNet.xml": "4f092b18df4e44af98fd44e173f48dad213a4e80b71f46b0a5e8a700f5b0a747",
+    "sources/decoded-original/0412-FlgNet.xml": "701771c268542416a0c75c9505f90f6d98dda0de15dd8953e66798fae6617377",
+    "sources/decoded-original/0416-FlgNet.xml": "1838d3c52dbc3319af0d7aabbb6477af9e862075b12a990412e6bd69a1d1cd0d",
+    "sources/decoded-original/0417-FlgNet.xml": "1b9c7e4adf52f72f896b3c93753c76869a5aa0f85a9b40c9b7d168f1ef14b7f8",
+    "sources/decoded-original/0467-FlgNet.xml": "126749547e09ee8f0584da5892a8c4025d85555c21bba40a4a5ad25e2a7591a8",
+    "sources/decoded-original/0468-FlgNet.xml": "4e29e6dd5cb60e64a7116f3f66bf51d8f476aa6cff6de3542689a50996c2015b",
+    "sources/decoded-original/0502-FlgNet.xml": "240607a037e36658b634c4df475d8819bd0211c75ad2dfc6b5d0fefde9042eda",
+    "sources/decoded-original/0503-FlgNet.xml": "449f8c0476e01ba5db80814f58301cce4d77d0e14be0f6e641b7edf3434626e2",
+    "sources/decoded-original/0504-FlgNet.xml": "d428b8c440d03f708f397daeb83f622f68b518a018522bed8736aec84c58fbdf",
+    "sources/decoded-original/0505-FlgNet.xml": "3cedabf3574cc158919501c3bd81afb9b6e00387dbb7e7d28abe3d0bad185c26",
+    "sources/decoded-original/0549-FlgNet.xml": "49f7169c33ed7f54559b0801e21a7d618584900972840e91cf51ad032e8febb1",
+    "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
+    "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
+    "sources/decoded-original/0578-IdentXmlPart.xml": "0f9f41b5dee25ea17c7a29ab6f7b00503c13d0f265266acd660072baf061d32b",
+    "sources/decoded-original/0582-IdentXmlPart.xml": "41d4c2bd750392bbc2edc43995ec3a9da47a63c13ee86496df8f187492008951",
+    "sources/decoded-original/0583-IdentXmlPart.xml": "0a34a2b7ad17eba6198dbe53d5c6aa8e87710c7436b832b9d39a075074ab58a8",
+    "sources/decoded-original/0584-IdentXmlPart.xml": "3bff6c478e594bf97bb1730971944e96b0b5e2407199420fe6567d5fe609ea5d",
+    "sources/decoded-original/0585-IdentXmlPart.xml": "e36ec18aa4abebea8f9160254522bb51ff722eae804c5a469790f85f02939184",
+    "sources/decoded-original/0586-IdentXmlPart.xml": "f16c4c68bde8a737372c219a10b21501653dfd3ba8c59bd84b60ae6d62da8250",
+    "sources/decoded-original/0588-IdentXmlPart.xml": "def5646a0d1eacaae81518f0952c4ba8ada5ea38852463a1d463ff439f3d1905",
+    "sources/decoded-original/0589-IdentXmlPart.xml": "846630f3832df93ccdcb0bf86a029546886f8cdba51cd952eed63257ee4540e2",
+    "sources/decoded-original/0590-IdentXmlPart.xml": "baff7271b3db646e8953c31d20b72f7b044b1154b689b15ca0fb38ebb44ad81c",
+    "sources/decoded-original/0591-IdentXmlPart.xml": "2e165c44fc9df852ea3729b3ddb33dc0a74e4f8826676f9c5c5626e1dce033f8",
+    "sources/decoded-original/0592-IdentXmlPart.xml": "d157e3d92df9e4a6ce46567b8611a51b0a10abf4dd7f9c4e613087b2df9583a8",
+    "sources/decoded-original/0593-IdentXmlPart.xml": "504568b5b50bb25a6880e9da724f79438fbb07e7a311a9391681143d713499e9",
+    "sources/decoded-original/0594-IdentXmlPart.xml": "88ad174a0d5ccdf636146b68e43aa578c449c77ceab074b7ced2580261b831cd",
+    "sources/decoded-original/0611-IdentXmlPart.xml": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+    "sources/decoded-original/0612-IdentXmlPart.xml": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+    "sources/decoded-original/0613-IdentXmlPart.xml": "09d3b1397a987898334218f37e025661af162438582e649f671e7abec443d3cb",
+    "sources/decoded-original/0614-IdentXmlPart.xml": "c6de26f74d75f5be858a406de75eaf6faf62ba9b89c8f9a085b5dd206e93d294",
+    "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
+    "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d",
+    "sources/decoded-original/0617-IdentXmlPart.xml": "10bcf85169cb2512f55acadaef299a3d46b4b4cecd88032d739cfeba23e94aa9",
+    "sources/decoded-original/0619-IdentXmlPart.xml": "85694bb5b696e31e6a1217431112e5b750516c4f94078d6e127d4394a8b80456",
+    "sources/decoded-original/0627-IdentXmlPart.xml": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "sources/decoded-original/0628-IdentXmlPart.xml": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "sources/decoded-original/0629-IdentXmlPart.xml": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "sources/decoded-original/0630-IdentXmlPart.xml": "1526a89b425470fa6e874bb4a9b6c7bc8e58b740f80d018b9106b6916f402372",
+    "sources/decoded-original/0631-IdentXmlPart.xml": "8e5072374f8ef098de72fbf93965b2a7bb0965c0f803e397daa68588c0c38555",
+    "sources/decoded-original/0632-IdentXmlPart.xml": "fd162c603476c2cac899010cee7a8ee382b6092c115135e3ac1007ae71c544e9",
+    "sources/decoded-original/0635-IdentXmlPart.xml": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457",
+    "sources/decoded-original/0636-IdentXmlPart.xml": "ec3d79f03e2748f8def4409ad676a97b98e28b9d8e68f6a64b3fe894466832ca",
+    "sources/decoded-original/0637-IdentXmlPart.xml": "3fb68f57dbe2a877c4ad5aa1b3316810cf84958f2d13b5b1d7d321e0915271c7",
+    "sources/decoded-original/0648-IdentXmlPart.xml": "afaa47ae737d9333fe831ffac2b1d1388f108bb6a2b23d03554fa862f7edb454",
+    "sources/decoded-original/0649-IdentXmlPart.xml": "38f59e654ecfbc2066fa1f8beeb9ced952adc405f8a4fcf3ef233e9d5d026576",
+    "sources/decoded-original/0650-IdentXmlPart.xml": "86f53657eb7afb0798da0e215ba226721076c2ab1b25b74eb83e7b3c4b2d8a2d",
+    "sources/decoded-original/0651-IdentXmlPart.xml": "549c09fb14ce6e9734a2ba604c78868647451f24d224ead0d17d209f66428111",
+    "sources/decoded-original/0652-IdentXmlPart.xml": "251bb1b3ce1bdf3686545062e5803152779de8a4961539d30e6951a2a10ab692",
+    "sources/decoded-original/0660-IdentXmlPart.xml": "0bf4f4c46531f55324602f4f7b1a1e0b9e63df2c6278126f6e5cf1bc9a06509f",
+    "sources/decoded-original/0661-IdentXmlPart.xml": "90672199fee355011f581d3287046894772f3f3b4cb78bbe0dd0d71bd488ac93",
+    "sources/decoded-original/0662-IdentXmlPart.xml": "1838040bfee800fdb3f13b126eaf69a9d178b17cecc0d59ae03e9185216a48a5",
+    "sources/decoded-original/0663-IdentXmlPart.xml": "d3980b88d3cd3e49854439d0778c58ed131bae46a6bc3e65ab70e81f766ac03d",
+    "sources/decoded-original/0664-IdentXmlPart.xml": "68c614e1c6a7fcadeee3f0b2ddc54910c3b337e66074d7a113b9cbc834c271ed",
+    "sources/decoded-original/0672-IdentXmlPart.xml": "6bfc2ba142d6270c39eb1f13b2886204865af6d46eadc5f410c26981b8da9222",
+    "sources/decoded-original/0673-IdentXmlPart.xml": "450ef74e2d2fb65dfbb5f6bad9e28ccacf6bf0caf64327a0e20aff84d6e40f58",
+    "sources/decoded-original/0674-IdentXmlPart.xml": "4770702f519bacda69202bb2f7733d983074bda90964360c238f990d9d08fd84",
+    "sources/decoded-original/0675-IdentXmlPart.xml": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+    "sources/decoded-original/0676-IdentXmlPart.xml": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+    "sources/decoded-original/0677-IdentXmlPart.xml": "69922fcc5c67d00cdf1c5f712efa3db7638d20c88318d35fe6196467796ab1e3",
+    "sources/decoded-original/0678-IdentXmlPart.xml": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+    "sources/decoded-original/0679-IdentXmlPart.xml": "d0fcb93e188c8ae2ae0c0423f0b78b129bf3c168e33a6855262d34b8682b9b56",
+    "sources/decoded-original/0680-IdentXmlPart.xml": "fd551ad5d47bbd66c6bcdcc1949aaddf68cc086a3ddf6fb337adc767954c2b95",
+    "sources/decoded-original/0690-IdentXmlPart.xml": "fcd6af9e8af48f9737d4764d7765d2eebdf95bd5e0c8e7b4faf6d1ed4eba1541",
+    "sources/decoded-original/0691-IdentXmlPart.xml": "17cb7d9734d76b39e729e0daf0c89d9bdf74907aab2130c80453fa04e4cea1da",
+    "sources/decoded-original/0692-IdentXmlPart.xml": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "sources/decoded-original/0693-IdentXmlPart.xml": "9315ddf43bdfbd7367ab0735a5bbfffcd81ced257d1907c1e2c08ae6b8bfa7ab",
+    "sources/decoded-original/0694-IdentXmlPart.xml": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "sources/live_index.json": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1"
+  },
+  "source_bundle_sha256": "867095ef93aa21bafcac7515fe39f16604baf5d6012f626e36a1ee34e0af99ab",
+  "preservation": {
+    "original_source_files": 712,
+    "raw_register_files": 89,
+    "existing_profile_content_unchanged": 14,
+    "common_record_and_compare_unchanged": true,
+    "all_other_drawing_forms_preserved": true,
+    "simulator_frozen_files": 5,
+    "source_locations": 1505,
+    "source_hashes": 131,
+    "source_bundle_sha256": "867095ef93aa21bafcac7515fe39f16604baf5d6012f626e36a1ee34e0af99ab"
+  },
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "screens": 312,
+    "matrix": [
+      {
+        "rows": [
+          {
+            "section": "overview",
+            "item": "identity",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "GME PLC·외부 버너반과 본체 관계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "baseline",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "보존 자료·개정과 근거 묶음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "boundary",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "확인 범위·불일치와 자료 대기",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "inputs",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "물리 입력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "outputs",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "물리 출력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "internal",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "내부·처리·기억 신호",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "hmi",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "HMI 보존 태그·주소",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:170",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:170 · Inputs.BR_01_RETRANSMISSION_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:171",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:171 · Inputs.BR_01_RETRANSMISSION_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:84",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:84 · Inputs.BR_01_MASSFLOWMETER_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:194",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:194 · Inputs.BR_01_MASSFLOWMETER_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1686:543",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1686:543 · BR01_AIR_SP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1706:46",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1706:46 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1854:149",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1854:149 · Rst allarm Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1861:292",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1861:292 · Programmed stop burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:579",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1865:579 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:588",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1865:588 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:607",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1866:607 · Enable start burner(1)",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:611",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1866:611 · Rem. Start/Stop Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1122",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1122 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1669",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1669 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1130",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1130 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1146",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1146 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1154",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1154 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1159",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1159 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1179",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1179 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1188",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1188 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1220",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1220 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1240",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1240 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1251",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1251 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1267",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1267 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1281",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1281 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1289",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1289 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1300",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1300 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1306",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1306 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1309",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1309 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1318",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1318 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1334",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1334 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1342",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1342 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1354",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1354 · Start Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1358",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1358 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1363",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1363 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "regulation",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "기동허가·세척State·Reset·고화염·조절/전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-0",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 ON",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-1",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 LOCKOUT",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-2",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 IN MODULATION",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-3",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-4",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-5",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-6",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-7",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "고화염 가스 밸브 삽입 응답",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-8",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "원격 START/STOP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-9",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "최대 필터 온도 인터록",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-10",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 알람 리셋",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-11",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "고화염 기동 요청",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-12",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "강제 점화 전환 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-13",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-14",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-15",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-16",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-17",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 유량 FIT2001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-18",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 유량 FIT3001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-0",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.BURNER_LDU_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-1",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.SERVOMOTOR_MIN_POS_ALL · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-2",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.BURNER_START_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-3",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.BURNER_TIME_LIMIT_22H · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "timer",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "LDU6/2/2초·1분·고화염50ms/8초·전환4초·세척4분/1초/30초",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "related",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "Sechio20초·OFR·START Set미확보·세척/외부 보호 경계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "request",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "운전 요청이 없거나 곧 해제됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "permit",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "요청은 있지만 최종 출력이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "response",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "출력은 있지만 현장 응답이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "stop",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "운전 중 정지하거나 연관 설비와 함께 정지함",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "recovery",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "리셋 후 재기동되지 않거나 같은 알람이 반복됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "document",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "문서·원본 연결과 부족 자료",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "cpu",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "현재 PLC·HMI 대응",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "field",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "010-390 전용반·실물화염/밸브·시공BR01F중복",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "recovery",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "조치·원인 해소·재요청/실제 복구",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "excluded",
+            "text": "standard",
+            "width": 1280,
+            "height": 844,
+            "title": "중지·제외 범위",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "identity",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "GME PLC·외부 버너반과 본체 관계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "baseline",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "보존 자료·개정과 근거 묶음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "boundary",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "확인 범위·불일치와 자료 대기",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "inputs",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "물리 입력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "outputs",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "물리 출력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "internal",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "내부·처리·기억 신호",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "hmi",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "HMI 보존 태그·주소",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:170",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:170 · Inputs.BR_01_RETRANSMISSION_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:171",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:171 · Inputs.BR_01_RETRANSMISSION_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:84",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:84 · Inputs.BR_01_MASSFLOWMETER_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:194",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1071:194 · Inputs.BR_01_MASSFLOWMETER_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1686:543",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1686:543 · BR01_AIR_SP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1706:46",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1706:46 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1854:149",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1854:149 · Rst allarm Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1861:292",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1861:292 · Programmed stop burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:579",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1865:579 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:588",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1865:588 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:607",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1866:607 · Enable start burner(1)",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:611",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1866:611 · Rem. Start/Stop Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1122",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1122 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1669",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1669 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1130",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1130 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1146",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1146 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1154",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1154 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1159",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1159 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1179",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1179 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1188",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1188 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1220",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1220 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1240",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1240 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1251",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1251 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1267",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1267 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1281",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1281 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1289",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1289 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1300",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1300 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1306",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1306 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1309",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1309 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1318",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1318 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1334",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1334 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1342",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1342 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1354",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1354 · Start Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1358",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1358 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1363",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "1868:1363 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "regulation",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "기동허가·세척State·Reset·고화염·조절/전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-0",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 ON",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-1",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 LOCKOUT",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-2",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 IN MODULATION",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-3",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-4",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-5",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-6",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-7",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "고화염 가스 밸브 삽입 응답",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-8",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "원격 START/STOP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-9",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "최대 필터 온도 인터록",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-10",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "버너 알람 리셋",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-11",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "고화염 기동 요청",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-12",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "강제 점화 전환 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-13",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-14",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-15",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-16",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-17",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "가스 유량 FIT2001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-18",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "공기 유량 FIT3001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-0",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.BURNER_LDU_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-1",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.SERVOMOTOR_MIN_POS_ALL · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-2",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.BURNER_START_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-3",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "Allarm.BURNER_TIME_LIMIT_22H · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "timer",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "LDU6/2/2초·1분·고화염50ms/8초·전환4초·세척4분/1초/30초",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "related",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "Sechio20초·OFR·START Set미확보·세척/외부 보호 경계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "request",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "운전 요청이 없거나 곧 해제됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "permit",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "요청은 있지만 최종 출력이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "response",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "출력은 있지만 현장 응답이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "stop",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "운전 중 정지하거나 연관 설비와 함께 정지함",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "recovery",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "리셋 후 재기동되지 않거나 같은 알람이 반복됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "document",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "문서·원본 연결과 부족 자료",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "cpu",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "현재 PLC·HMI 대응",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "field",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "010-390 전용반·실물화염/밸브·시공BR01F중복",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "recovery",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "조치·원인 해소·재요청/실제 복구",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "excluded",
+            "text": "large",
+            "width": 1280,
+            "height": 844,
+            "title": "중지·제외 범위",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          }
+        ],
+        "failures": []
+      },
+      {
+        "rows": [
+          {
+            "section": "overview",
+            "item": "identity",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "GME PLC·외부 버너반과 본체 관계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "baseline",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "보존 자료·개정과 근거 묶음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "boundary",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "확인 범위·불일치와 자료 대기",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "inputs",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "물리 입력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "outputs",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "물리 출력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "internal",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "내부·처리·기억 신호",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "hmi",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "HMI 보존 태그·주소",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:170",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1071:170 · Inputs.BR_01_RETRANSMISSION_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:171",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1071:171 · Inputs.BR_01_RETRANSMISSION_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:84",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1071:84 · Inputs.BR_01_MASSFLOWMETER_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:194",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1071:194 · Inputs.BR_01_MASSFLOWMETER_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1686:543",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1686:543 · BR01_AIR_SP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1706:46",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1706:46 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1854:149",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1854:149 · Rst allarm Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1861:292",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1861:292 · Programmed stop burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:579",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1865:579 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:588",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1865:588 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:607",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1866:607 · Enable start burner(1)",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:611",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1866:611 · Rem. Start/Stop Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1122",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1122 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1669",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1669 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1130",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1130 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1146",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1146 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1154",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1154 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1159",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1159 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1179",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1179 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1188",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1188 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1220",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1220 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1240",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1240 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1251",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1251 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1267",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1267 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1281",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1281 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1289",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1289 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1300",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1300 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1306",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1306 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1309",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1309 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1318",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1318 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1334",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1334 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1342",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1342 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1354",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1354 · Start Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1358",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1358 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1363",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1363 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "regulation",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "기동허가·세척State·Reset·고화염·조절/전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-0",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "버너 ON",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-1",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "버너 LOCKOUT",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-2",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "버너 IN MODULATION",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-3",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "가스 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-4",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "가스 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-5",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "공기 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-6",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "공기 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-7",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "고화염 가스 밸브 삽입 응답",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-8",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "원격 START/STOP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-9",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "최대 필터 온도 인터록",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-10",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "버너 알람 리셋",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-11",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "고화염 기동 요청",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-12",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "강제 점화 전환 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-13",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "가스 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-14",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "가스 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-15",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "공기 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-16",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "공기 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-17",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "가스 유량 FIT2001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-18",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "공기 유량 FIT3001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-0",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.BURNER_LDU_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-1",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.SERVOMOTOR_MIN_POS_ALL · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-2",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.BURNER_START_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-3",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.BURNER_TIME_LIMIT_22H · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "timer",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "LDU6/2/2초·1분·고화염50ms/8초·전환4초·세척4분/1초/30초",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "related",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "Sechio20초·OFR·START Set미확보·세척/외부 보호 경계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "request",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "운전 요청이 없거나 곧 해제됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "permit",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "요청은 있지만 최종 출력이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "response",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "출력은 있지만 현장 응답이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "stop",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "운전 중 정지하거나 연관 설비와 함께 정지함",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "recovery",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "리셋 후 재기동되지 않거나 같은 알람이 반복됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "document",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "문서·원본 연결과 부족 자료",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "cpu",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "현재 PLC·HMI 대응",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "field",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "010-390 전용반·실물화염/밸브·시공BR01F중복",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "recovery",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "조치·원인 해소·재요청/실제 복구",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "excluded",
+            "text": "standard",
+            "width": 390,
+            "height": 844,
+            "title": "중지·제외 범위",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "identity",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "GME PLC·외부 버너반과 본체 관계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "baseline",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "보존 자료·개정과 근거 묶음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "overview",
+            "item": "boundary",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "확인 범위·불일치와 자료 대기",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "inputs",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "물리 입력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "outputs",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "물리 출력",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "internal",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "내부·처리·기억 신호",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "io",
+            "item": "hmi",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "HMI 보존 태그·주소",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:170",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1071:170 · Inputs.BR_01_RETRANSMISSION_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:171",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1071:171 · Inputs.BR_01_RETRANSMISSION_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:84",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1071:84 · Inputs.BR_01_MASSFLOWMETER_GAS",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1071:194",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1071:194 · Inputs.BR_01_MASSFLOWMETER_AIR",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1686:543",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1686:543 · BR01_AIR_SP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1706:46",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1706:46 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1854:149",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1854:149 · Rst allarm Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1861:292",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1861:292 · Programmed stop burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:579",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1865:579 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1865:588",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1865:588 · Lock Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:607",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1866:607 · Enable start burner(1)",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1866:611",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1866:611 · Rem. Start/Stop Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1122",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1122 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1669",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1669 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1130",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1130 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1146",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1146 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1154",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1154 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1159",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1159 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1179",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1179 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1188",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1188 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1220",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1220 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1240",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1240 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1251",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1251 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1267",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1267 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1281",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1281 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1289",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1289 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1300",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1300 · Enable start burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1306",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1306 · Close MV03 for Burner Startup",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1309",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1309 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1318",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1318 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1334",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1334 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1342",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1342 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1354",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1354 · Start Burner",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1358",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1358 · WorkData.BR01_State",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "rule-1868:1363",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "1868:1363 · WorkData.BR01_CleanTime",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "control",
+            "item": "regulation",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "기동허가·세척State·Reset·고화염·조절/전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-0",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "버너 ON",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-1",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "버너 LOCKOUT",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-2",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "버너 IN MODULATION",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-3",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "가스 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-4",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "가스 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-5",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "공기 최소 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG97.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-6",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "공기 최대 압력 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-7",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "고화염 가스 밸브 삽입 응답",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG98.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-8",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "원격 START/STOP",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-9",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "최대 필터 온도 인터록",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-10",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "버너 알람 리셋",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-11",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "고화염 기동 요청",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-12",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "강제 점화 전환 접점",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG99.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-13",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "가스 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-14",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "가스 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-15",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "공기 서보 위치 전달",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-16",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "공기 서보 설정",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-17",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "가스 유량 FIT2001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "circuits",
+            "item": "path-18",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "공기 유량 FIT3001",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [
+              {
+                "src": "assets/circuits/FG100.png",
+                "complete": true,
+                "natural": 3200
+              }
+            ],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-0",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.BURNER_LDU_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-1",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.SERVOMOTOR_MIN_POS_ALL · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-2",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.BURNER_START_FAULT · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "alarm-3",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "Allarm.BURNER_TIME_LIMIT_22H · 발생/해제",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "timer",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "LDU6/2/2초·1분·고화염50ms/8초·전환4초·세척4분/1초/30초",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "alarms",
+            "item": "related",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "Sechio20초·OFR·START Set미확보·세척/외부 보호 경계",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "request",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "운전 요청이 없거나 곧 해제됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "permit",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "요청은 있지만 최종 출력이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "response",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "출력은 있지만 현장 응답이 없음",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "stop",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "운전 중 정지하거나 연관 설비와 함께 정지함",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "repair",
+            "item": "recovery",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "리셋 후 재기동되지 않거나 같은 알람이 반복됨",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "document",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "문서·원본 연결과 부족 자료",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "cpu",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "현재 PLC·HMI 대응",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "field",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "010-390 전용반·실물화염/밸브·시공BR01F중복",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "recovery",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "조치·원인 해소·재요청/실제 복구",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          },
+          {
+            "section": "completion",
+            "item": "excluded",
+            "text": "large",
+            "width": 390,
+            "height": 844,
+            "title": "중지·제외 범위",
+            "selected": "true",
+            "overflow": -12,
+            "contentOverflow": 0,
+            "images": [],
+            "undefined": false
+          }
+        ],
+        "failures": []
+      }
+    ],
+    "source_pairs": [
+      {
+        "rows": [
+          {
+            "index": 0,
+            "width": 1280,
+            "signal": "버너 ON",
+            "selected": "networks/network-1868.html#gme-mv03-part-1660",
+            "expected": "networks/network-1868.html#gme-mv03-part-1660",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1868.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 1,
+            "width": 1280,
+            "signal": "버너 LOCKOUT",
+            "selected": "networks/network-1854.html#gme-br01-part-221",
+            "expected": "networks/network-1854.html#gme-br01-part-221",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1854.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 2,
+            "width": 1280,
+            "signal": "버너 IN MODULATION",
+            "selected": "networks/network-1862.html#gme-br01-part-553",
+            "expected": "networks/network-1862.html#gme-br01-part-553",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1862.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 3,
+            "width": 1280,
+            "signal": "가스 최소 압력 접점",
+            "selected": "networks/network-1855.html#gme-br01-part-240",
+            "expected": "networks/network-1855.html#gme-br01-part-240",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1855.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 4,
+            "width": 1280,
+            "signal": "가스 최대 압력 접점",
+            "selected": "networks/network-1070.html#gme-rd01-wire-77",
+            "expected": "networks/network-1070.html#gme-rd01-wire-77",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1070.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 5,
+            "width": 1280,
+            "signal": "공기 최소 압력 접점",
+            "selected": "networks/network-1855.html#gme-br01-part-242",
+            "expected": "networks/network-1855.html#gme-br01-part-242",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1855.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 6,
+            "width": 1280,
+            "signal": "공기 최대 압력 접점",
+            "selected": "networks/network-1070.html#gme-rd01-wire-77",
+            "expected": "networks/network-1070.html#gme-rd01-wire-77",
+            "image": "assets/circuits/FG98.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=99",
+            "frame": "http://127.0.0.1:8877/networks/network-1070.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 7,
+            "width": 1280,
+            "signal": "고화염 가스 밸브 삽입 응답",
+            "selected": "networks/network-1870.html#gme-br01-part-1230",
+            "expected": "networks/network-1870.html#gme-br01-part-1230",
+            "image": "assets/circuits/FG98.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=99",
+            "frame": "http://127.0.0.1:8877/networks/network-1870.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 8,
+            "width": 1280,
+            "signal": "원격 START/STOP",
+            "selected": "networks/network-1866.html#gme-fn03-part-611",
+            "expected": "networks/network-1866.html#gme-fn03-part-611",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1866.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 9,
+            "width": 1280,
+            "signal": "최대 필터 온도 인터록",
+            "selected": "networks/network-1856.html#gme-br01-part-150",
+            "expected": "networks/network-1856.html#gme-br01-part-150",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1856.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 10,
+            "width": 1280,
+            "signal": "버너 알람 리셋",
+            "selected": "networks/network-1854.html#gme-br01-part-149",
+            "expected": "networks/network-1854.html#gme-br01-part-149",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1854.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 11,
+            "width": 1280,
+            "signal": "고화염 기동 요청",
+            "selected": "networks/network-1862.html#gme-br01-part-470",
+            "expected": "networks/network-1862.html#gme-br01-part-470",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1862.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 12,
+            "width": 1280,
+            "signal": "강제 점화 전환 접점",
+            "selected": "networks/network-1863.html#gme-br01-part-477",
+            "expected": "networks/network-1863.html#gme-br01-part-477",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1863.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 13,
+            "width": 1280,
+            "signal": "가스 서보 위치 전달",
+            "selected": "networks/network-1752.html#gme-br01-wire-610",
+            "expected": "networks/network-1752.html#gme-br01-wire-610",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1752.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 14,
+            "width": 1280,
+            "signal": "가스 서보 설정",
+            "selected": "networks/network-1687.html#gme-br01-wire-624",
+            "expected": "networks/network-1687.html#gme-br01-wire-624",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1687.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 15,
+            "width": 1280,
+            "signal": "공기 서보 위치 전달",
+            "selected": "networks/network-1753.html#gme-br01-wire-630",
+            "expected": "networks/network-1753.html#gme-br01-wire-630",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1753.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 16,
+            "width": 1280,
+            "signal": "공기 서보 설정",
+            "selected": "networks/network-1686.html#gme-br01-wire-580",
+            "expected": "networks/network-1686.html#gme-br01-wire-580",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1686.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 17,
+            "width": 1280,
+            "signal": "가스 유량 FIT2001",
+            "selected": "networks/network-1754.html#gme-br01-wire-686",
+            "expected": "networks/network-1754.html#gme-br01-wire-686",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1754.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 18,
+            "width": 1280,
+            "signal": "공기 유량 FIT3001",
+            "selected": "networks/network-1755.html#gme-br01-wire-691",
+            "expected": "networks/network-1755.html#gme-br01-wire-691",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1755.html",
+            "highlight": true,
+            "overflow": -12
+          }
+        ],
+        "failures": []
+      },
+      {
+        "rows": [
+          {
+            "index": 0,
+            "width": 390,
+            "signal": "버너 ON",
+            "selected": "networks/network-1868.html#gme-mv03-part-1660",
+            "expected": "networks/network-1868.html#gme-mv03-part-1660",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1868.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 1,
+            "width": 390,
+            "signal": "버너 LOCKOUT",
+            "selected": "networks/network-1854.html#gme-br01-part-221",
+            "expected": "networks/network-1854.html#gme-br01-part-221",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1854.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 2,
+            "width": 390,
+            "signal": "버너 IN MODULATION",
+            "selected": "networks/network-1862.html#gme-br01-part-553",
+            "expected": "networks/network-1862.html#gme-br01-part-553",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1862.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 3,
+            "width": 390,
+            "signal": "가스 최소 압력 접점",
+            "selected": "networks/network-1855.html#gme-br01-part-240",
+            "expected": "networks/network-1855.html#gme-br01-part-240",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1855.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 4,
+            "width": 390,
+            "signal": "가스 최대 압력 접점",
+            "selected": "networks/network-1070.html#gme-rd01-wire-77",
+            "expected": "networks/network-1070.html#gme-rd01-wire-77",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1070.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 5,
+            "width": 390,
+            "signal": "공기 최소 압력 접점",
+            "selected": "networks/network-1855.html#gme-br01-part-242",
+            "expected": "networks/network-1855.html#gme-br01-part-242",
+            "image": "assets/circuits/FG97.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=98",
+            "frame": "http://127.0.0.1:8877/networks/network-1855.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 6,
+            "width": 390,
+            "signal": "공기 최대 압력 접점",
+            "selected": "networks/network-1070.html#gme-rd01-wire-77",
+            "expected": "networks/network-1070.html#gme-rd01-wire-77",
+            "image": "assets/circuits/FG98.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=99",
+            "frame": "http://127.0.0.1:8877/networks/network-1070.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 7,
+            "width": 390,
+            "signal": "고화염 가스 밸브 삽입 응답",
+            "selected": "networks/network-1870.html#gme-br01-part-1230",
+            "expected": "networks/network-1870.html#gme-br01-part-1230",
+            "image": "assets/circuits/FG98.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=99",
+            "frame": "http://127.0.0.1:8877/networks/network-1870.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 8,
+            "width": 390,
+            "signal": "원격 START/STOP",
+            "selected": "networks/network-1866.html#gme-fn03-part-611",
+            "expected": "networks/network-1866.html#gme-fn03-part-611",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1866.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 9,
+            "width": 390,
+            "signal": "최대 필터 온도 인터록",
+            "selected": "networks/network-1856.html#gme-br01-part-150",
+            "expected": "networks/network-1856.html#gme-br01-part-150",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1856.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 10,
+            "width": 390,
+            "signal": "버너 알람 리셋",
+            "selected": "networks/network-1854.html#gme-br01-part-149",
+            "expected": "networks/network-1854.html#gme-br01-part-149",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1854.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 11,
+            "width": 390,
+            "signal": "고화염 기동 요청",
+            "selected": "networks/network-1862.html#gme-br01-part-470",
+            "expected": "networks/network-1862.html#gme-br01-part-470",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1862.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 12,
+            "width": 390,
+            "signal": "강제 점화 전환 접점",
+            "selected": "networks/network-1863.html#gme-br01-part-477",
+            "expected": "networks/network-1863.html#gme-br01-part-477",
+            "image": "assets/circuits/FG99.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=100",
+            "frame": "http://127.0.0.1:8877/networks/network-1863.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 13,
+            "width": 390,
+            "signal": "가스 서보 위치 전달",
+            "selected": "networks/network-1752.html#gme-br01-wire-610",
+            "expected": "networks/network-1752.html#gme-br01-wire-610",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1752.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 14,
+            "width": 390,
+            "signal": "가스 서보 설정",
+            "selected": "networks/network-1687.html#gme-br01-wire-624",
+            "expected": "networks/network-1687.html#gme-br01-wire-624",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1687.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 15,
+            "width": 390,
+            "signal": "공기 서보 위치 전달",
+            "selected": "networks/network-1753.html#gme-br01-wire-630",
+            "expected": "networks/network-1753.html#gme-br01-wire-630",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1753.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 16,
+            "width": 390,
+            "signal": "공기 서보 설정",
+            "selected": "networks/network-1686.html#gme-br01-wire-580",
+            "expected": "networks/network-1686.html#gme-br01-wire-580",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1686.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 17,
+            "width": 390,
+            "signal": "가스 유량 FIT2001",
+            "selected": "networks/network-1754.html#gme-br01-wire-686",
+            "expected": "networks/network-1754.html#gme-br01-wire-686",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1754.html",
+            "highlight": true,
+            "overflow": -12
+          },
+          {
+            "index": 18,
+            "width": 390,
+            "signal": "공기 유량 FIT3001",
+            "selected": "networks/network-1755.html#gme-br01-wire-691",
+            "expected": "networks/network-1755.html#gme-br01-wire-691",
+            "image": "assets/circuits/FG100.png",
+            "natural": 3200,
+            "complete": true,
+            "pdf": "sources/Electrical_Rev2.pdf#page=101",
+            "frame": "http://127.0.0.1:8877/networks/network-1755.html",
+            "highlight": true,
+            "overflow": -12
+          }
+        ],
+        "failures": []
+      }
+    ],
+    "search": [
+      {
+        "payloadImages": 0,
+        "query": "PQW308",
+        "resultText": "2개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "PQW310",
+        "resultText": "2개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "IW360",
+        "resultText": "3개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "PIW360",
+        "resultText": "1개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "State77",
+        "resultText": "1개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "5/9",
+        "resultText": "1개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "S5T#4S",
+        "resultText": "3개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "3sec",
+        "resultText": "1개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "50MS",
+        "resultText": "3개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "Sechio",
+        "resultText": "2개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "BR01F",
+        "resultText": "3개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "<img src=x onerror=alert(1)>",
+        "resultText": "0개 일치 항목"
+      }
+    ],
+    "alarm_guide": [
+      {
+        "width": 1280,
+        "frameWidth": 925,
+        "overflow": 0,
+        "title": "BR01 · 버너 외부 인터페이스 알람 근거",
+        "heading": "BR01 · GME 요청과 외부 버너반 알람 근거",
+        "style": "http://127.0.0.1:8877/assets/all-in-one.css",
+        "styleLoaded": 2
+      },
+      {
+        "width": 390,
+        "frameWidth": 333,
+        "overflow": 0,
+        "title": "BR01 · 버너 외부 인터페이스 알람 근거",
+        "styleLoaded": 2
+      }
+    ],
+    "bad_route": {
+      "large": false,
+      "selected": "overview",
+      "title": "GME PLC·외부 버너반과 본체 관계",
+      "wide": false
+    },
+    "wide_body": true,
+    "saved_reopened": true,
+    "notes_before_restore": 3,
+    "notes_after_restore": 4,
+    "existing_records_equal": true,
+    "foreign_records_preserved": 2,
+    "unknown_fields_and_signals_preserved": true,
+    "drafts_preserved": true,
+    "zero_blank_distinct": true,
+    "comparison_differences": 2,
+    "actual_download": {
+      "bytes": 73018,
+      "notes": 3,
+      "contents_by_id_equal": true
+    },
+    "report_print": {
+      "count": 1,
+      "printing": true,
+      "record": "qa-br01-restored"
+    },
+    "pdf": {
+      "bytes": 408138,
+      "sha256": "f4b436c5244168773532ff6e16dc8570689ef2ba0710269b457697b96019b71a",
+      "pages": [
+        {
+          "page": 1,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "text_length": 953,
+          "image": "a4-1.png"
+        },
+        {
+          "page": 2,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "text_length": 1380,
+          "image": "a4-2.png"
+        },
+        {
+          "page": 3,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "text_length": 191,
+          "image": "a4-3.png"
+        }
+      ],
+      "all_pages_visually_reviewed": true
+    },
+    "cleanup": {
+      "drafts": null,
+      "notes": null,
+      "printPatch": "undefined",
+      "printing": false,
+      "logs": []
+    }
+  },
+  "common_conflict_quota_stale_report": "passed_at_unchanged_MV06_batch_checkpoint; not repeated because common record code unchanged",
+  "corrections": [
+    "FG99 99KA1-4 actual5/9 vs raw1/9;KA5 both1/5/9 preserved",
+    "MOD5 actual PIW360/362/364/366 and MOD8 PQW308/310 endpoint originals added",
+    "NIDs independently bound by original declaration UID/RID; mistaken initial helper sequence corrected",
+    "same MV03Close !Close28 and Close1670 not normalized",
+    "IW360 SAM=None word access separate from PIW360 Peripherie",
+    "T1224s vs OEM3sec unchanged",
+    "12 CONT_C RefId absent and HMI4 unbound preserved"
+  ],
+  "qa_test_fixture_correction": "foreign synthetic repair equipment mismatch initially blocked backup; corrected from valid P06/P03 records before successful download",
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "operational_record_writes": 0,
+  "PLC_field_SEJIN_changes": 0,
+  "next": "CC01/P10 independent review; BATCH01 final shared package/publish once"
+}

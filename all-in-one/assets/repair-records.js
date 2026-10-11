@@ -66,8 +66,8 @@
   }
   function summary(record){
     return fields.filter(([key])=>record[key] && (!Array.isArray(record[key]) || record[key].length)).map(([key,label])=>label+'：'+(Array.isArray(record[key])?record[key].join('\n'):record[key])).concat(
-      record.observations.filter(s=>s.value||s.observed_at||s.evidence).map(s=>s.name+'：'+(s.value||'미기록')+' / '+(s.observed_at||'시각 미기록')+' / '+(s.evidence||'근거 미기록')),
-      record.decision_observations.filter(s=>s.observation).map(s=>s.title+'：'+s.observation)).join('\n\n');
+      record.observations.filter(s=>s.value||s.observed_at||s.evidence).map(s=>(s.name||s.id)+'：'+(s.value||'미기록')+' / '+(s.observed_at||'시각 미기록')+' / '+(s.evidence||'근거 미기록')),
+      record.decision_observations.filter(s=>s.observation).map(s=>(s.title||s.id)+'：'+s.observation)).join('\n\n');
   }
   function render(schema,draft,own){
     const zone=draft.time_zone||Intl.DateTimeFormat().resolvedOptions().timeZone;

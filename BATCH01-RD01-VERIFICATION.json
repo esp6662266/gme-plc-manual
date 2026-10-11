@@ -1,0 +1,443 @@
+{
+  "target": "RD01/P06",
+  "batch": "BATCH01",
+  "application_version": "1.16.0",
+  "baseline_commit": "17968e45701aad917714a493e3022cc64b1ee876",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "package": "pending_batch01",
+  "publication": "pending_batch01",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "native_xml_files_reviewed": 28,
+  "pdf_original_pages_visually_reviewed": 15,
+  "draft_fixed_hashes_matched": 91,
+  "source_locations": 756,
+  "source_hashes": {
+    "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+    "registers/construction-reference.json": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+    "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+    "registers/hmi-transfer.json": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+    "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+    "registers/regulation-manual.json": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+    "registers/requirements-audit.json": "2c0ad009f32d79b8b74a8611908c659e3d8f2d329f3113b5fedc6abf58a0288f",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+    "registers/vendor-reference-review.json": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/decoded-original/0014-FlgNet.xml": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+    "sources/decoded-original/0030-FlgNet.xml": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "sources/decoded-original/0058-IdentXmlPart.xml": "84db55242df6a85df73776bfd23bf16cc10e4da35fedca4942f4a43bc4cd1702",
+    "sources/decoded-original/0059-IdentXmlPart.xml": "f02ef8f08f1c7ca7625bdbcf90a2c9365f12654d19e2e526fe8e5b0b742263d0",
+    "sources/decoded-original/0063-IdentXmlPart.xml": "9dceae18963ead11293cfc3a70c2eac077faa53ebd28e23bb4e84bc3278c5034",
+    "sources/decoded-original/0164-FlgNet.xml": "15884b2b362842279b626b669a484b1daa269f5ecd99112b8391bb0387382491",
+    "sources/decoded-original/0165-FlgNet.xml": "4513a5f6e77717c99c5e869105483be31f7f62ab280e271dc36cd7a2d3e3bb88",
+    "sources/decoded-original/0166-FlgNet.xml": "0330a505877be92172f94bce83222a0bfc8d64aab700a69fc1fa2188010d3853",
+    "sources/decoded-original/0174-FlgNet.xml": "23fb073206f95c69abc4373d3080081a369e4dd5021c2bd1a90d63029bb908d5",
+    "sources/decoded-original/0238-FlgNet.xml": "8f6a5537084e092c352552dc469bbe8469b33412971219e51bba211ef607dfa8",
+    "sources/decoded-original/0239-FlgNet.xml": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599",
+    "sources/decoded-original/0240-FlgNet.xml": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33",
+    "sources/decoded-original/0241-FlgNet.xml": "d421ef5ba9bdcd5aff218c47b1a5ab4663a23b6a0de9fdaa8b2a5dccc3cf15bd",
+    "sources/decoded-original/0243-FlgNet.xml": "4b3a77029b4d5901ff40f260d54189748e7697bb6077fca502165fa7cd5ea3b5",
+    "sources/decoded-original/0244-FlgNet.xml": "6df4651ea703181e0355fd70339bc3854bd5ef79826eaf3738c6d0acf1d0488f",
+    "sources/decoded-original/0245-FlgNet.xml": "c89543f2a25028652f425fc8979bae3cde56cdcf8022b81beaadd49ab568abb6",
+    "sources/decoded-original/0257-FlgNet.xml": "43434bcdfb9edb02b979fdc5096fea94636708d316a58dc342719e3b28d194da",
+    "sources/decoded-original/0275-FlgNet.xml": "93aa2434583d4cf44f3b69f03db5717f38ac1da8f07b9e4b166c56daca8c3b74",
+    "sources/decoded-original/0291-FlgNet.xml": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+    "sources/decoded-original/0309-FlgNet.xml": "a7f64a579271b0591d4d5c598221572384dce6eaac4587629447e4ad0f890180",
+    "sources/decoded-original/0310-FlgNet.xml": "c9f5daacd865ba3757ba2621250c8240659c98dc30d38c012ca72e608b613e5f",
+    "sources/decoded-original/0336-FlgNet.xml": "1be4f76dba11e6cceea057743c8b15b8a4bea4edfe87c19ef0581d7b65ffe56a",
+    "sources/decoded-original/0358-FlgNet.xml": "88fe3906653438753a9cefc82b7b1b2751a5d28027ebc778990d81f6a70b4daf",
+    "sources/decoded-original/0359-FlgNet.xml": "eb4aae8bb8ef4e805f42c7ba320ad5f2f1b0a442c1f949a5ef161e4dcc1e1dec",
+    "sources/decoded-original/0396-FlgNet.xml": "d8b31e69c920b6ab31c66318461d49cc227f8149b7f3589f8043664bcfe30142",
+    "sources/decoded-original/0397-FlgNet.xml": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+    "sources/decoded-original/0398-FlgNet.xml": "4f092b18df4e44af98fd44e173f48dad213a4e80b71f46b0a5e8a700f5b0a747",
+    "sources/decoded-original/0402-FlgNet.xml": "808c38e8d0c1849acea83d5ba6641df3af093ba5870932fb41243fc4ed907e86",
+    "sources/decoded-original/0424-FlgNet.xml": "645803f1cc7055adb3996e23788d6648330c992131dc34213c545d2fba184158",
+    "sources/decoded-original/0425-FlgNet.xml": "9db302ef56730d0219869c9a9e1a38d0a8d0378a1f84cb94472f0f453ca0401c",
+    "sources/decoded-original/0465-FlgNet.xml": "6f48f2b9fc031e4dcef47cff8c9b56e2fbe67fd1802aac999b95836dd9a7458a",
+    "sources/decoded-original/0519-FlgNet.xml": "94c35aac42f54a7b8e4bcb8b8c88d59118e003f483cc49fb447854c682508fa9",
+    "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
+    "sources/decoded-original/0576-IdentXmlPart.xml": "c8b5f9b9ead0e124f1f817b49d89611ed7b2ce04ecd91ddaa139f2ec89d48dbe",
+    "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
+    "sources/decoded-original/0578-IdentXmlPart.xml": "0f9f41b5dee25ea17c7a29ab6f7b00503c13d0f265266acd660072baf061d32b",
+    "sources/decoded-original/0582-IdentXmlPart.xml": "41d4c2bd750392bbc2edc43995ec3a9da47a63c13ee86496df8f187492008951",
+    "sources/decoded-original/0585-IdentXmlPart.xml": "e36ec18aa4abebea8f9160254522bb51ff722eae804c5a469790f85f02939184",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0603-IdentXmlPart.xml": "e93969dfa281d75b49b24127793068e33472dadb19729c1c48fc4a8dad075ef8",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0605-IdentXmlPart.xml": "0ff6e2228dbfbc9f657359fe1055083ce621365084ea24c4160e4969b3eaac8b",
+    "sources/decoded-original/0606-IdentXmlPart.xml": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740",
+    "sources/decoded-original/0611-IdentXmlPart.xml": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+    "sources/decoded-original/0612-IdentXmlPart.xml": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+    "sources/decoded-original/0613-IdentXmlPart.xml": "09d3b1397a987898334218f37e025661af162438582e649f671e7abec443d3cb",
+    "sources/decoded-original/0614-IdentXmlPart.xml": "c6de26f74d75f5be858a406de75eaf6faf62ba9b89c8f9a085b5dd206e93d294",
+    "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
+    "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d",
+    "sources/decoded-original/0623-IdentXmlPart.xml": "4acd00406ea92466169e57e59fc90b0da4d9ec55fd19e2e96c9556e939cb83a6",
+    "sources/decoded-original/0624-IdentXmlPart.xml": "24607c0827fbde428bccf8637ef4ae490798a69a7c2f3b87861d0749082d367a",
+    "sources/decoded-original/0625-IdentXmlPart.xml": "17a9f9bd540bf0a54e9973391fa258d81e567248fd201ae4ff32c367359e69f9",
+    "sources/decoded-original/0626-IdentXmlPart.xml": "a9d7fbea345eca70325a8c2e44058c23e96add1b7207eabbb09445118b18188b",
+    "sources/decoded-original/0627-IdentXmlPart.xml": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "sources/decoded-original/0628-IdentXmlPart.xml": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "sources/decoded-original/0629-IdentXmlPart.xml": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "sources/decoded-original/0630-IdentXmlPart.xml": "1526a89b425470fa6e874bb4a9b6c7bc8e58b740f80d018b9106b6916f402372",
+    "sources/decoded-original/0631-IdentXmlPart.xml": "8e5072374f8ef098de72fbf93965b2a7bb0965c0f803e397daa68588c0c38555",
+    "sources/decoded-original/0632-IdentXmlPart.xml": "fd162c603476c2cac899010cee7a8ee382b6092c115135e3ac1007ae71c544e9",
+    "sources/decoded-original/0635-IdentXmlPart.xml": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457",
+    "sources/decoded-original/0636-IdentXmlPart.xml": "ec3d79f03e2748f8def4409ad676a97b98e28b9d8e68f6a64b3fe894466832ca",
+    "sources/decoded-original/0642-IdentXmlPart.xml": "c922483c261c8ddb98c239a7b4dc3d7f73f9a45261dd5b4d669f39d6918a1c21",
+    "sources/decoded-original/0654-IdentXmlPart.xml": "b36294f3aad24be72a052bef61c875ca4695d7e101c385cf55bdadec41d5097e",
+    "sources/decoded-original/0655-IdentXmlPart.xml": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+    "sources/decoded-original/0656-IdentXmlPart.xml": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592",
+    "sources/decoded-original/0657-IdentXmlPart.xml": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b",
+    "sources/decoded-original/0658-IdentXmlPart.xml": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+    "sources/decoded-original/0659-IdentXmlPart.xml": "ec881805a45730533bccd780e152afb9c9d7c7c45ba7587538b92239f9cbd9d2",
+    "sources/decoded-original/0660-IdentXmlPart.xml": "0bf4f4c46531f55324602f4f7b1a1e0b9e63df2c6278126f6e5cf1bc9a06509f",
+    "sources/decoded-original/0661-IdentXmlPart.xml": "90672199fee355011f581d3287046894772f3f3b4cb78bbe0dd0d71bd488ac93",
+    "sources/decoded-original/0662-IdentXmlPart.xml": "1838040bfee800fdb3f13b126eaf69a9d178b17cecc0d59ae03e9185216a48a5",
+    "sources/decoded-original/0663-IdentXmlPart.xml": "d3980b88d3cd3e49854439d0778c58ed131bae46a6bc3e65ab70e81f766ac03d",
+    "sources/decoded-original/0664-IdentXmlPart.xml": "68c614e1c6a7fcadeee3f0b2ddc54910c3b337e66074d7a113b9cbc834c271ed",
+    "sources/decoded-original/0672-IdentXmlPart.xml": "6bfc2ba142d6270c39eb1f13b2886204865af6d46eadc5f410c26981b8da9222",
+    "sources/decoded-original/0673-IdentXmlPart.xml": "450ef74e2d2fb65dfbb5f6bad9e28ccacf6bf0caf64327a0e20aff84d6e40f58",
+    "sources/decoded-original/0674-IdentXmlPart.xml": "4770702f519bacda69202bb2f7733d983074bda90964360c238f990d9d08fd84",
+    "sources/decoded-original/0675-IdentXmlPart.xml": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+    "sources/decoded-original/0676-IdentXmlPart.xml": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+    "sources/decoded-original/0677-IdentXmlPart.xml": "69922fcc5c67d00cdf1c5f712efa3db7638d20c88318d35fe6196467796ab1e3",
+    "sources/decoded-original/0678-IdentXmlPart.xml": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+    "sources/decoded-original/0679-IdentXmlPart.xml": "d0fcb93e188c8ae2ae0c0423f0b78b129bf3c168e33a6855262d34b8682b9b56",
+    "sources/decoded-original/0680-IdentXmlPart.xml": "fd551ad5d47bbd66c6bcdcc1949aaddf68cc086a3ddf6fb337adc767954c2b95",
+    "sources/decoded-original/0690-IdentXmlPart.xml": "fcd6af9e8af48f9737d4764d7765d2eebdf95bd5e0c8e7b4faf6d1ed4eba1541",
+    "sources/decoded-original/0691-IdentXmlPart.xml": "17cb7d9734d76b39e729e0daf0c89d9bdf74907aab2130c80453fa04e4cea1da",
+    "sources/decoded-original/0692-IdentXmlPart.xml": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "sources/decoded-original/0693-IdentXmlPart.xml": "9315ddf43bdfbd7367ab0735a5bbfffcd81ced257d1907c1e2c08ae6b8bfa7ab",
+    "sources/decoded-original/0694-IdentXmlPart.xml": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "sources/live_index.json": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1"
+  },
+  "source_bundle_sha256": "c6d6cdc5865ca19de1bb11e41b30d411cbe8012ba5f8514b3a6fede812b415cd",
+  "preservation": {
+    "original_source_files": 712,
+    "raw_register_files": 89,
+    "common_record_logic_and_registers_unchanged": true,
+    "existing_profile_content_unchanged": 13,
+    "simulator_frozen_files": 5,
+    "source_locations": 756,
+    "hashes": 106,
+    "bundle": "c6d6cdc5865ca19de1bb11e41b30d411cbe8012ba5f8514b3a6fede812b415cd"
+  },
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "screens": 224,
+    "matrix": [
+      {
+        "failures": [],
+        "height": 895,
+        "views": 112,
+        "width": 1383
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "views": 112,
+        "width": 390
+      }
+    ],
+    "source_pairs": [
+      {
+        "anchor": "gme-pv02-part-240",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG21.png",
+        "index": 0,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=22",
+        "source": "http://127.0.0.1:8877/networks/network-1936.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-rd01-part-374",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 1,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1787.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-rd01-part-378",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 2,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1787.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-rd01-wire-453",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 3,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1684.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-rd01-wire-1511",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 4,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1771.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-pv02-part-287",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG22.png",
+        "index": 5,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=23",
+        "source": "http://127.0.0.1:8877/networks/network-1939.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-rd01-part-398",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG22.png",
+        "index": 6,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=23",
+        "source": "http://127.0.0.1:8877/networks/network-1788.html",
+        "width": 1280
+      },
+      {
+        "anchor": "gme-rd01-part-268",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG21.png",
+        "index": 7,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=22",
+        "source": "http://127.0.0.1:8877/networks/network-1938.html",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG21.png",
+        "index": 0,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=22",
+        "source": "http://127.0.0.1:8877/networks/network-1936.html",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 1,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1787.html",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 2,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1787.html",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 3,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1684.html",
+        "width": 390
+      },
+      {
+        "anchor": "gme-rd01-wire-1511",
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG20.png",
+        "index": 4,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=21",
+        "source": "http://127.0.0.1:8877/networks/network-1771.html",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG22.png",
+        "index": 5,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=23",
+        "source": "http://127.0.0.1:8877/networks/network-1939.html",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG22.png",
+        "index": 6,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=23",
+        "source": "http://127.0.0.1:8877/networks/network-1788.html",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "imagePath": "assets/circuits/FG21.png",
+        "index": 7,
+        "overflow": -12,
+        "pdf": "sources/Electrical_Rev2.pdf#page=22",
+        "source": "http://127.0.0.1:8877/networks/network-1938.html",
+        "width": 390
+      }
+    ],
+    "search": [
+      {
+        "payloadImages": 0,
+        "query": "PQW290",
+        "resultText": "2개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "IW332",
+        "resultText": "4개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "PIW332",
+        "resultText": "3개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "EV03",
+        "resultText": "5개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "S5T#2S",
+        "resultText": "1개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "HOUR Move1",
+        "resultText": "1개 일치 항목"
+      },
+      {
+        "payloadImages": 0,
+        "query": "<img src=x onerror=alert(1)>",
+        "resultText": "0개 일치 항목"
+      }
+    ],
+    "bad_route_returns_overview": true,
+    "wide_body": true,
+    "saved_reopened": true,
+    "notes_before_restore": 3,
+    "notes_after_restore": 4,
+    "existing_notes_content_equal": true,
+    "foreign_records_preserved": 2,
+    "unknown_fields_signals_drafts_preserved": true,
+    "zero_and_blank_distinct": true,
+    "compare_zero_to_one": true,
+    "comparison_differences": 2,
+    "actual_unified_download": {
+      "bytes": 44536,
+      "notes": 3,
+      "contents_by_id_equal_to_saved": true
+    },
+    "fresh_report": {
+      "count": 1,
+      "printing": true,
+      "record": "qa-rd01-restored"
+    },
+    "pdf": {
+      "file": "gme-rd01-batch01-a4.pdf",
+      "sha256": "cdf90b967bbfa8447b1b8b541f5bbfe379467447de321fe0e6929c6188772c0b",
+      "bytes": 398778,
+      "pages": [
+        {
+          "page": 1,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "image": "/tmp/gme-rd01-qa/a4-1.png"
+        },
+        {
+          "page": 2,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "image": "/tmp/gme-rd01-qa/a4-2.png"
+        },
+        {
+          "page": 3,
+          "size": [
+            595.9199829101562,
+            841.9199829101562
+          ],
+          "image": "/tmp/gme-rd01-qa/a4-3.png"
+        }
+      ],
+      "all_pages_visually_reviewed": true,
+      "saved_source_bundle": "c6d6cdc5865ca19de1bb11e41b30d411cbe8012ba5f8514b3a6fede812b415cd"
+    },
+    "cleanup": {
+      "drafts": null,
+      "notes": null,
+      "printPatch": "undefined",
+      "printing": false,
+      "viewport": {
+        "height": 895,
+        "width": 1383
+      },
+      "logs": []
+    }
+  },
+  "common_conflict_quota_stale_report": "passed_at_unchanged_MV06_batch_checkpoint; not repeated for RD01 because common code unchanged",
+  "qa_directory": "/tmp/gme-rd01-qa",
+  "raw_analysis_corrections": [
+    "FG21 coil21KA2 -0Vdc10.6 vs draft0Vac9.9",
+    "FG141 A5.1 21/5 vs draft66/4",
+    "FG141 Rev2 17.03.2025 vs draftblank",
+    "START actual5/9 vs raw1/9",
+    "IW332 Input SAM=None vs PIW332 Peripherie separate accesses"
+  ],
+  "simulator_frozen_files": 5,
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "operational_record_writes": 0,
+  "PLC_field_SEJIN_changes": 0,
+  "next": "BR01/P11 independent review; final batch package/publish once"
+}

@@ -1,0 +1,219 @@
+{
+  "batch": "BATCH01",
+  "version": "1.16.0",
+  "targets": [
+    "MV06/P21",
+    "RD01/P06",
+    "BR01/P11",
+    "CC01/P10",
+    "AB01/P12"
+  ],
+  "local_document_static_ui_records_pdf": "passed",
+  "equipment_profiles": 17,
+  "batch_final_profile_hashes": [
+    {
+      "key": "P21",
+      "id": "MV06",
+      "locations": 585,
+      "source_hashes": 83,
+      "bundle": "6cc7ef2efc2dfd6ab87501f30312a55274b1e6846119da41fe85288ae5189cfc",
+      "pairs": 10
+    },
+    {
+      "key": "P06",
+      "id": "RD01",
+      "locations": 756,
+      "source_hashes": 106,
+      "bundle": "de2dbb31b9112920b81f2c38bd50856fcab176460cd9e9c18440a5b913eed293",
+      "pairs": 8
+    },
+    {
+      "key": "P11",
+      "id": "BR01",
+      "locations": 1505,
+      "source_hashes": 131,
+      "bundle": "6e50d45d90101fd914b129744e3f427d9fb1e5aaf4f967d0b51fd3241888d1d1",
+      "pairs": 19
+    },
+    {
+      "key": "P10",
+      "id": "CC01",
+      "locations": 93,
+      "source_hashes": 44,
+      "bundle": "0ac5d20734f1858cdd2b392c60b016bd5fba74077b348d1bdba7f02e88cd8a39",
+      "pairs": 4
+    },
+    {
+      "key": "P12",
+      "id": "AB01",
+      "locations": 1055,
+      "source_hashes": 103,
+      "bundle": "fdbf1517c1facade2ffa071da5ff339a03b78834bb16312b709624413e3df16e",
+      "pairs": 15
+    }
+  ],
+  "checkpoint_reports": [
+    "V1.15.0-VERIFICATION.json",
+    "BATCH01-RD01-VERIFICATION.json",
+    "BATCH01-BR01-VERIFICATION.json",
+    "BATCH01-CC01-VERIFICATION.json",
+    "BATCH01-AB01-VERIFICATION.json"
+  ],
+  "checkpoint_boundary": "Each saved/reopened record and PDF retains its historical source-bundle hash. Final requirements-audit, added-sheet preview hashes and three guide return URLs were refreshed afterwards; do not rewrite checkpoint evidence as current hashes.",
+  "user_CC01_guidance": "Data unavailable now remains unavailable; surrounding references are not owned CC01 I/O, alarms or timers. No repeat absence search until new evidence.",
+  "common_changes": [
+    "explicit missing-data text for empty I/O/internal",
+    "preserved unknown signal/step summary names fall back to saved ID",
+    "drawing preview hash inventory refreshed after reviewed sheet additions",
+    "verifier validates source-reference circuits and exact additional sheets; raw circuit registers remain intact",
+    "three new alarm guide links include scope=priority; actual AB01 return verified"
+  ],
+  "preservation": {
+    "existing_published_profiles": 12,
+    "local_MV06_checkpoint_preserved": true,
+    "baseline_profile_content_preserved": 13,
+    "all_repair_record_schemas_preserved": true,
+    "original_package_files": 730,
+    "additional_originals": 3,
+    "frozen_simulator_files": 5,
+    "operational_record_writes": 0
+  },
+  "local_final_smoke": [
+    {
+      "key": "P21",
+      "catalog": "MV06",
+      "items": [
+        3,
+        4,
+        16,
+        10,
+        3,
+        5,
+        5
+      ],
+      "pairs": 10,
+      "previewHashes": 74,
+      "emptyOwnedOutputs": false,
+      "title": "공통인버터·M14·LS40/41 대LS34/35·ZT06 식별",
+      "notes": null
+    },
+    {
+      "key": "P06",
+      "catalog": "RD01",
+      "items": [
+        3,
+        4,
+        27,
+        8,
+        4,
+        5,
+        5
+      ],
+      "pairs": 8,
+      "previewHashes": 74,
+      "emptyOwnedOutputs": false,
+      "title": "킬른 후보·M03 구동/M04 팬·EV03 구분",
+      "notes": null
+    },
+    {
+      "key": "P11",
+      "catalog": "BR01",
+      "items": [
+        3,
+        4,
+        36,
+        19,
+        6,
+        5,
+        5
+      ],
+      "pairs": 19,
+      "previewHashes": 74,
+      "emptyOwnedOutputs": false,
+      "title": "GME PLC·외부 버너반과 본체 관계",
+      "notes": null
+    },
+    {
+      "key": "P10",
+      "catalog": "CC01",
+      "items": [
+        3,
+        4,
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "pairs": 4,
+      "previewHashes": 74,
+      "emptyOwnedOutputs": true,
+      "title": "투입 챔버 후보·주변 소유와 자료 경계",
+      "notes": null
+    },
+    {
+      "key": "P12",
+      "catalog": "AB01",
+      "items": [
+        3,
+        4,
+        1,
+        15,
+        9,
+        3,
+        5
+      ],
+      "pairs": 15,
+      "previewHashes": 74,
+      "emptyOwnedOutputs": true,
+      "title": "재연소 챔버 후보·본체/버너/계측 소유",
+      "notes": null
+    }
+  ],
+  "npm_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "fresh_required_verifiers": 14,
+  "fresh_equipment_verifiers": 2,
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T11:07:27.300489+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.16.0.zip",
+    "version": "1.16.0",
+    "files": 2808,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 54519136,
+    "sha256": "80cac514006d4ae67301a5dd456e844f2ecbccbe9fe89320d3f754aba8987473",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "NETLIFY_build": {
+    "status": "passed",
+    "public_files": 2837,
+    "inline_CSP_hashes": 6,
+    "scoped_CSP_policies": 39
+  },
+  "git_feature_commit": null,
+  "github_release": "pending",
+  "netlify_deployment": "pending",
+  "published_file_check": "pending",
+  "fresh_clone": "pending",
+  "published_count": 12,
+  "published_total": 23,
+  "in_scope_total": 21,
+  "next": "Actual BATCH01 publication then HE01/P13 and P03/P04/P14",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "PLC_field_protection_SEJIN_changes": 0
+}

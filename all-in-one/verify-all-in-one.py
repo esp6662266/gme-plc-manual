@@ -677,20 +677,39 @@ for profile in drawing['profiles']:
     priority=next(p for p in data['priority'] if p['key']==profile['key'])
     device=next((d for d in data['equipment'] if d['id']==priority['plc_id']),{})
     assert profile['plc_id']==priority['plc_id'] and profile['match']==priority['match']
-    assert profile['circuit']==expected_circuits.get(priority['plc_id'])
+    raw_circuit=expected_circuits.get(priority['plc_id'])
+    batch_paths={'P06':8,'P11':19,'P10':4,'P12':15}
+    if profile['key'] in batch_paths:
+        circuit=profile['circuit']
+        assert circuit['id']==priority['plc_id'] and len(circuit['paths'])==batch_paths[profile['key']]
+        if profile['key'] in {'P06','P11'}:
+            assert {k:v for k,v in circuit.items() if k!='paths'}=={k:v for k,v in raw_circuit.items() if k!='paths'}
+        else:
+            assert raw_circuit is None and circuit['source_reference_only']
+            assert all(p['ownership_verified'] is False for p in circuit['paths'])
+        standard_profile=next(p for p in data['equipment_standards']['profiles'] if p['priority_key']==profile['key'])
+        assert [p['signal'] for p in circuit['paths']]==[p['signal'] for p in standard_profile['source_pairs']]
+        for pair in standard_profile['source_pairs']:
+            routes.add(pair['path'])
+    else:
+        assert profile['circuit']==raw_circuit
     assert not profile['identity_verified'] and not profile['field_verified']
     sheets=profile['sheets'];assert len({s['id'] for s in sheets})==len(sheets)
-    assert {s['kind'] for s in sheets}<={'OEM 전기','P&ID','시공·케이블','HMI 참고'},profile['key']
-    assert [s['fg'] for s in sheets if s['kind']=='OEM 전기']==list(dict.fromkeys(device.get('circuit_fgs',[])+device.get('electrical_fgs',[])))
+    reference_kinds={'P10':{'주변 OEM 전기','시공 구역'},'P12':{'주변 OEM 전기','시공 케이블'}}.get(profile['key'],set())
+    assert {s['kind'] for s in sheets}<={'OEM 전기','P&ID','시공·케이블','HMI 참고'}|reference_kinds,profile['key']
+    extra_fgs={'P06':[22],'P11':[111,114,142,143]}.get(profile['key'],[])
+    assert [s['fg'] for s in sheets if s['kind']=='OEM 전기']==list(dict.fromkeys(device.get('circuit_fgs',[])+device.get('electrical_fgs',[])+extra_fgs))
     assert [s['page'] for s in sheets if s['kind']=='시공·케이블']==device.get('construction_pages',[])
+    assert [s['fg'] for s in sheets if s['kind']=='주변 OEM 전기']=={'P10':[78,81,106,110],'P12':[77,78,80,97,99,106,107,110]}.get(profile['key'],[])
+    assert [s['page'] for s in sheets if s['kind'] in {'시공 구역','시공 케이블'}]=={'P10':[3],'P12':[56]}.get(profile['key'],[])
     for sheet in sheets:
         assert sheet['image'] and sheet['image'] in drawing['preview_hashes']
         assert (ROOT/sheet['image']).read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'
-        if sheet['kind']=='OEM 전기':
+        if sheet['kind'] in {'OEM 전기','주변 OEM 전기'}:
             fg=str(sheet['fg']);n=int(fg) if fg.isdigit() else None
             expected={'5A':6,'180A':182,'180B':183}.get(fg) or n+(n>5)+2*(n>180)
             assert sheet['page']==expected and sheet['source']==electrical['source']
-        elif sheet['kind']=='시공·케이블':
+        elif sheet['kind'] in {'시공·케이블','시공 구역','시공 케이블'}:
             assert sheet['source']==construction['source'] and sheet['image']==f"assets/construction/P{sheet['page']:02}.png"
         elif sheet['kind']=='P&ID':assert sheet['source']=='sources/PID_1684n002I.pdf' and sheet['page']==1
         else:assert sheet['id']=='hmi' and sheet['source']==sheet['image']=='assets/HMI_DECOATER.png'
