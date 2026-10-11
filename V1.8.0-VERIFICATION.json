@@ -1,0 +1,414 @@
+{
+  "version": "1.8.0",
+  "target": "FN06/P18",
+  "baseline_commit": "10051ddf45f6fd740d057bda51bee3db5a57382e",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "next": "MC04/P08 draft received; Dots next VS01/P09",
+  "source_locations": 99,
+  "source_hashes": {
+    "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+    "registers/construction-reference.json": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+    "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+    "registers/hmi-transfer.json": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+    "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+    "registers/regulation-manual.json": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+    "registers/requirements-audit.json": "3714fa0bd099c53c73220302aeb136c6daf114ceb81e46713a0fddd3a6926f6f",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+    "registers/vendor-reference-review.json": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/decoded-original/0030-FlgNet.xml": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "sources/decoded-original/0031-FlgNet.xml": "76385eab8f8f72b9faa16f7cf8905f395591b18c0a9ee9e6d7dd085a38c45c65",
+    "sources/decoded-original/0164-FlgNet.xml": "15884b2b362842279b626b669a484b1daa269f5ecd99112b8391bb0387382491",
+    "sources/decoded-original/0165-FlgNet.xml": "4513a5f6e77717c99c5e869105483be31f7f62ab280e271dc36cd7a2d3e3bb88",
+    "sources/decoded-original/0166-FlgNet.xml": "0330a505877be92172f94bce83222a0bfc8d64aab700a69fc1fa2188010d3853",
+    "sources/decoded-original/0174-FlgNet.xml": "23fb073206f95c69abc4373d3080081a369e4dd5021c2bd1a90d63029bb908d5",
+    "sources/decoded-original/0257-FlgNet.xml": "43434bcdfb9edb02b979fdc5096fea94636708d316a58dc342719e3b28d194da",
+    "sources/decoded-original/0320-FlgNet.xml": "4279b69c8bbb37cfcea7b5e389bb66c5d48ef2c45ce7447ee8ba456c48f6d8bd",
+    "sources/decoded-original/0338-FlgNet.xml": "762ab4b1520aa101efc897ff9e4b72a35f5591ff460a0b654dc87919849077a1",
+    "sources/decoded-original/0355-FlgNet.xml": "73592d33f8b3a71effeb36f25427c76e931485e7ce31f5c81f144ddae83c4247",
+    "sources/decoded-original/0375-FlgNet.xml": "65964c3f68a169b10a0600fd36847c2fa508cb881794c087e3b77da5d84cba22",
+    "sources/decoded-original/0397-FlgNet.xml": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+    "sources/decoded-original/0404-FlgNet.xml": "ed02308b8d0b1c52fd734826cccb82d25709b8b9d65af07557c1b1e9c8de2570",
+    "sources/decoded-original/0437-FlgNet.xml": "ccf6915ca1b5779245b16ef9790cd042ded33f0a494b6a75660f86e308c76ed7",
+    "sources/decoded-original/0549-FlgNet.xml": "49f7169c33ed7f54559b0801e21a7d618584900972840e91cf51ad032e8febb1",
+    "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
+    "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
+    "sources/decoded-original/0578-IdentXmlPart.xml": "0f9f41b5dee25ea17c7a29ab6f7b00503c13d0f265266acd660072baf061d32b",
+    "sources/decoded-original/0582-IdentXmlPart.xml": "41d4c2bd750392bbc2edc43995ec3a9da47a63c13ee86496df8f187492008951",
+    "sources/decoded-original/0585-IdentXmlPart.xml": "e36ec18aa4abebea8f9160254522bb51ff722eae804c5a469790f85f02939184",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0613-IdentXmlPart.xml": "09d3b1397a987898334218f37e025661af162438582e649f671e7abec443d3cb",
+    "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
+    "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d",
+    "sources/decoded-original/0621-IdentXmlPart.xml": "a63e2b97ea9eb2691cb478666afed77fc58a2da2f8170422dc09e24b102c88ee",
+    "sources/decoded-original/0622-IdentXmlPart.xml": "f0b997f1246d76cff71de2160eb617caa936e6987bdf43c73f55cdcf77dccdb6",
+    "sources/decoded-original/0623-IdentXmlPart.xml": "4acd00406ea92466169e57e59fc90b0da4d9ec55fd19e2e96c9556e939cb83a6",
+    "sources/decoded-original/0624-IdentXmlPart.xml": "24607c0827fbde428bccf8637ef4ae490798a69a7c2f3b87861d0749082d367a",
+    "sources/decoded-original/0627-IdentXmlPart.xml": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "sources/decoded-original/0628-IdentXmlPart.xml": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "sources/decoded-original/0629-IdentXmlPart.xml": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "sources/decoded-original/0635-IdentXmlPart.xml": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457",
+    "sources/decoded-original/0655-IdentXmlPart.xml": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+    "sources/decoded-original/0656-IdentXmlPart.xml": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592",
+    "sources/decoded-original/0657-IdentXmlPart.xml": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b",
+    "sources/decoded-original/0658-IdentXmlPart.xml": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+    "sources/decoded-original/0688-IdentXmlPart.xml": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+    "sources/decoded-original/0692-IdentXmlPart.xml": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "sources/decoded-original/0694-IdentXmlPart.xml": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
+  },
+  "source_bundle_sha256": "51ed468b8f8a6efc2bc6caf9bd326a76fbc34455f6de2081a43d9a70e2903e52",
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "screens": 980,
+    "first_matrix": [
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          }
+        ],
+        "views": 226,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 390
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          }
+        ],
+        "views": 226,
+        "width": 390
+      }
+    ],
+    "post_E24_FN06_matrix": [
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 64,
+            "key": "P18"
+          }
+        ],
+        "views": 64,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 64,
+            "key": "P18"
+          }
+        ],
+        "views": 64,
+        "width": 390
+      }
+    ],
+    "source_pairs": [
+      {
+        "highlight": true,
+        "image": true,
+        "index": "0",
+        "lad": "networks/network-1955.html#gme-fn06-part-776",
+        "overflow": false,
+        "target": true,
+        "targetText": "776Coiloperand = Start FN06",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "index": "1",
+        "lad": "networks/network-1802.html#gme-fn06-part-866",
+        "overflow": false,
+        "target": true,
+        "targetText": "866Contactoperandoperand = Inputs.FEEDBACKMOTOR FN-06",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "index": "0",
+        "lad": "networks/network-1955.html#gme-fn06-part-776",
+        "overflow": false,
+        "target": true,
+        "targetText": "776Coiloperand = Start FN06",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "index": "1",
+        "lad": "networks/network-1802.html#gme-fn06-part-866",
+        "overflow": false,
+        "target": true,
+        "targetText": "866Contactoperandoperand = Inputs.FEEDBACKMOTOR FN-06",
+        "width": 1280
+      }
+    ],
+    "records_saved_reopened": true,
+    "restore": {
+      "count": 4,
+      "drafts": {
+        "future-draft": {
+          "retain": 42
+        },
+        "repair:P17": {
+          "future": true
+        }
+      },
+      "foreign": [
+        {
+          "equipment": "P17",
+          "id": "foreign-p17",
+          "kind": "確認",
+          "name": "FN03",
+          "references": "",
+          "text": "preserve",
+          "title": "合成外部記録",
+          "updated": "2026-10-01"
+        },
+        {
+          "equipment": "P03",
+          "id": "future-equipment",
+          "kind": "確認",
+          "name": "future",
+          "references": "",
+          "text": "preserve",
+          "title": "unknown",
+          "updated": "2026-10-01"
+        }
+      ],
+      "own": [
+        {
+          "future": {
+            "retain": true
+          },
+          "id": "e78a05a1-7d1d-411a-9d1a-7cab64030e3c",
+          "title": "합성 QA · FN06 수정 후 보존",
+          "unknown": {
+            "addresses": [],
+            "evidence": null,
+            "future_field": 42,
+            "id": "future-signal",
+            "name": "未来信号",
+            "observed_at": null,
+            "role": "future",
+            "source_refs": [],
+            "value": "0"
+          },
+          "value": "0"
+        },
+        {
+          "future": {
+            "retain": true
+          },
+          "id": "restored-fn06-copy",
+          "title": "합성 QA · FN06 복원 사본",
+          "unknown": {
+            "addresses": [],
+            "evidence": null,
+            "future_field": 42,
+            "id": "future-signal",
+            "name": "未来信号",
+            "observed_at": null,
+            "role": "future",
+            "source_refs": [],
+            "value": "0"
+          },
+          "value": "1"
+        }
+      ]
+    },
+    "preserved": {
+      "blank": null,
+      "count": 3,
+      "drafts": {
+        "future-draft": {
+          "retain": 42
+        },
+        "repair:P17": {
+          "future": true
+        }
+      },
+      "foreign": [
+        {
+          "equipment": "P17",
+          "id": "foreign-p17",
+          "kind": "確認",
+          "name": "FN03",
+          "references": "",
+          "text": "preserve",
+          "title": "合成外部記録",
+          "updated": "2026-10-01"
+        },
+        {
+          "equipment": "P03",
+          "id": "future-equipment",
+          "kind": "確認",
+          "name": "future",
+          "references": "",
+          "text": "preserve",
+          "title": "unknown",
+          "updated": "2026-10-01"
+        }
+      ],
+      "record": {
+        "retain": true
+      },
+      "signal": "retain",
+      "title": "합성 QA · FN06 수정 후 보존",
+      "top": {
+        "retain": true
+      },
+      "unknown": {
+        "addresses": [],
+        "evidence": null,
+        "future_field": 42,
+        "id": "future-signal",
+        "name": "未来信号",
+        "observed_at": null,
+        "role": "future",
+        "source_refs": [],
+        "value": "0"
+      },
+      "zero": "0"
+    },
+    "conflict": {
+      "draft": "합성 QA · 충돌 미저장 초안",
+      "latest": "합성 QA · 외부 최신값"
+    },
+    "quota": {
+      "draft": "합성 QA · 용량 실패 보존 초안",
+      "savedTitle": "합성 QA · FN06 복원 사본"
+    },
+    "stale_report": {
+      "printCalls": 0,
+      "printing": false,
+      "status": "기록이 변경되었습니다. 보고서 미리보기를 다시 생성하세요."
+    },
+    "pdf": {
+      "initial": "gme-fn06-v1.8.0.pdf",
+      "final": "gme-fn06-v1.8.0-final.pdf",
+      "pages_each": 2,
+      "render_visual_review": "passed",
+      "final_sha256": "677f1105b4d903961169e4e370b87972e8bc44174c9f622d0f0562cd0588246b",
+      "saved_bundle": "72013d8fc9ec323df0fa7d6ac5e3b32afa2c4ec4ff37fc7b7ab8a514be404877",
+      "generated_bundle": "51ed468b8f8a6efc2bc6caf9bd326a76fbc34455f6de2081a43d9a70e2903e52"
+    },
+    "notes_final": null,
+    "drafts_final": null,
+    "temporary_patches_removed": true,
+    "viewport_reset": true,
+    "warnings_errors": []
+  },
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T05:54:27.819892+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.8.0.zip",
+    "version": "1.8.0",
+    "files": 2801,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 52945704,
+    "sha256": "0907f0c7111047d91fc5b639157993863f28a87401b2fcd77e92890215167ceb",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "node": "24.19.0",
+  "tests": 8,
+  "NETLIFY_build": "passed",
+  "qa_directory": "/tmp/gme-fn06-qa",
+  "originals_unchanged": 730,
+  "additional_sources": 3,
+  "simulator_frozen_files": 5,
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "operational_record_writes": 0,
+  "PLC_field_SEJIN_changes": 0
+}

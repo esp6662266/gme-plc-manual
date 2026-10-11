@@ -222,3 +222,50 @@ def build_fn03_profile(root,data,source_rows):
         dict(name='FP_M25_Run',addresses=['%M180.2'],usages=[usage('52','54','905','PContact','bit','read/write')],boundary='펄스 메모리 AK=RW; 현재 실행·펄스 시점 미검증')])
     profile['signal_trace']=trace
     return profile
+
+def build_fn06_profile(root,data,source_rows):
+    read=lambda file:json.loads((root/file).read_text(encoding='utf-8'))
+    spec=next(p for p in read('registers/control-spec.json')['specifications'] if p['id']=='FN06')
+    request=[r for r in spec['direct_rules'] if r['대상']=='Flag.M_FN_06']
+    assert {r['rule_id'] for r in request}=={'1843:554','1844:898','1847:897','1955:772'}
+    control=dict(applicability='contactor direct starting; own analog speed/current or regulation loop not identified',
+        chain=['FN06은 FG52/PDF53의 단독 M26 접촉기 직접기동 회로입니다. 52QM1·52KM1·52QS1을 구분하며 전용 가변속/PID·아날로그 속도/전류 근거는 미확보입니다.',
+            '1955: ON AND (MBVA01_FAULT OR (NOT Inputs.RD01 run AND NOT UNDER TESTING))→Flag.M_FN_06 Reset772. NOT UNDER TESTING은 RD01 가지에만 있습니다. 같은 네트워크의 ON·요청→Start FN06(%Q3.3) Coil776과 구분합니다.',
+            '1802: ON·Start FN06·NOT Inputs.FEEDBACKMOTOR FN-06→SdCoil817, Tag_67(%T91), S5T#2S. ON·Start·Tag_67→MBVA01_FAULT Set823. ON·RESET_ALLARM·알람→Reset828이며 원인 해소 접점은 없습니다.',
+            'MBVA01_FAULT는 원본상 FN06 감시와 요청 해제에 연결됩니다. 별칭 이름의 현재 자산 의미·HMI 문구·실물 동일성은 확인 전이며 다른 모터의 알람으로 재배정하지 않습니다.',
+            '1843 예열 preset1/Tempo40 Set554,1844 생산 preset2/Tempo60 Set898,1847 preset5·(Tempo1 OR 비상) Reset897과1955 Reset772는 네 요청 쓰기입니다. 40/60은 비교 상수이며 초 단위로 추정하지 않습니다.',
+            '1857: FN06 처리응답과 Inputs.Burner On은 OR38의 서로 다른 가지입니다. 이 OR 뒤 FN02 응답과 다른 직렬 조건→Flag.Burner_ready Coil182입니다. 버너 준비는 응답 소비이며 FN06 출력 소유가 아닙니다.',
+            '1032: Tag47·원시 FN06_Fbk(%I4.3), MIN Add1/Ge60 뒤 HOUR Move1(W1902/1903)이며 시간값+1이 아닙니다. Move1874.eno→MIN Move0→Flag_Aggiorna_DB와1051 HOUR Move0을 별도로 보존합니다.',
+            '1070 HMI Inputs/0397의 Move35: Tag_180 Word %IW4(RID10/Input AO32)→Inputs DB13 Word4(RID11/GlobalAccess AO32/BIRID4). 0628/0655의 같은 DB13/CID638561979615757134와 처리응답 BO35를 대조해 I4.3→DB13 bit4.3의 백업상 정적 복사를 확인했습니다. W39/40/41·DisableENO=true를 보존하며 같은 변수로 합치지 않습니다.',
+            '1613/0030: Recipes Handler→ENO W32→HMI→ENO W33→HMI Output→ENO W42→NOT Simulation(1) Contact37→W43→HMI Inputs CRef28.en. 0692 RID140/NID19 UID45는 %M180.0, 0688 RID135/0694 RID136이 호출대상을 뒷받침합니다. 현재 값·호출 성공·주기·다른 쓰기는 확인 전이며 시뮬레이터를 실행하지 않습니다.',
+            '1198 HMI 호출의 Ingresso_run/Allarme1/Risposta/Comulativo_allarmi 네 대상 선언은 미해석입니다. 일반 함수331의 Local 전달과 실제 FN06 인스턴스/DB11 주소를 합치지 않습니다.'],
+        repair=['Q3.3/FG139 MOD14 단자34→A3.3→XS41→QS1 보조접점→XS42→QM1 보조접점→KM1 A1/A2→0Vdc10.6을 도면·관찰과 대조합니다. 단자번호가 없는 보조접점은 채우지 않습니다.',
+            '24Vdc10.7→KM1 보조접점13/14→E4.3→FG120 MOD9 단자4입니다. 접촉기 보조응답은 회전·풍량 증명이 아닙니다. 원시I4.3와 DB 처리응답·요청·출력·Tag67·HMI를 같은 시각으로 분리합니다.',
+            '보존 simulation1084의 요청→처리응답은 현재 물리 입력 전달 증명이 아니며 실행하지 않습니다. 1619/1620 ON 호출 연결도 현재 CPU의 전체 호출·실행 검증과 별도입니다.'],
+        pending=['백업Word전달과분리해 원시I4.3/DB13 bit4.3의 현재 호출·ENO/주기·다른쓰기·현장정상극성',
+            '1198의 네 미해석 HMI 대상·호출NID/인스턴스·DB11/DB2 레이아웃·DDE 원본과 버튼 이벤트',
+            '기동 설명 a60.3과 원본Output AO27/Q3.3·도면A3.3의 불일치; 현행 명판/보호값·회로·케이블 승인자료',
+            'Tag47/48 주기·HOUR Move1의 의도·ENO·다중쓰기·전원복귀·전체 OB/현재 CPU',
+            'MBVA01 별칭의 현재 실물/HMI 대응·외부 버너 내부 안전순서·승인된 관찰과 복구 자료'],
+        native=[331,1032,1051,1070,1198,1613,1619,1620,1802,1843,1844,1847,1857,1955],native_refs=request)
+    pairs=[dict(signal='기동 명령',network=1955,uid='776',label='최종 출력 · Start FN06',boundary='ON·요청→Q3.3·A3.3/XS41/42·QS/QM·KM1 코일을 비교합니다. 실제 전압·접촉기·송풍은 별도 관찰입니다.'),
+        dict(signal='접촉기 응답',network=1802,uid='866',label='처리 응답 · NOT Inputs.FEEDBACKMOTOR FN-06',boundary='KM1 13/14→I4.3와1070의IW4→DB13 Word4 정적 복사를 분리해 비교합니다. 현재 전달·극성과 반전 감시 접점·Tag67·별칭 알람은 별도입니다.')]
+    extra=[(1032,'part',u) for u in ['1912','1864','1871','1874','1877','1880']]
+    extra += [(1032,'wire',u) for u in ['1894','1895','1896','1897','1898','1899','1900','1902','1903','1904','1905','1906','1907','1913']]
+    extra += [(1051,'wire',u) for u in ['2981','2982','2983']]
+    extra += [(1955,'part',u) for u in ['22','798','802','767','804']]+[(1955,'wire',u) for u in ['797','799','24','803','789','791','805','794']]
+    extra += [(1857,'part',u) for u in ['36','228','38','40','182']]+[(1857,'wire',u) for u in ['53','45','46','55']]
+    extra += [(1198,'wire',u) for u in ['21','37','39','40','41','42','43','46','48']]+[(1620,'wire','351'),(1619,'wire','283')]
+    extra += [(1070,'part','35')]+[(1070,'wire',u) for u in ['39','40','41']]+[(1613,'part','37')]+[(1613,'wire',u) for u in ['32','33','42','43','44']]
+    return build_static_profile(root,data,source_rows,dict(catalog_id='FN06',priority_key='P18',type='motor_directstarter',source_pairs=pairs,extra_locations=extra,
+        extra_sources=['sources/decoded-original/0621-IdentXmlPart.xml','sources/decoded-original/0623-IdentXmlPart.xml','sources/decoded-original/0624-IdentXmlPart.xml','sources/decoded-original/0627-IdentXmlPart.xml','sources/decoded-original/0628-IdentXmlPart.xml','sources/decoded-original/0629-IdentXmlPart.xml','sources/decoded-original/0655-IdentXmlPart.xml','sources/decoded-original/0688-IdentXmlPart.xml','sources/decoded-original/0694-IdentXmlPart.xml'],
+        internal_names=['Allarm.MBVA01_FAULT','hours motors.FN_06_MIN','hours motors.FN_06_HOUR'],control_reference=control,
+        related_alarm_boundary='FN06 자체 감시1개: MBVA01_FAULT·Tag67/T91·2초SD. RD01/UNDER TESTING 요청해제 가지, 네 요청쓰기, 버너준비의FN06応答 OR BurnerOn, HOUR Move1/ENO·초기화와 미해석HMI는 별도입니다. 현재 실물·정상극성·복구는 확인 전입니다.'.replace('応答','응답'),
+        presentation=dict(identity_title='접촉기 직접기동·단독 M26와 설비 식별',identity_pending='명판·위치·M26 보조 블로어와 설비 카드 관리 관계 확인 전',
+            oem_baseline='Electrical_Rev2.pdf · FG52/PDF53 작성27.05.2024·FG120/139 Rev.2 17.03.2025 · M26 3kW/5.8A·440V60Hz·52QM1 5.5–8A 도면범위·52KM1/52QS1 · 현행 설정값 아님',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf · FOR APPROVAL/24.11.11 first draft/승인란 공란 · PDF21/51 · 1_4 =ENT+FN06-M26A CR→M26 · GAC/CV/4심/1.5/SPARE0 · 100/RB→E100 Adjustment13/LEN43; PDF21 100RBD1/CP No1/Pipe22 원문은 별도 보존',
+            control_title='RD01 분기·별칭2초·버너준비OR·HOUR Move1과 제어 경계',control_links=[['요청·출력1955','networks/network-1955.html'],['별칭 알람1802','networks/network-1802.html'],['버너준비1857','networks/network-1857.html'],['HMI1198','networks/network-1198.html'],['입력Word전달1070','networks/network-1070.html'],['호출경계1613','networks/network-1613.html']],
+            timer_title='Tag_67 / T91 · S5T#2S 감시',related_title='RD01 분기·버너준비·HMI/운전시간 경계',
+            related_links=[['요청 해제1955','networks/network-1955.html'],['버너준비1857','networks/network-1857.html'],['운전시간1032','networks/network-1032.html'],['별도 초기화1051','networks/network-1051.html']],
+            field_title='실물·접촉기 보조응답·전기전달과 정상 극성',alarm_recovery='알람 Reset·요청 재설정·출력·접촉기·실제 송풍과 복구는 별개입니다. 원시/처리응답과RD01분기·별칭 알람·Tag67을 같은 시각에 비교하고 원인 조치·승인 재기동과 재발 여부를 따로 기록합니다.',
+            search_examples='Q3.3, I4.3, MBVA01_FAULT, Tag_67, S5T#2S, FN_06_HOUR')))
