@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "pending",
+  "publication": "passed",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -571,5 +571,59 @@
     "all_file_hashes_checked": true,
     "field_verified": false,
     "tia_verified": false
+  },
+  "published_commit": "ccbb18653eec17524d31b35a5a91ad78e311c7c7",
+  "netlify": {
+    "id": "6acb4df93484ca00082d7fa4",
+    "state": "ready",
+    "commit_ref": "ccbb18653eec17524d31b35a5a91ad78e311c7c7",
+    "published_at": "2026-10-11T08:51:36.214Z",
+    "error_message": null
+  },
+  "github_release": {
+    "url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.14.0",
+    "target": "ccbb18653eec17524d31b35a5a91ad78e311c7c7",
+    "asset_id": 630259669,
+    "bytes": 53483224,
+    "sha256": "ee5e6e7457023ab1e5ab1d2326cd8d48283e85ba500eb55088199f2f2adef28c",
+    "state": "uploaded"
+  },
+  "fresh_clone": {
+    "path": "/tmp/gme-mv03-fresh-20261011",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment": "passed",
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "published_files": {
+    "count": 126,
+    "exact": 104,
+    "html_semantic_after_pretty_urls": 22
+  },
+  "published_ui": {
+    "drafts": null,
+    "frames": [
+      {
+        "highlight": "390Coiloperand = Start open MV03",
+        "src": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1706.html"
+      }
+    ],
+    "image": [
+      {
+        "loaded": true,
+        "src": "assets/circuits/FG38.png"
+      }
+    ],
+    "notes": null,
+    "version": "v1.14.0",
+    "logs": [],
+    "unified_record_count": 0
+  },
+  "node_tests": {
+    "passed": 8,
+    "node": "24.19.0",
+    "NETLIFY_build": "passed",
+    "files": 2830
   }
 }

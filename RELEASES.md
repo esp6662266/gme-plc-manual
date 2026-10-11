@@ -1,3 +1,7 @@
+# MV03 v1.14.0 실제 게시 완료 — 2026-10-11
+
+MV03(P20) 문서·정적·UI기록·패키지·실제게시 검증완료. 7영역55항목/7쌍/782위치85해시·2288화면·합성저장/통합복원3→4/0→1비교/동시성·Quota/A4 PDF3·fresh14+2/ZIP2801/원본730·새clone8/BC01/설비/NETLIFY/Gitclean passed. GitHub v1.14.0 asset630259669 digest ee5e6e7457023ab1e5ab1d2326cd8d48283e85ba500eb55088199f2f2adef28c/53483224B;Netlify6acb4df93484ca00082d7fa4 ready08:51:36.214Z/featureccbb18653eec17524d31b35a5a91ad78e311c7c7. 게시126파일(104exact22HTML)·실제P20/FG38PDF39/Part390강조·통합0/운영키null/warnerror0. 12/23=52.2%,제외2별도12/21=57.1%. AON문서는불변ZIP생성시pending기록보존;최신게시상태는이루트기록이다. 다음MV06(P21)독립검토·통합. RD01/BR01초안수신91/100고정SHA전부일치·VERSION만현재기대차이. Dots CC01 조사중. TIA/liveCPU/field not_performed·시뮬레이터/PLC/현장/보호값/SEJIN변경0·2차133 로컬제외. 전체goal active.
+
 # v1.14.0 · MV03 표준 매뉴얼
 
 MV01 v1.13.0 실제게시완료(11/23=47.8%,제외2별도). MV03(P20)7영역·7원본쌍·27직접규칙/2opaque·150초방향응답/±3400명령누적 동일FAULT·끝단NOT·상대Q차단접점없음/NC하드웨어·HSC2결속21미결속·HMI4FALSE10미해석·PSH03/PSH02·버너요청상충·M17용량상충을 연결한다. Dots84고정SHA와19고유/공통XML/선언·PDF12쪽 독립대조. 원본730/추가3/기존11프로파일/공통기록/중지5보존. UI/기록/PDF/패키지/게시검증중. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV06수신83SHA고정일치.
