@@ -1,0 +1,23 @@
+
+> gme-plc-manual@1.19.0 verify:manual
+> node scripts/python-runner.mjs all-in-one/build-package.py
+
+{
+  "fresh_verifiers": 14,
+  "fresh_equipment_verifiers": 2,
+  "finished_at_utc": "2026-10-11T18:16:59.214420+00:00",
+  "status": "passed",
+  "archive": "GME-All-In-One-v1.19.0.zip",
+  "version": "1.19.0",
+  "files": 2986,
+  "original_files_unchanged": 730,
+  "additional_sources_verified": 3,
+  "simulator_development": "stopped_by_user",
+  "simulator_behavior_tests": "not_rerun",
+  "bytes": 72228775,
+  "sha256": "07e8b33c9153e105f485adcb41bc32a2cd17556a8b85a276dd9917f75c31a652",
+  "crc_checked": true,
+  "all_file_hashes_checked": true,
+  "field_verified": false,
+  "tia_verified": false
+}

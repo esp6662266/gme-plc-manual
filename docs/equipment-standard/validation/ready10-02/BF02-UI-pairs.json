@@ -1,0 +1,122 @@
+[
+  {
+    "label": "LAD1886 · Part 78",
+    "highlight": "78\tCoil\t\toperand = BF02_RUN"
+  },
+  {
+    "label": "LAD1886 · Part 33",
+    "highlight": "33\tCoil\t\toperand = Abilita_lavaggio_BF02"
+  },
+  {
+    "label": "LAD1885 · Part 460",
+    "highlight": "460\tContact\t\toperand = ON"
+  },
+  {
+    "label": "LAD1885 · Part 428",
+    "highlight": "428\tCoil\t\toperand = Forza_Lavaggio"
+  },
+  {
+    "label": "LAD1885 · Part 418",
+    "highlight": "418\tSdCoil\t\tvalue = S5T#2H; operand = Tag_130"
+  },
+  {
+    "label": "LAD1885 · Part 423",
+    "highlight": "423\tSdCoil\t\tvalue = S5T#10M; operand = Tag_129"
+  },
+  {
+    "label": "LAD1887 · Part 457",
+    "highlight": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "label": "LAD1887 · Part 468",
+    "highlight": "468\tSdCoil\t\tvalue = Data.LAVA_PAUSA; operand = Tag_132"
+  },
+  {
+    "label": "LAD1887 · Part 473",
+    "highlight": "473\tSdCoil\t\tvalue = Data.LAVA_LAVORO; operand = Tag_131"
+  },
+  {
+    "label": "LAD1883 · Part 216",
+    "highlight": "216\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "label": "LAD1884 · Part 398",
+    "highlight": "398\tMove\t\tin = Coeff.DP_02_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "label": "LAD1888 · Part 566",
+    "highlight": "566\tMove\t\tin = 3; out1 = Data.LAVA"
+  },
+  {
+    "label": "LAD1889 · Part 711",
+    "highlight": "711\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "label": "LAD1890 · Part 695",
+    "highlight": "695\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "label": "LAD1899 · Part 24",
+    "highlight": "24\tAdd\t\tin1 = 1; in2 = Data.Ev_filter_on; out = Data.Ev_filter_on"
+  },
+  {
+    "label": "LAD1891 · Part 898",
+    "highlight": "898\tCoil\t\toperand = EV-51"
+  },
+  {
+    "label": "LAD1898 · Part 1906",
+    "highlight": "1906\tCoil\t\toperand = EV-90"
+  },
+  {
+    "label": "LAD1992 · Part 1136",
+    "highlight": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "label": "LAD1992 · Part 1141",
+    "highlight": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "label": "LAD1992 · Part 1152",
+    "highlight": "1152\tRCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "label": "LAD403 · Part 267",
+    "highlight": "267\tMove\t\tin = RefId 54 / ORef UID 293; out1 = RefId 32 / ORef UID 294"
+  },
+  {
+    "label": "LAD927 · Part 147",
+    "highlight": "147\tMove\t\tin = RefId 21 / ORef UID 181; out1 = WorkData.W4"
+  },
+  {
+    "label": "LAD356 · Part 31",
+    "highlight": "31\tMove\t\tin = Tag_289; out1 = RefId 58 / ORef UID 52"
+  },
+  {
+    "label": "LAD1882 · Wire 28",
+    "highlight": "28\tPart 23.eno ↔ Part 32.en"
+  },
+  {
+    "label": "LAD1620 · Wire 351",
+    "highlight": "351\tPart 350.out ↔ Part 319.en ↔ Part 322.en ↔ Part 325.en ↔ Part 328.en ↔ Part 331.en ↔ Part 334.en"
+  },
+  {
+    "label": "LAD1774 · Wire 1571",
+    "highlight": "1571\tORef 1564 (PR_BR02) ↔ Part 1556.Analog_input"
+  },
+  {
+    "label": "LAD1774 · Wire 1574",
+    "highlight": "1574\tPart 1556.OutValue ↔ ORef 1567 (Data.DP_02)"
+  },
+  {
+    "label": "LAD1774 · Wire 24",
+    "highlight": "24\tPart 1556.Out_of_range ↔ ORef 23 (Allarm.BF02_OFR)"
+  },
+  {
+    "label": "LAD1889 · Part 699",
+    "highlight": "699\tMove\t\tin = 51; out1 = Data.LAVA_START"
+  },
+  {
+    "label": "LAD1884 · Part 458",
+    "highlight": "458\tMove\t\tin = Coeff.DP_02_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  }
+]

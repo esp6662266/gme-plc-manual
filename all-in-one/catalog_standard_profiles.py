@@ -52,8 +52,14 @@ def blocks(text):
     return result
 
 def reviewed_sections(text,config):
+    # Original draft bytes and hash remain intact; only reviewed display text changes.
+    for correction in config.get('reviewed_text_replacements',[]):
+        assert text.count(correction['original'])==1, 'correction must match one original passage'
+        text=text.replace(correction['original'],correction['reviewed'])
     result={s:[] for s in SECTIONS}
-    headings=list(re.finditer(r'^## (\d+)(?:\.)?\s+(.+)$',text,re.M))
+    depth=config.get('draft_heading_depth',2)
+    assert depth in (1,2),'supported original draft heading depth'
+    headings=list(re.finditer(r'^'+('#'*depth)+r' (\d+)(?:\.)?\s+(.+)$',text,re.M))
     selected=config.get('section_numbers',[1,2,3,4,5,6,7])
     assert len(selected)==7 and len(set(selected))==7,'reviewed seven areas required'
     by_number={int(h.group(1)):h for h in headings}
@@ -75,7 +81,7 @@ def reviewed_sections(text,config):
                 start,end=config['completion_excerpt']
                 assert body.count(start)==1 and body.count(end)==1
                 body=body.split(start,1)[1].split(end,1)[0]
-        sub=list(re.finditer(r'^### (\d+\.\d+)\s+(.+)$',body,re.M))
+        sub=list(re.finditer(r'^'+('#'*(depth+1))+r' (\d+\.\d+)\s+(.+)$',body,re.M))
         if not sub:
             result[section].append(dict(id='review-'+str(index+1),title=h.group(2),type='reviewed',value=dict(blocks=blocks(body)),links=[]))
         else:

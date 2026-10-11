@@ -1,0 +1,57 @@
+[
+  {
+    "doc": 1940,
+    "uid": 318,
+    "text": "318\tCoil\t\toperand = Start Spare Motor"
+  },
+  {
+    "doc": 1940,
+    "uid": 314,
+    "text": "314\tRCoil\t\toperand = Flag.M_MC_03"
+  },
+  {
+    "doc": 1070,
+    "uid": 22,
+    "text": "22\tMove\t\tin = Tag_178; out1 = RefId 5 / ORef UID 26"
+  },
+  {
+    "doc": 1070,
+    "uid": 42,
+    "text": "42\tMove\t\tin = Tag_171; out1 = RefId 14 / ORef UID 46"
+  },
+  {
+    "doc": 1789,
+    "uid": 383,
+    "text": "383\tSdCoil\t\tvalue = S5T#2S; operand = Tag_56"
+  },
+  {
+    "doc": 1789,
+    "uid": 389,
+    "text": "389\tSCoil\t\toperand = Allarm.MC_03_FAULT"
+  },
+  {
+    "doc": 1789,
+    "uid": 394,
+    "text": "394\tRCoil\t\toperand = Allarm.MC_03_FAULT"
+  },
+  {
+    "doc": 1790,
+    "uid": 400,
+    "text": "400\tSCoil\t\toperand = Allarm.MC_03_TORQUE"
+  },
+  {
+    "doc": 1790,
+    "uid": 406,
+    "text": "406\tRCoil\t\toperand = Allarm.MC_03_TORQUE"
+  },
+  {
+    "doc": 1021,
+    "uid": 1280,
+    "text": "1280\tMove\t\tin = 1; out1 = hours motors.MC_03_HOUR"
+  },
+  {
+    "doc": 1049,
+    "uid": 2828,
+    "text": "2828\tMove\t\tin = 0; out1 = hours motors.MC_03_HOUR"
+  }
+]

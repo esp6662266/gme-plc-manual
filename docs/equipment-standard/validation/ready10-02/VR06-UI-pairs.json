@@ -1,0 +1,62 @@
+[
+  {
+    "doc": 1969,
+    "uid": 1083,
+    "actual": "1083\tCoil\t\toperand = Start VR06",
+    "match": true
+  },
+  {
+    "doc": 1070,
+    "uid": 35,
+    "actual": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37",
+    "match": true
+  },
+  {
+    "doc": 1813,
+    "uid": 1191,
+    "actual": "1191\tSdCoil\t\tvalue = S5T#2S; operand = Tag_78",
+    "match": true
+  },
+  {
+    "doc": 1813,
+    "uid": 1197,
+    "actual": "1197\tSCoil\t\toperand = Allarm.VR_06_FAULT",
+    "match": true
+  },
+  {
+    "doc": 1813,
+    "uid": 1202,
+    "actual": "1202\tRCoil\t\toperand = Allarm.VR_06_FAULT",
+    "match": true
+  },
+  {
+    "doc": 1969,
+    "uid": 1079,
+    "actual": "1079\tRCoil\t\toperand = Flag.M_VR_06",
+    "match": true
+  },
+  {
+    "doc": 1958,
+    "uid": 836,
+    "actual": "836\tRCoil\t\toperand = Flag.M_LD_01",
+    "match": true
+  },
+  {
+    "doc": 1961,
+    "uid": 891,
+    "actual": "891\tRCoil\t\toperand = Flag.M_LD_01_VIB",
+    "match": true
+  },
+  {
+    "doc": 1043,
+    "uid": 2468,
+    "actual": "2468\tMove\t\tin = 1; out1 = hours motors.VR_06_HOUR",
+    "match": true
+  },
+  {
+    "doc": 1053,
+    "uid": 3082,
+    "actual": "3082\tMove\t\tin = 0; out1 = hours motors.VR_06_HOUR",
+    "match": true
+  }
+]

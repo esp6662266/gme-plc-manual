@@ -1,0 +1,62 @@
+[
+  {
+    "doc": 1963,
+    "uid": 943,
+    "text": "943\tCoil\t\toperand = Start SC11"
+  },
+  {
+    "doc": 1070,
+    "uid": 35,
+    "text": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "doc": 1808,
+    "uid": 1021,
+    "text": "1021\tSdCoil\t\tvalue = S5T#2S; operand = Tag_73"
+  },
+  {
+    "doc": 1808,
+    "uid": 1027,
+    "text": "1027\tSCoil\t\toperand = Allarm.SC_11_FAULT"
+  },
+  {
+    "doc": 1808,
+    "uid": 1032,
+    "text": "1032\tRCoil\t\toperand = Allarm.SC_11_FAULT"
+  },
+  {
+    "doc": 1963,
+    "uid": 939,
+    "text": "939\tRCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "doc": 1843,
+    "uid": 436,
+    "text": "436\tSCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "doc": 1844,
+    "uid": 773,
+    "text": "773\tSCoil\t\toperand = Flag.M_SC_11"
+  },
+  {
+    "doc": 1886,
+    "uid": 30,
+    "text": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "doc": 1888,
+    "uid": 559,
+    "text": "559\tMove\t\tin = 2; out1 = Data.LAVA"
+  },
+  {
+    "doc": 1038,
+    "uid": 2198,
+    "text": "2198\tMove\t\tin = 1; out1 = hours motors.SC_11_HOUR"
+  },
+  {
+    "doc": 1052,
+    "uid": 3020,
+    "text": "3020\tMove\t\tin = 0; out1 = hours motors.SC_11_HOUR"
+  }
+]

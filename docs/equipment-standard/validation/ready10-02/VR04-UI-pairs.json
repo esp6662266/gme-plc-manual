@@ -1,0 +1,98 @@
+[
+  {
+    "sig": "명령",
+    "doc": 1967,
+    "uid": "1040",
+    "row": "1040\tCoil\t\toperand = Start VR04",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "입력 전달",
+    "doc": 1070,
+    "uid": "35",
+    "row": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "응답 감시",
+    "doc": 1811,
+    "uid": "1123",
+    "row": "1123\tSdCoil\t\tvalue = S5T#2S; operand = Tag_76",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "고장 Set",
+    "doc": 1811,
+    "uid": "1129",
+    "row": "1129\tSCoil\t\toperand = Allarm.VR_04_FAULT",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "고장 Reset",
+    "doc": 1811,
+    "uid": "1134",
+    "row": "1134\tRCoil\t\toperand = Allarm.VR_04_FAULT",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "SC10 요청 영향",
+    "doc": 1962,
+    "uid": "916",
+    "row": "916\tRCoil\t\toperand = Flag.M_SC_10",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "BF01 세정 허가",
+    "doc": 1886,
+    "uid": "24",
+    "row": "24\tLe\t\tin1 = Data.DP_01; in2 = Coeff.DP_01_SOGLIA_1",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  },
+  {
+    "sig": "BF01 Forza 분기",
+    "doc": 1885,
+    "uid": "21",
+    "row": "21\tO\t\t",
+    "im": [
+      {
+        "src": "assets/catalog-circuits/Electrical_Rev2-P063.png",
+        "w": 2000
+      }
+    ]
+  }
+]

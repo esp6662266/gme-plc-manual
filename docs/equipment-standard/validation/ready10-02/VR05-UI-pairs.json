@@ -1,0 +1,65 @@
+[
+  {
+    "network": 1968,
+    "uid": "1056",
+    "label": "LAD1968 · Part 1056",
+    "target": "1056\tCoil\t\toperand = Start VR05",
+    "pass": true
+  },
+  {
+    "network": 1070,
+    "uid": "35",
+    "label": "LAD1070 · Part 35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37",
+    "pass": true
+  },
+  {
+    "network": 1812,
+    "uid": "1157",
+    "label": "NOT RUN →T94 2초 · LAD1812 · Part 1157",
+    "target": "1157\tSdCoil\t\tvalue = S5T#2S; operand = Tag_77",
+    "pass": true
+  },
+  {
+    "network": 1812,
+    "uid": "1163",
+    "label": "LAD1812 · Part 1163",
+    "target": "1163\tSCoil\t\toperand = Allarm.VR_05_FAULT",
+    "pass": true
+  },
+  {
+    "network": 1812,
+    "uid": "1168",
+    "label": "LAD1812 · Part 1168",
+    "target": "1168\tRCoil\t\toperand = Allarm.VR_05_FAULT",
+    "pass": true
+  },
+  {
+    "network": 1963,
+    "uid": "939",
+    "label": "LAD1963 · Part 939",
+    "target": "939\tRCoil\t\toperand = Flag.M_SC_11",
+    "pass": true
+  },
+  {
+    "network": 1886,
+    "uid": "30",
+    "label": "LAD1886 · Part 30",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1",
+    "pass": true
+  },
+  {
+    "network": 1042,
+    "uid": "2414",
+    "label": "LAD1042 · Part 2414",
+    "target": "2414\tMove\t\tin = 1; out1 = hours motors.VR_05_HOUR",
+    "pass": true
+  },
+  {
+    "network": 1053,
+    "uid": "3079",
+    "label": "LAD1053 · Part 3079",
+    "target": "3079\tMove\t\tin = 0; out1 = hours motors.VR_05_HOUR",
+    "pass": true
+  }
+]

@@ -1,0 +1,193 @@
+{
+  "original_bytes": 42261,
+  "original_sha256": "fec521ed2bf1a2989585df9600651a8700b458490ee17f6090737e8a78b4550f",
+  "source_hashes_checked": 75,
+  "current_original_differences": 0,
+  "operational_documents_and_version_differences": 0,
+  "reviewed_networks": [
+    1962,
+    1807,
+    1843,
+    1844,
+    1841,
+    1723,
+    402,
+    403,
+    1070,
+    356,
+    1613,
+    1619,
+    1620,
+    1037,
+    1052,
+    1056,
+    1055,
+    1964,
+    1965,
+    1886,
+    1888,
+    1203,
+    331,
+    1085
+  ],
+  "drawings": [
+    {
+      "id": "oem-57",
+      "kind": "OEM 전기",
+      "title": "FG57 · PDF58",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 58,
+      "fg": 57,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P058.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "DATA27.05.2024 · 개정란 공란"
+    },
+    {
+      "id": "oem-121",
+      "kind": "OEM 전기",
+      "title": "FG121 · PDF122",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 122,
+      "fg": 121,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P122.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "DATA27.05.2024 · 개정란 공란"
+    },
+    {
+      "id": "oem-140",
+      "kind": "OEM 전기",
+      "title": "FG140 · PDF141",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 141,
+      "fg": 140,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P141.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "DATA27.05.2024 · 개정란 공란"
+    },
+    {
+      "id": "oem-253",
+      "kind": "OEM 전기",
+      "title": "FG253 · PDF256",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 256,
+      "fg": 253,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P256.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "DATA27.05.2024 · 개정란 공란"
+    },
+    {
+      "id": "construction-47",
+      "kind": "시공·케이블",
+      "title": "시공·케이블 · PDF47",
+      "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+      "page": 47,
+      "fg": null,
+      "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P047.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "24.11.11 Rev1 first draft · 승인란 공란"
+    },
+    {
+      "id": "construction-51",
+      "kind": "시공·케이블",
+      "title": "시공·케이블 · PDF51",
+      "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+      "page": 51,
+      "fg": null,
+      "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P051.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "24.11.11 Rev1 first draft · 승인란 공란"
+    },
+    {
+      "id": "pid",
+      "kind": "P&ID",
+      "title": "P&ID · PDF1",
+      "source": "sources/PID_1684n002I.pdf",
+      "page": 1,
+      "fg": null,
+      "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물 확인 전",
+      "revision": "Rev I 15/01/2013"
+    }
+  ],
+  "new_signals": 17,
+  "steps": 10,
+  "source_pair_positions": 12,
+  "direct_paths": 3,
+  "ui_records": {
+    "status": "passed",
+    "areas": 7,
+    "items": 24,
+    "before_id": "93b7cabc-d5a9-440d-ba43-629e6a8c72b4",
+    "after_id": "qa-sc10-after-20261012",
+    "prior_records_preserved": 26,
+    "total_before": 27,
+    "total_after": 28,
+    "save_reload_restore_reload": "passed",
+    "zero_blank_comparison": "0 versus 미기록",
+    "future_zero_blank_false": "preserved at note, observation, unknown signal",
+    "evidence_source_count": 82,
+    "evidence_bundle": "1a54c39fe88c4a5b3e5a3fcad42af6b01562fd00cba91040dc8922ff1dc9ad52",
+    "direct_paths": [
+      {
+        "image": {
+          "src": "assets/catalog-circuits/Electrical_Rev2-P058.png",
+          "width": 2000
+        },
+        "path": "명령 · Q4.0",
+        "pdf": "sources/Electrical_Rev2.pdf#page=58"
+      },
+      {
+        "image": {
+          "src": "assets/catalog-circuits/Electrical_Rev2-P122.png",
+          "width": 2300
+        },
+        "path": "입력 전달 · I5.0→DB13.X5.0",
+        "pdf": "sources/Electrical_Rev2.pdf#page=122"
+      },
+      {
+        "image": {
+          "src": "assets/catalog-circuits/Electrical_Rev2-P058.png",
+          "width": 2000
+        },
+        "path": "응답 감시 · T81 S5T#2S",
+        "pdf": "sources/Electrical_Rev2.pdf#page=58"
+      }
+    ],
+    "highlighted_source_pairs": 12,
+    "report_a4_pages": 4,
+    "report_all_pages_visually_reviewed": true,
+    "report_bytes": 448657,
+    "responsive": [
+      {
+        "requested": 390,
+        "client": 300,
+        "innerWidth": 312,
+        "scroll": 300
+      },
+      {
+        "requested": 1280,
+        "client": 1012,
+        "innerWidth": 1024,
+        "scroll": 1012
+      },
+      {
+        "mode": "large-wide",
+        "client": 1012,
+        "innerWidth": 1024,
+        "scroll": 1012
+      }
+    ],
+    "console_warnings_errors": 0
+  },
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed"
+}

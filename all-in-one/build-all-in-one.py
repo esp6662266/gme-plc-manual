@@ -143,7 +143,7 @@ data = dict(
     repair_record_forms=json.loads((ROOT/'registers/repair-record-forms.json').read_text()) if (ROOT/'registers/repair-record-forms.json').exists() else dict(profiles=[],counts={}),
 )
 # Preserve the historical priority scope and record the separately authorized catalog rollout.
-data['catalog_rollout_scope']=dict(batch='READY10-01',phase='phase2_source_review',catalog_ids=['FN05','SC01','PV03','MV02','MV05','ER01','CH01','VR01','VR02','VR03'],previous_priority_manuals=18,identity_reports=3,physical_identity_verified=False,tia_verified=False,field_verified=False,publication='See repository PUBLICATION_STATUS.md; generation is not publication proof')
+data['catalog_rollout_scope']=dict(batch='READY10-02',phase='phase2_source_review',catalog_ids=['FN05', 'SC01', 'PV03', 'MV02', 'MV05', 'ER01', 'CH01', 'VR01', 'VR02', 'VR03', 'VR04', 'VR05', 'VR06', 'SC10', 'SC11', 'MC03', 'MC05', 'LD01', 'BF01', 'BF02'],current_batch_catalog_ids=['VR04', 'VR05', 'VR06', 'SC10', 'SC11', 'MC03', 'MC05', 'LD01', 'BF01', 'BF02'],prior_batch_catalog_ids=['FN05', 'SC01', 'PV03', 'MV02', 'MV05', 'ER01', 'CH01', 'VR01', 'VR02', 'VR03'],previous_priority_manuals=18,previous_total_manuals=28,identity_reports=3,physical_identity_verified=False,tia_verified=False,field_verified=False,publication='See repository PUBLICATION_STATUS.md; generation is not publication proof')
 # Display existing source references for the current21 only; no new I/O assignments.
 def oem_page(fg):
     if str(fg) == '5A': return 6

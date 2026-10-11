@@ -12,6 +12,7 @@ for(const key of keys){
  assert.equal(p.field_verified,false);assert.equal(p.tia_verified,false);assert.equal(p.repairs_completed,0);
  for(const [file,hash]of Object.entries(p.source_hashes))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(__dirname+'/'+file)).digest('hex'),hash,file);
  for(const [section]of standard.sections){const items=standard.items(data,key,section);assert.ok(items.length);for(const item of items){const h=standard.render(data,key,{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(h.includes('standard-content-title'));assert.ok(!h.includes('undefined'));for(const [label,url]of item.links){assert.ok(data.resources.includes(url.split('#')[0]),key+':'+label);const [path,anchor]=url.split('#');if(anchor&&path.endsWith('.html'))assert.ok(fs.readFileSync(__dirname+'/'+path,'utf8').includes('id="'+anchor+'"'),key+':'+url);}}}
+ for(const path of data.drawing_workspace.profiles.find(x=>x.key===key).circuit.paths)assert.ok(p.source_pairs.some(pair=>pair.signal===path.signal),key+':missing path source pair '+path.signal);
  const note={id:'qa-'+key,equipment:key,title:'QA only',text:'',updated:'2026-10-11T13:00:00Z',future:{zero:0,blank:'',flag:false},repair_observation:clone(repair.collect(schema,{first_symptom:'QA only',[schema.signals[0].id+'_value']:'0'}))};
  note.repair_observation.future={zero:0,blank:'',flag:false};
  note.repair_observation.observations.push({id:'unknown-new-signal',value:'',future:{retained:false}});
@@ -153,4 +154,166 @@ wire(xml('0327'),'2334',['<OCon UId="2320" />','<PCon UId="2306" PinName="in" />
 wire(xml('0340'),'3099',['<PCon UId="3070" PinName="eno" />','<PCon UId="3073" PinName="en" />']);
 assert.ok(declRaw('0656').split('</LiteralConstant>').some(t=>t.includes('RID="28"')&&t.includes('NID="32" UID="1103"')&&t.includes('SV="S5T_x0023_2S"')));
 assert.ok(declRaw('0616').split('</LiteralConstant>').some(t=>t.includes('RID="7"')&&t.includes('NID="42" UID="2320"')&&t.includes('V="1"')));
-console.log(JSON.stringify({status:'passed',catalog_profiles:keys,scope:'actual catalog IDs, seven areas, source hashes, first10 native timers and reset branches, HOUR Move1 and ENO, safe rendering, unknown/zero/blank/foreign record preservation; no PLC execution'}));
+/* READY10-02: preserve distinct reset/output and timer/set branches. */
+for(const [key,motorFile,alarmFile,hourFile,timer,output,request,raw,processed,set,reset,sd,notRun,hourMove,constant,hourOut]of [
+ ['VR04','0267','0445','0328','%T93','%Q4.4','DB2.DBX2.6','%I5.5','DB13.DBX5.5','1129','1134','1123','1172','2360','2374','2375'],
+ ['VR05','0268','0446','0329','%T94','%Q4.5','DB2.DBX2.7','%I5.6','DB13.DBX5.6','1163','1168','1157','1206','2414','2428','2429'],
+ ['VR06','0269','0447','0330','%T95','%Q4.6','DB2.DBX3.0','%I5.7','DB13.DBX5.7','1197','1202','1191','1240','2468','2482','2483']
+]){
+ const p=standard.profile(data,key);assert.equal(p.alarm.timers[0].address,timer);assert.equal(p.alarm.timers[0].preset,'S5T#2S');
+ const signal=id=>p.signal_trace.signals.find(s=>s.id===id);assert.ok(signal('output').addresses.includes(output));assert.ok(signal('request').addresses.includes(request));assert.ok(signal('raw-feedback').addresses.includes(raw));assert.ok(signal('feedback').addresses.includes(processed));
+ const a=xml(alarmFile),h=xml(hourFile);assert.ok(a.includes('<Part UId="'+set+'" Gate="SCoil"'));assert.ok(a.includes('<Part UId="'+reset+'" Gate="RCoil"'));
+ assert.match(a,new RegExp('<Part UId="'+notRun+'" Gate="Contact">\\s*<Negated PinName="operand" />'));
+ wire(a,'21',['<PCon UId="'+notRun+'" PinName="out" />','<PCon UId="'+sd+'" PinName="in" />']);
+ assert.ok(h.includes('<Part UId="'+hourMove+'" Gate="Move">'));assert.ok(!h.includes('<Part UId="'+hourMove+'" Gate="Add">'));
+ const nid={VR04:'43',VR05:'44',VR06:'45'}[key];assert.ok(declRaw('0616').split('</LiteralConstant>').some(t=>t.includes('RID="7"')&&t.includes('NID="'+nid+'" UID="'+constant+'"')&&t.includes('V="1"')));
+ for(const section of ['io','control','alarms','repair'])assert.ok(!JSON.stringify(standard.items(data,key,section)).includes('Word0'));
+ assert.ok(JSON.stringify(standard.items(data,key,'io')).includes('총8개'));
+}
+wire(xml('0268'),'1071',['<PCon UId="1070" PinName="out" />','<PCon UId="1072" PinName="in" />','<PCon UId="1074" PinName="in" />']);
+wire(xml('0263'),'24',['<PCon UId="22" PinName="out" />','<PCon UId="969" PinName="in" />']);
+wire(xml('0219'),'64',['<PCon UId="29" PinName="out" />','<PCon UId="30" PinName="pre" />','<PCon UId="31" PinName="in" />']);
+wire(xml('0219'),'66',['<OCon UId="44" />','<PCon UId="30" PinName="in2" />']);
+assert.ok(declRaw('0596').split('</GlobalAccess>').some(t=>t.includes('N="DP_01_SOGLIA_1"')&&t.includes('NID="29" UID="44"')&&t.includes('BO="1104"')));
+wire(xml('0340'),'3105',['<PCon UId="3076" PinName="eno" />','<PCon UId="3079" PinName="en" />']);
+assert.ok(declRaw('0563').split('</GlobalAccess>').some(t=>t.includes('RID="26"')&&t.includes('NID="3" UID="288" AK="Write"')&&t.includes('AO="16"')&&t.includes('BIRID="23"')));
+/* VR06: ER01 command and Testing release request, not the separate output coil. */
+wire(xml('0269'),'1104',['<PCon UId="1103" PinName="out" />','<PCon UId="1107" PinName="in" />','<PCon UId="1111" PinName="in" />']);
+for(const uid of ['1107','1109'])assert.match(xml('0269'),new RegExp('<Part UId="'+uid+'" Gate="Contact">\\s*<Negated PinName="operand" />'));
+wire(xml('0269'),'1108',['<PCon UId="1107" PinName="out" />','<PCon UId="1109" PinName="in" />']);
+wire(xml('0269'),'1096',['<PCon UId="1074" PinName="out" />','<PCon UId="1079" PinName="in" />']);
+wire(xml('0269'),'1112',['<PCon UId="1111" PinName="out" />','<PCon UId="1083" PinName="in" />']);
+wire(xml('0259'),'24',['<PCon UId="22" PinName="out" />','<PCon UId="869" PinName="in" />']);
+wire(xml('0261'),'913',['<PCon UId="888" PinName="out" />','<PCon UId="891" PinName="in" />']);
+wire(xml('0261'),'934',['<PCon UId="933" PinName="out" />','<PCon UId="935" PinName="in" />']);
+wire(xml('0261'),'936',['<PCon UId="935" PinName="out" />','<PCon UId="894" PinName="in2" />']);
+wire(xml('0261'),'26',['<PCon UId="31" PinName="out" />','<PCon UId="900" PinName="in" />']);
+wire(xml('0340'),'3108',['<PCon UId="3079" PinName="eno" />','<PCon UId="3082" PinName="en" />']);
+/* SC10: own automatic counters, VR04 request reset, and shared washing writers. */
+const sc10=standard.profile(data,'SC10');assert.equal(sc10.signal_trace.signals.length,17);assert.equal(sc10.alarm.timers[0].address,'%T81');assert.equal(sc10.alarm.timers[0].preset,'S5T#2S');
+assert.ok(JSON.stringify(standard.items(data,'SC10','io')).includes('총8개'));
+wire(xml('0262'),'24',['<PCon UId="22" PinName="out" />','<PCon UId="946" PinName="in" />']);
+wire(xml('0262'),'947',['<PCon UId="946" PinName="out" />','<PCon UId="911" PinName="in2" />']);
+wire(xml('0262'),'949',['<PCon UId="948" PinName="out" />','<PCon UId="920" PinName="in" />']);
+assert.match(xml('0441'),/<Part UId="1036" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+wire(xml('0441'),'21',['<PCon UId="1036" PinName="out" />','<PCon UId="987" PinName="in" />']);
+wire(xml('0441'),'22',['<PCon UId="1027" PinName="out" />','<PCon UId="993" PinName="in" />']);
+assert.ok(declRaw('0656').split('</LiteralConstant>').some(t=>t.includes('RID="28"')&&t.includes('NID="29" UID="1001"')&&t.includes('SV="S5T_x0023_2S"')));
+for(const [file,uid,nid,value,wireId,setUid,outUid]of [['0164','602','3','5','690','434','604'],['0165','946','4','6','1039','771','948']]){
+ wire(xml(file),wireId,['<PCon UId="'+setUid+'" PinName="operand" />','<OCon UId="'+outUid+'" />']);
+ assert.ok(declRaw('0578').split('</LiteralConstant>').some(t=>t.includes('NID="'+nid+'" UID="'+uid+'"')&&t.includes('V="'+value+'"')));
+}
+assert.ok(xml('0324').includes('<Part UId="2144" Gate="Move">'));
+wire(xml('0324'),'2172',['<OCon UId="2158" />','<PCon UId="2144" PinName="in" />']);
+assert.ok(declRaw('0616').split('</LiteralConstant>').some(t=>t.includes('NID="39" UID="2158"')&&t.includes('RID="7"')&&t.includes('V="1"')));
+wire(xml('0339'),'3043',['<PCon UId="3014" PinName="eno" />','<PCon UId="3017" PinName="en" />']);
+wire(xml('0219'),'53',['<PCon UId="23" PinName="out" />','<PCon UId="24" PinName="pre" />','<PCon UId="25" PinName="in" />']);
+assert.ok(xml('0219').includes('<Part UId="24" Gate="Le">'));
+wire(xml('0202'),'600',['<PCon UId="599" PinName="out" />','<PCon UId="547" PinName="en" />','<PCon UId="601" PinName="in" />']);
+assert.ok(declRaw('0596').split('</GlobalAccess>').some(t=>t.includes('N="LAVA"')&&t.includes('BO="1840"')&&['571','574','577','581'].every(uid=>t.includes('NID="6" UID="'+uid+'"'))));
+/* SC11: independent branches, shared BF02 threshold, and fifth reset Move. */
+const sc11=standard.profile(data,'SC11');assert.equal(sc11.signal_trace.signals.length,19);assert.equal(sc11.alarm.timers[0].address,'%T82');assert.equal(sc11.alarm.timers[0].preset,'S5T#2S');
+assert.ok(JSON.stringify(standard.items(data,'SC11','io')).includes('총8개'));
+wire(xml('0263'),'24',['<PCon UId="22" PinName="out" />','<PCon UId="969" PinName="in" />']);
+wire(xml('0263'),'970',['<PCon UId="969" PinName="out" />','<PCon UId="934" PinName="in2" />']);
+wire(xml('0263'),'972',['<PCon UId="971" PinName="out" />','<PCon UId="943" PinName="in" />']);
+assert.match(xml('0442'),/<Part UId="1070" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+wire(xml('0442'),'21',['<PCon UId="1070" PinName="out" />','<PCon UId="1021" PinName="in" />']);
+wire(xml('0442'),'22',['<PCon UId="1061" PinName="out" />','<PCon UId="1027" PinName="in" />']);
+wire(xml('0442'),'1068',['<PCon UId="1067" PinName="out" />','<PCon UId="1032" PinName="in" />']);
+assert.ok(declRaw('0656').split('</LiteralConstant>').some(t=>t.includes('RID="28"')&&t.includes('NID="30" UID="1035"')&&t.includes('SV="S5T_x0023_2S"')));
+wire(xml('0164'),'691',['<PCon UId="436" PinName="operand" />','<OCon UId="605" />']);
+wire(xml('0165'),'1040',['<PCon UId="773" PinName="operand" />','<OCon UId="949" />']);
+wire(xml('0325'),'2226',['<OCon UId="2212" />','<PCon UId="2198" PinName="in" />']);
+assert.ok(declRaw('0616').split('</LiteralConstant>').some(t=>t.includes('NID="40" UID="2212"')&&t.includes('RID="7"')&&t.includes('V="1"')));
+wire(xml('0339'),'3046',['<PCon UId="3017" PinName="eno" />','<PCon UId="3020" PinName="en" />']);
+wire(xml('0219'),'64',['<PCon UId="29" PinName="out" />','<PCon UId="30" PinName="pre" />','<PCon UId="31" PinName="in" />']);
+wire(xml('0219'),'76',['<PCon UId="33" PinName="out" />','<PCon UId="78" PinName="in" />']);
+assert.ok(declRaw('0596').split('</GlobalAccess>').some(t=>t.includes('N="DP_02"')&&t.includes('NID="29" UID="43"')&&t.includes('BO="1936"')));
+assert.ok(declRaw('0596').split('</GlobalAccess>').some(t=>t.includes('N="DP_01_SOGLIA_1"')&&t.includes('NID="29" UID="44"')&&t.includes('BO="1104"')));
+wire(xml('0202'),'604',['<PCon UId="603" PinName="out" />','<PCon UId="559" PinName="en" />']);
+wire(xml('0264'),'1033',['<PCon UId="1032" PinName="out" />','<PCon UId="972" PinName="in5" />']);
+/* MC03: OFF alarms, distinct standby/testing reset, and raw Monitor source. */
+const mc03=standard.profile(data,'MC03');assert.equal(mc03.signal_trace.signals.length,17);assert.equal(mc03.alarm.timers[0].address,'%T53');assert.equal(mc03.alarm.alarms.length,2);
+assert.equal((xml('0360').match(/<ORef /g)||[]).length,8);assert.ok(JSON.stringify(standard.items(data,'MC03','io')).includes('실제 피연산자 미결속')); 
+wire(xml('0246'),'348',['<PCon UId="347" PinName="out" />','<PCon UId="349" PinName="in" />']);
+wire(xml('0246'),'350',['<PCon UId="349" PinName="out" />','<PCon UId="306" PinName="in2" />']);
+wire(xml('0246'),'354',['<PCon UId="353" PinName="out" />','<PCon UId="306" PinName="in3" />']);
+wire(xml('0246'),'356',['<PCon UId="355" PinName="out" />','<PCon UId="318" PinName="in" />']);
+for(const uid of ['347','349','353'])assert.match(xml('0246'),new RegExp('<Part UId="'+uid+'" Gate="Contact">\\s*<Negated PinName="operand" \/>'));
+assert.ok(declRaw('0658').split('</SimpleAccess>').some(t=>t.includes('N="OFF"')&&t.includes('NID="10" UID="395"')&&t.includes('NID="11" UID="407"')&&t.includes('AO="1"')));
+wire(xml('0426'),'21',['<PCon UId="432" PinName="out" />','<PCon UId="383" PinName="in" />']);
+wire(xml('0426'),'424',['<PCon UId="423" PinName="out" />','<PCon UId="425" PinName="in" />']);
+wire(xml('0426'),'426',['<PCon UId="425" PinName="out" />','<PCon UId="389" PinName="in" />']);
+wire(xml('0426'),'430',['<PCon UId="429" PinName="out" />','<PCon UId="394" PinName="in" />']);
+assert.match(xml('0427'),/<Part UId="426" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+wire(xml('0427'),'433',['<PCon UId="432" PinName="out" />','<PCon UId="406" PinName="in" />']);
+wire(xml('0311'),'1308',['<OCon UId="1294" />','<PCon UId="1280" PinName="in" />']);
+assert.ok(declRaw('0616').split('</LiteralConstant>').some(t=>t.includes('NID="23" UID="1294"')&&t.includes('RID="7"')&&t.includes('V="1"')));
+wire(xml('0336'),'2854',['<PCon UId="2825" PinName="eno" />','<PCon UId="2828" PinName="en" />']);
+assert.ok(declRaw('0556').split('</SimpleAccess>').some(t=>t.includes('N="MC03_torque"')&&t.includes('RID="240"')&&t.includes('AK="Monitor"')&&t.includes('AO="52"')));
+const rawTorque=data.repair_record_forms.profiles.find(x=>x.key==='MC03').signals.find(x=>x.id==='raw-torque');assert.deepEqual(rawTorque.refs,[]);assert.deepEqual(rawTorque.reference_documents,['sources/decoded-original/0556-IdentXmlPart.xml']);
+/* MC05: retain unavailable output/alarm logic and the actual OFF-gated Set. */
+const mc05=standard.profile(data,'MC05');assert.deepEqual(mc05.alarm.timers,[]);assert.deepEqual(mc05.alarm.alarms,[]);
+assert.ok(xml('0164').includes('<Part UId="458" Gate="RCoil"'));
+assert.ok(xml('0165').includes('<Part UId="793" Gate="SCoil"'));
+wire(xml('0165'),'1054',['<PCon UId="789" PinName="out" />','<PCon UId="1149" PinName="in" />']);
+wire(xml('0165'),'1150',['<PCon UId="1149" PinName="out" />','<PCon UId="793" PinName="in" />']);
+assert.ok(declRaw('0575').split('</SimpleAccess>').some(t=>t.includes('N="OFF"')&&t.includes('NID="4" UID="958"')&&t.includes('AO="1"')));
+wire(xml('0336'),'2860',['<PCon UId="2831" PinName="eno" />','<PCon UId="2834" PinName="en" />']);
+assert.ok(declRaw('0616').split('</LiteralConstant>').some(t=>t.includes('NID="51" UID="2846"')&&t.includes('V="0"')));
+const mc05Form=data.repair_record_forms.profiles.find(x=>x.key==='MC05');
+for(const id of ['output','raw-run','raw-torque'])assert.deepEqual(mc05Form.signals.find(x=>x.id===id).refs,[]);
+assert.ok(JSON.stringify(standard.items(data,'MC05','circuits')).includes('E6.4(SS09)는 밖'));
+/* LD01: door permission, alternate vibration branch, TON Q, and literal HOUR1. */
+const ld=standard.profile(data,'LD01');assert.equal(ld.signal_trace.signals.length,35);
+assert.deepEqual(Array.from(ld.alarm.timers,t=>t.preset),['S5T#2S','S5T#2S','T#10S']);
+const ldm=xml('0259'),ldv=xml('0261'),ldton=xml('0161'),ldhour=xml('0322');
+wire(ldm,'872',['<PCon UId="871" PinName="out" />','<PCon UId="873" PinName="in" />']);
+wire(ldm,'874',['<PCon UId="873" PinName="out" />','<PCon UId="841" PinName="in" />']);
+wire(ldv,'25',['<PCon UId="894" PinName="out" />','<PCon UId="31" PinName="in" />']);
+wire(ldton,'25',['<PCon UId="21" PinName="Q" />','<PCon UId="282" PinName="in" />']);
+assert.match(ldton,/<Part UId="314" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+assert.match(ldhour,/<ORef UId="2050" RefId="7" \/>/);
+wire(ldhour,'2065',['<PCon UId="2036" PinName="out1" />','<OCon UId="2051" />']);
+const ldf=data.repair_record_forms.profiles.find(x=>x.key==='LD01');
+assert.deepEqual(Array.from(ldf.signals.find(x=>x.id==='local-vib-start').addresses),[]);
+assert.deepEqual(Array.from(ldf.signals.find(x=>x.id==='level-ton').refs),[]);
+const ldMap=JSON.parse(fs.readFileSync(__dirname+'/sources/decoded-original/network-map.json'));
+for(const d of [1201,1202]){const row=ldMap.find(x=>x.document_id===d);assert.equal(row.inferred_original_nid,null);assert.equal(Object.keys(row.resolved_operands).length,0);assert.equal((xml(row.xml_file.slice(0,4)).match(/<ORef /g)||[]).length,8);}
+/* BF01: shared cleaning and OFR are not physical Run or a second filter alarm. */
+const bf1=standard.profile(data,'BF01');assert.equal(bf1.signal_trace.signals.length,34);
+const bfEnable=xml('0219'),bfForza=xml('0200'),bfTime=xml('0201'),bfStep=xml('0218'),bfDP=xml('0540');
+wire(bfEnable,'51',['<PCon UId="22" PinName="out" />','<PCon UId="23" PinName="in" />']);
+wire(bfEnable,'53',['<PCon UId="23" PinName="out" />','<PCon UId="24" PinName="pre" />','<PCon UId="25" PinName="in" />']);
+assert.match(bfEnable,/<Part UId="24" Gate="Le">/);
+wire(bfForza,'22',['<PCon UId="460" PinName="out" />','<PCon UId="21" PinName="in2" />']);
+wire(bfTime,'501',['<PCon UId="500" PinName="out" />','<PCon UId="457" PinName="en" />','<PCon UId="462" PinName="en" />']);
+wire(bfStep,'49',['<PCon UId="23" PinName="out" />','<PCon UId="24" PinName="en" />','<PCon UId="25" PinName="pre" />','<PCon UId="27" PinName="pre" />']);
+assert.equal(bf1.alarm.timers.find(t=>t.address==='%T114').preset,'S5T#3M');
+assert.match(bfDP,/<Part UId="1146" Gate="Lt">/);assert.match(bfDP,/<Part UId="1149" Gate="Lt">/);
+wire(bfDP,'1200',['<PCon UId="1149" PinName="out" />','<PCon UId="1152" PinName="in" />']);
+const bff=data.repair_record_forms.profiles.find(x=>x.key==='BF01');
+assert.deepEqual(Array.from(bff.signals.find(x=>x.id==='enable').addresses),[]);
+assert.deepEqual(Array.from(bff.signals.find(x=>x.id==='run').addresses),['%M180.3']);
+assert.deepEqual(Array.from(bff.signals.find(x=>x.id==='ofr').addresses),['DB3.DBX24.3']);
+assert.equal(bf1.alarm.alarms.length,2);
+/* BF02: own response chain, even step, DP02 interface, and source model conflict. */
+const bf2=standard.profile(data,'BF02');assert.equal(bf2.signal_trace.signals.length,37);
+wire(bfEnable,'62',['<PCon UId="28" PinName="out" />','<PCon UId="29" PinName="in" />']);
+wire(bfEnable,'64',['<PCon UId="29" PinName="out" />','<PCon UId="30" PinName="pre" />','<PCon UId="31" PinName="in" />']);
+wire(bfEnable,'76',['<PCon UId="33" PinName="out" />','<PCon UId="78" PinName="in" />']);
+assert.match(bfEnable,/<Part UId="30" Gate="Le">/);
+const bf2Pulse=xml('0205'),bf2Analog=xml('0522');
+wire(bf2Pulse,'1007',['<PCon UId="894" PinName="out" />','<PCon UId="1066" PinName="in" />']);
+wire(bf2Pulse,'1067',['<PCon UId="1066" PinName="out" />','<PCon UId="898" PinName="in" />']);
+wire(bf2Analog,'24',['<PCon UId="1556" PinName="Out_of_range" />','<OCon UId="23" />']);
+const bf2f=data.repair_record_forms.profiles.find(x=>x.key==='BF02');
+assert.deepEqual(Array.from(bf2f.signals.find(x=>x.id==='run').addresses),['%M180.4']);
+assert.deepEqual(Array.from(bf2f.signals.find(x=>x.id==='dp-raw').addresses),['%IW400:P']);
+assert.deepEqual(Array.from(bf2f.signals.find(x=>x.id==='ofr').addresses),['DB3.DBX24.5']);
+const bf2Circuits=JSON.stringify(standard.items(data,'BF02','circuits'));
+assert.ok(bf2Circuits.includes('6ES7523-1BL00-0AA0')&&bf2Circuits.includes('6ES7523-1BL01-0AB0'));
+assert.ok(!JSON.stringify(standard.items(data,'BF02','circuits').find(x=>x.id==='review-4-2')).includes('6ES7523-1BL01-0AA0'));
+assert.equal(bf2f.signals.find(x=>x.id==='ofr').role,'responses');
+console.log(JSON.stringify({status:'passed',catalog_profiles:keys,scope:'actual catalog IDs, seven areas, source hashes, native timers/reset/output branches, automatic counters, shared DP01 threshold and preceding Run gates, Data.LAVA writers, HOUR Move1/ENO, startup Word2, HMI8 unbound, MC05 unavailable logic and OFF Set, safe rendering and record preservation; no PLC execution'}));

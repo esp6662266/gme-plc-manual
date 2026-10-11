@@ -1,0 +1,57 @@
+[
+  {
+    "doc": 1844,
+    "uid": 793,
+    "target": "793\tSCoil\t\toperand = Flag.M_MC_05"
+  },
+  {
+    "doc": 1843,
+    "uid": 458,
+    "target": "458\tRCoil\t\toperand = Flag.M_MC_05"
+  },
+  {
+    "doc": 1844,
+    "uid": 1149,
+    "target": "1149\tContact\t\toperand = OFF"
+  },
+  {
+    "doc": 402,
+    "uid": 138,
+    "target": "138\tMove\t\tin = RefId 54 / ORef UID 168; out1 = RefId 7 / ORef UID 169"
+  },
+  {
+    "doc": 1070,
+    "uid": 22,
+    "target": "22\tMove\t\tin = Tag_178; out1 = RefId 5 / ORef UID 26"
+  },
+  {
+    "doc": 1070,
+    "uid": 42,
+    "target": "42\tMove\t\tin = Tag_171; out1 = RefId 14 / ORef UID 46"
+  },
+  {
+    "doc": 356,
+    "uid": 22,
+    "target": "22\tMove\t\tin = Tag_280; out1 = RefId 27 / ORef UID 34"
+  },
+  {
+    "doc": 1049,
+    "uid": 2834,
+    "target": "2834\tMove\t\tin = 0; out1 = hours motors.MC_05_HOUR"
+  },
+  {
+    "doc": 1055,
+    "uid": 3118,
+    "target": "3118\tSdCoil\t\tvalue = S5T#5S; operand = Tag_48"
+  },
+  {
+    "doc": 1614,
+    "uid": 69,
+    "target": "69\tMove\t\tin = Tag_171; out1 = Word_inputs.word1"
+  },
+  {
+    "doc": 1616,
+    "uid": 144,
+    "target": "144\tMove\t\tin = Tag_178; out1 = Word_outputs.WORD1"
+  }
+]

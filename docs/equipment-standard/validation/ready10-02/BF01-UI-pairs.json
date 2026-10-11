@@ -1,0 +1,176 @@
+[
+  {
+    "network": 1886,
+    "kind": "part",
+    "uid": "74",
+    "target": "74\tCoil\t\toperand = BF01_RUN"
+  },
+  {
+    "network": 1886,
+    "kind": "part",
+    "uid": "27",
+    "target": "27\tCoil\t\toperand = Abilita_lavaggio_BF01"
+  },
+  {
+    "network": 1885,
+    "kind": "part",
+    "uid": "460",
+    "target": "460\tContact\t\toperand = ON"
+  },
+  {
+    "network": 1885,
+    "kind": "part",
+    "uid": "428",
+    "target": "428\tCoil\t\toperand = Forza_Lavaggio"
+  },
+  {
+    "network": 1885,
+    "kind": "part",
+    "uid": "418",
+    "target": "418\tSdCoil\t\tvalue = S5T#2H; operand = Tag_130"
+  },
+  {
+    "network": 1885,
+    "kind": "part",
+    "uid": "423",
+    "target": "423\tSdCoil\t\tvalue = S5T#10M; operand = Tag_129"
+  },
+  {
+    "network": 1887,
+    "kind": "part",
+    "uid": "457",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "network": 1887,
+    "kind": "part",
+    "uid": "468",
+    "target": "468\tSdCoil\t\tvalue = Data.LAVA_PAUSA; operand = Tag_132"
+  },
+  {
+    "network": 1887,
+    "kind": "part",
+    "uid": "473",
+    "target": "473\tSdCoil\t\tvalue = Data.LAVA_LAVORO; operand = Tag_131"
+  },
+  {
+    "network": 1883,
+    "kind": "part",
+    "uid": "216",
+    "target": "216\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "network": 1884,
+    "kind": "part",
+    "uid": "398",
+    "target": "398\tMove\t\tin = Coeff.DP_02_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "network": 1888,
+    "kind": "part",
+    "uid": "566",
+    "target": "566\tMove\t\tin = 3; out1 = Data.LAVA"
+  },
+  {
+    "network": 1889,
+    "kind": "part",
+    "uid": "711",
+    "target": "711\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "network": 1890,
+    "kind": "part",
+    "uid": "695",
+    "target": "695\tMove\t\tin = 11; out1 = Data.LAVA_START"
+  },
+  {
+    "network": 1899,
+    "kind": "part",
+    "uid": "24",
+    "target": "24\tAdd\t\tin1 = 1; in2 = Data.Ev_filter_on; out = Data.Ev_filter_on"
+  },
+  {
+    "network": 1891,
+    "kind": "part",
+    "uid": "891",
+    "target": "891\tCoil\t\toperand = EV-11"
+  },
+  {
+    "network": 1898,
+    "kind": "part",
+    "uid": "1899",
+    "target": "1899\tCoil\t\toperand = EV-50"
+  },
+  {
+    "network": 1658,
+    "kind": "part",
+    "uid": "185",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "network": 1658,
+    "kind": "part",
+    "uid": "193",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "network": 1659,
+    "kind": "part",
+    "uid": "162",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "network": 1992,
+    "kind": "part",
+    "uid": "1136",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "network": 1992,
+    "kind": "part",
+    "uid": "1141",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "network": 1992,
+    "kind": "part",
+    "uid": "1152",
+    "target": "1152\tRCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "network": 403,
+    "kind": "part",
+    "uid": "267",
+    "target": "267\tMove\t\tin = RefId 54 / ORef UID 293; out1 = RefId 32 / ORef UID 294"
+  },
+  {
+    "network": 927,
+    "kind": "part",
+    "uid": "147",
+    "target": "147\tMove\t\tin = RefId 21 / ORef UID 181; out1 = WorkData.W4"
+  },
+  {
+    "network": 356,
+    "kind": "part",
+    "uid": "28",
+    "target": "28\tMove\t\tin = Tag_286; out1 = RefId 55 / ORef UID 46"
+  },
+  {
+    "network": 1882,
+    "kind": "wire",
+    "uid": "28",
+    "target": "28\tPart 23.eno ↔ Part 32.en"
+  },
+  {
+    "network": 1773,
+    "kind": "wire",
+    "uid": "1551",
+    "target": "1551\tORef 1544 (PR_BF01) ↔ Part 1536.Analog_input"
+  },
+  {
+    "network": 1620,
+    "kind": "wire",
+    "uid": "351",
+    "target": "351\tPart 350.out ↔ Part 319.en ↔ Part 322.en ↔ Part 325.en ↔ Part 328.en ↔ Part 331.en ↔ Part 334.en"
+  }
+]

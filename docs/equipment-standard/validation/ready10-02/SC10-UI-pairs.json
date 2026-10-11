@@ -1,0 +1,62 @@
+[
+  {
+    "network": 1962,
+    "uid": "920",
+    "target": "920\tCoil\t\toperand = Start SC10"
+  },
+  {
+    "network": 1070,
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "network": 1807,
+    "uid": "987",
+    "target": "987\tSdCoil\t\tvalue = S5T#2S; operand = Tag_72"
+  },
+  {
+    "network": 1807,
+    "uid": "993",
+    "target": "993\tSCoil\t\toperand = Allarm.SC_10_FAULT"
+  },
+  {
+    "network": 1807,
+    "uid": "998",
+    "target": "998\tRCoil\t\toperand = Allarm.SC_10_FAULT"
+  },
+  {
+    "network": 1962,
+    "uid": "916",
+    "target": "916\tRCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "network": 1843,
+    "uid": "434",
+    "target": "434\tSCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "network": 1844,
+    "uid": "771",
+    "target": "771\tSCoil\t\toperand = Flag.M_SC_10"
+  },
+  {
+    "network": 1886,
+    "uid": "24",
+    "target": "24\tLe\t\tin1 = Data.DP_01; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "network": 1888,
+    "uid": "553",
+    "target": "553\tMove\t\tin = 1; out1 = Data.LAVA"
+  },
+  {
+    "network": 1037,
+    "uid": "2144",
+    "target": "2144\tMove\t\tin = 1; out1 = hours motors.SC_10_HOUR"
+  },
+  {
+    "network": 1052,
+    "uid": "3017",
+    "target": "3017\tMove\t\tin = 0; out1 = hours motors.SC_10_HOUR"
+  }
+]

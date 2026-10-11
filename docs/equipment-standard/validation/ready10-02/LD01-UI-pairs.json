@@ -1,0 +1,134 @@
+[
+  {
+    "network": 1958,
+    "kind": "part",
+    "uid": "841",
+    "target": "841\tCoil\t\toperand = Start LD01"
+  },
+  {
+    "network": 1958,
+    "kind": "part",
+    "uid": "836",
+    "target": "836\tRCoil\t\toperand = Flag.M_LD_01"
+  },
+  {
+    "network": 1070,
+    "kind": "part",
+    "uid": "35",
+    "target": "35\tMove\t\tin = Tag_180; out1 = RefId 11 / ORef UID 37"
+  },
+  {
+    "network": 1070,
+    "kind": "part",
+    "uid": "130",
+    "target": "130\tCoil\t\toperand = Inputs.LD-01 Minimo"
+  },
+  {
+    "network": 1070,
+    "kind": "part",
+    "uid": "135",
+    "target": "135\tCoil\t\toperand = Inputs.LD-01 Inspection LS"
+  },
+  {
+    "network": 1070,
+    "kind": "part",
+    "uid": "140",
+    "target": "140\tCoil\t\toperand = Inputs.LD-01 Local Button"
+  },
+  {
+    "network": 1960,
+    "kind": "part",
+    "uid": "871",
+    "target": "871\tCoil\t\toperand = Start_LD01Vib"
+  },
+  {
+    "network": 1961,
+    "kind": "part",
+    "uid": "900",
+    "target": "900\tCoil\t\toperand = Start Vibrator LD-01"
+  },
+  {
+    "network": 1961,
+    "kind": "part",
+    "uid": "891",
+    "target": "891\tRCoil\t\toperand = Flag.M_LD_01_VIB"
+  },
+  {
+    "network": 1805,
+    "kind": "part",
+    "uid": "919",
+    "target": "919\tSdCoil\t\tvalue = S5T#2S; operand = Tag_70"
+  },
+  {
+    "network": 1805,
+    "kind": "part",
+    "uid": "925",
+    "target": "925\tSCoil\t\toperand = Allarm.LD_01_FAULT"
+  },
+  {
+    "network": 1805,
+    "kind": "part",
+    "uid": "930",
+    "target": "930\tRCoil\t\toperand = Allarm.LD_01_FAULT"
+  },
+  {
+    "network": 1806,
+    "kind": "part",
+    "uid": "953",
+    "target": "953\tSdCoil\t\tvalue = S5T#2S; operand = Tag_71"
+  },
+  {
+    "network": 1806,
+    "kind": "part",
+    "uid": "959",
+    "target": "959\tSCoil\t\toperand = Allarm.LD_01_VIB_FAULT"
+  },
+  {
+    "network": 1806,
+    "kind": "part",
+    "uid": "964",
+    "target": "964\tRCoil\t\toperand = Allarm.LD_01_VIB_FAULT"
+  },
+  {
+    "network": 1228,
+    "kind": "part",
+    "uid": "282",
+    "target": "282\tSCoil\t\toperand = Allarm.LD_01_MIN"
+  },
+  {
+    "network": 1228,
+    "kind": "part",
+    "uid": "288",
+    "target": "288\tRCoil\t\toperand = Allarm.LD_01_MIN"
+  },
+  {
+    "network": 1035,
+    "kind": "part",
+    "uid": "2036",
+    "target": "2036\tMove\t\tin = 1; out1 = hours motors.LD_01_HOUR"
+  },
+  {
+    "network": 1036,
+    "kind": "part",
+    "uid": "2090",
+    "target": "2090\tMove\t\tin = 1; out1 = hours motors.LD_01_VIB_HOUR"
+  },
+  {
+    "network": 1052,
+    "kind": "part",
+    "uid": "3011",
+    "target": "3011\tMove\t\tin = 0; out1 = hours motors.LD_01_HOUR"
+  },
+  {
+    "network": 1052,
+    "kind": "part",
+    "uid": "3014",
+    "target": "3014\tMove\t\tin = 0; out1 = hours motors.LD_01_VIB_HOUR"
+  },
+  {
+    "network": 1959,
+    "kind": "wire",
+    "uid": "41",
+    "target": "41\tPart 36.eno ↔ Part 44.en"
+  }
+]
