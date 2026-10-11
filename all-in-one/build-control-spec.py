@@ -4,7 +4,7 @@ Relationships and static expressions are evidence for review, not executable PLC
 semantics. Never promote an unknown call, timer or field value to a verified rule.
 """
 from pathlib import Path
-import collections, csv, html, json, re, runpy
+import collections, csv, html, json, re
 
 ROOT = Path(__file__).resolve().parent
 DEST = ROOT / 'control-specs'
@@ -242,9 +242,5 @@ summary = dict(equipment_specs=len(specs), inputs_reference_rows=sum(len(s['inpu
     plc_execution_verified=0, field_verified=0, test_designs=sum(len(s['test_designs']) for s in specs), tests_executed=0)
 dump(ROOT / 'registers/control-spec-coverage.json', summary)
 print(json.dumps(summary, ensure_ascii=False, indent=2))
-if (ROOT / 'build-all-in-one.py').exists():
-    if (ROOT / 'build-program-model.py').exists():
-        runpy.run_path(str(ROOT / 'build-program-model.py'), run_name='__main__')
-    if (ROOT / 'build-detailed-procedures.py').exists():
-        runpy.run_path(str(ROOT / 'build-detailed-procedures.py'), run_name='__main__')
-    runpy.run_path(str(ROOT / 'build-all-in-one.py'), run_name='__main__')
+# Document generation is deliberately standalone. Run the required manual
+# generators explicitly; the permanently stopped simulator has no call path here.

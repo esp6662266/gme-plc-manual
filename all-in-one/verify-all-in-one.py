@@ -715,10 +715,12 @@ for route in routes:
         assert u.fragment in parsers[p].ids, route
 entry = (ROOT / 'index.html').read_text()
 assert 'data-gme-app="all-in-one"' in entry
-for ref in ('assets/all-in-one.css','assets/all-in-one.js','assets/all-in-one-data.js','assets/program-model-data.js','assets/virtual-plc.js','assets/simulator-workspace.js','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css'):
+for ref in ('assets/all-in-one.css','assets/all-in-one.js','assets/all-in-one-data.js','assets/program-model-data.js','assets/equipment-standard.js','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css','assets/unified-backup.js'):
     assert ref in entry and (ROOT / ref).is_file()
+assert 'data-unified-backup' in entry
+assert 'GMEUnifiedBackup?.attach' in (ROOT/'assets/all-in-one.js').read_text()
 assert "(ROOT/'manual-catalog.html').write_text" in (ROOT / 'build-manual.py').read_text()
-assert "runpy.run_path(str(ROOT / 'build-all-in-one.py')" in (ROOT / 'build-control-spec.py').read_text()
+assert 'runpy.run_path' not in (ROOT / 'build-control-spec.py').read_text()
 node=shutil.which('node')
 assert node, 'Node.js 22 or newer is required for BC01 record verification'
 bc01_run=subprocess.run([node,str(ROOT/'verify-bc01-tools.cjs')],cwd=ROOT,text=True,capture_output=True)
@@ -775,5 +777,8 @@ result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(dra
               bc01_supplemental_paths_checked=3,bc01_static_address_pairs_checked=3,bc01_native_row_locations_checked=56,simulator_behavior_tests='not_rerun',
               simulator_files_hashes_unchanged=True,
               scope='application integration and preserved source data; not PLC/TIA execution')
+# Frozen assets remain available for source preservation, never loaded as executable scripts.
+assert not re.search(r'<script[^>]+src=[\"\'][^\"\']*(?:virtual-plc|simulator-workspace)\.js', (ROOT/'index.html').read_text())
+
 (ROOT / 'all-in-one-verification.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
 print(json.dumps(result,ensure_ascii=False,indent=2))

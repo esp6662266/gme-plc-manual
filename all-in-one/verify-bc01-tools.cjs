@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const plain=v=>JSON.parse(JSON.stringify(v));
 const sandbox={window:{},TextEncoder};
-for(const name of ['repair-records','note-record-store','bc01-tools'])vm.runInNewContext(fs.readFileSync(__dirname+'/assets/'+name+'.js','utf8'),sandbox);
+for(const name of ['repair-records','note-record-store','equipment-standard','bc01-tools'])vm.runInNewContext(fs.readFileSync(__dirname+'/assets/'+name+'.js','utf8'),sandbox);
 const api=sandbox.window.GMEBC01Tools,store=sandbox.window.GMENoteStore,repair=sandbox.window.GMERepairRecords;
 const data=JSON.parse(fs.readFileSync(__dirname+'/registers/all-in-one-data.json','utf8'));
 const schema=data.repair_record_forms.profiles.find(p=>p.key==='P01');

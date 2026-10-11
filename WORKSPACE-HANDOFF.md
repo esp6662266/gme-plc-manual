@@ -1,8 +1,10 @@
-# 다른 컴퓨터에서 최신 GME 작업 재개 — v1.3.0
+# 다른 컴퓨터에서 최신 GME 작업 재개 — v1.4.0
 
-**2026-10-11 후속 작업표준:** [GME-STD-1.0.0](docs/equipment-standard/WORK-STANDARD.md)과 [EXPANSION-WORK.md](EXPANSION-WORK.md)를 먼저 읽습니다. 저장소에 공유 스킬과 23행/248 ID 대장, GPT-6.1 Sol / Ultra 재개 문장을 추가했습니다. 현재 프로그램은 v1.3.0이며 아래 BC01 기능 설명은 그 구현 기준입니다. 새로운 확장은 PREP-01부터 시작합니다.
+모든 설비 통합 백업·복원은 선택 설비와 관계없이 이 브라우저에 저장한 전체 메모·수리 기록을 JSON 한 파일로 내보냅니다. 메뉴의 “모든 설비 통합 백업·복원”을 열어 다운로드하거나 기존 전체/개별 JSON을 가져옵니다. 복원 미리보기는 설비·새 기록/충돌별 필터와50건 단위 페이지를 제공하며, 필터로 숨긴 선택도 전체 저장 건수에 포함합니다. 같은 설비·같은 ID는 기존 유지/가져온 값 복원/새 ID 복사, 다른 설비·같은 ID는 기존 유지/새 ID 복사를 선택합니다. 새 기록은 기본 추가, 충돌은 기본 기존 유지입니다. 기존에만 있는 기록·초안·미지 필드/행은 유지합니다. 가져온 저장 근거는 그대로 사용하고 이전 저장 근거는 backup_restore_history에 보존합니다. 통합 파일은64MiB/50,000건까지 지원하며 한계를 넘으면 잘라 내지 않고 차단합니다. 다운로드 문자열과 최종 병합 결과도 같은 검사로 확인합니다. P02와 FN04 같은 키를 명칭으로 합치지 않습니다.
 
-최신 작업 원본은 이 저장소 main의 all-in-one/입니다. 버전명은 VERSION.json, 고정 배포판은 v1.3.0 태그, 게시 확인은 PUBLICATION_STATUS.md입니다. 예전 ZIP·OTHER_PC_HANDOFF.md·시뮬레이션 계획은 과거 자료이며 이 문서와 AGENTS.md, all-in-one/ACTIVE-WORK.md를 우선합니다.
+**2026-10-11 후속 작업표준:** [GME-STD-1.0.0](docs/equipment-standard/WORK-STANDARD.md)과 [EXPANSION-WORK.md](EXPANSION-WORK.md)를 먼저 읽습니다. 저장소에 공유 스킬과 23행/248 ID 대장, GPT-6.1 Sol / Ultra 재개 문장을 추가했습니다. 현재 프로그램은 v1.4.0입니다. PREP-01 공통 구조와 FN04 시범을 구현했으며 게시/완료 여부와 다음 작업은 EXPANSION-WORK.md와 PUBLICATION_STATUS.md의 최신 항목을 확인합니다.
+
+최신 작업 원본은 이 저장소 main의 all-in-one/입니다. 버전명은 VERSION.json, 고정 배포판은 게시 확인된 버전 태그, 게시 확인은 PUBLICATION_STATUS.md입니다. 예전 ZIP·OTHER_PC_HANDOFF.md·시뮬레이션 계획은 과거 자료이며 이 문서와 AGENTS.md, all-in-one/ACTIVE-WORK.md를 우선합니다.
 
 ## 처음 내려받기
 
@@ -31,13 +33,13 @@ git pull --ff-only origin main
 git log -1 --oneline
 ```
 
-수정 파일이 있으면 먼저 diff와 백업/커밋을 확인합니다. 미완료 작업을 강제로 reset하거나 덮어쓰지 않습니다. 최신 main은 이후 작업을 포함할 수 있으며 특정 배포판을 확인하려면 v1.3.0 태그의 별도 복사본을 사용합니다.
+수정 파일이 있으면 먼저 diff와 백업/커밋을 확인합니다. 미완료 작업을 강제로 reset하거나 덮어쓰지 않습니다. 최신 main은 이후 작업을 포함할 수 있으며 특정 배포판을 확인하려면 확인하려는 버전 태그의 별도 복사본을 사용합니다.
 
 ## 작업 위치와 검증
 
 | 경로 | 역할 |
 |---|---|
-| all-in-one/ | 현재 BC01 매뉴얼·소스·생성기·원본·검증 문서 |
+| all-in-one/ | 현재 BC01/FN04 매뉴얼·소스·생성기·원본·검증 문서 |
 | all-in-one/ACTIVE-WORK.md | 가장 최근 목표·범위·완료/미확정 상태 |
 | all-in-one/BC01-RECORD-TOOLS-20261011.md | 새 네 기능과 기록 이동·검증 결과 |
 | all-in-one/BC01-PRESERVATION-20261011.md | v1.3 선택 관찰·전체 note 내보내기·근거 버전 안내 |
@@ -49,11 +51,12 @@ Python 3.10 이상이 있으면 다음 명령으로 BC01 검사와 필수14검�
 ```sh
 npm run check:python
 npm run verify:bc01
+npm run verify:equipment
 npm run verify:manual
 npm run serve:manual
 ```
 
-check:python은 Python 준비 확인입니다. 실행기는 Windows py -3, python3, python을 탐지하고 3.10 이상을 요구합니다. 특정 실행 파일은 GME_PYTHON에 경로 하나를 지정합니다(인자를 포함하지 않음). verify:manual은 단순 읽기 검사가 아니라 필수14검사와 manifest·GME-All-In-One-v1.3.0.zip 및 검증 보고서를 재생성합니다. Python 최적화로 검사가 생략되는 실행은 거부합니다. npm build 자체는 Python 없이 저장된 검증 패키지로 실행할 수 있습니다.
+check:python은 Python 준비 확인입니다. 실행기는 Windows py -3, python3, python을 탐지하고 3.10 이상을 요구합니다. 특정 실행 파일은 GME_PYTHON에 경로 하나를 지정합니다(인자를 포함하지 않음). verify:manual은 단순 읽기 검사가 아니라 필수14검사 및 설비2검사와 manifest·GME-All-In-One-v1.4.0.zip 및 검증 보고서를 재생성합니다. Python 최적화로 검사가 생략되는 실행은 거부합니다. npm build 자체는 Python 없이 저장된 검증 패키지로 실행할 수 있습니다.
 
 패키지에 새 파일을 넣을 때는 diff·내용을 검토한 뒤 GME_NEW_PACKAGE_FILES에 새 상대경로의 JSON 목록(예: ["새안내.md"])을 해당 실행에만 지정합니다. 새 파일 집합과 정확히 같아야 하며 성공 후 환경변수를 해제합니다. 기존 파일 삭제·미검토 개인 기록의 자동 포함은 허용하지 않습니다. ZIP은 버전별 Release 자산으로 올리고 예전 태그·ZIP은 덮어쓰지 않습니다.
 
@@ -61,7 +64,7 @@ check:python은 Python 준비 확인입니다. 실행기는 Windows py -3, pytho
 
 ## 브라우저 점검 기록 옮기기
 
-프로그램·문서 최신본은 GitHub에서 받습니다. 로컬 수리·메모 기록은 기존 브라우저에서 전체 메모·수리 기록 백업 JSON을 내려받고, 새 컴퓨터의 BC01 화면 → 백업 가져오기·복원 → 미리보기 → 충돌 선택 → 저장으로 옮깁니다. BC01(P01)만 복원하며 다른 설비·초안·추가 필드를 보존합니다. 서버 자동 동기화와 다른 설비 가져오기는 제공하지 않습니다. 실제 기록·인증 자료는 코드 저장소에 자동 업로드되지 않습니다.
+프로그램·문서 최신본은 GitHub에서 받습니다. 로컬 수리·메모 기록은 기존 브라우저에서 전체 메모·수리 기록 백업 JSON을 내려받고, 새 컴퓨터의 지원 설비(BC01/FN04) 화면 → 백업 가져오기·복원 → 미리보기 → 충돌 선택 → 저장으로 옮깁니다. 선택한 P01/P02 기록만 복원하며 다른 설비·초안·추가 필드를 보존합니다. 그 외 설비의 선택 복원은 프로파일 구현 전입니다. 서버 자동 동기화는 제공하지 않습니다. 실제 기록·인증 자료는 코드 저장소에 자동 업로드되지 않습니다.
 
 ## 다음 채팅 재개 문장
 

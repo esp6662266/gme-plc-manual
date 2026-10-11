@@ -30,7 +30,7 @@
 
 ## 실행 전에 반드시 확인
 
-build-control-spec.py 마지막 부분은 build-program-model.py를 runpy로 자동 호출한다. 이 경로를 분리하기 전 실행하지 않는다. build-all-in-one.py는 데이터뿐 아니라 네트워크 HTML의 앵커/스타일도 쓴다. build-package.py는 필수14정적 검사와 패키지/검증 기록을 생성한다. 파일명에 verify가 있어도 출력 파일이 생길 수 있으므로 실행 본문을 확인한다.
+v1.3.0의 build-control-spec.py는 build-program-model.py를 runpy로 자동 호출했다. PREP-01(v1.4.0)에서 전체 자동 연쇄를 제거했다. 현재는 독립 정적 생성기이며 실행 전에 변경된 호출 경로가 없는지 확인한다. build-all-in-one.py는 데이터뿐 아니라 네트워크 HTML의 앵커/스타일도 쓴다. build-package.py는 필수14정적 검사와 패키지/검증 기록을 생성한다. 파일명에 verify가 있어도 출력 파일이 생길 수 있으므로 실행 본문을 확인한다.
 
 ## BC01에만 적용하는 회귀 사례
 

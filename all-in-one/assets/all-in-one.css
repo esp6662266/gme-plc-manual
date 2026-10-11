@@ -87,3 +87,5 @@ body[data-view=priority] .context,body[data-view=priority] .device-tabs{display:
 .bc01-search-results>div{display:block}.bc01-search-group{margin:18px 0}.bc01-search-group h4{font-size:1em;margin:0 0 10px;line-height:1.6}.bc01-search-group>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bc01-search-group button{display:flex;flex-direction:column;text-align:left;gap:8px;width:100%;min-width:0;background:white;border:1px solid #c3d1d8;border-radius:10px;padding:16px;font:inherit;overflow-wrap:anywhere;line-height:1.65}.bc01-search-group button:hover{border-color:#167769;background:#edf7f3}@media(max-width:640px){.bc01-search-group>div{grid-template-columns:minmax(0,1fr)}}
 /* Let the available reading column determine card widths. */
 .bc01-relation-map{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}.bc01-comparison-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+
+.standard-data{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}

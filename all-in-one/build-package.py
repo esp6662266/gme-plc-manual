@@ -49,6 +49,15 @@ for verifier in ['verify-improvement-impact.py','verify-alarm-recovery.py','veri
     if run.returncode:
         print(run.stdout);print(run.stderr,file=sys.stderr);run.check_returncode()
     verification_runs.append(dict(script=verifier,script_sha256=sha(ROOT/verifier),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed'))
+equipment_verification_runs=[]
+node=shutil.which('node')
+assert node, 'Node.js 22 or newer is required for equipment record checks'
+for verifier in ['verify-bc01-tools.cjs','verify-equipment-standards.cjs']:
+    run=subprocess.run([node,str(ROOT/verifier)],cwd=ROOT,text=True,capture_output=True)
+    if run.returncode:
+        print(run.stdout);print(run.stderr,file=sys.stderr);run.check_returncode()
+    assert json.loads(run.stdout)['status']=='passed',run.stdout
+    equipment_verification_runs.append(dict(script=verifier,script_sha256=sha(ROOT/verifier),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed'))
 source_files=[f for f in prior_files if f['file'].startswith(('sources/','PV01-detail/')) or f['file']=='assets/HMI_DECOATER.png']
 assert source_files
 for item in source_files:
@@ -73,7 +82,7 @@ assert inventory()==actual,'Package inventory changed during verification'
 files=[dict(file=p,sha256=sha(ROOT/p),bytes=(ROOT/p).stat().st_size) for p in actual]
 additional=json.loads((ROOT/'registers/additional-source-manifest.json').read_text())
 for item in additional:assert sha(ROOT/item['file'])==item['sha256']
-record=dict(fresh_verification_runs=verification_runs,version=release['version'],date=release['released'],entry='index.html',simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',original_files_unchanged=len(source_files),additional_sources_verified=len(additional),field_verified=False,tia_verified=False,files=files)
+record=dict(fresh_verification_runs=verification_runs,fresh_equipment_verification_runs=equipment_verification_runs,version=release['version'],date=release['released'],entry='index.html',simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',original_files_unchanged=len(source_files),additional_sources_verified=len(additional),field_verified=False,tia_verified=False,files=files)
 manifest.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
 temporary=archive.with_name('.GME-All-In-One-20261007.pending.zip')
 with zipfile.ZipFile(temporary,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
@@ -87,6 +96,6 @@ with zipfile.ZipFile(temporary) as z:
     assert z.read(ROOT.name+'/'+manifest.name)==manifest.read_bytes()
 if archive.exists() and isinstance(prior,list) and not baseline.exists():shutil.copy2(archive,baseline)
 temporary.replace(archive)
-report=dict(fresh_verifiers=len(verification_runs),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed',archive=archive.name,version=release['version'],files=len(files)+1,original_files_unchanged=len(source_files),additional_sources_verified=len(additional),simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',bytes=archive.stat().st_size,sha256=sha(archive),crc_checked=True,all_file_hashes_checked=True,field_verified=False,tia_verified=False)
+report=dict(fresh_verifiers=len(verification_runs),fresh_equipment_verifiers=len(equipment_verification_runs),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed',archive=archive.name,version=release['version'],files=len(files)+1,original_files_unchanged=len(source_files),additional_sources_verified=len(additional),simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',bytes=archive.stat().st_size,sha256=sha(archive),crc_checked=True,all_file_hashes_checked=True,field_verified=False,tia_verified=False)
 (ROOT.parent/f'GME-All-In-One-v{release["version"]}.package-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,ensure_ascii=False,indent=2))

@@ -1,12 +1,12 @@
 {
-  "version": "1.3.0",
-  "name": "GME All-in-One v1.3.0 — BC01 기록 보존·작업 재개 보완",
+  "version": "1.4.0",
+  "name": "GME All-in-One v1.4.0 — FN04 시범·모든 설비 통합 백업",
   "released": "2026-10-11",
-  "git_tag": "v1.3.0",
+  "git_tag": "v1.4.0",
   "branch": "main",
   "repository": "https://github.com/esp6662266/gme-plc-manual",
   "site": "https://gme-plc-manual.netlify.app/all-in-one/",
-  "scope": "BC01(P01) only",
+  "scope": "BC01(P01) preserved; FN04(P02) seven-area pilot; all-equipment saved-note JSON backup and restore",
   "simulator": "permanently stopped",
   "plc_changes": 0
 }

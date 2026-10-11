@@ -80,9 +80,10 @@ for cr,r in zip(csvrows,a['equipment']):
 anchors=ids('requirements-audit.html')
 work=a['priority_open_work']
 assert [r['key'] for r in work]==['P'+str(i).zfill(2) for i in range(1,22)]
-assert Counter(r['lane'] for r in work)=={'BC01 단독 표준화':1,'현행 자료·관찰 보강':13,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
-assert work[0]['lane']=='BC01 단독 표준화' and 'BC01 표준 매뉴얼' in work[0]['document_work']
-assert all('다른 설비 확대 보류' in r['document_work'] for r in work[1:])
+assert Counter(r['lane'] for r in work)=={'BC01 기준 보존':1,'FN04 시범 표준화':1,'현행 자료·관찰 보강':12,'식별 자료 우선':3,'본체·계측·제작사 자료':3,'전용 버너 자료·현행 연동':1}
+assert work[0]['lane']=='BC01 기준 보존' and 'BC01 표준 매뉴얼' in work[0]['document_work']
+assert work[1]['lane']=='FN04 시범 표준화' and 'FN04 기존 완료 분석' in work[1]['document_work']
+assert all('GME-STD-1.0.0의 설비별 후속 확장 대상' in r['document_work'] for r in work[2:])
 assert {'priority-open-work'}|{'open-'+r['key'] for r in work}<=anchors
 identity={r['key']:r for r in load('registers/unresolved-identity.json')['profiles']}
 alarms={r['id']:r for r in load('registers/alarm-recovery.json')['profiles']}
@@ -113,7 +114,7 @@ for r,p in zip(work,a['priority'][:21]):
 assert '완료한 AB01' in next(r for r in work if r['plc_id']=='AB01')['document_work']
 assert {'equipment-'+i for i in rows}|{'priority-'+p['key'] for p in priority}|{'R'+str(i).zfill(2) for i in range(1,15)}<=anchors
 assert {'bc01-standard','start','repair','structure','records','pending','limits','install'}<=ids('operator-guide.html')
-for text in ['BC01은 백업 가져오기·복원','서버 동기화는 없습니다','프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다','577개 시험은 설계·미실행']:
+for text in ['메뉴의 모든 설비 통합 백업·복원','기존 전체/개별 JSON도 가져올 수 있습니다','숨긴 선택도 전체 저장 건수에 포함합니다','서버 동기화는 없습니다','프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다','577개 시험은 설계·미실행']:
     assert text in (ROOT/'operator-guide.html').read_text(),text
 result=dict(status='passed',requirements_audit_sha256=sha(ROOT/'registers/requirements-audit.json'),audit_html_sha256=sha(ROOT/'requirements-audit.html'),operator_guide_sha256=sha(ROOT/'operator-guide.html'),source_hashes_checked=len(a['inputs']),equipment_checked=248,priority_checked=23,detail_depth=c,simulator_files_unchanged=True,simulator_behavior_tests='not_rerun',field_verified=False,tia_verified=False,scope='static document coverage; browser observations separate')
 result['current_priority_open_work_checked']=len(work)

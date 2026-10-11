@@ -30,6 +30,9 @@
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
   const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:'',bc01MediaGroup:'belt',bc01Photo:'photo-01',bc01Find:'',bc01Relation:'request'};
+  const manualStateKeys=['bc01Section','bc01Item','bc01AlarmStep','bc01Text','bc01Check','bc01MediaGroup','bc01Photo','bc01Find','bc01Relation','standardWide'];
+  const manualDefaults=Object.fromEntries(manualStateKeys.map(k=>[k,state[k]]));
+  const manualStates=new Map();
   let lastRenderedRoute = null;
   let bc01Wide = false;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
@@ -76,10 +79,12 @@
     if (!views.has(view)) view = 'overview';
     if (!deviceMap.has(selected) && !priorityMap.has(selected)) selected = 'P01';
     const nextScope = selected === state.selected ? state.scope : (priorityMap.has(selected) ? 'priority' : 'all');
+    const manual=selected===state.selected?state:{...manualDefaults,...manualStates.get(selected)};
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
     if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
-    if(view==='manual' && selected==='P01') {if(state.bc01Find)params.set('find',state.bc01Find.slice(0,160));if(state.bc01Section==='control' && state.bc01Item==='request')params.set('relation',state.bc01Relation);params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Section==='overview' && state.bc01Item==='media'){params.set('media',state.bc01MediaGroup);params.set('photo',state.bc01Photo);}if(state.bc01Text==='large')params.set('text','large');if(state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===state.bc01Check))params.set('check',state.bc01Check);}
+    if(view==='manual' && selected==='P01') {if(manual.bc01Find)params.set('find',manual.bc01Find.slice(0,160));if(manual.bc01Section==='control' && manual.bc01Item==='request')params.set('relation',manual.bc01Relation);params.set('section',manual.bc01Section);if(manual.bc01Item)params.set('item',manual.bc01Item);if(manual.bc01Section==='alarms')params.set('alarmStep',manual.bc01AlarmStep);if(manual.bc01Section==='overview' && manual.bc01Item==='media'){params.set('media',manual.bc01MediaGroup);params.set('photo',manual.bc01Photo);}if(manual.bc01Text==='large')params.set('text','large');if(manual.bc01Section==='completion' && bc01CompletionTasks(manual.bc01Item).some(t=>t.id===manual.bc01Check))params.set('check',manual.bc01Check);}
+    if(view==='manual' && selected!=='P01' && window.GMEEquipmentStandard.profile(data,selected)){params.set('section',manual.bc01Section);if(manual.bc01Item)params.set('item',manual.bc01Item);if(manual.bc01Text==='large')params.set('text','large');if(manual.bc01Find)params.set('find',manual.bc01Find);}
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -97,9 +102,12 @@
       state.tableQuery = ''; state.tableDevice = '';
     }
     if(nextView!==state.view || params.get('equipment')!==state.selected) state.drawingZoom=1;
+    if(state.view==='manual')manualStates.set(state.selected,Object.fromEntries(manualStateKeys.map(k=>[k,state[k]])));
+    const oldSelected=state.selected;
     state.view = nextView;
     const key = params.get('equipment');
     state.selected = deviceMap.has(key) || priorityMap.has(key) ? key : 'P01';
+    if(state.selected!==oldSelected)Object.assign(state,manualDefaults,manualStates.get(state.selected));
     const repairSchema=repairWorkspaceKeys.has(state.selected)?repairRecordMap.get(state.selected):null;
     state.repairSymptom=repairSchema?.steps.find(s=>s.id===params.get('symptom'))?.id || (state.view==='repair' && repairSchema?repairSchema.steps[0]?.id:'') || '';
     if(state.view==='manual' && state.selected==='P01') {
@@ -113,6 +121,7 @@
       if(state.bc01Section==='overview' && state.bc01Item==='media')bc01NormalizeMedia(params.get('media'),params.get('photo'));
       bc01LastItems.set(state.bc01Section,state.bc01Item);
     }
+    if(state.view==='manual' && state.selected!=='P01' && window.GMEEquipmentStandard.profile(data,state.selected))Object.assign(state,window.GMEEquipmentStandard.normalize(data,state.selected,params));
     state.doc = validDoc(params.get('doc')) ? params.get('doc') : '';
     state.drawing = params.get('drawing') || '';
     if (state.view === 'review' && reviewMap.has(params.get('review'))) {
@@ -166,7 +175,7 @@
     return panel('설비 대응을 먼저 확인합니다', `<p>${esc(p?.note || '현재 원본 자료에서 직접 대응을 확인하지 못했습니다.')}</p><div class="notice">이 설비는 우선 23개 범위에 포함되어 있습니다. SEJIN 설비 카드, 명판, 제어반과 도면을 대조한 뒤 PLC 태그를 연결합니다.</div><div class="inline-actions">${button('대응표 보기','priority')}${button('확인 메모 작성','notes')}${button('전체 PLC 자료 찾기','resources')}</div>`);
   }
   function renderOverview() {
-    return `<section class="hero"><div><span class="eyebrow">GME / DECOATING WORKSPACE</span><h2>설비를 선택하고, 근거를 따라 확인합니다.</h2><p>매뉴얼부터 수리 진단, PLC 로직과 시험 자료까지 한곳에서 사용합니다. 우선23개를 먼저 완성합니다. 다른 공정2개를 제외한 현재21개에 집중하고, 전체248개는 참고 목록으로 보존합니다. 우선 대상 완료 후 필요한 항목을 추가합니다.</p></div><div class="hero-actions">${button('우선 23개 보기','priority')}${button('BC01 시작','summary','P01')}</div></section>
+    return `<section class="hero"><div><span class="eyebrow">GME / DECOATING WORKSPACE</span><h2>설비를 선택하고, 근거를 따라 확인합니다.</h2><p>매뉴얼부터 수리 진단, PLC 로직과 시험 자료까지 한곳에서 사용합니다. 우선23개를 먼저 완성합니다. 다른 공정2개를 제외한 현재21개에 집중하고, 전체248개 대장을 보존하며, 우선 대상 뒤에 중복·기존 제외·부모 보류를 뺀133후보를 순서대로 작성합니다.</p></div><div class="hero-actions">${button('우선 23개 보기','priority')}${button('BC01 시작','summary','P01')}</div></section>
       <div class="stats">${[['23','우선 설비'],['248','전체 관리 항목'],['426','원본 LAD 네트워크'],['577','시험 설계 · 실행 0'],['18','자료 불일치 · 해소 미확정']].map(([n,t]) => `<div class="stat"><strong>${n}</strong><span>${t}</span></div>`).join('')}</div>
       <div class="columns">${panel('지금 사용할 수 있는 기능', '<div class="status-row"><span>설비별 매뉴얼·수리 절차안</span><span class="badge good">자료 연결</span></div><div class="status-row"><span>I/O·HMI·제어 명세</span><span class="badge good">탐색 가능</span></div><div class="status-row"><span>전기도면·P&ID·원본 래더</span><span class="badge good">탐색 가능</span></div><div class="status-row"><span>시험·확인 대장·작업 메모</span><span class="badge good">통합 화면</span></div>')}
       ${panel('검증을 이어갈 항목', '<div class="status-row"><span>현재 대상21개 설비의 실제 PLC 대응</span><span class="badge pending">동일성 확인</span></div><div class="status-row"><span>상세 수리 절차·호출 구조</span><span class="badge pending">구조 추적 지원</span></div><div class="status-row"><span>시뮬레이터</span><span class="badge pending">개발·행동 시험 중지</span></div><div class="status-row"><span>TIA 실행·현장 프로그램 일치</span><span class="badge pending">미검증</span></div>')}</div>
@@ -366,12 +375,7 @@
     return `<h2>도면과 기본 HMI</h2><div class="doc-buttons">${docButton('기존 DECOATER HMI','assets/HMI_DECOATER.png')}${docButton('P&ID 원본','sources/PID_1684n002I.pdf#page=1')}${docButton('기존 OEM 전기도면','sources/Electrical_Rev2.pdf#page=1')}${docButton('추가 시공도면 · 배관·케이블','construction-guide.html')}${d ? (validDoc(`circuit-guides/${d.id}.html`)?docButton('단자·릴레이 회로 추적',`circuit-guides/${d.id}.html`):'')+[...new Set([...(d.circuit_fgs || []),...d.electrical_fgs])].map(f => docButton('FG '+f+' / PDF '+pdfPage(f),'sources/Electrical_Rev2.pdf#page='+pdfPage(f))).join('') : ''}</div>${construction ? panel('추가 시공도면 · 현재 승인·배선 확인 전', `<p>Can-Decoating_20241118.pdf · 64페이지. 설비 배치·접속함·배관·케이블 양단을 기존 회로·PLC 근거와 함께 봅니다. 표지 FOR APPROVAL, 개정란 24.11.11 first draft design입니다.</p><div class="inline-actions">${docButton('64페이지 색인·확인 대기 '+construction.new_review_items+'건','construction-guide.html')}${docButton('시공도면 원본',construction.source+'#page=1')}${d && validDoc(`construction-guides/${d.id}.html`) ? docButton(d.id+' 케이블·접속함 추적',`construction-guides/${d.id}.html`) : ''}${d ? (d.construction_pages || []).map(p => docButton('시공도면 PDF '+p,construction.source+'#page='+p)).join('') : ''}</div><p class="muted">가림 행은 배선 근거에서 제외합니다. 전체 PLC 대응 미확정 설비는 자동 연결하지 않습니다.</p>`) : ''}<img class="source-image" src="assets/HMI_DECOATER.png" alt="제공된 기존 DECOATER HMI 화면"><p class="diagram-caption">제공된 HMI 이미지입니다. 표시값은 촬영 당시 값이며 현재값이 아닙니다. 설비 선택은 왼쪽 목록에서 유지됩니다.</p>${!d ? unknownPanel() : ''}`;
   }
   function renderSimulator() {
-    if (window.GMESimulatorWorkspace) return window.GMESimulatorWorkspace.render(selection());
-    const {d} = selection();
-    return `<h2>시뮬레이터 · 같은 설비 명세로 준비합니다</h2><div class="notice">실행 엔진은 아직 구현하지 않았습니다. 이 화면은 연결 자료와 모델 준비 상태를 보여 줍니다. 운전·센서 주입·알람 재현은 동작 모델 검증 후 구현합니다.</div>
-      <div class="trace"><span>입력·운전 요청</span><i>→</i><span>허가·인터록</span><i>→</i><span>상태·타이머</span><i>→</i><span>출력·장치 응답</span><i>→</i><span>피드백·알람</span></div>
-      ${d ? panel(d.id+' · 준비 자료', `<div class="status-row"><span>I/O·HMI 참조</span><span class="badge good">연결됨</span></div><div class="status-row"><span>정적 조건 경로</span><span>${d.direct_rule_count}개</span></div><div class="status-row"><span>시험 설계</span><span>${d.test_count}개 · 미실행</span></div><div class="status-row"><span>실행 가능한 동작 모델</span><span class="badge pending">미구현</span></div><div class="status-row"><span>TIA·현장 실행 검증</span><span class="badge pending">미검증</span></div><div class="inline-actions">${button('동작 조건·순서 확인','spec')}${button('고장·복구 자료 확인','repair')}${button('시험 설계 확인','tests')}</div>`) : unknownPanel()}
-      ${panel('첫 구현 대상', `<p>BC01·FN04의 정상 기동, 기동 피드백 없음, 인버터 이상, 운전 중 정지를 검토합니다. 원본 타이머·호출 순서·정상 극성을 먼저 확인하고 장치 응답 가정과 구분합니다.</p><div class="inline-actions">${button('BC01 준비 자료','simulator','P01')}${button('FN04 준비 자료','simulator','P02')}</div>`)}`;
+    return panel('시뮬레이터 · 영구 중지','<div class="notice">사용자 지시에 따라 작성·수정·생성·실행·행동 시험을 하지 않습니다. 기존 자산과 과거 시험 기록은 보존 자료입니다.</div>');
   }
   function renderStructure() {
     const m = window.GME_PROGRAM_MODEL;
@@ -477,7 +481,7 @@
     const linkedReview=reviewMap.get(draft.review_id);
     const own = notes.filter(n => n.equipment === state.selected).sort((a,b) => b.updated.localeCompare(a.updated));
     return `<h2>개선·작업 메모 · ${esc(name)}</h2>${linkedReview ? `<div class="notice info">연결 검토: ${esc(linkedReview.id)} · ${esc(linkedReview.title)}<br>원본 상태: ${esc(linkedReview.source_status)} · 사용자 메모는 현재 설비의 기록 컨텍스트이며 실물 동일성 확정이 아닙니다.<button type="button" data-review-focus="${esc(linkedReview.id)}">이 검토 항목 보기</button></div>` : ''}<div class="inline-actions">${button('근거 검토·확인','review')}${docButton('원본 구조 개선 검토 '+(data.review_counts?.improvement_candidates || 0)+'건','improvement-review.html')}${docButton('현재 작업 범위','ACTIVE-WORK.md')}</div><div class="notice info">이 메모는 현재 브라우저에 저장됩니다. SEJIN 작업 이력이나 원본 명세를 변경하지 않습니다. 브라우저 데이터 삭제 전 JSON 백업을 다운로드해 주세요.</div>${storageError ? `<div class="notice">${esc(storageError)}</div>` : ''}
-      <div class="columns">${panel('메모 작성', `<form id="note-form" class="note-form"><input type="hidden" name="noteId" value="${esc(draft.noteId || '')}"><input type="hidden" name="base_note" value="${esc(draft.base_note || '')}"><input type="hidden" name="review_id" value="${esc(draft.review_id || '')}"><div class="form-row"><label>제목<input name="title" required maxlength="160" value="${esc(draft.title || '')}" placeholder="예: FN04 출력 주소 확인"></label><label>구분<select name="kind">${['확인 사항','수리·증상 기록','개선 후보','프로그램 분석'].map(v => `<option ${draft.kind === v ? 'selected' : ''}>${v}</option>`).join('')}</select></label></div><label>근거 위치<input name="references" maxlength="500" value="${esc(draft.references || '')}" placeholder="도면 FG, 래더 네트워크, I/O 주소"></label><label>내용<textarea name="text" required maxlength="30000" placeholder="관찰한 내용, 원인 후보, 확인할 작업과 결과를 기록합니다.">${esc(draft.text || '')}</textarea></label><div class="inline-actions"><button type="submit">브라우저에 저장</button><button type="button" data-export-notes>전체 메모 백업 (${notes.length})</button></div><p class="muted">작성 중 내용도 이 브라우저에 임시 보관합니다. 메모 저장은 시험 합격·수리 완료 처리가 아닙니다.</p></form>`)}
+      <div class="columns">${panel('메모 작성', `<form id="note-form" class="note-form"><input type="hidden" name="noteId" value="${esc(draft.noteId || '')}"><input type="hidden" name="base_note" value="${esc(draft.base_note || '')}"><input type="hidden" name="review_id" value="${esc(draft.review_id || '')}"><div class="form-row"><label>제목<input name="title" required maxlength="160" value="${esc(draft.title || '')}" placeholder="예: FN04 출력 주소 확인"></label><label>구분<select name="kind">${['확인 사항','수리·증상 기록','개선 후보','프로그램 분석'].map(v => `<option ${draft.kind === v ? 'selected' : ''}>${v}</option>`).join('')}</select></label></div><label>근거 위치<input name="references" maxlength="500" value="${esc(draft.references || '')}" placeholder="도면 FG, 래더 네트워크, I/O 주소"></label><label>내용<textarea name="text" required maxlength="30000" placeholder="관찰한 내용, 원인 후보, 확인할 작업과 결과를 기록합니다.">${esc(draft.text || '')}</textarea></label><div class="inline-actions"><button type="submit">브라우저에 저장</button><button type="button" data-export-notes>모든 설비 통합 JSON 백업 (${notes.length})</button></div><p class="muted">작성 중 내용도 이 브라우저에 임시 보관합니다. 메모 저장은 시험 합격·수리 완료 처리가 아닙니다.</p></form>`)}
       ${panel(`저장된 메모 · ${own.length}건`, own.length ? own.map(n => `<article class="saved-note"><span class="badge">${esc(n.kind)}</span><h3>${esc(n.title)}</h3><small>${esc(n.updated)}${reviewMap.has(n.review_id) ? ' · 연결 검토 ' + esc(n.review_id) : ''}${n.references ? ' · '+esc(n.references) : ''}</small><p>${esc(n.text)}</p><button type="button" ${n.repair_observation?'data-edit-repair':'data-edit-note'}="${esc(n.id)}">${n.repair_observation?'이 수리 기록 수정':'이 메모 수정'}</button></article>`).join('') : '<div class="empty">이 설비에 저장된 메모가 없습니다.</div>')}</div>`;
   }
   function bc01SourceButton(label,network,kind,uid) {
@@ -823,7 +827,7 @@
     } else {
       if(current.id==='documentation')body='<p>BC01 한 설비의 화면·문서 표준 기준입니다. 원본 정적 대조, 현재 CPU 확인과 실제 수리 완료는 각각 구분합니다.</p>'+table(['표준 항목','완료 기준'],[['찾기·가독성','종류별 선택·세부 항목 목록·본문·근거 분리'],['근거 추적','신호/조건/단자마다 원본 문서·FG/PDF·LAD/UID 연결'],['수리 판단','증상→관찰 위치·값/시각→비교 원본→차이·추가 증거→복구 확인'],['모호한 자료','주소·극성·시공 차이를 확인 대기로 유지'],['검증','최신 파일의 필수 검사·링크·PC/모바일·기록 보존 확인']]);
       else if(['cpu','field','recovery'].includes(current.id))body=bc01CompletionWorkspace(current.id,spec,schema,drawing);
-      else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터는 이 프로젝트에서 영구 중지입니다. 전체 작업 완료 후에도 자동 재개하지 않습니다. 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
+      else body='<div class="notice">BC01 기준을 보존하고 승인된 설비별 확장을 진행합니다. 제외·부모 보류 범위와 현장 미확정은 유지합니다.</div><p>시뮬레이터는 이 프로젝트에서 영구 중지입니다. 전체 작업 완료 후에도 자동 재개하지 않습니다. 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
       sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
     }
     if(state.bc01Section==='control' && current.id==='request')body=bc01RelationshipBody()+'<details><summary>요청·기억 전체 규칙과 주소</summary>'+body+'</details>';
@@ -835,7 +839,7 @@
     const ioPath=state.bc01Section==='io' && ['물리 입력','물리 출력'].includes(current.role)?circuit.paths.find(p=>p.backup.split('/')[0].trim().toUpperCase()===String(current.raw['백업 주소'] || '').trim().toUpperCase()):null;
     const selectedPath=current.path || fieldPath || ioPath, fg=selectedPath?.fg || 19, preview=drawing.sheets.find(s=>s.id==='oem-'+fg);
     const drawingContext=selectedPath?esc(selectedPath.signal)+' · '+esc(selectedPath.backup)+' · 기존 회로 작업지의 도면 참조':'FG19 / PDF20은 기동 회로의 대표 참고 자료입니다. 선택한 항목의 전용 도면·직접 신호 대응을 확정한 표시가 아닙니다.';
-    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}${state.bc01Text==='large'?' bc01-large-text':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions bc01-reader-controls"><div role="group" aria-label="본문 글자 크기"><button type="button" data-bc01-text="standard" aria-pressed="${state.bc01Text==='standard'}">기본 글자</button><button type="button" data-bc01-text="large" aria-pressed="${state.bc01Text==='large'}">큰 글자</button></div><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 단독 표준화 · 다른 설비 확대 보류 · 현재 CPU/실물/현장 복구 확인 전</div>${bc01SearchPanel()}<div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><p class="bc01-mobile-hint">세부 항목 목록을 좌우로 밀어 선택하세요. 본문의 이전·다음 항목 버튼도 사용할 수 있습니다.</p><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map((i,index)=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}"><span class="bc01-item-number">${String(index+1).padStart(2,'0')}</span> ${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content">${itemNav}<p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title" tabindex="-1">${esc(current.title)}</h3>${body}${bc01SourceNavigation()}<details class="bc01-inline-sources"><summary>이 항목의 원본·관련 근거 열기</summary>${links(sources)}</details>${itemNav}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel bc01-drawing-evidence" data-bc01-drawing-context="${selectedPath?'path':'reference'}"><h3>${selectedPath?'선택 경로의 전기도면':'대표 참고 전기도면'}</h3><p class="muted">${drawingContext}</p><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
+    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}${state.bc01Text==='large'?' bc01-large-text':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions bc01-reader-controls"><div role="group" aria-label="본문 글자 크기"><button type="button" data-bc01-text="standard" aria-pressed="${state.bc01Text==='standard'}">기본 글자</button><button type="button" data-bc01-text="large" aria-pressed="${state.bc01Text==='large'}">큰 글자</button></div><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 기준 보존 · 설비별 확장 진행 · 현재 CPU/실물/현장 복구 확인 전</div>${bc01SearchPanel()}<div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><p class="bc01-mobile-hint">세부 항목 목록을 좌우로 밀어 선택하세요. 본문의 이전·다음 항목 버튼도 사용할 수 있습니다.</p><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map((i,index)=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}"><span class="bc01-item-number">${String(index+1).padStart(2,'0')}</span> ${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content">${itemNav}<p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title" tabindex="-1">${esc(current.title)}</h3>${body}${bc01SourceNavigation()}<details class="bc01-inline-sources"><summary>이 항목의 원본·관련 근거 열기</summary>${links(sources)}</details>${itemNav}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel bc01-drawing-evidence" data-bc01-drawing-context="${selectedPath?'path':'reference'}"><h3>${selectedPath?'선택 경로의 전기도면':'대표 참고 전기도면'}</h3><p class="muted">${drawingContext}</p><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
   }
   function renderRepairWorkspace() {
     const schema=repairRecordMap.get(state.selected), step=schema?.steps.find(s=>s.id===state.repairSymptom);
@@ -932,6 +936,7 @@
   }
   function render() {
     window.GMEBC01Tools?.close();
+    window.GMEUnifiedBackup?.close();
     closeBC01ProofPreview();
     window.GMESimulatorWorkspace?.cleanup();
     $('workspace-content').onclick = null;
@@ -944,6 +949,7 @@
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
     if(state.view==='manual' && state.selected==='P01'){host.innerHTML=renderBC01Manual();const rail=host.querySelector('.bc01-library'), selected=rail?.querySelector('[aria-pressed="true"]');if(rail && selected && rail.scrollWidth>rail.clientWidth)rail.scrollLeft=Math.max(0,selected.offsetLeft-rail.offsetLeft-12);}
+    else if(state.view==='manual' && window.GMEEquipmentStandard.profile(data,state.selected)){host.innerHTML=window.GMEEquipmentStandard.render(data,state.selected,state);window.GMEEquipmentStandard.highlight(host,state.bc01Find);}
     else if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();
     else if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
     else if (state.view === 'tests' || state.view === 'checks') {
@@ -1026,6 +1032,16 @@
 
   document.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
+    if(state.view==='manual' && state.selected!=='P01' && window.GMEEquipmentStandard.profile(data,state.selected)) {
+      const library=window.GMEEquipmentStandard;
+      if(b.dataset.standardSection){state.bc01Section=b.dataset.standardSection;state.bc01Item=library.items(data,state.selected,state.bc01Section)[0]?.id||'';route('manual');return;}
+      if(b.dataset.standardItem){state.bc01Item=b.dataset.standardItem;route('manual');return;}
+      if(b.dataset.standardJump){const [section,item]=b.dataset.standardJump.split('/');state.bc01Section=section;state.bc01Item=item;route('manual');return;}
+      if(b.dataset.standardText){state.bc01Text=b.dataset.standardText;route('manual');return;}
+      if(b.hasAttribute('data-standard-wide')){state.standardWide=!state.standardWide;render();return;}
+      if(b.hasAttribute('data-standard-clear')){state.bc01Find='';lastRenderedRoute=null;route('manual');return;}
+      if(b.dataset.standardMove){const items=library.items(data,state.selected,state.bc01Section),i=items.findIndex(x=>x.id===state.bc01Item),next=items[i+(b.dataset.standardMove==='next'?1:-1)];if(next){state.bc01Item=next.id;route('manual');document.getElementById('standard-content-title')?.focus({preventScroll:true});}return;}
+    }
     if(b.hasAttribute('data-bc01-proof-close')) {closeBC01ProofPreview();return;}
     if(b.hasAttribute('data-bc01-proof-print')) {if(document.getElementById('bc01-proof-preview')?.open)window.print();return;}
     if(state.view==='manual' && state.selected==='P01') {
@@ -1124,26 +1140,22 @@
       const draft={...repairRecords.fromRecord(note.repair_observation,schema),noteId:note.id,base_note:JSON.stringify(note),title:note.title};
       const key=repairRecords.keyFor(note.equipment);
       try{drafts=storeDraft(key,draft);}catch(_){drafts[key]=draft;}
-      if(note.equipment==='P01')lastRenderedRoute=null;
+      if(window.GMEEquipmentStandard.profile(data,note.equipment))lastRenderedRoute=null;
       route('repair-record',note.equipment);
     } else if (b.dataset.exportRepair) {
       let latest;
       try{latest=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment);}catch(_){$('app-message').textContent='저장된 자료를 읽지 못했습니다. 기존 기록을 보존하고 확인해 주세요.';return;}
       const note=latest.find(n=>n.id===b.dataset.exportRepair);
       if(!note?.repair_observation)return;
-      const payload=window.GMEBC01Tools.backupEnvelope([note],data);
+      const payload=window.GMEBC01Tools.backupEnvelope([note],data,undefined,note.equipment);
       const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'}));
       const a=document.createElement('a');a.href=url;a.download=`GME-repair-${note.equipment}-${note.id}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
     }
     else if (b.dataset.reviewNote) startReviewNote(b.dataset.reviewNote);
     else if (b.dataset.reviewFocus) route('review',state.selected,'',b.dataset.reviewFocus);
     else if (b.hasAttribute('data-export-notes')) {
-      try { notes=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment); }
-      catch (_) { $('app-message').textContent='저장된 메모를 읽지 못해 백업을 만들지 않았습니다. 기존 저장 자료를 보존하고 확인해 주세요.'; return; }
-      const payload = JSON.stringify(window.GMEBC01Tools.backupEnvelope(notes,data), null, 2);
-      const url = URL.createObjectURL(new Blob([payload],{type:'application/json;charset=utf-8'}));
-      const a = document.createElement('a'); a.href = url; a.download = `GME-work-notes-${new Date().toISOString().slice(0,10)}.json`; a.click();
-      setTimeout(() => URL.revokeObjectURL(url),1000);
+      try { window.GMEUnifiedBackup.download(); }
+      catch(error){$('app-message').textContent=error.message;}
     } else if (b.dataset.editNote) {
       const note = notes.find(n => n.id === b.dataset.editNote); if (!note) return;
       const draft={noteId:note.id,base_note:JSON.stringify(note),review_id:note.review_id || '',title:note.title,kind:note.kind,references:note.references,text:note.text};
@@ -1188,6 +1200,7 @@
     if (e.target.id === 'review-kind') { clearReviewFocus(); state.reviewKind = e.target.value; renderReviewRows(); }
   });
   document.addEventListener('submit', async e => {
+    if(e.target.matches('[data-standard-search]')){e.preventDefault();state.bc01Find=e.target.querySelector('input').value.trim().slice(0,160);route('manual');return;}
     if(e.target.matches('[data-bc01-search]') && state.view==='manual' && state.selected==='P01'){e.preventDefault();state.bc01Find=e.target.querySelector('input').value.trim().slice(0,160);bc01SearchLimit=20;route('manual');document.getElementById('bc01-find')?.focus({preventScroll:true});return;}
     if (!['note-form','repair-record-form'].includes(e.target.id)) return;
     e.preventDefault();
@@ -1210,7 +1223,7 @@
       kind:isRepair?'수리·증상 기록':String(fields.get('kind') || '확인 사항'), references:isRepair?schema.manual:String(fields.get('references') || '').slice(0,500),
       review_id:reviewMap.has(fields.get('review_id'))?String(fields.get('review_id')):(original?.review_id || ''),updated:new Date().toISOString()};
     if(isRepair)note.repair_observation=observation;
-    if(state.selected==='P01')note.saved_with={...original?.saved_with,application_version:data.version,source_bundle_sha256:data.bc01_standard.source_bundle_sha256,saved_at:note.updated,reference_scope:'BC01 reference materials at saving; not observation-time proof'};
+    if(window.GMEEquipmentStandard.profile(data,state.selected)){const evidence=window.GMEEquipmentStandard.referenceContext(data,state.selected);note.saved_with={...original?.saved_with,...evidence,saved_at:note.updated,reference_scope:evidence.reference_scope.replace('generation','saving')};}
     savingNote=true;
     const submitButton=e.target.querySelector('button[type="submit"]');
     if(submitButton)submitButton.disabled=true;
@@ -1238,22 +1251,33 @@
       if(submitButton?.isConnected)submitButton.disabled=false;
     }
   });
+  const recordSnapshot=()=>{const raw=localStorage.getItem(NOTES_KEY);return {raw,notes:noteStore.decodeNotes(raw,validNoteEquipment)};};
+  async function restoreRecords(expected,next,isCurrent,selectedKey=null){
+    if(savingNote||!navigator.locks?.request)throw new Error('다른 저장 작업을 마친 후 다시 시도하세요.');
+    savingNote=true;
+    try{await navigator.locks.request('gme-manual-notes-v1',()=>{
+      if(!isCurrent())throw new Error('복원 미리보기가 바뀌거나 닫혔습니다. 파일을 다시 선택하세요.');
+      if(selectedKey!==null&&state.selected!==selectedKey)throw new Error('선택 설비가 바뀌었습니다. 해당 설비에서 다시 복원하세요.');
+      if(localStorage.getItem(NOTES_KEY)!==expected)throw new Error('미리보기 이후 다른 탭에서 기록이 변경되었습니다. 파일을 다시 선택해 대조하세요.');
+      const current=noteStore.decodeNotes(expected,validNoteEquipment);
+      if(selectedKey!==null&&JSON.stringify(current.filter(n=>n.equipment!==selectedKey))!==JSON.stringify(next.filter(n=>n.equipment!==selectedKey)))throw new Error('다른 설비 기록의 변경을 차단했습니다.');
+      const envelope=window.GMEBC01Tools.unifiedBackupEnvelope(next,data);
+      window.GMEBC01Tools.parseUnifiedBackup(JSON.stringify(envelope,null,2),noteStore.decodeNotes,validNoteEquipment,data.repair_record_forms.profiles);
+      const serialized=JSON.stringify(next);localStorage.setItem(NOTES_KEY,serialized);
+      if(localStorage.getItem(NOTES_KEY)!==serialized)throw new Error('복원 저장을 확인하지 못했습니다. 새 복원 전 저장 목록과 백업을 대조하세요.');
+      notes=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment);storageError='';lastRenderedRoute=null;
+      $('app-message').textContent='기록 복원과 저장 후 재읽기를 확인했습니다. 임시 작성 내용은 유지했습니다.';
+    });}catch(error){$('app-message').textContent=error.message;throw error;}finally{savingNote=false;}
+  }
+  window.GMEUnifiedBackup?.attach({data,validEquipment:validNoteEquipment,snapshot:recordSnapshot,restoreAll:restoreRecords,openNotes:()=>route('notes',state.selected)});
   window.GMEBC01Tools?.attach({data,base,validEquipment:validNoteEquipment,
     context:()=>({selected:state.selected,view:state.view,section:state.bc01Section,item:state.bc01Item,drawing:state.drawing,text:state.bc01Text}),
-    snapshot:()=>{const raw=localStorage.getItem(NOTES_KEY);return {raw,notes:noteStore.decodeNotes(raw,validNoteEquipment)};},
-    openRecords:()=>route('repair-record','P01'),
-    restore:async(expected,next)=>{
-      if(state.selected!=='P01'||savingNote||!navigator.locks?.request)throw new Error('다른 저장 작업을 마친 후 다시 시도하세요.');
-      savingNote=true;
-      try{await navigator.locks.request('gme-manual-notes-v1',()=>{
-        if(state.selected!=='P01')throw new Error('선택 설비가 바뀌었습니다. BC01에서 다시 복원하세요.');
-        if(localStorage.getItem(NOTES_KEY)!==expected)throw new Error('미리보기 이후 다른 탭에서 기록이 변경되었습니다. 파일을 다시 선택해 대조하세요.');
-        const serialized=JSON.stringify(next);noteStore.decodeNotes(serialized,validNoteEquipment);
-        localStorage.setItem(NOTES_KEY,serialized);
-        if(localStorage.getItem(NOTES_KEY)!==serialized)throw new Error('복원 저장을 확인하지 못했습니다. 새 복원 전 저장 목록과 백업을 대조하세요.');
-        notes=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment);storageError='';
-        $('app-message').textContent='BC01 기록 복원과 저장 후 재읽기를 확인했습니다. 임시 작성 내용은 유지했습니다.';
-      });}catch(error){$('app-message').textContent=error.message;throw error;}finally{savingNote=false;}
+    snapshot:recordSnapshot,
+    openRecords:()=>route('repair-record',state.selected),
+    restore:async(expected,next,isCurrent)=>{
+      const selectedKey=state.selected;
+      if(!window.GMEEquipmentStandard.profile(data,selectedKey)?.tools.restore)throw new Error('선택 설비의 복원 도구가 없습니다.');
+      await restoreRecords(expected,next,isCurrent,selectedKey);
     }
   });
   window.addEventListener('hashchange',readRoute);

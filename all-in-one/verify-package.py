@@ -49,6 +49,11 @@ for p,parser in parsers.items():
                     assert "params.get('view')==='drawings'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue
             if target==(ROOT/'index.html').resolve() and params.get('view')==['manual']:
+                if params.get('equipment')==['P02'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
+                    profiles=json.loads((ROOT/'registers/all-in-one-data.json').read_text())['equipment_standards']['profiles']
+                    assert any(p['priority_key']=='P02' and p['catalog_id']=='FN04' for p in profiles)
+                    assert 'GMEEquipmentStandard.normalize(data,state.selected,params)' in (ROOT/'assets/all-in-one.js').read_text()
+                    continue
                 if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
                     assert "params.get('view')==='manual' && params.get('equipment')==='P01'" in (ROOT/'assets/all-in-one.js').read_text()
                     continue

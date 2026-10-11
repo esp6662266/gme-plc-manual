@@ -331,9 +331,9 @@ for evidence in bc01_supplemental:
         bc01_locations[evidence['network']].update([('part',ref['part']),('wire',ref['wire'])])
 
 class BC01SourceRows(HTMLParser):
-    def __init__(self,text,allowed):
+    def __init__(self,text,allowed,prefix='bc01'):
         super().__init__(convert_charrefs=True)
-        self.text=text;self.allowed=allowed;self.edits=[];self.found=set();self.headers=[];self.cells=[];self.cell=None;self.start=None
+        self.prefix=prefix;self.text=text;self.allowed=allowed;self.edits=[];self.found=set();self.headers=[];self.cells=[];self.cell=None;self.start=None
         self.lines=[0]
         for i,c in enumerate(text):
             if c=='\n':self.lines.append(i+1)
@@ -355,7 +355,7 @@ class BC01SourceRows(HTMLParser):
             key=(kind,self.cells[0])
             if key in self.allowed:
                 assert key not in self.found,key
-                self.found.add(key);pos,original,attrs=self.start;anchor=f'bc01-{kind}-{self.cells[0]}'
+                self.found.add(key);pos,original,attrs=self.start;anchor=f'{self.prefix}-{kind}-{self.cells[0]}'
                 assert attrs.get('id') in (None,anchor)
                 if 'id' not in attrs:self.edits.append((pos,len(original),original[:-1]+' id="'+anchor+'">'))
         if tag=='tr':self.start=None
@@ -448,6 +448,18 @@ data['bc01_standard']['inverter_comparison']=[
 data['bc01_standard']['source_hashes'].update({path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in sorted(bc01_extra_sources)})
 data['bc01_standard']['source_hashes'].update(next(p for p in data['repair_record_forms']['profiles'] if p['key']=='P01').get('additional_signal_sources',{}))
 data['bc01_standard']['source_bundle_sha256']=hashlib.sha256(json.dumps(data['bc01_standard']['source_hashes'],sort_keys=True,separators=(',',':')).encode()).hexdigest()
+# Capability registration is separate from the preserved BC01 evidence.
+data['equipment_standards']=dict(schema_version=1,profiles=[dict(
+    priority_key='P01',catalog_id='BC01',source_key='bc01_standard',type='motor_conveyor',
+    tools=dict(sources=True,restore=True,compare=True,report=True),
+    source_pairs=[
+        dict(signal='기동 명령',path='networks/network-1935.html#bc01-part-202',label='직접 출력 참조 · Start BC01',boundary='최종 출력 참조와 도면 경로를 비교합니다. 현재 출력·접속·실물 응답은 확인 전입니다.'),
+        dict(signal='운전 응답',path='networks/network-1018.html',label='직접 원시 참조 · BC01_Fbk',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
+        dict(signal='인버터 이상',path='networks/network-1785.html#bc01-part-27',label='처리 신호 알람 참고 · 원시 입력 직접 대응 미확정',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
+        dict(signal='트립와이어 감시',path='networks/network-1786.html#bc01-part-234',label='처리 신호 알람 참고 · 원시 입력 직접 대응 미확정',boundary='원시 입력과 처리된 Inputs 신호를 구분합니다. 원시→처리 전달·정상 극성·현재 ABB 접속은 확인 전입니다.'),
+        dict(signal='회전 감시 예비',path='',label='예비 입력 · 직접 대응 없음',boundary='예비 표기와 직접 대응 없음 상태를 보존합니다.')])])
+from equipment_standard_profiles import build_fn04_profile
+data['equipment_standards']['profiles'].append(build_fn04_profile(ROOT,data,BC01SourceRows))
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 (ROOT / 'assets/all-in-one-data.js').write_text('window.GME_APP_DATA = ' + payload + ';\n', encoding='utf-8')
@@ -474,6 +486,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <button type="button" data-view="review">근거 검토·확인</button>
 <button type="button" data-view="notes">개선·작업 메모</button>
 <button type="button" data-view="resources">전체 자료</button>
+<button type="button" data-unified-backup>모든 설비 통합 백업·복원</button>
 </nav>
 <section class="equipment-picker" aria-labelledby="picker-title">
 <div class="picker-heading"><h2 id="picker-title">설비 선택</h2><span id="equipment-count"></span></div>
@@ -489,13 +502,13 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <footer class="app-footer">원본·정적 해석·실행 결과·현장 확인을 구분하여 관리합니다.<span id="app-message" role="status" aria-live="polite"></span></footer></div>
 <noscript><p>통합 탐색에는 JavaScript가 필요합니다. <a href="manual-catalog.html">기존 전체 매뉴얼</a>을 열어 자료를 읽을 수 있습니다.</p></noscript>
 <div hidden aria-hidden="true"><span id="overview"></span><span id="purpose"></span><span id="equipment"></span><span id="scope"></span><span id="method"></span><span id="read"></span><span id="workflow"></span><span id="program"></span><span id="conflicts"></span><span id="drawing"></span></div>
-<script src="assets/all-in-one-data.js"></script><script src="assets/program-model-data.js"></script><script src="assets/virtual-plc.js"></script><script src="assets/simulator-workspace.js"></script><script src="assets/note-record-store.js"></script><script src="assets/repair-records.js"></script><script src="assets/bc01-tools.js"></script><script src="assets/all-in-one.js"></script></body></html>
+<script src="assets/all-in-one-data.js"></script><script src="assets/program-model-data.js"></script><script src="assets/note-record-store.js"></script><script src="assets/repair-records.js"></script><script src="assets/equipment-standard.js"></script><script src="assets/bc01-tools.js"></script><script src="assets/unified-backup.js"></script><script src="assets/all-in-one.js"></script></body></html>
 ''', encoding='utf-8')
 
 # Refresh the manual UI and register bundle after rebuilds without changing
 # the preserved simulator assets or requiring a cache-clearing action.
 entry=(ROOT/'index.html').read_text(encoding='utf-8').replace('__GME_VERSION__',release['version'])
-for resource in ('assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css'):
+for resource in ('assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css','assets/equipment-standard.js','assets/unified-backup.js'):
     digest=hashlib.sha256((ROOT/resource).read_bytes()).hexdigest()[:12]
     entry=entry.replace('"'+resource+'"','"'+resource+'?v='+digest+'"')
 (ROOT/'index.html').write_text(entry,encoding='utf-8')

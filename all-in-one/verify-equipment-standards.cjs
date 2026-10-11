@@ -1,0 +1,64 @@
+/* Profile isolation and generator boundaries. No simulator execution. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const plain=x=>JSON.parse(JSON.stringify(x)),sandbox={window:{},TextEncoder};
+for(const n of ['repair-records','note-record-store','equipment-standard','bc01-tools'])vm.runInNewContext(fs.readFileSync(__dirname+'/assets/'+n+'.js','utf8'),sandbox);
+const {GMEEquipmentStandard:standard,GMEBC01Tools:tools,GMERepairRecords:repair,GMENoteStore:store}=sandbox.window;
+const data=JSON.parse(fs.readFileSync(__dirname+'/registers/all-in-one-data.json'));
+assert.equal(standard.profile(data,'P99'),null);assert.throws(()=>standard.referenceContext(data,'P99'),/구현/);
+assert.equal(standard.profile(data,'P01').specification.id,'BC01');
+const synthetic=plain(data);synthetic.equipment_standards.profiles=synthetic.equipment_standards.profiles.filter(p=>p.priority_key!=='P02');synthetic.equipment_standards.profiles.push({priority_key:'P02',catalog_id:'FN04',source_hashes:{'QA-only':'f'.repeat(64)},source_bundle_sha256:'e'.repeat(64),tools:{restore:true}});
+const schema=data.repair_record_forms.profiles.find(p=>p.key==='P02'),valid=new Set(data.equipment.map(e=>e.id).concat(data.priority.map(p=>p.key)));
+const note={id:'qa-fn04',equipment:'P02',title:'QA only',text:'QA only',updated:'2026-10-11T05:00:00Z',future:{retained:1},repair_observation:plain(repair.collect(schema,{first_symptom:'QA only',[schema.signals[0].id+'_value']:'0'}))};
+const foreign={...note,id:'qa-bc01',equipment:'P01',repair_observation:undefined};
+const input=JSON.stringify(tools.backupEnvelope([foreign,note],synthetic,'2026-10-11T05:00:00Z','P02'));
+const incoming=plain(tools.parseBackup(input,store.decodeNotes,valid,schema));assert.deepEqual(incoming.notes,[note]);assert.equal(incoming.skipped,1);
+assert.throws(()=>tools.parseBackup(JSON.stringify({...JSON.parse(input),notes:[{...note,repair_observation:{...note.repair_observation,equipment:'P01'}}]}),store.decodeNotes,valid,schema));
+const changed=plain(note);changed.repair_observation.observations[0].value='1';changed.title='QA changed';delete changed.future;
+const plan=plain(tools.planRestore([foreign,note],[changed]));
+const merged=plain(tools.applyRestore([foreign,note],plan,{0:'replace'},()=> 'copy','P02'));
+assert.deepEqual(merged.notes[0],plain(foreign));assert.deepEqual(merged.notes[1].future,note.future);assert.equal(merged.notes[1].repair_observation.observations[0].value,'1');
+assert.throws(()=>tools.applyRestore([foreign,note],plan,{0:'replace'},()=> 'copy','P01'),/밖/);
+assert.ok(plain(tools.comparisonRows(note,changed,schema)).some(r=>r.key.endsWith(':value')&&r.changed));
+assert.equal(tools.referenceContext(synthetic,'P02').source_bundle_sha256,'e'.repeat(64));assert.notEqual(tools.referenceContext(synthetic,'P02').source_bundle_sha256,tools.referenceContext(synthetic).source_bundle_sha256);
+const p02=standard.profile(data,'P02');
+assert.ok(p02,'FN04 pilot profile is required in v1.4.0');
+if(p02){
+ const read=f=>JSON.parse(fs.readFileSync(__dirname+'/registers/'+f));
+ assert.deepEqual(plain(p02.specification),read('control-spec.json').specifications.find(p=>p.id==='FN04'));
+ assert.deepEqual(plain(p02.alarm),read('alarm-recovery.json').profiles.find(p=>p.id==='FN04'));
+ assert.deepEqual(plain(p02.regulation),read('regulation-manual.json').loops.find(p=>p.id==='FN04'));
+ assert.equal(p02.specification.direct_rules.length,22);assert.equal(p02.specification.direct_rules.filter(r=>r.opaque).length,3);assert.equal(p02.alarm.alarms.length,2);assert.equal(p02.alarm.timers[0].preset.literal,'S5T#17S');
+ assert.equal(p02.source_pairs.find(p=>p.signal==='속도 설정').path,'networks/network-1689.html#gme-fn04-wire-875');assert.equal(p02.source_pairs.find(p=>p.signal==='전류 전달').path,'networks/network-1770.html#gme-fn04-wire-1491');
+ const crypto=require('node:crypto');for(const [f,h] of Object.entries(p02.source_hashes))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+ for(const loc of p02.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+ const route=standard.normalize(data,'P02',new URLSearchParams('section=bad&item=bad&text=bad'));assert.equal(route.bc01Section,'overview');assert.equal(route.bc01Text,'standard');
+}
+const schemas=data.repair_record_forms.profiles;
+const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
+const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));
+const memo={id:'qa-catalog',equipment:'FN04',title:'Catalog separate context',text:'0',updated:'old',extra:{zero:0,blank:'',nil:null}};
+assert.deepEqual(parseAll(allEnvelope([note,foreign,memo])).notes,plain([note,foreign,memo]));
+assert.deepEqual(parseAll(allEnvelope([])).notes,[]);
+const many=Array.from({length:1001},(_,i)=>({...memo,id:'many-'+i}));assert.equal(parseAll(allEnvelope(many)).total,1001);
+const legacy={application:'GME All-in-One',note_id:note.id,title:note.title,updated:note.updated,observation:{...note.repair_observation,name:'original legacy name'}};
+assert.equal(parseAll(JSON.stringify(legacy)).notes[0].name,'original legacy name');assert.ok(!Object.hasOwn(parseAll(JSON.stringify(legacy)).notes[0],'saved_with'));
+const rawLegacy=JSON.stringify({schema_version:1,application:'GME All-in-One',notes:[memo]});assert.deepEqual(parseAll(rawLegacy).notes,[memo]);
+for(const bad of [false,0,null])assert.throws(()=>parseAll(allEnvelope([{...memo,repair_observation:bad}])));
+for(const rows of [[memo,memo],[{...memo,equipment:'NO-SUCH-KEY'}],[{...note,repair_observation:{...note.repair_observation,equipment:'FN04'}}]])assert.throws(()=>parseAll(allEnvelope(rows)));
+assert.throws(()=>parseAll(JSON.stringify({...legacy,notes:[]})),/함께/);assert.throws(()=>parseAll(JSON.stringify({schema_version:1,application:'GME All-in-One',notes:{}})),/배열/);
+assert.throws(()=>parseAll(rawLegacy.replace('"zero":0','"zero":1e400')),/숫자/);
+const otherId={...memo,id:note.id},cross=plain(tools.planRestore([note],[otherId]));assert.throws(()=>tools.applyUnifiedRestore([note],cross,{0:'replace'},()=> 'new-copy'));assert.equal(tools.applyUnifiedRestore([note],cross,{0:'copy'},()=> 'new-copy').notes[1].equipment,'FN04');
+const evidenceNote={...note,saved_with:{application_version:'old-version',source_bundle_sha256:'old-hash',unknown_evidence:'preserve'}};
+const legacyReplace=plain(tools.applyUnifiedRestore([evidenceNote],tools.planRestore([evidenceNote],[changed]),{0:'replace'},()=> 'new-copy')).notes[0];
+assert.ok(!Object.hasOwn(legacyReplace,'saved_with'));assert.deepEqual(legacyReplace.backup_restore_history[0].previous_saved_with,evidenceNote.saved_with);assert.equal(legacyReplace.future.retained,1);
+const partial={...changed,saved_with:{application_version:'imported-version'}};const partialReplace=plain(tools.applyUnifiedRestore([evidenceNote],tools.planRestore([evidenceNote],[partial]),{0:'replace'},()=> 'new-copy')).notes[0];assert.deepEqual(partialReplace.saved_with,partial.saved_with);
+const oldRows={...note,repair_observation:{...note.repair_observation,observations:Array.from({length:1000},(_,i)=>({id:'old-'+i,value:'0'}))}},newRows={...changed,repair_observation:{...changed.repair_observation,observations:Array.from({length:1000},(_,i)=>({id:'new-'+i,value:''}))}};
+parseAll(allEnvelope([oldRows]));parseAll(allEnvelope([newRows]));const over=tools.applyUnifiedRestore([oldRows],tools.planRestore([oldRows],[newRows]),{0:'replace'},()=> 'new-copy');assert.throws(()=>parseAll(allEnvelope(over.notes)),/ID/);assert.equal(over.notes[0].repair_observation.observations.length,2000);
+assert.deepEqual(plain(tools.unifiedBackupEnvelope([note,memo],data).generated_with.equipment_references.FN04.source_hashes),{});
+
+const priorHistory={...changed,backup_restore_history:[{past:'A'}]},incomingHistory={...changed,title:'history changed',backup_restore_history:[{past:'B'}]};
+const historyMerged=plain(tools.applyUnifiedRestore([priorHistory],tools.planRestore([priorHistory],[incomingHistory]),{0:'replace'},()=> 'new-copy')).notes[0];assert.deepEqual(historyMerged.backup_restore_history,[{past:'A'},{past:'B'}]);
+const generator=fs.readFileSync(__dirname+'/build-control-spec.py','utf8');assert.ok(!generator.includes('runpy.run_path'));
+const entry=fs.readFileSync(__dirname+'/index.html','utf8');assert.ok(!/<script[^>]+src=["'][^"']*(?:virtual-plc|simulator-workspace)\.js/.test(entry));
+for(const p of data.equipment_standards.profiles){const source=standard.profile(data,p.priority_key),drawing=data.drawing_workspace.profiles.find(r=>r.key===p.priority_key);assert.equal(source.source_pairs.length,drawing.circuit.paths.length);for(const path of drawing.circuit.paths)assert.equal(source.source_pairs.filter(p=>p.signal===path.signal).length,1);}
+console.log(JSON.stringify({status:'passed',scope:'equipment selection, mismatched nested key, foreign record isolation, unknown fields, zero/blank comparison, reference version, unified backup legacy formats, 1001-note round trip, malformed keys/records, cross-equipment ID conflicts, provenance and merged limits, explicit generator and frozen script loading boundaries',registered_profiles:data.equipment_standards.profiles.map(p=>p.priority_key)}));

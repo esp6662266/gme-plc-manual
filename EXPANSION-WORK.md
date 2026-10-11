@@ -1,43 +1,26 @@
 # GME BC01 기반 확장 — 현재 작업과 인계
 
-표준 **GME-STD-1.0.0** · 프로그램 기준 **v1.3.0** · 2026-10-11
+표준 **GME-STD-1.0.0** · 프로그램 **v1.4.0** · 2026-10-11
 
-## 최신 사용자 결정
+사용자 승인에 따라 PREP-01 → FN04(P02) 시범 → 1차 순서 → 2차133후보를 설비 한 개씩 진행한다. 현재 원본은 GitHub main의 all-in-one/이다. 이전 “표준 작성만/미착수” 기록은 gme-std-v1.0.0 태그에 보존했다.
 
-- BC01 수준을 기준으로 우선 설비를 작성한 뒤 나머지 전체 대장으로 확장한다.
-- 23개/233개를 그대로 합산하지 않고 **실제 대장 ID 중복 정리·기존 제외 유지**를 적용한다.
-- 이 채팅은 작업표준과 전용 스킬까지만 완성한다.
-- 완료 후 **GPT-6.1 Sol / Ultra 새 채팅을 만들어 실제 작업을 시작**하도록 인계한다. 이 지시는 기존 “정지” 지시에 이어 새 채팅에서의 시작을 승인한 최신 요청이다.
-
-## 현재 상태
-
-| 작업 | 상태 |
+| 작업 | 실제 상태 |
 |---|---|
-| 작업표준·스킬·원본 기반 대장 작성 | 작성 완료, 검증 결과는 docs/equipment-standard/VERIFICATION.md |
-| 프로그램/설비 구현 | 이 표준 작성 작업에서는 변경하지 않음 |
-| PREP-01 공통화와 BC01 회귀 | 미착수 — 후속 채팅 첫 작업 |
-| FN04(P02) 시범 | 미착수 — PREP-01 이후 |
-| 1차 | 우선23행: 기준BC01 포함21행, 다른 공정2제외 |
-| 2차 | 우선 대응18·기존 제외90을 뺀140 중 부모 범위 보류7을 제외한133후보 |
-| TIA/현재CPU/실물/현장복구 | 이 표준 작성으로 새 검증 없음 |
+| PREP-01 공통 구조/금지 자동 호출 분리 | 구현·독립 검토·BC01 회귀 완료, 시범 릴리스 게시 확인 대기 |
+| FN04(P02) 시범 | 문서 complete_with_gaps, 정적 검토 passed, 화면/기록/PDF passed, 게시 확인 대기 |
+| 다음 1차 FN01(P15) | 읽기 전용 조사 확보, FN04 게시 검증 완료 후 구현 |
+| 나머지 1차 | 미착수; 기존 분석·미확정·제외 보존 |
+| 2차 | 실제 대장133후보, 미착수 |
+| TIA 컴파일/현재CPU/현장복구 | 미수행, 완료로 합산하지 않음 |
 
-## 반드시 읽을 파일
+대장은 전체248 ID, 우선23행/대응18, 기존 제외90, 다른 공정2, 제외 부모 하위 보류7, 2차133후보를 유지한다. 233개를 독립 작업 목록으로 만들지 않는다. preflight는 inventory_matches=true이며 requirements-audit/all-in-one-data의 바이트 변경은 현재 범위 안내/새 프로파일을 추가한 결과다. 집계·대응·제외 관계는 동일하다.
 
-1. [작업표준](docs/equipment-standard/WORK-STANDARD.md)
-2. [GPT-6.1 Sol 실행 안내와 재개 문장](docs/equipment-standard/START-GPT61.md)
-3. [23행·248 ID 전체 대장](docs/equipment-standard/INVENTORY.json)
-4. [설비 작업 기록 양식](docs/equipment-standard/WORK-ITEM-TEMPLATE.md)
-5. [전용 스킬](.agents/skills/gme-equipment-rollout/SKILL.md)
-6. [원본 구현과 생성기 경계](.agents/skills/gme-equipment-rollout/references/source-map.md)
+현재 작업 기록은 docs/equipment-standard/work-items/PREP-01.md와 FN04.md, 검증은 V1.4.0-VERIFICATION.md/.json이다. 프로그램 VERSION(root/all-in-one)/package/lock은1.4.0이며 과거1.3태그/ZIP·원본을 보존한다. 마지막 실제 게시는 PUBLICATION_STATUS.md를 확인한다.
 
-## 다음 한 작업: PREP-01
+## 다음 한 작업
 
-실제 Git 상태와 BC01 기준을 보존하고 BC01/P01 고정 데이터·화면·도구·검사를 설비별로 확장할 최소 변경을 설계한다. build-control-spec.py의 build-program-model.py 자동 호출을 먼저 정적으로 확인하고 금지 경로를 분리하기 전 실행하지 않는다. 기존 시뮬레이터/중지5자산은 변경·실행하지 않는다. 공통화 후 BC01 회귀를 통과시키고 FN04 시범으로 넘어간다.
+FN04 v1.4.0의 최종 패키지/테스트/빌드와 GitHub tag/Release·Netlify commit_ref/ready·게시 파일/UI·새 clone을 확인한다. 통과한 뒤 FN01(P15)을 구현한다. 조사 결과: 직접20규칙/미해석3, Tag_63 2초, 주팬 한 모터와 별도 냉각팬/SPARE, 예열1845의 미해석5쓰기는 별도 경계다. FN04의17초/공동 인버터/PC01조절을 복제하지 않는다.
 
-새 채팅은 docs/equipment-standard/work-items/PREP-01.md부터 실제 진행 기록을 작성한다. 원본 폴더 all-in-one/의 v1.3.0 ACTIVE-WORK.md는 당시 구현 이력이며 이 확장 계획과 구분한다. 프로그램을 수정해 검증한 후에만 해당 ACTIVE-WORK/버전/게시 상태를 갱신한다.
+## 보존 경계
 
-## 보존과 인계 원칙
-
-원본/완료분/미확정/브라우저 기록·초안·미지 필드는 보존한다. 실제 PLC/현장/보호값·SEJIN 변경은 하지 않는다. GitHub main이 최신 작업이며 다른 컴퓨터도 같은 표준·스킬·대장을 받는다. 개인 관찰 기록은 별도 JSON 이동이며 코드 저장소에 자동 업로드하지 않는다.
-
-새 채팅 생성/시작 여부는 원래 채팅의 도구 결과로 확인한다. 새 작업이 시작되면 새 채팅만 이 저장소의 진행 상태를 쓴다.
+원본730·추가3·중지5, BC01 전체 표준 구조, 기존 FN04/AB01 완료 분석·미확정, note/repair_observation 미지 행/필드·다른 설비·초안·저장 키를 보존한다. 백업은 저장소 밖 ../gme-expansion-before-20261011이다. 격리127.0.0.1:8874 합성 QA 기록은 시험 후 정리했으며 운영 기록 작성0이다. 시뮬레이터 작성·수정·생성·실행·행동시험0, 실제PLC/현장/보호값·SEJIN 변경/사진·이력 복제0이다. 현재CPU·정상극성·현행모델/단자·실제복구는 추가 자료 확인 전이다.
