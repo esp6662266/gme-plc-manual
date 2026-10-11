@@ -1,3 +1,26 @@
+# v1.6.0 · FN02 표준 매뉴얼 — 게시 검증 완료
+
+FN02(P16)의7영역42항목과 도면·래더5쌍 및 기록 도구를 게시했다. BC01/FN04/FN01·통합백업·운영기록·원본을 보존한다.
+
+| 확인 항목 | 실제 결과 |
+|---|---|
+| 기능·패키지 커밋 | e6f864bbe346cae8ed385befe04af1da4a1eb6fa |
+| 고정 배포판 | [v1.6.0 tag/Release](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.6.0) |
+| Netlify | 6acb1812cfa4cf0009858a12 · ready · commit_ref 일치 · 2026-10-11T05:01:36.897Z · error 없음 |
+| 게시 사이트 | https://gme-plc-manual.netlify.app/all-in-one/ |
+| 새 GitHub clone | Node24.19.0 npm ci·8테스트·BC01/설비검사·NETLIFY=true 빌드 passed · Git변경0 |
+| 패키지 | 필수14+설비2 · 2801파일 · ZIP CRC/전체SHA · 원본730/추가3/중지5 보존 |
+| ZIP | 52823403바이트 · SHA256 6fe02e517591390bad69c17011d23e331cc08c4fafb0e7afa11a42f5a01fea34 · Release asset digest/size 일치 |
+| 화면·기록·PDF | 기존3+FN02 PC·모바일/기본·큰글자696화면 넘침0·5원본쌍·합성저장/복원3→4·재열기·미지항목/타설비/초안·실패/동시성·전후비교·보고서변경차단·A4 PDF2쪽 |
+| 게시 대조 | 44파일:26정확SHA/18HTML pretty URL 정규화후동등. 실제P16 v1.6.0/42항목·Part596 StartFN02·FG43·통합백업0건창 확인 |
+| 운영/현장 | 운영작성0·격리IAB/Chrome keys null. TIA/CPU/현장복구미수행·시뮬레이터실행/변경0 |
+
+Tag61 2초·설정0 해제·예열 추가OFF·VT02 색인 PID와 원본 실행명령 미확보·제목FN02인FN04 전류변환 불일치를 구분한다. 게시IAB에서 출처URL없는 MutationObserver.observe 오류1건을 관측했고 앱assets에는 해당호출이 없다. 원인미확정이며 과거문제해소/브라우저전체오류0을 주장하지 않는다.
+
+[상세검증](V1.6.0-VERIFICATION.md) · [FN02 기록](docs/equipment-standard/work-items/FN02.md) · [다음FN03](EXPANSION-WORK.md). 후속루트상태기록은 기능·원본·패키지바이트를 변경하지 않는다. 사용자승인1~4 목표는 active이며 나머지설비는 미완료다.
+
+---
+
 # v1.5.0 · FN01 표준 매뉴얼 — 게시 검증 완료
 
 FN01(P15)을7영역47항목으로 작성하고 도면·래더5경로, 수리 관찰 기록과 전후 비교·보고서/PDF를 연결했다. BC01/FN04·전체 설비 통합 JSON 백업·복원·기록키·원본을 보존한다.

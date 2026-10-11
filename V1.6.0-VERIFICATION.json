@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "not_published",
+  "publication": "verified",
   "screens": 696,
   "overflow": 0,
   "pdf_pages": 2,
@@ -28,5 +28,16 @@
   "public_files": 2830,
   "csp_inline_hashes": 6,
   "csp_scoped_pages": 39,
-  "fresh_clone": "pending"
+  "fresh_clone": "passed; Node24 npm ci/test/BC01/equipment/NETLIFY build; clean",
+  "feature_commit": "e6f864bbe346cae8ed385befe04af1da4a1eb6fa",
+  "deploy_id": "6acb1812cfa4cf0009858a12",
+  "deploy_state": "ready",
+  "published_at": "2026-10-11T05:01:36.897Z",
+  "release": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.6.0",
+  "release_asset_digest_verified": true,
+  "published_files": 44,
+  "exact_hash_matches": 26,
+  "html_pretty_url_semantic_matches": 18,
+  "published_ui": "v1.6.0/P16/42 items; Part596 row and FG43; unified backup 0 records; no operating writes",
+  "published_console": "1 MutationObserver error without source URL; app assets contain no matching call; cause unknown"
 }
