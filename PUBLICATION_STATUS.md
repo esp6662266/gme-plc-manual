@@ -1,8 +1,25 @@
-# 최신 작업·게시 상태 — v1.3.0 준비 · 2026-10-11
+# 최신 작업·게시 상태 — v1.3.0 · 2026-10-11
 
-BC01 기록 보존·작업 재개 보완을 구현했고 로컬 저장/복원/재열기·PC/모바일·A4 PDF와 필수14검사·원본/중지 자산 보존을 확인했습니다. GitHub 새 clone·Netlify 실제 게시 확인은 진행 중입니다. 최종 게시 커밋·HTTP 대조·ZIP 해시는 확인 후 이 최상단 항목에 갱신합니다.
+BC01(P01)의 기록 보존·작업 재개 보완을 GitHub main과 Netlify에 게시하고 새 clone 및 실제 게시 파일/UI를 확인했습니다. 현재 버전은 GME All-in-One v1.3.0 — BC01 기록 보존·작업 재개 보완입니다. 선택 관찰8행, 개별 전체 note JSON/구형 호환, 생성·저장 기준 버전/근거, 단계 메타데이터 비교, 같은 화면의 수정 재열기와 Python/파일 목록 검사를 보완했습니다.
 
-기능은 all-in-one/BC01-PRESERVATION-20261011.md, 재개는 WORKSPACE-HANDOFF.md, 검증 범위는 V1.3.0-VERIFICATION.md, 패키지는 GME-All-In-One-v1.3.0.package-verification.json을 확인합니다. 이전v1.2.0은 아래에 보존합니다.
+| 확인 항목 | 결과 |
+|---|---|
+| 기능 구현 커밋 | 562293871a155577a5fc0f8bc0f72f6cc6e17ed1 |
+| Netlify 해당 게시 | 6acafc696af9a70008118124 · ready · 2026-10-11 03:03:24.656 UTC · error 없음 |
+| 게시 URL | https://gme-plc-manual.netlify.app/all-in-one/ |
+| 새 GitHub clone | 별도 빈 폴더에서 최신 main 수신·Node24.19.0 npm ci·테스트8개·BC01검사·NETLIFY=true 빌드 통과·Git 변경0 |
+| 필수 검사 | 현재14개 통과·BC01 잘못된 입력19종/원본 위치57곳·기존23양식/3477근거 링크 |
+| 패키지 | v1.3.0 · 2797파일 · 52575449바이트 · CRC/전체SHA 통과 · 원본730/추가3/중지5 보존 |
+| ZIP SHA256 | e559673687448507ce3dd9b6896708034aed685a024cb1998a5f75964a975514 |
+| 게시 대조 | HTTP33개: 변경 assets·MD·JSON 정확 해시, HTML 동등성2개, 보존 FG18/19 이미지·중지5자산, 자료실 익명401 |
+| 화면/저장/PDF | 격리8872 PC1280/모바일390·기본/큰글자·전체 note/구형 JSON 복원·저장/재열기·미지필드/다른설비/초안 보존·A4 PDF4쪽 렌더; 운영 자료 작성0·QA 정리 |
+| 게시 화면 | 표시v1.3.0·12신호·근거32개/묶음SHA 일치. 출처URL 없는 MutationObserver 오류1건 기록; stack에 Electron sandbox 포함·앱 소스에 해당 호출 없음. 원인 미확정, 브라우저 전체 오류0으로 주장하지 않음 |
+| 의존성 | 운영 npm audit --omit=dev 0건. 개발용 Netlify CLI의 간접 의존성 high16건은 별도 유지보수 대상; 의존성 버전 변경0, 자동 major/downgrade 수정은 적용하지 않음 |
+| 실제 PLC/TIA/현장 | 실행/변경0. 현재CPU·실물·ABB 현행모델/단자·정상극성·복구는 확인 대기 |
+
+[작업 재개](WORKSPACE-HANDOFF.md) · [기능 안내](all-in-one/BC01-PRESERVATION-20261011.md) · [상세 검증](V1.3.0-VERIFICATION.md) · [패키지 검사](GME-All-In-One-v1.3.0.package-verification.json). 최신 원본은 main의 all-in-one/, 고정 배포판은 v1.3.0 태그/Release입니다. 이전v1.2.0 태그/Release·ZIP은 보존합니다. 브라우저 기록은 JSON으로 별도 이동하며 GitHub 자동 업로드/서버 동기화는 하지 않습니다. 시뮬레이터는 영구 중지입니다.
+
+이후 루트 상태문서 갱신 커밋은 기능·원본·패키지 바이트를 변경하지 않습니다.
 
 ---
 
