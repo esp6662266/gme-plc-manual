@@ -1,6 +1,6 @@
-# v1.9.1 MC04 개정란 정정 — 게시 확인 대기
+# v1.9.1 MC04 개정란 정정 — 실제 게시 완료
 
-FG136 공란 판독을 Rev2 17.03.2025로 정정한다. 기존v1.9 실제게시검증은배포/기능의증거이며 이 한 문구 오류는v1.9.1에서수정한다.
+FG136 공란 판독을 Rev2 17.03.2025로 정정했다. v1.9.1기능 d72209b1c79d3affe8ee927941ad215a1059ac26 · GitHub tag/Release digest/53020323bytes일치. Netlify 6acb2b87e46b8000087ee994 ready/commit_ref일치·2026-10-11T06:24:31.100Z. 새clone npm ci/8테스트/BC01/설비/NETLIFY 빌드passed·Git변경0. 게시27파일26정확SHA/1HTML prettyURL동등. 실제P08 v1.9.1 FG136 Rev2표시·warn/error0·운영작성0. 기존v1.9 실제게시검증은배포/기능의증거이며 이 한 문구 오류는v1.9.1에서수정한다.
 
 # v1.9.0 · MC04 표준 매뉴얼 — 게시 검증 완료
 

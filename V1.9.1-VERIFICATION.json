@@ -27,9 +27,226 @@
   },
   "tests": 8,
   "NETLIFY_build": "passed",
-  "publication": "pending",
+  "publication": "verified",
   "field_tia_cpu": "not_performed",
   "simulator_changes_execution": 0,
   "operational_writes": 0,
-  "next": "VS01/P09"
+  "next": "VS01/P09",
+  "feature_commit": "d72209b1c79d3affe8ee927941ad215a1059ac26",
+  "netlify": {
+    "id": "6acb2b87e46b8000087ee994",
+    "state": "ready",
+    "commit_ref": "d72209b1c79d3affe8ee927941ad215a1059ac26",
+    "published_at": "2026-10-11T06:24:31.100Z",
+    "error_message": null
+  },
+  "release": {
+    "assets": [
+      {
+        "digest": "sha256:5f3447c0f3bf33f647c7b56140a4a2a0d8a06335aed3821f5e2bf0e8afab037e",
+        "name": "GME-All-In-One-v1.9.1.zip",
+        "size": 53020323
+      }
+    ],
+    "tag_name": "v1.9.1",
+    "target_commitish": "d72209b1c79d3affe8ee927941ad215a1059ac26"
+  },
+  "fresh_clone": "passed npm ci/8 tests/BC01/equipment/NETLIFY build, git clean",
+  "published_files": [
+    {
+      "path": "ACTIVE-WORK.md",
+      "status": 200,
+      "sha256": "c27d563ebf3d86f371fa9545aae1caad8eb1525e20aa6e234d64b2c0b7047d88",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "ALL-IN-ONE.md",
+      "status": 200,
+      "sha256": "ae14e834c1818a59cc6c27420544d4cc72001eb2c1b98125cdd3dd2955963562",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "VERSION.json",
+      "status": 200,
+      "sha256": "c62346939c14a2fe15a9f2d8a864198ac74aac0f60e7f63f997ad0011b6a51e3",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "all-in-one-package-manifest.json",
+      "status": 200,
+      "sha256": "37c62f802917848fe7aead8e26453e49de39f635819f0dec7680d738ab3bd321",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/all-in-one-data.js",
+      "status": 200,
+      "sha256": "1ef88db135e4067c319a433a80cc8308bf368db45de63471344a8623187b2b6a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "equipment_standard_profiles.py",
+      "status": 200,
+      "sha256": "9cec33a1d1026923314f26d7a93174bfd9ba373ffc73a9e253ca43a45cb680ea",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "6dcca0f80289f9d69aa75ceeaa862f4fa9f1cb1dc489f5f9a67982ee0a9cbd63",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "registers/all-in-one-data.json",
+      "status": 200,
+      "sha256": "c08c6e21e2cf4be87bdbb80c41d644b131dc3c0ca124ab570dfd8a74b8ffb07c",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/requirements-audit.json",
+      "status": 200,
+      "sha256": "0fbb1efb094bf6e5dbfa06878bc1a43edaefd02e538d05fae65d59f8772e232b",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit-verification.json",
+      "status": 200,
+      "sha256": "65d858ab4a36fbfce779c9020f29e7ff2c6bc074ab275ebd8f8f60c72934790e",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/program-model.json",
+      "status": 200,
+      "sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/program-model-data.js",
+      "status": 200,
+      "sha256": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/virtual-plc.js",
+      "status": 200,
+      "sha256": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/simulator-workspace.js",
+      "status": 200,
+      "sha256": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/virtual-plc-test-results.json",
+      "status": 200,
+      "sha256": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/circuits/FG24.png",
+      "status": 200,
+      "sha256": "7c2238dc7c50d1a2df004688fbfccf3e09ec5f008533f52336178494d62b2194",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0247-FlgNet.xml",
+      "status": 200,
+      "sha256": "104690938ac2ebe32d668f237255a3e957e0af9930bfc6587b9e6624bedf13a1",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0428-FlgNet.xml",
+      "status": 200,
+      "sha256": "cb7015f543d0deb26fe0bf23d045dc787b7c9cbc3d02c2c5623c0283709fa69a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0658-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0397-FlgNet.xml",
+      "status": 200,
+      "sha256": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0030-FlgNet.xml",
+      "status": 200,
+      "sha256": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0627-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0628-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0629-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0655-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0688-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0694-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    }
+  ],
+  "published_ui": {
+    "OEM": "OEM 도면\tElectrical_Rev2.pdf · FG24/25=PDF25/26,M09 11kW19.3A·ACS355 15kW·440V60Hz·QM49–59A/RATING52A 도면값. FG24/25/112/122/136/17은Rev2 17.03.2025,FG116/14 개정란공란·작성27.05.2024. 현재설정/승인값아님",
+    "hasNewRevision": true,
+    "version": "v1.9.1 · 매뉴얼·수리·구조 분석\n시뮬레이터 영구 중지",
+    "logs": []
+  }
 }
