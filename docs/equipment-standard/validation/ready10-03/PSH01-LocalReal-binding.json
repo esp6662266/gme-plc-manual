@@ -1,0 +1,22 @@
+[
+  {
+    "file": "0665",
+    "xml": "<ns0:AufDBBlock xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"PID_MV-02\" S=\"Global\" RID=\"38\" IS=\"1\"><ns0:CS><ns0:C NID=\"4\" UID=\"210\" AK=\"InstanceDB\" /></ns0:CS></ns0:ID><ns0:OD S=\"16\"><ns0:TD TDF=\"OST\" T=\"Block_FB:33882154:CONT_S\" /></ns0:OD><ns0:TOD N=\"23\" SM=\"2012-09-06T09:29:06.6583466Z\" BT=\"DB\" CID=\"638560458480522635\" TG=\"8a9af3a7-e038-4a3d-8af3-d152a7587b97\" VG=\"7dfb6adb-51db-400e-bb74-9040dec80ebe\" TRKG=\"7dfb6adb-51db-400e-bb74-9040dec80ebe\" /><ns0:DBBD IM=\"2012-09-06T09:29:06.6583466Z\" /></ns0:AufDBBlock>"
+  },
+  {
+    "file": "0668",
+    "xml": "<ns0:GlobalAccess xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"\" S=\"Global\" RID=\"32\" IS=\"1\"><ns0:CS><ns0:C NID=\"3\" UID=\"112\" OID=\"16\" /></ns0:CS></ns0:ID><ns0:OD S=\"16\"><ns0:TD TDF=\"OST\" T=\"Int:33554437:Int\" /></ns0:OD><ns0:SD /><ns0:SSD S=\"S\" AA=\"C\" AO=\"1072\" SO=\"0\" MID=\"118\"><ns0:AOS><ns0:AO N=\"Data\" RIDI=\"\" BO=\"0\" BS=\"16\"><ns0:TD TDF=\"OST\" T=\"Block_DB:-1845493759:Data\" /><ns0:ATD TDF=\"OST\" T=\"Undef:0:\" /></ns0:AO><ns0:AO N=\"Press_PC01\" RIDI=\"\" BO=\"1072\" BS=\"16\"><ns0:TD TDF=\"OST\" T=\"Int:33554437:Int\" /><ns0:ATD TDF=\"OST\" T=\"Undef:0:\" /></ns0:AO></ns0:AOS></ns0:SSD><ns0:BAD BIRID=\"1\" /></ns0:GlobalAccess>"
+  },
+  {
+    "file": "0669",
+    "xml": "<ns0:InterfaceAccess xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"\" S=\"Local\" RID=\"33\" IS=\"1\"><ns0:CS><ns0:C NID=\"3\" UID=\"119\" OID=\"17\" AK=\"Write\" /><ns0:C NID=\"4\" UID=\"200\" /></ns0:CS></ns0:ID><ns0:OD S=\"32\"><ns0:TD TDF=\"OST\" T=\"Real:33554440:Real\" /></ns0:OD><ns0:SD /><ns0:SSD S=\"D\" AA=\"C\" AO=\"192\" SO=\"0\" MID=\"57\"><ns0:AOS><ns0:AO N=\"Real_PC01\" RIDI=\"\" BO=\"192\" BS=\"32\"><ns0:TD TDF=\"OST\" T=\"Real:33554440:Real\" /><ns0:ATD TDF=\"OST\" T=\"Undef:0:\" /></ns0:AO></ns0:AOS></ns0:SSD><ns0:IAD PN=\"0\" RO=\"0\" /></ns0:InterfaceAccess>"
+  },
+  {
+    "file": "0670",
+    "xml": "<ns0:SimpleAccess xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"PID MV02 UP\" S=\"Global\" RID=\"43\" IS=\"1\"><ns0:CS><ns0:C NID=\"4\" UID=\"208\" AK=\"Write\" /></ns0:CS></ns0:ID><ns0:OD S=\"1\"><ns0:TD TDF=\"OST\" T=\"Bool:33554433:Bool\" /></ns0:OD><ns0:SD /><ns0:SSD S=\"U\" AA=\"C\" AO=\"112\" SO=\"0\" MID=\"\"><ns0:AOS /></ns0:SSD><ns0:SAD R=\"Memory\" MT=\"2025-04-03T00:28:48.7504351Z\" SAM=\"None\" /></ns0:SimpleAccess>"
+  },
+  {
+    "file": "0670",
+    "xml": "<ns0:SimpleAccess xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"PID MV02 Down\" S=\"Global\" RID=\"44\" IS=\"1\"><ns0:CS><ns0:C NID=\"4\" UID=\"209\" AK=\"Write\" /></ns0:CS></ns0:ID><ns0:OD S=\"1\"><ns0:TD TDF=\"OST\" T=\"Bool:33554433:Bool\" /></ns0:OD><ns0:SD /><ns0:SSD S=\"U\" AA=\"C\" AO=\"113\" SO=\"0\" MID=\"\"><ns0:AOS /></ns0:SSD><ns0:SAD R=\"Memory\" MT=\"2025-04-03T00:28:48.7504351Z\" SAM=\"None\" /></ns0:SimpleAccess>"
+  }
+]

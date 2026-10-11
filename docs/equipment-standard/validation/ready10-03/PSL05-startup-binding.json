@@ -1,0 +1,14 @@
+[
+  {
+    "file": "0048",
+    "xml": "<ns0:LiteralConstant xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"\" S=\"Constant\" RID=\"54\" IS=\"1\"><ns0:CS><ns0:C NID=\"2\" UID=\"168\" /><ns0:C NID=\"2\" UID=\"170\" /><ns0:C NID=\"2\" UID=\"172\" /><ns0:C NID=\"2\" UID=\"174\" /><ns0:C NID=\"2\" UID=\"176\" /><ns0:C NID=\"2\" UID=\"178\" /><ns0:C NID=\"2\" UID=\"180\" /><ns0:C NID=\"2\" UID=\"182\" /><ns0:C NID=\"3\" UID=\"285\" /><ns0:C NID=\"3\" UID=\"287\" /><ns0:C NID=\"3\" UID=\"289\" /><ns0:C NID=\"3\" UID=\"291\" /><ns0:C NID=\"3\" UID=\"293\" /><ns0:C NID=\"3\" UID=\"295\" /><ns0:C NID=\"3\" UID=\"297\" /><ns0:C NID=\"3\" UID=\"299\" /><ns0:C NID=\"3\" UID=\"301\" /></ns0:CS></ns0:ID><ns0:OD S=\"16\"><ns0:TD TDF=\"OST\" T=\"Int:33554437:Int\" /></ns0:OD><ns0:CD CF=\"Dec_signed\" FF=\"32\"><ns0:CB ST=\"Number\" T=\"Int\" SV=\"INT_x0023_0\" V=\"0\" /></ns0:CD></ns0:LiteralConstant>"
+  },
+  {
+    "file": "0562",
+    "xml": "<ns0:DepDBBlock xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"Allarm\" S=\"Global\" RID=\"23\" IS=\"1\" ID=\"24,26,28,30,32,34,36,38,40\"><ns0:CS><ns0:C NID=\"3\" UID=\"302\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"300\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"298\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"296\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"294\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"292\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"290\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"288\" AK=\"Write\" /><ns0:C NID=\"3\" UID=\"286\" AK=\"Write\" /></ns0:CS></ns0:ID><ns0:OD S=\"208\"><ns0:TD TDF=\"OST\" T=\"Block_DB:-1845493757:Allarm\" /></ns0:OD><ns0:TOD N=\"3\" SM=\"2025-05-01T00:27:21.9112671Z\" BT=\"DB\" CID=\"638560457249431121\" TRKG=\"97abaf2f-8e51-4666-a038-a4d4c27e5421\" /><ns0:DBBD IM=\"2025-05-01T00:27:21.9112671Z\" /></ns0:DepDBBlock>"
+  },
+  {
+    "file": "0563",
+    "xml": "<ns0:GlobalAccess xmlns:ns0=\"http://schemas.siemens.com/Simatic/ES/14/IdentManager/IdentXmlPart.xsd\"><ns0:ID N=\"\" S=\"Global\" RID=\"28\" IS=\"268435456\"><ns0:CS><ns0:C NID=\"3\" UID=\"290\" AK=\"Write\" /></ns0:CS></ns0:ID><ns0:OD S=\"16\"><ns0:TD TDF=\"OST\" T=\"Word:33554436:Word\" /></ns0:OD><ns0:SD /><ns0:SSD S=\"U\" AA=\"C\" AO=\"32\" SO=\"0\" MID=\"\"><ns0:AOS /></ns0:SSD><ns0:BAD BIRID=\"23\" /></ns0:GlobalAccess>"
+  }
+]

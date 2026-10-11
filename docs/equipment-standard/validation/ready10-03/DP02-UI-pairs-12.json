@@ -1,0 +1,68 @@
+[
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "259",
+    "target": "259\tLe\t\tin1 = Analog_input; in2 = -1382"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "193",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "23",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  },
+  {
+    "key": "DP02",
+    "network": 1659,
+    "uid": "162",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "DP02",
+    "network": 1886,
+    "uid": "30",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "DP02",
+    "network": 1884,
+    "uid": "395",
+    "target": "395\tLt\t\tin1 = Data.DP_02; in2 = Coeff.DP_02_SOGLIA_1"
+  },
+  {
+    "key": "DP02",
+    "network": 1884,
+    "uid": "458",
+    "target": "458\tMove\t\tin = Coeff.DP_02_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "DP02",
+    "network": 1887,
+    "uid": "457",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "DP02",
+    "network": 1992,
+    "uid": "1136",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "key": "DP02",
+    "network": 1992,
+    "uid": "1141",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "DP02",
+    "network": 1992,
+    "uid": "1152",
+    "target": "1152\tRCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  }
+]

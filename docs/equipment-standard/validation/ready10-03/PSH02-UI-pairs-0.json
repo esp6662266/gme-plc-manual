@@ -1,0 +1,80 @@
+[
+  {
+    "key": "PSH02",
+    "network": 1071,
+    "uid": "97",
+    "target": "97\tMove\t\tin = PSH02; out1 = Inputs.PSH_02"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "471",
+    "target": "471\tORef 464 (PSH02) ↔ Part 456.Analog_input"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "472",
+    "target": "472\tORef 465 (Coeff.COEFF_PSH02) ↔ Part 456.Coeff"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "473",
+    "target": "473\tORef 466 (Coeff.ZERO_PSH02) ↔ Part 456.Zero"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "474",
+    "target": "474\tPart 456.OutValue ↔ ORef 467 (Data.PSH_02)"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "24",
+    "target": "24\tPart 456.Out_of_range ↔ ORef 23 (Allarm.PSH02_OFR)"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "164",
+    "target": "164\tConvert\t\tin = Analog_input; out = App5"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "170",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "177",
+    "target": "177\tMul\t\tin1 = App3; in2 = App4; out = App3"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "181",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "185",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "193",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "23",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  }
+]

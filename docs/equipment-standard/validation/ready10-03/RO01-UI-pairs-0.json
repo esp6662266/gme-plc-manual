@@ -1,0 +1,92 @@
+[
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "511",
+    "target": "511\tORef 504 (R001) ↔ Part 496.Analog_input"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "516",
+    "target": "516\tPart 515.out ↔ Part 496.en"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "510",
+    "target": "510\tORef 503 (ON) ↔ Part 496.IN0"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "514",
+    "target": "514\tPart 496.OutValue ↔ ORef 507 (Data.Oxigen_RO01)"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "24",
+    "target": "24\tPart 496.Out_of_range ↔ ORef 23 (Allarm.Ro01_OFR)"
+  },
+  {
+    "key": "RO01",
+    "network": 1071,
+    "uid": "163",
+    "target": "163\tORef 152 (R001) ↔ Part 146.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1071,
+    "uid": "165",
+    "target": "165\tPart 146.out1 ↔ ORef 153 (Inputs.RO_01)"
+  },
+  {
+    "key": "RO01",
+    "network": 1071,
+    "uid": "161",
+    "target": "161\tPart 145.eno ↔ Part 146.en"
+  },
+  {
+    "key": "RO01",
+    "network": 1982,
+    "uid": "24",
+    "target": "24\tPart 22.out ↔ Part 490.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1982,
+    "uid": "534",
+    "target": "534\tPart 497.out ↔ Part 501.in ↔ Part 503.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "35",
+    "target": "35\tPart 32.out1 ↔ ORef 37 (Data.RO01_MAX_SETPOINT)"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "651",
+    "target": "651\tPart 627.out ↔ Part 628.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "654",
+    "target": "654\tPart 629.out ↔ Part 630.en ↔ Part 631.pre"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "660",
+    "target": "660\tPart 631.out ↔ Part 632.in ↔ Part 633.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1984,
+    "uid": "659",
+    "target": "659\tPart 658.out ↔ Part 590.pre ↔ Part 662.in"
+  }
+]

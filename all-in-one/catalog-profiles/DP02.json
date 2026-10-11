@@ -1,0 +1,3445 @@
+{
+  "catalog_id": "DP02",
+  "selection_key": "DP02",
+  "priority_key": null,
+  "type": "differential_pressure_sensor",
+  "draft": "catalog-sources/DP02-DOTS-DRAFT.md",
+  "draft_sha256": "2fb333f19ccfbd1107c7805ff93bdac21e26f4662a31a6c8ee96c14d4b56eb4b",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1774,
+      "part",
+      "1575"
+    ],
+    [
+      1774,
+      "wire",
+      "1577"
+    ],
+    [
+      1774,
+      "wire",
+      "1569"
+    ],
+    [
+      1774,
+      "wire",
+      "1576"
+    ],
+    [
+      1774,
+      "wire",
+      "1570"
+    ],
+    [
+      1774,
+      "wire",
+      "1571"
+    ],
+    [
+      1774,
+      "wire",
+      "1572"
+    ],
+    [
+      1774,
+      "wire",
+      "1573"
+    ],
+    [
+      1774,
+      "wire",
+      "1574"
+    ],
+    [
+      1774,
+      "wire",
+      "24"
+    ],
+    [
+      1658,
+      "part",
+      "255"
+    ],
+    [
+      1658,
+      "part",
+      "258"
+    ],
+    [
+      1658,
+      "part",
+      "161"
+    ],
+    [
+      1658,
+      "part",
+      "164"
+    ],
+    [
+      1658,
+      "part",
+      "167"
+    ],
+    [
+      1658,
+      "part",
+      "170"
+    ],
+    [
+      1658,
+      "part",
+      "174"
+    ],
+    [
+      1658,
+      "part",
+      "177"
+    ],
+    [
+      1658,
+      "part",
+      "181"
+    ],
+    [
+      1658,
+      "part",
+      "185"
+    ],
+    [
+      1658,
+      "part",
+      "190"
+    ],
+    [
+      1658,
+      "part",
+      "259"
+    ],
+    [
+      1658,
+      "part",
+      "47"
+    ],
+    [
+      1658,
+      "part",
+      "193"
+    ],
+    [
+      1658,
+      "part",
+      "23"
+    ],
+    [
+      1658,
+      "wire",
+      "257"
+    ],
+    [
+      1658,
+      "wire",
+      "220"
+    ],
+    [
+      1658,
+      "wire",
+      "256"
+    ],
+    [
+      1658,
+      "wire",
+      "30"
+    ],
+    [
+      1658,
+      "wire",
+      "31"
+    ],
+    [
+      1658,
+      "wire",
+      "25"
+    ],
+    [
+      1658,
+      "wire",
+      "27"
+    ],
+    [
+      1658,
+      "wire",
+      "28"
+    ],
+    [
+      1658,
+      "wire",
+      "26"
+    ],
+    [
+      1658,
+      "wire",
+      "225"
+    ],
+    [
+      1658,
+      "wire",
+      "227"
+    ],
+    [
+      1658,
+      "wire",
+      "226"
+    ],
+    [
+      1658,
+      "wire",
+      "228"
+    ],
+    [
+      1658,
+      "wire",
+      "230"
+    ],
+    [
+      1658,
+      "wire",
+      "229"
+    ],
+    [
+      1658,
+      "wire",
+      "231"
+    ],
+    [
+      1658,
+      "wire",
+      "232"
+    ],
+    [
+      1658,
+      "wire",
+      "234"
+    ],
+    [
+      1658,
+      "wire",
+      "233"
+    ],
+    [
+      1658,
+      "wire",
+      "235"
+    ],
+    [
+      1658,
+      "wire",
+      "237"
+    ],
+    [
+      1658,
+      "wire",
+      "236"
+    ],
+    [
+      1658,
+      "wire",
+      "238"
+    ],
+    [
+      1658,
+      "wire",
+      "239"
+    ],
+    [
+      1658,
+      "wire",
+      "241"
+    ],
+    [
+      1658,
+      "wire",
+      "240"
+    ],
+    [
+      1658,
+      "wire",
+      "242"
+    ],
+    [
+      1658,
+      "wire",
+      "243"
+    ],
+    [
+      1658,
+      "wire",
+      "245"
+    ],
+    [
+      1658,
+      "wire",
+      "244"
+    ],
+    [
+      1658,
+      "wire",
+      "246"
+    ],
+    [
+      1658,
+      "wire",
+      "247"
+    ],
+    [
+      1658,
+      "wire",
+      "36"
+    ],
+    [
+      1658,
+      "wire",
+      "37"
+    ],
+    [
+      1658,
+      "wire",
+      "35"
+    ],
+    [
+      1658,
+      "wire",
+      "38"
+    ],
+    [
+      1658,
+      "wire",
+      "39"
+    ],
+    [
+      1658,
+      "wire",
+      "48"
+    ],
+    [
+      1658,
+      "wire",
+      "49"
+    ],
+    [
+      1658,
+      "wire",
+      "252"
+    ],
+    [
+      1658,
+      "wire",
+      "21"
+    ],
+    [
+      1658,
+      "wire",
+      "253"
+    ],
+    [
+      1658,
+      "wire",
+      "22"
+    ],
+    [
+      1659,
+      "part",
+      "171"
+    ],
+    [
+      1659,
+      "part",
+      "162"
+    ],
+    [
+      1659,
+      "wire",
+      "173"
+    ],
+    [
+      1659,
+      "wire",
+      "168"
+    ],
+    [
+      1659,
+      "wire",
+      "172"
+    ],
+    [
+      1659,
+      "wire",
+      "169"
+    ],
+    [
+      1659,
+      "wire",
+      "170"
+    ],
+    [
+      1992,
+      "part",
+      "1204"
+    ],
+    [
+      1992,
+      "part",
+      "1121"
+    ],
+    [
+      1992,
+      "part",
+      "1124"
+    ],
+    [
+      1992,
+      "part",
+      "1127"
+    ],
+    [
+      1992,
+      "part",
+      "1130"
+    ],
+    [
+      1992,
+      "part",
+      "1120"
+    ],
+    [
+      1992,
+      "part",
+      "1136"
+    ],
+    [
+      1992,
+      "part",
+      "1206"
+    ],
+    [
+      1992,
+      "part",
+      "1141"
+    ],
+    [
+      1992,
+      "part",
+      "1208"
+    ],
+    [
+      1992,
+      "part",
+      "1210"
+    ],
+    [
+      1992,
+      "part",
+      "1146"
+    ],
+    [
+      1992,
+      "part",
+      "1149"
+    ],
+    [
+      1992,
+      "part",
+      "1152"
+    ],
+    [
+      1992,
+      "wire",
+      "1212"
+    ],
+    [
+      1992,
+      "wire",
+      "1173"
+    ],
+    [
+      1992,
+      "wire",
+      "1205"
+    ],
+    [
+      1992,
+      "wire",
+      "1174"
+    ],
+    [
+      1992,
+      "wire",
+      "1175"
+    ],
+    [
+      1992,
+      "wire",
+      "1176"
+    ],
+    [
+      1992,
+      "wire",
+      "1177"
+    ],
+    [
+      1992,
+      "wire",
+      "1178"
+    ],
+    [
+      1992,
+      "wire",
+      "1179"
+    ],
+    [
+      1992,
+      "wire",
+      "1180"
+    ],
+    [
+      1992,
+      "wire",
+      "1181"
+    ],
+    [
+      1992,
+      "wire",
+      "1182"
+    ],
+    [
+      1992,
+      "wire",
+      "1183"
+    ],
+    [
+      1992,
+      "wire",
+      "1184"
+    ],
+    [
+      1992,
+      "wire",
+      "1185"
+    ],
+    [
+      1992,
+      "wire",
+      "1186"
+    ],
+    [
+      1992,
+      "wire",
+      "1187"
+    ],
+    [
+      1992,
+      "wire",
+      "1188"
+    ],
+    [
+      1992,
+      "wire",
+      "1189"
+    ],
+    [
+      1992,
+      "wire",
+      "1207"
+    ],
+    [
+      1992,
+      "wire",
+      "1191"
+    ],
+    [
+      1992,
+      "wire",
+      "1193"
+    ],
+    [
+      1992,
+      "wire",
+      "1209"
+    ],
+    [
+      1992,
+      "wire",
+      "1194"
+    ],
+    [
+      1992,
+      "wire",
+      "1211"
+    ],
+    [
+      1992,
+      "wire",
+      "1195"
+    ],
+    [
+      1992,
+      "wire",
+      "1196"
+    ],
+    [
+      1992,
+      "wire",
+      "1197"
+    ],
+    [
+      1992,
+      "wire",
+      "1198"
+    ],
+    [
+      1992,
+      "wire",
+      "1199"
+    ],
+    [
+      1992,
+      "wire",
+      "1200"
+    ],
+    [
+      1992,
+      "wire",
+      "1202"
+    ],
+    [
+      1886,
+      "part",
+      "21"
+    ],
+    [
+      1886,
+      "part",
+      "22"
+    ],
+    [
+      1886,
+      "part",
+      "23"
+    ],
+    [
+      1886,
+      "part",
+      "24"
+    ],
+    [
+      1886,
+      "part",
+      "25"
+    ],
+    [
+      1886,
+      "part",
+      "26"
+    ],
+    [
+      1886,
+      "part",
+      "27"
+    ],
+    [
+      1886,
+      "part",
+      "74"
+    ],
+    [
+      1886,
+      "part",
+      "28"
+    ],
+    [
+      1886,
+      "part",
+      "29"
+    ],
+    [
+      1886,
+      "part",
+      "30"
+    ],
+    [
+      1886,
+      "part",
+      "31"
+    ],
+    [
+      1886,
+      "part",
+      "32"
+    ],
+    [
+      1886,
+      "part",
+      "33"
+    ],
+    [
+      1886,
+      "part",
+      "78"
+    ],
+    [
+      1886,
+      "wire",
+      "47"
+    ],
+    [
+      1886,
+      "wire",
+      "48"
+    ],
+    [
+      1886,
+      "wire",
+      "49"
+    ],
+    [
+      1886,
+      "wire",
+      "50"
+    ],
+    [
+      1886,
+      "wire",
+      "51"
+    ],
+    [
+      1886,
+      "wire",
+      "52"
+    ],
+    [
+      1886,
+      "wire",
+      "53"
+    ],
+    [
+      1886,
+      "wire",
+      "54"
+    ],
+    [
+      1886,
+      "wire",
+      "55"
+    ],
+    [
+      1886,
+      "wire",
+      "56"
+    ],
+    [
+      1886,
+      "wire",
+      "57"
+    ],
+    [
+      1886,
+      "wire",
+      "58"
+    ],
+    [
+      1886,
+      "wire",
+      "59"
+    ],
+    [
+      1886,
+      "wire",
+      "60"
+    ],
+    [
+      1886,
+      "wire",
+      "72"
+    ],
+    [
+      1886,
+      "wire",
+      "73"
+    ],
+    [
+      1886,
+      "wire",
+      "61"
+    ],
+    [
+      1886,
+      "wire",
+      "62"
+    ],
+    [
+      1886,
+      "wire",
+      "63"
+    ],
+    [
+      1886,
+      "wire",
+      "64"
+    ],
+    [
+      1886,
+      "wire",
+      "65"
+    ],
+    [
+      1886,
+      "wire",
+      "66"
+    ],
+    [
+      1886,
+      "wire",
+      "67"
+    ],
+    [
+      1886,
+      "wire",
+      "68"
+    ],
+    [
+      1886,
+      "wire",
+      "69"
+    ],
+    [
+      1886,
+      "wire",
+      "70"
+    ],
+    [
+      1886,
+      "wire",
+      "71"
+    ],
+    [
+      1886,
+      "wire",
+      "76"
+    ],
+    [
+      1886,
+      "wire",
+      "77"
+    ],
+    [
+      1885,
+      "part",
+      "451"
+    ],
+    [
+      1885,
+      "part",
+      "453"
+    ],
+    [
+      1885,
+      "part",
+      "418"
+    ],
+    [
+      1885,
+      "part",
+      "455"
+    ],
+    [
+      1885,
+      "part",
+      "423"
+    ],
+    [
+      1885,
+      "part",
+      "457"
+    ],
+    [
+      1885,
+      "part",
+      "460"
+    ],
+    [
+      1885,
+      "part",
+      "21"
+    ],
+    [
+      1885,
+      "part",
+      "428"
+    ],
+    [
+      1885,
+      "wire",
+      "459"
+    ],
+    [
+      1885,
+      "wire",
+      "438"
+    ],
+    [
+      1885,
+      "wire",
+      "452"
+    ],
+    [
+      1885,
+      "wire",
+      "440"
+    ],
+    [
+      1885,
+      "wire",
+      "454"
+    ],
+    [
+      1885,
+      "wire",
+      "439"
+    ],
+    [
+      1885,
+      "wire",
+      "442"
+    ],
+    [
+      1885,
+      "wire",
+      "444"
+    ],
+    [
+      1885,
+      "wire",
+      "456"
+    ],
+    [
+      1885,
+      "wire",
+      "443"
+    ],
+    [
+      1885,
+      "wire",
+      "446"
+    ],
+    [
+      1885,
+      "wire",
+      "447"
+    ],
+    [
+      1885,
+      "wire",
+      "458"
+    ],
+    [
+      1885,
+      "wire",
+      "463"
+    ],
+    [
+      1885,
+      "wire",
+      "22"
+    ],
+    [
+      1885,
+      "wire",
+      "23"
+    ],
+    [
+      1885,
+      "wire",
+      "449"
+    ],
+    [
+      1884,
+      "part",
+      "559"
+    ],
+    [
+      1884,
+      "part",
+      "388"
+    ],
+    [
+      1884,
+      "part",
+      "395"
+    ],
+    [
+      1884,
+      "part",
+      "398"
+    ],
+    [
+      1884,
+      "part",
+      "401"
+    ],
+    [
+      1884,
+      "part",
+      "407"
+    ],
+    [
+      1884,
+      "part",
+      "410"
+    ],
+    [
+      1884,
+      "part",
+      "413"
+    ],
+    [
+      1884,
+      "part",
+      "416"
+    ],
+    [
+      1884,
+      "part",
+      "422"
+    ],
+    [
+      1884,
+      "part",
+      "425"
+    ],
+    [
+      1884,
+      "part",
+      "428"
+    ],
+    [
+      1884,
+      "part",
+      "431"
+    ],
+    [
+      1884,
+      "part",
+      "437"
+    ],
+    [
+      1884,
+      "part",
+      "440"
+    ],
+    [
+      1884,
+      "part",
+      "443"
+    ],
+    [
+      1884,
+      "part",
+      "446"
+    ],
+    [
+      1884,
+      "part",
+      "452"
+    ],
+    [
+      1884,
+      "part",
+      "455"
+    ],
+    [
+      1884,
+      "part",
+      "458"
+    ],
+    [
+      1884,
+      "wire",
+      "561"
+    ],
+    [
+      1884,
+      "wire",
+      "500"
+    ],
+    [
+      1884,
+      "wire",
+      "560"
+    ],
+    [
+      1884,
+      "wire",
+      "501"
+    ],
+    [
+      1884,
+      "wire",
+      "502"
+    ],
+    [
+      1884,
+      "wire",
+      "503"
+    ],
+    [
+      1884,
+      "wire",
+      "504"
+    ],
+    [
+      1884,
+      "wire",
+      "505"
+    ],
+    [
+      1884,
+      "wire",
+      "506"
+    ],
+    [
+      1884,
+      "wire",
+      "508"
+    ],
+    [
+      1884,
+      "wire",
+      "510"
+    ],
+    [
+      1884,
+      "wire",
+      "509"
+    ],
+    [
+      1884,
+      "wire",
+      "511"
+    ],
+    [
+      1884,
+      "wire",
+      "512"
+    ],
+    [
+      1884,
+      "wire",
+      "513"
+    ],
+    [
+      1884,
+      "wire",
+      "514"
+    ],
+    [
+      1884,
+      "wire",
+      "515"
+    ],
+    [
+      1884,
+      "wire",
+      "516"
+    ],
+    [
+      1884,
+      "wire",
+      "517"
+    ],
+    [
+      1884,
+      "wire",
+      "518"
+    ],
+    [
+      1884,
+      "wire",
+      "520"
+    ],
+    [
+      1884,
+      "wire",
+      "522"
+    ],
+    [
+      1884,
+      "wire",
+      "521"
+    ],
+    [
+      1884,
+      "wire",
+      "523"
+    ],
+    [
+      1884,
+      "wire",
+      "524"
+    ],
+    [
+      1884,
+      "wire",
+      "525"
+    ],
+    [
+      1884,
+      "wire",
+      "526"
+    ],
+    [
+      1884,
+      "wire",
+      "527"
+    ],
+    [
+      1884,
+      "wire",
+      "528"
+    ],
+    [
+      1884,
+      "wire",
+      "529"
+    ],
+    [
+      1884,
+      "wire",
+      "530"
+    ],
+    [
+      1884,
+      "wire",
+      "532"
+    ],
+    [
+      1884,
+      "wire",
+      "534"
+    ],
+    [
+      1884,
+      "wire",
+      "533"
+    ],
+    [
+      1884,
+      "wire",
+      "535"
+    ],
+    [
+      1884,
+      "wire",
+      "536"
+    ],
+    [
+      1884,
+      "wire",
+      "537"
+    ],
+    [
+      1884,
+      "wire",
+      "538"
+    ],
+    [
+      1884,
+      "wire",
+      "539"
+    ],
+    [
+      1884,
+      "wire",
+      "540"
+    ],
+    [
+      1884,
+      "wire",
+      "541"
+    ],
+    [
+      1884,
+      "wire",
+      "542"
+    ],
+    [
+      1884,
+      "wire",
+      "544"
+    ],
+    [
+      1884,
+      "wire",
+      "546"
+    ],
+    [
+      1884,
+      "wire",
+      "545"
+    ],
+    [
+      1884,
+      "wire",
+      "547"
+    ],
+    [
+      1884,
+      "wire",
+      "548"
+    ],
+    [
+      1884,
+      "wire",
+      "549"
+    ],
+    [
+      1884,
+      "wire",
+      "550"
+    ],
+    [
+      1884,
+      "wire",
+      "551"
+    ],
+    [
+      1884,
+      "wire",
+      "553"
+    ],
+    [
+      1884,
+      "wire",
+      "555"
+    ],
+    [
+      1884,
+      "wire",
+      "554"
+    ],
+    [
+      1884,
+      "wire",
+      "556"
+    ],
+    [
+      1884,
+      "wire",
+      "557"
+    ],
+    [
+      1887,
+      "part",
+      "500"
+    ],
+    [
+      1887,
+      "part",
+      "457"
+    ],
+    [
+      1887,
+      "part",
+      "462"
+    ],
+    [
+      1887,
+      "part",
+      "22"
+    ],
+    [
+      1887,
+      "part",
+      "507"
+    ],
+    [
+      1887,
+      "part",
+      "25"
+    ],
+    [
+      1887,
+      "part",
+      "502"
+    ],
+    [
+      1887,
+      "part",
+      "468"
+    ],
+    [
+      1887,
+      "part",
+      "504"
+    ],
+    [
+      1887,
+      "part",
+      "473"
+    ],
+    [
+      1887,
+      "wire",
+      "506"
+    ],
+    [
+      1887,
+      "wire",
+      "486"
+    ],
+    [
+      1887,
+      "wire",
+      "501"
+    ],
+    [
+      1887,
+      "wire",
+      "487"
+    ],
+    [
+      1887,
+      "wire",
+      "488"
+    ],
+    [
+      1887,
+      "wire",
+      "489"
+    ],
+    [
+      1887,
+      "wire",
+      "490"
+    ],
+    [
+      1887,
+      "wire",
+      "21"
+    ],
+    [
+      1887,
+      "wire",
+      "24"
+    ],
+    [
+      1887,
+      "wire",
+      "510"
+    ],
+    [
+      1887,
+      "wire",
+      "26"
+    ],
+    [
+      1887,
+      "wire",
+      "27"
+    ],
+    [
+      1887,
+      "wire",
+      "492"
+    ],
+    [
+      1887,
+      "wire",
+      "503"
+    ],
+    [
+      1887,
+      "wire",
+      "491"
+    ],
+    [
+      1887,
+      "wire",
+      "494"
+    ],
+    [
+      1887,
+      "wire",
+      "496"
+    ],
+    [
+      1887,
+      "wire",
+      "505"
+    ],
+    [
+      1887,
+      "wire",
+      "495"
+    ],
+    [
+      1887,
+      "wire",
+      "498"
+    ],
+    [
+      1619,
+      "part",
+      "282"
+    ],
+    [
+      1619,
+      "wire",
+      "284"
+    ],
+    [
+      1619,
+      "wire",
+      "280"
+    ],
+    [
+      1619,
+      "wire",
+      "283"
+    ],
+    [
+      403,
+      "part",
+      "329"
+    ],
+    [
+      403,
+      "part",
+      "250"
+    ],
+    [
+      403,
+      "part",
+      "253"
+    ],
+    [
+      403,
+      "part",
+      "256"
+    ],
+    [
+      403,
+      "part",
+      "259"
+    ],
+    [
+      403,
+      "part",
+      "267"
+    ],
+    [
+      403,
+      "part",
+      "270"
+    ],
+    [
+      403,
+      "part",
+      "273"
+    ],
+    [
+      403,
+      "part",
+      "276"
+    ],
+    [
+      403,
+      "part",
+      "281"
+    ],
+    [
+      403,
+      "wire",
+      "331"
+    ],
+    [
+      403,
+      "wire",
+      "303"
+    ],
+    [
+      403,
+      "wire",
+      "330"
+    ],
+    [
+      403,
+      "wire",
+      "304"
+    ],
+    [
+      403,
+      "wire",
+      "306"
+    ],
+    [
+      403,
+      "wire",
+      "305"
+    ],
+    [
+      403,
+      "wire",
+      "307"
+    ],
+    [
+      403,
+      "wire",
+      "309"
+    ],
+    [
+      403,
+      "wire",
+      "308"
+    ],
+    [
+      403,
+      "wire",
+      "310"
+    ],
+    [
+      403,
+      "wire",
+      "312"
+    ],
+    [
+      403,
+      "wire",
+      "311"
+    ],
+    [
+      403,
+      "wire",
+      "313"
+    ],
+    [
+      403,
+      "wire",
+      "314"
+    ],
+    [
+      403,
+      "wire",
+      "315"
+    ],
+    [
+      403,
+      "wire",
+      "317"
+    ],
+    [
+      403,
+      "wire",
+      "316"
+    ],
+    [
+      403,
+      "wire",
+      "318"
+    ],
+    [
+      403,
+      "wire",
+      "320"
+    ],
+    [
+      403,
+      "wire",
+      "319"
+    ],
+    [
+      403,
+      "wire",
+      "321"
+    ],
+    [
+      403,
+      "wire",
+      "323"
+    ],
+    [
+      403,
+      "wire",
+      "322"
+    ],
+    [
+      403,
+      "wire",
+      "324"
+    ],
+    [
+      403,
+      "wire",
+      "325"
+    ],
+    [
+      403,
+      "wire",
+      "326"
+    ],
+    [
+      403,
+      "wire",
+      "327"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "원시 입력",
+      "network": 1774,
+      "kind": "wire",
+      "uid": "1571",
+      "label": "IW400:P→Analog_input",
+      "boundary": "현재채널/실측별도"
+    },
+    {
+      "signal": "Zero",
+      "network": 1774,
+      "kind": "wire",
+      "uid": "1573",
+      "label": "W120→Zero",
+      "boundary": "빼기가 아닌 더하기"
+    },
+    {
+      "signal": "Coeff",
+      "network": 1774,
+      "kind": "wire",
+      "uid": "1572",
+      "label": "W122→Coeff",
+      "boundary": "백업500·현재값미확인"
+    },
+    {
+      "signal": "환산 결과",
+      "network": 1774,
+      "kind": "wire",
+      "uid": "1574",
+      "label": "OutValue→DP_02 W242",
+      "boundary": "단위미확정"
+    },
+    {
+      "signal": "범위 오류 결속",
+      "network": 1774,
+      "kind": "wire",
+      "uid": "24",
+      "label": "Out_of_range→BF02_OFR X24.5",
+      "boundary": "공유경보와별도"
+    },
+    {
+      "signal": "입력 확장",
+      "network": 1658,
+      "kind": "part",
+      "uid": "164",
+      "label": "Int→DInt",
+      "boundary": "현CPU 폭변환별도"
+    },
+    {
+      "signal": "Zero 확장",
+      "network": 1658,
+      "kind": "part",
+      "uid": "167",
+      "label": "Zero Int→DInt",
+      "boundary": "임시App6"
+    },
+    {
+      "signal": "합산",
+      "network": 1658,
+      "kind": "part",
+      "uid": "170",
+      "label": "raw+Zero",
+      "boundary": "빼기아님"
+    },
+    {
+      "signal": "곱셈",
+      "network": 1658,
+      "kind": "part",
+      "uid": "177",
+      "label": "DInt×Coeff",
+      "boundary": "오버플로미검증"
+    },
+    {
+      "signal": "분모28000",
+      "network": 1658,
+      "kind": "part",
+      "uid": "181",
+      "label": "DInt÷28000",
+      "boundary": "27648변경없음"
+    },
+    {
+      "signal": "정상 Move",
+      "network": 1658,
+      "kind": "part",
+      "uid": "185",
+      "label": "DInt→Int OutValue",
+      "boundary": "폭변환실행미검증"
+    },
+    {
+      "signal": "상한 비교",
+      "network": 1658,
+      "kind": "part",
+      "uid": "190",
+      "label": "raw>32767",
+      "boundary": "Int포트·조건보존"
+    },
+    {
+      "signal": "하한 비교",
+      "network": 1658,
+      "kind": "part",
+      "uid": "259",
+      "label": "raw≤−1382",
+      "boundary": "signed상수"
+    },
+    {
+      "signal": "대체값 Move",
+      "network": 1658,
+      "kind": "part",
+      "uid": "193",
+      "label": "범위 밖→−9999",
+      "boundary": "실제음의압력아님"
+    },
+    {
+      "signal": "OFR Coil",
+      "network": 1658,
+      "kind": "part",
+      "uid": "23",
+      "label": "Move193.eno→일반Coil",
+      "boundary": "Set/Reset아님"
+    },
+    {
+      "signal": "비활성 쓰기",
+      "network": 1659,
+      "kind": "part",
+      "uid": "162",
+      "label": "NOT IN0→OutValue0",
+      "boundary": "호출EN도ON"
+    },
+    {
+      "signal": "BF02 소비",
+      "network": 1886,
+      "kind": "part",
+      "uid": "30",
+      "label": "DP02≤DP01_SOGLIA_1",
+      "boundary": "SC11/VR05·Forza별도"
+    },
+    {
+      "signal": "OFF 단계",
+      "network": 1884,
+      "kind": "part",
+      "uid": "395",
+      "label": "OFF·순번>50·DP02<S1",
+      "boundary": "ON공유쓰기와다름"
+    },
+    {
+      "signal": "모든Work1",
+      "network": 1884,
+      "kind": "part",
+      "uid": "458",
+      "label": "마지막도DP02_LAVORO_1",
+      "boundary": "다섯단계같은Work1"
+    },
+    {
+      "signal": "ON 공유시간",
+      "network": 1887,
+      "kind": "part",
+      "uid": "457",
+      "label": "ON→공유Pause",
+      "boundary": "허가OR앞쓰기"
+    },
+    {
+      "signal": "공유 타이머",
+      "network": 1992,
+      "kind": "part",
+      "uid": "1136",
+      "label": "DP01/02범위→T114 3분",
+      "boundary": "현재동작미확인"
+    },
+    {
+      "signal": "공유 Set",
+      "network": 1992,
+      "kind": "part",
+      "uid": "1141",
+      "label": "T114→MAX_DP",
+      "boundary": "어느센서인지는비트로구별불가"
+    },
+    {
+      "signal": "공유 Reset",
+      "network": 1992,
+      "kind": "part",
+      "uid": "1152",
+      "label": "두DP<2500→Reset",
+      "boundary": "하한정상조건없음"
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0047-IdentXmlPart.xml",
+    "sources/decoded-original/0048-IdentXmlPart.xml",
+    "sources/decoded-original/0056-IdentXmlPart.xml",
+    "sources/decoded-original/0057-IdentXmlPart.xml",
+    "sources/decoded-original/0064-IdentXmlPart.xml",
+    "sources/decoded-original/0562-IdentXmlPart.xml",
+    "sources/decoded-original/0563-IdentXmlPart.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0594-IdentXmlPart.xml",
+    "sources/decoded-original/0595-IdentXmlPart.xml",
+    "sources/decoded-original/0596-IdentXmlPart.xml",
+    "sources/decoded-original/0597-IdentXmlPart.xml",
+    "sources/decoded-original/0598-IdentXmlPart.xml",
+    "sources/decoded-original/0611-IdentXmlPart.xml",
+    "sources/decoded-original/0612-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0632-IdentXmlPart.xml",
+    "sources/decoded-original/0633-IdentXmlPart.xml",
+    "sources/decoded-original/0635-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0680-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0683-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/0694-IdentXmlPart.xml",
+    "sources/live_index.json",
+    "sources/hmi_plc_tags.csv",
+    "catalog-sources/STARTUP-WORD-DOTS-SUPPLEMENT.md",
+    "assets/catalog-circuits/Electrical_Rev2-P153.png",
+    "assets/catalog-circuits/Electrical_Rev2-P154.png",
+    "assets/catalog-circuits/Electrical_Rev2-P170.png",
+    "assets/catalog-circuits/Electrical_Rev2-P173.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P061.png",
+    "assets/catalog-circuits/PID_1684n002I-P001.png"
+  ],
+  "signal_reference": {
+    "id": "DP02",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "PR_BR02 · Int 주변장치 입력",
+        "addresses": [
+          "%IW400:P"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1564",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 호출EN/IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1562",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "ZERO_DP02 · Int 더하는 보정값",
+        "addresses": [
+          "DB4.DBW120"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1566",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "COEFF_DP02 · Int 배율",
+        "addresses": [
+          "DB4.DBW122"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1565",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "result",
+        "role": "outputs",
+        "name": "DP_02 · 환산 Int·단위 미확정",
+        "addresses": [
+          "DB1.DBW242"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1567",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ofr",
+        "role": "responses",
+        "name": "BF02_OFR · 범위 오류·일반Coil",
+        "addresses": [
+          "DB3.DBX24.5"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "23",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "max-dp",
+        "role": "responses",
+        "name": "MAX_DP_FILTER · DP01/02 공유 유지경보",
+        "addresses": [
+          "DB3.DBX9.5"
+        ],
+        "refs": [
+          {
+            "network": 1992,
+            "oref": "1165",
+            "source": "sources/decoded-original/0540-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM · 공유 Reset 요청",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1992,
+            "oref": "1166",
+            "source": "sources/decoded-original/0540-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "dp01-threshold",
+        "role": "requests",
+        "name": "DP_01_SOGLIA_1 · BF02가 읽는 공유문턱",
+        "addresses": [
+          "DB4.DBW138"
+        ],
+        "refs": [
+          {
+            "network": 1886,
+            "oref": "44",
+            "source": "sources/decoded-original/0219-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "bf02-permit",
+        "role": "responses",
+        "name": "BF02_RUN · 세정 허가 미러",
+        "addresses": [
+          "%M180.4"
+        ],
+        "refs": [
+          {
+            "network": 1886,
+            "oref": "79",
+            "source": "sources/decoded-original/0219-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "dp02-s1",
+        "role": "requests",
+        "name": "DP_02_SOGLIA_1 · OFF 단계문턱",
+        "addresses": [
+          "DB4.DBW166"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "465",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "pause",
+        "role": "responses",
+        "name": "LAVA_PAUSA · 공유 Word 목적지",
+        "addresses": [
+          "DB1.DBW236"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "467",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "work",
+        "role": "responses",
+        "name": "LAVA_LAVORO · 공유 Word 목적지",
+        "addresses": [
+          "DB1.DBW238"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "469",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "DP02",
+    "timers": [
+      {
+        "network": 1992,
+        "uid": "1136",
+        "name": "Tag_112 · 공유 유지경보",
+        "address": "%T114",
+        "preset": "S5T#3M",
+        "condition": "ON AND (DP01/DP02>2800 OR <−100)"
+      }
+    ],
+    "alarms": [
+      {
+        "name": "BF02_OFR · DP02",
+        "address": "DB3.DBX24.5",
+        "actions": [
+          {
+            "network": 1658,
+            "uid": "23",
+            "gate": "Coil",
+            "condition": "범위외 Move193.eno→일반Coil; 현재실행별도"
+          }
+        ]
+      },
+      {
+        "name": "MAX_DP_FILTER · shared",
+        "address": "DB3.DBX9.5",
+        "actions": [
+          {
+            "network": 1992,
+            "uid": "1141",
+            "gate": "SCoil",
+            "condition": "범위조건·T114"
+          },
+          {
+            "network": 1992,
+            "uid": "1152",
+            "gate": "RCoil",
+            "condition": "ON·Reset·경보·두DP<2500; 하한없음"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1774,
+      1658,
+      1659,
+      1992,
+      1886,
+      1885,
+      1884,
+      1887,
+      1619,
+      403
+    ],
+    "chain": [
+      "Int IW400:P→DInt raw+Zero→×Coeff÷28000→Int W242",
+      "범위외−9999 Move.eno→일반OFR·비활성 OutValue0",
+      "BF02허가 공유DP01문턱·OFF/ON Word 다중쓰기·공유3분경보"
+    ],
+    "repair": [
+      "PR_BR02원시값,DB1.W242,DB3.X24.5,ON,계수,모듈진단",
+      "원시%IW400:P,ON/호출,DB4.W120/W122,DB1.W242,HMI주소",
+      "현재계수와백업0/500,채널범위,센서0/50mbar명판,HMI소수점",
+      "DP01/DP02둘다,공유T114,3분지속기록,OFR들",
+      "DP02,DP01_S1,SC11/VR05처리응답,Forza,ON,BF02_RUN",
+      "FG169 X3:95~99,FG17234/36,JB01TB6현장마킹,설계4케이블"
+    ],
+    "pending": [
+      "센서 명판·0/50mbar·교정성적·고저압취출/현장극성",
+      "현재AI채널7/PEW400·파라미터/하드웨어·단자마킹",
+      "Int500/0·P&ID5÷10mbar·알람2800/−100/2500 단위관계",
+      "DInt→Int Move·ENO·호출/전체쓰기·현재CPU값",
+      "HMI소수점/단위·쓰기권한·원시표시객체·경보이벤트",
+      "BF02허가의공유DP01문턱·OFF/ON공유Word 최종쓰기",
+      "OFR일반Coil와3분S/R 구분·Reset하한조건없음",
+      "Startup Word0~16 밖 OFR X24.5·전체경보소비자",
+      "JB01TB6·케이블11_3/4/27/28·OEM단자 대응미확보",
+      "승인준공도·DP01/BF02/하위EV 독립완료 유지",
+      "TIA컴파일/현재CPU/현장복구 미수행"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "DP02",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "정적/UI/게시와현장별도"
+    ],
+    "existing_pending": [
+      "센서 명판·0/50mbar·교정성적·고저압취출/현장극성",
+      "현재AI채널7/PEW400·파라미터/하드웨어·단자마킹",
+      "Int500/0·P&ID5÷10mbar·알람2800/−100/2500 단위관계",
+      "DInt→Int Move·ENO·호출/전체쓰기·현재CPU값",
+      "HMI소수점/단위·쓰기권한·원시표시객체·경보이벤트",
+      "BF02허가의공유DP01문턱·OFF/ON공유Word 최종쓰기",
+      "OFR일반Coil와3분S/R 구분·Reset하한조건없음",
+      "Startup Word0~16 밖 OFR X24.5·전체경보소비자",
+      "JB01TB6·케이블11_3/4/27/28·OEM단자 대응미확보",
+      "승인준공도·DP01/BF02/하위EV 독립완료 유지",
+      "TIA컴파일/현재CPU/현장복구 미수행"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "DP02 원시 IW400:P·환산 W242·OFR X24.5·공유 MAX_DP X9.5·BF02 허가 M180.4를 구분합니다. 센서110Vac/AI24Vdc와 BF02 위치/JB1 소유를 분리합니다. 단위·현재값·리셋후복구·실물동일성은 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "센서 명판·0/50mbar·교정성적·고저압취출/현장극성",
+        "현재AI채널7/PEW400·파라미터/하드웨어·단자마킹",
+        "Int500/0·P&ID5÷10mbar·알람2800/−100/2500 단위관계",
+        "DInt→Int Move·ENO·호출/전체쓰기·현재CPU값",
+        "HMI소수점/단위·쓰기권한·원시표시객체·경보이벤트",
+        "BF02허가의공유DP01문턱·OFF/ON공유Word 최종쓰기",
+        "OFR일반Coil와3분S/R 구분·Reset하한조건없음",
+        "Startup Word0~16 밖 OFR X24.5·전체경보소비자",
+        "JB01TB6·케이블11_3/4/27/28·OEM단자 대응미확보",
+        "승인준공도·DP01/BF02/하위EV 독립완료 유지",
+        "TIA컴파일/현재CPU/현장복구 미수행"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "DP02",
+    "plc_id": "DP02",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "HMI값−9999",
+        "observe": "PR_BR02원시값,DB1.W242,DB3.X24.5,ON,계수,모듈진단",
+        "compare": "0291범위밖대체값과실제음압구별;취출관/계기전원/아날로그루프상태는승인절차로검사",
+        "next": "정상범위raw·OFR·독립차압기준·시간추세,센서/배선확인",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "HMI값항상0",
+        "observe": "원시%IW400:P,ON/호출,DB4.W120/W122,DB1.W242,HMI주소",
+        "compare": "0014 NOT IN0의0쓰기·통신표시·실제0차압을구분. EN=OFF일때함수실행을가정안함",
+        "next": "동일시각CPU/표시/독립기준의일치와호출근거",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "값크기/단위이상",
+        "observe": "현재계수와백업0/500,채널범위,센서0/50mbar명판,HMI소수점",
+        "compare": "분모28000·Zero더하기·DInt/Int변환을대조;계수를임의변경안함",
+        "next": "승인된스케일/교정문서와단위변환표",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "BF02정상인데MAX_DP발생",
+        "observe": "DP01/DP02둘다,공유T114,3분지속기록,OFR들",
+        "compare": "공유OR라서DP02단독원인으로단정안함;비트Reset과하한정상구별",
+        "next": "두채널정상범위·원인제거·경보재발없는관찰",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "차압낮은데세정허가이상",
+        "observe": "DP02,DP01_S1,SC11/VR05처리응답,Forza,ON,BF02_RUN",
+        "compare": "0219의DP01명임계값·≤비교·Forza병렬·상위직렬대조",
+        "next": "허가와실제세정·차압회복을별도관찰",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "DP02무응답/배선혼동",
+        "observe": "FG169 X3:95~99,FG17234/36,JB01TB6현장마킹,설계4케이블",
+        "compare": "BF02설치와JB1공급을구별. DP01채널6/398와DP02채널7/400대조",
+        "next": "승인준공도·담당자확인·무전원검사기록/교정기록",
+        "common": "step-symptom-6"
+      }
+    ],
+    "bindings": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "PR_BR02 · Int 주변장치 입력",
+        "addresses": [
+          "%IW400:P"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1564",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 호출EN/IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1562",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "ZERO_DP02 · Int 더하는 보정값",
+        "addresses": [
+          "DB4.DBW120"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1566",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "COEFF_DP02 · Int 배율",
+        "addresses": [
+          "DB4.DBW122"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1565",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "outputs",
+        "name": "DP_02 · 환산 Int·단위 미확정",
+        "addresses": [
+          "DB1.DBW242"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1567",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "responses",
+        "name": "BF02_OFR · 범위 오류·일반Coil",
+        "addresses": [
+          "DB3.DBX24.5"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "23",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max-dp",
+        "role": "responses",
+        "name": "MAX_DP_FILTER · DP01/02 공유 유지경보",
+        "addresses": [
+          "DB3.DBX9.5"
+        ],
+        "refs": [
+          {
+            "network": 1992,
+            "oref": "1165",
+            "source": "sources/decoded-original/0540-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM · 공유 Reset 요청",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1992,
+            "oref": "1166",
+            "source": "sources/decoded-original/0540-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "dp01-threshold",
+        "role": "requests",
+        "name": "DP_01_SOGLIA_1 · BF02가 읽는 공유문턱",
+        "addresses": [
+          "DB4.DBW138"
+        ],
+        "refs": [
+          {
+            "network": 1886,
+            "oref": "44",
+            "source": "sources/decoded-original/0219-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "bf02-permit",
+        "role": "responses",
+        "name": "BF02_RUN · 세정 허가 미러",
+        "addresses": [
+          "%M180.4"
+        ],
+        "refs": [
+          {
+            "network": 1886,
+            "oref": "79",
+            "source": "sources/decoded-original/0219-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "dp02-s1",
+        "role": "requests",
+        "name": "DP_02_SOGLIA_1 · OFF 단계문턱",
+        "addresses": [
+          "DB4.DBW166"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "465",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "pause",
+        "role": "responses",
+        "name": "LAVA_PAUSA · 공유 Word 목적지",
+        "addresses": [
+          "DB1.DBW236"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "467",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "work",
+        "role": "responses",
+        "name": "LAVA_LAVORO · 공유 Word 목적지",
+        "addresses": [
+          "DB1.DBW238"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "469",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "DP02",
+    "name": "DP02 백 필터 차압",
+    "reference_plc_id": "DP02",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "PR_BR02 · Int 주변장치 입력",
+        "addresses": [
+          "%IW400:P"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1564",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 호출EN/IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1562",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "ZERO_DP02 · Int 더하는 보정값",
+        "addresses": [
+          "DB4.DBW120"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1566",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "COEFF_DP02 · Int 배율",
+        "addresses": [
+          "DB4.DBW122"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1565",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "outputs",
+        "name": "DP_02 · 환산 Int·단위 미확정",
+        "addresses": [
+          "DB1.DBW242"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "1567",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "responses",
+        "name": "BF02_OFR · 범위 오류·일반Coil",
+        "addresses": [
+          "DB3.DBX24.5"
+        ],
+        "refs": [
+          {
+            "network": 1774,
+            "oref": "23",
+            "source": "sources/decoded-original/0522-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max-dp",
+        "role": "responses",
+        "name": "MAX_DP_FILTER · DP01/02 공유 유지경보",
+        "addresses": [
+          "DB3.DBX9.5"
+        ],
+        "refs": [
+          {
+            "network": 1992,
+            "oref": "1165",
+            "source": "sources/decoded-original/0540-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM · 공유 Reset 요청",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1992,
+            "oref": "1166",
+            "source": "sources/decoded-original/0540-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "dp01-threshold",
+        "role": "requests",
+        "name": "DP_01_SOGLIA_1 · BF02가 읽는 공유문턱",
+        "addresses": [
+          "DB4.DBW138"
+        ],
+        "refs": [
+          {
+            "network": 1886,
+            "oref": "44",
+            "source": "sources/decoded-original/0219-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "bf02-permit",
+        "role": "responses",
+        "name": "BF02_RUN · 세정 허가 미러",
+        "addresses": [
+          "%M180.4"
+        ],
+        "refs": [
+          {
+            "network": 1886,
+            "oref": "79",
+            "source": "sources/decoded-original/0219-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "dp02-s1",
+        "role": "requests",
+        "name": "DP_02_SOGLIA_1 · OFF 단계문턱",
+        "addresses": [
+          "DB4.DBW166"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "465",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "pause",
+        "role": "responses",
+        "name": "LAVA_PAUSA · 공유 Word 목적지",
+        "addresses": [
+          "DB1.DBW236"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "467",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "work",
+        "role": "responses",
+        "name": "LAVA_LAVORO · 공유 Word 목적지",
+        "addresses": [
+          "DB1.DBW238"
+        ],
+        "refs": [
+          {
+            "network": 1884,
+            "oref": "469",
+            "source": "sources/decoded-original/0199-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "HMI값−9999",
+        "observe": "PR_BR02원시값,DB1.W242,DB3.X24.5,ON,계수,모듈진단",
+        "compare": "0291범위밖대체값과실제음압구별;취출관/계기전원/아날로그루프상태는승인절차로검사",
+        "next": "정상범위raw·OFR·독립차압기준·시간추세,센서/배선확인",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "HMI값항상0",
+        "observe": "원시%IW400:P,ON/호출,DB4.W120/W122,DB1.W242,HMI주소",
+        "compare": "0014 NOT IN0의0쓰기·통신표시·실제0차압을구분. EN=OFF일때함수실행을가정안함",
+        "next": "동일시각CPU/표시/독립기준의일치와호출근거",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "값크기/단위이상",
+        "observe": "현재계수와백업0/500,채널범위,센서0/50mbar명판,HMI소수점",
+        "compare": "분모28000·Zero더하기·DInt/Int변환을대조;계수를임의변경안함",
+        "next": "승인된스케일/교정문서와단위변환표",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "BF02정상인데MAX_DP발생",
+        "observe": "DP01/DP02둘다,공유T114,3분지속기록,OFR들",
+        "compare": "공유OR라서DP02단독원인으로단정안함;비트Reset과하한정상구별",
+        "next": "두채널정상범위·원인제거·경보재발없는관찰",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "차압낮은데세정허가이상",
+        "observe": "DP02,DP01_S1,SC11/VR05처리응답,Forza,ON,BF02_RUN",
+        "compare": "0219의DP01명임계값·≤비교·Forza병렬·상위직렬대조",
+        "next": "허가와실제세정·차압회복을별도관찰",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "DP02무응답/배선혼동",
+        "observe": "FG169 X3:95~99,FG17234/36,JB01TB6현장마킹,설계4케이블",
+        "compare": "BF02설치와JB1공급을구별. DP01채널6/398와DP02채널7/400대조",
+        "next": "승인준공도·담당자확인·무전원검사기록/교정기록",
+        "common": "step-symptom-6"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "DP02 고유환산·전원/AI 정적원본·독립관찰",
+      "sources": {
+        "catalog-sources/DP02-DOTS-DRAFT.md": "2fb333f19ccfbd1107c7805ff93bdac21e26f4662a31a6c8ee96c14d4b56eb4b"
+      },
+      "circuit_equipment": "BF02 설치 DP02 · JB1 전원/AI",
+      "circuit_distinction": "DP02 원시 IW400:P·환산 W242·OFR X24.5·공유 MAX_DP X9.5·BF02 허가 M180.4를 구분합니다. 센서110Vac/AI24Vdc와 BF02 위치/JB1 소유를 분리합니다. 단위·현재값·리셋후복구·실물동일성은 확인 전입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG152 · PDF153",
+          "path": "sources/Electrical_Rev2.pdf#page=153"
+        },
+        {
+          "label": "FG153 · PDF154",
+          "path": "sources/Electrical_Rev2.pdf#page=154"
+        },
+        {
+          "label": "FG169 · PDF170",
+          "path": "sources/Electrical_Rev2.pdf#page=170"
+        },
+        {
+          "label": "FG172 · PDF173",
+          "path": "sources/Electrical_Rev2.pdf#page=173"
+        }
+      ],
+      "construction_boundary": "JB01TB6과OEM X3 현행대응 확인전",
+      "construction_pages": [
+        {
+          "label": "시공·케이블 · PDF61",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=61"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "센서 명판·0/50mbar·교정성적·고저압취출/현장극성"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1774",
+            "path": "networks/network-1774.html"
+          },
+          {
+            "label": "1658",
+            "path": "networks/network-1658.html"
+          },
+          {
+            "label": "1659",
+            "path": "networks/network-1659.html"
+          },
+          {
+            "label": "1886",
+            "path": "networks/network-1886.html"
+          },
+          {
+            "label": "1884",
+            "path": "networks/network-1884.html"
+          },
+          {
+            "label": "1887",
+            "path": "networks/network-1887.html"
+          },
+          {
+            "label": "1992",
+            "path": "networks/network-1992.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "PR_BR02원시값,DB1.W242,DB3.X24.5,ON,계수,모듈진단"
+            },
+            {
+              "owner": "현재자료",
+              "work": "정상범위raw·OFR·독립차압기준·시간추세,센서/배선확인"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1774",
+              "path": "networks/network-1774.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "1886",
+              "path": "networks/network-1886.html"
+            },
+            {
+              "label": "1884",
+              "path": "networks/network-1884.html"
+            },
+            {
+              "label": "1887",
+              "path": "networks/network-1887.html"
+            },
+            {
+              "label": "1992",
+              "path": "networks/network-1992.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "원시%IW400:P,ON/호출,DB4.W120/W122,DB1.W242,HMI주소"
+            },
+            {
+              "owner": "현재자료",
+              "work": "동일시각CPU/표시/독립기준의일치와호출근거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1774",
+              "path": "networks/network-1774.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "1886",
+              "path": "networks/network-1886.html"
+            },
+            {
+              "label": "1884",
+              "path": "networks/network-1884.html"
+            },
+            {
+              "label": "1887",
+              "path": "networks/network-1887.html"
+            },
+            {
+              "label": "1992",
+              "path": "networks/network-1992.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "현재계수와백업0/500,채널범위,센서0/50mbar명판,HMI소수점"
+            },
+            {
+              "owner": "현재자료",
+              "work": "승인된스케일/교정문서와단위변환표"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1774",
+              "path": "networks/network-1774.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "1886",
+              "path": "networks/network-1886.html"
+            },
+            {
+              "label": "1884",
+              "path": "networks/network-1884.html"
+            },
+            {
+              "label": "1887",
+              "path": "networks/network-1887.html"
+            },
+            {
+              "label": "1992",
+              "path": "networks/network-1992.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DP01/DP02둘다,공유T114,3분지속기록,OFR들"
+            },
+            {
+              "owner": "현재자료",
+              "work": "두채널정상범위·원인제거·경보재발없는관찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1774",
+              "path": "networks/network-1774.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "1886",
+              "path": "networks/network-1886.html"
+            },
+            {
+              "label": "1884",
+              "path": "networks/network-1884.html"
+            },
+            {
+              "label": "1887",
+              "path": "networks/network-1887.html"
+            },
+            {
+              "label": "1992",
+              "path": "networks/network-1992.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DP02,DP01_S1,SC11/VR05처리응답,Forza,ON,BF02_RUN"
+            },
+            {
+              "owner": "현재자료",
+              "work": "허가와실제세정·차압회복을별도관찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1774",
+              "path": "networks/network-1774.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "1886",
+              "path": "networks/network-1886.html"
+            },
+            {
+              "label": "1884",
+              "path": "networks/network-1884.html"
+            },
+            {
+              "label": "1887",
+              "path": "networks/network-1887.html"
+            },
+            {
+              "label": "1992",
+              "path": "networks/network-1992.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-6",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "FG169 X3:95~99,FG17234/36,JB01TB6현장마킹,설계4케이블"
+            },
+            {
+              "owner": "현재자료",
+              "work": "승인준공도·담당자확인·무전원검사기록/교정기록"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1774",
+              "path": "networks/network-1774.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "1886",
+              "path": "networks/network-1886.html"
+            },
+            {
+              "label": "1884",
+              "path": "networks/network-1884.html"
+            },
+            {
+              "label": "1887",
+              "path": "networks/network-1887.html"
+            },
+            {
+              "label": "1992",
+              "path": "networks/network-1992.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "DP02",
+    "plc_id": "DP02",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-152",
+        "kind": "OEM 전기",
+        "title": "FG152 · PDF153",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 153,
+        "fg": 152,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P153.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "DATA27.05.2024 · 개정 기재공란"
+      },
+      {
+        "id": "oem-153",
+        "kind": "OEM 전기",
+        "title": "FG153 · PDF154",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 154,
+        "fg": 153,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P154.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "DATA27.05.2024 · 개정 기재공란"
+      },
+      {
+        "id": "oem-169",
+        "kind": "OEM 전기",
+        "title": "FG169 · PDF170",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 170,
+        "fg": 169,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P170.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "DATA27.05.2024 · 개정 기재공란"
+      },
+      {
+        "id": "oem-172",
+        "kind": "OEM 전기",
+        "title": "FG172 · PDF173",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 173,
+        "fg": 172,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P173.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "DATA27.05.2024 · 개정 기재공란"
+      },
+      {
+        "id": "construction-61",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF61",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 61,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P061.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "24.11.11 Rev1 first draft · 승인란 공란"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev I 15/01/2013"
+      }
+    ],
+    "circuit": {
+      "id": "DP02",
+      "equipment": "BF02 DP02 · JB1 계측",
+      "distinction": "DP02 원시 IW400:P·환산 W242·OFR X24.5·공유 MAX_DP X9.5·BF02 허가 M180.4를 구분합니다. 센서110Vac/AI24Vdc와 BF02 위치/JB1 소유를 분리합니다. 단위·현재값·리셋후복구·실물동일성은 확인 전입니다.",
+      "paths": [
+        {
+          "signal": "원시 입력",
+          "fg": 169,
+          "drawing": "110Vac152.8→X3:95/96→DP02",
+          "backup": "PR_BR02 Int %IW400:P",
+          "nodes": [
+            "JB1 110Vac9.10→X3:3→152QF4 2A→152.8",
+            "FG169 X3:95 2AF→DP02 전원·X3:96→0Vac",
+            "시공11_3/11_27 JB01TB6→DP02"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1774,
+              "uid": "1564"
+            }
+          ],
+          "check": "도면정격·현재전원실측별도"
+        },
+        {
+          "signal": "환산 결과",
+          "fg": 172,
+          "drawing": "DP02+97/−98→PEW400 34/36",
+          "backup": "ZeroW120/CoeffW122→DP_02W242",
+          "nodes": [
+            "센서4–20mA→X3:97/98→PEW400",
+            "FG172 채널7 단자34 I7+/36 U7−·I7−",
+            "IW400:P→(raw+Zero)×Coeff/28000→DInt→Int"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1774,
+              "uid": "1564"
+            },
+            {
+              "network": 1774,
+              "uid": "1567"
+            }
+          ],
+          "check": "단위/채널범위·현행배선미확정"
+        },
+        {
+          "signal": "범위 오류 결속",
+          "fg": 169,
+          "drawing": "X3:99→169SCH2·원본접지",
+          "backup": "BF02_OFR X24.5",
+          "nodes": [
+            "FG169 X3:99 실드·접지기호",
+            "169SCH2(172/5)↔FG172(169/8)",
+            "raw범위 밖 Move−9999.eno→일반OFR Coil"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1774,
+              "uid": "23"
+            }
+          ],
+          "check": "접지연속성/현CPU OFR동작별도"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": 172,
+          "drawing": "+24Vdc152.5→X22:4000→41 L+ /44 M",
+          "backup": "센서110Vac와분리",
+          "nodes": [
+            "152QF1→GD1 5A→QF2 4A→152.5/152.4",
+            "FG153 IM155 X80 2L+/2M",
+            "FG172 X22:4000 500mAF→41 L+ /0V→44 M"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1774,
+              "uid": "1564"
+            }
+          ],
+          "check": "42/43에임의외부선추가없음"
+        }
+      ],
+      "pending": [
+        "센서 명판·0/50mbar·교정성적·고저압취출/현장극성",
+        "현재AI채널7/PEW400·파라미터/하드웨어·단자마킹",
+        "Int500/0·P&ID5÷10mbar·알람2800/−100/2500 단위관계",
+        "DInt→Int Move·ENO·호출/전체쓰기·현재CPU값",
+        "HMI소수점/단위·쓰기권한·원시표시객체·경보이벤트",
+        "BF02허가의공유DP01문턱·OFF/ON공유Word 최종쓰기",
+        "OFR일반Coil와3분S/R 구분·Reset하한조건없음",
+        "Startup Word0~16 밖 OFR X24.5·전체경보소비자",
+        "JB01TB6·케이블11_3/4/27/28·OEM단자 대응미확보",
+        "승인준공도·DP01/BF02/하위EV 독립완료 유지",
+        "TIA컴파일/현재CPU/현장복구 미수행"
+      ]
+    },
+    "warnings": [
+      "현재단위 미확정",
+      "센서110Vac/AI24Vdc 분리",
+      "허가와센서정상·실물복구별도"
+    ]
+  },
+  "related_alarm_boundary": "DP02 원시 IW400:P·환산 W242·OFR X24.5·공유 MAX_DP X9.5·BF02 허가 M180.4를 구분합니다. 센서110Vac/AI24Vdc와 BF02 위치/JB1 소유를 분리합니다. 단위·현재값·리셋후복구·실물동일성은 확인 전입니다.",
+  "presentation": {
+    "search_examples": "IW400:P, ZERO_DP02, COEFF_DP02, W242, BF02_OFR, T114, 28000, JB01TB6"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "DP02 자료",
+        "devices/DP02.html"
+      ],
+      [
+        "P&ID",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "io": [
+      [
+        "고유 호출1774",
+        "networks/network-1774.html"
+      ],
+      [
+        "HMI CSV",
+        "sources/hmi_plc_tags.csv"
+      ]
+    ],
+    "control": [
+      [
+        "1774",
+        "networks/network-1774.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "1886",
+        "networks/network-1886.html"
+      ],
+      [
+        "1884",
+        "networks/network-1884.html"
+      ],
+      [
+        "1885",
+        "networks/network-1885.html"
+      ],
+      [
+        "1887",
+        "networks/network-1887.html"
+      ],
+      [
+        "1619",
+        "networks/network-1619.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG152 · PDF153",
+        "sources/Electrical_Rev2.pdf#page=153"
+      ],
+      [
+        "FG153 · PDF154",
+        "sources/Electrical_Rev2.pdf#page=154"
+      ],
+      [
+        "FG169 · PDF170",
+        "sources/Electrical_Rev2.pdf#page=170"
+      ],
+      [
+        "FG172 · PDF173",
+        "sources/Electrical_Rev2.pdf#page=173"
+      ],
+      [
+        "시공·케이블 · PDF61",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=61"
+      ],
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "alarms": [
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1774",
+        "networks/network-1774.html"
+      ],
+      [
+        "1992",
+        "networks/network-1992.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1774",
+        "networks/network-1774.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "1886",
+        "networks/network-1886.html"
+      ],
+      [
+        "1884",
+        "networks/network-1884.html"
+      ],
+      [
+        "1887",
+        "networks/network-1887.html"
+      ],
+      [
+        "1992",
+        "networks/network-1992.html"
+      ]
+    ],
+    "completion": [
+      [
+        "확인 경계",
+        "catalog-guides/DP02.html#completion"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1571",
+    "target": "1571\tORef 1564 (PR_BR02) ↔ Part 1556.Analog_input"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1573",
+    "target": "1573\tORef 1566 (Coeff.ZERO_DP02) ↔ Part 1556.Zero"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1572",
+    "target": "1572\tORef 1565 (Coeff.COEFF_DP02) ↔ Part 1556.Coeff"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1574",
+    "target": "1574\tPart 1556.OutValue ↔ ORef 1567 (Data.DP_02)"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "24",
+    "target": "24\tPart 1556.Out_of_range ↔ ORef 23 (Allarm.BF02_OFR)"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "164",
+    "target": "164\tConvert\t\tin = Analog_input; out = App5"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "167",
+    "target": "167\tConvert\t\tin = Zero; out = App6"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "170",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "177",
+    "target": "177\tMul\t\tin1 = App3; in2 = App4; out = App3"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "181",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "185",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "190",
+    "target": "190\tGt\t\tin1 = Analog_input; in2 = 32767"
+  }
+]

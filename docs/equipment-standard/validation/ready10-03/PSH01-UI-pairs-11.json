@@ -1,0 +1,68 @@
+[
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "224",
+    "target": "224\tORef 199 (Real_SPPC01) ↔ Part 172.SP_INT"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "225",
+    "target": "225\tORef 200 (Real_PC01) ↔ Part 172.PV_IN"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "248",
+    "target": "248\tPart 247.out ↔ Part 172.COM_RST"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "250",
+    "target": "250\tPart 249.out ↔ Part 172.LMNR_HS"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "252",
+    "target": "252\tPart 251.out ↔ Part 172.LMNR_LS"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "239",
+    "target": "239\tPart 172.QLMNUP ↔ ORef 208 (PID MV02 UP)"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "240",
+    "target": "240\tPart 172.QLMNDN ↔ ORef 209 (PID MV02 Down)"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "310",
+    "target": "310\tContact\toperand\toperand = ON"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "312",
+    "target": "312\tContact\toperand\toperand = ON"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "227",
+    "target": "227\tCoil\t\toperand = Open MV02"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "240",
+    "target": "240\tCoil\t\toperand = Close MV02"
+  }
+]

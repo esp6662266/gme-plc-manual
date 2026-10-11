@@ -1,0 +1,152 @@
+[
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1591",
+    "target": "1591\tORef 1584 (PC01) ↔ Part 1576.Analog_input"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1596",
+    "target": "1596\tPart 1595.out ↔ Part 1576.en"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1590",
+    "target": "1590\tORef 1583 (ON) ↔ Part 1576.IN0"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1594",
+    "target": "1594\tPart 1576.OutValue ↔ ORef 1587 (Data.PC_01)"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "24",
+    "target": "24\tPart 1576.Out_of_range ↔ ORef 23 (Allarm.PC01_OFR)"
+  },
+  {
+    "key": "PC01",
+    "network": 1071,
+    "uid": "118",
+    "target": "118\tORef 106 (PC01) ↔ Part 99.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1071,
+    "uid": "119",
+    "target": "119\tPart 99.out1 ↔ ORef 107 (Inputs.PC_01)"
+  },
+  {
+    "key": "PC01",
+    "network": 1071,
+    "uid": "116",
+    "target": "116\tPart 98.eno ↔ Part 99.en"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2026",
+    "target": "2026\tPart 2025.out ↔ Part 1935.en ↔ Part 2027.in ↔ Part 2029.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1997",
+    "target": "1997\tPart 1935.out ↔ ORef 1975 (App02)"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1945",
+    "target": "1945\tGe\t\tin1 = App02; in2 = 5"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1948",
+    "target": "1948\tLt\t\tin1 = Data.FN_04_ASPIRATOR; in2 = 250"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2008",
+    "target": "2008\tPart 1951.out ↔ ORef 1983 (Data.SET_PERC_FN04)"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1957",
+    "target": "1957\tLe\t\tin1 = App02; in2 = -1"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1960",
+    "target": "1960\tGt\t\tin1 = Data.SET_PERC_FN04; in2 = 20"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2018",
+    "target": "2018\tPart 1963.out ↔ ORef 1990 (Data.SET_PERC_FN04)"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2020",
+    "target": "2020\tORef 1991 (S5T#4S) ↔ Part 1970.value"
+  },
+  {
+    "key": "PC01",
+    "network": 1900,
+    "uid": "1860",
+    "target": "1860\tPart 1849.out1 ↔ ORef 1855 (Data.SET_PERC_FN04)"
+  },
+  {
+    "key": "PC01",
+    "network": 1689,
+    "uid": "878",
+    "target": "878\tPart 877.out ↔ Part 828.pre ↔ Part 836.pre ↔ Part 844.en"
+  },
+  {
+    "key": "PC01",
+    "network": 1689,
+    "uid": "875",
+    "target": "875\tPart 844.out ↔ ORef 859 (FN04_SP)"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "857",
+    "target": "857\tPart 27.out ↔ Part 797.pre ↔ Part 800.pre ↔ Part 803.pre ↔ Part 860.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "844",
+    "target": "844\tPart 796.out ↔ Part 809.in ↔ Part 858.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "849",
+    "target": "849\tORef 830 (Allarm.Low_Aspiration) ↔ Part 814.operand"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "854",
+    "target": "854\tORef 833 (Allarm.Low_Aspiration) ↔ Part 819.operand"
+  },
+  {
+    "key": "PC01",
+    "network": 1858,
+    "uid": "300",
+    "target": "300\tPart 299.out ↔ Part 219.in9"
+  }
+]

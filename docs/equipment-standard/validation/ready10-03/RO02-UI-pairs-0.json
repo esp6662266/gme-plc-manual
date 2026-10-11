@@ -1,0 +1,146 @@
+[
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "536",
+    "target": "536\tPart 535.out ↔ Part 516.en"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "531",
+    "target": "531\tORef 524 (R002) ↔ Part 516.Analog_input"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "530",
+    "target": "530\tORef 523 (ON) ↔ Part 516.IN0"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "534",
+    "target": "534\tPart 516.OutValue ↔ ORef 527 (Data.Oxigen_RO02)"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "24",
+    "target": "24\tPart 516.Out_of_range ↔ ORef 23 (Allarm.RO02_OFR)"
+  },
+  {
+    "key": "RO02",
+    "network": 1071,
+    "uid": "166",
+    "target": "166\tORef 154 (R002) ↔ Part 147.in"
+  },
+  {
+    "key": "RO02",
+    "network": 1071,
+    "uid": "167",
+    "target": "167\tPart 147.out1 ↔ ORef 155 (Inputs.RO_02)"
+  },
+  {
+    "key": "RO02",
+    "network": 1071,
+    "uid": "164",
+    "target": "164\tPart 146.eno ↔ Part 147.en"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "718",
+    "target": "718\tPart 663.out ↔ Part 669.en ↔ Part 676.pre ↔ Part 679.pre"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "719",
+    "target": "719\tORef 700 (Data.Oxigen_RO01) ↔ Part 669.in1"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "720",
+    "target": "720\tORef 701 (Data.Oxigen_RO02) ↔ Part 669.in2"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "721",
+    "target": "721\tPart 669.out ↔ ORef 702 (app01)"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "676",
+    "target": "676\tLt\t\tin1 = app01; in2 = -20"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "679",
+    "target": "679\tGt\t\tin1 = app01; in2 = 20"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "728",
+    "target": "728\tPart 675.out ↔ Part 685.in ↔ Part 745.in"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "729",
+    "target": "729\tORef 707 (S5T#1M) ↔ Part 685.value"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "733",
+    "target": "733\tORef 710 (Allarm.RO01_Signal_Fault) ↔ Part 690.operand"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "739",
+    "target": "739\tORef 713 (Allarm.RO01_Signal_Fault) ↔ Part 695.operand"
+  },
+  {
+    "key": "RO02",
+    "network": 1858,
+    "uid": "296",
+    "target": "296\tPart 295.out ↔ Part 219.in7"
+  },
+  {
+    "key": "RO02",
+    "network": 1858,
+    "uid": "272",
+    "target": "272\tORef 250 (Flag.Start_Burner) ↔ Part 232.operand"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "595",
+    "target": "595\tPart 594.out ↔ Part 558.en ↔ Part 596.in"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "590",
+    "target": "590\tORef 579 (Data.Oxigen_RO02) ↔ Part 566.in1"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "591",
+    "target": "591\tORef 580 (11) ↔ Part 566.in2"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "592",
+    "target": "592\tPart 566.out ↔ ORef 581 (Data.RO03)"
+  }
+]

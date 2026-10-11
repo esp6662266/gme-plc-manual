@@ -1,0 +1,44 @@
+[
+  {
+    "HMI 태그": "I_RO_02",
+    "설정 주소": "DB13,INT70",
+    "Access Name": "PLC",
+    "태그 내부 ID": "0002F",
+    "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+  },
+  {
+    "HMI 태그": "data_DB1_DBW128",
+    "설정 주소": "DB1,INT128",
+    "Access Name": "PLC",
+    "태그 내부 ID": "001E8",
+    "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+  },
+  {
+    "HMI 태그": "Coeff_DB4_DBW48",
+    "설정 주소": "DB4,INT48",
+    "Access Name": "PLC",
+    "태그 내부 ID": "002C0",
+    "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+  },
+  {
+    "HMI 태그": "Coeff_DB4_DBW50",
+    "설정 주소": "DB4,INT50",
+    "Access Name": "PLC",
+    "태그 내부 ID": "0024C",
+    "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+  },
+  {
+    "HMI 태그": "Allarmi_218",
+    "설정 주소": "DB3,X22.4",
+    "Access Name": "PLC",
+    "태그 내부 ID": "00219",
+    "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+  },
+  {
+    "HMI 태그": "Allarmi_37",
+    "설정 주소": "DB3,X4.4",
+    "Access Name": "PLC",
+    "태그 내부 ID": "00168",
+    "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+  }
+]

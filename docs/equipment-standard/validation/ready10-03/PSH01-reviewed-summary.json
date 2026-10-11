@@ -1,0 +1,92 @@
+{
+  "original_bytes": 35648,
+  "original_sha256": "72ed1da50d0f612ed7f7c7a2f0a4c21d7ebaadd6ce66a5a2b8f12e96755e7eda",
+  "source_hashes_checked": 57,
+  "original_differences": 0,
+  "version_differences": 1,
+  "selected_native_networks": 8,
+  "drawings": [
+    {
+      "id": "oem-75",
+      "kind": "OEM 전기",
+      "title": "FG75 · PDF76",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 76,
+      "fg": 75,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P076.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "DATA27.05.2024 · 개정 기재공란"
+    },
+    {
+      "id": "oem-107",
+      "kind": "OEM 전기",
+      "title": "FG107 · PDF108",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 108,
+      "fg": 107,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P108.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "DATA27.05.2024 · Rev2 17.03.2025"
+    },
+    {
+      "id": "construction-30",
+      "kind": "시공·케이블",
+      "title": "시공·케이블 · PDF30",
+      "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+      "page": 30,
+      "fg": null,
+      "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P030.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "24.11.11 Rev1 first draft · 승인란 공란"
+    },
+    {
+      "id": "construction-57",
+      "kind": "시공·케이블",
+      "title": "시공·케이블 · PDF57",
+      "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+      "page": 57,
+      "fg": null,
+      "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P057.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "24.11.11 Rev1 first draft · 승인란 공란"
+    },
+    {
+      "id": "pid",
+      "kind": "P&ID",
+      "title": "P&ID · PDF1",
+      "source": "sources/PID_1684n002I.pdf",
+      "page": 1,
+      "fg": null,
+      "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "Rev I 15/01/2013"
+    }
+  ],
+  "new_signals": 18,
+  "steps": 6,
+  "source_pair_positions": 22,
+  "direct_paths": 4,
+  "ui_records": "passed",
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "areas": 7,
+  "items": 14,
+  "pairs_checked": 22,
+  "paths_checked": 4,
+  "synthetic_notes_added": 2,
+  "total_local_synthetic_notes": 50,
+  "prior_notes_preserved": 49,
+  "report_pages_visually_reviewed": 8,
+  "responsive_actual_viewports": [
+    312,
+    1024
+  ],
+  "console_warnings_errors": 0
+}

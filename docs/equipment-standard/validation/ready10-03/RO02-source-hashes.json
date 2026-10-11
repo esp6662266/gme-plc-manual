@@ -1,0 +1,470 @@
+[
+  {
+    "path": ".agents/skills/gme-equipment-rollout/SKILL.md",
+    "expected": "fb917fe49dbdafed32c7360bc015179d75008a90d8b2ddd8d1dcf68f5100510b",
+    "actual": "fb917fe49dbdafed32c7360bc015179d75008a90d8b2ddd8d1dcf68f5100510b",
+    "match": true
+  },
+  {
+    "path": "AGENTS.md",
+    "expected": "0bdd77713c49fe21f60de00994be4805db90719857c4326a946bb1b93d15c2c2",
+    "actual": "0bdd77713c49fe21f60de00994be4805db90719857c4326a946bb1b93d15c2c2",
+    "match": true
+  },
+  {
+    "path": "EXPANSION-WORK.md",
+    "expected": "ec624de9fd2fcfac861a67fd5e828b25ef46db50bfd7a37ff16e2cb54cd0f7e2",
+    "actual": "77834421e7fe06f717cb89c1b070a3e58e03399134b01181d2459b6ee7248cfd",
+    "match": false
+  },
+  {
+    "path": "PUBLICATION_STATUS.md",
+    "expected": "efe4857aec598d90470322cf3962eb3fe1f64947630e1fdf71d1c90134de8740",
+    "actual": "c401982b6de755f2648587a04c17ccc2569ea233fb77982fe5fea076683a2f4b",
+    "match": false
+  },
+  {
+    "path": "VERSION.json",
+    "expected": "5eda2586eb97d69cf158683579043910ad4735dcc731cc7e3ad940985f1adef7",
+    "actual": "49300f557a36d6a0ba4b7916ba3edbc30d4fd6522fb8007c45d2c394feb71c10",
+    "match": false
+  },
+  {
+    "path": "WORKSPACE-HANDOFF.md",
+    "expected": "215096d997782e78e901dfae36c782937e49611fbeb677a0d3fa50cbecf8d074",
+    "actual": "b6a25bfd315763e83715fb837055a5e5b7fa45049b3bba16654e869f3b26f18e",
+    "match": false
+  },
+  {
+    "path": "all-in-one/ACTIVE-WORK.md",
+    "expected": "eff3bbc08ecff41da3beff77f3fec48e7d148708192bcaaab00f34b6a721afc2",
+    "actual": "0e8326a10d37bb2ba1f84c99b8bc1f8187bf4797d08fa58356ba2cf6f414cb34",
+    "match": false
+  },
+  {
+    "path": "all-in-one/assets/program-model-data.js",
+    "expected": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+    "actual": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+    "match": true
+  },
+  {
+    "path": "all-in-one/assets/simulator-workspace.js",
+    "expected": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+    "actual": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+    "match": true
+  },
+  {
+    "path": "all-in-one/assets/virtual-plc.js",
+    "expected": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+    "actual": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+    "match": true
+  },
+  {
+    "path": "all-in-one/registers/equipment.csv",
+    "expected": "725cebc853bf1c50f84ff32121ae3a0ab5872809ffef67bd47766199ee83e35f",
+    "actual": "725cebc853bf1c50f84ff32121ae3a0ab5872809ffef67bd47766199ee83e35f",
+    "match": true
+  },
+  {
+    "path": "all-in-one/registers/program-model.json",
+    "expected": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+    "actual": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+    "match": true
+  },
+  {
+    "path": "all-in-one/registers/sensor-measurement.json",
+    "expected": "4b8c357c803e7b429766d54a87bf49bb5dd25343a9797b44b5702df93440c7a3",
+    "actual": "4b8c357c803e7b429766d54a87bf49bb5dd25343a9797b44b5702df93440c7a3",
+    "match": true
+  },
+  {
+    "path": "all-in-one/registers/simulator-freeze.json",
+    "expected": "bb93c1994effc5609939ba566b7802ce7ed55154a7310f02379b308ac2c8c835",
+    "actual": "bb93c1994effc5609939ba566b7802ce7ed55154a7310f02379b308ac2c8c835",
+    "match": true
+  },
+  {
+    "path": "all-in-one/registers/virtual-plc-test-results.json",
+    "expected": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+    "actual": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/Electrical_Can_Decoating_20241118.pdf",
+    "expected": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "actual": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/Electrical_Rev2.pdf",
+    "expected": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "actual": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/GME_20250506.zap18",
+    "expected": "00c79b6d986e68298f65b172c1807115bc5d9e450a74fcc989d0796d8d8a4ea8",
+    "actual": "00c79b6d986e68298f65b172c1807115bc5d9e450a74fcc989d0796d8d8a4ea8",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/PEData.plf",
+    "expected": "647de7ea123daced41c27bec8f81aeb93c712cac714d4754d7da5c528abb016a",
+    "actual": "647de7ea123daced41c27bec8f81aeb93c712cac714d4754d7da5c528abb016a",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/block_summary.json",
+    "expected": "68253f9366908244a27ed461c66d465da7ec1723571f27deaa9a6f81a542de63",
+    "actual": "68253f9366908244a27ed461c66d465da7ec1723571f27deaa9a6f81a542de63",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/can-decoating-page-text.json",
+    "expected": "d3b4c14945dd00f79c58ebab0cb8991c422dd1670e95e24d10779bd9e9d99bba",
+    "actual": "d3b4c14945dd00f79c58ebab0cb8991c422dd1670e95e24d10779bd9e9d99bba",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0014-FlgNet.xml",
+    "expected": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+    "actual": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0030-FlgNet.xml",
+    "expected": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "actual": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0031-FlgNet.xml",
+    "expected": "76385eab8f8f72b9faa16f7cf8905f395591b18c0a9ee9e6d7dd085a38c45c65",
+    "actual": "76385eab8f8f72b9faa16f7cf8905f395591b18c0a9ee9e6d7dd085a38c45c65",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0047-IdentXmlPart.xml",
+    "expected": "2e53bb895dd1ad2a74efaeb1ef16dfd61e62b1b2d7aa34cec8612f1b9cb0928e",
+    "actual": "2e53bb895dd1ad2a74efaeb1ef16dfd61e62b1b2d7aa34cec8612f1b9cb0928e",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0048-IdentXmlPart.xml",
+    "expected": "d8e8687de7271bd294c2b62b33d789700af9d5014d82b130141988c4d479253d",
+    "actual": "d8e8687de7271bd294c2b62b33d789700af9d5014d82b130141988c4d479253d",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0056-IdentXmlPart.xml",
+    "expected": "c5ec45cd232c36d80f80487ec0dd284a876e326ba2286fc722ecc861a400232a",
+    "actual": "c5ec45cd232c36d80f80487ec0dd284a876e326ba2286fc722ecc861a400232a",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0057-IdentXmlPart.xml",
+    "expected": "1124275ab34e188b042b263d3c4b744abf5637ffd229af642b81a27f00a00c6b",
+    "actual": "1124275ab34e188b042b263d3c4b744abf5637ffd229af642b81a27f00a00c6b",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0148-FlgNet.xml",
+    "expected": "1d80e1bbf1c82dcc4dd18628c35935bbd55a17b5be9c1ca7bfb249600d154313",
+    "actual": "1d80e1bbf1c82dcc4dd18628c35935bbd55a17b5be9c1ca7bfb249600d154313",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0151-FlgNet.xml",
+    "expected": "227627d165c6240a4c15b62fd4e4c8d7a621c15f35319cb424601df5cc52c904",
+    "actual": "227627d165c6240a4c15b62fd4e4c8d7a621c15f35319cb424601df5cc52c904",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0152-FlgNet.xml",
+    "expected": "2b6165460f06a52de56afcb4d65ed163d64320e24af1b194e934a4d7c6bfe49f",
+    "actual": "2b6165460f06a52de56afcb4d65ed163d64320e24af1b194e934a4d7c6bfe49f",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0175-FlgNet.xml",
+    "expected": "41279d6aaa157de3be963d010d6ca7dea94811a0ace519c8a3d8baa015f67f97",
+    "actual": "41279d6aaa157de3be963d010d6ca7dea94811a0ace519c8a3d8baa015f67f97",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0185-FlgNet.xml",
+    "expected": "2532fbe9602e3effc1f3992aaeb6749e93841072f0e4d797c4b7a369a849ab61",
+    "actual": "2532fbe9602e3effc1f3992aaeb6749e93841072f0e4d797c4b7a369a849ab61",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0291-FlgNet.xml",
+    "expected": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+    "actual": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0398-FlgNet.xml",
+    "expected": "4f092b18df4e44af98fd44e173f48dad213a4e80b71f46b0a5e8a700f5b0a747",
+    "actual": "4f092b18df4e44af98fd44e173f48dad213a4e80b71f46b0a5e8a700f5b0a747",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0499-FlgNet.xml",
+    "expected": "6526c8da7b45f38e72d8ebd8c177889a58f7e2db7265d1572db5a8c7dd6e0467",
+    "actual": "6526c8da7b45f38e72d8ebd8c177889a58f7e2db7265d1572db5a8c7dd6e0467",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0500-FlgNet.xml",
+    "expected": "ad3240f11b6e0d3cfd745938134be49443e9db731d04e092170b89451b1b7435",
+    "actual": "ad3240f11b6e0d3cfd745938134be49443e9db731d04e092170b89451b1b7435",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0530-FlgNet.xml",
+    "expected": "9f20c55030b3127abfedce38de08e50d494885cdf61d75c85a2715b0d380eac5",
+    "actual": "9f20c55030b3127abfedce38de08e50d494885cdf61d75c85a2715b0d380eac5",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0531-FlgNet.xml",
+    "expected": "d53b8ca1482c4365251a3b1d0f108ed32fa4e5b8f78848e2ceb48648f2d7095e",
+    "actual": "d53b8ca1482c4365251a3b1d0f108ed32fa4e5b8f78848e2ceb48648f2d7095e",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0532-FlgNet.xml",
+    "expected": "63b649820f729a693a38203c57eb79c1a25fbd4374e3e3aa79609b47f1c3c980",
+    "actual": "63b649820f729a693a38203c57eb79c1a25fbd4374e3e3aa79609b47f1c3c980",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0533-FlgNet.xml",
+    "expected": "3fd228af5f1eeb7c88b48cef59b9faa2e601cbe318498a26c8c339957fc01d58",
+    "actual": "3fd228af5f1eeb7c88b48cef59b9faa2e601cbe318498a26c8c339957fc01d58",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0538-FlgNet.xml",
+    "expected": "afb3c3104bb60b4b1310f62ed5fb2caf659afc514c2b3fd209ff71d2008686ce",
+    "actual": "afb3c3104bb60b4b1310f62ed5fb2caf659afc514c2b3fd209ff71d2008686ce",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0562-IdentXmlPart.xml",
+    "expected": "85aada44dd9a3e66835463c3fed400f1efe121f4f5bc5ab8f0ad49481ec0ea1c",
+    "actual": "85aada44dd9a3e66835463c3fed400f1efe121f4f5bc5ab8f0ad49481ec0ea1c",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0563-IdentXmlPart.xml",
+    "expected": "86cf35b6baebc079cb5a092baf53ec3364c377ea7318eb263ab69c8b4550b4ad",
+    "actual": "86cf35b6baebc079cb5a092baf53ec3364c377ea7318eb263ab69c8b4550b4ad",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0564-IdentXmlPart.xml",
+    "expected": "2aed17fa02d19b0a081023282841aa561d6a2dca3e393284da3622b967af00b1",
+    "actual": "2aed17fa02d19b0a081023282841aa561d6a2dca3e393284da3622b967af00b1",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0565-IdentXmlPart.xml",
+    "expected": "0f7f970faa6c456f2bb032b1a2072a2f52db1e03fc77bd8d35d4583deeaf1149",
+    "actual": "0f7f970faa6c456f2bb032b1a2072a2f52db1e03fc77bd8d35d4583deeaf1149",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0582-IdentXmlPart.xml",
+    "expected": "41d4c2bd750392bbc2edc43995ec3a9da47a63c13ee86496df8f187492008951",
+    "actual": "41d4c2bd750392bbc2edc43995ec3a9da47a63c13ee86496df8f187492008951",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0584-IdentXmlPart.xml",
+    "expected": "3bff6c478e594bf97bb1730971944e96b0b5e2407199420fe6567d5fe609ea5d",
+    "actual": "3bff6c478e594bf97bb1730971944e96b0b5e2407199420fe6567d5fe609ea5d",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0585-IdentXmlPart.xml",
+    "expected": "e36ec18aa4abebea8f9160254522bb51ff722eae804c5a469790f85f02939184",
+    "actual": "e36ec18aa4abebea8f9160254522bb51ff722eae804c5a469790f85f02939184",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0587-IdentXmlPart.xml",
+    "expected": "bab957ac7c180d9c91b4f904b29e9dbd5812c6ba8f7b9e0c7faf9708605b203e",
+    "actual": "bab957ac7c180d9c91b4f904b29e9dbd5812c6ba8f7b9e0c7faf9708605b203e",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0611-IdentXmlPart.xml",
+    "expected": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+    "actual": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0612-IdentXmlPart.xml",
+    "expected": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+    "actual": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0627-IdentXmlPart.xml",
+    "expected": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "actual": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0628-IdentXmlPart.xml",
+    "expected": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "actual": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0629-IdentXmlPart.xml",
+    "expected": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "actual": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0672-IdentXmlPart.xml",
+    "expected": "6bfc2ba142d6270c39eb1f13b2886204865af6d46eadc5f410c26981b8da9222",
+    "actual": "6bfc2ba142d6270c39eb1f13b2886204865af6d46eadc5f410c26981b8da9222",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0674-IdentXmlPart.xml",
+    "expected": "4770702f519bacda69202bb2f7733d983074bda90964360c238f990d9d08fd84",
+    "actual": "4770702f519bacda69202bb2f7733d983074bda90964360c238f990d9d08fd84",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0675-IdentXmlPart.xml",
+    "expected": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+    "actual": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0676-IdentXmlPart.xml",
+    "expected": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+    "actual": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0678-IdentXmlPart.xml",
+    "expected": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+    "actual": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0680-IdentXmlPart.xml",
+    "expected": "fd551ad5d47bbd66c6bcdcc1949aaddf68cc086a3ddf6fb337adc767954c2b95",
+    "actual": "fd551ad5d47bbd66c6bcdcc1949aaddf68cc086a3ddf6fb337adc767954c2b95",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0682-IdentXmlPart.xml",
+    "expected": "25c7aeb1bfa29c178eaa396db33d4eb6d2d29b9a3f2eb965fa61fae8ce7f1092",
+    "actual": "25c7aeb1bfa29c178eaa396db33d4eb6d2d29b9a3f2eb965fa61fae8ce7f1092",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0683-IdentXmlPart.xml",
+    "expected": "0c9b569d041cd5babbbeded8a3bdc5d3754927125756b6ac54b7cb991b22fc22",
+    "actual": "0c9b569d041cd5babbbeded8a3bdc5d3754927125756b6ac54b7cb991b22fc22",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0684-IdentXmlPart.xml",
+    "expected": "6e9b3f173184adcddca503e81e2649022734b6ea3639c1d5ddaf0a08bac00208",
+    "actual": "6e9b3f173184adcddca503e81e2649022734b6ea3639c1d5ddaf0a08bac00208",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0685-IdentXmlPart.xml",
+    "expected": "2003d5741a0d707755c5e6e8b737fa106414b87b5b431b97271d9f1a5d343448",
+    "actual": "2003d5741a0d707755c5e6e8b737fa106414b87b5b431b97271d9f1a5d343448",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0686-IdentXmlPart.xml",
+    "expected": "b450d8ff22f0fffd7a214b2a696af28a03a27834ebf862bfaa822dc9bfb3c8d4",
+    "actual": "b450d8ff22f0fffd7a214b2a696af28a03a27834ebf862bfaa822dc9bfb3c8d4",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0688-IdentXmlPart.xml",
+    "expected": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+    "actual": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0692-IdentXmlPart.xml",
+    "expected": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "actual": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/0694-IdentXmlPart.xml",
+    "expected": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "actual": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/decoded-original/network-map.json",
+    "expected": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "actual": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/electrical-page-text.json",
+    "expected": "4b846819aab7e1306aebea617042f9f9ffe0c8aee1930e6f3db035bea3739153",
+    "actual": "4b846819aab7e1306aebea617042f9f9ffe0c8aee1930e6f3db035bea3739153",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/hmi-windows.csv",
+    "expected": "15f8d69b5c43d4fdbe550f9cd2717f855fea877ed8146973054cb6dbcaa9892e",
+    "actual": "15f8d69b5c43d4fdbe550f9cd2717f855fea877ed8146973054cb6dbcaa9892e",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/hmi_plc_tags.csv",
+    "expected": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "actual": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/live_index.json",
+    "expected": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1",
+    "actual": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1",
+    "match": true
+  },
+  {
+    "path": "all-in-one/sources/source-manifest.json",
+    "expected": "5af6e85994536897fd92f75972534a691e6eb0f067aafe07679c0788fd84e5bf",
+    "actual": "5af6e85994536897fd92f75972534a691e6eb0f067aafe07679c0788fd84e5bf",
+    "match": true
+  },
+  {
+    "path": "docs/equipment-standard/INVENTORY.json",
+    "expected": "720fa0066b926acd519f8aa0746f0c20acf3f02bac5b7a2fa5a8be43b77743dc",
+    "actual": "720fa0066b926acd519f8aa0746f0c20acf3f02bac5b7a2fa5a8be43b77743dc",
+    "match": true
+  },
+  {
+    "path": "docs/equipment-standard/WORK-ITEM-TEMPLATE.md",
+    "expected": "4239b60b02270cd0db344b6f664395733f2587cf4d81c16ae629886b5a92c586",
+    "actual": "4239b60b02270cd0db344b6f664395733f2587cf4d81c16ae629886b5a92c586",
+    "match": true
+  },
+  {
+    "path": "docs/equipment-standard/WORK-STANDARD.md",
+    "expected": "05a57f4525bc1d59dab35ef841b64b0138a6ff08b10760ade64d9a688ee15e99",
+    "actual": "05a57f4525bc1d59dab35ef841b64b0138a6ff08b10760ade64d9a688ee15e99",
+    "match": true
+  }
+]

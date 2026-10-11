@@ -1,0 +1,4323 @@
+{
+  "catalog_id": "RO02",
+  "selection_key": "RO02",
+  "priority_key": null,
+  "type": "sensor",
+  "draft": "catalog-sources/RO02-DOTS-DRAFT.md",
+  "draft_sha256": "12351514d354c3fda5baf30cb00bc03d661a4637fdf0b16be0ec568175f399fa",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1749,
+      "part",
+      "535"
+    ],
+    [
+      1749,
+      "wire",
+      "537"
+    ],
+    [
+      1749,
+      "wire",
+      "529"
+    ],
+    [
+      1749,
+      "wire",
+      "536"
+    ],
+    [
+      1749,
+      "wire",
+      "530"
+    ],
+    [
+      1749,
+      "wire",
+      "531"
+    ],
+    [
+      1749,
+      "wire",
+      "532"
+    ],
+    [
+      1749,
+      "wire",
+      "533"
+    ],
+    [
+      1749,
+      "wire",
+      "534"
+    ],
+    [
+      1749,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "part",
+      "22"
+    ],
+    [
+      1071,
+      "part",
+      "27"
+    ],
+    [
+      1071,
+      "part",
+      "34"
+    ],
+    [
+      1071,
+      "part",
+      "41"
+    ],
+    [
+      1071,
+      "part",
+      "48"
+    ],
+    [
+      1071,
+      "part",
+      "49"
+    ],
+    [
+      1071,
+      "part",
+      "50"
+    ],
+    [
+      1071,
+      "part",
+      "51"
+    ],
+    [
+      1071,
+      "part",
+      "72"
+    ],
+    [
+      1071,
+      "part",
+      "73"
+    ],
+    [
+      1071,
+      "part",
+      "74"
+    ],
+    [
+      1071,
+      "part",
+      "75"
+    ],
+    [
+      1071,
+      "part",
+      "96"
+    ],
+    [
+      1071,
+      "part",
+      "97"
+    ],
+    [
+      1071,
+      "part",
+      "98"
+    ],
+    [
+      1071,
+      "part",
+      "99"
+    ],
+    [
+      1071,
+      "part",
+      "122"
+    ],
+    [
+      1071,
+      "part",
+      "123"
+    ],
+    [
+      1071,
+      "part",
+      "144"
+    ],
+    [
+      1071,
+      "part",
+      "145"
+    ],
+    [
+      1071,
+      "part",
+      "146"
+    ],
+    [
+      1071,
+      "part",
+      "147"
+    ],
+    [
+      1071,
+      "part",
+      "168"
+    ],
+    [
+      1071,
+      "part",
+      "169"
+    ],
+    [
+      1071,
+      "part",
+      "170"
+    ],
+    [
+      1071,
+      "part",
+      "171"
+    ],
+    [
+      1071,
+      "part",
+      "84"
+    ],
+    [
+      1071,
+      "part",
+      "194"
+    ],
+    [
+      1071,
+      "wire",
+      "21"
+    ],
+    [
+      1071,
+      "wire",
+      "23"
+    ],
+    [
+      1071,
+      "wire",
+      "33"
+    ],
+    [
+      1071,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "wire",
+      "31"
+    ],
+    [
+      1071,
+      "wire",
+      "40"
+    ],
+    [
+      1071,
+      "wire",
+      "32"
+    ],
+    [
+      1071,
+      "wire",
+      "38"
+    ],
+    [
+      1071,
+      "wire",
+      "47"
+    ],
+    [
+      1071,
+      "wire",
+      "39"
+    ],
+    [
+      1071,
+      "wire",
+      "45"
+    ],
+    [
+      1071,
+      "wire",
+      "46"
+    ],
+    [
+      1071,
+      "wire",
+      "61"
+    ],
+    [
+      1071,
+      "wire",
+      "62"
+    ],
+    [
+      1071,
+      "wire",
+      "63"
+    ],
+    [
+      1071,
+      "wire",
+      "64"
+    ],
+    [
+      1071,
+      "wire",
+      "65"
+    ],
+    [
+      1071,
+      "wire",
+      "66"
+    ],
+    [
+      1071,
+      "wire",
+      "67"
+    ],
+    [
+      1071,
+      "wire",
+      "68"
+    ],
+    [
+      1071,
+      "wire",
+      "69"
+    ],
+    [
+      1071,
+      "wire",
+      "70"
+    ],
+    [
+      1071,
+      "wire",
+      "71"
+    ],
+    [
+      1071,
+      "wire",
+      "85"
+    ],
+    [
+      1071,
+      "wire",
+      "86"
+    ],
+    [
+      1071,
+      "wire",
+      "87"
+    ],
+    [
+      1071,
+      "wire",
+      "88"
+    ],
+    [
+      1071,
+      "wire",
+      "89"
+    ],
+    [
+      1071,
+      "wire",
+      "90"
+    ],
+    [
+      1071,
+      "wire",
+      "91"
+    ],
+    [
+      1071,
+      "wire",
+      "92"
+    ],
+    [
+      1071,
+      "wire",
+      "93"
+    ],
+    [
+      1071,
+      "wire",
+      "94"
+    ],
+    [
+      1071,
+      "wire",
+      "95"
+    ],
+    [
+      1071,
+      "wire",
+      "109"
+    ],
+    [
+      1071,
+      "wire",
+      "110"
+    ],
+    [
+      1071,
+      "wire",
+      "111"
+    ],
+    [
+      1071,
+      "wire",
+      "112"
+    ],
+    [
+      1071,
+      "wire",
+      "113"
+    ],
+    [
+      1071,
+      "wire",
+      "114"
+    ],
+    [
+      1071,
+      "wire",
+      "115"
+    ],
+    [
+      1071,
+      "wire",
+      "116"
+    ],
+    [
+      1071,
+      "wire",
+      "117"
+    ],
+    [
+      1071,
+      "wire",
+      "118"
+    ],
+    [
+      1071,
+      "wire",
+      "119"
+    ],
+    [
+      1071,
+      "wire",
+      "139"
+    ],
+    [
+      1071,
+      "wire",
+      "140"
+    ],
+    [
+      1071,
+      "wire",
+      "141"
+    ],
+    [
+      1071,
+      "wire",
+      "142"
+    ],
+    [
+      1071,
+      "wire",
+      "143"
+    ],
+    [
+      1071,
+      "wire",
+      "157"
+    ],
+    [
+      1071,
+      "wire",
+      "158"
+    ],
+    [
+      1071,
+      "wire",
+      "159"
+    ],
+    [
+      1071,
+      "wire",
+      "160"
+    ],
+    [
+      1071,
+      "wire",
+      "161"
+    ],
+    [
+      1071,
+      "wire",
+      "162"
+    ],
+    [
+      1071,
+      "wire",
+      "163"
+    ],
+    [
+      1071,
+      "wire",
+      "164"
+    ],
+    [
+      1071,
+      "wire",
+      "165"
+    ],
+    [
+      1071,
+      "wire",
+      "166"
+    ],
+    [
+      1071,
+      "wire",
+      "167"
+    ],
+    [
+      1071,
+      "wire",
+      "181"
+    ],
+    [
+      1071,
+      "wire",
+      "182"
+    ],
+    [
+      1071,
+      "wire",
+      "183"
+    ],
+    [
+      1071,
+      "wire",
+      "184"
+    ],
+    [
+      1071,
+      "wire",
+      "185"
+    ],
+    [
+      1071,
+      "wire",
+      "186"
+    ],
+    [
+      1071,
+      "wire",
+      "187"
+    ],
+    [
+      1071,
+      "wire",
+      "188"
+    ],
+    [
+      1071,
+      "wire",
+      "189"
+    ],
+    [
+      1071,
+      "wire",
+      "190"
+    ],
+    [
+      1071,
+      "wire",
+      "108"
+    ],
+    [
+      1071,
+      "wire",
+      "191"
+    ],
+    [
+      1071,
+      "wire",
+      "132"
+    ],
+    [
+      1071,
+      "wire",
+      "195"
+    ],
+    [
+      1071,
+      "wire",
+      "156"
+    ],
+    [
+      1071,
+      "wire",
+      "196"
+    ],
+    [
+      1071,
+      "wire",
+      "197"
+    ],
+    [
+      1658,
+      "part",
+      "255"
+    ],
+    [
+      1658,
+      "part",
+      "258"
+    ],
+    [
+      1658,
+      "part",
+      "161"
+    ],
+    [
+      1658,
+      "part",
+      "164"
+    ],
+    [
+      1658,
+      "part",
+      "167"
+    ],
+    [
+      1658,
+      "part",
+      "170"
+    ],
+    [
+      1658,
+      "part",
+      "174"
+    ],
+    [
+      1658,
+      "part",
+      "177"
+    ],
+    [
+      1658,
+      "part",
+      "181"
+    ],
+    [
+      1658,
+      "part",
+      "185"
+    ],
+    [
+      1658,
+      "part",
+      "190"
+    ],
+    [
+      1658,
+      "part",
+      "259"
+    ],
+    [
+      1658,
+      "part",
+      "47"
+    ],
+    [
+      1658,
+      "part",
+      "193"
+    ],
+    [
+      1658,
+      "part",
+      "23"
+    ],
+    [
+      1658,
+      "wire",
+      "257"
+    ],
+    [
+      1658,
+      "wire",
+      "220"
+    ],
+    [
+      1658,
+      "wire",
+      "256"
+    ],
+    [
+      1658,
+      "wire",
+      "30"
+    ],
+    [
+      1658,
+      "wire",
+      "31"
+    ],
+    [
+      1658,
+      "wire",
+      "25"
+    ],
+    [
+      1658,
+      "wire",
+      "27"
+    ],
+    [
+      1658,
+      "wire",
+      "28"
+    ],
+    [
+      1658,
+      "wire",
+      "26"
+    ],
+    [
+      1658,
+      "wire",
+      "225"
+    ],
+    [
+      1658,
+      "wire",
+      "227"
+    ],
+    [
+      1658,
+      "wire",
+      "226"
+    ],
+    [
+      1658,
+      "wire",
+      "228"
+    ],
+    [
+      1658,
+      "wire",
+      "230"
+    ],
+    [
+      1658,
+      "wire",
+      "229"
+    ],
+    [
+      1658,
+      "wire",
+      "231"
+    ],
+    [
+      1658,
+      "wire",
+      "232"
+    ],
+    [
+      1658,
+      "wire",
+      "234"
+    ],
+    [
+      1658,
+      "wire",
+      "233"
+    ],
+    [
+      1658,
+      "wire",
+      "235"
+    ],
+    [
+      1658,
+      "wire",
+      "237"
+    ],
+    [
+      1658,
+      "wire",
+      "236"
+    ],
+    [
+      1658,
+      "wire",
+      "238"
+    ],
+    [
+      1658,
+      "wire",
+      "239"
+    ],
+    [
+      1658,
+      "wire",
+      "241"
+    ],
+    [
+      1658,
+      "wire",
+      "240"
+    ],
+    [
+      1658,
+      "wire",
+      "242"
+    ],
+    [
+      1658,
+      "wire",
+      "243"
+    ],
+    [
+      1658,
+      "wire",
+      "245"
+    ],
+    [
+      1658,
+      "wire",
+      "244"
+    ],
+    [
+      1658,
+      "wire",
+      "246"
+    ],
+    [
+      1658,
+      "wire",
+      "247"
+    ],
+    [
+      1658,
+      "wire",
+      "36"
+    ],
+    [
+      1658,
+      "wire",
+      "37"
+    ],
+    [
+      1658,
+      "wire",
+      "35"
+    ],
+    [
+      1658,
+      "wire",
+      "38"
+    ],
+    [
+      1658,
+      "wire",
+      "39"
+    ],
+    [
+      1658,
+      "wire",
+      "48"
+    ],
+    [
+      1658,
+      "wire",
+      "49"
+    ],
+    [
+      1658,
+      "wire",
+      "252"
+    ],
+    [
+      1658,
+      "wire",
+      "21"
+    ],
+    [
+      1658,
+      "wire",
+      "253"
+    ],
+    [
+      1658,
+      "wire",
+      "22"
+    ],
+    [
+      1659,
+      "part",
+      "171"
+    ],
+    [
+      1659,
+      "part",
+      "162"
+    ],
+    [
+      1659,
+      "wire",
+      "173"
+    ],
+    [
+      1659,
+      "wire",
+      "168"
+    ],
+    [
+      1659,
+      "wire",
+      "172"
+    ],
+    [
+      1659,
+      "wire",
+      "169"
+    ],
+    [
+      1659,
+      "wire",
+      "170"
+    ],
+    [
+      1985,
+      "part",
+      "741"
+    ],
+    [
+      1985,
+      "part",
+      "743"
+    ],
+    [
+      1985,
+      "part",
+      "663"
+    ],
+    [
+      1985,
+      "part",
+      "669"
+    ],
+    [
+      1985,
+      "part",
+      "676"
+    ],
+    [
+      1985,
+      "part",
+      "679"
+    ],
+    [
+      1985,
+      "part",
+      "675"
+    ],
+    [
+      1985,
+      "part",
+      "685"
+    ],
+    [
+      1985,
+      "part",
+      "745"
+    ],
+    [
+      1985,
+      "part",
+      "690"
+    ],
+    [
+      1985,
+      "part",
+      "747"
+    ],
+    [
+      1985,
+      "part",
+      "749"
+    ],
+    [
+      1985,
+      "part",
+      "695"
+    ],
+    [
+      1985,
+      "wire",
+      "751"
+    ],
+    [
+      1985,
+      "wire",
+      "714"
+    ],
+    [
+      1985,
+      "wire",
+      "742"
+    ],
+    [
+      1985,
+      "wire",
+      "715"
+    ],
+    [
+      1985,
+      "wire",
+      "744"
+    ],
+    [
+      1985,
+      "wire",
+      "716"
+    ],
+    [
+      1985,
+      "wire",
+      "717"
+    ],
+    [
+      1985,
+      "wire",
+      "718"
+    ],
+    [
+      1985,
+      "wire",
+      "719"
+    ],
+    [
+      1985,
+      "wire",
+      "720"
+    ],
+    [
+      1985,
+      "wire",
+      "721"
+    ],
+    [
+      1985,
+      "wire",
+      "722"
+    ],
+    [
+      1985,
+      "wire",
+      "723"
+    ],
+    [
+      1985,
+      "wire",
+      "724"
+    ],
+    [
+      1985,
+      "wire",
+      "725"
+    ],
+    [
+      1985,
+      "wire",
+      "726"
+    ],
+    [
+      1985,
+      "wire",
+      "727"
+    ],
+    [
+      1985,
+      "wire",
+      "728"
+    ],
+    [
+      1985,
+      "wire",
+      "729"
+    ],
+    [
+      1985,
+      "wire",
+      "730"
+    ],
+    [
+      1985,
+      "wire",
+      "731"
+    ],
+    [
+      1985,
+      "wire",
+      "746"
+    ],
+    [
+      1985,
+      "wire",
+      "733"
+    ],
+    [
+      1985,
+      "wire",
+      "736"
+    ],
+    [
+      1985,
+      "wire",
+      "748"
+    ],
+    [
+      1985,
+      "wire",
+      "737"
+    ],
+    [
+      1985,
+      "wire",
+      "750"
+    ],
+    [
+      1985,
+      "wire",
+      "739"
+    ],
+    [
+      1858,
+      "part",
+      "273"
+    ],
+    [
+      1858,
+      "part",
+      "275"
+    ],
+    [
+      1858,
+      "part",
+      "277"
+    ],
+    [
+      1858,
+      "part",
+      "279"
+    ],
+    [
+      1858,
+      "part",
+      "281"
+    ],
+    [
+      1858,
+      "part",
+      "283"
+    ],
+    [
+      1858,
+      "part",
+      "285"
+    ],
+    [
+      1858,
+      "part",
+      "287"
+    ],
+    [
+      1858,
+      "part",
+      "289"
+    ],
+    [
+      1858,
+      "part",
+      "291"
+    ],
+    [
+      1858,
+      "part",
+      "293"
+    ],
+    [
+      1858,
+      "part",
+      "295"
+    ],
+    [
+      1858,
+      "part",
+      "297"
+    ],
+    [
+      1858,
+      "part",
+      "299"
+    ],
+    [
+      1858,
+      "part",
+      "301"
+    ],
+    [
+      1858,
+      "part",
+      "303"
+    ],
+    [
+      1858,
+      "part",
+      "22"
+    ],
+    [
+      1858,
+      "part",
+      "219"
+    ],
+    [
+      1858,
+      "part",
+      "305"
+    ],
+    [
+      1858,
+      "part",
+      "213"
+    ],
+    [
+      1858,
+      "part",
+      "232"
+    ],
+    [
+      1858,
+      "wire",
+      "307"
+    ],
+    [
+      1858,
+      "wire",
+      "251"
+    ],
+    [
+      1858,
+      "wire",
+      "274"
+    ],
+    [
+      1858,
+      "wire",
+      "252"
+    ],
+    [
+      1858,
+      "wire",
+      "276"
+    ],
+    [
+      1858,
+      "wire",
+      "253"
+    ],
+    [
+      1858,
+      "wire",
+      "278"
+    ],
+    [
+      1858,
+      "wire",
+      "254"
+    ],
+    [
+      1858,
+      "wire",
+      "280"
+    ],
+    [
+      1858,
+      "wire",
+      "255"
+    ],
+    [
+      1858,
+      "wire",
+      "282"
+    ],
+    [
+      1858,
+      "wire",
+      "256"
+    ],
+    [
+      1858,
+      "wire",
+      "284"
+    ],
+    [
+      1858,
+      "wire",
+      "257"
+    ],
+    [
+      1858,
+      "wire",
+      "286"
+    ],
+    [
+      1858,
+      "wire",
+      "258"
+    ],
+    [
+      1858,
+      "wire",
+      "288"
+    ],
+    [
+      1858,
+      "wire",
+      "259"
+    ],
+    [
+      1858,
+      "wire",
+      "290"
+    ],
+    [
+      1858,
+      "wire",
+      "260"
+    ],
+    [
+      1858,
+      "wire",
+      "292"
+    ],
+    [
+      1858,
+      "wire",
+      "261"
+    ],
+    [
+      1858,
+      "wire",
+      "294"
+    ],
+    [
+      1858,
+      "wire",
+      "262"
+    ],
+    [
+      1858,
+      "wire",
+      "296"
+    ],
+    [
+      1858,
+      "wire",
+      "263"
+    ],
+    [
+      1858,
+      "wire",
+      "298"
+    ],
+    [
+      1858,
+      "wire",
+      "264"
+    ],
+    [
+      1858,
+      "wire",
+      "300"
+    ],
+    [
+      1858,
+      "wire",
+      "265"
+    ],
+    [
+      1858,
+      "wire",
+      "302"
+    ],
+    [
+      1858,
+      "wire",
+      "266"
+    ],
+    [
+      1858,
+      "wire",
+      "304"
+    ],
+    [
+      1858,
+      "wire",
+      "21"
+    ],
+    [
+      1858,
+      "wire",
+      "24"
+    ],
+    [
+      1858,
+      "wire",
+      "267"
+    ],
+    [
+      1858,
+      "wire",
+      "268"
+    ],
+    [
+      1858,
+      "wire",
+      "306"
+    ],
+    [
+      1858,
+      "wire",
+      "270"
+    ],
+    [
+      1858,
+      "wire",
+      "272"
+    ],
+    [
+      1750,
+      "part",
+      "594"
+    ],
+    [
+      1750,
+      "part",
+      "596"
+    ],
+    [
+      1750,
+      "part",
+      "566"
+    ],
+    [
+      1750,
+      "wire",
+      "598"
+    ],
+    [
+      1750,
+      "wire",
+      "21"
+    ],
+    [
+      1750,
+      "wire",
+      "595"
+    ],
+    [
+      1750,
+      "wire",
+      "583"
+    ],
+    [
+      1750,
+      "wire",
+      "584"
+    ],
+    [
+      1750,
+      "wire",
+      "585"
+    ],
+    [
+      1750,
+      "wire",
+      "586"
+    ],
+    [
+      1750,
+      "wire",
+      "587"
+    ],
+    [
+      1750,
+      "wire",
+      "24"
+    ],
+    [
+      1750,
+      "wire",
+      "588"
+    ],
+    [
+      1750,
+      "wire",
+      "597"
+    ],
+    [
+      1750,
+      "wire",
+      "590"
+    ],
+    [
+      1750,
+      "wire",
+      "591"
+    ],
+    [
+      1750,
+      "wire",
+      "592"
+    ],
+    [
+      403,
+      "part",
+      "329"
+    ],
+    [
+      403,
+      "part",
+      "250"
+    ],
+    [
+      403,
+      "part",
+      "253"
+    ],
+    [
+      403,
+      "part",
+      "256"
+    ],
+    [
+      403,
+      "part",
+      "259"
+    ],
+    [
+      403,
+      "part",
+      "267"
+    ],
+    [
+      403,
+      "part",
+      "270"
+    ],
+    [
+      403,
+      "part",
+      "273"
+    ],
+    [
+      403,
+      "part",
+      "276"
+    ],
+    [
+      403,
+      "part",
+      "281"
+    ],
+    [
+      403,
+      "wire",
+      "331"
+    ],
+    [
+      403,
+      "wire",
+      "303"
+    ],
+    [
+      403,
+      "wire",
+      "330"
+    ],
+    [
+      403,
+      "wire",
+      "304"
+    ],
+    [
+      403,
+      "wire",
+      "306"
+    ],
+    [
+      403,
+      "wire",
+      "305"
+    ],
+    [
+      403,
+      "wire",
+      "307"
+    ],
+    [
+      403,
+      "wire",
+      "309"
+    ],
+    [
+      403,
+      "wire",
+      "308"
+    ],
+    [
+      403,
+      "wire",
+      "310"
+    ],
+    [
+      403,
+      "wire",
+      "312"
+    ],
+    [
+      403,
+      "wire",
+      "311"
+    ],
+    [
+      403,
+      "wire",
+      "313"
+    ],
+    [
+      403,
+      "wire",
+      "314"
+    ],
+    [
+      403,
+      "wire",
+      "315"
+    ],
+    [
+      403,
+      "wire",
+      "317"
+    ],
+    [
+      403,
+      "wire",
+      "316"
+    ],
+    [
+      403,
+      "wire",
+      "318"
+    ],
+    [
+      403,
+      "wire",
+      "320"
+    ],
+    [
+      403,
+      "wire",
+      "319"
+    ],
+    [
+      403,
+      "wire",
+      "321"
+    ],
+    [
+      403,
+      "wire",
+      "323"
+    ],
+    [
+      403,
+      "wire",
+      "322"
+    ],
+    [
+      403,
+      "wire",
+      "324"
+    ],
+    [
+      403,
+      "wire",
+      "325"
+    ],
+    [
+      403,
+      "wire",
+      "326"
+    ],
+    [
+      403,
+      "wire",
+      "327"
+    ],
+    [
+      1613,
+      "part",
+      "37"
+    ],
+    [
+      1613,
+      "wire",
+      "31"
+    ],
+    [
+      1613,
+      "wire",
+      "32"
+    ],
+    [
+      1613,
+      "wire",
+      "33"
+    ],
+    [
+      1613,
+      "wire",
+      "42"
+    ],
+    [
+      1613,
+      "wire",
+      "44"
+    ],
+    [
+      1613,
+      "wire",
+      "43"
+    ],
+    [
+      1619,
+      "part",
+      "282"
+    ],
+    [
+      1619,
+      "wire",
+      "284"
+    ],
+    [
+      1619,
+      "wire",
+      "280"
+    ],
+    [
+      1619,
+      "wire",
+      "283"
+    ],
+    [
+      927,
+      "part",
+      "213"
+    ],
+    [
+      927,
+      "part",
+      "215"
+    ],
+    [
+      927,
+      "part",
+      "217"
+    ],
+    [
+      927,
+      "part",
+      "121"
+    ],
+    [
+      927,
+      "part",
+      "127"
+    ],
+    [
+      927,
+      "part",
+      "132"
+    ],
+    [
+      927,
+      "part",
+      "137"
+    ],
+    [
+      927,
+      "part",
+      "142"
+    ],
+    [
+      927,
+      "part",
+      "147"
+    ],
+    [
+      927,
+      "part",
+      "152"
+    ],
+    [
+      927,
+      "part",
+      "157"
+    ],
+    [
+      927,
+      "part",
+      "162"
+    ],
+    [
+      927,
+      "part",
+      "167"
+    ],
+    [
+      927,
+      "wire",
+      "219"
+    ],
+    [
+      927,
+      "wire",
+      "191"
+    ],
+    [
+      927,
+      "wire",
+      "214"
+    ],
+    [
+      927,
+      "wire",
+      "192"
+    ],
+    [
+      927,
+      "wire",
+      "216"
+    ],
+    [
+      927,
+      "wire",
+      "193"
+    ],
+    [
+      927,
+      "wire",
+      "218"
+    ],
+    [
+      927,
+      "wire",
+      "212"
+    ],
+    [
+      927,
+      "wire",
+      "194"
+    ],
+    [
+      927,
+      "wire",
+      "195"
+    ],
+    [
+      927,
+      "wire",
+      "196"
+    ],
+    [
+      927,
+      "wire",
+      "197"
+    ],
+    [
+      927,
+      "wire",
+      "198"
+    ],
+    [
+      927,
+      "wire",
+      "199"
+    ],
+    [
+      927,
+      "wire",
+      "200"
+    ],
+    [
+      927,
+      "wire",
+      "201"
+    ],
+    [
+      927,
+      "wire",
+      "202"
+    ],
+    [
+      927,
+      "wire",
+      "203"
+    ],
+    [
+      927,
+      "wire",
+      "204"
+    ],
+    [
+      927,
+      "wire",
+      "205"
+    ],
+    [
+      927,
+      "wire",
+      "206"
+    ],
+    [
+      927,
+      "wire",
+      "207"
+    ],
+    [
+      927,
+      "wire",
+      "208"
+    ],
+    [
+      927,
+      "wire",
+      "209"
+    ],
+    [
+      927,
+      "wire",
+      "210"
+    ],
+    [
+      927,
+      "wire",
+      "211"
+    ],
+    [
+      928,
+      "part",
+      "191"
+    ],
+    [
+      928,
+      "part",
+      "194"
+    ],
+    [
+      928,
+      "part",
+      "197"
+    ],
+    [
+      928,
+      "part",
+      "200"
+    ],
+    [
+      928,
+      "part",
+      "203"
+    ],
+    [
+      928,
+      "part",
+      "206"
+    ],
+    [
+      928,
+      "part",
+      "209"
+    ],
+    [
+      928,
+      "part",
+      "212"
+    ],
+    [
+      928,
+      "part",
+      "215"
+    ],
+    [
+      928,
+      "part",
+      "190"
+    ],
+    [
+      928,
+      "part",
+      "271"
+    ],
+    [
+      928,
+      "part",
+      "219"
+    ],
+    [
+      928,
+      "wire",
+      "273"
+    ],
+    [
+      928,
+      "wire",
+      "240"
+    ],
+    [
+      928,
+      "wire",
+      "241"
+    ],
+    [
+      928,
+      "wire",
+      "242"
+    ],
+    [
+      928,
+      "wire",
+      "243"
+    ],
+    [
+      928,
+      "wire",
+      "244"
+    ],
+    [
+      928,
+      "wire",
+      "245"
+    ],
+    [
+      928,
+      "wire",
+      "246"
+    ],
+    [
+      928,
+      "wire",
+      "247"
+    ],
+    [
+      928,
+      "wire",
+      "248"
+    ],
+    [
+      928,
+      "wire",
+      "249"
+    ],
+    [
+      928,
+      "wire",
+      "250"
+    ],
+    [
+      928,
+      "wire",
+      "251"
+    ],
+    [
+      928,
+      "wire",
+      "252"
+    ],
+    [
+      928,
+      "wire",
+      "253"
+    ],
+    [
+      928,
+      "wire",
+      "254"
+    ],
+    [
+      928,
+      "wire",
+      "255"
+    ],
+    [
+      928,
+      "wire",
+      "256"
+    ],
+    [
+      928,
+      "wire",
+      "257"
+    ],
+    [
+      928,
+      "wire",
+      "258"
+    ],
+    [
+      928,
+      "wire",
+      "259"
+    ],
+    [
+      928,
+      "wire",
+      "260"
+    ],
+    [
+      928,
+      "wire",
+      "261"
+    ],
+    [
+      928,
+      "wire",
+      "262"
+    ],
+    [
+      928,
+      "wire",
+      "263"
+    ],
+    [
+      928,
+      "wire",
+      "264"
+    ],
+    [
+      928,
+      "wire",
+      "265"
+    ],
+    [
+      928,
+      "wire",
+      "266"
+    ],
+    [
+      928,
+      "wire",
+      "267"
+    ],
+    [
+      928,
+      "wire",
+      "268"
+    ],
+    [
+      928,
+      "wire",
+      "272"
+    ],
+    [
+      928,
+      "wire",
+      "270"
+    ],
+    [
+      929,
+      "part",
+      "219"
+    ],
+    [
+      929,
+      "part",
+      "221"
+    ],
+    [
+      929,
+      "part",
+      "223"
+    ],
+    [
+      929,
+      "part",
+      "204"
+    ],
+    [
+      929,
+      "part",
+      "206"
+    ],
+    [
+      929,
+      "wire",
+      "225"
+    ],
+    [
+      929,
+      "wire",
+      "213"
+    ],
+    [
+      929,
+      "wire",
+      "220"
+    ],
+    [
+      929,
+      "wire",
+      "214"
+    ],
+    [
+      929,
+      "wire",
+      "222"
+    ],
+    [
+      929,
+      "wire",
+      "215"
+    ],
+    [
+      929,
+      "wire",
+      "224"
+    ],
+    [
+      929,
+      "wire",
+      "216"
+    ],
+    [
+      929,
+      "wire",
+      "217"
+    ],
+    [
+      930,
+      "part",
+      "23"
+    ],
+    [
+      930,
+      "part",
+      "26"
+    ],
+    [
+      930,
+      "part",
+      "28"
+    ],
+    [
+      930,
+      "part",
+      "33"
+    ],
+    [
+      930,
+      "part",
+      "40"
+    ],
+    [
+      930,
+      "part",
+      "48"
+    ],
+    [
+      930,
+      "part",
+      "60"
+    ],
+    [
+      930,
+      "part",
+      "32"
+    ],
+    [
+      930,
+      "part",
+      "39"
+    ],
+    [
+      930,
+      "part",
+      "44"
+    ],
+    [
+      930,
+      "part",
+      "49"
+    ],
+    [
+      930,
+      "part",
+      "56"
+    ],
+    [
+      930,
+      "wire",
+      "21"
+    ],
+    [
+      930,
+      "wire",
+      "22"
+    ],
+    [
+      930,
+      "wire",
+      "29"
+    ],
+    [
+      930,
+      "wire",
+      "25"
+    ],
+    [
+      930,
+      "wire",
+      "30"
+    ],
+    [
+      930,
+      "wire",
+      "38"
+    ],
+    [
+      930,
+      "wire",
+      "36"
+    ],
+    [
+      930,
+      "wire",
+      "42"
+    ],
+    [
+      930,
+      "wire",
+      "68"
+    ],
+    [
+      930,
+      "wire",
+      "67"
+    ],
+    [
+      930,
+      "wire",
+      "69"
+    ],
+    [
+      930,
+      "wire",
+      "62"
+    ],
+    [
+      930,
+      "wire",
+      "78"
+    ],
+    [
+      930,
+      "wire",
+      "77"
+    ],
+    [
+      930,
+      "wire",
+      "79"
+    ],
+    [
+      930,
+      "wire",
+      "51"
+    ],
+    [
+      930,
+      "wire",
+      "31"
+    ],
+    [
+      930,
+      "wire",
+      "45"
+    ],
+    [
+      930,
+      "wire",
+      "35"
+    ],
+    [
+      930,
+      "wire",
+      "46"
+    ],
+    [
+      930,
+      "wire",
+      "54"
+    ],
+    [
+      930,
+      "wire",
+      "52"
+    ],
+    [
+      930,
+      "wire",
+      "58"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "OFF 허가",
+      "network": 1749,
+      "kind": "wire",
+      "uid": "536",
+      "label": "OFF→환산.en",
+      "boundary": "현재OFF/호출 별도"
+    },
+    {
+      "signal": "원시 입력",
+      "network": 1749,
+      "kind": "wire",
+      "uid": "531",
+      "label": "Peripherie IW354→Analog_input",
+      "boundary": "미러와 갱신경로 다름"
+    },
+    {
+      "signal": "IN0",
+      "network": 1749,
+      "kind": "wire",
+      "uid": "530",
+      "label": "ON→IN0",
+      "boundary": "호출 en과 분리"
+    },
+    {
+      "signal": "환산 결과",
+      "network": 1749,
+      "kind": "wire",
+      "uid": "534",
+      "label": "OutValue→DB1W128",
+      "boundary": "정수 환산·단위미확정"
+    },
+    {
+      "signal": "OFR",
+      "network": 1749,
+      "kind": "wire",
+      "uid": "24",
+      "label": "Out_of_range→X22.4",
+      "boundary": "차이알람과 별도"
+    },
+    {
+      "signal": "미러 입력",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "166",
+      "label": "SAM=None IW354→Move147",
+      "boundary": "Peripherie와 분리"
+    },
+    {
+      "signal": "미러 저장",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "167",
+      "label": "Move147→Word70",
+      "boundary": "HMI INT해석 차이"
+    },
+    {
+      "signal": "미러 허가",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "164",
+      "label": "Move146.eno→147.en",
+      "boundary": "주기 미확정"
+    },
+    {
+      "signal": "온도 분기",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "718",
+      "label": "Gt.out→Sub.en·두비교.pre",
+      "boundary": "Sub.eno 직렬 아님"
+    },
+    {
+      "signal": "차이 입력1",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "719",
+      "label": "RO01→Sub.in1",
+      "boundary": "관련 별도소유"
+    },
+    {
+      "signal": "차이 입력2",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "720",
+      "label": "RO02→Sub.in2",
+      "boundary": "Int차이"
+    },
+    {
+      "signal": "차이 계산",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "721",
+      "label": "Sub.out→Local app01",
+      "boundary": "오버플로/스캔 별도"
+    },
+    {
+      "signal": "하한 비교",
+      "network": 1985,
+      "kind": "part",
+      "uid": "676",
+      "label": "app01<−20",
+      "boundary": "정확히−20 제외"
+    },
+    {
+      "signal": "상한 비교",
+      "network": 1985,
+      "kind": "part",
+      "uid": "679",
+      "label": "app01>20",
+      "boundary": "정확히20 제외"
+    },
+    {
+      "signal": "지연 분기",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "728",
+      "label": "차이OR→SdCoil·T접점",
+      "boundary": "두허가 필요"
+    },
+    {
+      "signal": "지연 시간",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "729",
+      "label": "S5T1M→SdCoil.value",
+      "boundary": "보호권장값 아님"
+    },
+    {
+      "signal": "알람 Set",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "733",
+      "label": "SCoil→RO01_Signal_Fault",
+      "boundary": "RO02_OFR 아님"
+    },
+    {
+      "signal": "알람 Reset",
+      "network": 1985,
+      "kind": "wire",
+      "uid": "739",
+      "label": "RCoil→동일알람",
+      "boundary": "정상차이 접점 없음"
+    },
+    {
+      "signal": "버너 영향",
+      "network": 1858,
+      "kind": "wire",
+      "uid": "296",
+      "label": "비교알람→OR219.in7",
+      "boundary": "요청Reset·외부응답별도"
+    },
+    {
+      "signal": "요청 Reset",
+      "network": 1858,
+      "kind": "wire",
+      "uid": "272",
+      "label": "RCoil→Start_Burner",
+      "boundary": "다른Writer존재"
+    },
+    {
+      "signal": "대체 허가",
+      "network": 1750,
+      "kind": "wire",
+      "uid": "595",
+      "label": "OFF→CRef·Contact분기",
+      "boundary": "W591은상수 입력"
+    },
+    {
+      "signal": "RO02 읽기",
+      "network": 1750,
+      "kind": "wire",
+      "uid": "590",
+      "label": "RO02→Add.in1",
+      "boundary": "+11대상RO03"
+    },
+    {
+      "signal": "대체 상수",
+      "network": 1750,
+      "kind": "wire",
+      "uid": "591",
+      "label": "Int11→Add.in2",
+      "boundary": "산소%확정 금지"
+    },
+    {
+      "signal": "RO03 쓰기",
+      "network": 1750,
+      "kind": "wire",
+      "uid": "592",
+      "label": "Add.out→RO03",
+      "boundary": "RO02완료에RO03집계 없음"
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0047-IdentXmlPart.xml",
+    "sources/decoded-original/0048-IdentXmlPart.xml",
+    "sources/decoded-original/0056-IdentXmlPart.xml",
+    "sources/decoded-original/0057-IdentXmlPart.xml",
+    "sources/decoded-original/0562-IdentXmlPart.xml",
+    "sources/decoded-original/0563-IdentXmlPart.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0587-IdentXmlPart.xml",
+    "sources/decoded-original/0611-IdentXmlPart.xml",
+    "sources/decoded-original/0612-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0680-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0683-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0685-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/0694-IdentXmlPart.xml",
+    "sources/live_index.json",
+    "sources/hmi_plc_tags.csv",
+    "assets/catalog-circuits/Electrical_Rev2-P081.png",
+    "assets/catalog-circuits/Electrical_Rev2-P111.png",
+    "assets/catalog-circuits/Electrical_Rev2-P097.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P056.png"
+  ],
+  "signal_reference": {
+    "id": "RO02",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "R002 · Peripherie Int·단위 미확정",
+        "addresses": [
+          "%IW354:P"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "524",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.RO_02 · Word·SAM=None 원시미러",
+        "addresses": [
+          "DB13.DBW70"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "155",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Oxigen_RO02 · 환산 Int·산소% 미확정",
+        "addresses": [
+          "DB1.DBW128"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "527",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_R02 · 보존주소·현재값 미취득",
+        "addresses": [
+          "DB4.DBW48"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "526",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_R02 · 현재계수 미취득",
+        "addresses": [
+          "DB4.DBW50"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "525",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 호출허가·literal false 아님",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "522",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 내부 IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "523",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "Allarm.RO02_OFR · 일반 Coil·비교알람과 별도",
+        "addresses": [
+          "DB3.DBX22.4"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "23",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "peer",
+        "role": "responses",
+        "name": "비교 상대 Data.Oxigen_RO01 · 별도소유",
+        "addresses": [
+          "DB1.DBW130"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "700",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "diff",
+        "role": "responses",
+        "name": "Local app01 · Int 차이·전역주소 없음",
+        "addresses": [],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "702",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "disable",
+        "role": "requests",
+        "name": "RO01-RO02control disable · NOT접점",
+        "addresses": [
+          "%M80.1"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "697",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "temp",
+        "role": "responses",
+        "name": "관련 Manage_TC1_2.PID_Ref_Temp · Real",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "698",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "timer",
+        "role": "responses",
+        "name": "Tag_107 · T117 지연",
+        "addresses": [
+          "%T117"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "708",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mismatch",
+        "role": "alarms",
+        "name": "Allarm.RO01_Signal_Fault · 공유차이알람 S/R",
+        "addresses": [
+          "DB3.DBX4.4"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "710",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 원인해소와 별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "711",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "burner",
+        "role": "responses",
+        "name": "관련 Flag.Start_Burner · 요청 Reset·실물피드백 아님",
+        "addresses": [
+          "DB2.DBX5.2"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1858,
+            "oref": "250",
+            "source": "sources/decoded-original/0175-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "alternate",
+        "role": "responses",
+        "name": "관련 Data.RO03 · +11 쓰기대상·RO02에 쓰지 않음",
+        "addresses": [
+          "DB1.DBW64"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1750,
+            "oref": "581",
+            "source": "sources/decoded-original/0500-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "RO02",
+    "timers": [
+      {
+        "network": 1985,
+        "uid": "685",
+        "name": "Tag_107 · 共有차이 지연",
+        "address": "%T117",
+        "preset": "S5T#1M",
+        "condition": "ON·NOTdisable·Temp>650·Int차이±20밖"
+      }
+    ],
+    "alarms": [
+      {
+        "name": "RO02_OFR",
+        "address": "DB3.DBX22.4",
+        "actions": [
+          {
+            "network": 1658,
+            "uid": "23",
+            "gate": "Coil",
+            "condition": "범위외 Move193.eno·일반Coil"
+          }
+        ]
+      },
+      {
+        "name": "RO01_Signal_Fault · 공유차이알람",
+        "address": "DB3.DBX4.4",
+        "actions": [
+          {
+            "network": 1985,
+            "uid": "690",
+            "gate": "SCoil",
+            "condition": "차이조건·T117접점"
+          },
+          {
+            "network": 1985,
+            "uid": "695",
+            "gate": "RCoil",
+            "condition": "ON·RESET·기존알람; 정상차이 접점없음"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1749,
+      1071,
+      1658,
+      1659,
+      1985,
+      1858,
+      1750,
+      403,
+      1613,
+      1619,
+      927,
+      928,
+      929,
+      930
+    ],
+    "chain": [
+      "OFF→RO02 환산 · ON IN0 · IW354 Peripherie→W128",
+      "SAM=None IW354→Word70/HMI · 현재갱신별도",
+      "Temp>650·NOTdisable→Int차이±20밖·T117→공유알람S/R",
+      "공유알람→버너요청Reset·RO02읽기→RO03대체 · 별도소유"
+    ],
+    "repair": [
+      "H705표시·PEW354·IW354·DB13W70·DB1W128,ON/OFF와호출상태",
+      "원시 Int,COEFF_R02/ZERO_R02,FC 출력/OFR",
+      "RO01/RO02,Local app01에대응한진단값,T117,M80.1,DB39.DBD2,Reset",
+      "RO02,RO03,0500호출상태및두Write경로",
+      "RO02_OFR,RO01_Signal_Fault,Start_Burner,Q6.4,탱크준비와외부상태",
+      "80RO-02/81RO-02 명판·설치위치·X1단자·케이블6_5/14/22 표찰"
+    ],
+    "pending": [
+      "현재 명판/교정/단위·H705 자료·80/81RO02 및 AB01/MV03/HE01 상충",
+      "현재OFF/ON·호출·주기·모든Writer/간접/HMI/강제 별도",
+      "RO01−RO02 Int차이·±20과650은산소%/안전권장값 아님",
+      "Set/Reset 동시허가·원인해소/재Set/현장복구 미확정",
+      "RO03 +11은별도쓰기·RO02에보정치 안씀",
+      "RO02_OFR X22.4는startupWord0..16밖·공유차이X4.4만 겹침",
+      "질소 Q6.4 직접생성 미결속·외부릴레이/타이머 별도소유",
+      "HMI6설정과현재화면/입력권한/읽기스케일 별도",
+      "TIA/CPU/실물/현장복구 미수행"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "RO02",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "정적/UI/게시와현장별도"
+    ],
+    "existing_pending": [
+      "현재 명판/교정/단위·H705 자료·80/81RO02 및 AB01/MV03/HE01 상충",
+      "현재OFF/ON·호출·주기·모든Writer/간접/HMI/강제 별도",
+      "RO01−RO02 Int차이·±20과650은산소%/안전권장값 아님",
+      "Set/Reset 동시허가·원인해소/재Set/현장복구 미확정",
+      "RO03 +11은별도쓰기·RO02에보정치 안씀",
+      "RO02_OFR X22.4는startupWord0..16밖·공유차이X4.4만 겹침",
+      "질소 Q6.4 직접생성 미결속·외부릴레이/타이머 별도소유",
+      "HMI6설정과현재화면/입력권한/읽기스케일 별도",
+      "TIA/CPU/실물/현장복구 미수행"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "현재 명판/교정/단위·H705 자료·80/81RO02 및 AB01/MV03/HE01 상충",
+        "현재OFF/ON·호출·주기·모든Writer/간접/HMI/강제 별도",
+        "RO01−RO02 Int차이·±20과650은산소%/안전권장값 아님",
+        "Set/Reset 동시허가·원인해소/재Set/현장복구 미확정",
+        "RO03 +11은별도쓰기·RO02에보정치 안씀",
+        "RO02_OFR X22.4는startupWord0..16밖·공유차이X4.4만 겹침",
+        "질소 Q6.4 직접생성 미결속·외부릴레이/타이머 별도소유",
+        "HMI6설정과현재화면/입력권한/읽기스케일 별도",
+        "TIA/CPU/실물/현장복구 미수행"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "RO02",
+    "plc_id": "RO02",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "HMI 원시값은 변하나 산소 결과 정체",
+        "observe": "H705표시·PEW354·IW354·DB13W70·DB1W128,ON/OFF와호출상태",
+        "compare": "Peripherie와이미지,미러와환산,OFF en과IN0를구분",
+        "next": "동일프로젝트/타임스탬프에서호출·계수·값갱신 결속",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "RO02_OFR 또는 −9999",
+        "observe": "원시 Int,COEFF_R02/ZERO_R02,FC 출력/OFR",
+        "compare": "입력범위비교와Move.eno를나눠확인; 배선/전원/변환기표시와비교",
+        "next": "원인별자료와범위복귀·출력/OFR 동시관찰",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "RO01_Signal_Fault 발생",
+        "observe": "RO01/RO02,Local app01에대응한진단값,T117,M80.1,DB39.DBD2,Reset",
+        "compare": "±20밖조건·1분지연·disable·온도참조를구분;단위가틀린채널비교가능성보류",
+        "next": "차이원인해소·Reset/재발·버너요청·외부응답 분리기록",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "RO03 표시가RO02와연동",
+        "observe": "RO02,RO03,0500호출상태및두Write경로",
+        "compare": "+11쓰기대상은RO03; 독립센서결과인지대체인지현재활성경로확인",
+        "next": "현재프로젝트와실제읽기값,화면표시경로",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "산소오류와버너/질소동작이동시발생",
+        "observe": "RO02_OFR,RO01_Signal_Fault,Start_Burner,Q6.4,탱크준비와외부상태",
+        "compare": "시간적동시성은인과증명아님;0175와FG96소유분리",
+        "next": "버너요청·현장응답및별도질소명령근거;미확인시보류",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "도면과현장태그불일치",
+        "observe": "80RO-02/81RO-02 명판·설치위치·X1단자·케이블6_5/14/22 표찰",
+        "compare": "OEM80/시공81,AB출구/HE위치상충유지",
+        "next": "현행승인도면·개조이력·사진·점검자서명",
+        "common": "step-symptom-6"
+      }
+    ],
+    "bindings": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "R002 · Peripherie Int·단위 미확정",
+        "addresses": [
+          "%IW354:P"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "524",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.RO_02 · Word·SAM=None 원시미러",
+        "addresses": [
+          "DB13.DBW70"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "155",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Oxigen_RO02 · 환산 Int·산소% 미확정",
+        "addresses": [
+          "DB1.DBW128"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "527",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_R02 · 보존주소·현재값 미취득",
+        "addresses": [
+          "DB4.DBW48"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "526",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_R02 · 현재계수 미취득",
+        "addresses": [
+          "DB4.DBW50"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "525",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 호출허가·literal false 아님",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "522",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 내부 IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "523",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "Allarm.RO02_OFR · 일반 Coil·비교알람과 별도",
+        "addresses": [
+          "DB3.DBX22.4"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "23",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "peer",
+        "role": "responses",
+        "name": "비교 상대 Data.Oxigen_RO01 · 별도소유",
+        "addresses": [
+          "DB1.DBW130"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "700",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "diff",
+        "role": "responses",
+        "name": "Local app01 · Int 차이·전역주소 없음",
+        "addresses": [],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "702",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "disable",
+        "role": "requests",
+        "name": "RO01-RO02control disable · NOT접점",
+        "addresses": [
+          "%M80.1"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "697",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "temp",
+        "role": "responses",
+        "name": "관련 Manage_TC1_2.PID_Ref_Temp · Real",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "698",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "timer",
+        "role": "responses",
+        "name": "Tag_107 · T117 지연",
+        "addresses": [
+          "%T117"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "708",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mismatch",
+        "role": "alarms",
+        "name": "Allarm.RO01_Signal_Fault · 공유차이알람 S/R",
+        "addresses": [
+          "DB3.DBX4.4"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "710",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 원인해소와 별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "711",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "burner",
+        "role": "responses",
+        "name": "관련 Flag.Start_Burner · 요청 Reset·실물피드백 아님",
+        "addresses": [
+          "DB2.DBX5.2"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1858,
+            "oref": "250",
+            "source": "sources/decoded-original/0175-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "alternate",
+        "role": "responses",
+        "name": "관련 Data.RO03 · +11 쓰기대상·RO02에 쓰지 않음",
+        "addresses": [
+          "DB1.DBW64"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1750,
+            "oref": "581",
+            "source": "sources/decoded-original/0500-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "RO02",
+    "name": "RO02 산소 분석 채널 관찰",
+    "reference_plc_id": "RO02",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "R002 · Peripherie Int·단위 미확정",
+        "addresses": [
+          "%IW354:P"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "524",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.RO_02 · Word·SAM=None 원시미러",
+        "addresses": [
+          "DB13.DBW70"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "155",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Oxigen_RO02 · 환산 Int·산소% 미확정",
+        "addresses": [
+          "DB1.DBW128"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "527",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_R02 · 보존주소·현재값 미취득",
+        "addresses": [
+          "DB4.DBW48"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "526",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_R02 · 현재계수 미취득",
+        "addresses": [
+          "DB4.DBW50"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "525",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 호출허가·literal false 아님",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "522",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 내부 IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "523",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "Allarm.RO02_OFR · 일반 Coil·비교알람과 별도",
+        "addresses": [
+          "DB3.DBX22.4"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1749,
+            "oref": "23",
+            "source": "sources/decoded-original/0499-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "peer",
+        "role": "responses",
+        "name": "비교 상대 Data.Oxigen_RO01 · 별도소유",
+        "addresses": [
+          "DB1.DBW130"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "700",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "diff",
+        "role": "responses",
+        "name": "Local app01 · Int 차이·전역주소 없음",
+        "addresses": [],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "702",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "disable",
+        "role": "requests",
+        "name": "RO01-RO02control disable · NOT접점",
+        "addresses": [
+          "%M80.1"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "697",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "temp",
+        "role": "responses",
+        "name": "관련 Manage_TC1_2.PID_Ref_Temp · Real",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "698",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "timer",
+        "role": "responses",
+        "name": "Tag_107 · T117 지연",
+        "addresses": [
+          "%T117"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "708",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mismatch",
+        "role": "alarms",
+        "name": "Allarm.RO01_Signal_Fault · 공유차이알람 S/R",
+        "addresses": [
+          "DB3.DBX4.4"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "710",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 원인해소와 별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1985,
+            "oref": "711",
+            "source": "sources/decoded-original/0533-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "burner",
+        "role": "responses",
+        "name": "관련 Flag.Start_Burner · 요청 Reset·실물피드백 아님",
+        "addresses": [
+          "DB2.DBX5.2"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1858,
+            "oref": "250",
+            "source": "sources/decoded-original/0175-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "alternate",
+        "role": "responses",
+        "name": "관련 Data.RO03 · +11 쓰기대상·RO02에 쓰지 않음",
+        "addresses": [
+          "DB1.DBW64"
+        ],
+        "boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1750,
+            "oref": "581",
+            "source": "sources/decoded-original/0500-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "HMI 원시값은 변하나 산소 결과 정체",
+        "observe": "H705표시·PEW354·IW354·DB13W70·DB1W128,ON/OFF와호출상태",
+        "compare": "Peripherie와이미지,미러와환산,OFF en과IN0를구분",
+        "next": "동일프로젝트/타임스탬프에서호출·계수·값갱신 결속",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "RO02_OFR 또는 −9999",
+        "observe": "원시 Int,COEFF_R02/ZERO_R02,FC 출력/OFR",
+        "compare": "입력범위비교와Move.eno를나눠확인; 배선/전원/변환기표시와비교",
+        "next": "원인별자료와범위복귀·출력/OFR 동시관찰",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "RO01_Signal_Fault 발생",
+        "observe": "RO01/RO02,Local app01에대응한진단값,T117,M80.1,DB39.DBD2,Reset",
+        "compare": "±20밖조건·1분지연·disable·온도참조를구분;단위가틀린채널비교가능성보류",
+        "next": "차이원인해소·Reset/재발·버너요청·외부응답 분리기록",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "RO03 표시가RO02와연동",
+        "observe": "RO02,RO03,0500호출상태및두Write경로",
+        "compare": "+11쓰기대상은RO03; 독립센서결과인지대체인지현재활성경로확인",
+        "next": "현재프로젝트와실제읽기값,화면표시경로",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "산소오류와버너/질소동작이동시발생",
+        "observe": "RO02_OFR,RO01_Signal_Fault,Start_Burner,Q6.4,탱크준비와외부상태",
+        "compare": "시간적동시성은인과증명아님;0175와FG96소유분리",
+        "next": "버너요청·현장응답및별도질소명령근거;미확인시보류",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "도면과현장태그불일치",
+        "observe": "80RO-02/81RO-02 명판·설치위치·X1단자·케이블6_5/14/22 표찰",
+        "compare": "OEM80/시공81,AB출구/HE위치상충유지",
+        "next": "현행승인도면·개조이력·사진·점검자서명",
+        "common": "step-symptom-6"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "RO02 고유 정적원본·독립관찰",
+      "sources": {
+        "catalog-sources/RO02-DOTS-DRAFT.md": "12351514d354c3fda5baf30cb00bc03d661a4637fdf0b16be0ec568175f399fa"
+      },
+      "circuit_equipment": "RO02 H705 · OEM80/시공81 및 AB01/MV03/HE01 상충",
+      "circuit_distinction": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+      "circuit_pages": [
+        {
+          "label": "FG80 · PDF81",
+          "path": "sources/Electrical_Rev2.pdf#page=81"
+        },
+        {
+          "label": "FG110 · PDF111",
+          "path": "sources/Electrical_Rev2.pdf#page=111"
+        },
+        {
+          "label": "FG96 · PDF97",
+          "path": "sources/Electrical_Rev2.pdf#page=97"
+        }
+      ],
+      "construction_boundary": "PDF56 케이블6_5/6_14/6_22·MV03/HE01 대 OEMAB01 상충",
+      "construction_pages": [
+        {
+          "label": "시공·케이블 · PDF56",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=56"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "현재 명판/교정/단위·H705 자료·80/81RO02 및 AB01/MV03/HE01 상충"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1749",
+            "path": "networks/network-1749.html"
+          },
+          {
+            "label": "1071",
+            "path": "networks/network-1071.html"
+          },
+          {
+            "label": "1658",
+            "path": "networks/network-1658.html"
+          },
+          {
+            "label": "1985",
+            "path": "networks/network-1985.html"
+          },
+          {
+            "label": "1858",
+            "path": "networks/network-1858.html"
+          },
+          {
+            "label": "1750",
+            "path": "networks/network-1750.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "H705표시·PEW354·IW354·DB13W70·DB1W128,ON/OFF와호출상태"
+            },
+            {
+              "owner": "현재자료",
+              "work": "동일프로젝트/타임스탬프에서호출·계수·값갱신 결속"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1749",
+              "path": "networks/network-1749.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1985",
+              "path": "networks/network-1985.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1750",
+              "path": "networks/network-1750.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "원시 Int,COEFF_R02/ZERO_R02,FC 출력/OFR"
+            },
+            {
+              "owner": "현재자료",
+              "work": "원인별자료와범위복귀·출력/OFR 동시관찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1749",
+              "path": "networks/network-1749.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1985",
+              "path": "networks/network-1985.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1750",
+              "path": "networks/network-1750.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "RO01/RO02,Local app01에대응한진단값,T117,M80.1,DB39.DBD2,Reset"
+            },
+            {
+              "owner": "현재자료",
+              "work": "차이원인해소·Reset/재발·버너요청·외부응답 분리기록"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1749",
+              "path": "networks/network-1749.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1985",
+              "path": "networks/network-1985.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1750",
+              "path": "networks/network-1750.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "RO02,RO03,0500호출상태및두Write경로"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재프로젝트와실제읽기값,화면표시경로"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1749",
+              "path": "networks/network-1749.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1985",
+              "path": "networks/network-1985.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1750",
+              "path": "networks/network-1750.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "RO02_OFR,RO01_Signal_Fault,Start_Burner,Q6.4,탱크준비와외부상태"
+            },
+            {
+              "owner": "현재자료",
+              "work": "버너요청·현장응답및별도질소명령근거;미확인시보류"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1749",
+              "path": "networks/network-1749.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1985",
+              "path": "networks/network-1985.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1750",
+              "path": "networks/network-1750.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-6",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "80RO-02/81RO-02 명판·설치위치·X1단자·케이블6_5/14/22 표찰"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현행승인도면·개조이력·사진·점검자서명"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1749",
+              "path": "networks/network-1749.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1985",
+              "path": "networks/network-1985.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1750",
+              "path": "networks/network-1750.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "RO02",
+    "plc_id": "RO02",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-80",
+        "kind": "OEM 전기",
+        "title": "FG80 · PDF81",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 81,
+        "fg": 80,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P081.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "DATA27.05.2024·시트 개정행공란"
+      },
+      {
+        "id": "oem-110",
+        "kind": "OEM 전기",
+        "title": "FG110 · PDF111",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 111,
+        "fg": 110,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P111.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "DATA27.05.2024·시트 개정행공란"
+      },
+      {
+        "id": "oem-96",
+        "kind": "OEM 전기",
+        "title": "FG96 · PDF97",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 97,
+        "fg": 96,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P097.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "질소 별도소유·DATA27.05.2024"
+      },
+      {
+        "id": "construction-56",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF56",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 56,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P056.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev1 24.11.11 first draft·승인공란"
+      }
+    ],
+    "circuit": {
+      "id": "RO02",
+      "equipment": "RO02 H705 · OEM80/시공81 및 AB01/MV03/HE01 상충",
+      "distinction": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+      "paths": [
+        {
+          "signal": "원시 입력",
+          "fg": 80,
+          "drawing": "RO02 +S/−S/−T/+T→H705 1+/2−/3−/4+",
+          "backup": "IW354 Peripherie 원천",
+          "nodes": [
+            "RO02 4선→80.7/8/9/10",
+            "H705 1+/2−/3−/4+",
+            "shield80SCH4"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1749,
+              "uid": "524"
+            }
+          ],
+          "check": "센서교정/현재극성/명판 미확정"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": 80,
+          "drawing": "110Vac9.8→X1:214 2AF→15 /16→215→0Vac",
+          "backup": "H705 출력 원천·PLC 전원 태그 미생성",
+          "nodes": [
+            "110Vac9.8→X1:214 5×20 2AF→80.6→15",
+            "16→X1:215→0Vac9.9",
+            "17 GND"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1749,
+              "uid": "524"
+            }
+          ],
+          "check": "도면전원/보호 표기·현장권장값 아님"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": 110,
+          "drawing": "H705 7+/8−→X1:216/217→MOD5 6/8",
+          "backup": "IW354→환산·미러 별도취득",
+          "nodes": [
+            "H7057+/8−→X1:216/217→PEW354",
+            "MOD5 6I1+/8U1−I1−·MANA18",
+            "X1:218→80SCH3·5/7입력과 구별"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1749,
+              "uid": "524"
+            },
+            {
+              "network": 1071,
+              "uid": "154"
+            }
+          ],
+          "check": "4–20mA 도면표기·CPU515현행 확인아님"
+        }
+      ],
+      "pending": [
+        "현재 명판/교정/단위·H705 자료·80/81RO02 및 AB01/MV03/HE01 상충",
+        "현재OFF/ON·호출·주기·모든Writer/간접/HMI/강제 별도",
+        "RO01−RO02 Int차이·±20과650은산소%/안전권장값 아님",
+        "Set/Reset 동시허가·원인해소/재Set/현장복구 미확정",
+        "RO03 +11은별도쓰기·RO02에보정치 안씀",
+        "RO02_OFR X22.4는startupWord0..16밖·공유차이X4.4만 겹침",
+        "질소 Q6.4 직접생성 미결속·외부릴레이/타이머 별도소유",
+        "HMI6설정과현재화면/입력권한/읽기스케일 별도",
+        "TIA/CPU/실물/현장복구 미수행"
+      ]
+    },
+    "warnings": [
+      "80/81RO02·AB01/MV03/HE01상충",
+      "차이알람과OFR/요청Reset 구분",
+      "질소별도소유·현재복구 미확정"
+    ]
+  },
+  "related_alarm_boundary": "RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.",
+  "presentation": {
+    "search_examples": "RO02, R002, IW354, DB13.DBW70, DB1.DBW128, H705, T117, 0533"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "RO02 자료",
+        "devices/RO02.html"
+      ]
+    ],
+    "io": [
+      [
+        "환산/미러 원문",
+        "networks/network-1749.html"
+      ],
+      [
+        "HMI 설정",
+        "sources/hmi_plc_tags.csv"
+      ]
+    ],
+    "control": [
+      [
+        "1749",
+        "networks/network-1749.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "1985",
+        "networks/network-1985.html"
+      ],
+      [
+        "1858",
+        "networks/network-1858.html"
+      ],
+      [
+        "1750",
+        "networks/network-1750.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1619",
+        "networks/network-1619.html"
+      ],
+      [
+        "927",
+        "networks/network-927.html"
+      ],
+      [
+        "928",
+        "networks/network-928.html"
+      ],
+      [
+        "929",
+        "networks/network-929.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG80 · PDF81",
+        "sources/Electrical_Rev2.pdf#page=81"
+      ],
+      [
+        "FG110 · PDF111",
+        "sources/Electrical_Rev2.pdf#page=111"
+      ],
+      [
+        "FG96 · PDF97",
+        "sources/Electrical_Rev2.pdf#page=97"
+      ],
+      [
+        "시공·케이블 · PDF56",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=56"
+      ]
+    ],
+    "alarms": [
+      [
+        "RO02 OFR",
+        "networks/network-1749.html"
+      ],
+      [
+        "공유차이 알람",
+        "networks/network-1985.html"
+      ],
+      [
+        "버너요청 영향",
+        "networks/network-1858.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1749",
+        "networks/network-1749.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1985",
+        "networks/network-1985.html"
+      ],
+      [
+        "1858",
+        "networks/network-1858.html"
+      ],
+      [
+        "1750",
+        "networks/network-1750.html"
+      ]
+    ],
+    "completion": [
+      [
+        "확인 경계",
+        "catalog-guides/RO02.html#completion"
+      ]
+    ]
+  },
+  "reviewed_text_replacements": [
+    {
+      "original": "|증상|같은 시각에 기록할 위치/값|대조와 원인 구분|복구 확인에 필요한 증거|",
+      "reviewed": "|증상|같은 시각에 기록할 위치/값|대조와 원인 구분|복구 확인에 필요한 증거|\n|---|---|---|---|"
+    }
+  ]
+}

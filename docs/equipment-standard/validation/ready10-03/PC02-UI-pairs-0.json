@@ -1,0 +1,134 @@
+[
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "584",
+    "target": "584\tPart 583.out ↔ Part 507.en"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "550",
+    "target": "550\tPart 498.out ↔ Part 507.COM_RST"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "590",
+    "target": "590\tPart 589.out ↔ Part 507.LMNR_HS"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "592",
+    "target": "592\tPart 591.out ↔ Part 507.LMNR_LS"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "562",
+    "target": "562\tORef 535 (Real_SPPC02) ↔ Part 507.SP_INT"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "563",
+    "target": "563\tORef 536 (Real_PC02) ↔ Part 507.PV_IN"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "566",
+    "target": "566\tORef 537 (-4.0) ↔ Part 507.GAIN"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "561",
+    "target": "561\tORef 534 (T#100MS) ↔ Part 507.CYCLE"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "567",
+    "target": "567\tORef 538 (T#10S) ↔ Part 507.TI"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "568",
+    "target": "568\tORef 539 (2.0) ↔ Part 507.DEADB_W"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "573",
+    "target": "573\tORef 540 (T#200MS) ↔ Part 507.PULSE_TM"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "574",
+    "target": "574\tORef 541 (T#5S) ↔ Part 507.BREAK_TM"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "575",
+    "target": "575\tORef 542 (T#3S) ↔ Part 507.MTR_TM"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "576",
+    "target": "576\tORef 543 (2.0) ↔ Part 507.DISV"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "577",
+    "target": "577\tPart 507.QLMNUP ↔ ORef 544 (PID UP MV03)"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "578",
+    "target": "578\tPart 507.QLMNDN ↔ ORef 545 (PID down MV03)"
+  },
+  {
+    "key": "PC02",
+    "network": 1705,
+    "uid": "279",
+    "target": "279\tCoil\t\toperand = PID down MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1705,
+    "uid": "285",
+    "target": "285\tCoil\t\toperand = PID UP MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1706,
+    "uid": "390",
+    "target": "390\tCoil\t\toperand = Start open MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1706,
+    "uid": "407",
+    "target": "407\tCoil\t\toperand = Start Close MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1746,
+    "uid": "471",
+    "target": "471\tORef 464 (PSH02) ↔ Part 456.Analog_input"
+  },
+  {
+    "key": "PC02",
+    "network": 1746,
+    "uid": "474",
+    "target": "474\tPart 456.OutValue ↔ ORef 467 (Data.PSH_02)"
+  }
+]

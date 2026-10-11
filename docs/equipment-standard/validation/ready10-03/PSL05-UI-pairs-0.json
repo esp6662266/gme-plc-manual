@@ -1,0 +1,110 @@
+[
+  {
+    "key": "PSL05",
+    "network": 1070,
+    "uid": "58",
+    "target": "58\tORef 49 (Tag_182) ↔ Part 44.in"
+  },
+  {
+    "key": "PSL05",
+    "network": 1070,
+    "uid": "59",
+    "target": "59\tPart 44.out1 ↔ ORef 50 (RefId 18)"
+  },
+  {
+    "key": "PSL05",
+    "network": 1070,
+    "uid": "56",
+    "target": "56\tPart 43.eno ↔ Part 44.en"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "287",
+    "target": "287\tPart 286.out ↔ Part 288.in ↔ Part 290.in"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "288",
+    "target": "288\tContact\toperand\toperand = Inputs.Low Pressure Air"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "262",
+    "target": "262\tSCoil\t\toperand = Allarm.PSL_AIR_LOW"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "290",
+    "target": "290\tContact\t\toperand = Flag.RESET_ALLARM"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "292",
+    "target": "292\tContact\t\toperand = Allarm.PSL_AIR_LOW"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "294",
+    "target": "294\tContact\t\toperand = Inputs.Low Pressure Air"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "268",
+    "target": "268\tRCoil\t\toperand = Allarm.PSL_AIR_LOW"
+  },
+  {
+    "key": "PSL05",
+    "network": 1858,
+    "uid": "302",
+    "target": "302\tPart 301.out ↔ Part 219.in10"
+  },
+  {
+    "key": "PSL05",
+    "network": 1858,
+    "uid": "232",
+    "target": "232\tRCoil\t\toperand = Flag.Start_Burner"
+  },
+  {
+    "key": "PSL05",
+    "network": 1080,
+    "uid": "25",
+    "target": "25\tORef 34 (Inputs.Low Pressure Air) ↔ Part 33.operand"
+  },
+  {
+    "key": "PSL05",
+    "network": 403,
+    "uid": "311",
+    "target": "311\tPart 256.out1 ↔ ORef 290 (RefId 28)"
+  },
+  {
+    "key": "PSL05",
+    "network": 927,
+    "uid": "137",
+    "target": "137\tMove\t\tin = RefId 15 / ORef UID 177; out1 = WorkData.W2"
+  },
+  {
+    "key": "PSL05",
+    "network": 928,
+    "uid": "197",
+    "target": "197\tNe\t\tin1 = RefId 15 / ORef UID 224; in2 = WorkData.W2"
+  },
+  {
+    "key": "PSL05",
+    "network": 929,
+    "uid": "204",
+    "target": "204\tSCoil\t\toperand = Flag.RUN_HORN"
+  },
+  {
+    "key": "PSL05",
+    "network": 930,
+    "uid": "33",
+    "target": "33\tSCoil\t\toperand = Flag.RESET_ALLARM"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "key": "DP01",
+    "network": 1886,
+    "uid": "24",
+    "target": "24\tLe\t\tin1 = Data.DP_01; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "DP01",
+    "network": 1886,
+    "uid": "30",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "DP01",
+    "network": 1885,
+    "uid": "22",
+    "target": "22\tPart 460.out ↔ Part 21.in2"
+  },
+  {
+    "key": "DP01",
+    "network": 1883,
+    "uid": "219",
+    "target": "219\tMove\t\tin = Coeff.DP_01_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "DP01",
+    "network": 1883,
+    "uid": "276",
+    "target": "276\tMove\t\tin = Coeff.DP_01_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "DP01",
+    "network": 1887,
+    "uid": "457",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "DP01",
+    "network": 1992,
+    "uid": "1136",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "key": "DP01",
+    "network": 1992,
+    "uid": "1141",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "DP01",
+    "network": 1992,
+    "uid": "1152",
+    "target": "1152\tRCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  }
+]
