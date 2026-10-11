@@ -9,6 +9,8 @@ import csv
 import json
 import hashlib
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
+from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent
 
@@ -223,13 +225,163 @@ for rule in [r for r in bc01_spec['direct_rules'] if r['opaque']]:
 
 bc01_media_evidence={'checked': '2026-10-11', 'source_site': 'https://sejin-facility-manager.romancetiger.chatgpt.site/', 'source_card': 'BC-01(벨트)', 'method': 'read_only_visible_ui_and_visual_review', 'raw_images_copied': False, 'identity_verified': False, 'field_verified': False, 'groups': [{'id': 'belt', 'title': '벨트·본체'}, {'id': 'drive', 'title': '모터·구동부'}, {'id': 'chain', 'title': '체인·스프로킷'}, {'id': 'support', 'title': '축받침·장력부'}, {'id': 'reference', 'title': '도면·시험·참고'}], 'photos': [{'id': 'photo-01', 'source_order': 1, 'group': 'belt', 'title': '경사 벨트·프레임', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1778489279552_9081_8f5e', 'observation': '경사 컨베이어의 벨트와 지지 프레임이 보입니다.', 'pending': '촬영 시점·현재 설치 위치·BC01 실물 동일성을 확인합니다.', 'field_verified': False}, {'id': 'photo-02', 'source_order': 2, 'group': 'belt', 'title': '이전 설비자료의 컨베이어', 'kind': 'historical_photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/excel%3Aphoto%3A5b9b979c090c3a952fee5e44?v=2d6cd8a4b139458acff542dc733b8b6e6dcd8f1da89b0f8d6ce0257251f26c9a', 'observation': '엑셀 설비자료에 등록된 컨베이어·가드 참고 사진입니다.', 'pending': '등록 자료와 현재 설비의 동일성·촬영 시점은 확인 전입니다.', 'field_verified': False}, {'id': 'photo-03', 'source_order': 3, 'group': 'chain', 'title': '분리된 스프로킷·줄자 1', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1787117258069_5653_1929', 'observation': '바닥에 놓인 스프로킷과 줄자가 보입니다.', 'pending': '치수·치수 기준·잇수·설치 측·부품 번호는 승인 도면과 실물로 확인합니다.', 'field_verified': False}, {'id': 'photo-04', 'source_order': 4, 'group': 'reference', 'title': 'BEARING TEST 그래픽', 'kind': 'test_graphic', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1787117549952_4411_bxn8', 'observation': 'BC-01 BEARING TEST 문구의 그래픽입니다. 실제 베어링 사진이 아닙니다.', 'pending': '현장 시험·배선 이상·고장·복구의 증거로 사용하지 않습니다.', 'field_verified': False}, {'id': 'photo-05', 'source_order': 5, 'group': 'reference', 'title': '체인 스프라켓 사양 도면 이미지', 'kind': 'technical_drawing_image', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1787118145180_1789_mpcq', 'observation': '이미지 제목에 Chain 80-18T가 보입니다. 부품 도면을 촬영·등록한 자료입니다.', 'pending': '현장 적용 도면·설치 측·개정·승인 원본은 확인 전입니다. 이미지로 제작 치수를 확정하지 않습니다.', 'field_verified': False}, {'id': 'photo-06', 'source_order': 6, 'group': 'reference', 'title': '동일성 미확인 3D 참고', 'kind': 'unidentified_3d', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1787107597033_7642_j8ln', 'observation': '플랫폼·호퍼 형태의 3D 참고 이미지입니다. BC01 식별 표기는 확인되지 않습니다.', 'pending': 'BC01 본체·모터·PLC 신호에 직접 대응시키지 않습니다.', 'field_verified': False}, {'id': 'photo-07', 'source_order': 7, 'group': 'chain', 'title': '분리된 스프로킷 2', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1787116885164_4599_q6y5', 'observation': '분리된 스프로킷의 외관 사진입니다.', 'pending': '마모 판정·잇수·동일 부품·교체 전후 관계는 확인 전입니다.', 'field_verified': False}, {'id': 'photo-08', 'source_order': 8, 'group': 'chain', 'title': '분리된 스프로킷·줄자 2', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1787117169000_6122_8wg0', 'observation': '스프로킷과 줄자가 함께 보입니다.', 'pending': '줄자 사진만으로 교체 규격이나 교체 완료를 판단하지 않습니다.', 'field_verified': False}, {'id': 'photo-09', 'source_order': 9, 'group': 'drive', 'title': '컨베이어 주변 모터 1', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1779107633205_3858_sud7', 'observation': '상부 지지 구조의 모터·팬 커버·배선관이 보입니다. 명판은 판독되지 않습니다.', 'pending': 'M02와의 실물 대응·모터 모델·정격·현행 배선은 확인 전입니다.', 'field_verified': False}, {'id': 'photo-10', 'source_order': 10, 'group': 'drive', 'title': '컨베이어 주변 모터 2', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1779119208962_5448_3x8u', 'observation': '앞 모터 사진과 비슷한 구도의 별도 등록 사진입니다.', 'pending': '중복·교체 전후·동일 촬영 시점으로 확정하지 않습니다. 원본 등록을 보존합니다.', 'field_verified': False}, {'id': 'photo-11', 'source_order': 11, 'group': 'belt', 'title': '벨트 연결부', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1778489213424_8861_9y4h', 'observation': '벨트 연결부와 여러 체결 요소가 보입니다.', 'pending': '규격·체결 토크·이상 유무·복구 완료는 사진만으로 확인할 수 없습니다.', 'field_verified': False}, {'id': 'photo-12', 'source_order': 12, 'group': 'support', 'title': '축받침·장력 조절부 주변', 'kind': 'photograph', 'original_url': 'https://sejin-facility-manager.romancetiger.chatgpt.site/api/photos/photo_1778489188097_9746_e8ez', 'observation': '축받침 주변과 나사식 조절 기구가 보입니다.', 'pending': '베어링 형식·규격·설치 측·정확한 위치를 확인합니다.', 'field_verified': False}], 'references': {'belt': {'description': 'P&ID의 BC-01 경사 컨베이어는 본체·벨트 위치를 비교할 참고입니다. 기계 부품에 전용 PLC 신호를 배정하지 않습니다.', 'paths': [], 'documents': [['P&ID · BC01 위치', 'sources/PID_1684n002I.pdf#page=1']]}, 'drive': {'description': 'P&ID의 M02 및 OEM FG18의 M02는 모터 위치·구동 계통 비교 자료입니다. 사진과 M02의 동일성을 확정한 연결이 아닙니다.', 'paths': [1, 2], 'documents': [['P&ID · M02 참고', 'sources/PID_1684n002I.pdf#page=1'], ['OEM FG18 · PDF19', 'sources/Electrical_Rev2.pdf#page=19']]}, 'chain': {'description': '기계 전달 부품 참고입니다. 스프로킷에 직접 PLC 입출력·알람을 배정한 근거는 확보하지 못했습니다.', 'paths': [], 'documents': [['P&ID · 본체 계통 참고', 'sources/PID_1684n002I.pdf#page=1']]}, 'support': {'description': '사진에 보이는 축받침·조절 기구의 위치와 형식을 먼저 확인합니다. 베어링 고장 신호나 전용 알람으로 연결하지 않습니다.', 'paths': [], 'documents': [['P&ID · 본체 계통 참고', 'sources/PID_1684n002I.pdf#page=1']]}, 'reference': {'description': '도면 이미지·TEST 그래픽·동일성 미확인 3D를 현장 사진과 구분합니다. 등록 태그는 실제 고장·정상·복구 판정이 아닙니다.', 'paths': [], 'documents': []}}, 'missing': [{'title': '현재 ABB 인버터 명판·단자', 'paths': [1, 2], 'text': '현재 제작사는 사용자 확인으로 ABB입니다. 사진12장에서는 인버터 명판·단자를 식별하지 못했습니다. 정확한 모델·정격·접속을 확보합니다.'}, {'title': 'SS01 트립와이어·현행 접점', 'paths': [0, 3], 'text': 'FG19의 SS01 11/12 기동 허가와 13/14 감시 경로는 보존 도면 근거입니다. 현장 설치·접점·정상 극성 사진은 추가 확인합니다.'}, {'title': 'SSL01 회전 감시 예비', 'paths': [4], 'text': 'FG19의 SSL01은 SPARE 표기입니다. 실제 설치·사용 여부와 현행 접속은 확인 전입니다.'}], 'part_revision_boundary': '스프로킷 이미지에는 80-18T가 보이지만 현재 적용 규격을 확정하지 않습니다. 설치 측·개정·승인 원본·실물 잇수를 대조한 뒤 선택합니다.'}
 
+# Additional, display-only native paths. They do not extend the execution AST.
+def bc01_native_ref(network_id, part_uid, pin):
+    n=bc01_network_map[network_id]
+    file='sources/decoded-original/'+n['xml_file']
+    xml=ET.parse(ROOT/file).getroot()
+    wires=[w for w in xml.findall('s:Wires/s:Wire',lad_ns)
+           if any(c.get('UId')==part_uid and c.get('PinName')==pin for c in w)]
+    assert len(wires)==1,(network_id,part_uid,pin)
+    refs=[c for c in wires[0] if c.tag.endswith('OCon')]
+    assert len(refs)==1
+    oref=refs[0].get('UId')
+    operand=next(p for p in xml.findall('s:Parts/s:ORef',lad_ns) if p.get('UId')==oref)
+    rid=operand.get('RefId');resolved=n['resolved_operands'][oref]
+    declarations=[]
+    # ON/UID/RID can recur in other blocks. Restrict to the reviewed context.
+    declaration_files={1692:['0661-IdentXmlPart.xml','0662-IdentXmlPart.xml','0664-IdentXmlPart.xml'],
+        1018:['0613-IdentXmlPart.xml','0615-IdentXmlPart.xml','0616-IdentXmlPart.xml'],
+        1768:['0675-IdentXmlPart.xml','0676-IdentXmlPart.xml','0678-IdentXmlPart.xml']}
+    for filename in declaration_files[network_id]:
+        path='sources/decoded-original/'+filename
+        for access in ET.parse(ROOT/path).getroot():
+            ident=next((c for c in access if c.tag.endswith('ID') and c.get('RID')==rid),None)
+            if ident is None:continue
+            matches=[c for c in ident.iter() if c.get('NID')==n['inferred_original_nid'] and c.get('UID')==oref]
+            if not matches:continue
+            assert len(matches)==1
+            literal=next((c for c in access.iter() if c.tag.endswith('CB')),None)
+            names=[c.get('N') for c in access.iter() if c.tag.endswith('AO')]
+            name=literal.get('V') if literal is not None else '.'.join(names) if names else ident.get('N')
+            assert name==resolved['name']
+            td=next(c for c in access.iter() if c.tag.endswith('TD'))
+            declarations.append(dict(oref=oref,rid=rid,nid=n['inferred_original_nid'],name=name,
+                scope=ident.get('S'),type=td.get('T').split(':')[0],identifier_file=path,
+                role='write' if matches[0].get('AK')=='Write' else 'read',literal_value=literal.get('V') if literal is not None else None))
+    assert len(declarations)==1,(network_id,oref)
+    return dict(network=network_id,file=file,part=part_uid,pin=pin,wire=wires[0].get('UId'),**declarations[0])
+
+bc01_supplemental=[]
+for network,uid,gate,section,title,pins,enable_parts,enable_wire in [
+    (1692,'39','Mul','speed','속도 설정값의 계산·출력 연결',['in1','in2','out'],['34'],'54'),
+    (1018,'1108','Add','other','같은 누적값의 증가와 0 쓰기',['in1','in2','out'],['1154','1156'],'1157'),
+    (1768,'22','CRef','alarms','별도 계측 호출의 값·범위 출력',['IN0','Analog_input','Coeff','Zero','OutValue','Out_of_range'],['21'],'33')]:
+    file='sources/decoded-original/'+bc01_network_map[network]['xml_file']
+    xml=ET.parse(ROOT/file).getroot()
+    part=next(p for p in xml.find('s:Parts',lad_ns) if p.get('UId')==uid)
+    assert (part.tag.endswith('CRef') if gate=='CRef' else part.get('Gate')==gate)
+    wire=next(w for w in xml.findall('s:Wires/s:Wire',lad_ns) if w.get('UId')==enable_wire)
+    assert any(c.get('UId')==uid and c.get('PinName')=='en' for c in wire)
+    bc01_supplemental.append(dict(id=f'{network}:{uid}',network=network,file=file,part=uid,gate=gate,
+        section=section,title=title,refs=[bc01_native_ref(network,uid,pin) for pin in pins],
+        enable_refs=[bc01_native_ref(network,p,'operand') for p in enable_parts],enable_wire=enable_wire,
+        execution_verified=False,field_verified=False,internal_xml_mapping_verified=False))
+
+def bc01_access(file,rid):
+    rows=[a for a in ET.parse(ROOT/file).getroot() if any(c.tag.endswith('ID') and c.get('RID')==rid for c in a)]
+    assert len(rows)==1
+    return rows[0]
+
+bc01_addresses=[]
+hmi_source=list(csv.DictReader((ROOT/'sources/hmi_plc_tags.csv').open(encoding='utf-8-sig',newline='')))
+for name,type_name,address,tag,parent_file,parent_rid,member_file,member_rid,bits,width in [
+    ('HMI_DB.SET_PERC_BC01','Int','DB41.DBW52','data_DB41_DBW52','0660','147','0662','148',416,16),
+    ('102A5_SPARE0','Word','%QW288','AW288',None,None,'0664','144',2304,16),
+    ('Flag.M_BC_01','Bool','DB2.DBX0.0','BC_01\\Flag','0603','2','0604','41',0,1)]:
+    member_path='sources/decoded-original/'+member_file+'-IdentXmlPart.xml'
+    access=bc01_access(member_path,member_rid)
+    ssd=next(e for e in access.iter() if e.tag.endswith('SSD'))
+    td=next(e for e in access.iter() if e.tag.endswith('TD'))
+    assert int(ssd.get('AO'))==bits and td.get('T').split(':')[0]==type_name
+    proof=[dict(file=member_path,rid=member_rid,offset_bits=bits,width_bits=width)]
+    if parent_file:
+        parent_path='sources/decoded-original/'+parent_file+'-IdentXmlPart.xml'
+        parent=bc01_access(parent_path,parent_rid)
+        tod=next(e for e in parent.iter() if e.tag.endswith('TOD'))
+        bad=next(e for e in access.iter() if e.tag.endswith('BAD'))
+        assert bad.get('BIRID')==parent_rid and tod.get('BT')=='DB'
+        aos=[e for e in access.iter() if e.tag.endswith('AO')]
+        assert int(aos[-1].get('BO'))==bits and int(aos[-1].get('BS'))==width
+        derived=f"DB{tod.get('N')}.DBX{bits//8}.{bits%8}" if type_name=='Bool' else f"DB{tod.get('N')}.DBW{bits//8}"
+        assert derived==address
+        proof.insert(0,dict(file=parent_path,rid=parent_rid,db_number=tod.get('N')))
+    else:
+        sad=next(e for e in access.iter() if e.tag.endswith('SAD'))
+        assert sad.get('R')=='Output' and sad.get('SAM')=='Peripherie' and address==f'%QW{bits//8}'
+    hmi=next(r for r in hmi_source if r['HMI 태그']==tag)
+    bc01_addresses.append(dict(name=name,type=type_name,backup_address=address,hmi=hmi,
+        access_mode='Peripherie' if not parent_file else 'DB',declarations=proof,
+        static_address_verified=True,current_mapping_verified=False,screen_read_write_verified=False,retain_verified=False))
+
+# Row IDs only on the existing BC01 source tables; source cells stay unchanged.
+bc01_locations=defaultdict(set)
+for rule in bc01_spec['direct_rules']:bc01_locations[int(rule['네트워크 문서'])].add(('part',rule['Part UID']))
+bc01_alarm=next(p for p in json.loads((ROOT/'registers/alarm-recovery.json').read_text())['profiles'] if p['id']=='BC01')
+for alarm in bc01_alarm['alarms']:
+    for action in alarm['actions']:bc01_locations[action['network']].add(('part',action['uid']))
+    for usage in alarm['usages']:bc01_locations[usage['network']].add(('part',usage['part']))
+for timer in bc01_alarm['timers']:bc01_locations[timer['network']].add(('part',timer['uid']))
+for evidence in bc01_pin_evidence.values():
+    bc01_locations[evidence['network']].update([('part',evidence['source']['uid']),('part',evidence['target']['uid']),('wire',evidence['wire'])])
+for evidence in bc01_supplemental:
+    bc01_locations[evidence['network']].update([('part',evidence['part']),('wire',evidence['enable_wire'])])
+    for ref in evidence['refs']+evidence['enable_refs']:
+        bc01_locations[evidence['network']].update([('part',ref['part']),('wire',ref['wire'])])
+
+class BC01SourceRows(HTMLParser):
+    def __init__(self,text,allowed):
+        super().__init__(convert_charrefs=True)
+        self.text=text;self.allowed=allowed;self.edits=[];self.found=set();self.headers=[];self.cells=[];self.cell=None;self.start=None
+        self.lines=[0]
+        for i,c in enumerate(text):
+            if c=='\n':self.lines.append(i+1)
+    def handle_starttag(self,tag,attrs):
+        if tag=='table':self.headers=[]
+        if tag=='tr':
+            line,col=self.getpos();self.start=(self.lines[line-1]+col,self.get_starttag_text(),dict(attrs));self.cells=[]
+        if tag in ('th','td'):self.cell=(tag,[])
+    def handle_data(self,text):
+        if self.cell:self.cell[1].append(text)
+    def handle_endtag(self,tag):
+        if tag in ('th','td') and self.cell:
+            kind,values=self.cell;value=''.join(values).strip()
+            if kind=='th':self.headers.append(value)
+            else:self.cells.append(value)
+            self.cell=None
+        if tag=='tr' and self.start and self.cells:
+            kind='part' if self.headers[:1]==['Part UID'] else 'wire' if self.headers[:1]==['Wire UID'] else None
+            key=(kind,self.cells[0])
+            if key in self.allowed:
+                assert key not in self.found,key
+                self.found.add(key);pos,original,attrs=self.start;anchor=f'bc01-{kind}-{self.cells[0]}'
+                assert attrs.get('id') in (None,anchor)
+                if 'id' not in attrs:self.edits.append((pos,len(original),original[:-1]+' id="'+anchor+'">'))
+        if tag=='tr':self.start=None
+
+bc01_source_locations=[]
+for network,allowed in sorted(bc01_locations.items()):
+    path=ROOT/f'networks/network-{network}.html';text=path.read_text();parser=BC01SourceRows(text,allowed);parser.feed(text)
+    assert parser.found==allowed,(network,allowed-parser.found)
+    for pos,length,value in sorted(parser.edits,reverse=True):text=text[:pos]+value+text[pos+length:]
+    style='<style id="bc01-source-locations">tr[id^="bc01-"]{scroll-margin-top:65px}tr[id^="bc01-"]:target td{background:#e0f2e9!important;box-shadow:inset 0 2px #167769,inset 0 -2px #167769}tr[id^="bc01-"]:target td:first-child{font-weight:800;border-left:4px solid #167769}</style>'
+    if 'id="bc01-source-locations"' not in text:text=text.replace('</head>',style+'</head>',1)
+    if text!=path.read_text():path.write_text(text)
+    bc01_source_locations.extend(dict(network=network,kind=kind,uid=uid,path=f'networks/network-{network}.html#bc01-{kind}-{uid}') for kind,uid in sorted(allowed))
+
 data['bc01_standard']=dict(version=1,priority_key='P01',scope='BC01 only; other-equipment expansion held by user',
     sections=['overview','io','control','circuits','alarms','repair','completion'],
     specification=bc01_spec,control_conditions=bc01_control_conditions,pin_evidence=bc01_pin_evidence,media_evidence=bc01_media_evidence,
-    alarm=next(p for p in json.loads((ROOT/'registers/alarm-recovery.json').read_text())['profiles'] if p['id']=='BC01'),
+    alarm=bc01_alarm,supplemental_evidence=bc01_supplemental,address_evidence=bc01_addresses,source_locations=bc01_source_locations,
     repair=next(p for p in json.loads((ROOT/'registers/repair-decision.json').read_text())['records'] if p['key']=='P01'),
     source_hashes={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/program-model.json','registers/control-spec.json','registers/alarm-recovery.json','registers/repair-decision.json','registers/repair-record-forms.json','registers/electrical-trace.json','sources/decoded-original/network-map.json']+sorted({e['file'] for e in bc01_pin_evidence.values()} | {ref['identifier_file'] for e in bc01_pin_evidence.values() for part in [e['source'],e['target']] for key,ref in part.items() if key in ('target','value')})},
     field_verified=False,tia_verified=False,repairs_completed=0,simulator_work='stopped_by_user')
+bc01_extra_sources={'sources/hmi_plc_tags.csv','registers/plc-symbols.csv'}
+for evidence in bc01_supplemental:
+    bc01_extra_sources.add(evidence['file'])
+    bc01_extra_sources.update(r['identifier_file'] for r in evidence['refs']+evidence['enable_refs'])
+for address in bc01_addresses:bc01_extra_sources.update(r['file'] for r in address['declarations'])
+data['bc01_standard']['source_hashes'].update({path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in sorted(bc01_extra_sources)})
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 (ROOT / 'assets/all-in-one-data.js').write_text('window.GME_APP_DATA = ' + payload + ';\n', encoding='utf-8')

@@ -3535,5 +3535,551 @@
       "build-all-in-one.py": "b4e30e51be09f826369b37578de80aa5e531db069204b734eeedf294a80190f6",
       "registers/simulator-freeze.json": "bb93c1994effc5609939ba566b7802ce7ed55154a7310f02379b308ac2c8c835"
     }
+  },
+  "bc01_calculation_address_navigation": {
+    "date": "2026-10-11",
+    "scope": "BC01 static manual refinement; no field/simulator/PLC execution",
+    "source_navigation": [
+      {
+        "case": "Add1108",
+        "row": {
+          "cellbg": "rgb(224, 242, 233)",
+          "font": "18px",
+          "target": "bc01-part-1108",
+          "text": "1108Addin1 = hours motors.BC_01_MIN; in2 = 1; out = hours motors.BC_01_MIN"
+        }
+      },
+      {
+        "case": "Move1121",
+        "row": {
+          "cellbg": "rgb(224, 242, 233)",
+          "target": "bc01-part-1121",
+          "text": "1121Movein = 0; out1 = hours motors.BC_01_MIN"
+        }
+      },
+      {
+        "case": "pinWire1148",
+        "row": {
+          "cellbg": "rgb(224, 242, 233)",
+          "target": "bc01-wire-1148",
+          "text": "1148Part 1118.eno ↔ Part 1121.en"
+        }
+      },
+      {
+        "case": "Call22",
+        "row": {
+          "cellbg": "rgb(224, 242, 233)",
+          "target": "bc01-part-22",
+          "text": "22CRef호출 참조: Signal linearization; IN0 = ON; Analog_input = 102A3_SPARE0; Coeff = 10; Zero = 0; OutValue = HMI_DB.Amp_BC01; Out_of_range = Allarm.BC01_Absorbption_OFR"
+        }
+      },
+      {
+        "case": "rangeOutputWire39Mobile",
+        "row": {
+          "cellbg": "rgb(224, 242, 233)",
+          "font": "18px",
+          "target": "bc01-wire-39",
+          "text": "39Part 22.Out_of_range ↔ ORef 30 (Allarm.BC01_Absorbption_OFR)"
+        }
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "1. 발생 조건",
+        "supplementFolded": true,
+        "title": "운전 응답 고장",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "2. 리셋 조건",
+        "supplementFolded": true,
+        "title": "운전 응답 고장",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "3. 재기동 확인",
+        "supplementFolded": true,
+        "title": "운전 응답 고장",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "1. 발생 조건",
+        "supplementFolded": true,
+        "title": "인버터 이상",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "2. 리셋 조건",
+        "supplementFolded": true,
+        "title": "인버터 이상",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "3. 재기동 확인",
+        "supplementFolded": true,
+        "title": "인버터 이상",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "1. 발생 조건",
+        "supplementFolded": true,
+        "title": "트립와이어 감시",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "2. 리셋 조건",
+        "supplementFolded": true,
+        "title": "트립와이어 감시",
+        "undefinedVisible": false
+      },
+      {
+        "alarmItems": 3,
+        "case": "alarmStage",
+        "stage": "3. 재기동 확인",
+        "supplementFolded": true,
+        "title": "트립와이어 감시",
+        "undefinedVisible": false
+      },
+      {
+        "case": "existingTimer217",
+        "row": {
+          "cellbg": "rgb(224, 242, 233)",
+          "target": "bc01-part-217",
+          "text": "217SdCoilvalue = S5T#2S; operand = Tag_51"
+        }
+      }
+    ],
+    "viewport_cases": [
+      {
+        "cards": [
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=request",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=speed",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=other",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            0,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=request&text=large",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=speed&text=large",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=other&text=large",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            0,
+            290
+          ],
+          [
+            290,
+            290
+          ],
+          [
+            290,
+            290
+          ]
+        ],
+        "content": [
+          [
+            356,
+            356
+          ]
+        ],
+        "documentWidth": 390,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set&text=large",
+        "width": 390
+      },
+      {
+        "cards": [
+          [
+            713,
+            713
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=request",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            228,
+            228
+          ],
+          [
+            228,
+            228
+          ],
+          [
+            228,
+            228
+          ],
+          [
+            350,
+            350
+          ],
+          [
+            350,
+            350
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=speed",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            350,
+            350
+          ],
+          [
+            350,
+            350
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=other",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            230,
+            230
+          ],
+          [
+            230,
+            230
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": false,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            713,
+            713
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=request&text=large",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            228,
+            228
+          ],
+          [
+            228,
+            228
+          ],
+          [
+            228,
+            228
+          ],
+          [
+            350,
+            350
+          ],
+          [
+            350,
+            350
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=speed&text=large",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            350,
+            350
+          ],
+          [
+            350,
+            350
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=control&item=other&text=large",
+        "width": 1600
+      },
+      {
+        "cards": [
+          [
+            230,
+            230
+          ],
+          [
+            230,
+            230
+          ]
+        ],
+        "content": [
+          [
+            801,
+            801
+          ]
+        ],
+        "documentWidth": 1585,
+        "large": true,
+        "url": "http://127.0.0.1:8777/#view=manual&equipment=P01&scope=priority&section=alarms&item=alarm-0&alarmStep=set&text=large",
+        "width": 1600
+      }
+    ],
+    "source_wire67_pc_verified": true,
+    "standalone_source_highlight": true,
+    "large_reset_reload": true,
+    "manual_selection_and_font_restore": true,
+    "console": [],
+    "status": "passed",
+    "supplemental_paths": 3,
+    "static_address_pairs": 3,
+    "native_row_locations": 56,
+    "native_html_pages": 11,
+    "review_blockers": 0,
+    "protected_functions_unchanged": 5,
+    "source_xml_modified": false,
+    "simulator_behavior_tests": "not_run",
+    "simulator_policy": "permanently_stopped",
+    "plc_changes": 0,
+    "field_verified": false,
+    "input_sha256": {
+      "assets/all-in-one.js": "73d320f9f4210036166dad6edf248c2fec7879023d34c1a178a1fe1d44cd72b4",
+      "assets/all-in-one.css": "260938b788580754b30098f718be41eb4b7dc564ea132c0ff0bdc246c6a98cde",
+      "build-all-in-one.py": "4e477a082670e20f0491e83d7c03599afbddea6bb76455f24f64687bb3d42bef",
+      "verify-all-in-one.py": "8903ed73628fb5aaca292c9771428c7000dc420d7dcf26de8d37336104a7f600",
+      "registers/simulator-freeze.json": "bb93c1994effc5609939ba566b7802ce7ed55154a7310f02379b308ac2c8c835"
+    }
   }
 }

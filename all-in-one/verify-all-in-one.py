@@ -520,6 +520,88 @@ for key,evidence in standard['pin_evidence'].items():
             name=literal.get('V') if literal is not None else '.'.join(names) if names else ident.get('N')
             assert name==ref['name'],(key,role,ref)
 
+# Display supplements must match the original pins; never become executed rules.
+expected_supplements={
+ '1692:39':('Mul','54',[('in1','65','49','HMI_DB.SET_PERC_BC01','Int','read'),('in2','66','50','272','Int','read'),('out','67','51','102A5_SPARE0','Word','write')]),
+ '1018:1108':('Add','1157',[('in1','1139','1127','hours motors.BC_01_MIN','Int','read'),('in2','1140','1128','1','Int','read'),('out','1141','1129','hours motors.BC_01_MIN','Int','write')]),
+ '1768:22':('CRef','33',[('IN0','34','25','ON','Bool','read'),('Analog_input','35','26','102A3_SPARE0','Int','read'),('Coeff','36','27','10','Int','read'),('Zero','37','28','0','Int','read'),('OutValue','38','29','HMI_DB.Amp_BC01','Int','write'),('Out_of_range','39','30','Allarm.BC01_Absorbption_OFR','Bool','write')])}
+assert {r['id'] for r in standard['supplemental_evidence']}==set(expected_supplements)
+for evidence in standard['supplemental_evidence']:
+    gate,enable,expected=expected_supplements[evidence['id']]
+    assert evidence['gate']==gate and evidence['enable_wire']==enable
+    assert not evidence['execution_verified'] and not evidence['field_verified'] and not evidence['internal_xml_mapping_verified']
+    assert [(r['pin'],r['wire'],r['oref'],r['name'],r['type'],r['role']) for r in evidence['refs']]==expected
+    xml=ET.parse(ROOT/evidence['file']).getroot();ns={'s':'http://www.siemens.com/automation/2015/FunctionLadderDiagram'}
+    part=next(p for p in xml.find('s:Parts',ns) if p.get('UId')==evidence['part'])
+    assert part.tag.endswith('CRef') if gate=='CRef' else part.get('Gate')==gate
+    wire=next(w for w in xml.findall('s:Wires/s:Wire',ns) if w.get('UId')==enable)
+    assert any(c.get('UId')==evidence['part'] and c.get('PinName')=='en' for c in wire)
+    for ref in evidence['refs']+evidence['enable_refs']:
+        actual=next(w for w in xml.findall('s:Wires/s:Wire',ns) if w.get('UId')==ref['wire'])
+        assert {(c.tag.split('}')[-1],c.get('UId'),c.get('PinName')) for c in actual}=={('OCon',ref['oref'],None),('PCon',ref['part'],ref['pin'])}
+        oref=next(p for p in xml.find('s:Parts',ns) if p.tag.endswith('ORef') and p.get('UId')==ref['oref'])
+        assert oref.get('RefId')==ref['rid']
+        access=[a for a in ET.parse(ROOT/ref['identifier_file']).getroot() if any(c.tag.endswith('ID') and c.get('RID')==ref['rid'] and c.get('S')==ref['scope'] and any(d.get('NID')==ref['nid'] and d.get('UID')==ref['oref'] for d in c.iter()) for c in a)]
+        assert len(access)==1
+        ident=next(c for c in access[0] if c.tag.endswith('ID'))
+        cross=next(c for c in ident.iter() if c.get('NID')==ref['nid'] and c.get('UID')==ref['oref'])
+        literal=next((c for c in access[0].iter() if c.tag.endswith('CB')),None)
+        names=[c.get('N') for c in access[0].iter() if c.tag.endswith('AO')]
+        assert (literal.get('V') if literal is not None else '.'.join(names) if names else ident.get('N'))==ref['name']
+        assert next(c for c in access[0].iter() if c.tag.endswith('TD')).get('T').split(':')[0]==ref['type']
+        assert (cross.get('AK')=='Write')==(ref['role']=='write')
+
+expected_addresses={'HMI_DB.SET_PERC_BC01':('DB41.DBW52','Int','data_DB41_DBW52','DB41,INT52',416,16),
+ '102A5_SPARE0':('%QW288','Word','AW288','AW288',2304,16),
+ 'Flag.M_BC_01':('DB2.DBX0.0','Bool','BC_01\\Flag','DB2,X0.0',0,1)}
+source_hmi_rows=list(csv.DictReader((ROOT/'sources/hmi_plc_tags.csv').open(encoding='utf-8-sig')))
+assert {r['name'] for r in standard['address_evidence']}==set(expected_addresses)
+for address in standard['address_evidence']:
+    expected,type_name,tag,configured,bits,width=expected_addresses[address['name']]
+    assert address['backup_address']==expected and address['type']==type_name
+    assert address['static_address_verified'] and not address['current_mapping_verified'] and not address['screen_read_write_verified'] and not address['retain_verified']
+    assert address['hmi']==next(r for r in source_hmi_rows if r['HMI 태그']==tag) and address['hmi']['설정 주소']==configured
+    member=address['declarations'][-1]
+    access=next(a for a in ET.parse(ROOT/member['file']).getroot() if any(c.tag.endswith('ID') and c.get('RID')==member['rid'] for c in a))
+    assert int(next(c for c in access.iter() if c.tag.endswith('SSD')).get('AO'))==bits
+    assert next(c for c in access.iter() if c.tag.endswith('TD')).get('T').split(':')[0]==type_name
+    if len(address['declarations'])==2:
+        parent=address['declarations'][0]
+        db=next(a for a in ET.parse(ROOT/parent['file']).getroot() if any(c.tag.endswith('ID') and c.get('RID')==parent['rid'] for c in a))
+        tod=next(c for c in db.iter() if c.tag.endswith('TOD'))
+        assert tod.get('BT')=='DB' and next(c for c in access.iter() if c.tag.endswith('BAD')).get('BIRID')==parent['rid']
+        aos=[c for c in access.iter() if c.tag.endswith('AO')]
+        assert int(aos[-1].get('BO'))==bits and int(aos[-1].get('BS'))==width
+        assert expected==(f"DB{tod.get('N')}.DBX{bits//8}.{bits%8}" if type_name=='Bool' else f"DB{tod.get('N')}.DBW{bits//8}")
+    else:
+        sad=next(c for c in access.iter() if c.tag.endswith('SAD'))
+        assert sad.get('R')=='Output' and sad.get('SAM')==address['access_mode']=='Peripherie' and expected==f'%QW{bits//8}'
+
+class BC01Rows(HTMLParser):
+    def __init__(self):
+        super().__init__();self.headers=[];self.row_id=None;self.cells=[];self.cell=None;self.rows={}
+    def handle_starttag(self,tag,attrs):
+        if tag=='table':self.headers=[]
+        if tag=='tr':self.row_id=dict(attrs).get('id');self.cells=[]
+        if tag in ('td','th'):self.cell=(tag,[])
+    def handle_data(self,text):
+        if self.cell:self.cell[1].append(text)
+    def handle_endtag(self,tag):
+        if tag in ('td','th') and self.cell:
+            kind,text=self.cell
+            (self.headers if kind=='th' else self.cells).append(''.join(text).strip());self.cell=None
+        if tag=='tr' and self.row_id:
+            assert self.row_id not in self.rows
+            self.rows[self.row_id]=(self.headers[0],self.cells[0])
+source_row_parsers={}
+for ref in standard['source_locations']:
+    file,anchor=ref['path'].split('#');routes.add(ref['path'])
+    if file not in source_row_parsers:
+        parser=BC01Rows();parser.feed((ROOT/file).read_text());source_row_parsers[file]=parser
+    assert source_row_parsers[file].rows[anchor]==('Part UID' if ref['kind']=='part' else 'Wire UID',ref['uid'])
+    native=xmls[ref['network']]
+    assert any(c.get('UId')==ref['uid'] for c in native.findall('s:Parts/*' if ref['kind']=='part' else 's:Wires/s:Wire',ns))
+assert len(standard['source_locations'])==56
 for path,digest in standard['source_hashes'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
 # Drawing UI reuses existing evidence, and supports current21 only.
 drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]
@@ -618,7 +700,8 @@ result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(dra
               actuator_alarm_latches=sum(len(p['alarms']) for p in alarm_recovery['profiles'] if p['family']!='motor'),
               construction_pages=64,construction_guides=22,construction_selected_rows=51,
               construction_review_items_pending=7,masked_cable_rows_excluded=9,
-              simulator_development='stopped_by_user',simulator_policy='permanently_stopped',bc01_media_references_checked=12,simulator_behavior_tests='not_rerun',
+              simulator_development='stopped_by_user',simulator_policy='permanently_stopped',bc01_media_references_checked=12,
+              bc01_supplemental_paths_checked=3,bc01_static_address_pairs_checked=3,bc01_native_row_locations_checked=56,simulator_behavior_tests='not_rerun',
               simulator_files_hashes_unchanged=True,
               scope='application integration and preserved source data; not PLC/TIA execution')
 (ROOT / 'all-in-one-verification.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')

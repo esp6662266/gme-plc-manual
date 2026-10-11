@@ -107107,6 +107107,740 @@
       "tia_verified": false,
       "repairs_completed": 0
     },
+    "supplemental_evidence": [
+      {
+        "id": "1692:39",
+        "network": 1692,
+        "file": "sources/decoded-original/0473-FlgNet.xml",
+        "part": "39",
+        "gate": "Mul",
+        "section": "speed",
+        "title": "속도 설정값의 계산·출력 연결",
+        "refs": [
+          {
+            "network": 1692,
+            "file": "sources/decoded-original/0473-FlgNet.xml",
+            "part": "39",
+            "pin": "in1",
+            "wire": "65",
+            "oref": "49",
+            "rid": "148",
+            "nid": "17",
+            "name": "HMI_DB.SET_PERC_BC01",
+            "scope": "Global",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0662-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          },
+          {
+            "network": 1692,
+            "file": "sources/decoded-original/0473-FlgNet.xml",
+            "part": "39",
+            "pin": "in2",
+            "wire": "66",
+            "oref": "50",
+            "rid": "16",
+            "nid": "17",
+            "name": "272",
+            "scope": "Constant",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0661-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": "272"
+          },
+          {
+            "network": 1692,
+            "file": "sources/decoded-original/0473-FlgNet.xml",
+            "part": "39",
+            "pin": "out",
+            "wire": "67",
+            "oref": "51",
+            "rid": "144",
+            "nid": "17",
+            "name": "102A5_SPARE0",
+            "scope": "Global",
+            "type": "Word",
+            "identifier_file": "sources/decoded-original/0664-IdentXmlPart.xml",
+            "role": "write",
+            "literal_value": null
+          }
+        ],
+        "enable_refs": [
+          {
+            "network": 1692,
+            "file": "sources/decoded-original/0473-FlgNet.xml",
+            "part": "34",
+            "pin": "operand",
+            "wire": "53",
+            "oref": "40",
+            "rid": "1",
+            "nid": "17",
+            "name": "ON",
+            "scope": "Global",
+            "type": "Bool",
+            "identifier_file": "sources/decoded-original/0664-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          }
+        ],
+        "enable_wire": "54",
+        "execution_verified": false,
+        "field_verified": false,
+        "internal_xml_mapping_verified": false
+      },
+      {
+        "id": "1018:1108",
+        "network": 1018,
+        "file": "sources/decoded-original/0308-FlgNet.xml",
+        "part": "1108",
+        "gate": "Add",
+        "section": "other",
+        "title": "같은 누적값의 증가와 0 쓰기",
+        "refs": [
+          {
+            "network": 1018,
+            "file": "sources/decoded-original/0308-FlgNet.xml",
+            "part": "1108",
+            "pin": "in1",
+            "wire": "1139",
+            "oref": "1127",
+            "rid": "124",
+            "nid": "20",
+            "name": "hours motors.BC_01_MIN",
+            "scope": "Global",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0615-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          },
+          {
+            "network": 1018,
+            "file": "sources/decoded-original/0308-FlgNet.xml",
+            "part": "1108",
+            "pin": "in2",
+            "wire": "1140",
+            "oref": "1128",
+            "rid": "7",
+            "nid": "20",
+            "name": "1",
+            "scope": "Constant",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0616-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": "1"
+          },
+          {
+            "network": 1018,
+            "file": "sources/decoded-original/0308-FlgNet.xml",
+            "part": "1108",
+            "pin": "out",
+            "wire": "1141",
+            "oref": "1129",
+            "rid": "124",
+            "nid": "20",
+            "name": "hours motors.BC_01_MIN",
+            "scope": "Global",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0615-IdentXmlPart.xml",
+            "role": "write",
+            "literal_value": null
+          }
+        ],
+        "enable_refs": [
+          {
+            "network": 1018,
+            "file": "sources/decoded-original/0308-FlgNet.xml",
+            "part": "1154",
+            "pin": "operand",
+            "wire": "1137",
+            "oref": "1125",
+            "rid": "1",
+            "nid": "20",
+            "name": "Tag_47",
+            "scope": "Global",
+            "type": "Timer",
+            "identifier_file": "sources/decoded-original/0613-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          },
+          {
+            "network": 1018,
+            "file": "sources/decoded-original/0308-FlgNet.xml",
+            "part": "1156",
+            "pin": "operand",
+            "wire": "1138",
+            "oref": "1126",
+            "rid": "122",
+            "nid": "20",
+            "name": "BC01_Fbk",
+            "scope": "Global",
+            "type": "Bool",
+            "identifier_file": "sources/decoded-original/0613-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          }
+        ],
+        "enable_wire": "1157",
+        "execution_verified": false,
+        "field_verified": false,
+        "internal_xml_mapping_verified": false
+      },
+      {
+        "id": "1768:22",
+        "network": 1768,
+        "file": "sources/decoded-original/0525-FlgNet.xml",
+        "part": "22",
+        "gate": "CRef",
+        "section": "alarms",
+        "title": "별도 계측 호출의 값·범위 출력",
+        "refs": [
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "22",
+            "pin": "IN0",
+            "wire": "34",
+            "oref": "25",
+            "rid": "1",
+            "nid": "51",
+            "name": "ON",
+            "scope": "Global",
+            "type": "Bool",
+            "identifier_file": "sources/decoded-original/0678-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          },
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "22",
+            "pin": "Analog_input",
+            "wire": "35",
+            "oref": "26",
+            "rid": "466",
+            "nid": "51",
+            "name": "102A3_SPARE0",
+            "scope": "Global",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0678-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          },
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "22",
+            "pin": "Coeff",
+            "wire": "36",
+            "oref": "27",
+            "rid": "475",
+            "nid": "51",
+            "name": "10",
+            "scope": "Constant",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0675-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": "10"
+          },
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "22",
+            "pin": "Zero",
+            "wire": "37",
+            "oref": "28",
+            "rid": "44",
+            "nid": "51",
+            "name": "0",
+            "scope": "Constant",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0675-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": "0"
+          },
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "22",
+            "pin": "OutValue",
+            "wire": "38",
+            "oref": "29",
+            "rid": "469",
+            "nid": "51",
+            "name": "HMI_DB.Amp_BC01",
+            "scope": "Global",
+            "type": "Int",
+            "identifier_file": "sources/decoded-original/0676-IdentXmlPart.xml",
+            "role": "write",
+            "literal_value": null
+          },
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "22",
+            "pin": "Out_of_range",
+            "wire": "39",
+            "oref": "30",
+            "rid": "471",
+            "nid": "51",
+            "name": "Allarm.BC01_Absorbption_OFR",
+            "scope": "Global",
+            "type": "Bool",
+            "identifier_file": "sources/decoded-original/0676-IdentXmlPart.xml",
+            "role": "write",
+            "literal_value": null
+          }
+        ],
+        "enable_refs": [
+          {
+            "network": 1768,
+            "file": "sources/decoded-original/0525-FlgNet.xml",
+            "part": "21",
+            "pin": "operand",
+            "wire": "32",
+            "oref": "24",
+            "rid": "1",
+            "nid": "51",
+            "name": "ON",
+            "scope": "Global",
+            "type": "Bool",
+            "identifier_file": "sources/decoded-original/0678-IdentXmlPart.xml",
+            "role": "read",
+            "literal_value": null
+          }
+        ],
+        "enable_wire": "33",
+        "execution_verified": false,
+        "field_verified": false,
+        "internal_xml_mapping_verified": false
+      }
+    ],
+    "address_evidence": [
+      {
+        "name": "HMI_DB.SET_PERC_BC01",
+        "type": "Int",
+        "backup_address": "DB41.DBW52",
+        "hmi": {
+          "HMI 태그": "data_DB41_DBW52",
+          "설정 주소": "DB41,INT52",
+          "Access Name": "PLC",
+          "태그 내부 ID": "00249",
+          "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+        },
+        "access_mode": "DB",
+        "declarations": [
+          {
+            "file": "sources/decoded-original/0660-IdentXmlPart.xml",
+            "rid": "147",
+            "db_number": "41"
+          },
+          {
+            "file": "sources/decoded-original/0662-IdentXmlPart.xml",
+            "rid": "148",
+            "offset_bits": 416,
+            "width_bits": 16
+          }
+        ],
+        "static_address_verified": true,
+        "current_mapping_verified": false,
+        "screen_read_write_verified": false,
+        "retain_verified": false
+      },
+      {
+        "name": "102A5_SPARE0",
+        "type": "Word",
+        "backup_address": "%QW288",
+        "hmi": {
+          "HMI 태그": "AW288",
+          "설정 주소": "AW288",
+          "Access Name": "PLC",
+          "태그 내부 ID": "00084",
+          "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+        },
+        "access_mode": "Peripherie",
+        "declarations": [
+          {
+            "file": "sources/decoded-original/0664-IdentXmlPart.xml",
+            "rid": "144",
+            "offset_bits": 2304,
+            "width_bits": 16
+          }
+        ],
+        "static_address_verified": true,
+        "current_mapping_verified": false,
+        "screen_read_write_verified": false,
+        "retain_verified": false
+      },
+      {
+        "name": "Flag.M_BC_01",
+        "type": "Bool",
+        "backup_address": "DB2.DBX0.0",
+        "hmi": {
+          "HMI 태그": "BC_01\\Flag",
+          "설정 주소": "DB2,X0.0",
+          "Access Name": "PLC",
+          "태그 내부 ID": "001B4",
+          "근거와 한계": "dde.cfg 설정; 온라인 현재값 아님"
+        },
+        "access_mode": "DB",
+        "declarations": [
+          {
+            "file": "sources/decoded-original/0603-IdentXmlPart.xml",
+            "rid": "2",
+            "db_number": "2"
+          },
+          {
+            "file": "sources/decoded-original/0604-IdentXmlPart.xml",
+            "rid": "41",
+            "offset_bits": 0,
+            "width_bits": 1
+          }
+        ],
+        "static_address_verified": true,
+        "current_mapping_verified": false,
+        "screen_read_write_verified": false,
+        "retain_verified": false
+      }
+    ],
+    "source_locations": [
+      {
+        "network": 1018,
+        "kind": "part",
+        "uid": "1108",
+        "path": "networks/network-1018.html#bc01-part-1108"
+      },
+      {
+        "network": 1018,
+        "kind": "part",
+        "uid": "1118",
+        "path": "networks/network-1018.html#bc01-part-1118"
+      },
+      {
+        "network": 1018,
+        "kind": "part",
+        "uid": "1121",
+        "path": "networks/network-1018.html#bc01-part-1121"
+      },
+      {
+        "network": 1018,
+        "kind": "part",
+        "uid": "1154",
+        "path": "networks/network-1018.html#bc01-part-1154"
+      },
+      {
+        "network": 1018,
+        "kind": "part",
+        "uid": "1156",
+        "path": "networks/network-1018.html#bc01-part-1156"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1137",
+        "path": "networks/network-1018.html#bc01-wire-1137"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1138",
+        "path": "networks/network-1018.html#bc01-wire-1138"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1139",
+        "path": "networks/network-1018.html#bc01-wire-1139"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1140",
+        "path": "networks/network-1018.html#bc01-wire-1140"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1141",
+        "path": "networks/network-1018.html#bc01-wire-1141"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1148",
+        "path": "networks/network-1018.html#bc01-wire-1148"
+      },
+      {
+        "network": 1018,
+        "kind": "wire",
+        "uid": "1157",
+        "path": "networks/network-1018.html#bc01-wire-1157"
+      },
+      {
+        "network": 1048,
+        "kind": "part",
+        "uid": "2769",
+        "path": "networks/network-1048.html#bc01-part-2769"
+      },
+      {
+        "network": 1048,
+        "kind": "part",
+        "uid": "2772",
+        "path": "networks/network-1048.html#bc01-part-2772"
+      },
+      {
+        "network": 1048,
+        "kind": "wire",
+        "uid": "2798",
+        "path": "networks/network-1048.html#bc01-wire-2798"
+      },
+      {
+        "network": 1082,
+        "kind": "part",
+        "uid": "33",
+        "path": "networks/network-1082.html#bc01-part-33"
+      },
+      {
+        "network": 1692,
+        "kind": "part",
+        "uid": "34",
+        "path": "networks/network-1692.html#bc01-part-34"
+      },
+      {
+        "network": 1692,
+        "kind": "part",
+        "uid": "36",
+        "path": "networks/network-1692.html#bc01-part-36"
+      },
+      {
+        "network": 1692,
+        "kind": "part",
+        "uid": "38",
+        "path": "networks/network-1692.html#bc01-part-38"
+      },
+      {
+        "network": 1692,
+        "kind": "part",
+        "uid": "39",
+        "path": "networks/network-1692.html#bc01-part-39"
+      },
+      {
+        "network": 1692,
+        "kind": "wire",
+        "uid": "53",
+        "path": "networks/network-1692.html#bc01-wire-53"
+      },
+      {
+        "network": 1692,
+        "kind": "wire",
+        "uid": "54",
+        "path": "networks/network-1692.html#bc01-wire-54"
+      },
+      {
+        "network": 1692,
+        "kind": "wire",
+        "uid": "65",
+        "path": "networks/network-1692.html#bc01-wire-65"
+      },
+      {
+        "network": 1692,
+        "kind": "wire",
+        "uid": "66",
+        "path": "networks/network-1692.html#bc01-wire-66"
+      },
+      {
+        "network": 1692,
+        "kind": "wire",
+        "uid": "67",
+        "path": "networks/network-1692.html#bc01-wire-67"
+      },
+      {
+        "network": 1768,
+        "kind": "part",
+        "uid": "21",
+        "path": "networks/network-1768.html#bc01-part-21"
+      },
+      {
+        "network": 1768,
+        "kind": "part",
+        "uid": "22",
+        "path": "networks/network-1768.html#bc01-part-22"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "32",
+        "path": "networks/network-1768.html#bc01-wire-32"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "33",
+        "path": "networks/network-1768.html#bc01-wire-33"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "34",
+        "path": "networks/network-1768.html#bc01-wire-34"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "35",
+        "path": "networks/network-1768.html#bc01-wire-35"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "36",
+        "path": "networks/network-1768.html#bc01-wire-36"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "37",
+        "path": "networks/network-1768.html#bc01-wire-37"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "38",
+        "path": "networks/network-1768.html#bc01-wire-38"
+      },
+      {
+        "network": 1768,
+        "kind": "wire",
+        "uid": "39",
+        "path": "networks/network-1768.html#bc01-wire-39"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "217",
+        "path": "networks/network-1785.html#bc01-part-217"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "223",
+        "path": "networks/network-1785.html#bc01-part-223"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "228",
+        "path": "networks/network-1785.html#bc01-part-228"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "263",
+        "path": "networks/network-1785.html#bc01-part-263"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "266",
+        "path": "networks/network-1785.html#bc01-part-266"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "267",
+        "path": "networks/network-1785.html#bc01-part-267"
+      },
+      {
+        "network": 1785,
+        "kind": "part",
+        "uid": "27",
+        "path": "networks/network-1785.html#bc01-part-27"
+      },
+      {
+        "network": 1786,
+        "kind": "part",
+        "uid": "234",
+        "path": "networks/network-1786.html#bc01-part-234"
+      },
+      {
+        "network": 1786,
+        "kind": "part",
+        "uid": "240",
+        "path": "networks/network-1786.html#bc01-part-240"
+      },
+      {
+        "network": 1786,
+        "kind": "part",
+        "uid": "266",
+        "path": "networks/network-1786.html#bc01-part-266"
+      },
+      {
+        "network": 1843,
+        "kind": "part",
+        "uid": "102",
+        "path": "networks/network-1843.html#bc01-part-102"
+      },
+      {
+        "network": 1843,
+        "kind": "part",
+        "uid": "492",
+        "path": "networks/network-1843.html#bc01-part-492"
+      },
+      {
+        "network": 1843,
+        "kind": "part",
+        "uid": "828",
+        "path": "networks/network-1843.html#bc01-part-828"
+      },
+      {
+        "network": 1843,
+        "kind": "wire",
+        "uid": "104",
+        "path": "networks/network-1843.html#bc01-wire-104"
+      },
+      {
+        "network": 1844,
+        "kind": "part",
+        "uid": "1162",
+        "path": "networks/network-1844.html#bc01-part-1162"
+      },
+      {
+        "network": 1847,
+        "kind": "part",
+        "uid": "927",
+        "path": "networks/network-1847.html#bc01-part-927"
+      },
+      {
+        "network": 1935,
+        "kind": "part",
+        "uid": "198",
+        "path": "networks/network-1935.html#bc01-part-198"
+      },
+      {
+        "network": 1935,
+        "kind": "part",
+        "uid": "202",
+        "path": "networks/network-1935.html#bc01-part-202"
+      },
+      {
+        "network": 1935,
+        "kind": "part",
+        "uid": "22",
+        "path": "networks/network-1935.html#bc01-part-22"
+      },
+      {
+        "network": 1935,
+        "kind": "part",
+        "uid": "229",
+        "path": "networks/network-1935.html#bc01-part-229"
+      },
+      {
+        "network": 1935,
+        "kind": "part",
+        "uid": "233",
+        "path": "networks/network-1935.html#bc01-part-233"
+      }
+    ],
     "repair": {
       "key": "P01",
       "name": "BC-01(벨트)",
@@ -108506,7 +109240,21 @@
       "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
       "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
       "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
-      "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d"
+      "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d",
+      "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+      "sources/decoded-original/0473-FlgNet.xml": "25e55bf5a7caef3e5f96509ca4d39ebba579615dccd39d9aad7e31413905609d",
+      "sources/decoded-original/0525-FlgNet.xml": "fb0169f13501bb8e5b7d37a6f7fb4e2fb64f086ca26dc52661cd0b44a80a0ba2",
+      "sources/decoded-original/0603-IdentXmlPart.xml": "e93969dfa281d75b49b24127793068e33472dadb19729c1c48fc4a8dad075ef8",
+      "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+      "sources/decoded-original/0613-IdentXmlPart.xml": "09d3b1397a987898334218f37e025661af162438582e649f671e7abec443d3cb",
+      "sources/decoded-original/0660-IdentXmlPart.xml": "0bf4f4c46531f55324602f4f7b1a1e0b9e63df2c6278126f6e5cf1bc9a06509f",
+      "sources/decoded-original/0661-IdentXmlPart.xml": "90672199fee355011f581d3287046894772f3f3b4cb78bbe0dd0d71bd488ac93",
+      "sources/decoded-original/0662-IdentXmlPart.xml": "1838040bfee800fdb3f13b126eaf69a9d178b17cecc0d59ae03e9185216a48a5",
+      "sources/decoded-original/0664-IdentXmlPart.xml": "68c614e1c6a7fcadeee3f0b2ddc54910c3b337e66074d7a113b9cbc834c271ed",
+      "sources/decoded-original/0675-IdentXmlPart.xml": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+      "sources/decoded-original/0676-IdentXmlPart.xml": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+      "sources/decoded-original/0678-IdentXmlPart.xml": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+      "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
     },
     "field_verified": false,
     "tia_verified": false,

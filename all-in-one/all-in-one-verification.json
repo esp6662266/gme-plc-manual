@@ -63,7 +63,7 @@
   "priority_tag_matches": 14,
   "priority_role_candidates": 4,
   "priority_unmatched": 5,
-  "dynamic_routes_checked": 4015,
+  "dynamic_routes_checked": 4071,
   "tests_preserved_unexecuted": 577,
   "pending_checks_preserved": 1060,
   "source_equipment_fields_preserved": true,
@@ -133,6 +133,9 @@
   "simulator_development": "stopped_by_user",
   "simulator_policy": "permanently_stopped",
   "bc01_media_references_checked": 12,
+  "bc01_supplemental_paths_checked": 3,
+  "bc01_static_address_pairs_checked": 3,
+  "bc01_native_row_locations_checked": 56,
   "simulator_behavior_tests": "not_rerun",
   "simulator_files_hashes_unchanged": true,
   "scope": "application integration and preserved source data; not PLC/TIA execution"

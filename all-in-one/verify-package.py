@@ -9,6 +9,14 @@ ROOT=Path(__file__).resolve().parent
 (ROOT/'verification-result.json').write_text(json.dumps(dict(status='checking',scope='Current document/source integrity checks; no execution'))+'\n')
 def readcsv(name):return list(csv.DictReader((ROOT/'registers'/name).open(encoding='utf-8-sig')))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def bc01_calculation_route(fragment):
+    params=parse_qs(fragment,keep_blank_values=True)
+    if not all(len(v)==1 for v in params.values()):return False
+    if params.get('view')!=['manual'] or params.get('equipment')!=['P01'] or params.get('scope')!=['priority']:return False
+    if not set(params)<={'view','equipment','scope','section','item','text'}:return False
+    allowed={'control':['speed','other'],'alarms':['alarm-0']}
+    section=params.get('section',[None])[0]
+    return section in allowed and params.get('item') in [[i] for i in allowed[section]] and ('text' not in params or params['text'] in [['standard'],['large']])
 class Links(HTMLParser):
     def __init__(self):super().__init__();self.refs=[];self.ids=set()
     def handle_starttag(self,tag,attrs):
@@ -43,6 +51,12 @@ for p,parser in parsers.items():
             if target==(ROOT/'index.html').resolve() and params.get('view')==['manual']:
                 if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and set(params)=={'view','equipment','scope'}:
                     assert "params.get('view')==='manual' && params.get('equipment')==='P01'" in (ROOT/'assets/all-in-one.js').read_text()
+                    continue
+                if bc01_calculation_route(u.fragment):
+                    js=(ROOT/'assets/all-in-one.js').read_text()
+                    assert "state.bc01Text=params.get('text')==='large'?'large':'standard'" in js
+                    assert "current.id==='speed'" in js and "['speed','other'].includes(current.id)" in js
+                    assert "bc01AlarmBody(a,alarm)" in js
                     continue
                 if params.get('equipment')==['P01'] and params.get('scope')==['priority'] and params.get('section')==['completion'] and set(params)<={'view','equipment','scope','section','item','check'}:
                     item=params.get('item',[None])[0]
