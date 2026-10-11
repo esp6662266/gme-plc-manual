@@ -18,6 +18,11 @@ export async function verifyAllInOne(root) {
   assert.equal(manifest.simulator_behavior_tests,'not_rerun');
   assert.equal(manifest.fresh_verification_runs.length,14);
   assert.ok(manifest.fresh_verification_runs.every(run=>run.status==='passed'));
+  assert.deepEqual(manifest.fresh_equipment_verification_runs.map(run=>run.script),['verify-bc01-tools.cjs','verify-equipment-standards.cjs']);
+  for(const run of manifest.fresh_equipment_verification_runs) {
+    assert.equal(run.status,'passed');
+    assert.equal(await sha(run.script),run.script_sha256,`Equipment verifier changed: ${run.script}`);
+  }
   for(const item of manifest.files) assert.equal(await sha(item.file),item.sha256,`Package file changed: ${item.file}`);
   const freeze=await json('registers/simulator-freeze.json');
   for(const [file,hash] of Object.entries(freeze.files)) assert.equal(await sha(file),hash,`Stopped simulator source changed: ${file}`);
@@ -27,6 +32,6 @@ export async function verifyAllInOne(root) {
   assert.equal(data.project_work_scope.current_priority_count,21);
   assert.equal(data.project_work_scope.full_catalog_role,'preserved_reference_only');
   assert.equal(data.project_work_scope.priority_completion_proven,false);
-  console.log(`GME source package verified: ${manifest.files.length+1} files; 14 saved source checks; simulator hashes unchanged`);
+  console.log(`GME source package verified: ${manifest.files.length+1} files; 14 source and 2 equipment checks; simulator hashes unchanged`);
   return {...manifest,manifest_sha256:await sha('all-in-one-package-manifest.json')};
 }
