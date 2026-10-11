@@ -249,6 +249,19 @@ for(const [section]of standard.sections)for(const item of standard.items(data,'P
 const pvControl=standard.render(data,'P05',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});for(const s of ['M80.5','OFF Contact418','1초','SEC은Bool','HMI','17바인딩','DB13 Word8'])assert.ok(pvControl.includes(s),s);
 const schema05=data.repair_record_forms.profiles.find(p=>p.key==='P05');const note05={...fn01Note,id:'qa-pv01',equipment:'P05',repair_observation:plain(repair.collect(schema05,{first_symptom:'QA PV01',[schema05.signals[0].id+'_value']:'0'}))};const parsed05=plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note09,note05],data,'2026-10-11T07:00:00Z','P05')),store.decodeNotes,valid,schema05));assert.deepEqual(parsed05.notes,[note05]);assert.equal(parsed05.skipped,1);assert.notEqual(tools.referenceContext(data,'P05').source_bundle_sha256,p09.source_bundle_sha256);
 
+const p07=standard.profile(data,'P07');assert.ok(p07);assert.equal(p07.type,'pneumatic_double_gate');
+assert.deepEqual(plain(p07.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='PV02'));
+assert.deepEqual(plain(p07.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='PV02'));
+assert.deepEqual(p07.alarm.timers.map(t=>[t.uid,t.preset.literal]),[['1581','S5T#7S'],['1599','S5T#7S'],['1645','S5T#7S'],['1663','S5T#7S']]);
+assert.deepEqual(plain(standard.sections.map(([s])=>standard.items(data,'P07',s).length)),[3,4,40,8,6,5,5]);
+assert.deepEqual(p07.source_pairs.map(p=>p.path),['networks/network-1920.html#gme-pv02-part-724','networks/network-1920.html#gme-pv02-part-717','networks/network-1923.html#gme-pv02-part-23','networks/network-1923.html#gme-pv02-part-30','networks/network-1924.html#gme-pv02-part-23','networks/network-1924.html#gme-pv02-part-30','networks/network-1919.html#gme-pv02-part-686','networks/network-1919.html#gme-pv02-part-690']);
+for(const [f,h]of Object.entries(p07.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p07.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+const schema07=data.repair_record_forms.profiles.find(p=>p.key==='P07');assert.equal(schema07.signals.length,8);
+const note07={...fn01Note,id:'qa-pv02',equipment:'P07',repair_observation:plain(repair.collect(schema07,{first_symptom:'QA PV02',[schema07.signals[0].id+'_value']:'0'}))};
+const parsed07=plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note05,note07],data,'2026-10-11T07:30:00Z','P07')),store.decodeNotes,valid,schema07));assert.deepEqual(parsed07.notes,[note07]);assert.equal(parsed07.skipped,1);
+assert.notEqual(tools.referenceContext(data,'P07').source_bundle_sha256,p05.source_bundle_sha256);
+for(const [section]of standard.sections)for(const item of standard.items(data,'P07',section)){const html=standard.render(data,'P07',{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(!html.includes('undefined'));assert.ok(html.includes('standard-content-title'));}
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));
