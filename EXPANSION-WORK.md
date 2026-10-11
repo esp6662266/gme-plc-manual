@@ -1,3 +1,7 @@
+# MV03 v1.14.0 통합·검증 진행 — 2026-10-11
+
+MV01 v1.13.0 실제게시완료(11/23=47.8%,제외2별도). MV03(P20)7영역·7원본쌍·27직접규칙/2opaque·150초방향응답/±3400명령누적 동일FAULT·끝단NOT·상대Q차단접점없음/NC하드웨어·HSC2결속21미결속·HMI4FALSE10미해석·PSH03/PSH02·버너요청상충·M17용량상충을 연결한다. Dots84고정SHA와19고유/공통XML/선언·PDF12쪽 독립대조. 원본730/추가3/기존11프로파일/공통기록/중지5보존. UI/기록/PDF/패키지/게시검증중. TIA/CPU/현장not_performed·시뮬레이터/PLC/SEJIN변경0. 다음MV06수신83SHA고정일치.
+
 # MV01 v1.13.0 실제 게시 완료 — 2026-10-11
 
 MV01(P19) v1.13.0 실제게시완료. 7영역44항목/7쌍/2068화면·격리저장/통합선택복원3→4/0→1비교/동시성·Quota/보고서/A4 PDF3·14+2/ZIP2801/원본730/Node8/새clone passed. GitHub asset630177314 digest7b97a40d.../53363097B;Netlify6acb4468104cd90008fc7de8 ready08:10:47.897Z/feature192d2cbb420bddc2abafda2ed3cec608521537f2·게시111파일(93exact18HTML)·실제P19/Part143/통합0/운영키null. 시뮬레이터/PLC/현장/보호값/SEJIN변경0,TIA/liveCPU/fieldnot_performed. AON문서는불변ZIP생성시pending기록보존. 다음MV03(P20)독립검토·통합;Dots MV06초안중. 2차133은현재로컬goal제외. 전체goal active.
