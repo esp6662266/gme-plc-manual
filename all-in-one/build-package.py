@@ -1,15 +1,46 @@
 """Package a checked local workspace, verify hashes and CRC before replacing ZIP."""
 from pathlib import Path
-import hashlib, json, shutil, zipfile, subprocess, sys
+import hashlib, json, shutil, zipfile, subprocess, sys, os
 from datetime import datetime,timezone
+if sys.flags.optimize:
+    raise RuntimeError('Package verification requires assertions enabled. Use the Python runner without optimization.')
 
 ROOT=Path(__file__).resolve().parent
 manifest=ROOT/'all-in-one-package-manifest.json'
 release=json.loads((ROOT/'VERSION.json').read_text(encoding='utf-8'))
-archive=ROOT.parent/'GME-All-In-One-20261007.zip'
+archive=ROOT.parent/f'GME-All-In-One-v{release["version"]}.zip'
 baseline=ROOT.parent/'GME-All-In-One-20261007-v0.3.zip'
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def checked_path(path):
+    assert isinstance(path,str) and path and not any(c in path for c in ('\\',':','\0')) and not path.startswith('/')
+    assert all(part not in ('','.','..') for part in path.split('/')),path
+    return path
+def inventory():
+    result=[]
+    for folder,dirs,names in os.walk(ROOT,followlinks=False):
+        for name in dirs+names:
+            assert not (Path(folder)/name).is_symlink(),f'Symbolic link refused: {name}'
+        dirs[:]=[name for name in dirs if name not in ('__pycache__','.DS_Store')]
+        for name in names:
+            p=Path(folder)/name
+            if name=='.DS_Store' or p==manifest:continue
+            assert p.is_file(),p
+            result.append(checked_path(p.relative_to(ROOT).as_posix()))
+    assert len({p.lower() for p in result})==len(result),'Duplicate package paths'
+    return sorted(result)
+prior=json.loads(manifest.read_text(encoding='utf-8'))
+prior_files=prior if isinstance(prior,list) else prior['files']
+known=[checked_path(item['file']) for item in prior_files]
+assert len(set(p.lower() for p in known))==len(known),'Duplicate manifest paths'
+approved=json.loads(os.environ.get('GME_NEW_PACKAGE_FILES','[]'))
+assert isinstance(approved,list) and all(isinstance(p,str) for p in approved)
+approved=[checked_path(p) for p in approved]
+assert len(set(approved))==len(approved),'Duplicate approvals'
+actual=inventory()
+extra=set(actual)-set(known);missing=set(known)-set(actual)
+assert not missing,f'Missing package files: {sorted(missing)}'
+assert extra==set(approved),f'Unreviewed package additions: {sorted(extra)}. Explicit GME_NEW_PACKAGE_FILES must match exactly.'
 # A previously saved passing report cannot authorize packaging new files.
 # Run the source/link checks now and stop before archive mutation on failure.
 verification_runs=[]
@@ -18,8 +49,6 @@ for verifier in ['verify-improvement-impact.py','verify-alarm-recovery.py','veri
     if run.returncode:
         print(run.stdout);print(run.stderr,file=sys.stderr);run.check_returncode()
     verification_runs.append(dict(script=verifier,script_sha256=sha(ROOT/verifier),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed'))
-prior=json.loads(manifest.read_text())
-prior_files=prior if isinstance(prior,list) else prior['files']
 source_files=[f for f in prior_files if f['file'].startswith(('sources/','PV01-detail/')) or f['file']=='assets/HMI_DECOATER.png']
 assert source_files
 for item in source_files:
@@ -40,7 +69,8 @@ assert json.loads((ROOT/'body-manual-verification.json').read_text())['body_manu
 lock=json.loads((ROOT/'registers/simulator-freeze.json').read_text())
 for file,digest in lock['files'].items():assert sha(ROOT/file)==digest,file
 
-files=[dict(file=p.relative_to(ROOT).as_posix(),sha256=sha(p),bytes=p.stat().st_size) for p in sorted(ROOT.rglob('*')) if p.is_file() and p!=manifest and not any(part in ('__pycache__','.git') for part in p.parts) and p.name!='.DS_Store']
+assert inventory()==actual,'Package inventory changed during verification'
+files=[dict(file=p,sha256=sha(ROOT/p),bytes=(ROOT/p).stat().st_size) for p in actual]
 additional=json.loads((ROOT/'registers/additional-source-manifest.json').read_text())
 for item in additional:assert sha(ROOT/item['file'])==item['sha256']
 record=dict(fresh_verification_runs=verification_runs,version=release['version'],date=release['released'],entry='index.html',simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',original_files_unchanged=len(source_files),additional_sources_verified=len(additional),field_verified=False,tia_verified=False,files=files)
@@ -58,5 +88,5 @@ with zipfile.ZipFile(temporary) as z:
 if archive.exists() and isinstance(prior,list) and not baseline.exists():shutil.copy2(archive,baseline)
 temporary.replace(archive)
 report=dict(fresh_verifiers=len(verification_runs),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed',archive=archive.name,version=release['version'],files=len(files)+1,original_files_unchanged=len(source_files),additional_sources_verified=len(additional),simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',bytes=archive.stat().st_size,sha256=sha(archive),crc_checked=True,all_file_hashes_checked=True,field_verified=False,tia_verified=False)
-(ROOT.parent/'GME-All-In-One-20261007.package-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+(ROOT.parent/f'GME-All-In-One-v{release["version"]}.package-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,ensure_ascii=False,indent=2))

@@ -1,11 +1,12 @@
 import { verifyAllInOne } from './verify-all-in-one.mjs';
+import { copyVerifiedManual } from './package-inventory.mjs';
 import { buildHeaders } from './headers.mjs';
 import { mkdir, cp, readFile, writeFile, readdir, stat, rm } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-await verifyAllInOne(root);
+const manualManifest=await verifyAllInOne(root);
 const source = resolve(root, 'manual');
 const destination = resolve(root, 'dist');
 // Recreate only generated output; cached platform config must not be republished.
@@ -27,7 +28,7 @@ await build({ entryPoints: [resolve(root, 'src/library.js')], outfile: resolve(d
 await build({ entryPoints: [resolve(root, 'src/auth-callback.js')], outfile: resolve(destination, 'auth-callback.js'), bundle: true, format: 'esm', platform: 'browser', target: 'es2022', minify: true });
 let count = 0;
 async function walk(folder) { for (const item of await readdir(folder)) { const path = resolve(folder, item); if ((await stat(path)).isDirectory()) await walk(path); else count++; } }
-await cp(resolve(root, 'all-in-one'), resolve(destination, 'all-in-one'), { recursive: true });
+await copyVerifiedManual(resolve(root, 'all-in-one'), resolve(destination, 'all-in-one'), manualManifest);
 await buildHeaders(destination);
 await walk(destination);
 console.log(`GME 매뉴얼 홈페이지: ${count}개 공개 파일 준비 완료`);

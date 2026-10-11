@@ -1,6 +1,6 @@
-# 최신 작업: GME All-in-One v1.2.0 · BC01 자료·기록 도구
+# 최신 작업: GME All-in-One v1.3.0 · BC01 기록 보존·작업 재개 보완
 
-[다른 컴퓨터에서 재개](WORKSPACE-HANDOFF.md) · [작업 지침](AGENTS.md) · [현재 작업](all-in-one/ACTIVE-WORK.md) · [새 기능 안내](all-in-one/BC01-RECORD-TOOLS-20261011.md) · [버전](VERSION.json). 프로그램과 원본·MD·생성기·검증 파일은 이 저장소에서 함께 관리합니다.
+[다른 컴퓨터에서 재개](WORKSPACE-HANDOFF.md) · [작업 지침](AGENTS.md) · [현재 작업](all-in-one/ACTIVE-WORK.md) · [v1.3 보완 안내](all-in-one/BC01-PRESERVATION-20261011.md) · [네 도구 안내](all-in-one/BC01-RECORD-TOOLS-20261011.md) · [버전](VERSION.json). 프로그램과 원본·MD·생성기·검증 파일은 이 저장소에서 함께 관리합니다.
 
 # GME HMI와 PLC 매뉴얼 홈페이지
 

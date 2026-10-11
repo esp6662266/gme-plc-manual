@@ -1271,6 +1271,203 @@
           }
         ],
         "field_verified": false
+      },
+      "additional_signals": [
+        {
+          "id": "bc01-raw-i00",
+          "role": "raw_inputs",
+          "name": "bc01_fbk",
+          "addresses": [
+            "%I0.0"
+          ],
+          "refs": [
+            {
+              "network": 1018,
+              "oref": "1126",
+              "source": "sources/decoded-original/0308-FlgNet.xml"
+            }
+          ],
+          "boundary": "원본 LAD 표기는 BC01_Fbk. Inputs.BC01 run으로의 전달·반전·현재 CPU 대응은 미확정.",
+          "optional": true,
+          "reference_documents": [
+            "registers/plc-symbols.csv"
+          ]
+        },
+        {
+          "id": "bc01-raw-i01",
+          "role": "raw_inputs",
+          "name": "bc01_all_inv",
+          "addresses": [
+            "%I0.1"
+          ],
+          "refs": [],
+          "boundary": "확보 LAD의 직접 원시 참조 없음. Inputs.BC01_All_inv와의 전달·정상 극성은 미확정.",
+          "optional": true,
+          "reference_documents": [
+            "registers/plc-symbols.csv"
+          ]
+        },
+        {
+          "id": "bc01-raw-i62",
+          "role": "raw_inputs",
+          "name": "bc01_tripwire",
+          "addresses": [
+            "%I6.2"
+          ],
+          "refs": [],
+          "boundary": "확보 LAD의 직접 원시 참조 없음. Inputs.BC01 trip wire와의 전달·정상 극성은 미확정.",
+          "optional": true,
+          "reference_documents": [
+            "registers/plc-symbols.csv"
+          ]
+        },
+        {
+          "id": "bc01-processed-trip",
+          "role": "responses",
+          "name": "Inputs.BC01 trip wire",
+          "addresses": [],
+          "refs": [
+            {
+              "network": 1786,
+              "oref": "242",
+              "source": "sources/decoded-original/0423-FlgNet.xml"
+            },
+            {
+              "network": 1786,
+              "oref": "245",
+              "source": "sources/decoded-original/0423-FlgNet.xml"
+            }
+          ],
+          "boundary": "처리 신호의 접점 참조. 현재 주소·원시I6.2 전달·정상 극성은 미확정.",
+          "optional": true,
+          "reference_documents": []
+        },
+        {
+          "id": "bc01-timer-tag51",
+          "role": "timers",
+          "name": "Tag_51",
+          "addresses": [
+            "%T39"
+          ],
+          "refs": [
+            {
+              "network": 1785,
+              "oref": "232",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1785,
+              "oref": "233",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            }
+          ],
+          "boundary": "보존 심볼 TIMER %T39. SD 코일/감시 접점의 현재 상태·경과시간을 자동 계산하지 않습니다.",
+          "optional": true,
+          "reference_documents": [
+            "registers/plc-symbols.csv"
+          ]
+        },
+        {
+          "id": "bc01-alarm-fault",
+          "role": "alarms",
+          "name": "Allarm.BC_01_FAULT",
+          "addresses": [],
+          "refs": [
+            {
+              "network": 1785,
+              "oref": "235",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1785,
+              "oref": "237",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1785,
+              "oref": "238",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1935,
+              "oref": "204",
+              "source": "sources/decoded-original/0242-FlgNet.xml"
+            }
+          ],
+          "boundary": "저장 알람 상태의 관찰이며 현재 고장 원인·원인 해소·재기동·실제 복구를 확정하지 않습니다.",
+          "optional": true,
+          "reference_documents": []
+        },
+        {
+          "id": "bc01-alarm-inv",
+          "role": "alarms",
+          "name": "Allarm.BC01_INV",
+          "addresses": [],
+          "refs": [
+            {
+              "network": 1785,
+              "oref": "34",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1785,
+              "oref": "38",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1785,
+              "oref": "41",
+              "source": "sources/decoded-original/0422-FlgNet.xml"
+            },
+            {
+              "network": 1935,
+              "oref": "23",
+              "source": "sources/decoded-original/0242-FlgNet.xml"
+            }
+          ],
+          "boundary": "저장 알람 상태의 관찰이며 현재 고장 원인·원인 해소·재기동·실제 복구를 확정하지 않습니다.",
+          "optional": true,
+          "reference_documents": []
+        },
+        {
+          "id": "bc01-alarm-fc",
+          "role": "alarms",
+          "name": "Allarm.BC_01_FC",
+          "addresses": [],
+          "refs": [
+            {
+              "network": 1786,
+              "oref": "243",
+              "source": "sources/decoded-original/0423-FlgNet.xml"
+            },
+            {
+              "network": 1786,
+              "oref": "246",
+              "source": "sources/decoded-original/0423-FlgNet.xml"
+            },
+            {
+              "network": 1786,
+              "oref": "247",
+              "source": "sources/decoded-original/0423-FlgNet.xml"
+            },
+            {
+              "network": 1935,
+              "oref": "206",
+              "source": "sources/decoded-original/0242-FlgNet.xml"
+            }
+          ],
+          "boundary": "저장 알람 상태의 관찰이며 현재 고장 원인·원인 해소·재기동·실제 복구를 확정하지 않습니다.",
+          "optional": true,
+          "reference_documents": []
+        }
+      ],
+      "additional_signal_sources": {
+        "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+        "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+        "sources/decoded-original/0242-FlgNet.xml": "aca0cbc07c04fae72012760899cba246fe65c78ae234cef59e6439dc1172b715",
+        "sources/decoded-original/0308-FlgNet.xml": "4594c2942fa2de3937b61830619fbd26c17b59a2617fec33f76d8cefebecab80",
+        "sources/decoded-original/0422-FlgNet.xml": "8ad017c574a431ebffe033d268fe85fb61b1492ec10e7a26b29f2b7f850d7f4f",
+        "sources/decoded-original/0423-FlgNet.xml": "b6567e6973d935866d943406a7113191c7767ebac658293fb15c742104903cb3"
       }
     },
     {

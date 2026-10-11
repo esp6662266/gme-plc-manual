@@ -1,6 +1,6 @@
-# 다른 컴퓨터에서 최신 GME 작업 재개 — v1.2.0
+# 다른 컴퓨터에서 최신 GME 작업 재개 — v1.3.0
 
-최신 작업 원본은 이 저장소 main의 all-in-one/입니다. 버전명은 VERSION.json, 고정 배포판은 v1.2.0 태그, 게시 확인은 PUBLICATION_STATUS.md입니다. 예전 ZIP·OTHER_PC_HANDOFF.md·시뮬레이션 계획은 과거 자료이며 이 문서와 AGENTS.md, all-in-one/ACTIVE-WORK.md를 우선합니다.
+최신 작업 원본은 이 저장소 main의 all-in-one/입니다. 버전명은 VERSION.json, 고정 배포판은 v1.3.0 태그, 게시 확인은 PUBLICATION_STATUS.md입니다. 예전 ZIP·OTHER_PC_HANDOFF.md·시뮬레이션 계획은 과거 자료이며 이 문서와 AGENTS.md, all-in-one/ACTIVE-WORK.md를 우선합니다.
 
 ## 처음 내려받기
 
@@ -17,7 +17,7 @@ npm test
 npm run build
 ```
 
-npm build는 저장소에 포함된 전체 올인원 manifest·원본·중지 자산 해시를 검사하고 dist/를 생성합니다. 별도 Mac 폴더·/private/tmp·옛 ZIP 해제가 필요하지 않습니다. 현재 정적 웹 빌드를 새 clone에서 확인했으며 Windows 실제 장비에서의 TIA/PLC 실행 검증은 별도입니다.
+npm build는 저장소의 실제 파일 목록과 manifest를 양방향 대조하고 원본·중지 자산 해시를 검사한 뒤 승인된 파일만 dist/에 복사합니다. 복사 후 해시도 확인하며 누락·추가 파일·심볼릭 링크는 차단합니다. 별도 Mac 폴더·/private/tmp·옛 ZIP 해제가 필요하지 않습니다. 현재 정적 웹 빌드를 새 clone에서 확인했으며 Windows 실제 장비에서의 TIA/PLC 실행 검증은 별도입니다.
 
 ## 기존 컴퓨터에서 최신 작업 받기
 
@@ -29,7 +29,7 @@ git pull --ff-only origin main
 git log -1 --oneline
 ```
 
-수정 파일이 있으면 먼저 diff와 백업/커밋을 확인합니다. 미완료 작업을 강제로 reset하거나 덮어쓰지 않습니다. 최신 main은 이후 작업을 포함할 수 있으며 특정 배포판을 확인하려면 v1.2.0 태그의 별도 복사본을 사용합니다.
+수정 파일이 있으면 먼저 diff와 백업/커밋을 확인합니다. 미완료 작업을 강제로 reset하거나 덮어쓰지 않습니다. 최신 main은 이후 작업을 포함할 수 있으며 특정 배포판을 확인하려면 v1.3.0 태그의 별도 복사본을 사용합니다.
 
 ## 작업 위치와 검증
 
@@ -38,16 +38,22 @@ git log -1 --oneline
 | all-in-one/ | 현재 BC01 매뉴얼·소스·생성기·원본·검증 문서 |
 | all-in-one/ACTIVE-WORK.md | 가장 최근 목표·범위·완료/미확정 상태 |
 | all-in-one/BC01-RECORD-TOOLS-20261011.md | 새 네 기능과 기록 이동·검증 결과 |
-| scripts/ | 정적 웹 복사·manifest 검증·CSP 생성 |
+| all-in-one/BC01-PRESERVATION-20261011.md | v1.3 선택 관찰·전체 note 내보내기·근거 버전 안내 |
+| scripts/ | Python 실행기·파일 목록/해시 검증·정적 웹 복사·CSP 생성 |
 | manual/,src/,netlify/ | 기존22장 홈페이지·자료실·인증/저장 구성 |
 
 Python 3.10 이상이 있으면 다음 명령으로 BC01 검사와 필수14검사·ZIP 검증을 재실행합니다. Python 작업은 UTF-8 모드로 실행합니다. Windows에서 전체 문서 재생성이 필요하면 WSL 환경을 사용하며 native Windows 생성기의 전체 호환성은 별도 검증 대상입니다.
 
 ```sh
+npm run check:python
 npm run verify:bc01
 npm run verify:manual
 npm run serve:manual
 ```
+
+check:python은 Python 준비 확인입니다. 실행기는 Windows py -3, python3, python을 탐지하고 3.10 이상을 요구합니다. 특정 실행 파일은 GME_PYTHON에 경로 하나를 지정합니다(인자를 포함하지 않음). verify:manual은 단순 읽기 검사가 아니라 필수14검사와 manifest·GME-All-In-One-v1.3.0.zip 및 검증 보고서를 재생성합니다. Python 최적화로 검사가 생략되는 실행은 거부합니다. npm build 자체는 Python 없이 저장된 검증 패키지로 실행할 수 있습니다.
+
+패키지에 새 파일을 넣을 때는 diff·내용을 검토한 뒤 GME_NEW_PACKAGE_FILES에 새 상대경로의 JSON 목록(예: ["새안내.md"])을 해당 실행에만 지정합니다. 새 파일 집합과 정확히 같아야 하며 성공 후 환경변수를 해제합니다. 기존 파일 삭제·미검토 개인 기록의 자동 포함은 허용하지 않습니다. ZIP은 버전별 Release 자산으로 올리고 예전 태그·ZIP은 덮어쓰지 않습니다.
 
 로컬 주소는 http://127.0.0.1:8770/ 입니다. 내용 변경 후에는 필요한 생성기만 실행하고, 필수 검사 → manifest/ZIP → npm build → NETLIFY 환경의 CSP 일치 확인 → Git commit/push 순서로 진행합니다. npm build가 바꾼 netlify.toml도 커밋합니다. 원본 초기 가져오기용 build-manual.py/decode-backup.py와 시뮬레이터 생성/행동 시험을 일반 재개 명령으로 실행하지 않습니다.
 

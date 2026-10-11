@@ -1124,13 +1124,14 @@
       const draft={...repairRecords.fromRecord(note.repair_observation,schema),noteId:note.id,base_note:JSON.stringify(note),title:note.title};
       const key=repairRecords.keyFor(note.equipment);
       try{drafts=storeDraft(key,draft);}catch(_){drafts[key]=draft;}
+      if(note.equipment==='P01')lastRenderedRoute=null;
       route('repair-record',note.equipment);
     } else if (b.dataset.exportRepair) {
       let latest;
       try{latest=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment);}catch(_){$('app-message').textContent='저장된 자료를 읽지 못했습니다. 기존 기록을 보존하고 확인해 주세요.';return;}
       const note=latest.find(n=>n.id===b.dataset.exportRepair);
       if(!note?.repair_observation)return;
-      const payload={application:'GME All-in-One',exported:new Date().toISOString(),note_id:note.id,title:note.title,updated:note.updated,observation:note.repair_observation};
+      const payload=window.GMEBC01Tools.backupEnvelope([note],data);
       const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'}));
       const a=document.createElement('a');a.href=url;a.download=`GME-repair-${note.equipment}-${note.id}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
     }
@@ -1139,7 +1140,7 @@
     else if (b.hasAttribute('data-export-notes')) {
       try { notes=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment); }
       catch (_) { $('app-message').textContent='저장된 메모를 읽지 못해 백업을 만들지 않았습니다. 기존 저장 자료를 보존하고 확인해 주세요.'; return; }
-      const payload = JSON.stringify({schema_version:1, application:'GME All-in-One', exported:new Date().toISOString(), notes}, null, 2);
+      const payload = JSON.stringify(window.GMEBC01Tools.backupEnvelope(notes,data), null, 2);
       const url = URL.createObjectURL(new Blob([payload],{type:'application/json;charset=utf-8'}));
       const a = document.createElement('a'); a.href = url; a.download = `GME-work-notes-${new Date().toISOString().slice(0,10)}.json`; a.click();
       setTimeout(() => URL.revokeObjectURL(url),1000);
@@ -1209,6 +1210,7 @@
       kind:isRepair?'수리·증상 기록':String(fields.get('kind') || '확인 사항'), references:isRepair?schema.manual:String(fields.get('references') || '').slice(0,500),
       review_id:reviewMap.has(fields.get('review_id'))?String(fields.get('review_id')):(original?.review_id || ''),updated:new Date().toISOString()};
     if(isRepair)note.repair_observation=observation;
+    if(state.selected==='P01')note.saved_with={...original?.saved_with,application_version:data.version,source_bundle_sha256:data.bc01_standard.source_bundle_sha256,saved_at:note.updated,reference_scope:'BC01 reference materials at saving; not observation-time proof'};
     savingNote=true;
     const submitButton=e.target.querySelector('button[type="submit"]');
     if(submitButton)submitButton.disabled=true;

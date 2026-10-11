@@ -53,6 +53,30 @@ assert.ok(compared.find(r=>r.key==='signal:'+schema.signals[0].id+':addresses').
 assert.ok(!compared.find(r=>r.key==='signal:future:evidence').changed);
 assert.ok(plain(api.comparisonRows(a,a,schema)).every(r=>!r.changed));
 const moduleSource=fs.readFileSync(__dirname+'/assets/bc01-tools.js','utf8');
+// Whole-note exports must survive a new-PC restore without losing metadata.
+const preserved=make('exported');preserved.review_id='qa-review';preserved.kind='QA preserved kind';preserved.references='QA reference';preserved.text='QA original text';
+const original=JSON.stringify(preserved),envelope=plain(api.backupEnvelope([preserved],data,'2026-10-11T00:00:00Z'));
+assert.equal(JSON.stringify(preserved),original);assert.deepEqual(parse(JSON.stringify(envelope)).notes,[preserved]);
+assert.equal(envelope.generated_with.application_version,data.version);
+assert.equal(envelope.generated_with.reference_scope.includes('not observation-time'),true);
+assert.match(envelope.generated_with.source_bundle_sha256,/^[a-f0-9]{64}$/);
+envelope.generated_with.source_hashes.test='changed';assert.equal(data.bc01_standard.source_hashes.test,undefined);
+const stepChanged=plain(preserved);stepChanged.id='new-step';
+stepChanged.repair_observation.decision_observations[0].title='QA changed stored title';
+stepChanged.repair_observation.decision_observations[0].source_manual='QA changed source';
+const stepRows=plain(api.comparisonRows(preserved,stepChanged,schema));
+assert.equal(stepRows.filter(r=>r.changed).length,2);
+assert.ok(stepRows.find(r=>r.key.endsWith(':source_manual')).changed);
+// Old records remain readable, new optional values round trip, future rows survive.
+const legacy=plain(preserved.repair_observation);legacy.observations=legacy.observations.slice(0,4);
+legacy.observations.push({id:'future-observation',value:'later',extra:'retained'});
+const edited=plain(repair.collect(schema,{...repair.fromRecord(legacy,schema),'bc01-raw-i00_value':'0'},legacy));
+assert.equal(edited.observations.length,13);assert.equal(edited.observations.find(r=>r.id==='bc01-raw-i00').value,'0');
+assert.equal(edited.observations.at(-1).extra,'retained');
+assert.equal(plain(repair.fromRecord(edited,schema))['bc01-raw-i00_value'],'0');
+assert.equal(schema.additional_signals.length,8);
+assert.ok(schema.additional_signals.filter(r=>['bc01-raw-i01','bc01-raw-i62'].includes(r.id)).every(r=>r.refs.length===0));
+assert.ok(data.repair_record_forms.profiles.filter(p=>p.key!=='P01').every(p=>!p.additional_signals));
 for(const token of ['iframe','data-compare-path','미확정','data-restore-commit','data-report-print','data-record-compare'])assert.ok(moduleSource.includes(token));
 const paths=data.bc01_standard.source_locations.map(s=>s.path).concat(['networks/network-1018.html']);
 for(const path of paths){const [file,id]=path.split('#');assert.ok(data.resources.includes(file));const html=fs.readFileSync(__dirname+'/'+file,'utf8');if(id)assert.ok(html.includes('id="'+id+'"'));}

@@ -1,4 +1,6 @@
-# 최신 버전: v1.2.0 · BC01 자료·기록 도구
+[v1.3 기록 보존·작업 재개 보완](BC01-PRESERVATION-20261011.md)
+
+# 최신 버전: v1.3.0 · BC01 기록 보존·작업 재개 보완
 
 [네 기능·검증·기록 이동 안내](BC01-RECORD-TOOLS-20261011.md) · [현재 작업 상태](ACTIVE-WORK.md) · [버전 정보](VERSION.json). 다른 컴퓨터에서는 GitHub 저장소 루트 WORKSPACE-HANDOFF.md를 먼저 읽습니다.
 

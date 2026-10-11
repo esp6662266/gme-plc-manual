@@ -143,13 +143,206 @@ def evidence_plan(record):
         construction_pages=[dict(label='추가 시공도면 PDF '+str(page),path=construction['source']+'#page='+str(page))
             for page in install['pages']] if install else [],
         field_verified=False)
+additional_bc01_signals=json.loads(r'''[
+  {
+    "id": "bc01-raw-i00",
+    "role": "raw_inputs",
+    "name": "bc01_fbk",
+    "addresses": [
+      "%I0.0"
+    ],
+    "refs": [
+      {
+        "network": 1018,
+        "oref": "1126",
+        "source": "sources/decoded-original/0308-FlgNet.xml"
+      }
+    ],
+    "boundary": "원본 LAD 표기는 BC01_Fbk. Inputs.BC01 run으로의 전달·반전·현재 CPU 대응은 미확정.",
+    "optional": true,
+    "reference_documents": [
+      "registers/plc-symbols.csv"
+    ]
+  },
+  {
+    "id": "bc01-raw-i01",
+    "role": "raw_inputs",
+    "name": "bc01_all_inv",
+    "addresses": [
+      "%I0.1"
+    ],
+    "refs": [],
+    "boundary": "확보 LAD의 직접 원시 참조 없음. Inputs.BC01_All_inv와의 전달·정상 극성은 미확정.",
+    "optional": true,
+    "reference_documents": [
+      "registers/plc-symbols.csv"
+    ]
+  },
+  {
+    "id": "bc01-raw-i62",
+    "role": "raw_inputs",
+    "name": "bc01_tripwire",
+    "addresses": [
+      "%I6.2"
+    ],
+    "refs": [],
+    "boundary": "확보 LAD의 직접 원시 참조 없음. Inputs.BC01 trip wire와의 전달·정상 극성은 미확정.",
+    "optional": true,
+    "reference_documents": [
+      "registers/plc-symbols.csv"
+    ]
+  },
+  {
+    "id": "bc01-processed-trip",
+    "role": "responses",
+    "name": "Inputs.BC01 trip wire",
+    "addresses": [],
+    "refs": [
+      {
+        "network": 1786,
+        "oref": "242",
+        "source": "sources/decoded-original/0423-FlgNet.xml"
+      },
+      {
+        "network": 1786,
+        "oref": "245",
+        "source": "sources/decoded-original/0423-FlgNet.xml"
+      }
+    ],
+    "boundary": "처리 신호의 접점 참조. 현재 주소·원시I6.2 전달·정상 극성은 미확정.",
+    "optional": true,
+    "reference_documents": []
+  },
+  {
+    "id": "bc01-timer-tag51",
+    "role": "timers",
+    "name": "Tag_51",
+    "addresses": [
+      "%T39"
+    ],
+    "refs": [
+      {
+        "network": 1785,
+        "oref": "232",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1785,
+        "oref": "233",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      }
+    ],
+    "boundary": "보존 심볼 TIMER %T39. SD 코일/감시 접점의 현재 상태·경과시간을 자동 계산하지 않습니다.",
+    "optional": true,
+    "reference_documents": [
+      "registers/plc-symbols.csv"
+    ]
+  },
+  {
+    "id": "bc01-alarm-fault",
+    "role": "alarms",
+    "name": "Allarm.BC_01_FAULT",
+    "addresses": [],
+    "refs": [
+      {
+        "network": 1785,
+        "oref": "235",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1785,
+        "oref": "237",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1785,
+        "oref": "238",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1935,
+        "oref": "204",
+        "source": "sources/decoded-original/0242-FlgNet.xml"
+      }
+    ],
+    "boundary": "저장 알람 상태의 관찰이며 현재 고장 원인·원인 해소·재기동·실제 복구를 확정하지 않습니다.",
+    "optional": true,
+    "reference_documents": []
+  },
+  {
+    "id": "bc01-alarm-inv",
+    "role": "alarms",
+    "name": "Allarm.BC01_INV",
+    "addresses": [],
+    "refs": [
+      {
+        "network": 1785,
+        "oref": "34",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1785,
+        "oref": "38",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1785,
+        "oref": "41",
+        "source": "sources/decoded-original/0422-FlgNet.xml"
+      },
+      {
+        "network": 1935,
+        "oref": "23",
+        "source": "sources/decoded-original/0242-FlgNet.xml"
+      }
+    ],
+    "boundary": "저장 알람 상태의 관찰이며 현재 고장 원인·원인 해소·재기동·실제 복구를 확정하지 않습니다.",
+    "optional": true,
+    "reference_documents": []
+  },
+  {
+    "id": "bc01-alarm-fc",
+    "role": "alarms",
+    "name": "Allarm.BC_01_FC",
+    "addresses": [],
+    "refs": [
+      {
+        "network": 1786,
+        "oref": "243",
+        "source": "sources/decoded-original/0423-FlgNet.xml"
+      },
+      {
+        "network": 1786,
+        "oref": "246",
+        "source": "sources/decoded-original/0423-FlgNet.xml"
+      },
+      {
+        "network": 1786,
+        "oref": "247",
+        "source": "sources/decoded-original/0423-FlgNet.xml"
+      },
+      {
+        "network": 1935,
+        "oref": "206",
+        "source": "sources/decoded-original/0242-FlgNet.xml"
+      }
+    ],
+    "boundary": "저장 알람 상태의 관찰이며 현재 고장 원인·원인 해소·재기동·실제 복구를 확정하지 않습니다.",
+    "optional": true,
+    "reference_documents": []
+  }
+]''')
 profiles=[]
 for r in repair['records']:
-    profiles.append(dict(key=r['key'],name=r['name'],reference_plc_id=r['plc_id'],boundary=r['boundary'],
+    profile=dict(key=r['key'],name=r['name'],reference_plc_id=r['plc_id'],boundary=r['boundary'],
         identity_confirmed=False,field_verified=False,
         signals=[dict(id='signal-'+str(i+1),**b) for i,b in enumerate(r['bindings'])],
         steps=r['decisions'],manual='repair-guides/'+r['key']+'.html',
-        blank_template='registers/repair-observation-'+r['key']+'.json',evidence_plan=evidence_plan(r)))
+        blank_template='registers/repair-observation-'+r['key']+'.json',evidence_plan=evidence_plan(r))
+    if r['key']=='P01':
+        profile['additional_signals']=additional_bc01_signals
+        profile['additional_signal_sources']={path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in ['registers/plc-symbols.csv','registers/signal-trace.json']+sorted({ref['source'] for signal in additional_bc01_signals for ref in signal['refs']})}
+    profiles.append(profile)
 data=dict(schema_version=1,date='2026-10-08',scope='User-entered local repair observations; no automatic resolution or PLC writes',
     source=dict(path='registers/repair-decision.json',sha256=hashlib.sha256(source.read_bytes()).hexdigest()),
     profiles=profiles,counts=dict(profiles=len(profiles),signals=sum(len(r['signals']) for r in profiles),steps=sum(len(r['steps']) for r in profiles)),

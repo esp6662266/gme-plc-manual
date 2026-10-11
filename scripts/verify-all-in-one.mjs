@@ -2,11 +2,13 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
+import { assertPackageInventory } from './package-inventory.mjs';
 export async function verifyAllInOne(root) {
   const directory=join(root,'all-in-one');
   const json=async file=>JSON.parse(await readFile(join(directory,file),'utf8'));
   const sha=async file=>createHash('sha256').update(await readFile(join(directory,file))).digest('hex');
   const manifest=await json('all-in-one-package-manifest.json');
+  await assertPackageInventory(directory,manifest);
   const release=JSON.parse(await readFile(join(root,'VERSION.json'),'utf8'));
   const packageInfo=JSON.parse(await readFile(join(root,'package.json'),'utf8'));
   assert.equal(manifest.version,release.version,'Package manifest version differs from current release');
@@ -26,4 +28,5 @@ export async function verifyAllInOne(root) {
   assert.equal(data.project_work_scope.full_catalog_role,'preserved_reference_only');
   assert.equal(data.project_work_scope.priority_completion_proven,false);
   console.log(`GME source package verified: ${manifest.files.length+1} files; 14 saved source checks; simulator hashes unchanged`);
+  return {...manifest,manifest_sha256:await sha('all-in-one-package-manifest.json')};
 }

@@ -389,6 +389,19 @@ for profile in record_forms['profiles']:
     assert profile['reference_plc_id']==original['plc_id'] and profile['boundary']==original['boundary']
     assert profile['steps']==original['decisions']
     assert [{k:v for k,v in s.items() if k!='id'} for s in profile['signals']]==original['bindings']
+    extra=profile.get('additional_signals',[])
+    if profile['key']=='P01':
+        assert len(extra)==8 and all(s['optional'] and s['boundary'] for s in extra)
+        assert [s['id'] for s in extra[:3]]==['bc01-raw-i00','bc01-raw-i01','bc01-raw-i62']
+        assert [s['addresses'] for s in extra[:3]]==[['%I0.0'],['%I0.1'],['%I6.2']]
+        assert extra[1]['refs']==extra[2]['refs']==[]
+        for path,digest in profile['additional_signal_sources'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest
+        for s in extra:
+            for ref in s['refs']:
+                assert any(u['network']==ref['network'] and u['oref']==ref['oref'] and u['file']==ref['source'] and u['name'].casefold()==s['name'].casefold() and u['scope']=='Global' for u in signal_trace['usages']),(s['name'],ref)
+                routes.add('networks/network-'+str(ref['network'])+'.html')
+            routes.update(s['reference_documents'])
+    else:assert not extra
     for signal in profile['signals']:
         routes.update('networks/network-'+str(ref['network'])+'.html' for ref in signal['refs'])
     routes.update(profile['manual']+'#'+step['common'] for step in profile['steps'])
@@ -652,6 +665,8 @@ for ref in standard['source_locations']:
     assert any(c.get('UId')==ref['uid'] for c in native.findall('s:Parts/*' if ref['kind']=='part' else 's:Wires/s:Wire',ns))
 assert len(standard['source_locations'])==56
 for path,digest in standard['source_hashes'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
+assert standard['source_bundle_sha256']==hashlib.sha256(json.dumps(standard['source_hashes'],sort_keys=True,separators=(',',':')).encode()).hexdigest()
+assert all(standard['source_hashes'].get(path)==digest for path,digest in next(p for p in data['repair_record_forms']['profiles'] if p['key']=='P01')['additional_signal_sources'].items())
 # Drawing UI reuses existing evidence, and supports current21 only.
 drawing=data['drawing_workspace'];assert [p['key'] for p in drawing['profiles']]==[p['key'] for p in data['priority'][:21]]
 for path,digest in {**drawing['source_hashes'],**drawing['preview_hashes']}.items():

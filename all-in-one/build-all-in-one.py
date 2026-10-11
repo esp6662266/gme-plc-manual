@@ -13,6 +13,7 @@ from html.parser import HTMLParser
 from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent
+release=json.loads((ROOT/'VERSION.json').read_text(encoding='utf-8'))
 
 def readcsv(name):
     with (ROOT / 'registers' / name).open(encoding='utf-8-sig', newline='') as f:
@@ -101,7 +102,7 @@ virtual_results = json.loads(results_path.read_text()) if results_path.exists() 
 if virtual_results and virtual_results.get('model_sha256') != hashlib.sha256(program_path.read_bytes()).hexdigest():
     virtual_results = None  # A changed source model must be tested again.
 data = dict(
-    version='1.2.0', updated='2026-10-11', equipment=specs, priority=priority,
+    version=release['version'], updated=release['released'], equipment=specs, priority=priority,
     priority_source=dict(canvas='디코팅 시안', url='https://sejin-facility-manager.romancetiger.chatgpt.site/',
                          observed='2026-10-07', equipment_count=23, edge_count=24, group_count=5,
                          revision='2026-09-30T21:57:30.103Z',
@@ -445,6 +446,8 @@ data['bc01_standard']['inverter_comparison']=[
  dict(aspect='속도 설정·PLC 아날로그 출력',saved='HMI_DB.SET_PERC_BC01 DB41.DBW52(Int) / Mul 상수272 / 102A5_SPARE0 %QW288(Word). 보존 선언·핀 연결.',current='현재 ABB 입력 단자·설정/단위·PLC 최종값과 실제 속도는 확인 전.',needed='현재 모델/승인 접속·아날로그 입력 기능·HMI 이벤트/PLC 쓰기·관찰 근거. 보호값 변경은 수행하지 않음.',targets=[bc01_target('속도·주소 원본 근거','control','speed')])]
 
 data['bc01_standard']['source_hashes'].update({path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in sorted(bc01_extra_sources)})
+data['bc01_standard']['source_hashes'].update(next(p for p in data['repair_record_forms']['profiles'] if p['key']=='P01').get('additional_signal_sources',{}))
+data['bc01_standard']['source_bundle_sha256']=hashlib.sha256(json.dumps(data['bc01_standard']['source_hashes'],sort_keys=True,separators=(',',':')).encode()).hexdigest()
 dump(ROOT / 'registers/all-in-one-data.json', data)
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 (ROOT / 'assets/all-in-one-data.js').write_text('window.GME_APP_DATA = ' + payload + ';\n', encoding='utf-8')
@@ -478,7 +481,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <label class="sr-only" for="equipment-search">설비·주소 검색</label><input id="equipment-search" type="search" placeholder="설비명·태그·I/O 주소 검색" autocomplete="off">
 <label class="sr-only" for="equipment-group">설비 영역</label><select id="equipment-group"><option value="">전체 영역</option></select>
 <div id="equipment-list" class="equipment-list" aria-label="설비 목록"></div>
-</section><p class="sidebar-foot">v1.2.0 · 매뉴얼·수리·구조 분석<br>시뮬레이터 영구 중지</p></aside>
+</section><p class="sidebar-foot">v__GME_VERSION__ · 매뉴얼·수리·구조 분석<br>시뮬레이터 영구 중지</p></aside>
 <div class="app-body"><header class="app-header"><div><span class="eyebrow">매뉴얼 · 수리 · 구조 분석 · 개선</span><strong>하나의 화면, 같은 설비 기준</strong></div><div class="header-status"><span class="dot"></span>매뉴얼 작성 중 <span class="chip">시뮬레이터 영구 중지</span></div></header>
 <section class="context" aria-labelledby="context-title"><div><span id="context-kicker" class="eyebrow"></span><h1 id="context-title"></h1><p id="context-meta"></p></div><button type="button" id="context-summary">설비 요약</button></section>
 <nav id="device-tabs" class="device-tabs" aria-label="선택 설비 작업"></nav>
@@ -491,7 +494,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 
 # Refresh the manual UI and register bundle after rebuilds without changing
 # the preserved simulator assets or requiring a cache-clearing action.
-entry=(ROOT/'index.html').read_text(encoding='utf-8')
+entry=(ROOT/'index.html').read_text(encoding='utf-8').replace('__GME_VERSION__',release['version'])
 for resource in ('assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css'):
     digest=hashlib.sha256((ROOT/resource).read_bytes()).hexdigest()[:12]
     entry=entry.replace('"'+resource+'"','"'+resource+'?v='+digest+'"')

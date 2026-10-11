@@ -54,7 +54,7 @@
       if(n.repair_observation)validateRecord(n.repair_observation);
     }
     if(!eligible.length)throw new Error('이 파일에 가져올 BC01(P01) 기록이 없습니다.');
-    return {notes:clone(eligible),skipped:all.length-eligible.length,total:all.length};
+    return {notes:clone(eligible),skipped:all.length-eligible.length,total:all.length,generated_with:data.generated_with?clone(data.generated_with):null};
   }
   function planRestore(current,incoming) {
     return incoming.map(note=>{const existing=current.find(n=>n.id===note.id);return {note,existing:existing||null,
@@ -89,13 +89,17 @@
   function recordRows(note,schema) {
     const r=validateRecord(note.repair_observation);
     const rows=[['title','기록 제목',note.title],['updated','브라우저 저장 시각',note.updated],['status','기록 구분',r.status],['time_zone','관찰 시간대',r.time_zone]];
+    for(const [key,label] of [['application_version','저장에 사용한 매뉴얼 버전'],['source_bundle_sha256','저장 기준 자료 묶음 SHA256'],['saved_at','기록 저장 기준 시각']])rows.push(['saved_with:'+key,label,note.saved_with?.[key]]);
     for(const [key,label] of root.GMERepairRecords.fields)rows.push([key,label,r[key]]);
     for(const s of r.observations) {
-      const label=schema.signals.find(x=>x.id===s.id)?.name||s.name||s.id;
+      const label=s.name||root.GMERepairRecords.signalsFor(schema).find(x=>x.id===s.id)?.name||s.id;
       for(const [key,title] of [['name','저장된 태그명'],['addresses','저장된 주소'],['role','신호 구분'],['source_refs','저장된 원본 참조']])rows.push(['signal:'+s.id+':'+key,label+' · '+title,s[key]]);
       for(const [key,title] of [['value','관찰값'],['observed_at','관찰 시각'],['evidence','수집 근거']])rows.push(['signal:'+s.id+':'+key,label+' · '+title,s[key]]);
     }
-    for(const s of r.decision_observations)rows.push(['step:'+s.id,schema.steps.find(x=>x.id===s.id)?.title||s.title||s.id,s.observation]);
+    for(const s of r.decision_observations) {
+      const label=s.title||schema.steps.find(x=>x.id===s.id)?.title||s.id;
+      rows.push(['step:'+s.id,label+' · 관찰',s.observation],['step:'+s.id+':title',label+' · 저장된 제목',s.title],['step:'+s.id+':source_manual',label+' · 저장된 판단 근거',s.source_manual]);
+    }
     return rows;
   }
   function comparisonRows(before,after,schema) {
@@ -103,7 +107,15 @@
     return [...new Set([...a.keys(),...b.keys()])].map(k=>({key:k,label:a.get(k)?.[1]||b.get(k)[1],before:display(a.get(k)?.[2]),after:display(b.get(k)?.[2]),
       changed:JSON.stringify(a.get(k)?.[2]??null)!==JSON.stringify(b.get(k)?.[2]??null)}));
   }
-  const api={parseBackup,planRestore,applyRestore,preserveMerge,validateRecord,recordRows,comparisonRows,MAX_BYTES};
+  function referenceContext(data) {
+    return {application_version:data.version,reference_scope:'BC01(P01) reference materials at generation; not observation-time proof',
+      source_bundle_sha256:data.bc01_standard.source_bundle_sha256,source_hashes:clone(data.bc01_standard.source_hashes)};
+  }
+  function backupEnvelope(notes,data,exported=new Date().toISOString()) {
+    return {schema_version:1,application:'GME All-in-One',exported,
+      generated_with:referenceContext(data),notes:clone(notes)};
+  }
+  const api={parseBackup,planRestore,applyRestore,preserveMerge,validateRecord,recordRows,comparisonRows,referenceContext,backupEnvelope,MAX_BYTES};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.GMEBC01Tools=api;
   if(!root.document)return;
@@ -182,6 +194,11 @@
       const rows=preview.plan;
       dialog.querySelector('[data-restore-preview]').innerHTML=`<p>BC01 ${rows.length}건 · 다른 설비 ${incoming.skipped}건 제외. 아래 선택을 확인한 후 저장하세요.</p>${rows.map((r,i)=>`<article class="bc01-restore-row"><h3>${esc(r.note.title)}</h3><p>${r.kind==='new'?'새 기록':r.kind==='same'?'동일 기록 · 변경 없음':'같은 ID의 다른 기록'} · ${esc(r.note.updated)}</p><label>복원 선택<select data-restore-choice="${i}"><option value="skip">기존 유지 · 가져오지 않기</option>${r.kind==='new'?'<option value="add" selected>새 기록 추가</option>':r.kind==='conflict'?`${r.existing.equipment==='P01'?'<option value="replace">가져온 값으로 복원 · 기존 추가 항목 보존</option>':''}<option value="copy">새 ID로 둘 다 보존</option>`:''}</select></label><details><summary>기존·가져온 전체 기록 비교</summary><div class="bc01-import-grid"><div><h4>기존 기록</h4><pre>${esc(r.existing?JSON.stringify(r.existing,null,2):'없음')}</pre></div><div><h4>가져온 기록</h4><pre>${esc(JSON.stringify(r.note,null,2))}</pre></div></div></details></article>`).join('')}<div class="inline-actions"><button data-restore-backup>복원 전 전체 백업 다운로드</button><button data-restore-commit ${navigator.locks?.request?'':'disabled'}>선택한 BC01 기록을 저장</button></div>`;
       status('미리보기입니다. 브라우저 기록은 아직 변경되지 않았습니다.');
+      const imported=incoming.generated_with;
+      if(imported&&typeof imported.application_version==='string') {
+        const p=document.createElement('p');p.textContent='내보내기 생성 기준: 매뉴얼 v'+imported.application_version+' · BC01 참고 자료. 관찰 당시 버전이나 현재 원본 일치를 자동 검증한 표시는 아닙니다.';
+        dialog.querySelector('[data-restore-preview]').prepend(p);
+      }
     }catch(error){if(token===generation&&dialog)status(error.message);}
   }
   async function commitRestore(button) {
@@ -215,12 +232,14 @@
   function renderReport() {
     const snapshot=ctx.snapshot(),note=snapshot.notes.find(n=>n.id===dialog.querySelector('[data-report-note]').value&&n.equipment==='P01'&&n.repair_observation);
     if(!note)throw new Error('기록 목록이 바뀌었습니다. 닫고 다시 선택하세요.');
-    const rows=recordRows(note,schema()),links=[schema().manual,...new Set(schema().signals.flatMap(s=>s.refs.map(r=>'networks/network-'+r.network+'.html')))].filter(p=>ctx.data.resources.includes(p));
+    const rows=recordRows(note,schema()),links=[schema().manual,...new Set(root.GMERepairRecords.signalsFor(schema()).flatMap(s=>s.refs.map(r=>'networks/network-'+r.network+'.html')))].filter(p=>ctx.data.resources.includes(p));
     reportSnapshot=JSON.stringify(note);
-    const record=note.repair_observation,roles={requests:'요청',outputs:'최종 출력',responses:'처리 응답'};
+    const record=note.repair_observation,roles=root.GMERepairRecords.roles,generated=referenceContext(ctx.data);
+    const generationHtml='<p data-report-version>보고서 생성 기준: 매뉴얼 v'+esc(generated.application_version)+' · BC01 참고 자료 '+Object.keys(generated.source_hashes).length+'개<br>자료 묶음 SHA256: <code>'+esc(generated.source_bundle_sha256)+'</code><br>생성 시점의 참고 자료입니다. 과거 관찰 당시의 버전·자료 일치를 확정하지 않습니다.</p>';
     const refs=value=>(value||[]).map(r=>`LAD ${display(r.network)} · ORef ${display(r.oref)}${r.source?' · '+display(r.source):''}`).join('\n')||'미기록';
     const general=rows.filter(([key])=>!key.startsWith('signal:')&&!key.startsWith('step:'));
-    dialog.querySelector('[data-report-preview]').innerHTML=`<article class="bc01-report"><h1>BC01 관찰 결과 보고서</h1><h2>${esc(note.title)}</h2><p>기록 ID: ${esc(note.id)}<br>기록 구분: ${esc(record.status)}<br>보고서 생성: ${esc(new Date().toLocaleString('ko-KR'))} · ${esc(Intl.DateTimeFormat().resolvedOptions().timeZone)}</p><p>사용자가 저장한 관찰·조치 기록입니다. 현재 CPU·실물 대응·복구 완료의 자동 검증 결과가 아닙니다. 미입력 항목은 미기록으로 표시합니다.</p><h2>발생 상황·조치·확인 대기</h2><dl>${general.map(([,label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(display(value))}</dd></div>`).join('')}</dl><h2>신호 관찰</h2><p>관찰 시각 기준: ${esc(display(record.time_zone))}</p><div class="table-wrap"><table class="bc01-report-signals"><thead><tr><th>저장된 신호·주소</th><th>관찰값</th><th>관찰 시각</th><th>수집 근거·원본 참조</th></tr></thead><tbody>${record.observations.map(r=>`<tr><th scope="row">${esc(r.name||r.id)}<br>${esc(roles[r.role]||display(r.role))}<br>${esc(display(r.addresses))}</th><td>${esc(display(r.value))}</td><td>${esc(display(r.observed_at))}</td><td>${esc(display(r.evidence))}<details class="bc01-report-ref"><summary>저장된 원본 참조</summary><p>${esc(refs(r.source_refs))}</p></details></td></tr>`).join('')}</tbody></table></div><h2>증상별 관찰·비교</h2><dl>${record.decision_observations.map(r=>`<div><dt>${esc(r.title||r.id)}</dt><dd>${esc(display(r.observation))}</dd></div>`).join('')}</dl><h2>참고 원본·점검 근거</h2><ul>${links.map(p=>`<li><a href="${esc(new URL(p,ctx.base).href)}" target="_blank" rel="noopener">${esc(p)}</a></li>`).join('')}</ul><p>추가 항목을 포함한 전체 저장 기록은 JSON으로 함께 보관할 수 있습니다.</p></article><div class="inline-actions bc01-no-print"><button data-report-print>이 결과 보고서 인쇄·PDF 저장</button><button data-report-json>전체 기록 JSON 다운로드</button></div>`;
+    dialog.querySelector('[data-report-preview]').innerHTML=`<article class="bc01-report"><h1>BC01 관찰 결과 보고서</h1><h2>${esc(note.title)}</h2><p>기록 ID: ${esc(note.id)}<br>기록 구분: ${esc(record.status)}<br>보고서 생성: ${esc(new Date().toLocaleString('ko-KR'))} · ${esc(Intl.DateTimeFormat().resolvedOptions().timeZone)}</p><p>사용자가 저장한 관찰·조치 기록입니다. 현재 CPU·실물 대응·복구 완료의 자동 검증 결과가 아닙니다. 미입력 항목은 미기록으로 표시합니다.</p><h2>발생 상황·조치·확인 대기</h2><dl>${general.map(([,label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(display(value))}</dd></div>`).join('')}</dl><h2>신호 관찰</h2><p>관찰 시각 기준: ${esc(display(record.time_zone))}</p><div class="table-wrap"><table class="bc01-report-signals"><thead><tr><th>저장된 신호·주소</th><th>관찰값</th><th>관찰 시각</th><th>수집 근거·원본 참조</th></tr></thead><tbody>${record.observations.map(r=>`<tr><th scope="row">${esc(r.name||r.id)}<br>${esc(roles[r.role]||display(r.role))}<br>${esc(display(r.addresses))}</th><td>${esc(display(r.value))}</td><td>${esc(display(r.observed_at))}</td><td>${esc(display(r.evidence))}${r.boundary?`<p>${esc(r.boundary)}</p>`:''}<details class="bc01-report-ref"><summary>저장된 원본 참조</summary><p>${esc(refs(r.source_refs))}</p></details></td></tr>`).join('')}</tbody></table></div><h2>증상별 관찰·비교</h2><dl>${record.decision_observations.map(r=>`<div><dt>${esc(r.title||r.id)}</dt><dd>${esc(display(r.observation))}<br><small>저장된 판단 근거: ${esc(display(r.source_manual))}</small></dd></div>`).join('')}</dl><h2>참고 원본·점검 근거</h2><ul>${links.map(p=>`<li><a href="${esc(new URL(p,ctx.base).href)}" target="_blank" rel="noopener">${esc(p)}</a></li>`).join('')}</ul><p>추가 항목을 포함한 전체 저장 기록은 JSON으로 함께 보관할 수 있습니다.</p></article><div class="inline-actions bc01-no-print"><button data-report-print>이 결과 보고서 인쇄·PDF 저장</button><button data-report-json>전체 기록 JSON 다운로드</button></div>`;
+    dialog.querySelector('.bc01-report h2').insertAdjacentHTML('afterend',generationHtml);
     status('저장된 기록의 보고서 미리보기입니다. 원본·기록을 변경하지 않습니다.');
   }
   function printReport() {
@@ -245,13 +264,13 @@
       if(!dialog?.contains(b))return;
       if(b.hasAttribute('data-tool-close'))close();
       else if(b.dataset.toolDrawingZoom){const img=dialog.querySelector('[data-compare-image]'),old=parseFloat(img.style.width)||100;img.style.width=(b.dataset.toolDrawingZoom==='reset'?100:Math.max(50,Math.min(400,old+(b.dataset.toolDrawingZoom==='in'?25:-25))))+'%';}
-      else if(b.hasAttribute('data-restore-backup')&&preview)download({schema_version:1,application:'GME All-in-One',exported:new Date().toISOString(),notes:preview.snapshot.notes},'GME-before-BC01-restore.json');
+      else if(b.hasAttribute('data-restore-backup')&&preview)download(backupEnvelope(preview.snapshot.notes,ctx.data),'GME-before-BC01-restore.json');
       else if(b.hasAttribute('data-restore-commit'))await commitRestore(b);
       else if(b.hasAttribute('data-restored-open')){close();ctx.openRecords();}
       else if(b.hasAttribute('data-record-compare'))compareRecords();
       else if(b.hasAttribute('data-report-load'))renderReport();
       else if(b.hasAttribute('data-report-print'))printReport();
-      else if(b.hasAttribute('data-report-json')){const note=ctx.snapshot().notes.find(n=>n.id===dialog.querySelector('[data-report-note]').value);if(!note||JSON.stringify(note)!==reportSnapshot)throw new Error('기록이 변경되었습니다. 보고서 미리보기를 다시 생성하세요.');download({schema_version:1,application:'GME All-in-One',exported:new Date().toISOString(),notes:[note]},'GME-BC01-observation-report.json');}
+      else if(b.hasAttribute('data-report-json')){const note=ctx.snapshot().notes.find(n=>n.id===dialog.querySelector('[data-report-note]').value);if(!note||JSON.stringify(note)!==reportSnapshot)throw new Error('기록이 변경되었습니다. 보고서 미리보기를 다시 생성하세요.');download(backupEnvelope([note],ctx.data),'GME-BC01-observation-report.json');}
     }catch(error){status(error.message);}
   });
   document.addEventListener('change',e=>{
