@@ -8,7 +8,7 @@
     "Electrical_Rev2.pdf FG71/PDF72"
   ],
   "documentation": "corrected_with_gaps",
-  "publication": "pending",
+  "publication": "verified",
   "field_tia_cpu": "not_performed",
   "simulator_changes_execution": 0,
   "operational_writes": 0,
@@ -42,5 +42,31 @@
   "static_review": "passed",
   "ui_changed_caption": "passed actual QA browser, 5/9 present and 1/9 absent, synthetic notes/drafts null",
   "tests": 8,
-  "NETLIFY_build": "passed"
+  "NETLIFY_build": "passed",
+  "feature_commit": "182ab86fbd067bdf0de898bb666080e2c6fa1c1a",
+  "netlify": {
+    "id": "6acb38d91fcbcb0007b633a6",
+    "state": "ready",
+    "commit_ref": "182ab86fbd067bdf0de898bb666080e2c6fa1c1a",
+    "published_at": "2026-10-11T07:21:26.626Z",
+    "error_message": null
+  },
+  "github_release": {
+    "tag": "v1.11.1",
+    "target_commit": "182ab86fbd067bdf0de898bb666080e2c6fa1c1a",
+    "asset_size_digest_verified": true
+  },
+  "fresh_clone": "passed npm ci/8 tests/BC01/equipment/NETLIFY build, git clean",
+  "published_files": {
+    "count": 33,
+    "exact": 32,
+    "HTML_semantic": 1
+  },
+  "published_ui": {
+    "version": "1.11.1",
+    "5_9_present": true,
+    "1_9_absent": true,
+    "logs": [],
+    "screenshot": "/tmp/gme-pv01-errata-qa/published-pv01-errata.png"
+  }
 }
