@@ -3,85 +3,85 @@
     {
       "script": "verify-improvement-impact.py",
       "script_sha256": "b3b1bf5ff78116ca14ab7d5106f3c3be6305e1e0475c0544935e36c8f9942b9f",
-      "finished_at_utc": "2026-10-11T08:50:00.477311+00:00",
+      "finished_at_utc": "2026-10-11T09:18:52.463119+00:00",
       "status": "passed"
     },
     {
       "script": "verify-alarm-recovery.py",
       "script_sha256": "003b35ee125d76d6856b01b12d8b63252f6e4da11ee54363f6bcce7883d855e3",
-      "finished_at_utc": "2026-10-11T08:50:00.628602+00:00",
+      "finished_at_utc": "2026-10-11T09:18:52.669474+00:00",
       "status": "passed"
     },
     {
       "script": "verify-burner-interface.py",
       "script_sha256": "97a20a489116e7144e289b7d637fb06f59f277af020c7a9ba11fb7f96c65582b",
-      "finished_at_utc": "2026-10-11T08:50:00.778006+00:00",
+      "finished_at_utc": "2026-10-11T09:18:52.857357+00:00",
       "status": "passed"
     },
     {
       "script": "verify-process-measurement.py",
       "script_sha256": "857e2a0425363c1c23d41d9a84c94eea057b24151041337638616fee2c3c2e31",
-      "finished_at_utc": "2026-10-11T08:50:01.054841+00:00",
+      "finished_at_utc": "2026-10-11T09:18:53.192195+00:00",
       "status": "passed"
     },
     {
       "script": "verify-sensor-measurement.py",
       "script_sha256": "f17da8e93e3f841580b7feeea8e0bc195b1b9388918a9370dd64e2cabbabac78",
-      "finished_at_utc": "2026-10-11T08:50:01.392254+00:00",
+      "finished_at_utc": "2026-10-11T09:18:53.595063+00:00",
       "status": "passed"
     },
     {
       "script": "verify-regulation-manual.py",
       "script_sha256": "0e686bfb824966c0ace0220a5841b2cb7e287942f99262c34dc4424e711a7d5b",
-      "finished_at_utc": "2026-10-11T08:50:02.282424+00:00",
+      "finished_at_utc": "2026-10-11T09:18:54.742499+00:00",
       "status": "passed"
     },
     {
       "script": "verify-encoder-position.py",
       "script_sha256": "8a354dd46cb055a6ece3d8ebc9678bf0bed467d3a2c8f3e5691df8e683b18d39",
-      "finished_at_utc": "2026-10-11T08:50:03.233698+00:00",
+      "finished_at_utc": "2026-10-11T09:18:55.940667+00:00",
       "status": "passed"
     },
     {
       "script": "verify-hmi-transfer.py",
       "script_sha256": "129984784ba623e94c8cf14522887a90070ce88ef2874418b0d4709ce888cfdd",
-      "finished_at_utc": "2026-10-11T08:50:04.563448+00:00",
+      "finished_at_utc": "2026-10-11T09:18:57.584296+00:00",
       "status": "passed"
     },
     {
       "script": "verify-recipe-settings.py",
       "script_sha256": "1fd0608ad53e583f7923ff284cef0d811208302b0b03c11f091df270016fac4a",
-      "finished_at_utc": "2026-10-11T08:50:04.956754+00:00",
+      "finished_at_utc": "2026-10-11T09:18:58.058360+00:00",
       "status": "passed"
     },
     {
       "script": "verify-unresolved-identity.py",
       "script_sha256": "3eb3f9e14fe6277acd52177fe4b02713bfe29925fbc5b1d4a4502a7499d33e0e",
-      "finished_at_utc": "2026-10-11T08:50:05.071956+00:00",
+      "finished_at_utc": "2026-10-11T09:18:58.190214+00:00",
       "status": "passed"
     },
     {
       "script": "verify-body-manual.py",
       "script_sha256": "dcd1962bd6832a59f69598fce92a8bbd0fb0fe51721e49eeaf1e135d55c17423",
-      "finished_at_utc": "2026-10-11T08:50:05.409321+00:00",
+      "finished_at_utc": "2026-10-11T09:18:58.610097+00:00",
       "status": "passed"
     },
     {
       "script": "verify-requirements-audit.py",
       "script_sha256": "1aef7be952fe8b30d6d55bf6f4e94d90536bd34c6336abfe9a40ffcdabac417f",
-      "finished_at_utc": "2026-10-11T08:50:05.835481+00:00",
+      "finished_at_utc": "2026-10-11T09:18:59.130991+00:00",
       "status": "passed"
     },
     {
       "script": "verify-all-in-one.py",
       "script_sha256": "b11350a6a9b5c6bd833aaa449f58ca5ebce0bc554d0e4aa4e4bac797a574e322",
-      "finished_at_utc": "2026-10-11T08:50:08.597318+00:00",
+      "finished_at_utc": "2026-10-11T09:19:01.921806+00:00",
       "status": "passed"
     },
     {
       "script": "verify-package.py",
       "script_sha256": "c78dd830b1cf32d2256b01bbd2d4d8bf1af4bfdecef81c1cce4571f8cd5d329f",
-      "finished_at_utc": "2026-10-11T08:50:12.673432+00:00",
+      "finished_at_utc": "2026-10-11T09:19:06.675338+00:00",
       "status": "passed"
     }
   ],
@@ -89,17 +89,17 @@
     {
       "script": "verify-bc01-tools.cjs",
       "script_sha256": "0e9234b5b889e99084b4b27f255cd294bfc6da06e5ffe83431ca44fd356f5713",
-      "finished_at_utc": "2026-10-11T08:50:12.737908+00:00",
+      "finished_at_utc": "2026-10-11T09:19:06.749504+00:00",
       "status": "passed"
     },
     {
       "script": "verify-equipment-standards.cjs",
-      "script_sha256": "41d57ccad640f563baadfed04251b36cf707218e32d8cc634e4cf7aacc9ea998",
-      "finished_at_utc": "2026-10-11T08:50:13.508133+00:00",
+      "script_sha256": "96c0833303576ba4c9692e576b749cab427314286c102414c417f1f763516e07",
+      "finished_at_utc": "2026-10-11T09:19:07.785674+00:00",
       "status": "passed"
     }
   ],
-  "version": "1.14.0",
+  "version": "1.15.0",
   "date": "2026-10-11",
   "entry": "index.html",
   "simulator_development": "stopped_by_user",
@@ -116,8 +116,8 @@
     },
     {
       "file": "ACTIVE-WORK.md",
-      "sha256": "1d725f7a5d03d9a7cd4d0ea653fcbf60feae57ccb69e6aec6d709ae4d01d66b2",
-      "bytes": 127216
+      "sha256": "0afcbb6107ead9f2bde5750a185e38dab935d68a5e255b42ff47819cbf4b0cfd",
+      "bytes": 127941
     },
     {
       "file": "ALL-EQUIPMENT-MANUAL.md",
@@ -126,8 +126,8 @@
     },
     {
       "file": "ALL-IN-ONE.md",
-      "sha256": "0323e9afb413f7ad7557e609f2fa56755d3ecff01033c08864d36a262ab7dc48",
-      "bytes": 52071
+      "sha256": "c1fab13b07970f380c983eb3c214aafedb56bda031de5a5b87dec37158657a7f",
+      "bytes": 52796
     },
     {
       "file": "BC01-PRESERVATION-20261011.md",
@@ -246,8 +246,8 @@
     },
     {
       "file": "VERSION.json",
-      "sha256": "43ce3ad356b974207fba3eba1387ef2f5083ca1279b00d4119161a2e2d5034f8",
-      "bytes": 484
+      "sha256": "bce2d7643bb68a31b63a87be76a7e31bec025dc40135709b3f627b6693a0fd9e",
+      "bytes": 496
     },
     {
       "file": "alarm-guides/BC01.html",
@@ -371,8 +371,8 @@
     },
     {
       "file": "assets/all-in-one-data.js",
-      "sha256": "452d1848b450a7d41ff3fad3f5497e5bca2dffb74668e187b74bb851d66330ab",
-      "bytes": 6402984
+      "sha256": "58812967668e45cd4825942f91d2b8352eb5b6c29bf6fcc2ecf4c8447c57a3e5",
+      "bytes": 6758312
     },
     {
       "file": "assets/all-in-one-preview.png",
@@ -751,8 +751,8 @@
     },
     {
       "file": "assets/equipment-standard.js",
-      "sha256": "e190df2e822e24ced41a8f6d590eacec2c304385acdf679e31476c05ea0c7e0c",
-      "bytes": 19430
+      "sha256": "2b86bfc5a58232eca888dee7c34d0ee88fcdf840e035b8f22227bc3a6a0630bd",
+      "bytes": 19489
     },
     {
       "file": "assets/evidence-review-preview.png",
@@ -986,8 +986,8 @@
     },
     {
       "file": "build-all-in-one.py",
-      "sha256": "6c6a02c0f6002e5cb6bb99f7aada8be3fe0ba35f9538733282ce90e9c23069d9",
-      "bytes": 64068
+      "sha256": "580339445fea7b34d52d59100bd524571641f3a88e6c0e3159619dcca5e29735",
+      "bytes": 64180
     },
     {
       "file": "build-body-manual.py",
@@ -3991,8 +3991,8 @@
     },
     {
       "file": "equipment_standard_profiles.py",
-      "sha256": "d7f815c3a429c53cbf964935396e77bffc4ea824fd22f956dd385a80b3e11f11",
-      "bytes": 111204
+      "sha256": "b74d7cd07a31eb6d4c4a097e2dfbd000fb6355197feddb0a010ad25dd4996ba0",
+      "bytes": 127541
     },
     {
       "file": "evidence-review.html",
@@ -4056,7 +4056,7 @@
     },
     {
       "file": "index.html",
-      "sha256": "3904e0b72e3926052a11f4727a5e7aaa53115a7401b03ec79bcb7380fd4503f4",
+      "sha256": "8303be27ee9abd901c1249312a96f2567c80e8646264e3231464603c47defd78",
       "bytes": 4809
     },
     {
@@ -4591,8 +4591,8 @@
     },
     {
       "file": "networks/network-1070.html",
-      "sha256": "74f192d92378af88b339b48cdbf408ddc1a75594e8a5f6217913685c60f84828",
-      "bytes": 21018
+      "sha256": "2d78c9e4f6fa238ed92b91b4c41e2116a11bb7bd08c165948012c95cce863cf5",
+      "bytes": 21192
     },
     {
       "file": "networks/network-1070.svg",
@@ -4641,8 +4641,8 @@
     },
     {
       "file": "networks/network-1082.html",
-      "sha256": "f5bf3003ca5fe7672f71895cf6ef981dff94ed3b79fdbe93c7159eae51a75c0e",
-      "bytes": 9411
+      "sha256": "fffd0fb196d0720142223967d856da6e023ff72dcc163768ba9b40bfeed957d8",
+      "bytes": 9607
     },
     {
       "file": "networks/network-1082.svg",
@@ -4651,8 +4651,8 @@
     },
     {
       "file": "networks/network-1083.html",
-      "sha256": "e210e218833a301d8627f7bdf18e0df2c5f6b8fbbe158de06eee05befde06f79",
-      "bytes": 40702
+      "sha256": "b3687861db9e933b37ee3ec46bc8768463d41d8881c8a81e1406c404b7f9af3f",
+      "bytes": 41242
     },
     {
       "file": "networks/network-1083.svg",
@@ -4821,8 +4821,8 @@
     },
     {
       "file": "networks/network-1186.html",
-      "sha256": "8c5ea93b38aad451f619aa765a30c95e0cb7d532003676d52051b5de6dd91004",
-      "bytes": 6048
+      "sha256": "9be0debd8c0f6d03283a5070d6933f287e57d4774ec6f4f53af7a3a9206fca98",
+      "bytes": 6530
     },
     {
       "file": "networks/network-1186.svg",
@@ -4831,8 +4831,8 @@
     },
     {
       "file": "networks/network-1187.html",
-      "sha256": "2a1dc0136d58cfa096e31e8d43e1275281dcc4071f761fdb08254767e18b6a45",
-      "bytes": 7022
+      "sha256": "10e6c7d988215ca140cb04b9631580d87825851ed44287464b61983f63a76bf7",
+      "bytes": 7526
     },
     {
       "file": "networks/network-1187.svg",
@@ -5171,8 +5171,8 @@
     },
     {
       "file": "networks/network-1226.html",
-      "sha256": "206f1e494985beb7b390fbc2f66df2b04980af3bccca2cf1af1a89ebd71b986d",
-      "bytes": 29570
+      "sha256": "cc4e389c43b612b5bd354aa7849aa9ce04f114f589f409c9778b3715983617e0",
+      "bytes": 30427
     },
     {
       "file": "networks/network-1226.svg",
@@ -5231,8 +5231,8 @@
     },
     {
       "file": "networks/network-1613.html",
-      "sha256": "d1ea88305494dab7e872a50fc55efeae1d1dad704a687f3bccfd94a7f572d902",
-      "bytes": 5174
+      "sha256": "f95cd9bd9f2a4ff72f7d999834a1e0650dc587b414dbd13d99d5798aaff1d8ee",
+      "bytes": 5348
     },
     {
       "file": "networks/network-1613.svg",
@@ -5361,8 +5361,8 @@
     },
     {
       "file": "networks/network-1658.html",
-      "sha256": "12d840f6395ef0eeda6b70e2c866c3888b220a690be6d95c323df8c4df068cbf",
-      "bytes": 13104
+      "sha256": "d2c8ae12ac83de3abe0e8e2932830b0db219296abfc8b10ec7a509049bf4e2af",
+      "bytes": 13278
     },
     {
       "file": "networks/network-1658.svg",
@@ -5371,8 +5371,8 @@
     },
     {
       "file": "networks/network-1659.html",
-      "sha256": "6aafd584201198986b94dc4fc942a825f4bd9ced5653b1832e5d9f5e530a9045",
-      "bytes": 4376
+      "sha256": "ca1c57bafdf374c54d860e5827d68c861f0077f02bb1b4aa9320374adc48cd44",
+      "bytes": 4550
     },
     {
       "file": "networks/network-1659.svg",
@@ -5601,8 +5601,8 @@
     },
     {
       "file": "networks/network-1709.html",
-      "sha256": "94b3ec7a6649a001c1ae62b7f6492ed7fa297eebb75c6f06e12a1f4007757f9a",
-      "bytes": 9359
+      "sha256": "428ec1208b91b0150166d04adc4438f255b52970f53b9ea811a3c69a8a81fda4",
+      "bytes": 10430
     },
     {
       "file": "networks/network-1709.svg",
@@ -5611,8 +5611,8 @@
     },
     {
       "file": "networks/network-1710.html",
-      "sha256": "9a67dbcba3d5af09814cccfa0ed802000ee9088062da8eee204454d5d39ec0ac",
-      "bytes": 12516
+      "sha256": "c8715eb91ba6ebe4cf07c6a971ffa9a65761801a396caa091a091d89726e283b",
+      "bytes": 14047
     },
     {
       "file": "networks/network-1710.svg",
@@ -5621,8 +5621,8 @@
     },
     {
       "file": "networks/network-1711.html",
-      "sha256": "e7cba5089e55144d2e4800febd5d5acf347e78a255528693ea61dc91b400c2cd",
-      "bytes": 15302
+      "sha256": "9f8efe5e148f724cb88769f4e29a0c1356328cf0ad75ce845075308ee1ecf285",
+      "bytes": 17586
     },
     {
       "file": "networks/network-1711.svg",
@@ -5631,8 +5631,8 @@
     },
     {
       "file": "networks/network-1712.html",
-      "sha256": "7f989e5210e7ce6bd3e62c6776b102c8a005538b9767ecadaf3a3f5a00ca38e5",
-      "bytes": 7078
+      "sha256": "7b12193e502b97e6c4574f32f4c11cd7e0d695d1adee961ab72ca7c05c4e86b4",
+      "bytes": 7252
     },
     {
       "file": "networks/network-1712.svg",
@@ -5641,8 +5641,8 @@
     },
     {
       "file": "networks/network-1713.html",
-      "sha256": "bfdc03ce24a0a1e4ff37e767225376ba5986e8058fb4c8dfa2467aa7feba2ad9",
-      "bytes": 28779
+      "sha256": "9b32e6eb81c92798b7320609d657fa746bc8f9bb4b0d25d7c66a3dc50409a182",
+      "bytes": 29505
     },
     {
       "file": "networks/network-1713.svg",
@@ -5651,8 +5651,8 @@
     },
     {
       "file": "networks/network-1714.html",
-      "sha256": "00ef54e8e64a1342dfbcd234fb04b38a7eb915c22ce7451567118e5a4e4c1419",
-      "bytes": 27949
+      "sha256": "5a2e3e1447ca69e5a8651161832219ad6c1260cbdd45a1590cd2315f3d53224b",
+      "bytes": 28627
     },
     {
       "file": "networks/network-1714.svg",
@@ -5851,8 +5851,8 @@
     },
     {
       "file": "networks/network-1746.html",
-      "sha256": "3718503e4a3e9ffb6647e334b26f88760833a03d8a56b306b1ff6fbfcc06c663",
-      "bytes": 4867
+      "sha256": "d2753685102004635e03352f4fa8b8213ecfc9e69768ef43cd450db514d793c3",
+      "bytes": 5270
     },
     {
       "file": "networks/network-1746.svg",
@@ -5991,8 +5991,8 @@
     },
     {
       "file": "networks/network-1760.html",
-      "sha256": "084917dd20d7a25d9377b4f48ebb51b120de4293882721408d74ba74981503f6",
-      "bytes": 10279
+      "sha256": "5400253578be6fe7aa73c849f5432f43629e2699a8d0f8b4650599c281d9770a",
+      "bytes": 11113
     },
     {
       "file": "networks/network-1760.svg",
@@ -6001,8 +6001,8 @@
     },
     {
       "file": "networks/network-1761.html",
-      "sha256": "1105b804faf99f809d802d288109597588043ae0293858ad9224c584e7862555",
-      "bytes": 7527
+      "sha256": "305a0adaf555f82fc88203cd9eaf979d0290225211ae06dae062a9f64be9f7f5",
+      "bytes": 7701
     },
     {
       "file": "networks/network-1761.svg",
@@ -6051,8 +6051,8 @@
     },
     {
       "file": "networks/network-1766.html",
-      "sha256": "77cc218f997ee5938b3ed0a1459d4782b6d05980ad9c11edff5d4a0b94e9cd04",
-      "bytes": 10566
+      "sha256": "5ab59cba43cc21f766a15b2758bbbae18ba1fba551a79e5e14455471ce0c36ed",
+      "bytes": 11626
     },
     {
       "file": "networks/network-1766.svg",
@@ -6531,8 +6531,8 @@
     },
     {
       "file": "networks/network-1821.html",
-      "sha256": "d2a47518ea0d0559c7d1ae61f16d1df4dddd243b1d32a10bf6e8b438c894144a",
-      "bytes": 9170
+      "sha256": "be2ca9d48c1cf4df583f7a09774798dae1a2d5c88f999b23f152f7cfaa502d01",
+      "bytes": 10254
     },
     {
       "file": "networks/network-1821.svg",
@@ -7971,8 +7971,8 @@
     },
     {
       "file": "networks/network-404.html",
-      "sha256": "d0459ff1d555150de2daec3cbf16d3ce50213ae5d5cc73b25e77a30801bff839",
-      "bytes": 7621
+      "sha256": "36fd369e4e172352d71c1eac14eb0499be9f6a9f92e198212c0d1aa3301faabc",
+      "bytes": 7841
     },
     {
       "file": "networks/network-404.svg",
@@ -9741,8 +9741,8 @@
     },
     {
       "file": "registers/all-in-one-data.json",
-      "sha256": "b611342289afc6dea89d89b322a689cf1929241826e1af7fabafaad20af85107",
-      "bytes": 10760886
+      "sha256": "5a75d3123a897abb785bc0814f8f34a0972ecfe9e74c1f87f69aa19cb18cf3fa",
+      "bytes": 11455494
     },
     {
       "file": "registers/all-networks.csv",
@@ -10106,7 +10106,7 @@
     },
     {
       "file": "registers/requirements-audit.json",
-      "sha256": "7663062d7b6bb5db4e9bb24f96b41b555b445de0013349710dbf82a114826bf6",
+      "sha256": "2db28a7150ff9e5810edf00dc3815e6d1348da57f2af94b627d6d5c65bf95d83",
       "bytes": 540463
     },
     {
@@ -10316,7 +10316,7 @@
     },
     {
       "file": "requirements-audit-verification.json",
-      "sha256": "db3e196577411d24a8ef54f4650754f3cef2074acb1451b20403b578aad8b82f",
+      "sha256": "3480ca2854552f64d6001d17576b1dc404c33a8ce6b9f780c4ec171b7a180f01",
       "bytes": 1661
     },
     {
@@ -14041,8 +14041,8 @@
     },
     {
       "file": "verify-equipment-standards.cjs",
-      "sha256": "41d57ccad640f563baadfed04251b36cf707218e32d8cc634e4cf7aacc9ea998",
-      "bytes": 52098
+      "sha256": "96c0833303576ba4c9692e576b749cab427314286c102414c417f1f763516e07",
+      "bytes": 56447
     },
     {
       "file": "verify-hmi-transfer.py",
