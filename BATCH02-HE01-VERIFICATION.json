@@ -131,5 +131,14 @@
     "simulator_tests": "not_run",
     "PLC_SEJIN_changes": 0
   },
-  "publication": "pending BATCH02"
+  "publication": "pending BATCH02",
+  "publication_follow_up": {
+    "status": "passed_batch02",
+    "version": "1.17.0",
+    "feature_commit": "cf35b18a37727a21a219078e82b230e0c637f26b",
+    "netlify_deploy": "6acb7aefd0153e00080a6aff",
+    "ready_at": "2026-10-11T12:03:13.821Z",
+    "aggregate_report": "BATCH02-VERIFICATION.json",
+    "checkpoint_source_bundle_retained": true
+  }
 }

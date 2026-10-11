@@ -1,7 +1,7 @@
 {
   "batch": "BATCH02",
   "version": "1.17.0",
-  "status": "local_verified_publication_pending",
+  "status": "batch_publication_verified",
   "targets": [
     "HE01/P13",
     "P03 identification",
@@ -79,11 +79,1130 @@
     "inline_CSP_hashes": 6,
     "scoped_CSP_policies": 39
   },
-  "git_feature_commit": null,
-  "github_release": "pending",
-  "netlify_deployment": "pending",
-  "published_file_check": "pending",
-  "fresh_clone": "pending",
+  "git_feature_commit": "cf35b18a37727a21a219078e82b230e0c637f26b",
+  "github_release": {
+    "status": "passed",
+    "tag": "v1.17.0",
+    "url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.17.0",
+    "asset": {
+      "id": 630643320,
+      "name": "GME-All-In-One-v1.17.0.zip",
+      "size": 54636330,
+      "digest": "sha256:e684ab3f8cd0cb099883b65829d3d527f3f822289d3138dd49998bff0f993a62",
+      "browser_download_url": "https://github.com/esp6662266/gme-plc-manual/releases/download/v1.17.0/GME-All-In-One-v1.17.0.zip"
+    }
+  },
+  "netlify_deployment": {
+    "status": "passed",
+    "id": "6acb7aefd0153e00080a6aff",
+    "state": "ready",
+    "commit_ref": "cf35b18a37727a21a219078e82b230e0c637f26b",
+    "published_at": "2026-10-11T12:03:13.821Z",
+    "deploy_ssl_url": "https://main--gme-plc-manual.netlify.app",
+    "ssl_url": "https://gme-plc-manual.netlify.app"
+  },
+  "published_file_check": {
+    "status": "passed",
+    "count": 155,
+    "exact": 127,
+    "HTML_semantic": 28,
+    "files": [
+      {
+        "path": "ACTIVE-WORK.md",
+        "status": 200,
+        "sha256": "9abd933174a335d82eca5253ab106650db62db6e4133976fdd9c8c7a272a24c6",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "ALL-IN-ONE.md",
+        "status": 200,
+        "sha256": "26c54da4409db34e21a69ef5aad0f346b94f0534b37d5f01a7ea960bbdaa4464",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "HE01-INVESTIGATION.md",
+        "status": 200,
+        "sha256": "a7b9ba12d2424411234b69f09fba0c082640f6b569037d3022c4a9670bf6f01c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "P03-IDENTIFICATION.md",
+        "status": 200,
+        "sha256": "7eff717fba81e598f4eaba469646f852a9042c2fc3ebb374ade3a779a6a66b40",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "P04-IDENTIFICATION.md",
+        "status": 200,
+        "sha256": "8a7d745f8fa3873f57e35d96eb868db6ce568ada08e661fe44184493fbc0a9d1",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "P14-IDENTIFICATION.md",
+        "status": 200,
+        "sha256": "3ce307aa0a118dde04701cfd331dfb75484731083c6dbc8459310bb4b354e8cb",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "VERSION.json",
+        "status": 200,
+        "sha256": "9c40301e96a044863a81dd0e15dbeb700e0bef6c14eee8ef633cf1d13d5cdcb8",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "alarm-guides/HE01.html",
+        "status": 200,
+        "sha256": "bc1b7359511b7e53e0046438d422af9b1556d206c451213e1233182a142b9d4b",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "all-in-one-package-manifest.json",
+        "status": 200,
+        "sha256": "679e04a2cfede2d3f3058413f560b96b1beb058b40c4be00f53bde43cfc74c7a",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "all-in-one-verification.json",
+        "status": 200,
+        "sha256": "ac5aff99dcc818b586a1995c3e45c2acd7d58b8182eec737ffb0517b5f02a574",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/all-in-one-data.js",
+        "status": 200,
+        "sha256": "10f49e355abe7b8ebc7201993ac0b317b83b9013cc73adfea418fdcad9282e4c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "build-all-in-one.py",
+        "status": 200,
+        "sha256": "be6cfb280d6c657d8dcb297e5f416487a3e148e973408a00db93e0caa8aa923d",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "build-identification-reports.py",
+        "status": 200,
+        "sha256": "2bb3e286e5c4459c0f404e320be42389f5ed2697c2f3557670a4966e573bc62d",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "equipment_standard_profiles.py",
+        "status": 200,
+        "sha256": "1c23605aa42ccb34b8d3ef3d246872d09e43d407c0f541def82c12f7dda596b3",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "identification-guides/P03.html",
+        "status": 200,
+        "sha256": "ba132947237da6ebcd369b9e253d2677ec46f2b27af1fbbae17626bef0e10546",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "identification-guides/P04.html",
+        "status": 200,
+        "sha256": "4b03c1b8902aa47806f72613de0b5d7040ca0c0f5af9d3a92ed49af0deeb2b41",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "identification-guides/P14.html",
+        "status": 200,
+        "sha256": "9152462b030709919e7aa869a3a49e706e444647f7d9257bb78c8672ec3c50cb",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "1a26fa5ed3e1d9a7947da2a89ed59c075e4bb738be1447cde9b88f3130815044",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1071.html",
+        "status": 200,
+        "sha256": "733beb8e22fb9f5d2677d7876328e4f5fd45aeac34929e767f4b3b355ddc46f2",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-11.html",
+        "status": 200,
+        "sha256": "5369bb53efba000b4947ecf6ae759f62505c9fa5d7186228a8ccc2459aadec70",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-15.html",
+        "status": 200,
+        "sha256": "88de56fb9e1e4c63d9f18d4fcc0e3af0c77516f024dc11886ad9e28a9806e2ce",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1658.html",
+        "status": 200,
+        "sha256": "32d52cb1235e29ff0ce72cf300fa16bac17fe7ad1396baf63cb070077f88f270",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1659.html",
+        "status": 200,
+        "sha256": "1d3606640a31fbced9892d4226fac0de1bc4d36bff3fa4e5aedb7f28631a9483",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1688.html",
+        "status": 200,
+        "sha256": "06fe13322934edcdc2beae60e245c3eb49c03c3b5efce3cd267846938335188b",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1702.html",
+        "status": 200,
+        "sha256": "4f29eedd3b49e299f618101c19ee4b67100b0cd5af185a78ccc1b2ec646fedcb",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1704.html",
+        "status": 200,
+        "sha256": "572da537fd1fde490df515c33b6ebb19fb568321512bae9365a424158e2a59b8",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1705.html",
+        "status": 200,
+        "sha256": "c33a20567425dcc5e509c49bad9d2b9c8f5e1a58f1597dda8b7b0102c8a564eb",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1706.html",
+        "status": 200,
+        "sha256": "23cd8e435ef701195bb8fe416457ae64e69597c88828ba1e547488f20294127c",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1741.html",
+        "status": 200,
+        "sha256": "a9c080a07389345f089633406b90fe3be0788ecbfb33ca2d7e7b28170e97021f",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1745.html",
+        "status": 200,
+        "sha256": "9f26201e8c10fb8120f21d9e0d0b4f1c508d11072169f34fe1e843a98461b9bc",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1747.html",
+        "status": 200,
+        "sha256": "a31c6851103424803d55cab4cc40e161780df378a9fff1d81ecfae3bfd423d4b",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1858.html",
+        "status": 200,
+        "sha256": "c28eab02159c470c588451789849886b863bacbfb64898c84fa17a3c4c9af796",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1862.html",
+        "status": 200,
+        "sha256": "ef01613a34d03537970da5cac46eb851ee65c066258a82cabda3a3b242b1f127",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1865.html",
+        "status": 200,
+        "sha256": "4e8878df998bc2a56a9505c0f852926c49cb5254ec7c2559d2254bf8f65a3d7d",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1870.html",
+        "status": 200,
+        "sha256": "e9c6f85339ea5f02a7ec5b9892a99abaf2142521f13fff0787cc6c6dfbb00240",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1931.html",
+        "status": 200,
+        "sha256": "dc1b24abe5347040570e1a922ea9c99e1005f1e8ea539ad99b5d0a308d460129",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1948.html",
+        "status": 200,
+        "sha256": "58df997b503470405110a1092e0207970ae58b5902c74f8955947ab358e1eec2",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-1980.html",
+        "status": 200,
+        "sha256": "481c932304841e1b16d8fde7f9f6c9194bce9ad73ed6d9f9be5d942107de7815",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-7.html",
+        "status": 200,
+        "sha256": "82c98b50a6cf32e1ac39b48386b1a039427f883d335f2d30f8d813ee5373d84e",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "networks/network-8.html",
+        "status": 200,
+        "sha256": "0693391802f6ca36121ae074af63cfd1210ba6a8847c7c3e00c3951c0f2ac873",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "registers/all-in-one-data.json",
+        "status": 200,
+        "sha256": "d9d3eb7aedc839cf9b3947c3c9b2b52fa352da079d840788abd93f0e3065156c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/he01-independent-investigation.json",
+        "status": 200,
+        "sha256": "50342285d93dad9fb94b96dbf04328829793af211e66ab7628a51957fda2f876",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/identification-reports.json",
+        "status": 200,
+        "sha256": "148937c32d18a4135c9cc53eb311e71e01cc60130f67f7f51cd164a047f71e05",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/requirements-audit.json",
+        "status": 200,
+        "sha256": "8a8d6b5ef900d02ca7d245a9738acdc03f5601760f4603ceb8beac818f1f65c7",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "requirements-audit-verification.json",
+        "status": 200,
+        "sha256": "69c61da2954111df5c3f649758f4eba4db4fcda64d6bcca7179b089f66b24c0b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "unresolved-identity-verification.json",
+        "status": 200,
+        "sha256": "f57eb174d2a39bd70ef5470bec17aad91826dc595ef58704b72096f568d648b9",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "unresolved-identity.html",
+        "status": 200,
+        "sha256": "ee6bb16d19e5a1f7950412e0dd2c1eb351861e5823f83aa551f547b5e8203fa6",
+        "exact": false,
+        "html_semantic_after_pretty_urls": true
+      },
+      {
+        "path": "verification-result.json",
+        "status": 200,
+        "sha256": "8d230e2c7e45dcfbb56eccf2433a7849593279bce489863debc3e060de1792c9",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "verify-all-in-one.py",
+        "status": 200,
+        "sha256": "e67910b3d25faf0fdf15438aae0341c1cde52b7920b7accdc241f34d7216b1a3",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "verify-equipment-standards.cjs",
+        "status": 200,
+        "sha256": "b59ced75ae0792ac0fcf80ea58b43fa3a293cd242b388321f3c4c2fedfcaca30",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "verify-unresolved-identity.py",
+        "status": 200,
+        "sha256": "8c2c6d55ab2b9737b3f35c4c8a4b25dbfc5376c6e73ba80aecd19b28a083672a",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/program-model.json",
+        "status": 200,
+        "sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/program-model-data.js",
+        "status": 200,
+        "sha256": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/virtual-plc.js",
+        "status": 200,
+        "sha256": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/simulator-workspace.js",
+        "status": 200,
+        "sha256": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/virtual-plc-test-results.json",
+        "status": 200,
+        "sha256": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/sensor-circuits/FG106.png",
+        "status": 200,
+        "sha256": "854f70d05caaeee3eece8c28c50ace66e640d322df4a8866c8aa454ae5b5f3c8",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/sensor-circuits/FG107.png",
+        "status": 200,
+        "sha256": "8903178aa5bbf40597ffea128c691334daf646876f229ba167a2959baf389530",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/sensor-circuits/FG108.png",
+        "status": 200,
+        "sha256": "efaffb8fff750f01ecd0d84dd54084b6a5c15caa87ac32c658b0d104ef29e99f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/sensor-circuits/FG75.png",
+        "status": 200,
+        "sha256": "8c694ef0d2552c22997b5305f0abbfeeaf61b7f6889ccbf65b29954f33fede64",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "assets/sensor-circuits/FG77.png",
+        "status": 200,
+        "sha256": "8c152c5678e4353ba5eeb9b1e4f10107cace3ad3b8208fd409d4b38f374c7c06",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/alarm-recovery.json",
+        "status": 200,
+        "sha256": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/body-manual.json",
+        "status": 200,
+        "sha256": "0e8071196565fdffb29ae81fa3d24e567c95fd254355e5d71e887bc24ac189a4",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/construction-reference.json",
+        "status": 200,
+        "sha256": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/construction-review.json",
+        "status": 200,
+        "sha256": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/control-spec.json",
+        "status": 200,
+        "sha256": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/electrical-trace.json",
+        "status": 200,
+        "sha256": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/hmi-transfer.json",
+        "status": 200,
+        "sha256": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/plc-symbols.csv",
+        "status": 200,
+        "sha256": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/regulation-manual.json",
+        "status": 200,
+        "sha256": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/repair-decision.json",
+        "status": 200,
+        "sha256": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/repair-record-forms.json",
+        "status": 200,
+        "sha256": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/sensor-measurement.json",
+        "status": 200,
+        "sha256": "4b8c357c803e7b429766d54a87bf49bb5dd25343a9797b44b5702df93440c7a3",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/signal-trace.json",
+        "status": 200,
+        "sha256": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/vendor-reference-review.json",
+        "status": 200,
+        "sha256": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "status": 200,
+        "sha256": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/Electrical_Rev2.pdf",
+        "status": 200,
+        "sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/PID_1684n002I.pdf",
+        "status": 200,
+        "sha256": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0014-FlgNet.xml",
+        "status": 200,
+        "sha256": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0062-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "34f188168dc4fad0d6e2c813028045f37b84025636bcebd8aa1c7ffb4cfd9bcd",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0175-FlgNet.xml",
+        "status": 200,
+        "sha256": "41279d6aaa157de3be963d010d6ca7dea94811a0ace519c8a3d8baa015f67f97",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0178-FlgNet.xml",
+        "status": 200,
+        "sha256": "36752e04a38e486ad4a0857d6baa8119d9b757678300358bcc95881f23e266c9",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0181-FlgNet.xml",
+        "status": 200,
+        "sha256": "98e839ee13a05db05768503e768e9238d892c4788dc7b6c9d3017fc86d3b722b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0186-FlgNet.xml",
+        "status": 200,
+        "sha256": "932f8756ee0e4385553944bd166109c45684766a136bfddd68cdf08552a83883",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0238-FlgNet.xml",
+        "status": 200,
+        "sha256": "8f6a5537084e092c352552dc469bbe8469b33412971219e51bba211ef607dfa8",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0250-FlgNet.xml",
+        "status": 200,
+        "sha256": "e54a35e34540c3ccb59af900e18d9f1e6b14fc3175a663fe2e60a4a41b563ae5",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0291-FlgNet.xml",
+        "status": 200,
+        "sha256": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0342-FlgNet.xml",
+        "status": 200,
+        "sha256": "9ef93abad16cc055509ef98c388417c716cb03d23cb02aed6d95888beb43bef8",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0343-FlgNet.xml",
+        "status": 200,
+        "sha256": "a2f41d7cce7c4d944f0cebdcacc964a1298962198a20f9471558902b39685d68",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0344-FlgNet.xml",
+        "status": 200,
+        "sha256": "08eabc412b9457eb615d1cb01b92682987bef170cbeab78070dd4c705ab93576",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0345-FlgNet.xml",
+        "status": 200,
+        "sha256": "b278a319d4d8cb8d157f449a2365445ff8f172245ebd2a468aa3ee79dba60f93",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0398-FlgNet.xml",
+        "status": 200,
+        "sha256": "4f092b18df4e44af98fd44e173f48dad213a4e80b71f46b0a5e8a700f5b0a747",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0469-FlgNet.xml",
+        "status": 200,
+        "sha256": "65a7cba8a18b5e9d79cbade58ef0a5ffad80329550996ee7225e5026c36af696",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0476-FlgNet.xml",
+        "status": 200,
+        "sha256": "0f9c48dddf61987d61094de9368ab534b56ec6c30e898dc2e4d81b64e86fa55a",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0477-FlgNet.xml",
+        "status": 200,
+        "sha256": "e7b5b0cb95c60d1112081f6129a3127f8413e1b1d2a4c67d0e203d36ea0a711a",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0479-FlgNet.xml",
+        "status": 200,
+        "sha256": "112e55599a4dc705438c8c61b936da9a167c22d9bbd909eda11c45c9dc33e839",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0480-FlgNet.xml",
+        "status": 200,
+        "sha256": "c14d2fee14b38b7c597edb46626676f0cf550b5831668884cb2fac341b559273",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0491-FlgNet.xml",
+        "status": 200,
+        "sha256": "f7395b1dc4f33553114a108c61691cb24b830d2152b31e6e9cd9f7718ecc9b1d",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0495-FlgNet.xml",
+        "status": 200,
+        "sha256": "0ff8eb8cf4b147a9077e5bcd88620216cea558cdf2cbb2c336c07b91014abfa4",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0497-FlgNet.xml",
+        "status": 200,
+        "sha256": "334a065d6dc7aac9e9652a1f705a31fdadea6a5d4760dd6aa2ed3283a8e4b665",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0528-FlgNet.xml",
+        "status": 200,
+        "sha256": "cc856c9e70accae5f3f3ff16cb1d4f6d3c00ab7f5b538ff9d58cdf97b23845d0",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0582-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "41d4c2bd750392bbc2edc43995ec3a9da47a63c13ee86496df8f187492008951",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0583-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "0a34a2b7ad17eba6198dbe53d5c6aa8e87710c7436b832b9d39a075074ab58a8",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0585-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "e36ec18aa4abebea8f9160254522bb51ff722eae804c5a469790f85f02939184",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0586-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "f16c4c68bde8a737372c219a10b21501653dfd3ba8c59bd84b60ae6d62da8250",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0602-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0604-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0605-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "0ff6e2228dbfbc9f657359fe1055083ce621365084ea24c4160e4969b3eaac8b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0606-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0611-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0612-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0617-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "10bcf85169cb2512f55acadaef299a3d46b4b4cecd88032d739cfeba23e94aa9",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0619-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "85694bb5b696e31e6a1217431112e5b750516c4f94078d6e127d4394a8b80456",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0620-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "da97226a148a1a8babaea67db412761a718b7e7537212b7807e8ea27d000d2d3",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0627-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0629-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0661-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "90672199fee355011f581d3287046894772f3f3b4cb78bbe0dd0d71bd488ac93",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0662-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "1838040bfee800fdb3f13b126eaf69a9d178b17cecc0d59ae03e9185216a48a5",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0664-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "68c614e1c6a7fcadeee3f0b2ddc54910c3b337e66074d7a113b9cbc834c271ed",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0665-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "50e88d5f50f555151b35cfb17225e766c34ef6b490bd3a48e0a4e335fd17e3dd",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0667-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "ef924ced3e0e2b17e9c8440eb4946cd50d55df644c6ec24a1c4fd288fa6b73a3",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0668-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "2248e994a0a02cd37c5c5edaca199b3421068feea91e2e8616560e814ef9f6ed",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0669-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "754c513339d00918717010047b8f9d865d8674c6978a6f86c6f1fa5d683506e2",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0670-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "e56f3f0c4f2a86dd18578dedd4453915c2a51cd25e2cd9feced8538171a00841",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0671-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "26cb51706305c372d512c19770648bb0dbb74df8bd2277b1e0da1b8c88cca293",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0672-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "6bfc2ba142d6270c39eb1f13b2886204865af6d46eadc5f410c26981b8da9222",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0676-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0678-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0680-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "fd551ad5d47bbd66c6bcdcc1949aaddf68cc086a3ddf6fb337adc767954c2b95",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0683-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "0c9b569d041cd5babbbeded8a3bdc5d3754927125756b6ac54b7cb991b22fc22",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0684-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "6e9b3f173184adcddca503e81e2649022734b6ea3639c1d5ddaf0a08bac00208",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0685-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "2003d5741a0d707755c5e6e8b737fa106414b87b5b431b97271d9f1a5d343448",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0686-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "b450d8ff22f0fffd7a214b2a696af28a03a27834ebf862bfaa822dc9bfb3c8d4",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/network-map.json",
+        "status": 200,
+        "sha256": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/hmi_plc_tags.csv",
+        "status": 200,
+        "sha256": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/live_index.json",
+        "status": 200,
+        "sha256": "14c1b5e9c5f96147f149693f79e9d94ed78363ec5d8fe27353fd53354647ffb1",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0234-FlgNet.xml",
+        "status": 200,
+        "sha256": "4fa899449ab66d4a852be7c21085590393a8ad11c65d265222c3bfcd649dfc64",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0601-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "04c9481f7381284de689ef5c7ff40d7aea93f2004cd877a4e4f27e47baa6d862",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0599-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "32a693fe12134febbd9f5c7da10c3469ef4d5b164ab8b6bd9ea3867c358936c1",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0235-FlgNet.xml",
+        "status": 200,
+        "sha256": "1a4913d7a151824d6318edcd43bd4d496bee11b83a75f1d8f5d4cb04dd01b71c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0239-FlgNet.xml",
+        "status": 200,
+        "sha256": "dffeeb46b691879c647fefa334674c6e101595c06fab071bc00836fc8f712599",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0240-FlgNet.xml",
+        "status": 200,
+        "sha256": "bc1f120c4121b45913d542a0b6dd1ac4801422997fc0cbf3717d50d576932d33",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0420-FlgNet.xml",
+        "status": 200,
+        "sha256": "d99455768914d77d4233ea8fd95281f695674d44a7b9ca23d252e3b68e257a21",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0657-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0658-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0656-IdentXmlPart.xml",
+        "status": 200,
+        "sha256": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0251-FlgNet.xml",
+        "status": 200,
+        "sha256": "6446b2b475b59f69889a408df794d2ed43cc6343f999045c00243b6d0663e017",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0254-FlgNet.xml",
+        "status": 200,
+        "sha256": "568a4cfb029a4f1a8babf2e3ad2c515d9ca52655890bf65446cca2f796859258",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0258-FlgNet.xml",
+        "status": 200,
+        "sha256": "d585f05c02cf6d0579ece6f4081e9c52a3135fd8c4720f915f0dfdc0d510ac9b",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0266-FlgNet.xml",
+        "status": 200,
+        "sha256": "f11ba1455884c2b0a1085f1892445a86325760be78cd8c9cd70f8ede77f9a992",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0432-FlgNet.xml",
+        "status": 200,
+        "sha256": "a002d92b22e40a8fc12270f2995291f329392f9b7894f09f3b607b11caeb4c65",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0434-FlgNet.xml",
+        "status": 200,
+        "sha256": "31c8de50439465d356d0735765fa0ab0983585e0f1fbfab6bf614b054566f3f9",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "sources/decoded-original/0444-FlgNet.xml",
+        "status": 200,
+        "sha256": "718076435066a62dc890a414988dc00824025a94d5757799a519071fb69b694c",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/priority-equipment.csv",
+        "status": 200,
+        "sha256": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      },
+      {
+        "path": "registers/equipment.json",
+        "status": 200,
+        "sha256": "7870325dff32bbca90fa34507b301c4aad3347d669fddcd03b910343663996fa",
+        "exact": true,
+        "html_semantic_after_pretty_urls": false
+      }
+    ]
+  },
+  "fresh_clone": {
+    "fresh_clone": "passed",
+    "commit": "cf35b18a37727a21a219078e82b230e0c637f26b",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment_profiles": 18,
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
   "actual_published_before_this_release": {
     "manuals": 17,
     "unresolved_identification_reports": 0
@@ -96,5 +1215,269 @@
     "simulator_changes": 0,
     "simulator_behavior_tests": "not_run",
     "PLC_field_protection_SEJIN_changes": 0
-  }
+  },
+  "published_UI": {
+    "version": "1.17.0",
+    "profiles": 18,
+    "bundle": "2e798c6b1d4a1ff816e0de8483fd427e63bc8c24aad508c5629e799d5a1db4c6",
+    "notes": null,
+    "drafts": null,
+    "undefined": false
+  },
+  "published_HE_pairs": {
+    "rows": [
+      {
+        "index": 0,
+        "width": 1729,
+        "signal": "TC03 주변 직접입력",
+        "selected": "networks/network-1741.html#gme-he01-wire-371",
+        "expected": "networks/network-1741.html#gme-he01-wire-371",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1741.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 1,
+        "width": 1729,
+        "signal": "TC03 주변 raw HMI",
+        "selected": "networks/network-1071.html#gme-ab01-wire-85",
+        "expected": "networks/network-1071.html#gme-ab01-wire-85",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1071.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 2,
+        "width": 1729,
+        "signal": "PSH01 주변 직접입력",
+        "selected": "networks/network-1745.html#gme-he01-wire-451",
+        "expected": "networks/network-1745.html#gme-he01-wire-451",
+        "image": "assets/sensor-circuits/FG75.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=76",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1745.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 3,
+        "width": 1729,
+        "signal": "PSH01 주변 raw HMI",
+        "selected": "networks/network-1071.html#gme-ab01-wire-109",
+        "expected": "networks/network-1071.html#gme-ab01-wire-109",
+        "image": "assets/sensor-circuits/FG75.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=76",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1071.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 4,
+        "width": 1729,
+        "signal": "PSH03 주변 직접입력",
+        "selected": "networks/network-1747.html#gme-mv03-wire-491",
+        "expected": "networks/network-1747.html#gme-mv03-wire-491",
+        "image": "assets/sensor-circuits/FG75.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=76",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1747.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 5,
+        "width": 1729,
+        "signal": "PSH03 주변 raw HMI",
+        "selected": "networks/network-1071.html#gme-ab01-wire-115",
+        "expected": "networks/network-1071.html#gme-ab01-wire-115",
+        "image": "assets/sensor-circuits/FG75.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=76",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1071.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 6,
+        "width": 1729,
+        "signal": "TC03 LOW 주변경보",
+        "selected": "networks/network-1980.html#gme-he01-part-347",
+        "expected": "networks/network-1980.html#gme-he01-part-347",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1980.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 7,
+        "width": 1729,
+        "signal": "TC03 MAX 주변경보",
+        "selected": "networks/network-1980.html#gme-he01-part-377",
+        "expected": "networks/network-1980.html#gme-he01-part-377",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1980.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 8,
+        "width": 1729,
+        "signal": "TC03 MAXMAX 주변경보",
+        "selected": "networks/network-1980.html#gme-he01-part-420",
+        "expected": "networks/network-1980.html#gme-he01-part-420",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1980.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 9,
+        "width": 1729,
+        "signal": "별도 MV01 CONT_S",
+        "selected": "networks/network-11.html#gme-mv01-wire-442",
+        "expected": "networks/network-11.html#gme-mv01-wire-442",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-11.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 10,
+        "width": 1729,
+        "signal": "별도 MV03 PSH03 비교",
+        "selected": "networks/network-1705.html#gme-mv03-part-256",
+        "expected": "networks/network-1705.html#gme-mv03-part-256",
+        "image": "assets/sensor-circuits/FG75.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=76",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1705.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 11,
+        "width": 1729,
+        "signal": "별도 RD01 적재금지",
+        "selected": "networks/network-1931.html#gme-rd01-part-95",
+        "expected": "networks/network-1931.html#gme-rd01-part-95",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1931.html",
+        "highlight": true,
+        "overflow": -15
+      },
+      {
+        "index": 12,
+        "width": 1729,
+        "signal": "별도 BR01 시작요청 해제",
+        "selected": "networks/network-1858.html#gme-br01-part-291",
+        "expected": "networks/network-1858.html#gme-br01-part-291",
+        "image": "assets/sensor-circuits/FG77.png",
+        "natural": 2800,
+        "complete": true,
+        "pdf": "sources/Electrical_Rev2.pdf#page=78",
+        "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1858.html",
+        "highlight": true,
+        "overflow": -15
+      }
+    ],
+    "failures": []
+  },
+  "published_identification_UI": [
+    {
+      "boundary": true,
+      "returnLink": "/all-in-one/priority-guides/p03",
+      "sections": [
+        "overview",
+        "io",
+        "control",
+        "circuit",
+        "alarms",
+        "completion",
+        "repair",
+        "sources",
+        "tools"
+      ],
+      "title": "P03 · 웨잉호퍼1 식별 조사",
+      "unassigned": true,
+      "undefined": false
+    },
+    {
+      "boundary": true,
+      "returnLink": "/all-in-one/priority-guides/p04",
+      "sections": [
+        "overview",
+        "io",
+        "control",
+        "circuit",
+        "alarms",
+        "completion",
+        "repair",
+        "sources",
+        "tools"
+      ],
+      "title": "P04 · 웨잉호퍼배출컨베이어 식별 조사",
+      "unassigned": true,
+      "undefined": false
+    },
+    {
+      "boundary": true,
+      "returnLink": "/all-in-one/priority-guides/p14",
+      "sections": [
+        "overview",
+        "io",
+        "control",
+        "circuit",
+        "alarms",
+        "completion",
+        "repair",
+        "sources",
+        "tools"
+      ],
+      "title": "P14 · 2사이클론 식별 조사",
+      "unassigned": true,
+      "undefined": false
+    }
+  ],
+  "published_P14_return": "actual existing priority-guide navigation passed",
+  "published_counts": {
+    "manuals": 18,
+    "unresolved_identification_reports": 3,
+    "document_coverage": 21,
+    "priority_total": 23,
+    "excluded": 2,
+    "manual_percent": 78.3,
+    "document_coverage_percent": 91.3,
+    "in_scope_document_coverage_percent": 100.0
+  },
+  "goal_scope": "Authorized first-priority document/static/UI/package/publication work complete with gaps; physical identification/TIA/CPU/field unresolved; phase2 excluded",
+  "bookkeeping_commit": "following root documentation-only commit"
 }
