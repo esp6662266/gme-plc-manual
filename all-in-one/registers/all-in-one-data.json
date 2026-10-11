@@ -109272,6 +109272,695 @@
       "checked": "2026-10-11",
       "histories_copied": false,
       "automatic_sync": false
-    }
+    },
+    "relationships": {
+      "nodes": [
+        {
+          "id": "request",
+          "group": "request",
+          "title": "운전 요청 Set",
+          "caption": "Flag.M_BC_01",
+          "rule_ids": [
+            "1843:492",
+            "1844:1162"
+          ],
+          "note": "자동 종류1/2의 보존 요청 경로입니다. 비교값24/43을 실제 시간으로 확정하지 않습니다."
+        },
+        {
+          "id": "memo",
+          "group": "request",
+          "title": "기동 기억 Set/Reset",
+          "caption": "MemoCMD_BC01_Startup",
+          "rule_ids": [
+            "1843:102",
+            "1843:828"
+          ],
+          "note": "Set의 선행492.out→102.in은 핀 연결만 확인됐습니다. Reset의 전체 NOT 조건을 보존합니다."
+        },
+        {
+          "id": "request-reset",
+          "group": "request",
+          "title": "운전 요청 Reset",
+          "caption": "Flag.M_BC_01 해제",
+          "rule_ids": [
+            "1847:927",
+            "1935:198"
+          ],
+          "note": "종류5 정지 경로와 알람에 따른 요청 해제를 구분합니다. UNDER TESTING 반전은 FC 분기에만 있습니다."
+        },
+        {
+          "id": "output",
+          "group": "output",
+          "title": "최종 출력 허가",
+          "caption": "Start BC01 · %Q0.0",
+          "rule_ids": [
+            "1935:202"
+          ],
+          "note": "ON과 운전 요청은 세 OR 경로 모두에서 읽습니다. R1_GATE_LOOP_ON·기동 기억·정비 모드의 분기를 원본과 대조합니다."
+        },
+        {
+          "id": "timer",
+          "group": "output",
+          "title": "기동 감시 타이머",
+          "caption": "Tag_51 · S5T#2S",
+          "rule_ids": [],
+          "note": "FAULT와 INV의 감시가 공유하는 보존 타이머 비트입니다. 실제 경과시간·현재 상태는 미취득입니다."
+        },
+        {
+          "id": "fault",
+          "group": "alarm",
+          "title": "운전 응답 고장",
+          "caption": "Allarm.BC_01_FAULT",
+          "rule_ids": [
+            "1785:223",
+            "1785:228"
+          ],
+          "note": "처리된 운전 응답의 반전과 감시 비트를 읽습니다. Reset에는 응답 정상화 직접 접점이 없습니다."
+        },
+        {
+          "id": "inv",
+          "group": "alarm",
+          "title": "인버터 이상",
+          "caption": "Allarm.BC01_INV",
+          "rule_ids": [
+            "1785:27",
+            "1785:267"
+          ],
+          "note": "처리된 인버터 이상과 감시 비트를 읽습니다. Reset에는 이상 해소 직접 접점이 없습니다."
+        },
+        {
+          "id": "trip",
+          "group": "alarm",
+          "title": "트립와이어 감시",
+          "caption": "Allarm.BC_01_FC",
+          "rule_ids": [
+            "1786:234",
+            "1786:240"
+          ],
+          "note": "발생 경로에 Start BC01·Tag_51 직접 접점은 없습니다. Reset은 처리 트립 신호의 반전을 포함하며 실물 정상 극성은 확인 전입니다."
+        }
+      ],
+      "edges": [
+        {
+          "to": "Start BC01",
+          "rules": [
+            "1935:202"
+          ],
+          "note": "세 OR 허가 경로의 접점 참조입니다. 각 경로의 ON·요청 조건을 함께 확인합니다.",
+          "from": [
+            "Flag.M_BC_01",
+            "Flag.R1_GATE_LOOP_ON",
+            "MemoCMD_BC01_Startup",
+            "Flag.Maintenance_ON"
+          ]
+        },
+        {
+          "to": "Tag_51",
+          "rules": [
+            "1785:217"
+          ],
+          "note": "운전 응답/인버터 이상 두 감시 경로가 타이머를 공유합니다.",
+          "from": [
+            "Start BC01",
+            "Inputs.BC01 run",
+            "Inputs.BC01_All_inv"
+          ]
+        },
+        {
+          "to": "Allarm.BC_01_FAULT",
+          "rules": [
+            "1785:223"
+          ],
+          "note": "응답 접점은 반전입니다. 입력 정상 극성·현재 전달은 확인 전입니다.",
+          "from": [
+            "Start BC01",
+            "Tag_51",
+            "Inputs.BC01 run"
+          ]
+        },
+        {
+          "to": "Allarm.BC01_INV",
+          "rules": [
+            "1785:27"
+          ],
+          "note": "인버터 이상 감시의 읽기→Set 참조입니다.",
+          "from": [
+            "Start BC01",
+            "Tag_51",
+            "Inputs.BC01_All_inv"
+          ]
+        },
+        {
+          "to": "Allarm.BC_01_FC",
+          "rules": [
+            "1786:234"
+          ],
+          "note": "Start·타이머 직접 접점 없이 처리 트립 신호를 읽습니다.",
+          "from": [
+            "Inputs.BC01 trip wire"
+          ]
+        },
+        {
+          "to": "Flag.M_BC_01",
+          "rules": [
+            "1935:198"
+          ],
+          "note": "알람을 읽어 요청을 Reset하는 경로입니다. FC 분기의 UNDER TESTING 반전을 보존합니다.",
+          "from": [
+            "Allarm.BC_01_FAULT",
+            "Allarm.BC01_INV",
+            "Allarm.BC_01_FC"
+          ]
+        },
+        {
+          "to": "Allarm.BC_01_FAULT",
+          "rules": [
+            "1785:228"
+          ],
+          "note": "공통 ON·리셋·자기 래치가 Reset 조건입니다.",
+          "from": [
+            "Flag.RESET_ALLARM",
+            "Allarm.BC_01_FAULT"
+          ]
+        },
+        {
+          "to": "Allarm.BC01_INV",
+          "rules": [
+            "1785:267"
+          ],
+          "note": "공통 ON·리셋·자기 래치가 Reset 조건입니다.",
+          "from": [
+            "Flag.RESET_ALLARM",
+            "Allarm.BC01_INV"
+          ]
+        },
+        {
+          "to": "Allarm.BC_01_FC",
+          "rules": [
+            "1786:240"
+          ],
+          "note": "처리 트립 신호의 반전을 포함하는 Reset 경로입니다.",
+          "from": [
+            "Flag.RESET_ALLARM",
+            "Inputs.BC01 trip wire",
+            "Allarm.BC_01_FC"
+          ]
+        }
+      ],
+      "scope": "static_read_write_only",
+      "execution_verified": false,
+      "raw_input_mapping_verified": false
+    },
+    "repair_navigation": {
+      "request": [
+        {
+          "id": "mode",
+          "title": "모드·자동 단계",
+          "signals": "Data.Tipo_preset · Flag.Auto_ON1 · Data.Tempo_presetting",
+          "observe": "요청 전후의 모드·단계 값과 조작 시각을 따로 기록합니다.",
+          "compare": "종류1/2의 요청 Set과 종류5의 정지 Reset을 원본과 비교합니다.",
+          "pending": "현재 호출·24/43/13의 실제 시간 의미·HMI 조작 전달은 확인 전입니다.",
+          "rules": [
+            "1843:492",
+            "1844:1162",
+            "1847:927"
+          ],
+          "targets": [
+            {
+              "label": "요청·모드 근거",
+              "section": "control",
+              "item": "request"
+            }
+          ]
+        },
+        {
+          "id": "writers",
+          "title": "요청의 여러 쓰기",
+          "signals": "Flag.M_BC_01",
+          "observe": "운전 요청이 생긴 시각과 사라진 시각을 비교합니다.",
+          "compare": "Set/Reset의 쓰기 위치를 함께 확인하고 UID 나열을 실행 순서로 해석하지 않습니다.",
+          "pending": "현재 OB/호출·다른 쓰기·외부 요청과 최종값은 확인 전입니다.",
+          "rules": [
+            "1843:492",
+            "1844:1162",
+            "1847:927",
+            "1935:198"
+          ],
+          "targets": [
+            {
+              "label": "요청·모드 근거",
+              "section": "control",
+              "item": "request"
+            },
+            {
+              "label": "알람에 따른 요청 해제",
+              "section": "control",
+              "item": "reset"
+            }
+          ]
+        },
+        {
+          "id": "memo",
+          "title": "기동 기억",
+          "signals": "MemoCMD_BC01_Startup",
+          "observe": "기동 기억의 관찰값·변화 시각·수집 위치를 기록합니다.",
+          "compare": "Set의492.out→102.in 연결과 전체조건 NOT의 별도 Reset을 비교합니다.",
+          "pending": "ENO/out 실제 전달·초기화·현재 호출/다른 쓰기는 확인 전입니다.",
+          "rules": [
+            "1843:102",
+            "1843:828"
+          ],
+          "targets": [
+            {
+              "label": "요청·모드 근거",
+              "section": "control",
+              "item": "request"
+            }
+          ]
+        },
+        {
+          "id": "alarm-reset",
+          "title": "알람에 따른 요청 해제",
+          "signals": "Allarm.BC_01_FAULT · BC01_INV · BC_01_FC",
+          "observe": "최초 알람과 운전 요청이 해제된 시각을 따로 기록합니다.",
+          "compare": "1935:198의 세 분기와 FC 분기의 UNDER TESTING 반전을 확인합니다.",
+          "pending": "원인 후보를 확정 고장으로 바꾸지 않고 현재 발생 순서를 확보합니다.",
+          "rules": [
+            "1935:198"
+          ],
+          "targets": [
+            {
+              "label": "알람에 따른 요청 해제",
+              "section": "control",
+              "item": "reset"
+            },
+            {
+              "label": "운전 응답 고장",
+              "section": "alarms",
+              "item": "alarm-0"
+            },
+            {
+              "label": "인버터 이상",
+              "section": "alarms",
+              "item": "alarm-1"
+            },
+            {
+              "label": "트립와이어 감시",
+              "section": "alarms",
+              "item": "alarm-2"
+            }
+          ]
+        }
+      ],
+      "permit": [
+        {
+          "id": "base",
+          "title": "공통 조건·운전 요청",
+          "signals": "ON · Flag.M_BC_01",
+          "observe": "최종 출력을 관찰한 시각의 ON·운전 요청을 함께 기록합니다.",
+          "compare": "세 OR 허가 경로에 공통으로 들어가는 ON과 요청 접점을 확인합니다.",
+          "pending": "현재 CPU 주소·호출·다른 쓰기와 요청 유지 상태는 확인 전입니다.",
+          "rules": [
+            "1935:202"
+          ],
+          "targets": [
+            {
+              "label": "최종 출력 허가",
+              "section": "control",
+              "item": "output"
+            },
+            {
+              "label": "요청·모드 근거",
+              "section": "control",
+              "item": "request"
+            }
+          ]
+        },
+        {
+          "id": "or",
+          "title": "세 OR 허가 경로",
+          "signals": "Flag.R1_GATE_LOOP_ON · MemoCMD_BC01_Startup · Flag.Maintenance_ON",
+          "observe": "세 분기의 실제 값과 운전 모드를 각각 기록합니다.",
+          "compare": "한 경로의 참이 OR 허가를 구성하지만 현재 운전 완료를 입증하지는 않습니다.",
+          "pending": "각 허가의 현재 생성 위치·공통 ON·요청·호출을 함께 대조합니다.",
+          "rules": [
+            "1935:202"
+          ],
+          "targets": [
+            {
+              "label": "최종 출력 허가",
+              "section": "control",
+              "item": "output"
+            }
+          ]
+        },
+        {
+          "id": "q",
+          "title": "최종 PLC 출력",
+          "signals": "Start BC01 · %Q0.0",
+          "observe": "출력 비트가 변하는 시각과 수집한 CPU/화면을 기록합니다.",
+          "compare": "1935:202의 코일 조건과 도면상 기동 전달 위치를 구분합니다.",
+          "pending": "현재 CPU·Q 변화·다른 출력 쓰기·현장 기동 전달은 확인 전입니다.",
+          "rules": [
+            "1935:202"
+          ],
+          "targets": [
+            {
+              "label": "최종 출력 허가",
+              "section": "control",
+              "item": "output"
+            },
+            {
+              "label": "전기 전달 경로 1",
+              "section": "circuits",
+              "item": "path-0"
+            }
+          ]
+        },
+        {
+          "id": "field",
+          "title": "현장 직렬 허가",
+          "signals": "SS01 · 18QS1 · 18QM1 · 19KA1",
+          "observe": "보존 도면의 직렬 접점·릴레이 코일/접점을 구간별로 비교할 위치입니다.",
+          "compare": "FG19/PDF20의 기동 회로와 FG18/PDF19의 DI1 도착점을 확인합니다.",
+          "pending": "현재 ABB 모델·단자·접속·전압·접점 상태는 확인 전입니다.",
+          "rules": [
+            "1935:202"
+          ],
+          "targets": [
+            {
+              "label": "전기 전달 경로 1",
+              "section": "circuits",
+              "item": "path-0"
+            },
+            {
+              "label": "실물 확인 준비",
+              "section": "completion",
+              "item": "field"
+            }
+          ]
+        }
+      ],
+      "stop": [
+        {
+          "id": "first",
+          "title": "최초 변화와 후속 알람",
+          "signals": "알람3개 · 처리 Inputs · Flag.M_BC_01 · %Q0.0",
+          "observe": "최초/후속 알람과 요청·출력 OFF의 관찰 시각을 구분합니다.",
+          "compare": "알람 발생 조건과1935:198의 요청 Reset 경로를 비교합니다.",
+          "pending": "같이 정지한 설비만으로 최초 원인·소유 관계를 확정하지 않습니다.",
+          "rules": [
+            "1935:198"
+          ],
+          "targets": [
+            {
+              "label": "운전 응답 고장",
+              "section": "alarms",
+              "item": "alarm-0"
+            },
+            {
+              "label": "인버터 이상",
+              "section": "alarms",
+              "item": "alarm-1"
+            },
+            {
+              "label": "트립와이어 감시",
+              "section": "alarms",
+              "item": "alarm-2"
+            },
+            {
+              "label": "알람에 따른 요청 해제",
+              "section": "control",
+              "item": "reset"
+            }
+          ]
+        },
+        {
+          "id": "reset",
+          "title": "정지 요청의 쓰기",
+          "signals": "Flag.M_BC_01 · Data.Tipo_preset",
+          "observe": "종류5 정지와 알람 요청 해제의 관찰 근거를 따로 기록합니다.",
+          "compare": "1847:927과1935:198의 조건을 각각 확인합니다.",
+          "pending": "현재 호출 순서·외부/다른 쓰기·최종 요청 상태는 확인 전입니다.",
+          "rules": [
+            "1847:927",
+            "1935:198"
+          ],
+          "targets": [
+            {
+              "label": "요청·모드 근거",
+              "section": "control",
+              "item": "request"
+            },
+            {
+              "label": "알람에 따른 요청 해제",
+              "section": "control",
+              "item": "reset"
+            }
+          ]
+        },
+        {
+          "id": "timer",
+          "title": "기동 감시",
+          "signals": "Tag_51 · SdCoil · S5T#2S",
+          "observe": "타이머 비트와 감시 입력의 현재 상태·변화 시각을 기록합니다.",
+          "compare": "FAULT/INV가 공유하는 원본 감시 경로를 확인하며 FC와 분리합니다.",
+          "pending": "원문 시간 선언과 실제 경과시간·현재 호출/동작을 구분합니다.",
+          "rules": [
+            "1785:217",
+            "1785:223",
+            "1785:27"
+          ],
+          "targets": [
+            {
+              "label": "운전 응답 고장",
+              "section": "alarms",
+              "item": "alarm-0"
+            },
+            {
+              "label": "인버터 이상",
+              "section": "alarms",
+              "item": "alarm-1"
+            }
+          ]
+        },
+        {
+          "id": "raw",
+          "title": "현장 보호·원시/처리 응답",
+          "signals": "%I0.0 · %I0.1 · %I6.2 / 처리 Inputs",
+          "observe": "원시 입력과 처리된 운전/이상/트립 신호를 각각 관찰합니다.",
+          "compare": "SS01 11/12 기동 접점과13/14 감시 접점을 구분해 도면을 확인합니다.",
+          "pending": "원시→처리 전달·정상 극성·현행 접속과 보호 상태는 확인 전입니다.",
+          "rules": [
+            "1785:223",
+            "1785:27",
+            "1786:234"
+          ],
+          "targets": [
+            {
+              "label": "전기 전달 경로 2",
+              "section": "circuits",
+              "item": "path-1"
+            },
+            {
+              "label": "전기 전달 경로 3",
+              "section": "circuits",
+              "item": "path-2"
+            },
+            {
+              "label": "전기 전달 경로 4",
+              "section": "circuits",
+              "item": "path-3"
+            }
+          ]
+        }
+      ],
+      "recovery": [
+        {
+          "id": "cause",
+          "title": "원인 입력의 정상화 근거",
+          "signals": "Inputs.BC01 run · BC01_All_inv · BC01 trip wire",
+          "observe": "원인 입력과 실물 상태가 어떻게 바뀌었는지 값·시각·근거를 기록합니다.",
+          "compare": "원시/처리 신호·각 알람의 발생 조건을 대조합니다.",
+          "pending": "이름만으로 정상 극성을 판단하지 않습니다. 현재 모델의 제조사 기준이 필요합니다.",
+          "rules": [
+            "1785:223",
+            "1785:27",
+            "1786:234"
+          ],
+          "targets": [
+            {
+              "label": "전기 전달 경로 2",
+              "section": "circuits",
+              "item": "path-1"
+            },
+            {
+              "label": "전기 전달 경로 3",
+              "section": "circuits",
+              "item": "path-2"
+            },
+            {
+              "label": "전기 전달 경로 4",
+              "section": "circuits",
+              "item": "path-3"
+            }
+          ]
+        },
+        {
+          "id": "latch",
+          "title": "알람 기억 해제",
+          "signals": "Flag.RESET_ALLARM · 알람3개 RCoil",
+          "observe": "리셋 요청과 각 알람 기억의 해제 시각을 따로 기록합니다.",
+          "compare": "FAULT/INV의 Reset과 ¬트립 입력을 포함하는 FC Reset을 구분합니다.",
+          "pending": "래치 해제가 원인 해소·새 요청·실제 복구를 보장하지 않습니다.",
+          "rules": [
+            "1785:228",
+            "1785:267",
+            "1786:240"
+          ],
+          "targets": [
+            {
+              "label": "운전 응답 고장",
+              "section": "alarms",
+              "item": "alarm-0",
+              "alarmStep": "reset"
+            },
+            {
+              "label": "인버터 이상",
+              "section": "alarms",
+              "item": "alarm-1",
+              "alarmStep": "reset"
+            },
+            {
+              "label": "트립와이어 감시",
+              "section": "alarms",
+              "item": "alarm-2",
+              "alarmStep": "reset"
+            }
+          ]
+        },
+        {
+          "id": "new-request",
+          "title": "새 요청·출력 허가",
+          "signals": "Flag.M_BC_01 · OR허가3개 · Start BC01",
+          "observe": "리셋 이후의 운전 요청·허가·최종 출력을 각각 기록합니다.",
+          "compare": "Reset 경로와 요청 Set·출력 조건을 별도로 확인합니다.",
+          "pending": "현재 쓰기 순서·기억 상태·승인된 조작 전달은 확인 전입니다.",
+          "rules": [
+            "1843:492",
+            "1844:1162",
+            "1935:202"
+          ],
+          "targets": [
+            {
+              "label": "요청·모드 근거",
+              "section": "control",
+              "item": "request"
+            },
+            {
+              "label": "최종 출력 허가",
+              "section": "control",
+              "item": "output"
+            }
+          ]
+        },
+        {
+          "id": "actual",
+          "title": "실제 전달·응답·재발 확인",
+          "signals": "%Q0.0 / 현장 DI1 / %I0.0 / Inputs.BC01 run",
+          "observe": "출력·현장 기동·실제 응답·재발과 연동 영향을 각각 기록합니다.",
+          "compare": "기동 회로·운전 응답 회로와 기존 복구 증거 준비를 비교합니다.",
+          "pending": "현재 ABB 단자·원시→처리 전달·실제 운전 복구는 확인 전입니다.",
+          "rules": [
+            "1935:202",
+            "1785:223"
+          ],
+          "targets": [
+            {
+              "label": "전기 전달 경로 1",
+              "section": "circuits",
+              "item": "path-0"
+            },
+            {
+              "label": "전기 전달 경로 2",
+              "section": "circuits",
+              "item": "path-1"
+            },
+            {
+              "label": "복구 증거 확인",
+              "section": "completion",
+              "item": "recovery"
+            }
+          ]
+        }
+      ]
+    },
+    "inverter_comparison": [
+      {
+        "aspect": "제작사·모델·정격",
+        "saved": "FG18: 모터 M02 BC-01, 18AS1 ABB ACS355-03E-08A8-4(4kW), 18QM1·18QS1. 도면 정격은 현장 명판 확인 전 참고값입니다.",
+        "current": "제작사 ABB: 2026-10-11 사용자 확인. 현재 모델·정격은 확인 전.",
+        "needed": "현재 장착품 명판·위치·촬영 시점·BC01/M02 동일성 자료.",
+        "targets": [
+          {
+            "label": "실물 확인 준비",
+            "section": "completion",
+            "item": "field"
+          }
+        ]
+      },
+      {
+        "aspect": "기동 입력·릴레이 전달",
+        "saved": "FG18: +24V 단자9 → 19KA1 접점1→9 → 인버터 단자12(DI1 START).",
+        "current": "현재 ABB의 기동 단자·직렬 허가·릴레이 전달은 확인 전.",
+        "needed": "현행 승인 접속도·단자/배선 식별·접점/전압 관찰 위치와 근거.",
+        "targets": [
+          {
+            "label": "전기 전달 경로 1",
+            "section": "circuits",
+            "item": "path-0"
+          }
+        ]
+      },
+      {
+        "aspect": "운전 응답",
+        "saved": "+24Vdc 10.7 → 18AS1 단자17(RUNNING 공통) / 18AS1 단자19 → E0.0 / FG116/2 PLC 입력 참조",
+        "current": "현재 릴레이 출력 기능·극성·배선·원시→처리 전달은 확인 전.",
+        "needed": "해당 모델의 출력 기능 정의·현재 접속도·입력/처리 신호의 관찰 자료.",
+        "targets": [
+          {
+            "label": "전기 전달 경로 2",
+            "section": "circuits",
+            "item": "path-1"
+          }
+        ]
+      },
+      {
+        "aspect": "인버터 이상 응답",
+        "saved": "+24Vdc 10.7 → 18AS1 단자20(ALARM 공통) / 18AS1 단자21 → E0.1 / FG116/2 PLC 입력 참조",
+        "current": "현재 ABB 고장 응답 단자·출력 기능·정상 극성은 확인 전.",
+        "needed": "해당 모델의 고장 출력 정의·현행 배선·I0.1/처리 Inputs 대조 근거.",
+        "targets": [
+          {
+            "label": "전기 전달 경로 3",
+            "section": "circuits",
+            "item": "path-2"
+          }
+        ]
+      },
+      {
+        "aspect": "속도 설정·PLC 아날로그 출력",
+        "saved": "HMI_DB.SET_PERC_BC01 DB41.DBW52(Int) / Mul 상수272 / 102A5_SPARE0 %QW288(Word). 보존 선언·핀 연결.",
+        "current": "현재 ABB 입력 단자·설정/단위·PLC 최종값과 실제 속도는 확인 전.",
+        "needed": "현재 모델/승인 접속·아날로그 입력 기능·HMI 이벤트/PLC 쓰기·관찰 근거. 보호값 변경은 수행하지 않음.",
+        "targets": [
+          {
+            "label": "속도·주소 원본 근거",
+            "section": "control",
+            "item": "speed"
+          }
+        ]
+      }
+    ]
   }
 }

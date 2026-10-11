@@ -501,6 +501,47 @@ for rule in specs['BC01']['direct_rules']:
     action=next(a for a in network['actions'] if a['uid']==rule['Part UID'])
     assert standard['control_conditions'][rule['rule_id']]==dict(network=network['id'],file=network['file'],action={k:v for k,v in action.items() if k in ['uid','gate','name','condition','value']})
 
+# New relationship references resolve to already native-validated saved actions.
+relationship=standard['relationships']
+assert relationship['scope']=='static_read_write_only' and not relationship['execution_verified'] and not relationship['raw_input_mapping_verified']
+assert len(relationship['nodes'])==8 and len({n['id'] for n in relationship['nodes']})==8
+assert len(relationship['edges'])==9
+native_actions={key:entry['action'] for key,entry in standard['control_conditions'].items()}
+for timer in standard['alarm']['timers']:native_actions[str(timer['network'])+':'+timer['uid']]=timer
+native_locations={(r['network'],r['kind'],r['uid']) for r in standard['source_locations']}
+def condition_read_names(node):
+    if isinstance(node,dict):
+        if node.get('op')=='read':yield node['name']
+        for value in node.values():yield from condition_read_names(value)
+    elif isinstance(node,list):
+        for value in node:yield from condition_read_names(value)
+for edge in relationship['edges']:
+    for key in edge['rules']:
+        action=native_actions[key]
+        assert action['name']==edge['to'],key
+        assert set(edge['from']) <= set(condition_read_names(action['condition'])),key
+        network,uid=key.split(':');assert (int(network),'part',uid) in native_locations,key
+for node in relationship['nodes']:
+    assert node['group'] in ['request','output','alarm']
+    for key in node['rule_ids']:assert key in native_actions
+assert set(standard['repair_navigation'])=={'request','permit','stop','recovery'}
+allowed_items={'control':{'request','output','reset','speed','other'},'alarms':{'alarm-0','alarm-1','alarm-2'},'circuits':{'path-'+str(i) for i in range(5)},'completion':{'cpu','field','recovery'}}
+for cards in standard['repair_navigation'].values():
+    assert len(cards)==4 and len({c['id'] for c in cards})==4
+    for card in cards:
+        assert card['observe'] and card['compare'] and card['pending']
+        for key in card['rules']:
+            assert key in native_actions;network,uid=key.split(':');assert (int(network),'part',uid) in native_locations
+        for target in card['targets']:
+            assert target['item'] in allowed_items[target['section']]
+            if 'alarmStep' in target:assert target['section']=='alarms' and target['alarmStep']=='reset'
+comparison=standard['inverter_comparison'];assert len(comparison)==5
+bc01_circuit=next(p for p in data['drawing_workspace']['profiles'] if p['key']=='P01')['circuit']
+assert comparison[0]['saved']==bc01_circuit['equipment']
+assert comparison[1]['saved']==bc01_circuit['paths'][0]['destination']
+for i in [2,3]:assert comparison[i]['saved']==' / '.join(bc01_circuit['paths'][i-1]['nodes'])
+assert all('확인 전' in c['current'] for c in comparison)
+
 # Verify the three annotations against raw pins and scoped declarations.
 assert set(standard['pin_evidence'])=={'1018:1121','1048:2772','1843:102'}
 expected_pins={'1018:1121':('1148','1118','eno','1121','en'),'1048:2772':('2798','2769','eno','2772','en'),'1843:102':('104','492','out','102','in')}
@@ -707,6 +748,7 @@ result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(dra
               construction_pages=64,construction_guides=22,construction_selected_rows=51,
               construction_review_items_pending=7,masked_cable_rows_excluded=9,
               simulator_development='stopped_by_user',simulator_policy='permanently_stopped',bc01_media_references_checked=12,
+              bc01_relationship_nodes_checked=8,bc01_relationship_edges_checked=9,bc01_new_observation_cards_checked=16,bc01_revision_comparison_rows_checked=5,
               bc01_supplemental_paths_checked=3,bc01_static_address_pairs_checked=3,bc01_native_row_locations_checked=56,simulator_behavior_tests='not_rerun',
               simulator_files_hashes_unchanged=True,
               scope='application integration and preserved source data; not PLC/TIA execution')

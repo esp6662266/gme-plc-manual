@@ -14,7 +14,7 @@ def bc01_calculation_route(fragment):
     if not all(len(v)==1 for v in params.values()):return False
     if params.get('view')!=['manual'] or params.get('equipment')!=['P01'] or params.get('scope')!=['priority']:return False
     if not set(params)<={'view','equipment','scope','section','item','text'}:return False
-    allowed={'control':['speed','other'],'alarms':['alarm-0'],'repair':['response']}
+    allowed={'control':['request','speed','other'],'alarms':['alarm-0'],'repair':['request','permit','response','stop','recovery']}
     section=params.get('section',[None])[0]
     return section in allowed and params.get('item') in [[i] for i in allowed[section]] and ('text' not in params or params['text'] in [['standard'],['large']])
 class Links(HTMLParser):

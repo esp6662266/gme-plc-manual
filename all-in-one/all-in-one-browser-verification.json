@@ -4610,5 +4610,304 @@
       "registers/all-in-one-data.json": "496c42497d32a23e9fc570307b20e30bd103392e23789d54de263a66ec254ced",
       "operator-guide.html": "b1042d656013ebdd15c1f256a0901bcd025611a5e143c30fcbbcddf7aeb9d53c"
     }
+  },
+  "bc01_next_enhancement": {
+    "status": "passed",
+    "date": "2026-10-11",
+    "scope": "BC01 read-only manual navigation/search; no simulator or PLC execution",
+    "rendered_items": 36,
+    "relationship_nodes": 8,
+    "relationship_edges": 9,
+    "symptoms": 5,
+    "observation_cards": 20,
+    "new_observation_cards": 16,
+    "revision_comparison_rows": 5,
+    "unique_observation_routes": 16,
+    "comparison_routes": 5,
+    "search_index_locations": 69,
+    "search_cases": [
+      {
+        "buttons": 16,
+        "injected": 0,
+        "marks": [
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0",
+          "Q0.0"
+        ],
+        "query": "Q00",
+        "summary": "검색 결과 16개 · Q00"
+      },
+      {
+        "buttons": 4,
+        "injected": 0,
+        "marks": [
+          "LAD 1692",
+          "LAD 1692",
+          "LAD 1692",
+          "LAD 1692"
+        ],
+        "query": "LAD1692",
+        "summary": "검색 결과 4개 · LAD1692"
+      },
+      {
+        "buttons": 1,
+        "injected": 0,
+        "marks": [
+          "UID 39"
+        ],
+        "query": "UID39",
+        "summary": "검색 결과 1개 · UID39"
+      },
+      {
+        "buttons": 4,
+        "injected": 0,
+        "marks": [
+          "S5T#2S",
+          "S5T#2S",
+          "S5T#2S",
+          "S5T#2S"
+        ],
+        "query": "S5T#2S",
+        "summary": "검색 결과 4개 · S5T#2S"
+      },
+      {
+        "buttons": 0,
+        "injected": 0,
+        "marks": [],
+        "query": "아무자료없음987",
+        "summary": "검색 결과 0개 · 아무자료없음987"
+      },
+      {
+        "buttons": 0,
+        "injected": 0,
+        "marks": [],
+        "query": "<img src=x onerror=alert(1)>",
+        "summary": "검색 결과 0개 · <img src=x onerror=alert(1)>"
+      },
+      {
+        "buttons": 0,
+        "injected": 0,
+        "marks": [],
+        "query": "%_.",
+        "summary": "검색 결과 0개 · %_."
+      },
+      {
+        "buttons": 20,
+        "injected": 0,
+        "marks": [
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인",
+          "확인"
+        ],
+        "query": "확인",
+        "summary": "검색 결과 62개 · 확인"
+      }
+    ],
+    "search_more_counts": [
+      20,
+      40,
+      60,
+      62
+    ],
+    "photo_choice_reload_preserved": true,
+    "completion_choice_search_preserved": true,
+    "query_large_text_reload_preserved": true,
+    "invalid_relation_falls_back": true,
+    "guide_direct_route_checked": true,
+    "timer_original_row_checked": true,
+    "pc_mobile_layout_observations": [
+      {
+        "bodyOverflow": false,
+        "comparisons": 0,
+        "contentOverflow": false,
+        "observations": 4,
+        "text": "standard",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "text": "standard",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "search": "검색 결과 4개 · S5T#2S",
+        "text": "standard",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 0,
+        "contentOverflow": false,
+        "observations": 4,
+        "text": "large",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "text": "large",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "search": "검색 결과 4개 · S5T#2S",
+        "text": "large",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 0,
+        "contentOverflow": false,
+        "observations": 4,
+        "text": "standard",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "text": "standard",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "search": "검색 결과 4개 · S5T#2S",
+        "text": "standard",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 0,
+        "contentOverflow": false,
+        "observations": 4,
+        "text": "large",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "text": "large",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "comparisons": 5,
+        "contentOverflow": false,
+        "observations": 0,
+        "search": "검색 결과 4개 · S5T#2S",
+        "text": "large",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "cardWidths": [
+          433,
+          433,
+          433
+        ],
+        "contentOverflow": false,
+        "text": "standard",
+        "view": "relationships-final-css",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "cardWidths": [
+          433,
+          433,
+          433
+        ],
+        "contentOverflow": false,
+        "text": "large",
+        "view": "relationships-final-css",
+        "width": 1280
+      },
+      {
+        "bodyOverflow": false,
+        "cardWidths": [
+          305,
+          305,
+          305
+        ],
+        "contentOverflow": false,
+        "text": "standard",
+        "view": "relationships-final-css",
+        "width": 390
+      },
+      {
+        "bodyOverflow": false,
+        "cardWidths": [
+          305,
+          305,
+          305
+        ],
+        "contentOverflow": false,
+        "text": "large",
+        "view": "relationships-final-css",
+        "width": 390
+      }
+    ],
+    "console_errors": 0,
+    "console_warnings": 0,
+    "record_saves": 0,
+    "simulator_executed": false,
+    "plc_changed": false,
+    "source_files_changed": false,
+    "local_app_inputs_sha256": {
+      "assets/all-in-one.js": "2339bfbcbf334d57dfe2d92a9a6e74b68031f1311d5f7cf8de8286a07942ec7c",
+      "assets/all-in-one.css": "1af16a6fbaf8f969da3708a43c5b4626f5f0cc3214512ef616279bb3d3367d91",
+      "assets/all-in-one-data.js": "b270f79f4e96068bd29ff964492397b5ff47a8b3d0a49aa9ecf88261b31a41fb",
+      "registers/all-in-one-data.json": "a14cd6c06ca6385e67a24184668467ae4526b5329ee4d3dc99d927d1788aeb02",
+      "index.html": "64ec44e4653209c84c65ed761c3ca75f3e000fe6d1bfcd50e76e483fd1932185",
+      "operator-guide.html": "abf9095c7870f2e202052cbe408978288c82c7200b466f9accc649bde67aa10a"
+    }
   }
 }

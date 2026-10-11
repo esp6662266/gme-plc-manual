@@ -29,7 +29,7 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:'',bc01MediaGroup:'belt',bc01Photo:'photo-01'};
+  const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:'',bc01MediaGroup:'belt',bc01Photo:'photo-01',bc01Find:'',bc01Relation:'request'};
   let lastRenderedRoute = null;
   let bc01Wide = false;
   const NOTES_KEY = 'gme-all-in-one-notes-v1';
@@ -79,7 +79,7 @@
     const params = new URLSearchParams({view, equipment:selected, scope:nextScope});
     if (doc && validDoc(doc)) params.set('doc', doc);
     if(selected===state.selected && repairWorkspaceKeys.has(selected) && repairRecordMap.get(selected)?.steps.some(s=>s.id===state.repairSymptom)) params.set('symptom',state.repairSymptom);
-    if(view==='manual' && selected==='P01') {params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Section==='overview' && state.bc01Item==='media'){params.set('media',state.bc01MediaGroup);params.set('photo',state.bc01Photo);}if(state.bc01Text==='large')params.set('text','large');if(state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===state.bc01Check))params.set('check',state.bc01Check);}
+    if(view==='manual' && selected==='P01') {if(state.bc01Find)params.set('find',state.bc01Find.slice(0,160));if(state.bc01Section==='control' && state.bc01Item==='request')params.set('relation',state.bc01Relation);params.set('section',state.bc01Section);if(state.bc01Item)params.set('item',state.bc01Item);if(state.bc01Section==='alarms')params.set('alarmStep',state.bc01AlarmStep);if(state.bc01Section==='overview' && state.bc01Item==='media'){params.set('media',state.bc01MediaGroup);params.set('photo',state.bc01Photo);}if(state.bc01Text==='large')params.set('text','large');if(state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===state.bc01Check))params.set('check',state.bc01Check);}
     if(view==='drawings' && selected===state.selected && drawingMap.get(selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
     if (view === 'review' && reviewMap.has(review)) params.set('review',review);
     const hash = '#' + params.toString();
@@ -107,7 +107,7 @@
       const items=bc01Items(state.bc01Section);
       state.bc01Item=items.find(x=>x.id===params.get('item'))?.id || items[0]?.id || '';
       state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';
-      state.bc01Text=params.get('text')==='large'?'large':'standard';
+      state.bc01Text=params.get('text')==='large'?'large':'standard';state.bc01Find=(params.get('find') || '').trim().slice(0,160);state.bc01Relation=data.bc01_standard.relationships.nodes.find(n=>n.id===params.get('relation'))?.id || 'request';
       const checks=state.bc01Section==='completion'?bc01CompletionTasks(state.bc01Item):[];
       state.bc01Check=checks.find(t=>t.id===params.get('check'))?.id || checks[0]?.id || '';
       if(state.bc01Section==='overview' && state.bc01Item==='media')bc01NormalizeMedia(params.get('media'),params.get('photo'));
@@ -706,6 +706,79 @@
     ];
     return `<section class="bc01-diagnostic-map" aria-labelledby="bc01-observation-title"><h4 id="bc01-observation-title">관찰 위치 길찾기</h4><p>각 구간의 값·시각·수집 위치를 따로 기록하고, 차이가 시작되는 구간의 근거를 여세요. 아래 네 구역은 비교 위치이며 현재 실행 순서를 뜻하지 않습니다.</p><p class="muted">도면 단자는 보존 자료의 표기입니다. 현재 ABB 모델·단자·배선과 정상 극성은 확인 전입니다.</p><div class="bc01-observation-grid">${cards.map((c,i)=>`<article class="bc01-observation-card" data-bc01-observation="${c.id}"><header><span class="bc01-observation-number">${i+1}</span><h5>${esc(c.title)}</h5></header><code>${esc(c.tag)}</code><p class="bc01-observation-location">${esc(c.where)}</p><p>${esc(c.known)}</p><details><summary>추가로 확인할 경계</summary><p>${esc(c.pending)}</p></details><div class="inline-actions">${c.actions}</div>${c.sources?'<details><summary>백업 원본 참조</summary><div class="inline-actions">'+c.sources+'</div></details>':''}</article>`).join('')}</div><div class="notice">미확정 전달: %I0.0 → Inputs.BC01 run. 값·시각을 각각 관찰한 뒤 전달 위치와 현재 호출 근거를 확보합니다.</div></section>`;
   }
+  function bc01JumpButton(label,section,item,extra='') {
+    return `<button type="button" data-bc01-jump="${esc(section+'/'+item)}" ${extra}>${esc(label)}</button>`;
+  }
+  function bc01Navigate(section,item,options={}) {
+    if(!bc01Sections.some(s=>s[0]===section) || !bc01Items(section).some(i=>i.id===item))return false;
+    state.bc01Section=section;state.bc01Item=item;
+    if(section==='alarms')state.bc01AlarmStep=['set','reset','restart'].includes(options.alarmStep)?options.alarmStep:'set';
+    if(section==='completion')state.bc01Check=bc01CompletionTasks(item).find(t=>t.id===options.check)?.id || bc01CompletionTasks(item)[0]?.id || '';
+    if(section==='overview' && item==='media')bc01NormalizeMedia(options.media,options.photo);
+    if(section==='control' && item==='request')state.bc01Relation=data.bc01_standard.relationships.nodes.find(n=>n.id===options.relation)?.id || 'request';
+    route('manual');document.getElementById('bc01-content-title')?.focus({preventScroll:true});document.querySelector('.bc01-content')?.scrollIntoView({block:'start'});return true;
+  }
+  function bc01RelationshipBody() {
+    const relation=data.bc01_standard.relationships, spec=data.bc01_standard.specification;
+    const current=relation.nodes.find(n=>n.id===state.bc01Relation) || relation.nodes[0];
+    const rules=spec.direct_rules.filter(r=>current.rule_ids.includes(r.rule_id));
+    const groups=[['request','운전 요청·기억'],['output','출력·감시'],['alarm','알람 기억·해제']];
+    let detail=bc01RuleCards(rules);
+    if(current.id==='timer') {const t=data.bc01_standard.alarm.timers[0];detail=`<article class="bc01-rule"><h5>Tag_51 · ${esc(t.gate)} · ${esc(staticCondition(t.preset))}</h5><p>운전 응답 고장과 인버터 이상 감시가 공유하는 원본 타이머 비트입니다. 트립와이어 알람에는 이 비트의 직접 접점이 없습니다.</p>${bc01ConditionPanel(t.condition)}${bc01SourceButton('타이머 원본 위치',t.network,'part',t.uid)}</article>`;}
+    return `<section class="bc01-relationships" aria-labelledby="bc01-relationship-title"><h4 id="bc01-relationship-title">기동·정지·복구 근거 관계도</h4><p>관계 카드를 선택하면 실제 읽기·쓰기 조건과 원본이 나타납니다. 아래 배치는 실행 순서나 현재 상태를 표시하지 않습니다.</p><div class="bc01-relation-map">${groups.map(([id,title])=>`<section><h5>${esc(title)}</h5>${relation.nodes.filter(n=>n.group===id).map(n=>`<button type="button" data-bc01-relation="${esc(n.id)}" aria-pressed="${n.id===current.id}"><strong>${esc(n.title)}</strong><span>${esc(n.caption)}</span></button>`).join('')}</section>`).join('')}</div><details class="bc01-relation-links"><summary>원본에서 확인된 연결 ${relation.edges.length}개</summary>${table(['읽는 신호 → 쓰는 대상','관계·추가 확인','원본 위치'],relation.edges.map(e=>['<code>'+esc(e.from.join(' / '))+' → '+esc(e.to)+'</code>',esc(e.note),e.rules.map(key=>{const [network,uid]=key.split(':');return bc01SourceButton('LAD '+network+' · UID '+uid,Number(network),'part',uid);}).join(' ')]))}<p>연결 목록은 접점 읽기와 코일 쓰기의 참조입니다. 각 AND/OR·NOT 조건은 선택한 원본 조건에서 확인합니다.</p></details><article class="bc01-relation-detail" data-relation-detail="${esc(current.id)}"><h5>${esc(current.title)} · 선택한 근거</h5><p>${esc(current.note)}</p>${detail}</article><div class="notice">원시 I0.0/I0.1/I6.2 → 처리 Inputs 전달은 확인 전입니다. 리셋 → 운전 요청 Set 또는 실제 재기동으로 연결하지 않습니다.</div></section>`;
+  }
+  function bc01RemainingRepairCards(step) {
+    const cards=data.bc01_standard.repair_navigation[step.id];if(!cards)return '';
+    return `<section class="bc01-diagnostic-map" aria-labelledby="bc01-observation-title"><h4 id="bc01-observation-title">${esc(step.title)} · 관찰 위치 길찾기</h4><p>값·변화 시각·수집 위치를 각각 기록하고 비교할 근거를 선택하세요. 표시 신호와 조건은 보존 자료 기준입니다.</p><div class="bc01-observation-grid">${cards.map((c,i)=>`<article class="bc01-observation-card" data-bc01-observation="${esc(step.id+'-'+c.id)}"><header><span class="bc01-observation-number">${i+1}</span><h5>${esc(c.title)}</h5></header><code>${esc(c.signals)}</code><p class="bc01-observation-location">${esc(c.observe)}</p><p>${esc(c.compare)}</p><details><summary>추가로 확인할 경계</summary><p>${esc(c.pending)}</p></details><div class="inline-actions">${c.targets.map(t=>bc01JumpButton(t.label,t.section,t.item,t.alarmStep?'data-bc01-jump-alarm="'+esc(t.alarmStep)+'"':'')).join('')}</div><details><summary>백업 원본 위치</summary><div class="inline-actions">${c.rules.map(key=>{const [network,uid]=key.split(':');return bc01SourceButton('LAD '+network+' · UID '+uid,Number(network),'part',uid);}).join('')}</div></details></article>`).join('')}</div><p class="muted">현재 CPU·정상 극성·현행 ABB 접속·원시→처리 전달·실제 복구는 확인 전입니다. 이 안내는 관찰값이나 고장 판정을 생성하지 않습니다.</p></section>`;
+  }
+  function bc01InverterComparison() {
+    return `<section class="bc01-inverter-comparison"><h4>보존 도면과 현재 ABB의 대응 확인</h4><p>현재 제작사 ABB는 2026-10-11 사용자 확인입니다. 모델·정격·단자는 보존 도면과 현재 실물을 나누어 봅니다.</p><div class="bc01-comparison-grid">${data.bc01_standard.inverter_comparison.map(c=>`<article><h5>${esc(c.aspect)}</h5><dl><dt>보존 자료</dt><dd>${esc(c.saved)}</dd><dt>현재 확인 상태</dt><dd>${esc(c.current)}</dd><dt>대조에 필요한 자료</dt><dd>${esc(c.needed)}</dd></dl><div class="inline-actions">${c.targets.map(t=>bc01JumpButton(t.label,t.section,t.item)).join('')}</div></article>`).join('')}</div><p class="muted">구버전 미쓰비시·과거 교체 이력은 SEJIN 원본에서 해당 시점의 기록으로 확인합니다. 과거 정격·단자·보호값을 현재 장착품으로 적용하지 않습니다.</p></section>`;
+  }
+  let bc01SearchCollecting=false,bc01SearchIndex=null,bc01SearchLimit=20;
+  function bc01SearchNormalize(value) {return String(value || '').normalize('NFKC').toLowerCase().replace(/[\s%_.:\-/()]+/g,'');}
+  function bc01BuildSearchIndex() {
+    if(bc01SearchIndex)return bc01SearchIndex;
+    const saved={...state},records=[];bc01SearchCollecting=true;
+    try {
+      for(const [section,sectionTitle] of bc01Sections)for(const item of bc01Items(section)) {
+        let choices=[{}];
+        if(section==='alarms')choices=['set','reset','restart'].map(alarmStep=>({alarmStep,label:({set:'발생 조건',reset:'리셋 조건',restart:'재기동 확인'})[alarmStep]}));
+        if(section==='overview' && item.id==='media')choices=data.bc01_standard.media_evidence.photos.map(p=>({media:p.group,photo:p.id,label:p.title}));
+        if(section==='completion' && ['cpu','field'].includes(item.id))choices=bc01CompletionTasks(item.id).map(t=>({check:t.id,label:t.title}));
+        if(section==='control' && item.id==='request')choices=data.bc01_standard.relationships.nodes.map(n=>({relation:n.id,label:n.title}));
+        for(const choice of choices) {
+          state.bc01Section=section;state.bc01Item=item.id;state.bc01AlarmStep=choice.alarmStep || 'set';state.bc01Check=choice.check || '';state.bc01Relation=choice.relation || 'request';
+          if(choice.photo)bc01NormalizeMedia(choice.media,choice.photo);
+          const template=document.createElement('template');template.innerHTML=renderBC01Manual();
+          const content=template.content.querySelector('.bc01-content');
+          content.querySelectorAll('.bc01-item-nav,.bc01-source-navigation,.bc01-check-tabs,.bc01-media-groups,.bc01-media-cards').forEach(n=>n.remove());
+          if(choice.relation){const selected=content.querySelector('.bc01-relation-detail');content.replaceChildren(selected);}
+          const walker=document.createTreeWalker(content,NodeFilter.SHOW_TEXT),pieces=[];while(walker.nextNode())pieces.push(walker.currentNode.textContent);const refs=new Set();content.querySelectorAll('[data-doc]').forEach(button=>{const match=(button.dataset.doc || '').match(/^networks\/network-(\d+)\.html#bc01-part-(\d+)$/);if(match)refs.add('원본 링크 LAD '+match[1]+' UID '+match[2]);});pieces.push(...refs);const text=pieces.join(' ').replace(/\s+/g,' ').trim();
+          records.push({section,item:item.id,sectionTitle,title:item.title,choice,text,normalized:bc01SearchNormalize(text)});
+        }
+      }
+    } finally {Object.assign(state,saved);bc01SearchCollecting=false;}
+    bc01SearchIndex=records;return records;
+  }
+  function bc01SearchSnippet(record,query) {
+    const terms=query.split(/[\s,]+/).map(bc01SearchNormalize).filter(Boolean),positions=[];let normalized='',offset=0;
+    for(const ch of record.text){const part=bc01SearchNormalize(ch);normalized+=part;for(let i=0;i<part.length;i++)positions.push(offset);offset+=ch.length;}
+    const term=terms.find(t=>normalized.includes(t)) || '',match=term?normalized.indexOf(term):-1;
+    const position=match>=0?positions[match]:0,end=match>=0?positions[match+term.length-1]+1:0;
+    const start=Math.max(0,position-48),finish=Math.max(start+200,end+25),snippet=record.text.slice(start,finish),at=match>=0?position-start:-1;
+    return (start?'…':'')+(at<0?esc(snippet):esc(snippet.slice(0,at))+'<mark>'+esc(snippet.slice(at,end-start))+'</mark>'+esc(snippet.slice(end-start)))+(finish<record.text.length?'…':'');
+  }
+  function bc01SearchResultsHTML(matches,query) {
+    const groups=new Map();for(const r of matches.slice(0,bc01SearchLimit)){const key=r.section+'/'+r.item;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r);}
+    return Array.from(groups.values()).map(records=>`<section class="bc01-search-group"><h4>${esc(records[0].sectionTitle+' › '+records[0].title)}</h4><div>${records.map(r=>`<button type="button" data-bc01-search-result="${r.index}"><strong>${esc(r.choice.label || r.title)}</strong><span>${bc01SearchSnippet(r,query)}</span></button>`).join('')}</div></section>`).join('');
+  }
+  function bc01SearchPanel() {
+    if(bc01SearchCollecting)return '';
+    const query=state.bc01Find || '',terms=query.split(/[\s,]+/).map(bc01SearchNormalize).filter(Boolean);
+    const index=query?bc01BuildSearchIndex():[],matches=index.map((r,i)=>({...r,index:i})).filter(r=>terms.length && terms.every(t=>r.normalized.includes(t)));
+    return `<section class="bc01-manual-search" aria-label="BC01 매뉴얼 내부 검색"><form data-bc01-search><label for="bc01-find">BC01 매뉴얼 내부 검색</label><div><input id="bc01-find" type="search" maxlength="160" value="${esc(query)}" placeholder="태그·주소·알람·본문·LAD/UID"><button type="submit">찾기</button><button type="button" data-bc01-find-clear>지우기</button></div></form><p class="muted">36개 항목과 알람 단계·사진·현장 작업지의 세부 내용을 찾습니다. 예: Q0.0, Tag_51, S5T#2S, 리셋, ABB</p>${query?`<details open class="bc01-search-results"><summary>검색 결과 ${matches.length}개 · ${esc(query)}</summary><div aria-live="polite">${matches.length?bc01SearchResultsHTML(matches,query):'<p>일치하는 내용이 없습니다. 원본 태그·주소 또는 짧은 단어로 다시 찾아보세요.</p>'}</div>${matches.length>bc01SearchLimit?'<button type="button" data-bc01-find-more>검색 결과 더 보기</button>':''}<p class="muted">검색은 문서 탐색이며 현재 PLC값·운전 결과를 조회하거나 계산하지 않습니다.</p></details>`:''}</section>`;
+  }
+
   function renderBC01Manual() {
     const standard=data.bc01_standard;
     if(!standard)return panel('BC01 표준 자료','<p>자료를 다시 불러와 주세요.</p>');
@@ -745,7 +818,7 @@
       sources=[['알람 발생·해제 원본 근거','alarm-guides/BC01.html'],['재기동 판단 작업지','repair-guides/P01.html#recovery'],['공통 리셋·다른 쓰기','common-control.html#checks']];
     } else if(state.bc01Section==='repair') {
       const step=current.step, evidence=schema.evidence_plan.steps.find(s=>s.step_id===step.id);
-      body=`${step.id==='response'?bc01DiagnosticMap(schema,circuit):''}<ol class="repair-steps">${[['먼저 관찰·기록',step.observe],['원본과 비교',step.compare],['차이와 다음 판단',step.next]].map(([title,text])=>'<li><h4>'+esc(title)+'</h4><p>'+esc(text)+'</p></li>').join('')}</ol><button type="button" data-bc01-diagnose="${esc(step.id)}" class="card-primary-action">이 증상으로 진단·수리 시작</button><details><summary>이 증상에 필요한 자료 ${evidence.requirements.length}항목</summary>${evidence.requirements.map(r=>'<h4>'+esc(r.owner)+'</h4><p>'+esc(r.work)+'</p>').join('')}</details>`;
+      body=`${step.id==='response'?bc01DiagnosticMap(schema,circuit):bc01RemainingRepairCards(step)}<ol class="repair-steps">${[['먼저 관찰·기록',step.observe],['원본과 비교',step.compare],['차이와 다음 판단',step.next]].map(([title,text])=>'<li><h4>'+esc(title)+'</h4><p>'+esc(text)+'</p></li>').join('')}</ol><button type="button" data-bc01-diagnose="${esc(step.id)}" class="card-primary-action">이 증상으로 진단·수리 시작</button><details><summary>이 증상에 필요한 자료 ${evidence.requirements.length}항목</summary>${evidence.requirements.map(r=>'<h4>'+esc(r.owner)+'</h4><p>'+esc(r.work)+'</p>').join('')}</details>`;
       sources=[['선택 증상의 상세 판단',schema.manual+'#'+step.common],...evidence.source_links.map(s=>[s.label,s.path])];
     } else {
       if(current.id==='documentation')body='<p>BC01 한 설비의 화면·문서 표준 기준입니다. 원본 정적 대조, 현재 CPU 확인과 실제 수리 완료는 각각 구분합니다.</p>'+table(['표준 항목','완료 기준'],[['찾기·가독성','종류별 선택·세부 항목 목록·본문·근거 분리'],['근거 추적','신호/조건/단자마다 원본 문서·FG/PDF·LAD/UID 연결'],['수리 판단','증상→관찰 위치·값/시각→비교 원본→차이·추가 증거→복구 확인'],['모호한 자료','주소·극성·시공 차이를 확인 대기로 유지'],['검증','최신 파일의 필수 검사·링크·PC/모바일·기록 보존 확인']]);
@@ -753,6 +826,8 @@
       else body='<div class="notice">현재는 BC01만 고도화합니다. 다른 설비 확대는 보류하며 기존 분석과 화면을 보존합니다.</div><p>시뮬레이터는 이 프로젝트에서 영구 중지입니다. 전체 작업 완료 후에도 자동 재개하지 않습니다. 작성·수정·실행/행동시험, 실제 PLC·현장 설정·보호값 변경은 수행하지 않습니다. 기존 시뮬레이션 확인 항목과 시험 설계는 보존 자료이며 이번 완료 기준에서 제외합니다.</p>';
       sources=[['BC01 미완료 항목·완료 기준','requirements-audit.html#open-P01'],['현행 자료·실물 대응','priority-guides/P01.html'],['진행 범위','ACTIVE-WORK.md']];
     }
+    if(state.bc01Section==='control' && current.id==='request')body=bc01RelationshipBody()+'<details><summary>요청·기억 전체 규칙과 주소</summary>'+body+'</details>';
+    if(state.bc01Section==='overview' && current.id==='baseline')body+=bc01InverterComparison();
     if((state.bc01Section==='overview' && ['identity','baseline'].includes(current.id)) || state.bc01Section==='circuits' || (state.bc01Section==='completion' && current.id==='field'))body+=`<div class="notice info bc01-inverter-revision"><strong>인버터 자료의 개정 구분</strong><p>2026-10-11 사용자 확인: 현재 인버터 제작사는 ABB이며, SEJIN의 미쓰비시 등록 자료는 구버전입니다.</p><p class="muted">사용자 확인과 원본 도면 표기를 구분합니다. 현재 ABB의 정확한 모델·정격·단자 배선은 명판·현행 접속도 확인 전이며, 구버전 사양을 현재 설정으로 적용하지 않습니다.</p></div>`;
     const itemIndex=items.findIndex(i=>i.id===current.id), sectionTitle=bc01Sections.find(s=>s[0]===state.bc01Section)[1];
     const itemNav=`<div class="bc01-item-nav"><span><b>${itemIndex+1} / ${items.length}</b> · ${esc(sectionTitle)}</span><div><button type="button" data-bc01-move="prev" ${itemIndex===0?'disabled':''}>이전 항목</button><button type="button" data-bc01-move="next" ${itemIndex===items.length-1?'disabled':''}>다음 항목</button></div></div>`;
@@ -760,7 +835,7 @@
     const ioPath=state.bc01Section==='io' && ['물리 입력','물리 출력'].includes(current.role)?circuit.paths.find(p=>p.backup.split('/')[0].trim().toUpperCase()===String(current.raw['백업 주소'] || '').trim().toUpperCase()):null;
     const selectedPath=current.path || fieldPath || ioPath, fg=selectedPath?.fg || 19, preview=drawing.sheets.find(s=>s.id==='oem-'+fg);
     const drawingContext=selectedPath?esc(selectedPath.signal)+' · '+esc(selectedPath.backup)+' · 기존 회로 작업지의 도면 참조':'FG19 / PDF20은 기동 회로의 대표 참고 자료입니다. 선택한 항목의 전용 도면·직접 신호 대응을 확정한 표시가 아닙니다.';
-    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}${state.bc01Text==='large'?' bc01-large-text':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions bc01-reader-controls"><div role="group" aria-label="본문 글자 크기"><button type="button" data-bc01-text="standard" aria-pressed="${state.bc01Text==='standard'}">기본 글자</button><button type="button" data-bc01-text="large" aria-pressed="${state.bc01Text==='large'}">큰 글자</button></div><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 단독 표준화 · 다른 설비 확대 보류 · 현재 CPU/실물/현장 복구 확인 전</div><div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><p class="bc01-mobile-hint">세부 항목 목록을 좌우로 밀어 선택하세요. 본문의 이전·다음 항목 버튼도 사용할 수 있습니다.</p><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map((i,index)=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}"><span class="bc01-item-number">${String(index+1).padStart(2,'0')}</span> ${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content">${itemNav}<p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title" tabindex="-1">${esc(current.title)}</h3>${body}${bc01SourceNavigation()}<details class="bc01-inline-sources"><summary>이 항목의 원본·관련 근거 열기</summary>${links(sources)}</details>${itemNav}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel bc01-drawing-evidence" data-bc01-drawing-context="${selectedPath?'path':'reference'}"><h3>${selectedPath?'선택 경로의 전기도면':'대표 참고 전기도면'}</h3><p class="muted">${drawingContext}</p><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
+    return `<div class="bc01-standard${bc01Wide?' bc01-wide':''}${state.bc01Text==='large'?' bc01-large-text':''}"><div class="bc01-heading"><div><p class="eyebrow">BC01 / STANDARD MANUAL V1</p><h2>BC-01 · 표준 매뉴얼 작업실</h2><p>한 설비를 기준으로 매뉴얼·수리·제어 구조·근거를 정리합니다.</p></div><div class="inline-actions bc01-reader-controls"><div role="group" aria-label="본문 글자 크기"><button type="button" data-bc01-text="standard" aria-pressed="${state.bc01Text==='standard'}">기본 글자</button><button type="button" data-bc01-text="large" aria-pressed="${state.bc01Text==='large'}">큰 글자</button></div><button type="button" data-bc01-wide aria-pressed="${bc01Wide}">${bc01Wide?'목록·근거 함께 보기':'본문 넓게 보기'}</button>${button('도면 작업실','drawings')}</div></div><div class="notice info">BC01 단독 표준화 · 다른 설비 확대 보류 · 현재 CPU/실물/현장 복구 확인 전</div>${bc01SearchPanel()}<div class="bc01-kinds" role="group" aria-label="BC01 매뉴얼 종류">${bc01Sections.map(([id,title])=>`<button type="button" data-bc01-section="${id}" aria-pressed="${state.bc01Section===id}"><strong>${esc(title)}</strong><small>${bc01Items(id).length}개 세부 항목</small></button>`).join('')}</div><p class="bc01-mobile-hint">세부 항목 목록을 좌우로 밀어 선택하세요. 본문의 이전·다음 항목 버튼도 사용할 수 있습니다.</p><div class="bc01-layout"><nav class="bc01-library" aria-label="BC01 세부 항목"><h3>${esc(bc01Sections.find(s=>s[0]===state.bc01Section)[1])}</h3>${items.map((i,index)=>`<button type="button" data-bc01-item="${esc(i.id)}" aria-pressed="${current.id===i.id}"><span class="bc01-item-number">${String(index+1).padStart(2,'0')}</span> ${esc(i.title)}</button>`).join('')}</nav><section class="bc01-content">${itemNav}<p class="eyebrow">선택한 항목 · 보존 원본의 정적 근거</p><h3 id="bc01-content-title" tabindex="-1">${esc(current.title)}</h3>${body}${bc01SourceNavigation()}<details class="bc01-inline-sources"><summary>이 항목의 원본·관련 근거 열기</summary>${links(sources)}</details>${itemNav}</section><aside class="bc01-evidence"><section class="panel"><h3>원본·관련 근거</h3>${links(sources)}</section><section class="panel bc01-drawing-evidence" data-bc01-drawing-context="${selectedPath?'path':'reference'}"><h3>${selectedPath?'선택 경로의 전기도면':'대표 참고 전기도면'}</h3><p class="muted">${drawingContext}</p><button type="button" data-drawing="${esc(preview.id)}" class="bc01-preview"><img src="${esc(preview.image)}" alt="BC01 FG${fg} 원본 페이지 미리보기"><span>${esc(preview.title)} · 도면 작업실에서 확대</span></button><p class="muted">개정·단자·현재 접속은 원본과 현장 자료를 대조합니다.</p></section><section class="panel"><h3>미확정 경계</h3><p>${esc(circuit.distinction)}</p>${drawing.warnings.map(w=>'<div class="notice">'+esc(w)+'</div>').join('')}${button('관찰 근거 기록','repair-record')}${button('기존 진단·수리','repair')}</section></aside></div></div>`;
   }
   function renderRepairWorkspace() {
     const schema=repairRecordMap.get(state.selected), step=schema?.steps.find(s=>s.id===state.repairSymptom);
@@ -936,7 +1011,7 @@
           if(params.get('view')==='drawings' && drawingMap.has(params.get('equipment'))){e.preventDefault();const requested=params.get('drawing');if(drawingMap.get(params.get('equipment')).sheets.some(s=>s.id===requested))state.drawing=requested;route('drawings',params.get('equipment'));return;}
           if(params.get('view')==='repair-record' && repairRecordMap.has(params.get('equipment'))){e.preventDefault();route('repair-record',params.get('equipment'));return;}
           if(params.get('view')==='repair' && repairWorkspaceKeys.has(params.get('equipment'))){e.preventDefault();route('repair',params.get('equipment'));return;}
-          if(params.get('view')==='manual' && params.get('equipment')==='P01'){e.preventDefault();state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';state.bc01Item=bc01Items(state.bc01Section).find(i=>i.id===params.get('item'))?.id || '';state.bc01Check=bc01CompletionTasks(state.bc01Item).find(t=>t.id===params.get('check'))?.id || '';if(params.has('text'))state.bc01Text=params.get('text')==='large'?'large':'standard';if(params.has('alarmStep'))state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';route('manual','P01');return;}
+          if(params.get('view')==='manual' && params.get('equipment')==='P01'){e.preventDefault();state.bc01Section=bc01Sections.some(s=>s[0]===params.get('section'))?params.get('section'):'overview';state.bc01Item=bc01Items(state.bc01Section).find(i=>i.id===params.get('item'))?.id || '';state.bc01Check=bc01CompletionTasks(state.bc01Item).find(t=>t.id===params.get('check'))?.id || '';state.bc01Find=(params.get('find') || '').trim().slice(0,160);state.bc01Relation=data.bc01_standard.relationships.nodes.find(n=>n.id===params.get('relation'))?.id || 'request';if(params.has('text'))state.bc01Text=params.get('text')==='large'?'large':'standard';if(params.has('alarmStep'))state.bc01AlarmStep=['set','reset','restart'].includes(params.get('alarmStep'))?params.get('alarmStep'):'set';route('manual','P01');return;}
           if(params.get('view')==='review' && priorityMap.has(params.get('equipment'))){e.preventDefault();route('review',params.get('equipment'),'',params.get('review') || '');return;}
         }
         if (path.startsWith('index.html')) path = path.replace(/^index\.html/,'manual-catalog.html');
@@ -959,9 +1034,11 @@
       if(b.dataset.bc01Photo) {if(state.selected==='P01' && state.bc01Section==='overview' && state.bc01Item==='media'){bc01NormalizeMedia(state.bc01MediaGroup,b.dataset.bc01Photo);route('manual');}return;}
       if(b.dataset.bc01Check) {if(state.selected==='P01' && state.bc01Section==='completion' && bc01CompletionTasks(state.bc01Item).some(t=>t.id===b.dataset.bc01Check)){state.bc01Check=b.dataset.bc01Check;route('manual');document.querySelector('.bc01-check-tabs [aria-pressed="true"]')?.focus({preventScroll:true});}return;}
       if(b.dataset.bc01Move) {const items=bc01Items(state.bc01Section), i=items.findIndex(item=>item.id===state.bc01Item), next=items[i+(b.dataset.bc01Move==='prev'?-1:1)];if(next){state.bc01Item=next.id;route('manual');document.querySelector('.bc01-content')?.scrollIntoView({block:'start'});document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
-      if(b.dataset.bc01Jump==='control/output') {state.bc01Section='control';state.bc01Item='output';route('manual');return;}
-      if(b.dataset.bc01Jump && ['io','alarms'].includes(b.dataset.bc01Jump.split('/')[0])) {const [section,item]=b.dataset.bc01Jump.split('/');if(bc01Items(section).some(i=>i.id===item)){state.bc01Section=section;state.bc01Item=item;route('manual');document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
-      if(b.dataset.bc01Jump?.startsWith('circuits/')) {const item=b.dataset.bc01Jump.slice('circuits/'.length);if(bc01Items('circuits').some(i=>i.id===item)){state.bc01Section='circuits';state.bc01Item=item;route('manual');document.getElementById('bc01-content-title')?.focus({preventScroll:true});}return;}
+      if(b.dataset.bc01Jump) {const [section,item]=b.dataset.bc01Jump.split('/');bc01Navigate(section,item,{alarmStep:b.dataset.bc01JumpAlarm});return;}
+      if(b.dataset.bc01Relation && data.bc01_standard.relationships.nodes.some(n=>n.id===b.dataset.bc01Relation)){state.bc01Relation=b.dataset.bc01Relation;route('manual');document.querySelector('.bc01-relation-detail')?.scrollIntoView({block:'start'});document.querySelector('.bc01-relation-detail h5')?.setAttribute('tabindex','-1');document.querySelector('.bc01-relation-detail h5')?.focus({preventScroll:true});return;}
+      if(b.hasAttribute('data-bc01-find-clear')){state.bc01Find='';bc01SearchLimit=20;route('manual');document.getElementById('bc01-find')?.focus({preventScroll:true});return;}
+      if(b.hasAttribute('data-bc01-find-more')){bc01SearchLimit+=20;render();document.querySelector('[data-bc01-find-more]')?.focus({preventScroll:true});return;}
+      if(b.hasAttribute('data-bc01-search-result')){const index=Number(b.dataset.bc01SearchResult),r=Number.isInteger(index)?bc01BuildSearchIndex()[index]:null;if(r)bc01Navigate(r.section,r.item,r.choice);return;}
     }
     if(b.hasAttribute('data-bc01-wide') && state.selected==='P01'){bc01Wide=!bc01Wide;render();document.querySelector('[data-bc01-wide]')?.focus({preventScroll:true});return;}
     if(b.dataset.bc01Section) {
@@ -1108,6 +1185,7 @@
     if (e.target.id === 'review-kind') { clearReviewFocus(); state.reviewKind = e.target.value; renderReviewRows(); }
   });
   document.addEventListener('submit', async e => {
+    if(e.target.matches('[data-bc01-search]') && state.view==='manual' && state.selected==='P01'){e.preventDefault();state.bc01Find=e.target.querySelector('input').value.trim().slice(0,160);bc01SearchLimit=20;route('manual');document.getElementById('bc01-find')?.focus({preventScroll:true});return;}
     if (!['note-form','repair-record-form'].includes(e.target.id)) return;
     e.preventDefault();
     if(savingNote)return;
