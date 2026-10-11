@@ -1,3 +1,21 @@
+# v1.8.0 · FN06 표준 매뉴얼 — 게시 검증 완료
+
+| 확인 항목 | 실제 결과 |
+|---|---|
+| 기능·패키지 커밋 | 67b83003669b8929e19c27ddd823df950fa33fa6 |
+| 배포판 | [v1.8.0 tag/Release](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.8.0) |
+| Netlify | 6acb2572847b8c000937cb3c · ready · commit_ref 일치 · 2026-10-11T05:58:32.860Z · error없음 |
+| 새clone | Node24.19 npm ci·8테스트·BC01/설비검사·NETLIFY=true 빌드passed·Git변경0 |
+| 패키지 | 필수14+설비2 · 2801파일 · ZIP CRC/전체SHA · 원본730/추가3/중지5보존 |
+| ZIP | 52945704바이트 · SHA256 0907f0c7111047d91fc5b639157993863f28a87401b2fcd77e92890215167ceb · Release digest/size일치 |
+| UI·기록·PDF | 기존5+FN06 실제CSS1280/390 기본/큰글자980항목·2원본쌍·합성저장/복원3→4/재열기/미지필드/타설비/초안/동시성/Quota/비교/보고서변경차단·A4 PDF2쪽 |
+| 실제게시 | 46파일:30정확SHA/16HTML pretty URL정규화동등. P18 v1.8.0/32항목·E24입력Word전달/호출경계·FG52/Part776 StartFN06·통합0건창확인 |
+| 보존·현장 | 기존5프로파일/원본/운영기록보존. 격리QA키null/임시패치정리·운영작성0. TIA/CPU/현장복구not_performed·시뮬레이터변경/실행0 |
+
+[상세검증](V1.8.0-VERIFICATION.md) · [FN06기록](docs/equipment-standard/work-items/FN06.md) · [다음MC04](EXPANSION-WORK.md). 후속루트상태커밋은고정패키지와all-in-one바이트를바꾸지않는다. 전체승인1~4목표active; MC04초안수신·Dots다음VS01조사.
+
+---
+
 # v1.8.0 · FN06 표준 매뉴얼 — 게시 확인 대기
 
 FN06(P18)7영역32항목·직접기동2원본쌍·문서/정적/UI/합성기록/PDF2쪽 검증완료. 패키지최종재생성·새clone·GitHub tag/Release·Netlify 실제ready/내용대조는확인중이다. 확인전게시완료로표시하지않는다. TIA/현재CPU/현장복구미수행·시뮬레이터변경/실행0. [검증기록](V1.8.0-VERIFICATION.md) · [다음MC04](EXPANSION-WORK.md).

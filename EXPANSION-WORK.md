@@ -1,10 +1,10 @@
-# FN06 반영·검증 진행 — 2026-10-11
+# FN06 실제 게시 완료 — 2026-10-11
 
-FN03 v1.7.0 실제게시완료. 현재 소스v1.8.0 FN06(P18)7영역32항목·2회로·기록도구를반영했으며 UI/기록/PDF·패키지/게시검증중이다. Dots 최신초안수신·원본34해시/핵심XML/도면확인. 다음조사MC04(P08)는Dots담당. 전체승인1~4 active·2차133제외. [FN06기록](docs/equipment-standard/work-items/FN06.md).
+FN06(P18) v1.8.0 7영역32항목·E24입력전달/호출경계·2회로·980항목UI/합성기록/PDF2·14+2/2801파일패키지/8테스트/새clone/실제게시verified. Dots최신43원본해시확인. 다음MC04(P08) 초안수신·핵심검토/통합, Dots는VS01(P09)자체조사. 전체1~4active.
 
 # GME BC01 기반 확장 — 현재 작업과 인계
 
-표준 **GME-STD-1.0.0** · 작업 프로그램 **v1.7.0 / 실제 게시 확인** · 2026-10-11
+표준 **GME-STD-1.0.0** · 작업 프로그램 **v1.8.0 / 실제 게시 확인** · 2026-10-11
 
 최신 사용자 승인: 목표모드로 아래1~4번을 설비 한 개씩 진행한다. 원래 Ultra 채팅의 목표는 사용자 명시 요청으로 paused이며 같은 변경의 병행 수정을 중지했다. 기존 이력과 미커밋 FN01을 새 채팅01a12939-4d71-7e12-ab65-5ee9149d00d5로 인계했고, 사용자가 지정한 GPT-6.1 Sol / High에서 남은1~4번 active 목표를 설정했다. FN01/FN02 검증·게시를 완료했고 FN03부터 계속한다. 2차133후보는 이번 목표에 포함하지 않는다.
 
@@ -20,19 +20,20 @@ FN03 v1.7.0 실제게시완료. 현재 소스v1.8.0 FN06(P18)7영역32항목·2�
 | FN01(P15) | 47항목 documentation complete_with_gaps · 정적/UI/기록/패키지·v1.5.0 실제 게시 verified |
 | FN02(P16) | 42항목 documentation complete_with_gaps · 정적/UI/기록/PDF/패키지/새clone·v1.6.0 실제 게시 verified |
 | FN03(P17) | 39항목·정적/UI기록/PDF/2801파일패키지/새clone·v1.7.0 실제게시 verified |
-| 나머지 1차 | FN06 Dots 자체조사·초안 진행; 이후 미착수; 기존 분석·미확정·제외 보존 |
+| FN06(P18) | 32항목·정적/UI기록/PDF/패키지/새clone·v1.8.0 실제게시 verified |
+| 나머지 1차 | MC04 초안수신·핵심검토/통합중; Dots VS01자체조사; 이후미착수 |
 | 2차 | 실제 대장133후보, 미착수 |
 | TIA 컴파일/현재CPU/현장복구 | 미수행, 완료로 합산하지 않음 |
 
 대장은 전체248 ID, 우선23행/대응18, 기존 제외90, 다른 공정2, 제외 부모 하위 보류7, 2차133후보를 유지한다. 233개를 독립 작업 목록으로 만들지 않는다. preflight는 inventory_matches=true이며 requirements-audit/all-in-one-data의 바이트 변경은 현재 범위 안내/새 프로파일을 추가한 결과다. 집계·대응·제외 관계는 동일하다.
 
-현재 작업 기록은 docs/equipment-standard/work-items/PREP-01.md·FN04.md·FN01.md·FN02.md, FN01 검증은 V1.5.0-VERIFICATION.md/.json이다. 작성 소스 VERSION(root/all-in-one)/package/lock은1.7.0; 마지막 실제 게시는1.6.0이며 과거1.3태그/ZIP·원본을 보존한다. 마지막 실제 게시는 PUBLICATION_STATUS.md를 확인한다.
+현재 작업 기록은 docs/equipment-standard/work-items/PREP-01.md·FN04.md·FN01.md·FN02.md, FN01 검증은 V1.5.0-VERIFICATION.md/.json이다. 작성 소스 VERSION(root/all-in-one)/package/lock은1.8.0; 마지막 실제 게시는1.8.0이며 과거1.3태그/ZIP·원본을 보존한다. 마지막 실제 게시는 PUBLICATION_STATUS.md를 확인한다.
 
 ## 다음 한 작업
 
-FN03(P17) v1.7.0 원본/도면독립검토·14+2검사·실제CSS1280/390 기본/큰글자852화면·3원본쌍·합성기록복원3→4/실패/동시성/보존·비교/보고서변경차단·A4 PDF3쪽·2801파일패키지·8테스트·새clone·GitHubRelease digest·Netlify ready/commit_ref·게시36파일/UI검증을완료했다. [FN03 기록](docs/equipment-standard/work-items/FN03.md), [v1.7 검증](V1.7.0-VERIFICATION.md), [게시상태](PUBLICATION_STATUS.md) 참조.
+FN06의문서·정적·UI기록·PDF·패키지·새clone·GitHub/Netlify실제게시완료. [v1.8검증](V1.8.0-VERIFICATION.md)·[FN06기록](docs/equipment-standard/work-items/FN06.md).
 
-다음은 FN06(P18). Dots 속슬이가 공개표준/XML/전기도면을자체조사중이며FN06-DOTS-DRAFT.md첨부를대기한다. 본창은초안을받아핵심논리·별칭알람·소유/상충·원본위치를대조하고통합·검증·게시한다. 조사전체를중복수행하지않는다.
+다음MC04(P08). Dots초안본문수신완료이며원본해시·핵심논리·별칭/소유/상충·도면을대조후통합한다. Dots는다음VS01(P09)자체조사·MD초안담당. 유일한로컬편집자01a12963이검토·통합·검증·게시를진행한다. 조사전체를중복수행하지않는다.
 
 ## 보존 경계
 
@@ -40,6 +41,4 @@ FN03(P17) v1.7.0 원본/도면독립검토·14+2검사·실제CSS1280/390 기본
 
 ## 현재 편집자와 분업
 
-2026-10-11 새창01a12963-de06-7e93-bd10-71f025de4730이 유일한로컬편집자로High 목표1~4를계속한다. 이전두창은paused. Dots 속슬이는FN06(P18)자체조사·초안담당으로공개원본다운로드/표준/XML/PDF접근응답을확인했다. 로컬TIA스킬미발견/새창직접연계ID형식오류로첨부초안대기. FN03 UI/기록/PDF는passed이며필수패키지/실제게시가즉시다음이다.
-
-FN03 실제게시완료:9e4bf2840ad981b2467f9e411acee21fcf9962cf / Netlify6acb1e4716099a00080c048a. 사용자승인1~4전체목표는active, 나머지범위미완료. 다음FN06초안대기.
+01a12963-de06-7e93-bd10-71f025de4730 유일한로컬편집자·High목표1~4active. 이전두창paused. Dots자체조사/첨부초안→본창핵심원본검토/통합/검증/게시. FN03 v1.7/FN06 v1.8실제게시완료. MC04 초안수신·VS01 조사인계. 새창생성/대리코드편집/시뮬레이터작업없음.

@@ -2,7 +2,7 @@
 
 모든 설비 통합 백업·복원은 선택 설비와 관계없이 이 브라우저에 저장한 전체 메모·수리 기록을 JSON 한 파일로 내보냅니다. 메뉴의 “모든 설비 통합 백업·복원”을 열어 다운로드하거나 기존 전체/개별 JSON을 가져옵니다. 복원 미리보기는 설비·새 기록/충돌별 필터와50건 단위 페이지를 제공하며, 필터로 숨긴 선택도 전체 저장 건수에 포함합니다. 같은 설비·같은 ID는 기존 유지/가져온 값 복원/새 ID 복사, 다른 설비·같은 ID는 기존 유지/새 ID 복사를 선택합니다. 새 기록은 기본 추가, 충돌은 기본 기존 유지입니다. 기존에만 있는 기록·초안·미지 필드/행은 유지합니다. 가져온 저장 근거는 그대로 사용하고 이전 저장 근거는 backup_restore_history에 보존합니다. 통합 파일은64MiB/50,000건까지 지원하며 한계를 넘으면 잘라 내지 않고 차단합니다. 다운로드 문자열과 최종 병합 결과도 같은 검사로 확인합니다. P02와 FN04 같은 키를 명칭으로 합치지 않습니다.
 
-**2026-10-11 후속 작업표준:** [GME-STD-1.0.0](docs/equipment-standard/WORK-STANDARD.md)과 [EXPANSION-WORK.md](EXPANSION-WORK.md)를 먼저 읽습니다. 저장소에 공유 스킬과 23행/248 ID 대장, GPT-6.1 Sol / Ultra 재개 문장을 추가했습니다. 현재 프로그램 소스는 v1.8.0입니다. PREP-01 공통 구조·FN04 시범을 완료하고 FN01/FN02/FN03를 추가했으며 게시/완료 여부와 다음 작업은 EXPANSION-WORK.md와 PUBLICATION_STATUS.md의 최신 항목을 확인합니다.
+**2026-10-11 후속 작업표준:** [GME-STD-1.0.0](docs/equipment-standard/WORK-STANDARD.md)과 [EXPANSION-WORK.md](EXPANSION-WORK.md)를 먼저 읽습니다. 저장소에 공유 스킬과 23행/248 ID 대장, GPT-6.1 Sol / Ultra 재개 문장을 추가했습니다. 현재 프로그램 소스는 v1.8.0입니다. PREP-01 공통 구조·FN04 시범을 완료하고 FN01/FN02/FN03/FN06를 추가·게시 확인했으며 게시/완료 여부와 다음 작업은 EXPANSION-WORK.md와 PUBLICATION_STATUS.md의 최신 항목을 확인합니다.
 
 최신 작업 원본은 이 저장소 main의 all-in-one/입니다. 버전명은 VERSION.json, 고정 배포판은 게시 확인된 버전 태그, 게시 확인은 PUBLICATION_STATUS.md입니다. 예전 ZIP·OTHER_PC_HANDOFF.md·시뮬레이션 계획은 과거 자료이며 이 문서와 AGENTS.md, all-in-one/ACTIVE-WORK.md를 우선합니다.
 
