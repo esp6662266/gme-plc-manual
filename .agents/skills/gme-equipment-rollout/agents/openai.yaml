@@ -1,0 +1,4 @@
+interface:
+  display_name: "GME BC01 기반 설비 표준화"
+  short_description: "BC01 기준으로 GME 우선 설비와 전체 대장의 작성·검증·인계를 진행"
+  default_prompt: "$gme-equipment-rollout 현재 저장소의 표준과 인계 기록을 읽고 다음 설비 한 개의 BC01 기반 표준화를 이어서 진행해."

@@ -1,0 +1,72 @@
+{
+  "standard_version": "1.0.0",
+  "date": "2026-10-11",
+  "helper_sha256": "395067d6da20af3e1d82a43b7936907a87a44d8d2e11e4ebc61b1fc441e2adb6",
+  "checks": [
+    {
+      "case": "current register and snapshot agreement",
+      "passed": true
+    },
+    {
+      "case": "duplicate catalog",
+      "passed": true,
+      "rejected_reason": "catalog: empty or duplicate id"
+    },
+    {
+      "case": "unknown priority target",
+      "passed": true,
+      "rejected_reason": "audit priority mapping differs: P02.plc_id"
+    },
+    {
+      "case": "duplicate priority target",
+      "passed": true,
+      "rejected_reason": "audit priority mapping differs: P02.plc_id"
+    },
+    {
+      "case": "parent cycle",
+      "passed": true,
+      "rejected_reason": "unknown or cyclic parent: BC01 -> BC01"
+    },
+    {
+      "case": "unknown parent",
+      "passed": true,
+      "rejected_reason": "unknown or cyclic parent: BC01 -> NOT-REAL"
+    },
+    {
+      "case": "range exclusion note missing",
+      "passed": true,
+      "rejected_reason": "exclusion range missing status note: EV01"
+    },
+    {
+      "case": "audit ID mismatch",
+      "passed": true,
+      "rejected_reason": "catalog/audit/app ID sets differ"
+    },
+    {
+      "case": "app P03 mapping conflict",
+      "passed": true,
+      "rejected_reason": "app priority mapping differs: P03.plc_id"
+    },
+    {
+      "case": "app missing excluded priority row",
+      "passed": true,
+      "rejected_reason": "app priority key sets differ"
+    },
+    {
+      "case": "audit identity mismatch",
+      "passed": true,
+      "rejected_reason": "audit priority identity differs: P01"
+    },
+    {
+      "case": "app catalog parent mismatch",
+      "passed": true,
+      "rejected_reason": "app catalog metadata differs: BC01.parent"
+    },
+    {
+      "case": "consistent source changes require reviewed snapshot update",
+      "passed": true
+    }
+  ],
+  "application_generators_run": false,
+  "plc_or_simulator_run": false
+}

@@ -1,4 +1,8 @@
-# 최신 작업: GME All-in-One v1.3.0 · BC01 기록 보존·작업 재개 보완
+# 최신 작업: GME 설비 확장 작업표준 GME-STD-1.0.0
+
+[BC01 기반 작업표준](docs/equipment-standard/WORK-STANDARD.md) · [GPT-6.1 Sol / Ultra 시작](docs/equipment-standard/START-GPT61.md) · [현재 진행/다음 작업](EXPANSION-WORK.md) · [공유 스킬](.agents/skills/gme-equipment-rollout/SKILL.md). 우선23행과 전체248 ID를 대조하고 기존 제외를 유지한 2차133개 후보를 관리합니다. 표준 준비와 실제 설비 구현 완료는 구분합니다.
+
+## 현재 프로그램: GME All-in-One v1.3.0 · BC01 기록 보존·작업 재개 보완
 
 [다른 컴퓨터에서 재개](WORKSPACE-HANDOFF.md) · [작업 지침](AGENTS.md) · [현재 작업](all-in-one/ACTIVE-WORK.md) · [v1.3 보완 안내](all-in-one/BC01-PRESERVATION-20261011.md) · [네 도구 안내](all-in-one/BC01-RECORD-TOOLS-20261011.md) · [버전](VERSION.json). 프로그램과 원본·MD·생성기·검증 파일은 이 저장소에서 함께 관리합니다.
 
@@ -37,7 +41,7 @@ Node.js 24를 사용한다. `npm ci`, `npm test`, `npm run build`를 실행한�
 - 새 작업실: https://gme-plc-manual.netlify.app/all-in-one/
 - 기본 화면은 디코팅 배치도·설비카드입니다. 설비 선택→수리·알람·매뉴얼·도면으로 이동하며 카드 목록·검색·확대/전체 보기·모바일 선택 카드/돌아가기를 제공합니다. 표시 수준은 자료 대응 상태이며 실시간 운전값이 아닙니다.
 - 원본/재생성/검증 자료: `all-in-one/` (기존22장 홈페이지와 자료실을 보존합니다).
-- 현재 고도화는 BC01(P01) 단독이며 다른 설비 확대는 보류합니다. 우선23개·전체248개의 기존 자료는 보존합니다.
+- 현재 게시된 고도화 기준은 BC01(P01)입니다. 후속 설비 확대는 새 작업표준과 EXPANSION-WORK.md에 따라 진행하며 우선23개·전체248개의 기존 자료를 보존합니다.
 - MV04·SC12·PV04·GSS·85톤로와 EV01~EV90의 추가 상세 매뉴얼은 제외합니다. 시뮬레이터 작성·수정·실행과 실제 PLC 변경은 중지합니다.
 - 시뮬레이터/모델5개 파일과 원본을 해시로 보존합니다. `npm run build`는 검증된 정적 자료를 복사하며 PLC나 시뮬레이터를 실행하지 않습니다.
 - 수리 기록은 브라우저·호스트·포트별 로컬 저장입니다. 기존Mac localhost 기록이 이 홈페이지로 자동 이동하지 않습니다. JSON으로 별도 보관합니다.

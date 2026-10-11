@@ -1,5 +1,7 @@
 # 다른 컴퓨터에서 최신 GME 작업 재개 — v1.3.0
 
+**2026-10-11 후속 작업표준:** [GME-STD-1.0.0](docs/equipment-standard/WORK-STANDARD.md)과 [EXPANSION-WORK.md](EXPANSION-WORK.md)를 먼저 읽습니다. 저장소에 공유 스킬과 23행/248 ID 대장, GPT-6.1 Sol / Ultra 재개 문장을 추가했습니다. 현재 프로그램은 v1.3.0이며 아래 BC01 기능 설명은 그 구현 기준입니다. 새로운 확장은 PREP-01부터 시작합니다.
+
 최신 작업 원본은 이 저장소 main의 all-in-one/입니다. 버전명은 VERSION.json, 고정 배포판은 v1.3.0 태그, 게시 확인은 PUBLICATION_STATUS.md입니다. 예전 ZIP·OTHER_PC_HANDOFF.md·시뮬레이션 계획은 과거 자료이며 이 문서와 AGENTS.md, all-in-one/ACTIVE-WORK.md를 우선합니다.
 
 ## 처음 내려받기
@@ -63,4 +65,4 @@ check:python은 Python 준비 확인입니다. 실행기는 Windows py -3, pytho
 
 ## 다음 채팅 재개 문장
 
-> 이 저장소의 AGENTS.md, VERSION.json, WORKSPACE-HANDOFF.md, PUBLICATION_STATUS.md와 all-in-one/ACTIVE-WORK.md를 먼저 읽고 Git 상태를 확인해 줘. 최신 main의 BC01(P01) 고도화를 이어서 진행해. 완료 자료·원본·미확정 항목·브라우저 기록을 보존하고, 시뮬레이터는 영구 중지, 실제 PLC/현장/보호값 및 SEJIN 변경은 하지 마. 필요한 검증과 MD 정리 후 GitHub·Netlify의 실제 게시 결과까지 확인해 줘.
+> 이 저장소의 .agents/skills/gme-equipment-rollout/SKILL.md, AGENTS.md, EXPANSION-WORK.md, docs/equipment-standard/WORK-STANDARD.md와 START-GPT61.md를 읽고 최신 Git 상태를 확인해 줘. GPT-6.1 Sol / Ultra로 BC01 기준 확장을 최신 작업 기록의 다음 한 단계부터 진행해. 기존 제외·완료분·원본·미확정·브라우저 기록을 보존하고 문서/화면/현장 확인을 구분해. 시뮬레이터와 실제 PLC/현장/보호값 및 SEJIN 변경은 하지 마. 필요한 검증과 GitHub 인계 기록을 남겨 줘.
