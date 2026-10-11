@@ -1,3 +1,7 @@
+# v1.11.1 PV01 접점 번호 정정 — 게시 확인 중
+
+FG69/PDF70의 EV01/02 부하 경로는 69KA1/2 접점5–9이다. v1.11.0의1–9 설명은 검토 오류이며 v1.11.1에서 정정한다. 도면 하단 접점표에1/5/9가 있으나 실제 그린 부하 경로는5/9다. DC 코일 A1/A2·110Vac 부하·PLC 제어식·원본·기록 기능은 동일하다. v1.11.0 태그/ZIP/저장시점 근거와 Dots 수신 원문은 보존한다.
+
 # v1.11.0 PV01 — 실제 게시 확인 완료
 
 GitHub [v1.11.0](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.11.0)·feature2041fe80aa66170f3dfe5e8886b0dedc5e1fcc7e. ZIP53,181,366bytes·2801파일·SHA2569512251173a810659457b271555602a159e308b9c979be6301960dff7717a209. Netlify6acb36453d7cf70008e5301e ready/동일commit/2026-10-11T07:10:22.833Z. 게시57파일37exact+20HTML의미일치·실제P05 v1.11/71항목/FG69+1915 Part384강조·통합0건·console0. 새clone npmci/8테스트/BC01/설비/NETLIFYbuild·Git변경0. [상세](V1.11.0-VERIFICATION.md). 다음PV02초안65해시수신·Dots MV01조사. TIA/CPU/현장미검증·시뮬레이터영구중지.

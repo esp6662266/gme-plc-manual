@@ -388,7 +388,7 @@ def build_pv01_profile(root,data,source_rows):
             '1935/0242 BC01소유 ON·Flag.M_BC_01·(R1_GATE_LOOP_ON OR MemoCMD_BC01_Startup OR Maintenance_ON)→Start BC01 Coil202. PV01 루프응답소비와BC01출력소유를분리하며PV01만으로BC01전체가항상운전/정지한다고확대하지않습니다.',
             '1215/0391 HMI PV_2Gate CodeBlock31/CRef32 0623/0624 NID39 RID715/716·20핀. Allarm5/6/7 ORef54/56/58→0626 RID48 FALSE만결속,나머지17바인딩은미해석.347/0400 공통Local함수와CSV DB11X76.0~76.6·DB2X5.0를실인수/현재이벤트로확정하지않습니다.'
         ],
-        repair=['FG141 MOD15 단자13/Q5.2→FG69 69KA1 DC코일;110Vac9.7→69KA1 1/9→X1 126(5x20/2A F)→EV01 A1/A2→127/0Vac9.9. B 단자14/Q5.3→69KA2 DC코일·접점1/9→128/EV02→129/0Vac. 출력/접점/밸브/공압·기계/위치단계를구분합니다.',
+        repair=['FG141 MOD15 단자13/Q5.2→FG69 69KA1 DC코일;110Vac9.7→69KA1 접점5/9→X1 126(5x20/2A F)→EV01 A1/A2→127/0Vac9.9. B 단자14/Q5.3→69KA2 DC코일·접점5/9→128/EV02→129/0Vac. 출력/접점/밸브/공압·기계/위치단계를구분합니다.',
             'FG70 LS01/02/05/06 13/14·X1 130~137→FG124 MOD10단자7/8 I8.6/8.7·FG125단자11/12 I9.0/9.1. LS02는FG124 SPARE와FG70배선/원본I8.7모두보존하며삭제/극성/실사용을추정하지않습니다.',
             'PB15 +24V→X1 138→70SB1→70SA1 A/B→139/I9.2·140/I9.3. 시공ENT2TB2/3·LS01~08 추가/ENT2TB3 A GATE반복설명·OEM↔심선미확정. 현장반/게이트위치를이름만으로확정하지않습니다.'],
         pending=['현행CPU/프로젝트·ON/OFF/UNDER TESTING/ENO·raw/DB·모든writer·스캔우선순위',
