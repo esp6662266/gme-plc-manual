@@ -1,3 +1,7 @@
+# v1.11.0 PV01 실제 게시 완료 — 다음 PV02
+
+현재GitHub v1.11.0/Netlify동일2041fe8 ready. 문서71·372위치77해시·UI1608/8쌍/합성기록/A4 PDF3/14+2/ZIP/Node8/새clone/게시57파일passed. [검증](V1.11.0-VERIFICATION.md). PV02(P07)초안65원본해시일치수신·독립검토미완료; Dots다음MV01(P19)조사. 원본/기존8내용/미지필드·신호·타설비·초안/미확정보존. 시뮬레이터영구중지·PLC/현장/보호값/SEJIN변경0. 전체goal active.
+
 # v1.11.0 PV01 통합·게시 진행
 
 PV01(P05)7영역71항목·372위치77해시·8쌍·UI1608/합성기록/A4 PDF3/필수14+2/ZIP/Node8/NETLIFY빌드passed. GitHub/Netlify/새clone확인진행. 마지막실제게시는아래v1.10.0. 다음PV02(P07)초안65해시일치수신; Dots자체다음MV01(P19)조사. 시뮬레이터영구중지/실제PLC·현장·보호값·SEJIN변경0/2차133제외. 전체goal active. [검증](V1.11.0-VERIFICATION.md).

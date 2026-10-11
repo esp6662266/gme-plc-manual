@@ -1,3 +1,7 @@
+# v1.11.0 PV01 — 실제 게시 확인 완료
+
+GitHub [v1.11.0](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.11.0)·feature2041fe80aa66170f3dfe5e8886b0dedc5e1fcc7e. ZIP53,181,366bytes·2801파일·SHA2569512251173a810659457b271555602a159e308b9c979be6301960dff7717a209. Netlify6acb36453d7cf70008e5301e ready/동일commit/2026-10-11T07:10:22.833Z. 게시57파일37exact+20HTML의미일치·실제P05 v1.11/71항목/FG69+1915 Part384강조·통합0건·console0. 새clone npmci/8테스트/BC01/설비/NETLIFYbuild·Git변경0. [상세](V1.11.0-VERIFICATION.md). 다음PV02초안65해시수신·Dots MV01조사. TIA/CPU/현장미검증·시뮬레이터영구중지.
+
 # v1.11.0 PV01 — 게시 확인 대기
 
 7영역71항목·8쌍·UI1608·격리합성기록·A4 PDF3쪽passed. 패키지/새clone/실제게시확인중. 마지막확인된배포는아래v1.10.0이다. [검증](V1.11.0-VERIFICATION.md).

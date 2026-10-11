@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "pending",
+  "publication": "passed",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -439,5 +439,59 @@
   },
   "node_tests": 8,
   "NETLIFY_build": "passed",
-  "received_PV02_hashes_matched": 65
+  "received_PV02_hashes_matched": 65,
+  "fresh_clone": {
+    "path": "/tmp/gme-pv01-fresh-20261011",
+    "commit": "2041fe80aa66170f3dfe5e8886b0dedc5e1fcc7e",
+    "npm_ci": "passed",
+    "node_tests": 8,
+    "bc01": "passed",
+    "equipment": "passed",
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "github_release": {
+    "url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.11.0",
+    "commit": "2041fe80aa66170f3dfe5e8886b0dedc5e1fcc7e",
+    "tag_target_verified": true,
+    "asset_size_digest_verified": true
+  },
+  "netlify": {
+    "id": "6acb36453d7cf70008e5301e",
+    "state": "ready",
+    "commit_ref": "2041fe80aa66170f3dfe5e8886b0dedc5e1fcc7e",
+    "published_at": "2026-10-11T07:10:22.833Z",
+    "error_message": null
+  },
+  "published_files": {
+    "count": 57,
+    "exact": 37,
+    "html_semantic_after_pretty_urls": 20
+  },
+  "published_ui": {
+    "identity": {
+      "areas": [
+        "설비·자료 기준3개 세부 항목",
+        "I/O·HMI4개 세부 항목",
+        "제어 구조40개 세부 항목",
+        "전기 전달 경로8개 세부 항목",
+        "알람·복구6개 세부 항목",
+        "증상별 수리5개 세부 항목",
+        "완료 기준5개 세부 항목"
+      ],
+      "overflow": -15,
+      "title": "드럼 투입 A/B 공압게이트·밸브와 실물 식별",
+      "version": "v1.11.0 · 매뉴얼·수리·구조 분석시뮬레이터 영구 중지"
+    },
+    "pair": {
+      "anchor": "gme-pv01-part-384",
+      "frame": "https://gme-plc-manual.netlify.app/all-in-one/networks/network-1915.html",
+      "highlight": true,
+      "image": true,
+      "highlight_verified_by": "frameLocator #gme-pv01-part-384 class=bc01-comparison-target, text=384 Coil operand PV-01 Gate a"
+    },
+    "unified_records": 0,
+    "logs": [],
+    "screenshot": "/tmp/gme-pv01-qa/published-pv01.png"
+  }
 }

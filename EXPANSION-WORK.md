@@ -1,3 +1,7 @@
+# v1.11.0 PV01 실제 게시 완료 — 다음 PV02
+
+7영역71항목·8쌍·UI1608·기록보존/복원/동시성/Quota/보고서/A4 PDF3·14+2/원본730/추가3/중지5/ZIP/Node8/새clone/실제게시passed. GitHub+Netlify2041fe8 ready. [검증](V1.11.0-VERIFICATION.md). 다음PV02(P07)65해시초안검토·통합; Dots MV01(P19)자체조사. 현장불확정유지·2차133현재범위제외·전체goal active.
+
 # PV01 v1.11.0 통합·검증 진행 — 2026-10-11
 
 VS01 v1.10.0 실제게시완료. PV01(P05)7영역71항목·8원본쌍·A4/B7초·1초전이·현장/자동/maintenance/OFF·위치기억·IW8→DB13W8·KF_KT/HMI17미결속을연결한다. 초안61해시·고유원본/선언·PDF8쪽검토. 정적/UI/기록/PDF/패키지/게시확인중. 기존8설비/원본/미확정/운영기록/중지5보존. TIA/CPU/현장not_performed.
