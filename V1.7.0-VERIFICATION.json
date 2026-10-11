@@ -1,0 +1,204 @@
+{
+  "version": "1.7.0",
+  "target": "FN03/P17",
+  "baseline_commit": "341f26f35c99ab8a7e4928f9b981d523a291a8fd",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "publication": "not_published",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "next": "FN06/P18 after FN03 publication verified",
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "css_widths": [
+      1280,
+      390
+    ],
+    "text_sizes": [
+      "standard",
+      "large"
+    ],
+    "screens": 852,
+    "overflow": 0,
+    "selection_mismatch": 0,
+    "source_pairs": [
+      {
+        "image": "assets/circuits/FG51.png",
+        "overflow": false,
+        "selected": "networks/network-1954.html#gme-fn03-part-749",
+        "width": 1280,
+        "row": "749\tCoil\t\toperand = Start FN03"
+      },
+      {
+        "image": "assets/circuits/FG51.png",
+        "overflow": false,
+        "selected": "networks/network-1801.html#gme-fn03-part-858",
+        "width": 1280,
+        "row": "858\tContact\toperand\toperand = Inputs.FN03 Run"
+      },
+      {
+        "image": "assets/circuits/FG51.png",
+        "overflow": false,
+        "selected": "networks/network-1801.html#gme-fn03-part-855",
+        "width": 1280,
+        "row": "855\tContact\toperand\toperand = Inputs.FN03_All_SoftStarter"
+      },
+      {
+        "image": "assets/circuits/FG51.png",
+        "overflow": false,
+        "selected": "networks/network-1954.html#gme-fn03-part-749",
+        "width": 390,
+        "row": "749\tCoil\t\toperand = Start FN03"
+      },
+      {
+        "image": "assets/circuits/FG51.png",
+        "overflow": false,
+        "selected": "networks/network-1801.html#gme-fn03-part-858",
+        "width": 390,
+        "row": "858\tContact\toperand\toperand = Inputs.FN03 Run"
+      },
+      {
+        "image": "assets/circuits/FG51.png",
+        "overflow": false,
+        "selected": "networks/network-1801.html#gme-fn03-part-855",
+        "width": 390,
+        "row": "855\tContact\toperand\toperand = Inputs.FN03_All_SoftStarter"
+      }
+    ],
+    "search": [
+      {
+        "marks": 1,
+        "panel": "FN03 매뉴얼 내부 검색찾기지우기7개 일치 항목소프트스타터·단독 M25와 설비 식별확인 범위·불일치와 자료 대기물리 입력물리 출력피드백으로 쓰는 TOR문서·원본 연결과 부족 자료실물·소프트스타터·TOR/FAULT와 정상 극성",
+        "scripts": 0,
+        "term": "FN-03"
+      },
+      {
+        "marks": 0,
+        "panel": "FN03 매뉴얼 내부 검색찾기지우기9개 일치 항목확인 범위·불일치와 자료 대기1801:859 · Allarm.FN_03_FAULT두35초·메모리/펄스·TOR·버너 허가와 제어 경계Allarm.FN_03_FAULT · 발생/해제같은 Tag_66 · 두 SdCoil의 S5T#35S운전 중 정지하거나 연관 설비와 함께 정지함리셋 후 재기동되지 않거나 같은 알람이 반복됨문서·원본 연결과 부족 자료조치·원인 해소·재요청/실제 복구",
+        "scripts": 0,
+        "term": "Tag_66"
+      },
+      {
+        "marks": 0,
+        "panel": "FN03 매뉴얼 내부 검색찾기지우기0개 일치 항목",
+        "scripts": 0,
+        "term": "<script>"
+      },
+      {
+        "marks": 0,
+        "panel": "FN03 매뉴얼 내부 검색찾기지우기0개 일치 항목",
+        "scripts": 0,
+        "term": "zzzz-no-result"
+      },
+      {
+        "marks": 0,
+        "panel": "FN03 매뉴얼 내부 검색찾기지우기이 설비의 원본 태그·주소·조건·수리 내용을 찾습니다. 예: Q3.2, I4.1, Tag_66, S5T#35S, Memo_M25_Running, TOR",
+        "scripts": 0,
+        "term": ""
+      }
+    ],
+    "restore_before_count": 3,
+    "restore_after_count": 4,
+    "zero": "0",
+    "blank": null,
+    "foreign_unknown_drafts_preserved": true,
+    "malformed_storage_blocked": true,
+    "concurrent_restore_blocked": true,
+    "same_file_reselect_passed": true,
+    "ordinary_save_failure_draft_preserved": true,
+    "concurrent_edit_blocked": true,
+    "comparison": "Flag.M_FN_03 1 -> 2",
+    "report_change_print_calls": 0,
+    "pdf_pages": 3,
+    "pdf_page_size": "A4",
+    "pdf_visual_review": "3 pages rendered and inspected; no clipping or overlap",
+    "isolated_keys_cleared": true,
+    "production_writes": 0,
+    "console_errors_warnings_observed": 0
+  },
+  "artifact_evidence": {
+    "screens-final.json": {
+      "bytes": 223286,
+      "sha256": "08f4997c95e161c0c23906b7c1e74eba4c8cb8d2be684da78f16d9876f773702"
+    },
+    "dots-handoff.png": {
+      "bytes": 262294,
+      "sha256": "541ad8992d531734023c5141c79a60ac2ffa14bffa8d1e09100483a74124fbf5"
+    },
+    "gme-fn03-v1.7.0.pdf": {
+      "bytes": 370085,
+      "sha256": "23d6510003ca850933bf4a94e790c485af2d2962994bf997e19e331598373496"
+    },
+    "restore.json": {
+      "bytes": 23203,
+      "sha256": "cc98bb763e05b24302134f4d38b6b05f4d5836ac21884877a955cc80f9e9f067"
+    },
+    "search.json": {
+      "bytes": 1474,
+      "sha256": "a18cc0737865c70fb2b1d723479813842fe109077e19f2c34b14348e3e88b3b1"
+    },
+    "restored-result.json": {
+      "bytes": 29692,
+      "sha256": "116f01ff62958467b3677ec0817f282fabb516b4409a951b855c6bdc2f0788d7"
+    },
+    "browser-logs.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "local-manual.png": {
+      "bytes": 152336,
+      "sha256": "173bce778c013eba5c2389d5ffc424e7bd35040d5724d7c07896b78e0671a2ce"
+    },
+    "save-failure.json": {
+      "bytes": 45319,
+      "sha256": "f89709010ac7f169c737f02f054c808c1915c0d1d3f4e41afc459cb3e6c4213d"
+    },
+    "report-1.png": {
+      "bytes": 98603,
+      "sha256": "f195553f6b3d5c755595bb9eb1f291e7484da08e4f3bccf20a5db020d233f8e4"
+    },
+    "report-2.png": {
+      "bytes": 128025,
+      "sha256": "7f476cb92c024871daf3b165ac4d95100fc9b60f0c4f0ed78afc2c1330eff0fb"
+    },
+    "report-3.png": {
+      "bytes": 22606,
+      "sha256": "dc1696d15d05696b1d1e365d2c069d827983d3af22bd82898efdfe2f04d79b5a"
+    }
+  },
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T05:26:27.689987+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.7.0.zip",
+    "version": "1.7.0",
+    "files": 2801,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 52886998,
+    "sha256": "5fe1445fc64e45ce8bf1b6cc567bd54006fc26ffa16235000bd70d4330aae05c",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "tests": {
+    "node": "24.19.0",
+    "tests": 8,
+    "passed": 8
+  },
+  "build": {
+    "status": "passed",
+    "NETLIFY": true,
+    "files": 2830,
+    "csp_exact_inline_hashes": 6,
+    "csp_scoped_policies": 39
+  },
+  "source_bundle_after_status_regeneration": "129abb5502fee5ffac415c6d60587c78c94735024998e7d7f4d35a39813c6ceb",
+  "qa_report_bundle_note": "QA records and PDF keep their original generated/saved source bundle 4b4a09dbed66943000bfaeeeaf68816cbf76c9cd8bd68e383adda1af885163fe; subsequent progress-document hash refresh changed current bundle only, no retrospective rewrite."
+}

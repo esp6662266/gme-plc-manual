@@ -153,6 +153,9 @@ for p in priority:
     elif key=='P16':
         lane='FN02 표준화'
         document='FN02 기존 분석을7영역42항목과 P16 기록 도구로 연결. Tag61 2초·설정0 해제·추가OFF·VT02 색인 PID/TC03·제목 FN02인 FN04 전류 불일치 및 현재 CPU/현장 미확정 보존. 기존 보강 기준: '+document
+    elif key=='P17':
+        lane='FN03 표준화'
+        document='FN03 기존 분석을7영역39항목과 P17 기록 도구로 연결. 소프트스타터 기동/TOR/FAULT3회로·같은Tag66 두35초·INV 무타이머분기·Memo/펄스·추가OFF/버너허가와 현재CPU/현장미확정 보존. 기존 보강 기준: '+document
     else:
         document='GME-STD-1.0.0의 설비별 후속 확장 대상. 기존 완료 분석·근거·미확정 항목 보존; 설비 한 개씩 조사·검증·게시. 기존 보강 기준: '+document
     priority_open_work.append(dict(key=key,name=p['name'],plc_id=ident,match=p['match'],lane=lane,boundary=boundary,existing_documents=existing,evidence_references=references,existing_pending=pending,existing_notes=notes,body_checks=body_checks,existing_review=review_items,document_work=document,additional_materials=collected,field_work=field,completion_criterion=completion,identity_verified=False,field_verified=False,tia_verified=False,repairs_completed=0))
@@ -169,7 +172,7 @@ requirements=[
  ('R08','HMI·레시피·설정값','원본 설정 분석','782태그·17화면 메타데이터·8운전 대입. 현재 DB 오프셋·이벤트·통신·Retain 확인 전','recipe-settings.html'),
  ('R09','불일치·미확정 확인','확인 대기','원본18건 해소 미확정·원래 확인1060건 보존·추가 검토 포함64건','evidence-review.html'),
  ('R10','프로그램 개선','후보 검토','6개 후보의 영향·대안·근거. 실제 PLC 개선 적용0건','improvement-review.html'),
- ('R11','수리·관찰 기록','양식·로컬 저장','23개 양식과 메모; 브라우저/주소별 저장. JSON 다운로드는 별도 보관. 모든 설비 통합 JSON 백업·복원, BC01/FN04/FN01/FN02 전후 비교·관찰 보고서 제공; 공유 동기화 미구현','ALL-IN-ONE.md'),
+ ('R11','수리·관찰 기록','양식·로컬 저장','23개 양식과 메모; 브라우저/주소별 저장. JSON 다운로드는 별도 보관. 모든 설비 통합 JSON 백업·복원, BC01/FN04/FN01/FN02/FN03 전후 비교·관찰 보고서 제공; 공유 동기화 미구현','ALL-IN-ONE.md'),
  ('R12','577개 시험','설계·미실행','기존 가상 부분 시험19개는 과거 기록. 전체577개 실행·TIA·실물 검증과 구분','registers/simulation-tests.csv'),
  ('R13','시뮬레이터','사용자 지시로 중지','별도 작성 요청 전까지 개발·수정·확장·행동 시험 중지. 기존5개 파일 해시 보존','ACTIVE-WORK.md'),
  ('R14','최종 제공·운영 반영','작업 단위 패키지 갱신','링크·원본·브라우저 검증 후 ZIP. SEJIN 운영 배포/현장 PLC 변경은 별도 요청 범위','PACKAGE-NOTES.md')]
@@ -213,6 +216,7 @@ guide_sections=[
  ('start','1. 설비를 찾고 대응부터 확인','우선23개 또는 전체248개 범위를 선택합니다. 태그명 일치·후보·미확정을 읽고, 실물 명판·제어반·도면 개정을 대조합니다. 대응 미확정 설비에 PLC 주소를 임의 배정하지 않습니다.',[('priority-guides/P01.html','BC01 대응 예시'),('priority-guides/P03.html','미확정 설비 예시')]),
  ('repair','2. 증상과 고장 근거를 비교','BC01·FN04·FN01·FN02의 진단·수리 작업실에서5개 증상 중 하나를 고르면 먼저 관찰·기록→원본과 비교→차이와 다음 판단이 표시됩니다. 요청·최종 출력·처리 응답을 구분하고 도면·래더·알람·세부 근거와 필요한 자료를 확인합니다. 선택한 증상은 새로고침과 같은 설비의 도면/기록 이동에서도 유지됩니다. 관찰 결과 기록 버튼은 기존 기록 양식을 열며 입력값·수리 완료를 자동으로 채우지 않습니다. 다른 설비는 기존 상세 작업지를 유지합니다.',[('index.html#view=repair&equipment=P01&scope=priority','BC01 진단·수리 작업실'),('index.html#view=repair&equipment=P02&scope=priority','FN04 진단·수리 작업실'),('repair-guides/P01.html','BC01 전체 진단 근거'),('alarm-guides/BC01.html','BC01 알람·복구')]),
  ('structure','3. 프로그램과 설정값 출처를 추적','호출·신호 구조에서 읽기/쓰기 위치와 다른 블록의 쓰기를 함께 봅니다. HMI 표시·편집·저장본·운전 적용값을 구분합니다. 백업 색인의 나열 순서를 현재 CPU 실행 순서로 판단하지 않습니다.',[('signal-trace.html','신호 전달'),('hmi-transfer.html','HMI 주소·전달'),('recipe-settings.html','레시피·설정'),('encoder-position.html','위치·방향 누적')]),
+ ('fn03-standard','FN03 · 소프트스타터·TOR와 두35초 기록','FN03(P17)은7영역39항목으로 직접14규칙/미해석2, 기동/TOR/FAULT3회로와 같은Tag66의두35초를 연결합니다. FG51 M25/PSE 소프트스타터·110Vac제어전원과24V명령·TOR5/RUN4를 구분합니다. FAULT만Tag66접점을거치고 INV태그는소프트스타터 실물과별도입니다. Memo_M25_Running/FP_M25_Run과PContact,버너기동추가OFF·버너허가/정지영향은 현재실행확인전입니다. 전용속도/전류/조절근거미확보로 다른팬회로를복제하지않습니다. P17관찰4행/미지항목/초안을보존하며 실제복구를자동입력하지않습니다.',[('index.html#view=manual&equipment=P17&scope=priority','FN03 표준 매뉴얼'),('index.html#view=repair&equipment=P17&scope=priority','FN03 진단·수리'),('index.html#view=drawings&equipment=P17&scope=priority','FN03 도면')]),
  ('records','4. 확인한 내용만 기록하고 다운로드','수리 기록에서 관찰값·원인 배제·조치·후속 확인을 작성하고 저장 후 다시 열어 확인합니다. 개선·작업 메모는 별도 저장입니다. 주소·포트·브라우저별 로컬 저장이며 다른 직원과 자동 공유되지 않습니다. 메뉴의 모든 설비 통합 백업·복원에서 저장된 전체 메모·수리 기록을 JSON 파일 하나로 보관합니다. 기존 전체/개별 JSON도 가져올 수 있습니다. 미리보기의 설비·기록 필터와50건 페이지는 표시만 바꾸며 숨긴 선택도 전체 저장 건수에 포함합니다. 새 기록 추가·기존 유지·가져온 값 복원·새 ID로 둘 다 보존을 선택합니다. 다른 설비의 같은 ID는 덮어쓰지 않습니다. 기존에만 있는 기록·초안·추가 항목은 유지합니다. 통합파일64MiB/50,000건 제한을 초과하면 잘라 내지 않고 차단합니다. Web Locks 미지원 환경에서는 미리보기·백업만 제공합니다. 서버 동기화는 없습니다. 프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다.',[('index.html#view=repair-record&equipment=P01&scope=priority','BC01 수리 기록'),('ALL-IN-ONE.md','저장·충돌·설치 안내')]),
  ('pending','5. 미확정 근거와 개선 후보를 남기기','확인 대장·근거 검토에서 원본과 현재 값의 차이, 확인에 필요한 자료를 기록합니다. 18개 불일치의 해소나 복구 완료는 실제 근거가 있을 때 판정합니다. 개선 후보는 영향과 대안을 검토한 자료이며 실제 PLC에 적용하지 않았습니다.',[('index.html#view=review&equipment=P01&scope=priority','BC01 근거 검토'),('improvement-review.html','개선 후보6개'),('evidence-review.html','검토 목록')]),
  ('limits','6. 현재 검증 범위를 읽기','정적 문서 검증·브라우저 기능 확인·TIA 실행·현장 복구는 다른 결과입니다. 전체577개 시험은 설계·미실행이고 과거 가상 부분 시험19개와 구분합니다. 시뮬레이터는 영구 중지이며 작성·수정·생성·실행·행동 시험을 진행하지 않습니다.',[('requirements-audit.html#requirements','요구사항별 상태'),('ACTIVE-WORK.md','현재 작업 범위')])]

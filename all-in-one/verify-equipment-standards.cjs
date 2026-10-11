@@ -84,6 +84,37 @@ assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([fn
 assert.throws(()=>tools.parseBackup(JSON.stringify(tools.backupEnvelope([{...note16,repair_observation:{...note16.repair_observation,equipment:'FN02'}}],data,'2026-10-11T06:00:00Z','P16')),store.decodeNotes,valid,schema16));
 assert.notEqual(tools.referenceContext(data,'P16').source_bundle_sha256,p15.source_bundle_sha256);
 
+const p17=standard.profile(data,'P17');assert.ok(p17,'FN03 profile is required in v1.7.0');
+assert.deepEqual(plain(p17.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='FN03'));
+assert.deepEqual(plain(p17.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='FN03'));
+assert.equal(p17.regulation,null);assert.equal(p17.type,'motor_softstarter');
+assert.equal(p17.specification.direct_rules.length,14);assert.deepEqual(p17.specification.direct_rules.filter(r=>r.opaque).map(r=>r.rule_id),['1031:1823','1051:2952']);
+assert.equal(p17.alarm.timers.length,2);assert.deepEqual(p17.alarm.timers.map(t=>[t.uid,t.name,t.preset.literal]),[['854','Tag_66','S5T#35S'],['908','Tag_66','S5T#35S']]);
+const inv17=p17.alarm.alarms.find(a=>a.name==='Allarm.FN03_INV').actions.find(a=>a.gate==='SCoil');assert.equal(inv17.uid,'856');assert.ok(!JSON.stringify(inv17.condition).includes('Tag_66'));
+const fault17=p17.alarm.alarms.find(a=>a.name==='Allarm.FN_03_FAULT').actions.find(a=>a.gate==='SCoil');assert.ok(JSON.stringify(fault17.condition).includes('Tag_66'));
+assert.deepEqual(p17.source_pairs.map(p=>p.path),['networks/network-1954.html#gme-fn03-part-749','networks/network-1801.html#gme-fn03-part-858','networks/network-1801.html#gme-fn03-part-855']);
+const native17=fs.readFileSync(__dirname+'/sources/decoded-original/0436-FlgNet.xml','utf8');
+assert.match(native17,/<Part UId="858" Gate="Contact">\s*<Negated PinName="operand" \/>/);assert.match(native17,/<Part UId="855" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+assert.match(native17,/<Wire UId="887">\s*<OCon UId="869" \/>\s*<PCon UId="854" PinName="value" \/>/);assert.match(native17,/<Wire UId="915">\s*<OCon UId="911" \/>\s*<PCon UId="908" PinName="value" \/>/);
+const time17=native2s.split('</LiteralConstant>').find(s=>s.includes('RID="325"'));assert.ok(time17.includes('NID="23" UID="869"'));assert.ok(time17.includes('NID="23" UID="911"'));assert.ok(time17.includes('SV="S5T_x0023_35S"'));
+const trace17=readRegister('signal-trace.json').devices.find(p=>p.id==='FN03');assert.deepEqual(plain(p17.signal_trace.signals.slice(0,trace17.signals.length)),trace17.signals);
+assert.deepEqual(p17.signal_trace.signals.slice(-2).map(s=>[s.name,s.addresses]),[['Memo_M25_Running',['%M180.1']],['FP_M25_Run',['%M180.2']]]);
+const decl17=fs.readFileSync(__dirname+'/sources/decoded-original/0658-IdentXmlPart.xml','utf8');
+for(const signal of p17.signal_trace.signals.slice(-2)){
+ const xml=decl17.match(new RegExp('<SimpleAccess><ID N="'+signal.name+'"[^>]*>[\\s\\S]*?</SimpleAccess>'))?.[0];assert.ok(xml,signal.name);
+ for(const u of signal.usages){const c=xml.match(new RegExp('<C NID="23" UID="'+u.oref+'"[^>]*/>'))?.[0];assert.ok(c,u.oref);assert.equal(u.declarations[0].kind,'SimpleAccess');assert.equal(u.declarations[0].access_kind,c.match(/AK="([^"]+)"/)?.[1]||null);}
+}
+assert.ok(p17.control_reference.native_refs.find(r=>r.rule_id==='1801:73').opaque);assert.ok(p17.specification.inputs.every(r=>r['자료형']==='bool'));assert.equal(p17.specification.outputs.length,1);
+for(const [f,h] of Object.entries(p17.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p17.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+assert.deepEqual(plain(standard.sections.map(([section])=>standard.items(data,'P17',section).length)),[3,4,15,3,4,5,5]);
+for(const [section] of standard.sections)for(const item of standard.items(data,'P17',section)){const html=standard.render(data,'P17',{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(html.includes('standard-content-title'));assert.ok(!html.includes('undefined'));}
+const control17=standard.render(data,'P17',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});for(const text of ['TOR5','RUN4','두 타이머를70초로 합산','Tag_66 접점이 없습니다','전용 아날로그','110Vac'])assert.ok(control17.includes(text),text);
+const schema17=data.repair_record_forms.profiles.find(p=>p.key==='P17');assert.equal(schema17.signals.length,4);const note17={...fn01Note,id:'qa-fn03',equipment:'P17',repair_observation:plain(repair.collect(schema17,{first_symptom:'QA FN03',[schema17.signals[0].id+'_value']:'0'}))};
+assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note16,note17],data,'2026-10-11T06:00:00Z','P17')),store.decodeNotes,valid,schema17)).notes,[note17]);
+assert.throws(()=>tools.parseBackup(JSON.stringify(tools.backupEnvelope([{...note17,repair_observation:{...note17.repair_observation,equipment:'FN03'}}],data,'2026-10-11T06:00:00Z','P17')),store.decodeNotes,valid,schema17));
+assert.notEqual(tools.referenceContext(data,'P17').source_bundle_sha256,p16.source_bundle_sha256);
+
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));

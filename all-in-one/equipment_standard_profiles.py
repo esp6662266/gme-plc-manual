@@ -173,3 +173,52 @@ def build_fn02_profile(root,data,source_rows):
             related_links=[['추가 OFF/예열1843','networks/network-1843.html'],['FN02 전류1767','networks/network-1767.html'],['VT02 수동12','networks/network-12.html'],['관련 명세','control-specs/FN02.html#fault']],
             field_title='실물·単일 블로어·신호 전달과 정상 극성'.replace('単','단'),alarm_recovery='Set/Reset 연결은 현재 호출 순서·알람 해제·모터 운전의 증명이 아닙니다. 2초 감시·설정0·예열 추가OFF·VT02 설정 쓰기를 나누어 요청·출력·원시/처리 응답을 같은 시각에 비교합니다.',
             search_examples='Q2.3, Tag_61, S5T#2S, Set_Perc_VT02, TC03, VT02')))
+
+def build_fn03_profile(root,data,source_rows):
+    read=lambda file:json.loads((root/file).read_text(encoding='utf-8'))
+    spec=next(p for p in read('registers/control-spec.json')['specifications'] if p['id']=='FN03')
+    related=[r for r in spec['scoped_rules'] if r['rule_id'] in ['1801:73','1801:66','1801:854','1801:908','1866:607','1866:611']]
+    assert {r['rule_id'] for r in related}=={'1801:73','1801:66','1801:854','1801:908','1866:607','1866:611'}
+    control=dict(applicability='softstarter discrete control; own analog speed/current or regulation loop not identified',
+        chain=['FN03은 보존 FG51의 단독 M25와 PSE72 소프트스타터입니다. 전용 아날로그 속도·전류 채널과 PID 조절 루프는 현재 대장에 확인되지 않습니다. 다른 팬의 QW/IW·AI1/AO2 경로를 배정하지 않습니다.',
+            '1954:749 ON·Flag.M_FN_03→Start FN03(%Q3.2). 745는 FN_03_FAULT 또는 FN03_INV일 때 요청을 Reset합니다. 현재 출력·실물 운전은 별도입니다.',
+            '1801:854/908은 같은 Tag_66에 각각 S5T#35S를 씁니다. ON·Start·NOT 처리 Run 뒤 Memo_M25_Running의 반전/비반전 분기로 갈립니다. 두 타이머를70초로 합산하거나 독립 타이머로 해석하지 않습니다.',
+            '1801:73의 Memo Set은 PContact905.out 뒤이며 FP_M25_Run 펄스 문맥의 현재 동작은 미확정입니다. 66은 NOT Start 또는 NOT 처리 Run일 때 Memo Reset입니다. 기억 비트는 실물 TOR 입력이 아닙니다.',
+            'INV Set856은 ON·Start·NOT Inputs.FN03_All_SoftStarter이며 Tag_66 접점이 없습니다. FAULT Set859는 Tag_66·NOT 처리 Run을 거칩니다. 알람 이름 INV를 인버터 설치 근거로 바꾸지 않습니다.',
+            '1843/1844의 예열·생산 요청 Set은 단계36/56,1847의 정지 Reset은 종류5 단계1/비상 분기입니다. 단계 번호를 초로 바꾸지 않습니다.',
+            '1866:600의 버너 관련 요청 Set에는 추가 OFF Contact640이 있습니다. 607/611은 처리 Run과 버너 허가·원격기동 경로이며1858의 FN03 FAULT 버너정지 영향과 구분합니다. OFF 현재값·외부 버너 내부 안전순서는 미확정입니다.'],
+        repair=['Q3.2/FG139 MOD14 단자33→51KA1→PSE START8/9와110Vac 제어전원1/2를 분리해 관찰합니다. 51FU1 6A GG10×38·단자1/2의100–250Vac 표시와24V PLC 명령릴레이를 구분합니다.',
+            'E4.1은 TOR5→FG120 MOD9 단자2, E4.2는FAULT6→MOD9 단자3입니다. RUN4는 입력 연결 표시가 없습니다. 원시 TOR·처리 Inputs.Run·Memo·Tag66·알람·버너 허가를 같은 시각에 비교합니다.',
+            '보존 Simulation1084의 요청→처리 Run은 물리 입력 전달 증명이 아니며 실행하지 않습니다.'],
+        pending=['현재 PSE 모델·명판·TOR/RUN/FAULT 접점 및 램프 시간·정상 극성·원시→처리 전달; 물리 I4.2 심볼의 원본 LAD 직접 참조는 미확보',
+            '두 SdCoil의 같은 Tag66 쓰기 순서·PContact/FP_M25_Run 펄스·메모리·OB 호출·TIA/현재 CPU',
+            '기동 심볼의 과거 a56.0 주석과 현재 Q3.2/도면 A3.2 구분·HMI1197 피연산자8개 미해석',
+            '기존 버너 외부 제어·실제 연소 공기·허가·정지·복구 관찰·현재 승인 시공자료'],
+        native=[1801,1843,1844,1847,1858,1866,1954],native_refs=related)
+    pairs=[
+        dict(signal='소프트스타터 기동',network=1954,uid='749',label='최종 출력 · Start FN03',boundary='ON·요청→Q3.2·51KA1·PSE START8/9. 110Vac 제어전원과24V 명령릴레이를 분리합니다.'),
+        dict(signal='피드백으로 쓰는 TOR',network=1801,uid='858',label='처리 응답 · Inputs.FN03 Run',boundary='도면 TOR5→I4.1과 내부 Run 감시를 비교합니다. RUN4와TOR5는 별도이며 원시→처리 전달·현재 기능·정상극성은 확인 전입니다.'),
+        dict(signal='소프트스타터 이상',network=1801,uid='855',label='처리 이상 · NOT Inputs.FN03_All_SoftStarter',boundary='도면 FAULT6→I4.2와 처리 입력의 반전 접점을 구분합니다. INV Set은 Tag66 접점 없이 요청/처리입력을 읽으며 정상극성·복구는 확인 전입니다.')]
+    extra=[(1801,'part',uid) for uid in ['44','906','59','905','73','66']]+[(1801,'wire',uid) for uid in ['43','51','52','53','56','58','68','69','78','79','92','95','887','888','915','916']]
+    extra += [(1031,'part','1858'),(1866,'part','640'),(1866,'part','607'),(1866,'part','611'),(1858,'part','283')]
+    profile=build_static_profile(root,data,source_rows,dict(catalog_id='FN03',priority_key='P17',type='motor_softstarter',source_pairs=pairs,extra_locations=extra,
+        internal_names=['Memo_M25_Running','FP_M25_Run'],control_reference=control,
+        related_alarm_boundary='FN03 직접 FAULT/INV2개에서 FAULT만 Tag66 접점을 거칩니다. 두 SdCoil854/908이 같은 Tag66에35초를 쓰며 Memo/펄스 의미·현재 쓰기 순서는 미확정입니다. 1858의 버너정지 영향과1866 추가OFF·버너 허가/원격기동은 별도입니다. 현재 실물·정상극성·연소공기·복구는 확인 전입니다.',
+        presentation=dict(identity_title='소프트스타터·단독 M25와 설비 식별',identity_pending='명판·위치·M25 연소 공기 블로어와 설비 카드 관리 관계 확인 전',
+            oem_baseline='Electrical_Rev2.pdf · FG51 = PDF52 · 작성27.05.2024/개정행 공란; FG120/139 Rev.2 17.03.2025 · M25 37kW·61.9A / ABB PSE72-600-70 / 51QM1 62–73A와RATING68A / 440V60Hz · 보존 도면값',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf · FOR APPROVAL/24.11.11 first draft/승인란 공란 · PDF4/6/21/51 · 1_3 =ENT+FN03-M25A CR→M25 · DAC/PVC-S/CORE4/SIZE25SB/SPARE0 · 100/RA→E200 Adjustment7/LEN36는 실측·현행 규격 증명 아님',
+            control_title='두35초·메모리/펄스·TOR·버너 허가와 제어 경계',control_links=[['FN03 원본1801','networks/network-1801.html'],['버너 기동1866','networks/network-1866.html'],['설정·전원 복귀','recipe-settings.html#profile-P17']],
+            timer_title='같은 Tag_66 · 두 SdCoil의 S5T#35S',related_title='TOR/RUN·메모리/펄스·버너정지/추가OFF',
+            related_links=[['버너정지1858','networks/network-1858.html'],['버너기동/추가OFF1866','networks/network-1866.html'],['관련 명세','control-specs/FN03.html#fault']],
+            field_title='실물·소프트스타터·TOR/FAULT와 정상 극성',alarm_recovery='Set/Reset과 두35초는 현재 호출·램프 완료·소프트스타터 고장 해제·버너 허가·실제 운전의 증명이 아닙니다. 원시 TOR/FAULT·처리입력·Memo·Tag66·요청·출력과 알람을 같은 시각에 관찰합니다.',
+            search_examples='Q3.2, I4.1, Tag_66, S5T#35S, Memo_M25_Running, TOR')))
+    # These two shared memory names do not contain FN03 and are absent from its
+    # preserved name-based trace. Add reviewed display references without editing it.
+    trace=dict(profile['signal_trace']);trace['signals']=list(trace['signals'])
+    def usage(wire,oref,part,gate,pin,role):
+        return dict(network=1801,block='allarms 1',title='fn03',file='sources/decoded-original/0436-FlgNet.xml',wire=wire,oref=oref,part=part,gate=gate,pin=pin,scope='Global',role=role,role_basis='원본 핀 및 선언 AK; 현재 펄스·호출 미검증',declarations=[dict(kind='SimpleAccess',scope='Global',access_kind={'write':'Write','read':None,'read/write':'RW'}[role],file='sources/decoded-original/0658-IdentXmlPart.xml')])
+    trace['signals'].extend([
+        dict(name='Memo_M25_Running',addresses=['%M180.1'],usages=[usage('79','80','73','SCoil','operand','write'),usage('69','70','66','RCoil','operand','write'),usage('92','93','87','Contact','operand','read'),usage('95','96','907','Contact','operand','read')],boundary='관련 기억 비트; 실물 TOR/운전 확인 아님'),
+        dict(name='FP_M25_Run',addresses=['%M180.2'],usages=[usage('52','54','905','PContact','bit','read/write')],boundary='펄스 메모리 AK=RW; 현재 실행·펄스 시점 미검증')])
+    profile['signal_trace']=trace
+    return profile
