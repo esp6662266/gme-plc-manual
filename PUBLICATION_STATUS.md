@@ -1,3 +1,26 @@
+# v1.7.0 · FN03 표준 매뉴얼 — 게시 검증 완료
+
+FN03(P17)의7영역39항목과소프트스타터기동/TOR/FAULT3원본쌍·기록도구를게시했다. BC01/FN04/FN01/FN02·운영기록·원본/중지자산을보존한다.
+
+| 확인 항목 | 실제 결과 |
+|---|---|
+| 기능·패키지 커밋 | 9e4bf2840ad981b2467f9e411acee21fcf9962cf |
+| 고정 배포판 | [v1.7.0 tag/Release](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.7.0) |
+| Netlify | 6acb1e4716099a00080c048a · ready · commit_ref 일치 · 2026-10-11T05:27:58.983Z · error 없음 |
+| 게시 사이트 | https://gme-plc-manual.netlify.app/all-in-one/ |
+| 새 GitHub clone | Node24.19 npm ci·8테스트·BC01/설비검사·NETLIFY=true 빌드passed·Git변경0 |
+| 패키지 | 필수14+설비2 · 2801파일 · ZIP CRC/전체SHA · 원본730/추가3/중지5 보존 |
+| ZIP | 52886998바이트 · SHA256 5fe1445fc64e45ce8bf1b6cc567bd54006fc26ffa16235000bd70d4330aae05c · Release asset digest/size 일치 |
+| 화면·기록·PDF | 실제CSS1280/390·기본/큰글자852항목 선택일치/넘침0 · 원본3쌍 · 합성저장/복원3→4·재열기·미지항목/타설비/초안·실패/동시성·비교·보고서변경차단·A4 PDF3쪽 렌더 |
+| 게시 대조 | 36파일:23정확SHA/13HTML pretty URL정규화후동등. 실제P17 v1.7.0/39항목·FG51·Part749 StartFN03·통합백업0건창확인 |
+| 운영/현장 | 운영작성0·격리QA notes/drafts null·임시패치/viewport정리. TIA/CPU/현장복구미수행·시뮬레이터실행/변경0 |
+
+같은Tag66 두35초·INV 무타이머분기·Memo/펄스·버너기동추가OFF/허가/정지영향·TOR5/RUN4/원시처리입력·110Vac제어전원/24V명령을구분한다. 실물/현행모델/보호값/극성/쓰기순서/복구는미확정이다. 게시Chrome탭warn/error관측0은과거별도브라우저의출처없는오류해소증거가아니다.
+
+[상세검증](V1.7.0-VERIFICATION.md) · [FN03 기록](docs/equipment-standard/work-items/FN03.md) · [다음FN06](EXPANSION-WORK.md). 후속루트상태커밋은기능·원본·고정패키지바이트를변경하지않는다. Dots FN06자체조사착수응답확인·초안첨부대기, 전체승인1~4목표active.
+
+---
+
 # v1.6.0 · FN02 표준 매뉴얼 — 게시 검증 완료
 
 FN02(P16)의7영역42항목과 도면·래더5쌍 및 기록 도구를 게시했다. BC01/FN04/FN01·통합백업·운영기록·원본을 보존한다.

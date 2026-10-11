@@ -5,7 +5,7 @@
   "documentation": "complete_with_gaps",
   "static_review": "passed",
   "ui_records": "passed",
-  "publication": "not_published",
+  "publication": "verified",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
@@ -200,5 +200,285 @@
     "csp_scoped_policies": 39
   },
   "source_bundle_after_status_regeneration": "129abb5502fee5ffac415c6d60587c78c94735024998e7d7f4d35a39813c6ceb",
-  "qa_report_bundle_note": "QA records and PDF keep their original generated/saved source bundle 4b4a09dbed66943000bfaeeeaf68816cbf76c9cd8bd68e383adda1af885163fe; subsequent progress-document hash refresh changed current bundle only, no retrospective rewrite."
+  "qa_report_bundle_note": "QA records and PDF keep their original generated/saved source bundle 4b4a09dbed66943000bfaeeeaf68816cbf76c9cd8bd68e383adda1af885163fe; subsequent progress-document hash refresh changed current bundle only, no retrospective rewrite.",
+  "feature_commit": "9e4bf2840ad981b2467f9e411acee21fcf9962cf",
+  "netlify": {
+    "id": "6acb1e4716099a00080c048a",
+    "state": "ready",
+    "commit_ref": "9e4bf2840ad981b2467f9e411acee21fcf9962cf",
+    "published_at": "2026-10-11T05:27:58.983Z",
+    "error_message": null
+  },
+  "github_release": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.7.0",
+  "release_asset_digest_verified": true,
+  "fresh_clone": {
+    "path": "/tmp/gme-fn03-fresh-20261011",
+    "node": "24.19.0",
+    "npm_ci": "passed",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment": "passed",
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "published_files": [
+    {
+      "path": "ACTIVE-WORK.md",
+      "status": 200,
+      "sha256": "76aa5b42b97b82c0370d08719124b33da7a668edc710e200039f4ee4a647fd4a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "ALL-IN-ONE.md",
+      "status": 200,
+      "sha256": "768af12fa99f6ec942479006c838826d81645945acf50cabba40b69b92c8ea49",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "VERSION.json",
+      "status": 200,
+      "sha256": "10c07367be2d78975ba4ad0ce78c4811af2fa0a31768903ea91101eb59cdfa77",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "all-in-one-package-manifest.json",
+      "status": 200,
+      "sha256": "822d407e19bd3820be0fc67357401c8ab27d2035a055886c5602a08dbd0ef97f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/all-in-one-data.js",
+      "status": 200,
+      "sha256": "88a17cbf3fb13bfd9e13fe15eba6c308530c6c746082ffad3078614b4755b8fd",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "build-all-in-one.py",
+      "status": 200,
+      "sha256": "1cee58f1d57415c381ef1964d8866dfe461ae21f16d75e3a493b947774ce19d2",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "build-requirements-audit.py",
+      "status": 200,
+      "sha256": "1c177b5275a56dd8d52c8c4050c05b07d82a96855f7e578ac5c3ac052442bce7",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "equipment_standard_profiles.py",
+      "status": 200,
+      "sha256": "467bdc1dea681dfecfc70ca9fda273bd921a77f75e3b59d9cf388224e6a4933c",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "1e8ec23228003172309a53f73b7137a487585c6a7262ab6f855e6fe215dc549b",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1031.html",
+      "status": 200,
+      "sha256": "443917e3cb3214a03e144dc1f49883be7f5028044d1cc94aed5165f7c43eaf9a",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1051.html",
+      "status": 200,
+      "sha256": "72f02d59194b3a7df3eb87706a414e6aa5c54dc8eb9188efadf0de8c8dfee88e",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1084.html",
+      "status": 200,
+      "sha256": "4383aafc51b40113ace72e7f7b42b2f0e87f3abeaa9331e81d59e8ee9d1cdc20",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1801.html",
+      "status": 200,
+      "sha256": "07650b1de0e31a661c6fac0ab77a014828dcf104a9ab8a5e912e2ae214a15b2e",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1843.html",
+      "status": 200,
+      "sha256": "6adc6a9364765c4134ac2d35c081c0b32ed73ac8a9c5551e2c0cca88603fd2ac",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1844.html",
+      "status": 200,
+      "sha256": "ca5c50519b640a5628b935909432f8623fa0b5ce509f957bd4cb7774473c4050",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1847.html",
+      "status": 200,
+      "sha256": "8a27620393e91cc88907ecde4cfa759be5603b23502a6521eb047ad43ed9f56e",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1858.html",
+      "status": 200,
+      "sha256": "a2938ad075342f4d4a51f670dd879cb07bf4cb3ae21a6aa055501534fcb2c64f",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1866.html",
+      "status": 200,
+      "sha256": "9b33ca1adee75ba71530f03ea48ee1890d52a27e60d3a4b6ec8591baacf659bc",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "networks/network-1954.html",
+      "status": 200,
+      "sha256": "59a4ac2ccf125ef8ded68f6b25ea7ff6750fceca72c17d3c337347cd037c015a",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "operator-guide.html",
+      "status": 200,
+      "sha256": "cc8bf0581c1e9f775dca9d5b822bf621314fceab14d7528e99faa8f5c027c84b",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "registers/all-in-one-data.json",
+      "status": 200,
+      "sha256": "858cc17705922c44ee5b86a958d3fbd92ef664ceb6d9503cd0e757894d5a2055",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/requirements-audit.json",
+      "status": 200,
+      "sha256": "f8fdd19e5c1e1faa0d3ff991d2a2f3716b3f49d7dfd7e8d6bc12efb038840626",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit-verification.json",
+      "status": 200,
+      "sha256": "12ad2b96d78dc3399c331dca3f16194d6fc153bdd56721310e2361ab8dc4372a",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "requirements-audit.html",
+      "status": 200,
+      "sha256": "6fc03d6aa1eab0ea38e01a58c7c3f93978f616ddaf53a7c2c0ab9e6672141e0b",
+      "exact": false,
+      "html_semantic_after_pretty_urls": true
+    },
+    {
+      "path": "verification-result.json",
+      "status": 200,
+      "sha256": "dc0b083328d881f109191273ab8047aeb04bfe615bc22050da0cecae13c0ddfc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "verify-equipment-standards.cjs",
+      "status": 200,
+      "sha256": "fba7dcdf29f6b317f4d4faa803bb5a6c4d46cfd728f047bd86688fdc766eb63e",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "verify-requirements-audit.py",
+      "status": 200,
+      "sha256": "e1a1b8fad16eb5fa3844b3211d2f70ec3b6c24cecfd7d914e1adbe7b5c58a543",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/program-model.json",
+      "status": 200,
+      "sha256": "6203479c086b15bada12ac9d7e37db9280234ec26f1ea6091d7211dc09a577c5",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/program-model-data.js",
+      "status": 200,
+      "sha256": "52f8199371e3399b7c0d44ab5469f0472aced79d56bbef2887f7625f5d2aff0f",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/virtual-plc.js",
+      "status": 200,
+      "sha256": "5f1876052dc0067b1f010af0dfc941946e37003167481731293615d9c1c36dbc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/simulator-workspace.js",
+      "status": 200,
+      "sha256": "3a6dfc618ff7e7b238f2671dc85d65704f33093a18eac879d86081d92c31e8bc",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "registers/virtual-plc-test-results.json",
+      "status": 200,
+      "sha256": "a6b389f797f9a8b5ffe6928b8420f55c4cc459a327b0b48d716079d2eca6dd64",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "assets/circuits/FG51.png",
+      "status": 200,
+      "sha256": "a98f792ecd2791a5b51ea1f8c7fda5c54af1a029dd74d0e4293f74cb3ec1210d",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0256-FlgNet.xml",
+      "status": 200,
+      "sha256": "07b3c3e4f2f7b0ef77be2562678c4d37cc20f132f847855f62e475f3a0ff82ec",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0436-FlgNet.xml",
+      "status": 200,
+      "sha256": "94e37a24c804e8fc07b01e4283cdea2fbc8470e6e6dc0e9bc7382b0022503f0b",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    },
+    {
+      "path": "sources/decoded-original/0658-IdentXmlPart.xml",
+      "status": 200,
+      "sha256": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+      "exact": true,
+      "html_semantic_after_pretty_urls": false
+    }
+  ],
+  "published_ui": {
+    "row": "749\tCoil\t\toperand = Start FN03",
+    "image": "assets/circuits/FG51.png",
+    "logs": [],
+    "notesWritten": 0
+  }
 }

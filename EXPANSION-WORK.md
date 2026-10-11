@@ -1,6 +1,6 @@
 # GME BC01 기반 확장 — 현재 작업과 인계
 
-표준 **GME-STD-1.0.0** · 작업 프로그램 **v1.7.0 작성 중 / 게시1.6.0** · 2026-10-11
+표준 **GME-STD-1.0.0** · 작업 프로그램 **v1.7.0 / 실제 게시 확인** · 2026-10-11
 
 최신 사용자 승인: 목표모드로 아래1~4번을 설비 한 개씩 진행한다. 원래 Ultra 채팅의 목표는 사용자 명시 요청으로 paused이며 같은 변경의 병행 수정을 중지했다. 기존 이력과 미커밋 FN01을 새 채팅01a12939-4d71-7e12-ab65-5ee9149d00d5로 인계했고, 사용자가 지정한 GPT-6.1 Sol / High에서 남은1~4번 active 목표를 설정했다. FN01/FN02 검증·게시를 완료했고 FN03부터 계속한다. 2차133후보는 이번 목표에 포함하지 않는다.
 
@@ -15,8 +15,8 @@
 | FN04(P02) 시범 | 문서 complete_with_gaps, 정적/UI/기록/PDF passed, v1.4.0 게시 verified |
 | FN01(P15) | 47항목 documentation complete_with_gaps · 정적/UI/기록/패키지·v1.5.0 실제 게시 verified |
 | FN02(P16) | 42항목 documentation complete_with_gaps · 정적/UI/기록/PDF/패키지/새clone·v1.6.0 실제 게시 verified |
-| FN03(P17) | 39항목·자체3회로/두35초·독립검토/설비검사/UI기록/PDF passed; 패키지/게시 진행중 |
-| 나머지 1차 | FN06 이후 미착수; 기존 분석·미확정·제외 보존 |
+| FN03(P17) | 39항목·정적/UI기록/PDF/2801파일패키지/새clone·v1.7.0 실제게시 verified |
+| 나머지 1차 | FN06 Dots 자체조사·초안 진행; 이후 미착수; 기존 분석·미확정·제외 보존 |
 | 2차 | 실제 대장133후보, 미착수 |
 | TIA 컴파일/현재CPU/현장복구 | 미수행, 완료로 합산하지 않음 |
 
@@ -26,7 +26,9 @@
 
 ## 다음 한 작업
 
-FN02(P16) v1.6.0의14+2검사·2801파일패키지·8테스트·Node24 새GitHubclone·tag/Release asset digest·실제Netlify ready/commit_ref·게시44파일·P16/원본Part596/FG43/통합백업창 확인을 마쳤다. [FN02 기록](docs/equipment-standard/work-items/FN02.md), [v1.6 검증](V1.6.0-VERIFICATION.md) 참조. 현재는 FN03(P17)의 원본·도면 독립 조사와 프로파일 작성이다. FN03 두35초 SD·모터 관계는 자체 원본으로 확인하며 FN02 Tag61 2초·M19·VT02를 복제하지 않는다. 사용자 비교 질문은 작업 전환 요청이 아니므로 High 채팅의 목표는 active를 유지한다.
+FN03(P17) v1.7.0 원본/도면독립검토·14+2검사·실제CSS1280/390 기본/큰글자852화면·3원본쌍·합성기록복원3→4/실패/동시성/보존·비교/보고서변경차단·A4 PDF3쪽·2801파일패키지·8테스트·새clone·GitHubRelease digest·Netlify ready/commit_ref·게시36파일/UI검증을완료했다. [FN03 기록](docs/equipment-standard/work-items/FN03.md), [v1.7 검증](V1.7.0-VERIFICATION.md), [게시상태](PUBLICATION_STATUS.md) 참조.
+
+다음은 FN06(P18). Dots 속슬이가 공개표준/XML/전기도면을자체조사중이며FN06-DOTS-DRAFT.md첨부를대기한다. 본창은초안을받아핵심논리·별칭알람·소유/상충·원본위치를대조하고통합·검증·게시한다. 조사전체를중복수행하지않는다.
 
 ## 보존 경계
 
@@ -35,3 +37,5 @@ FN02(P16) v1.6.0의14+2검사·2801파일패키지·8테스트·Node24 새GitHub
 ## 현재 편집자와 분업
 
 2026-10-11 새창01a12963-de06-7e93-bd10-71f025de4730이 유일한로컬편집자로High 목표1~4를계속한다. 이전두창은paused. Dots 속슬이는FN06(P18)자체조사·초안담당으로공개원본다운로드/표준/XML/PDF접근응답을확인했다. 로컬TIA스킬미발견/새창직접연계ID형식오류로첨부초안대기. FN03 UI/기록/PDF는passed이며필수패키지/실제게시가즉시다음이다.
+
+FN03 실제게시완료:9e4bf2840ad981b2467f9e411acee21fcf9962cf / Netlify6acb1e4716099a00080c048a. 사용자승인1~4전체목표는active, 나머지범위미완료. 다음FN06초안대기.
