@@ -3,85 +3,85 @@
     {
       "script": "verify-improvement-impact.py",
       "script_sha256": "b3b1bf5ff78116ca14ab7d5106f3c3be6305e1e0475c0544935e36c8f9942b9f",
-      "finished_at_utc": "2026-10-11T02:24:30.770865+00:00",
+      "finished_at_utc": "2026-10-11T02:33:06.863136+00:00",
       "status": "passed"
     },
     {
       "script": "verify-alarm-recovery.py",
       "script_sha256": "003b35ee125d76d6856b01b12d8b63252f6e4da11ee54363f6bcce7883d855e3",
-      "finished_at_utc": "2026-10-11T02:24:30.970644+00:00",
+      "finished_at_utc": "2026-10-11T02:33:07.086040+00:00",
       "status": "passed"
     },
     {
       "script": "verify-burner-interface.py",
       "script_sha256": "97a20a489116e7144e289b7d637fb06f59f277af020c7a9ba11fb7f96c65582b",
-      "finished_at_utc": "2026-10-11T02:24:31.172062+00:00",
+      "finished_at_utc": "2026-10-11T02:33:07.278862+00:00",
       "status": "passed"
     },
     {
       "script": "verify-process-measurement.py",
       "script_sha256": "857e2a0425363c1c23d41d9a84c94eea057b24151041337638616fee2c3c2e31",
-      "finished_at_utc": "2026-10-11T02:24:31.628273+00:00",
+      "finished_at_utc": "2026-10-11T02:33:07.704378+00:00",
       "status": "passed"
     },
     {
       "script": "verify-sensor-measurement.py",
       "script_sha256": "f17da8e93e3f841580b7feeea8e0bc195b1b9388918a9370dd64e2cabbabac78",
-      "finished_at_utc": "2026-10-11T02:24:32.161971+00:00",
+      "finished_at_utc": "2026-10-11T02:33:08.200013+00:00",
       "status": "passed"
     },
     {
       "script": "verify-regulation-manual.py",
       "script_sha256": "0e686bfb824966c0ace0220a5841b2cb7e287942f99262c34dc4424e711a7d5b",
-      "finished_at_utc": "2026-10-11T02:24:33.868161+00:00",
+      "finished_at_utc": "2026-10-11T02:33:09.649424+00:00",
       "status": "passed"
     },
     {
       "script": "verify-encoder-position.py",
       "script_sha256": "8a354dd46cb055a6ece3d8ebc9678bf0bed467d3a2c8f3e5691df8e683b18d39",
-      "finished_at_utc": "2026-10-11T02:24:35.577610+00:00",
+      "finished_at_utc": "2026-10-11T02:33:11.216296+00:00",
       "status": "passed"
     },
     {
       "script": "verify-hmi-transfer.py",
       "script_sha256": "129984784ba623e94c8cf14522887a90070ce88ef2874418b0d4709ce888cfdd",
-      "finished_at_utc": "2026-10-11T02:24:38.378145+00:00",
+      "finished_at_utc": "2026-10-11T02:33:13.467475+00:00",
       "status": "passed"
     },
     {
       "script": "verify-recipe-settings.py",
       "script_sha256": "1fd0608ad53e583f7923ff284cef0d811208302b0b03c11f091df270016fac4a",
-      "finished_at_utc": "2026-10-11T02:24:39.187130+00:00",
+      "finished_at_utc": "2026-10-11T02:33:14.050566+00:00",
       "status": "passed"
     },
     {
       "script": "verify-unresolved-identity.py",
       "script_sha256": "3eb3f9e14fe6277acd52177fe4b02713bfe29925fbc5b1d4a4502a7499d33e0e",
-      "finished_at_utc": "2026-10-11T02:24:39.331004+00:00",
+      "finished_at_utc": "2026-10-11T02:33:14.162393+00:00",
       "status": "passed"
     },
     {
       "script": "verify-body-manual.py",
       "script_sha256": "dcd1962bd6832a59f69598fce92a8bbd0fb0fe51721e49eeaf1e135d55c17423",
-      "finished_at_utc": "2026-10-11T02:24:39.819156+00:00",
+      "finished_at_utc": "2026-10-11T02:33:14.570830+00:00",
       "status": "passed"
     },
     {
       "script": "verify-requirements-audit.py",
       "script_sha256": "0c7d70f2160d3484f99ab7e8d103b2c95536feb0ac3e3b31a3a46726eb36ab29",
-      "finished_at_utc": "2026-10-11T02:24:40.391485+00:00",
+      "finished_at_utc": "2026-10-11T02:33:15.096561+00:00",
       "status": "passed"
     },
     {
       "script": "verify-all-in-one.py",
       "script_sha256": "36c34aeeb99d4da897ad80865b1b570d02269b243b5509402f46360190784a28",
-      "finished_at_utc": "2026-10-11T02:24:43.789880+00:00",
+      "finished_at_utc": "2026-10-11T02:33:18.406001+00:00",
       "status": "passed"
     },
     {
       "script": "verify-package.py",
       "script_sha256": "8c49a2faf35ed8c47f266bf5aa9caa30ab9697308faf7d00775b6953c04ccf10",
-      "finished_at_utc": "2026-10-11T02:24:48.081658+00:00",
+      "finished_at_utc": "2026-10-11T02:33:22.910844+00:00",
       "status": "passed"
     }
   ],
@@ -317,8 +317,8 @@
     },
     {
       "file": "all-in-one-browser-verification.json",
-      "sha256": "e25d890e34d261f2ae99ed43a3a99e36bdd9dc23874139a1fa0b4349d517383b",
-      "bytes": 151316
+      "sha256": "08a34fccd48a1545047bac9fe6ab9d0c6b13bc8342f58aaa1617d25cac0bf2d9",
+      "bytes": 151461
     },
     {
       "file": "all-in-one-verification.json",
@@ -377,8 +377,8 @@
     },
     {
       "file": "assets/bc01-tools.js",
-      "sha256": "49d880134e16a58b19f9fdee3ecf6396cc596d99ad910caeb0205484f0ac0c53",
-      "bytes": 30317
+      "sha256": "a1c972162ca13a5931ea189f829b3dbc04f7a2a44e04422dc8aa9417eac3dfca",
+      "bytes": 30738
     },
     {
       "file": "assets/body-manual-preview.png",
@@ -4022,7 +4022,7 @@
     },
     {
       "file": "index.html",
-      "sha256": "549a438666e0bdff8f29af31826e2f6f9f67561f667ee018a9e4eb1b0ed31dda",
+      "sha256": "e24ddb447403c7f8f0f777db0b92ecdef11056209d40307bd146f2ce73d05dc6",
       "bytes": 4689
     },
     {

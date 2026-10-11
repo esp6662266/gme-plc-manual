@@ -135,7 +135,7 @@
     const pathIndex=paths.findIndex((_,i)=>'path-'+i===initial);
     body.innerHTML=`<p>좌측은 보존 OEM 전기도면, 우측은 원본 XML의 Part·Wire 연결 자료입니다. TIA 화면 배치·실행 재현은 별도 확인입니다.</p><label>전기 전달 경로<select data-compare-path>${paths.map((p,i)=>`<option value="${i}" ${i===(pathIndex<0?0:pathIndex)?'selected':''}>${esc(p.signal)} · ${esc(p.backup)}</option>`).join('')}</select></label><p data-compare-boundary></p><div class="bc01-source-grid"><section><h3>보존 전기도면</h3><div class="inline-actions"><button data-tool-drawing-zoom="out">축소</button><button data-tool-drawing-zoom="reset">맞추기</button><button data-tool-drawing-zoom="in">확대</button><a data-compare-pdf target="_blank" rel="noopener">원본 PDF ↗</a></div><div class="bc01-source-image"><img data-compare-image alt="선택 경로의 보존 전기도면"></div></section><section><h3>원본 PLC 연결 자료</h3><label>비교할 원본 위치<select data-compare-lad></select></label><a data-compare-original target="_blank" rel="noopener">원본 따로 열기 ↗</a><iframe data-compare-frame title="BC01 원본 PLC 연결 자료"></iframe><p data-compare-empty hidden>회전 감시 예비 입력의 직접 대응 LAD는 확보 자료에 없습니다. 자동으로 연결하지 않습니다.</p></section></div>`;
     dialog.querySelector('[data-compare-frame]').addEventListener('load',e=>{
-      const frame=e.currentTarget;if(!dialog||dialog.querySelector('[data-compare-frame]')!==frame)return;
+      const frame=e.currentTarget;if(!dialog||frame.hidden||dialog.querySelector('[data-compare-frame]')!==frame)return;
       try{const sourceURL=frame.src,doc=frame.contentDocument;if(!doc)return;doc.querySelectorAll('body > header,body > footer').forEach(n=>n.style.setProperty('display','none','important'));
         doc.addEventListener('click',event=>{const link=event.target.closest('a[href]');if(!link)return;event.preventDefault();
           const url=new URL(link.getAttribute('href'),sourceURL),base=new URL(ctx.base);
@@ -143,7 +143,8 @@
           if(url.origin===base.origin&&ctx.data.resources.includes(path))root.open(url.href,'_blank','noopener');
         });
         if(dialog?.classList.contains('bc01-tool-large')){const style=doc.createElement('style');style.textContent='body,table,pre,code{font-size:18px!important}';doc.head.append(style);}
-        const hash=new URL(sourceURL).hash.slice(1);if(hash)doc.getElementById(hash)?.scrollIntoView({block:'center'});
+        const target=frame.dataset.sourceHash&&doc.getElementById(frame.dataset.sourceHash);
+        if(target){const style=doc.createElement('style');style.textContent='.bc01-comparison-target{background:#e4f4ed!important;outline:2px solid #197365;outline-offset:-2px}';doc.head.append(style);target.classList.add('bc01-comparison-target');doc.defaultView.scrollTo(0,target.getBoundingClientRect().top+doc.defaultView.scrollY-doc.defaultView.innerHeight/2);}
       }catch(_){status('원본은 따로 열기 링크에서도 확인할 수 있습니다.');}
     });
     changePath();
@@ -164,7 +165,8 @@
     const path=dialog.querySelector('[data-compare-lad]').value;
     const allowed=new Set(sources().map(s=>s.path).concat(['networks/network-1018.html']));
     if(!allowed.has(path))return;
-    dialog.querySelector('[data-compare-frame]').src=new URL(path,ctx.base).href;dialog.querySelector('[data-compare-original]').href=new URL(path,ctx.base).href;
+    const frame=dialog.querySelector('[data-compare-frame]'),url=new URL(path,ctx.base);
+    dialog.querySelector('[data-compare-original]').href=url.href;frame.dataset.sourceHash=url.hash.slice(1);url.hash='';frame.src=url.href;
   }
   function openRestore() {
     const body=open('BC01 기록 백업 가져오기·복원','restore');
