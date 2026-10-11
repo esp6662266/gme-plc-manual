@@ -7,6 +7,11 @@ export async function verifyAllInOne(root) {
   const json=async file=>JSON.parse(await readFile(join(directory,file),'utf8'));
   const sha=async file=>createHash('sha256').update(await readFile(join(directory,file))).digest('hex');
   const manifest=await json('all-in-one-package-manifest.json');
+  const release=JSON.parse(await readFile(join(root,'VERSION.json'),'utf8'));
+  const packageInfo=JSON.parse(await readFile(join(root,'package.json'),'utf8'));
+  assert.equal(manifest.version,release.version,'Package manifest version differs from current release');
+  assert.equal(packageInfo.version,release.version,'Node package version differs from current release');
+  assert.equal((await json('VERSION.json')).version,release.version,'Manual version differs from current release');
   assert.equal(manifest.simulator_development,'stopped_by_user');
   assert.equal(manifest.simulator_behavior_tests,'not_rerun');
   assert.equal(manifest.fresh_verification_runs.length,14);
@@ -15,6 +20,7 @@ export async function verifyAllInOne(root) {
   const freeze=await json('registers/simulator-freeze.json');
   for(const [file,hash] of Object.entries(freeze.files)) assert.equal(await sha(file),hash,`Stopped simulator source changed: ${file}`);
   const data=await json('registers/all-in-one-data.json');
+  assert.equal(data.version,release.version,'Generated application version differs from current release');
   assert.equal(data.project_work_scope.phase,'priority23_first');
   assert.equal(data.project_work_scope.current_priority_count,21);
   assert.equal(data.project_work_scope.full_catalog_role,'preserved_reference_only');

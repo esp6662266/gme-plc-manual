@@ -7,3 +7,5 @@
 원본·완료분·미확정 조건과 note/repair_observation 미지 필드·초안·저장 키를 보존한다. static 문서/브라우저 저장 결과와 TIA 컴파일/현재 CPU/실물/현장 복구를 구분한다. 실물·현행 ABB 모델/단자·정상 극성·복구 완료를 추정해 채우지 않는다. 변경 전 백업과 diff를 확인하고 dirty 파일을 강제 reset하지 않는다.
 
 필요한 생성기만 실행한다. 신규 BC01 검사와 필수14검사·원본/중지 해시·ZIP CRC/전체해시를 통과시킨 뒤 npm test/build 및 Netlify CSP 일치를 확인한다. 변경 사항·검증·미확정 범위는 MD와 검증 기록에 갱신한다. GitHub push 뒤 실제 Netlify commit_ref/ready와 게시 파일/UI를 확인해야 게시 완료로 표시한다. 읽기 전용 조사/리뷰는 최대2개로 병행하고 공통 파일·검증 기록은 부모가 순차 통합한다.
+
+작업 완료 때 의미 있는 변경을 버전 이력에 남긴다. VERSION.json(루트/올인원), package.json/package-lock.json, 생성기 표시 버전과 manifest를 일치시키고 RELEASES.md/PUBLICATION_STATUS.md/ACTIVE-WORK.md를 실제 검증 결과로 갱신한다. 최신 작업 main과 고정 배포 tag/Release를 구분한다. 이전 버전 tag나 사용자 자료를 덮어쓰지 않는다. 다른 컴퓨터에서 git fetch/pull과 현재 버전 검사만으로 같은 소스에 도달하도록 필요한 소스·원본·MD·검증 파일을 함께 커밋한다.
