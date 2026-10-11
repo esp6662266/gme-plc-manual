@@ -211,6 +211,25 @@ const html08=standard.render(data,'P08',{bc01Section:'control',bc01Item:'regulat
 const schema08=data.repair_record_forms.profiles.find(p=>p.key==='P08');assert.equal(schema08.signals.length,5);
 const note08={...fn01Note,id:'qa-mc04',equipment:'P08',repair_observation:plain(repair.collect(schema08,{first_symptom:'QA MC04',[schema08.signals[0].id+'_value']:'0'}))};assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note18,note08],data,'2026-10-11T06:10:00Z','P08')),store.decodeNotes,valid,schema08)).notes,[note08]);assert.notEqual(tools.referenceContext(data,'P08').source_bundle_sha256,p18.source_bundle_sha256);
 
+const p09=standard.profile(data,'P09');assert.ok(p09);
+assert.deepEqual(plain(p09.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='VS01'));
+assert.deepEqual(plain(p09.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='VS01'));assert.equal(p09.regulation,null);
+assert.equal(p09.specification.direct_rules.length,16);assert.equal(p09.alarm.alarms.length,2);assert.equal(p09.alarm.timers.length,1);assert.equal(p09.alarm.timers[0].preset.literal,'S5T#2S');
+assert.deepEqual(p09.control_reference.native_refs.map(r=>r.rule_id),['1843:456','1844:786','1847:975','1943:377']);
+for(const [id,value] of [['1943:377','((ON AND Allarm.VS_01_FAULT) OR (ON AND Allarm.VS01_INV))'],['1944:425','(((OFF AND NOT [Flag.M_VS_01]) AND NOT [Inputs.VS01 run]) AND NOT [Allarm.VS_01_FAULT])'],['1944:431','((OFF AND Flag.M_VS_01) OR (OFF AND Allarm.VS_01_FAULT) OR (OFF AND Allarm.VS01_INV))'],['1944:444','(((OFF AND NOT [Inputs.VS01 run]) AND Start VS01 BRAKE) AND Tag_117)'],['1050:2884','Tag_48']])assert.equal(p09.specification.direct_rules.find(r=>r.rule_id===id)['정적 조건식'],value);
+const brake09=native18('0249-FlgNet.xml');assert.match(brake09,/<Part UId="439" Gate="SdCoil"/);wire18(brake09,'494',['<PCon UId="493" PinName="out" />','<PCon UId="439" PinName="in" />','<PCon UId="495" PinName="in" />']);wire18(brake09,'496',['<PCon UId="495" PinName="out" />','<PCon UId="444" PinName="in" />']);
+for(const [rid,name,ao,area] of [['74','Start VS01 BRAKE','88','Memory'],['77','Tag_117','69','Timer'],['78','Braking VS01','397','Output']]){const d=native18('0602-IdentXmlPart.xml').match(new RegExp('<SimpleAccess><ID N="'+name+'"[^>]*>[\\s\\S]*?</SimpleAccess>'))?.[0];for(const x of ['RID="'+rid+'"','AO="'+ao+'"','R="'+area+'"'])assert.ok(d.includes(x),x);}
+for(const [file,rid,uid] of [['0656','28','559'],['0606','76','455']]){const d=native18(file+'-IdentXmlPart.xml').split('</LiteralConstant>').find(s=>s.includes('RID="'+rid+'"'));for(const x of ['UID="'+uid+'"','SV="S5T_x0023_2S"','V="512"'])assert.ok(d.includes(x));}
+const t09=native18('0658-IdentXmlPart.xml').match(/<SimpleAccess><ID N="Tag_59"[^>]*>[\s\S]*?<\/SimpleAccess>/)?.[0];for(const x of ['RID="66"','NID="16" UID="560"','AO="60"','R="Timer"'])assert.ok(t09.includes(x));
+wire18(native18('0337-FlgNet.xml'),'2926',['<PCon UId="2925" PinName="out" />','<PCon UId="2884" PinName="en" />']);wire18(native18('0313-FlgNet.xml'),'1470',['<OCon UId="1456" />','<PCon UId="1442" PinName="in" />']);
+assert.deepEqual(p09.source_pairs.map(p=>p.path),['networks/network-1943.html#gme-vs01-part-381','networks/network-1794.html#gme-vs01-part-604','networks/network-1794.html#gme-vs01-part-608']);
+for(const [f,h] of Object.entries(p09.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p09.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+assert.deepEqual(plain(standard.sections.map(([section])=>standard.items(data,'P09',section).length)),[3,4,17,3,4,5,5]);
+for(const [section] of standard.sections)for(const item of standard.items(data,'P09',section)){const h=standard.render(data,'P09',{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(h.includes('standard-content-title'));assert.ok(!h.includes('undefined'));}
+const h09=standard.render(data,'P09',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});for(const x of ['M11.0','Q49.5','T60','T69','NOT INV가없고','HOUR+1이아닙니다','8바인딩','두모터'])assert.ok(h09.includes(x),x);
+const schema09=data.repair_record_forms.profiles.find(p=>p.key==='P09');assert.equal(schema09.signals.length,4);const note09={...fn01Note,id:'qa-vs01',equipment:'P09',repair_observation:plain(repair.collect(schema09,{first_symptom:'QA VS01',[schema09.signals[0].id+'_value']:'0'}))};assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note08,note09],data,'2026-10-11T06:30:00Z','P09')),store.decodeNotes,valid,schema09)).notes,[note09]);assert.notEqual(tools.referenceContext(data,'P09').source_bundle_sha256,p08.source_bundle_sha256);
+
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));

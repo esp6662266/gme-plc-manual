@@ -319,3 +319,48 @@ def build_mc04_profile(root,data,source_rows):
             timer_title='공유 Tag_57 / T54 · S5T#5S 감시',related_title='OFF 토크·MV04 전류 상충·VS01/유지보수와 시간',related_links=[['OFF토크1792','networks/network-1792.html'],['전류상충1769','networks/network-1769.html'],['변환1658','networks/network-1658.html'],['HMI1182','networks/network-1182.html'],['시간1022','networks/network-1022.html']],
             field_title='실물·인버터·원시/DB입력·SPARE/상충과 정상극성',alarm_recovery='PLC알람Reset·드라이브DI4 Reset·요청재설정·Q/DI1·실제회전/응답과현장복구를구분합니다. 최초드라이브코드·FAULT/INV/Tag57·VS01/유지보수·원시/DB를같은시각에기록하고OFF토크/전류상충을추측해정상화하지않습니다.',
             search_examples='Q0.4, I0.6, I6.5, Tag_57, S5T#5S, QW294, 102A5_SPARE3, MV04_M18A')))
+
+def build_vs01_profile(root,data,source_rows):
+    spec=next(p for p in json.loads((root/'registers/control-spec.json').read_text())['specifications'] if p['id']=='VS01')
+    request=[r for r in spec['direct_rules'] if r['대상']=='Flag.M_VS_01']
+    assert {r['rule_id'] for r in request}=={'1843:456','1844:786','1847:975','1943:377'}
+    control=dict(applicability='VS01 common inverter and two motor branches; separate OFF brake path; no own speed/current/PID confirmed',
+        chain=['FG27/PDF28: 共通27AS1 ACS355-03E-38A0-4 18.5kW→M06 VS-01/M07 VS-01A 각8.3kW14.6A·440V60Hz. 공통RUN만으로 두모터 각각의회전/진동정상을확정하지않습니다.'.replace('共通','공통'),
+            '1943/0248: ON·(Allarm.VS_01_FAULT OR Allarm.VS01_INV)→Flag.M_VS_01 Reset377, ON·Flag→Start VS01 Q0.6 Coil381입니다. MC04의VS01/유지보수분기를VS01 자체식으로복제하지않습니다.',
+            '1794/0430: ON·Start·(NOT Inputs.VS01 run OR Inputs.VS01_All_Inv)→SD545 Tag_59 T60/S5T#2S. NOT run→FAULT Set551,비반전inv→INV Set595;ON·RESET·own→Reset556/603.0656 RID28/NID16UID559 V512는512ms가아닙니다.',
+            '1944/0249 vs01 brake (off): OFF·NOT Flag·NOT run·NOT FAULT→SCoil425 Start VS01 BRAKE M11.0. OFF·(Flag OR FAULT OR INV)→Reset431. Set에는NOT INV가없고Reset에는INV가있습니다. 조건중첩/쓰기순서/현재OFF값은미확정입니다.',
+            '1944: OFF·NOT run·BrakeRequest→SD439 Tag_117 T69/S5T#2S;같은접점495 뒤Coil444 Braking VS01 Q49.5입니다. T60과별도타이머이며2초 제동펄스로해석하지않습니다. 0602 RID74 Memory AO88/M11.0, RID77 Timer AO69, RID78 Output AO397/Q49.5·폐지주석과실제회로끝점누락을구분합니다.',
+            '1843 예열preset1/Tempo17 Reset456,1844 생산preset2/Tempo18 Set786,1847 Auto_ON1·preset5·(Tempo21 OR Emergency) Reset975입니다. 정지식에ON을추가하지않고17/18/21을초단위로가정하지않습니다. 현재전체writer·스캔우선순위는별도입니다.',
+            '1070/0397 Move22 W23/24: Tag178 Word IW0→Inputs DB13 Word0.0627 RID3/AO0·0629 RID5/AO0/BIRID4·0628/0655 같은DB13/CID·0657 RID279/280 bit9/10으로I1.1/I1.2 정적전달을확인했습니다. raw와DB는다른변수이고현재값/다른쓰기/극성미확정입니다.',
+            '1613/0030: Recipes Handler ENO W32→HMI ENO W33→HMI Output ENO W42→NOT Simulation(1) Contact37→W43 HMI Inputs.en.0692 RID140/NID19UID45 M180.0과0688/0694 호출선언·1619/1620/1621 ON호출은정적경계입니다. 중지시뮬레이터를실행하지않습니다.',
+            '1941/0247 NOT Inputs.VS01 run Contact26 뒤NOT Allarm.Maintenance_ON Contact380은MC04의요청해제소유경로입니다. VS01 응답소비관계이며VS01 출력writer로합치지않습니다.',
+            '1024/0313: Tag47·raw VS01_Fbk→MIN Add1432 1/Ge1439 60→HOUR Move1442 상수1 W1470/1471;ENO W1472→MIN Move1445 0→Flag_Aggiorna_DB Set1448. HOUR+1이아닙니다.1050/0337 첫Move2884 0은Tag48 Contact2925.out W2926에서직접en으로들어갑니다.',
+            '1184/0362 HMI CodeBlock22 CRef23/RID638의8바인딩은미해석입니다. CSV DB11 X12.0/X12.1·DB2 X0.6과일반331 Local함수만으로FAULT/INV 특정표시·버튼writer를확정하지않습니다.',
+            'VS01 전용속도/전류/PID경로는확보하지못했습니다. FG27 AI배선미표기만으로현행고정속도/Hz를확정하거나MC04 QW294/IW324 경로를복제하지않습니다. 개별모터진동/전류/고장입력도추정하지않습니다.'],
+        repair=['FG136 MOD14단자7/Q0.6→FG28 XS13/QS1/XS14→XS15/QS2/XS16→QM1/QM2/QM3 보조직렬→28KA1 A1/A2→0V10.6. FG27 9 +24V→28KA1 1/9→12 DI1. 출력/허가전달/공통인버터/각모터관찰을분리합니다.',
+            'FG27 RUN17/19→I1.1 FG117 MOD8단자12,ALARM20/21→I1.2 단자13. 공통접점/드라이브파라미터/극성과각모터회전은별도입니다.',
+            'FG17 A7.4→17KA1 4/12→FG27 DI4단자15;17SB2 E19.7·FlagRESET writer는별도. FG14 14KA2/6 5/6→FG27 X1C STO 끝점은부분근거이며상위안전성/현장동작검증이아닙니다. Q49.5브레이크로매핑하지않습니다.'],
+        pending=['현행PLC/호출ENO/다중쓰기/타이머·OFF현재값/극성·온라인원시/DB전달',
+            '스크린본체·M06/M07·VS01A표기·27AS1 관리동일성/명판·각모터회전/진동관찰',
+            '준공QS/QM/DI/RUN/ALARM/STO·드라이브모델/보호설정·PLCReset→DI4 writer',
+            'M11.0/Q49.5 브레이크끝점/모듈·실물·폐지/철거승인·Set/Reset우선순위',
+            'HMI1184 8대상·NID/인스턴스/DB11·DB2/원본이벤트/통신',
+            'Tag47/48주기·HOUR Move1/첫Move 초기화기능명세·실제복구'],
+        native=[331,1024,1050,1070,1184,1613,1619,1620,1621,1794,1843,1844,1847,1941,1943,1944],native_refs=request)
+    pairs=[dict(signal='공통 기동 명령',network=1943,uid='381',label='최종 공통 출력 · Start VS01',boundary='Q0.6·두QS/세QM·28KA1→DI1과각모터회전을구분합니다. 공통응답은두모터정상보증이아닙니다.'),
+        dict(signal='운전 응답',network=1794,uid='604',label='처리 공통 응답 · NOT Inputs.VS01 run',boundary='I1.1·IW0→DB13 1.1 정적전달과반전감시를비교합니다. 정상극성/현재실행미확정입니다.'),
+        dict(signal='인버터 이상',network=1794,uid='608',label='처리 입력 · Inputs.VS01_All_Inv',boundary='I1.2·DB13 1.2·공유T60감시와최초드라이브고장코드를구분합니다. 개별모터고장입력이아닙니다.')]
+    extra=[]
+    locations={1024:('1478 1480 1432 1439 1442 1445 1448','1479 1481 1463 1464 1465 1466 1467 1468 1470 1471 1472 1473 1474 1475 1476'),1050:('2925 2884','2910 2926 2911 2912'),1070:('22','21 23 24'),1613:('37','32 33 42 43 44'),1941:('26 380','25 28 29'),1943:('395 397 22 24 377 399 381','387 388 398 21 25 26 390 391 400 393'),1944:('479 481 483 485 425 487 489 22 428 431 491 493 439 495 444','459 460 461 462 486 464 488 490 24 467 469 470 471 492 494 472 473 474 496 476'),1184:('','21 24 28 30 32 34 36 42 46')}
+    for n,(parts,wires) in locations.items():extra.extend((n,'part',u) for u in parts.split());extra.extend((n,'wire',u) for u in wires.split())
+    return build_static_profile(root,data,source_rows,dict(catalog_id='VS01',priority_key='P09',type='motor_vibrating_screen',source_pairs=pairs,extra_locations=extra,
+        extra_sources=['sources/decoded-original/'+f+'-IdentXmlPart.xml' for f in ['0606','0621','0623','0624','0627','0628','0629','0655','0688','0692','0694']],
+        internal_names=['Start VS01 BRAKE','Braking VS01','Tag_117','OFF','hours motors.VS_01_MIN','hours motors.VS_01_HOUR'],control_reference=control,
+        related_alarm_boundary='두자체알람FAULT/INV는공유T60/2초입니다. OFF브레이크T69/2초·M11.0/Q49.5는별도회로이며추가모터알람이나두초펄스로합치지않습니다. 공통응답/각모터/MC04소비와현장복구는별도입니다.',
+        presentation=dict(identity_title='공통 인버터·M06/M07 두 모터와 스크린 식별',identity_pending='본체·VS01/VS01A·M06/M07·27AS1 명판/관리관계확인전',
+            oem_baseline='Electrical_Rev2.pdf · FG27/PDF28 공통ACS355 18.5kW·두모터각8.3kW14.6A·440V60Hz·QM1 54–65A/RATING62A·QM2/3 10–16A 도면값. FG27/117/136/17 Rev2 17.03.2025,FG28/14 개정란공란·작성27.05.2024. 현행보호값아님',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf ·24.11.11 first draft·PDF34/51 row1_20/1_21 EXI+VS01-M06A/M07A·CV6/4core vs PVC-S/6SB·SPARE0·100→120→121→122→EXI1TB1→E300/E400·Adjustment16/LEN88. 두행VS-01과전기VS-01A차이·준공미확정보존',
+            control_title='공통기동·공유T60·별도OFF브레이크T69와 제어 경계',control_links=[['공통출력1943','networks/network-1943.html'],['브레이크1944','networks/network-1944.html'],['감시1794','networks/network-1794.html'],['입력1070','networks/network-1070.html']],
+            timer_title='공유 Tag_59 / T60 · S5T#2S 운전 감시',related_title='별도OFF브레이크·두모터·MC04소비·시간',related_links=[['OFF브레이크1944','networks/network-1944.html'],['MC04소비1941','networks/network-1941.html'],['시간1024','networks/network-1024.html'],['첫Move초기화1050','networks/network-1050.html'],['미해석HMI1184','networks/network-1184.html']],
+            field_title='스크린·공통인버터·각모터·브레이크 존재와 정상극성',alarm_recovery='드라이브원인회복·PLC래치Reset·DI4Reset·새요청·공통Q/RUN/ALARM·두모터각각의회전/진동·상류MC04복구를같은시각근거로구분합니다. 브레이크활성/철거와현재OFF값을추정하지않습니다.',
+            search_examples='Q0.6, I1.1, I1.2, Tag_59, T60, Tag_117, T69, M11.0, Q49.5, VS01A')))

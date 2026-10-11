@@ -1,0 +1,307 @@
+{
+  "version": "1.10.0",
+  "target": "VS01/P09",
+  "baseline_commit": "5fac25b70389f38141774d35dce49f129eb1982f",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "next": "PV01/P05 received; Dots PV02/P07 research",
+  "source_locations": 146,
+  "source_hashes": {
+    "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+    "registers/construction-reference.json": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+    "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+    "registers/hmi-transfer.json": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+    "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+    "registers/regulation-manual.json": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+    "registers/requirements-audit.json": "1e4bac7d39f1898bdc25385c8b4ef9c129d786dfbd996b78278dc4c1d2606bfc",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+    "registers/vendor-reference-review.json": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/decoded-original/0030-FlgNet.xml": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "sources/decoded-original/0031-FlgNet.xml": "76385eab8f8f72b9faa16f7cf8905f395591b18c0a9ee9e6d7dd085a38c45c65",
+    "sources/decoded-original/0032-FlgNet.xml": "070bb8efa33d03b18add5da81d3f670a47c12b288076b7bfee11ac87fe6fa7e4",
+    "sources/decoded-original/0164-FlgNet.xml": "15884b2b362842279b626b669a484b1daa269f5ecd99112b8391bb0387382491",
+    "sources/decoded-original/0165-FlgNet.xml": "4513a5f6e77717c99c5e869105483be31f7f62ab280e271dc36cd7a2d3e3bb88",
+    "sources/decoded-original/0166-FlgNet.xml": "0330a505877be92172f94bce83222a0bfc8d64aab700a69fc1fa2188010d3853",
+    "sources/decoded-original/0247-FlgNet.xml": "104690938ac2ebe32d668f237255a3e957e0af9930bfc6587b9e6624bedf13a1",
+    "sources/decoded-original/0248-FlgNet.xml": "5625b16670c9c66da8d8387851ba511f3f139cca97e0a45d307c1e17bdabf2b7",
+    "sources/decoded-original/0249-FlgNet.xml": "795b5d96b7cb6ba8f4a8c0d94276c3cc52195c39fb0f3948607354dfbf041971",
+    "sources/decoded-original/0313-FlgNet.xml": "4a9f084345aa94f2e4e16cc1329f8b2baed2c22266b688000809dfbd7af57d8a",
+    "sources/decoded-original/0337-FlgNet.xml": "403f3a0e9218bbe81fb00cb93fb9f6bd3570af2df157abccd878a3a1f60f2580",
+    "sources/decoded-original/0355-FlgNet.xml": "73592d33f8b3a71effeb36f25427c76e931485e7ce31f5c81f144ddae83c4247",
+    "sources/decoded-original/0362-FlgNet.xml": "e5882d4714fd03d63b3b0226419273caeb8cf835e0b03fdedbea1b12430d1162",
+    "sources/decoded-original/0397-FlgNet.xml": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+    "sources/decoded-original/0402-FlgNet.xml": "808c38e8d0c1849acea83d5ba6641df3af093ba5870932fb41243fc4ed907e86",
+    "sources/decoded-original/0430-FlgNet.xml": "d058073f512bcdc1d392d281d9df7932583a15ae90bfd81d903b940e9e2d6599",
+    "sources/decoded-original/0549-FlgNet.xml": "49f7169c33ed7f54559b0801e21a7d618584900972840e91cf51ad032e8febb1",
+    "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
+    "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
+    "sources/decoded-original/0578-IdentXmlPart.xml": "0f9f41b5dee25ea17c7a29ab6f7b00503c13d0f265266acd660072baf061d32b",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0606-IdentXmlPart.xml": "73d45f9e2a34bba8a25df1ed1f71e8f6404fc96a8d6481672652a48435b6a740",
+    "sources/decoded-original/0613-IdentXmlPart.xml": "09d3b1397a987898334218f37e025661af162438582e649f671e7abec443d3cb",
+    "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
+    "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d",
+    "sources/decoded-original/0621-IdentXmlPart.xml": "a63e2b97ea9eb2691cb478666afed77fc58a2da2f8170422dc09e24b102c88ee",
+    "sources/decoded-original/0622-IdentXmlPart.xml": "f0b997f1246d76cff71de2160eb617caa936e6987bdf43c73f55cdcf77dccdb6",
+    "sources/decoded-original/0623-IdentXmlPart.xml": "4acd00406ea92466169e57e59fc90b0da4d9ec55fd19e2e96c9556e939cb83a6",
+    "sources/decoded-original/0624-IdentXmlPart.xml": "24607c0827fbde428bccf8637ef4ae490798a69a7c2f3b87861d0749082d367a",
+    "sources/decoded-original/0627-IdentXmlPart.xml": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "sources/decoded-original/0628-IdentXmlPart.xml": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "sources/decoded-original/0629-IdentXmlPart.xml": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "sources/decoded-original/0635-IdentXmlPart.xml": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457",
+    "sources/decoded-original/0636-IdentXmlPart.xml": "ec3d79f03e2748f8def4409ad676a97b98e28b9d8e68f6a64b3fe894466832ca",
+    "sources/decoded-original/0655-IdentXmlPart.xml": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+    "sources/decoded-original/0656-IdentXmlPart.xml": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592",
+    "sources/decoded-original/0657-IdentXmlPart.xml": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b",
+    "sources/decoded-original/0658-IdentXmlPart.xml": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+    "sources/decoded-original/0688-IdentXmlPart.xml": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+    "sources/decoded-original/0692-IdentXmlPart.xml": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "sources/decoded-original/0694-IdentXmlPart.xml": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
+  },
+  "source_bundle_sha256": "7ecdcf6b7709ef5f0b8afe3632d022b5e9852d7b25f8a58ee699138b392c054b",
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "screens": 1324,
+    "matrix": [
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          },
+          {
+            "count": 90,
+            "key": "P08"
+          },
+          {
+            "count": 82,
+            "key": "P09"
+          }
+        ],
+        "views": 398,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 390
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          },
+          {
+            "count": 90,
+            "key": "P08"
+          },
+          {
+            "count": 82,
+            "key": "P09"
+          }
+        ],
+        "views": 398,
+        "width": 390
+      }
+    ],
+    "source_pairs": [
+      {
+        "width": 390,
+        "image": true,
+        "sourceHash": "gme-vs01-part-381",
+        "target": "381\tCoil\t\toperand = Start VS01",
+        "highlight": true,
+        "overflow": -12
+      },
+      {
+        "width": 390,
+        "image": true,
+        "sourceHash": "gme-vs01-part-604",
+        "target": "604\tContact\toperand\toperand = Inputs.VS01 run",
+        "highlight": true,
+        "overflow": -12
+      },
+      {
+        "width": 390,
+        "image": true,
+        "sourceHash": "gme-vs01-part-608",
+        "target": "608\tContact\t\toperand = Inputs.VS01_All_Inv",
+        "highlight": true,
+        "overflow": -12
+      },
+      {
+        "width": 1280,
+        "image": true,
+        "sourceHash": "gme-vs01-part-381",
+        "target": "381\tCoil\t\toperand = Start VS01",
+        "highlight": true,
+        "overflow": -12
+      },
+      {
+        "width": 1280,
+        "image": true,
+        "sourceHash": "gme-vs01-part-604",
+        "target": "604\tContact\toperand\toperand = Inputs.VS01 run",
+        "highlight": true,
+        "overflow": -12
+      },
+      {
+        "width": 1280,
+        "image": true,
+        "sourceHash": "gme-vs01-part-608",
+        "target": "608\tContact\t\toperand = Inputs.VS01_All_Inv",
+        "highlight": true,
+        "overflow": -12
+      }
+    ],
+    "saved_reopened": true,
+    "notes_before_restore": 3,
+    "notes_after_restore": 4,
+    "foreign_records_preserved": 2,
+    "unknown_fields_signals_drafts_preserved": true,
+    "zero_and_blank_distinct": true,
+    "compare_zero_to_one": true,
+    "comparison_differences": 3,
+    "concurrent_change_blocked": true,
+    "quota_failure_preserves_latest_and_draft": true,
+    "stale_report": {
+      "print_calls": 0,
+      "message": "기록이 변경되었습니다. 보고서 미리보기를 다시 생성하세요."
+    },
+    "fresh_report": {
+      "calls": 1,
+      "printing": true,
+      "reference": "보고서 생성 기준: 매뉴얼 v1.10.0 · VS01 참고 자료 60개\n자료 묶음 SHA256: 984249fa136a8dc7dabc9920b5973c54145472d359e8101ffd0d62b89b80d30f\n생성 시점의 참고 자료입니다. 과거 관찰 당시의 버전·자료 일치를 확정하지 않습니다."
+    },
+    "pdf": {
+      "file": "gme-vs01-v1.10.0-a4.pdf",
+      "sha256": "33d019ce9f3e67201aeb3c1fb1e3aca3174e260d574df75d0a023efd2c2647a8",
+      "bytes": 390063,
+      "pages": 3,
+      "page_points": [
+        595.92,
+        841.92
+      ],
+      "all_pages_visually_reviewed": true,
+      "saved_source_bundle": "984249fa136a8dc7dabc9920b5973c54145472d359e8101ffd0d62b89b80d30f"
+    },
+    "cleanup": {
+      "notes": null,
+      "drafts": null,
+      "temporary_patches_removed": true,
+      "viewport_reset": true,
+      "logs": []
+    }
+  },
+  "qa_directory": "/tmp/gme-vs01-qa",
+  "draft_hashes_matched": 51,
+  "received_PV01_hashes_matched": 61,
+  "originals_unchanged": 730,
+  "additional_sources": 3,
+  "simulator_frozen_files": 5,
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "operational_record_writes": 0,
+  "PLC_field_SEJIN_changes": 0,
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T06:41:24.824553+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.10.0.zip",
+    "version": "1.10.0",
+    "files": 2801,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 53086035,
+    "sha256": "dfd46ee8deb19d36149b39b1055bf28eb757b0bfd7e6cca07d1a204f2ce68d64",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "preservation": {
+    "originals": 730,
+    "common_record_logic_and_original_registers_unchanged": true,
+    "existing_profile_content_unchanged": 7,
+    "new_profile": "VS01",
+    "source_locations": 146,
+    "hashes": 60,
+    "bundle": "7ecdcf6b7709ef5f0b8afe3632d022b5e9852d7b25f8a58ee699138b392c054b"
+  },
+  "local_node_tests": 8,
+  "NETLIFY_build": "passed"
+}
