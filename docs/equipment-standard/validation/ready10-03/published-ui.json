@@ -1,0 +1,506 @@
+{
+  "equipment": [
+    {
+      "key": "DP02",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "직접 선언",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "호출 0522 LAD1774 / index44 / NID41",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 양 끝점·실제 PDF·개정",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "BF02_OFR와 공유 MAX_DP_FILTER의 구별",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·수리 초안",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 23,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P170.png",
+          "width": 2300
+        }
+      ]
+    },
+    {
+      "key": "PSH02",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "I/O·HMI: 원시·복사·환산·설정의 분리",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "PSH02 고유 환산 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM 센서 → 입력 채널",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "고압 래치: PSH02 독립 확인",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰 초안",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 25,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+          "width": 2068
+        }
+      ]
+    },
+    {
+      "key": "PSH03",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·공정·자료 경계",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "직접 선언표",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "PSH03 환산 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM FG75/PDF76",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·영향·복구",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·배제 순서",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 21,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+          "width": 2068
+        }
+      ]
+    },
+    {
+      "key": "DP01",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·공정·문서 소유 경계",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "원본 선언 및 주소",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "상위 호출과 DP01 고유 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "실제 확인한 페이지와 개정란",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "OFR와 공통 MAX_DP_FILTER",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·원인 배제 준비",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 21,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P170.png",
+          "width": 2300
+        }
+      ]
+    },
+    {
+      "key": "PSH01",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·공정·자료 시점",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "직접 선언",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "PSH01 고유 환산 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM 전기도 직접 렌더",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·영향·복구 경계",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰 기록안",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 22,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+          "width": 2068
+        }
+      ]
+    },
+    {
+      "key": "PSL05",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "I/O·HMI",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "저압 감지와 유지",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 끝점",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·공통 경보·복구 경계",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰 준비",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 18,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P077.png",
+          "width": 2000
+        }
+      ]
+    },
+    {
+      "key": "PC02",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "I/O·HMI — 주소·형식·읽기/쓰기",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "Local 값의 상류와 호출 맥락",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 전달 경로 — software의 비해당과 관련 끝점",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·Reset·복구 경계",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·원인 배제 인계",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 22,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+          "width": 2068
+        }
+      ]
+    },
+    {
+      "key": "RO02",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "원본 선언과 주소",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "호출과 RO02 고유 결속",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM RO02 전체 체인",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "RO01−RO02 비교 원본",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰 설계",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 24,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P081.png",
+          "width": 1800
+        }
+      ]
+    },
+    {
+      "key": "PC01",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "고유 선언과 주소",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "PC01 고유 FC63 결속",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM FG76 / 실제 PDF77",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "Low_Aspiration 고유 발생·유지·Reset",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·수리 준비",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 25,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P077.png",
+          "width": 2000
+        }
+      ]
+    },
+    {
+      "key": "RO01",
+      "version": "1.20.0",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "직접 주소와 자료형",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "RO01 선형화 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 전달 경로와 실제 PDF 확인",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·복구: 원본 발생식과 실제 안전복귀 분리",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 읽기 전용 관찰·증거 틀",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "pairs_complete": true,
+      "original_positions": 30,
+      "images": [
+        {
+          "complete": true,
+          "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P081.png",
+          "width": 1800
+        }
+      ]
+    }
+  ],
+  "backup": "모든 설비 통합 백업·복원\n닫기\n\n이 브라우저에 저장한 모든 설비의 메모·수리 기록을 JSON 파일 하나로 보관하고 옮깁니다. 작성 중인 초안은 현재 브라우저에 유지합니다.\n\n1. 전체 기록을 한 파일로 백업\n\n0개 설비 · 0건 · 설비 선택과 관계없이 전체를 포함합니다.\n\n모든 설비 통합 JSON 다운로드\n2. 통합 파일 가져오기\n\n기존 전체 백업과 개별 JSON도 가져올 수 있습니다. 미리보기에서 충돌 선택 후 저장합니다. 기존에만 있는 기록과 추가 항목은 보존하며, 저장할 기록을 삭제하지 않습니다.\n\n통합 JSON 백업 파일\n\n최대64MB / 50,000건. 복원은 저장한 메모·수리 기록에 적용합니다.",
+  "operational_records_written": 0
+}

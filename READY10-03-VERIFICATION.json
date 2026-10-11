@@ -16,7 +16,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "2ac5f443ceda03f7104c483b8986a68c721b5d88e110a800d88d0e6792c46111",
       "source_hashes": {
@@ -108,7 +108,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "30612c734b2198cfb09dbd6c67884f089d269e9281c5b9dd8bbdb26997f0c430",
       "source_hashes": {
@@ -190,7 +190,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "a9f7ac7f3d97ba24942b1237927ec8c6430453fe04c64353905fe4c7c972022e",
       "source_hashes": {
@@ -269,7 +269,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "a78d94b80446a7db07b70dfc2bfb04b03efda63b5907f443b8433ed9faeea1f7",
       "source_hashes": {
@@ -359,7 +359,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "0c10206eb784bbb548b36656605fc8a5f145610741f4e54fa90f1d0a87e75bed",
       "source_hashes": {
@@ -438,7 +438,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "99024733df716d286ab2b6a9b764603ce087792e1295ddbe0a32111e37821da1",
       "source_hashes": {
@@ -527,7 +527,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "9b89c30fa70242f55bffdcc6e8626353eea6f54721e669f522cb5d9732d9c480",
       "source_hashes": {
@@ -617,7 +617,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "dd659c99be563f0dfc1dc8ca0e675cbd01b5145c72a64de53afc6add2d71af44",
       "source_hashes": {
@@ -709,7 +709,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "38612944269e909f7b6b655c7ebacf84d8597dde88c4fe05a7d5bc607f2301b7",
       "source_hashes": {
@@ -817,7 +817,7 @@
       "synthetic_records": 2,
       "documentation": "complete_with_gaps",
       "ui": "passed",
-      "publication": "pending",
+      "publication": "verified_v1.20.0",
       "TIA_CPU_field": "not_performed",
       "final_source_bundle_sha256": "1ca46f9a708b5460ffab16739e1856012710063100d1a9cdaa80ac7d7520a861",
       "source_hashes": {
@@ -1084,7 +1084,7 @@
     "simulator_changes": 0,
     "simulator_behavior_tests": "not_run"
   },
-  "status": "local_verified_publication_pending",
+  "status": "publication_verified_complete_with_gaps",
   "package": {
     "fresh_verifiers": 14,
     "fresh_equipment_verifiers": 2,
@@ -1126,10 +1126,561 @@
     "public_files": 3052
   },
   "CC01": "Documentary name exists; dedicated owned I/O/current physical existence/identity unverified. No absence inference.",
-  "git_feature_commit": null,
-  "github_release": "pending",
-  "netlify_deploy": "pending",
-  "published_files": "pending",
-  "published_UI": "pending",
-  "fresh_clone": "pending"
+  "git_feature_commit": "38d1068065ccea7eb877e7c015339f9fe5fe398c",
+  "github_release": {
+    "status": "passed",
+    "tag": "v1.20.0",
+    "url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.20.0",
+    "asset": {
+      "id": 631701790,
+      "name": "GME-All-In-One-v1.20.0.zip",
+      "size": 74073950,
+      "digest": "sha256:d61a34144120f74eea5ab8c0e4461fc6f04fe59dc7d9a1c8c139dbefb861a53c",
+      "browser_download_url": "https://github.com/esp6662266/gme-plc-manual/releases/download/v1.20.0/GME-All-In-One-v1.20.0.zip"
+    }
+  },
+  "netlify_deploy": {
+    "status": "passed",
+    "id": "6acbedb87741590008d798aa",
+    "state": "ready",
+    "commit_ref": "38d1068065ccea7eb877e7c015339f9fe5fe398c",
+    "published_at": "2026-10-11T20:13:05.401Z",
+    "deploy_ssl_url": "https://main--gme-plc-manual.netlify.app",
+    "ssl_url": "https://gme-plc-manual.netlify.app"
+  },
+  "published_files": {
+    "status": "passed",
+    "count": 661,
+    "exact": 575,
+    "HTML_semantic": 86
+  },
+  "published_UI": {
+    "equipment": [
+      {
+        "key": "DP02",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "직접 선언",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "호출 0522 LAD1774 / index44 / NID41",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "전기 양 끝점·실제 PDF·개정",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "BF02_OFR와 공유 MAX_DP_FILTER의 구별",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰·수리 초안",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 23,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P170.png",
+            "width": 2300
+          }
+        ]
+      },
+      {
+        "key": "PSH02",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "I/O·HMI: 원시·복사·환산·설정의 분리",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "PSH02 고유 환산 호출",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "OEM 센서 → 입력 채널",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "고압 래치: PSH02 독립 확인",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰 초안",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 25,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+            "width": 2068
+          }
+        ]
+      },
+      {
+        "key": "PSH03",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·공정·자료 경계",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "직접 선언표",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "PSH03 환산 호출",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "OEM FG75/PDF76",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "알람·영향·복구",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰·배제 순서",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 21,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+            "width": 2068
+          }
+        ]
+      },
+      {
+        "key": "DP01",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·공정·문서 소유 경계",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "원본 선언 및 주소",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "상위 호출과 DP01 고유 호출",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "실제 확인한 페이지와 개정란",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "OFR와 공통 MAX_DP_FILTER",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰·원인 배제 준비",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 21,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P170.png",
+            "width": 2300
+          }
+        ]
+      },
+      {
+        "key": "PSH01",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·공정·자료 시점",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "직접 선언",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "PSH01 고유 환산 호출",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "OEM 전기도 직접 렌더",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "알람·영향·복구 경계",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰 기록안",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 22,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+            "width": 2068
+          }
+        ]
+      },
+      {
+        "key": "PSL05",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "I/O·HMI",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "저압 감지와 유지",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "전기 끝점",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "알람·공통 경보·복구 경계",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰 준비",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 18,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P077.png",
+            "width": 2000
+          }
+        ]
+      },
+      {
+        "key": "PC02",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "I/O·HMI — 주소·형식·읽기/쓰기",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "Local 값의 상류와 호출 맥락",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "전기 전달 경로 — software의 비해당과 관련 끝점",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "알람·Reset·복구 경계",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰·원인 배제 인계",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 22,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P076.png",
+            "width": 2068
+          }
+        ]
+      },
+      {
+        "key": "RO02",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "원본 선언과 주소",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "호출과 RO02 고유 결속",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "OEM RO02 전체 체인",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "RO01−RO02 비교 원본",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰 설계",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 24,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P081.png",
+            "width": 1800
+          }
+        ]
+      },
+      {
+        "key": "PC01",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "고유 선언과 주소",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "PC01 고유 FC63 결속",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "OEM FG76 / 실제 PDF77",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "Low_Aspiration 고유 발생·유지·Reset",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 관찰·수리 준비",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 25,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P077.png",
+            "width": 2000
+          }
+        ]
+      },
+      {
+        "key": "RO01",
+        "version": "1.20.0",
+        "sections": [
+          {
+            "area": 0,
+            "title": "설비·자료 기준",
+            "invalid": false
+          },
+          {
+            "area": 1,
+            "title": "직접 주소와 자료형",
+            "invalid": false
+          },
+          {
+            "area": 2,
+            "title": "RO01 선형화 호출",
+            "invalid": false
+          },
+          {
+            "area": 3,
+            "title": "전기 전달 경로와 실제 PDF 확인",
+            "invalid": false
+          },
+          {
+            "area": 4,
+            "title": "알람·복구: 원본 발생식과 실제 안전복귀 분리",
+            "invalid": false
+          },
+          {
+            "area": 5,
+            "title": "증상별 읽기 전용 관찰·증거 틀",
+            "invalid": false
+          },
+          {
+            "area": 6,
+            "title": "현재 근거 공백과 판정 기준",
+            "invalid": false
+          }
+        ],
+        "pairs_complete": true,
+        "original_positions": 30,
+        "images": [
+          {
+            "complete": true,
+            "src": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/Electrical_Rev2-P081.png",
+            "width": 1800
+          }
+        ]
+      }
+    ],
+    "backup": "모든 설비 통합 백업·복원\n닫기\n\n이 브라우저에 저장한 모든 설비의 메모·수리 기록을 JSON 파일 하나로 보관하고 옮깁니다. 작성 중인 초안은 현재 브라우저에 유지합니다.\n\n1. 전체 기록을 한 파일로 백업\n\n0개 설비 · 0건 · 설비 선택과 관계없이 전체를 포함합니다.\n\n모든 설비 통합 JSON 다운로드\n2. 통합 파일 가져오기\n\n기존 전체 백업과 개별 JSON도 가져올 수 있습니다. 미리보기에서 충돌 선택 후 저장합니다. 기존에만 있는 기록과 추가 항목은 보존하며, 저장할 기록을 삭제하지 않습니다.\n\n통합 JSON 백업 파일\n\n최대64MB / 50,000건. 복원은 저장한 메모·수리 기록에 적용합니다.",
+    "operational_records_written": 0
+  },
+  "fresh_clone": {
+    "fresh_clone": "passed",
+    "commit": "38d1068065ccea7eb877e7c015339f9fe5fe398c",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment_profiles": 48,
+    "catalog_profiles": 30,
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
+  "published_source_pairs": {
+    "status": "passed",
+    "locations": 231,
+    "equipment": 10
+  },
+  "published_counts": {
+    "manuals": 48,
+    "identity_reports": 3,
+    "phase2_cumulative": 30,
+    "phase2_candidates": 133,
+    "physical_new_identifications": 0
+  },
+  "bookkeeping_commit": "Following root documentation-only commit; fixed feature release and historical package content remain immutable"
 }

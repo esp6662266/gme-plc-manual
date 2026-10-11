@@ -1,0 +1,1388 @@
+[
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1571",
+    "target": "1571\tORef 1564 (PR_BR02) ↔ Part 1556.Analog_input"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1573",
+    "target": "1571\tORef 1564 (PR_BR02) ↔ Part 1556.Analog_input"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1572",
+    "target": "1573\tORef 1566 (Coeff.ZERO_DP02) ↔ Part 1556.Zero"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "1574",
+    "target": "1572\tORef 1565 (Coeff.COEFF_DP02) ↔ Part 1556.Coeff"
+  },
+  {
+    "key": "DP02",
+    "network": 1774,
+    "uid": "24",
+    "target": "1574\tPart 1556.OutValue ↔ ORef 1567 (Data.DP_02)"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "164",
+    "target": "24\tPart 1556.Out_of_range ↔ ORef 23 (Allarm.BF02_OFR)"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "167",
+    "target": "164\tConvert\t\tin = Analog_input; out = App5"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "170",
+    "target": "167\tConvert\t\tin = Zero; out = App6"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "177",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "181",
+    "target": "177\tMul\t\tin1 = App3; in2 = App4; out = App3"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "185",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "190",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "259",
+    "target": "190\tGt\t\tin1 = Analog_input; in2 = 32767"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "193",
+    "target": "259\tLe\t\tin1 = Analog_input; in2 = -1382"
+  },
+  {
+    "key": "DP02",
+    "network": 1658,
+    "uid": "23",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "DP02",
+    "network": 1659,
+    "uid": "162",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  },
+  {
+    "key": "DP02",
+    "network": 1886,
+    "uid": "30",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "DP02",
+    "network": 1884,
+    "uid": "395",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "DP02",
+    "network": 1884,
+    "uid": "458",
+    "target": "395\tLt\t\tin1 = Data.DP_02; in2 = Coeff.DP_02_SOGLIA_1"
+  },
+  {
+    "key": "DP02",
+    "network": 1887,
+    "uid": "457",
+    "target": "458\tMove\t\tin = Coeff.DP_02_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "DP02",
+    "network": 1992,
+    "uid": "1136",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "DP02",
+    "network": 1992,
+    "uid": "1141",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "key": "DP02",
+    "network": 1992,
+    "uid": "1152",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "PSH02",
+    "network": 1071,
+    "uid": "97",
+    "target": "471\tORef 464 (PSH02) ↔ Part 456.Analog_input"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "471",
+    "target": "97\tMove\t\tin = PSH02; out1 = Inputs.PSH_02"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "472",
+    "target": "471\tORef 464 (PSH02) ↔ Part 456.Analog_input"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "473",
+    "target": "472\tORef 465 (Coeff.COEFF_PSH02) ↔ Part 456.Coeff"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "474",
+    "target": "473\tORef 466 (Coeff.ZERO_PSH02) ↔ Part 456.Zero"
+  },
+  {
+    "key": "PSH02",
+    "network": 1746,
+    "uid": "24",
+    "target": "474\tPart 456.OutValue ↔ ORef 467 (Data.PSH_02)"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "164",
+    "target": "24\tPart 456.Out_of_range ↔ ORef 23 (Allarm.PSH02_OFR)"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "170",
+    "target": "164\tConvert\t\tin = Analog_input; out = App5"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "177",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "181",
+    "target": "177\tMul\t\tin1 = App3; in2 = App4; out = App3"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "185",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "193",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "PSH02",
+    "network": 1658,
+    "uid": "23",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "PSH02",
+    "network": 1659,
+    "uid": "162",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  },
+  {
+    "key": "PSH02",
+    "network": 1709,
+    "uid": "598",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "PSH02",
+    "network": 1709,
+    "uid": "618",
+    "target": "598\tSub\t\tin1 = Data.PSH02_SETPOINT; in2 = Data.PSH_02; out = ErrPSH02"
+  },
+  {
+    "key": "PSH02",
+    "network": 1710,
+    "uid": "701",
+    "target": "618\tGe\t\tin1 = ErrPSH02; in2 = 5"
+  },
+  {
+    "key": "PSH02",
+    "network": 1710,
+    "uid": "707",
+    "target": "701\tLe\t\tin1 = PSH02; in2 = 0"
+  },
+  {
+    "key": "PSH02",
+    "network": 1710,
+    "uid": "721",
+    "target": "707\tSdCoil\t\tvalue = S5T#20S; operand = Tag_151"
+  },
+  {
+    "key": "PSH02",
+    "network": 1710,
+    "uid": "735",
+    "target": "721\tSdCoil\t\tvalue = S5T#2S; operand = Tag_152"
+  },
+  {
+    "key": "PSH02",
+    "network": 1989,
+    "uid": "908",
+    "target": "735\tSdCoil\t\tvalue = S5T#300MS; operand = Tag_153"
+  },
+  {
+    "key": "PSH02",
+    "network": 1989,
+    "uid": "914",
+    "target": "908\tGe\t\tin1 = Data.PSH_02; in2 = Data.PSH02_MAX_SETPOINT"
+  },
+  {
+    "key": "PSH02",
+    "network": 1989,
+    "uid": "919",
+    "target": "914\tSdCoil\t\tvalue = S5T#3M; operand = Tag_111"
+  },
+  {
+    "key": "PSH02",
+    "network": 1989,
+    "uid": "926",
+    "target": "919\tSCoil\t\toperand = Allarm.MAX_PSH_02"
+  },
+  {
+    "key": "PSH02",
+    "network": 1989,
+    "uid": "932",
+    "target": "926\tSub\t\tin1 = Data.PSH02_MAX_SETPOINT; in2 = 5; out = app06"
+  },
+  {
+    "key": "PSH03",
+    "network": 1071,
+    "uid": "98",
+    "target": "491\tORef 484 (PSH03) ↔ Part 476.Analog_input"
+  },
+  {
+    "key": "PSH03",
+    "network": 1747,
+    "uid": "491",
+    "target": "98\tMove\t\tin = PSH03; out1 = Inputs.PSH_03"
+  },
+  {
+    "key": "PSH03",
+    "network": 1747,
+    "uid": "492",
+    "target": "491\tORef 484 (PSH03) ↔ Part 476.Analog_input"
+  },
+  {
+    "key": "PSH03",
+    "network": 1747,
+    "uid": "493",
+    "target": "492\tORef 485 (Coeff.Coeff_PSH03) ↔ Part 476.Coeff"
+  },
+  {
+    "key": "PSH03",
+    "network": 1747,
+    "uid": "494",
+    "target": "493\tORef 486 (Coeff.Zero_PSH03) ↔ Part 476.Zero"
+  },
+  {
+    "key": "PSH03",
+    "network": 1747,
+    "uid": "24",
+    "target": "494\tPart 476.OutValue ↔ ORef 487 (Data.PSH03)"
+  },
+  {
+    "key": "PSH03",
+    "network": 1658,
+    "uid": "170",
+    "target": "24\tPart 476.Out_of_range ↔ ORef 23 (Allarm.PSH03_OFR)"
+  },
+  {
+    "key": "PSH03",
+    "network": 1658,
+    "uid": "181",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "PSH03",
+    "network": 1658,
+    "uid": "185",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "PSH03",
+    "network": 1658,
+    "uid": "193",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "PSH03",
+    "network": 1658,
+    "uid": "23",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "PSH03",
+    "network": 1659,
+    "uid": "162",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  },
+  {
+    "key": "PSH03",
+    "network": 1705,
+    "uid": "256",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "PSH03",
+    "network": 1705,
+    "uid": "276",
+    "target": "256\tSub\t\tin1 = Data.PSH03_SETPOINT; in2 = Data.PSH03; out = ErrPSH03"
+  },
+  {
+    "key": "PSH03",
+    "network": 1705,
+    "uid": "282",
+    "target": "276\tGe\t\tin1 = ErrPSH03; in2 = 5"
+  },
+  {
+    "key": "PSH03",
+    "network": 1705,
+    "uid": "263",
+    "target": "282\tLt\t\tin1 = ErrPSH03; in2 = -5"
+  },
+  {
+    "key": "PSH03",
+    "network": 1705,
+    "uid": "268",
+    "target": "263\tSdCoil\t\tvalue = S5T#4S; operand = Tag_148"
+  },
+  {
+    "key": "PSH03",
+    "network": 15,
+    "uid": "577",
+    "target": "268\tSdCoil\t\tvalue = S5T#10S; operand = Tag_147"
+  },
+  {
+    "key": "PSH03",
+    "network": 15,
+    "uid": "578",
+    "target": "577\tPart 507.QLMNUP ↔ ORef 544 (PID UP MV03)"
+  },
+  {
+    "key": "PSH03",
+    "network": 1706,
+    "uid": "509",
+    "target": "578\tPart 507.QLMNDN ↔ ORef 545 (PID down MV03)"
+  },
+  {
+    "key": "PSH03",
+    "network": 1706,
+    "uid": "527",
+    "target": "509\tContact\t\toperand = PID UP MV03"
+  },
+  {
+    "key": "DP01",
+    "network": 1773,
+    "uid": "1551",
+    "target": "1551\tORef 1544 (PR_BF01) ↔ Part 1536.Analog_input"
+  },
+  {
+    "key": "DP01",
+    "network": 1773,
+    "uid": "1553",
+    "target": "1551\tORef 1544 (PR_BF01) ↔ Part 1536.Analog_input"
+  },
+  {
+    "key": "DP01",
+    "network": 1773,
+    "uid": "1552",
+    "target": "1553\tORef 1546 (Coeff.ZERO_DP01) ↔ Part 1536.Zero"
+  },
+  {
+    "key": "DP01",
+    "network": 1773,
+    "uid": "1554",
+    "target": "1552\tORef 1545 (Coeff.COEFF_DP01) ↔ Part 1536.Coeff"
+  },
+  {
+    "key": "DP01",
+    "network": 1773,
+    "uid": "24",
+    "target": "1554\tPart 1536.OutValue ↔ ORef 1547 (Data.DP_01)"
+  },
+  {
+    "key": "DP01",
+    "network": 1658,
+    "uid": "170",
+    "target": "24\tPart 1536.Out_of_range ↔ ORef 23 (Allarm.BF01_OFR)"
+  },
+  {
+    "key": "DP01",
+    "network": 1658,
+    "uid": "177",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "DP01",
+    "network": 1658,
+    "uid": "181",
+    "target": "177\tMul\t\tin1 = App3; in2 = App4; out = App3"
+  },
+  {
+    "key": "DP01",
+    "network": 1658,
+    "uid": "185",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "DP01",
+    "network": 1658,
+    "uid": "193",
+    "target": "185\tMove\t\tin = App3; out1 = OutValue"
+  },
+  {
+    "key": "DP01",
+    "network": 1658,
+    "uid": "23",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "DP01",
+    "network": 1659,
+    "uid": "162",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  },
+  {
+    "key": "DP01",
+    "network": 1886,
+    "uid": "24",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "DP01",
+    "network": 1886,
+    "uid": "30",
+    "target": "24\tLe\t\tin1 = Data.DP_01; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "DP01",
+    "network": 1885,
+    "uid": "22",
+    "target": "30\tLe\t\tin1 = Data.DP_02; in2 = Coeff.DP_01_SOGLIA_1"
+  },
+  {
+    "key": "DP01",
+    "network": 1883,
+    "uid": "219",
+    "target": "22\tPart 460.out ↔ Part 21.in2"
+  },
+  {
+    "key": "DP01",
+    "network": 1883,
+    "uid": "276",
+    "target": "219\tMove\t\tin = Coeff.DP_01_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "DP01",
+    "network": 1887,
+    "uid": "457",
+    "target": "276\tMove\t\tin = Coeff.DP_01_LAVORO_SOGLIA_1; out1 = Data.LAVA_LAVORO"
+  },
+  {
+    "key": "DP01",
+    "network": 1992,
+    "uid": "1136",
+    "target": "457\tMove\t\tin = Coeff.DP_01_PAUSA_SOGLIA_1; out1 = Data.LAVA_PAUSA"
+  },
+  {
+    "key": "DP01",
+    "network": 1992,
+    "uid": "1141",
+    "target": "1136\tSdCoil\t\tvalue = S5T#3M; operand = Tag_112"
+  },
+  {
+    "key": "DP01",
+    "network": 1992,
+    "uid": "1152",
+    "target": "1141\tSCoil\t\toperand = Allarm.MAX_DP_FILTER"
+  },
+  {
+    "key": "PSH01",
+    "network": 1071,
+    "uid": "96",
+    "target": "451\tORef 444 (PSH01) ↔ Part 436.Analog_input"
+  },
+  {
+    "key": "PSH01",
+    "network": 1745,
+    "uid": "451",
+    "target": "96\tMove\t\tin = PSH01; out1 = Inputs.PSH_01"
+  },
+  {
+    "key": "PSH01",
+    "network": 1745,
+    "uid": "452",
+    "target": "451\tORef 444 (PSH01) ↔ Part 436.Analog_input"
+  },
+  {
+    "key": "PSH01",
+    "network": 1745,
+    "uid": "453",
+    "target": "452\tORef 445 (Coeff.COEFF_PSH01) ↔ Part 436.Coeff"
+  },
+  {
+    "key": "PSH01",
+    "network": 1745,
+    "uid": "454",
+    "target": "453\tORef 446 (Coeff.ZERO_PSH01) ↔ Part 436.Zero"
+  },
+  {
+    "key": "PSH01",
+    "network": 1745,
+    "uid": "24",
+    "target": "454\tPart 436.OutValue ↔ ORef 447 (Data.Press_PC01)"
+  },
+  {
+    "key": "PSH01",
+    "network": 1658,
+    "uid": "170",
+    "target": "24\tPart 436.Out_of_range ↔ ORef 23 (Allarm.PSH01_OFR)"
+  },
+  {
+    "key": "PSH01",
+    "network": 1658,
+    "uid": "181",
+    "target": "170\tAdd\t\tin1 = App5; in2 = App6; out = App3"
+  },
+  {
+    "key": "PSH01",
+    "network": 1658,
+    "uid": "193",
+    "target": "181\tDiv\t\tin1 = App3; in2 = 28000; out = App3"
+  },
+  {
+    "key": "PSH01",
+    "network": 1658,
+    "uid": "23",
+    "target": "193\tMove\t\tin = -9999; out1 = OutValue"
+  },
+  {
+    "key": "PSH01",
+    "network": 1659,
+    "uid": "162",
+    "target": "23\tCoil\t\toperand = Out_of_range"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "224",
+    "target": "162\tMove\t\tin = 0; out1 = OutValue"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "225",
+    "target": "224\tORef 199 (Real_SPPC01) ↔ Part 172.SP_INT"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "248",
+    "target": "225\tORef 200 (Real_PC01) ↔ Part 172.PV_IN"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "250",
+    "target": "248\tPart 247.out ↔ Part 172.COM_RST"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "252",
+    "target": "250\tPart 249.out ↔ Part 172.LMNR_HS"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "239",
+    "target": "252\tPart 251.out ↔ Part 172.LMNR_LS"
+  },
+  {
+    "key": "PSH01",
+    "network": 7,
+    "uid": "240",
+    "target": "239\tPart 172.QLMNUP ↔ ORef 208 (PID MV02 UP)"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "310",
+    "target": "240\tPart 172.QLMNDN ↔ ORef 209 (PID MV02 Down)"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "312",
+    "target": "310\tContact\toperand\toperand = ON"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "227",
+    "target": "312\tContact\toperand\toperand = ON"
+  },
+  {
+    "key": "PSH01",
+    "network": 1704,
+    "uid": "240",
+    "target": "227\tCoil\t\toperand = Open MV02"
+  },
+  {
+    "key": "PSL05",
+    "network": 1070,
+    "uid": "58",
+    "target": "58\tORef 49 (Tag_182) ↔ Part 44.in"
+  },
+  {
+    "key": "PSL05",
+    "network": 1070,
+    "uid": "59",
+    "target": "58\tORef 49 (Tag_182) ↔ Part 44.in"
+  },
+  {
+    "key": "PSL05",
+    "network": 1070,
+    "uid": "56",
+    "target": "59\tPart 44.out1 ↔ ORef 50 (RefId 18)"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "287",
+    "target": "56\tPart 43.eno ↔ Part 44.en"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "288",
+    "target": "287\tPart 286.out ↔ Part 288.in ↔ Part 290.in"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "262",
+    "target": "288\tContact\toperand\toperand = Inputs.Low Pressure Air"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "290",
+    "target": "262\tSCoil\t\toperand = Allarm.PSL_AIR_LOW"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "292",
+    "target": "290\tContact\t\toperand = Flag.RESET_ALLARM"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "294",
+    "target": "292\tContact\t\toperand = Allarm.PSL_AIR_LOW"
+  },
+  {
+    "key": "PSL05",
+    "network": 1227,
+    "uid": "268",
+    "target": "294\tContact\t\toperand = Inputs.Low Pressure Air"
+  },
+  {
+    "key": "PSL05",
+    "network": 1858,
+    "uid": "302",
+    "target": "268\tRCoil\t\toperand = Allarm.PSL_AIR_LOW"
+  },
+  {
+    "key": "PSL05",
+    "network": 1858,
+    "uid": "232",
+    "target": "302\tPart 301.out ↔ Part 219.in10"
+  },
+  {
+    "key": "PSL05",
+    "network": 1080,
+    "uid": "25",
+    "target": "232\tRCoil\t\toperand = Flag.Start_Burner"
+  },
+  {
+    "key": "PSL05",
+    "network": 403,
+    "uid": "311",
+    "target": "25\tORef 34 (Inputs.Low Pressure Air) ↔ Part 33.operand"
+  },
+  {
+    "key": "PSL05",
+    "network": 927,
+    "uid": "137",
+    "target": "311\tPart 256.out1 ↔ ORef 290 (RefId 28)"
+  },
+  {
+    "key": "PSL05",
+    "network": 928,
+    "uid": "197",
+    "target": "137\tMove\t\tin = RefId 15 / ORef UID 177; out1 = WorkData.W2"
+  },
+  {
+    "key": "PSL05",
+    "network": 929,
+    "uid": "204",
+    "target": "197\tNe\t\tin1 = RefId 15 / ORef UID 224; in2 = WorkData.W2"
+  },
+  {
+    "key": "PSL05",
+    "network": 930,
+    "uid": "33",
+    "target": "204\tSCoil\t\toperand = Flag.RUN_HORN"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "584",
+    "target": "471\tORef 464 (PSH02) ↔ Part 456.Analog_input"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "550",
+    "target": "584\tPart 583.out ↔ Part 507.en"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "590",
+    "target": "550\tPart 498.out ↔ Part 507.COM_RST"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "592",
+    "target": "590\tPart 589.out ↔ Part 507.LMNR_HS"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "562",
+    "target": "592\tPart 591.out ↔ Part 507.LMNR_LS"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "563",
+    "target": "562\tORef 535 (Real_SPPC02) ↔ Part 507.SP_INT"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "566",
+    "target": "563\tORef 536 (Real_PC02) ↔ Part 507.PV_IN"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "561",
+    "target": "566\tORef 537 (-4.0) ↔ Part 507.GAIN"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "567",
+    "target": "561\tORef 534 (T#100MS) ↔ Part 507.CYCLE"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "568",
+    "target": "567\tORef 538 (T#10S) ↔ Part 507.TI"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "573",
+    "target": "568\tORef 539 (2.0) ↔ Part 507.DEADB_W"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "574",
+    "target": "573\tORef 540 (T#200MS) ↔ Part 507.PULSE_TM"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "575",
+    "target": "574\tORef 541 (T#5S) ↔ Part 507.BREAK_TM"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "576",
+    "target": "575\tORef 542 (T#3S) ↔ Part 507.MTR_TM"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "577",
+    "target": "576\tORef 543 (2.0) ↔ Part 507.DISV"
+  },
+  {
+    "key": "PC02",
+    "network": 15,
+    "uid": "578",
+    "target": "577\tPart 507.QLMNUP ↔ ORef 544 (PID UP MV03)"
+  },
+  {
+    "key": "PC02",
+    "network": 1705,
+    "uid": "279",
+    "target": "578\tPart 507.QLMNDN ↔ ORef 545 (PID down MV03)"
+  },
+  {
+    "key": "PC02",
+    "network": 1705,
+    "uid": "285",
+    "target": "279\tCoil\t\toperand = PID down MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1706,
+    "uid": "390",
+    "target": "285\tCoil\t\toperand = PID UP MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1706,
+    "uid": "407",
+    "target": "390\tCoil\t\toperand = Start open MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1746,
+    "uid": "471",
+    "target": "407\tCoil\t\toperand = Start Close MV03"
+  },
+  {
+    "key": "PC02",
+    "network": 1746,
+    "uid": "474",
+    "target": "471\tORef 464 (PSH02) ↔ Part 456.Analog_input"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "536",
+    "target": "531\tORef 524 (R002) ↔ Part 516.Analog_input"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "531",
+    "target": "536\tPart 535.out ↔ Part 516.en"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "530",
+    "target": "531\tORef 524 (R002) ↔ Part 516.Analog_input"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "534",
+    "target": "530\tORef 523 (ON) ↔ Part 516.IN0"
+  },
+  {
+    "key": "RO02",
+    "network": 1749,
+    "uid": "24",
+    "target": "534\tPart 516.OutValue ↔ ORef 527 (Data.Oxigen_RO02)"
+  },
+  {
+    "key": "RO02",
+    "network": 1071,
+    "uid": "166",
+    "target": "24\tPart 516.Out_of_range ↔ ORef 23 (Allarm.RO02_OFR)"
+  },
+  {
+    "key": "RO02",
+    "network": 1071,
+    "uid": "167",
+    "target": "166\tORef 154 (R002) ↔ Part 147.in"
+  },
+  {
+    "key": "RO02",
+    "network": 1071,
+    "uid": "164",
+    "target": "167\tPart 147.out1 ↔ ORef 155 (Inputs.RO_02)"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "718",
+    "target": "164\tPart 146.eno ↔ Part 147.en"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "719",
+    "target": "718\tPart 663.out ↔ Part 669.en ↔ Part 676.pre ↔ Part 679.pre"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "720",
+    "target": "719\tORef 700 (Data.Oxigen_RO01) ↔ Part 669.in1"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "721",
+    "target": "720\tORef 701 (Data.Oxigen_RO02) ↔ Part 669.in2"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "676",
+    "target": "721\tPart 669.out ↔ ORef 702 (app01)"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "679",
+    "target": "676\tLt\t\tin1 = app01; in2 = -20"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "728",
+    "target": "679\tGt\t\tin1 = app01; in2 = 20"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "729",
+    "target": "728\tPart 675.out ↔ Part 685.in ↔ Part 745.in"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "733",
+    "target": "729\tORef 707 (S5T#1M) ↔ Part 685.value"
+  },
+  {
+    "key": "RO02",
+    "network": 1985,
+    "uid": "739",
+    "target": "733\tORef 710 (Allarm.RO01_Signal_Fault) ↔ Part 690.operand"
+  },
+  {
+    "key": "RO02",
+    "network": 1858,
+    "uid": "296",
+    "target": "739\tORef 713 (Allarm.RO01_Signal_Fault) ↔ Part 695.operand"
+  },
+  {
+    "key": "RO02",
+    "network": 1858,
+    "uid": "272",
+    "target": "296\tPart 295.out ↔ Part 219.in7"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "595",
+    "target": "272\tORef 250 (Flag.Start_Burner) ↔ Part 232.operand"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "590",
+    "target": "595\tPart 594.out ↔ Part 558.en ↔ Part 596.in"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "591",
+    "target": "590\tORef 579 (Data.Oxigen_RO02) ↔ Part 566.in1"
+  },
+  {
+    "key": "RO02",
+    "network": 1750,
+    "uid": "592",
+    "target": "591\tORef 580 (11) ↔ Part 566.in2"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1591",
+    "target": "1591\tORef 1584 (PC01) ↔ Part 1576.Analog_input"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1596",
+    "target": "1591\tORef 1584 (PC01) ↔ Part 1576.Analog_input"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1590",
+    "target": "1596\tPart 1595.out ↔ Part 1576.en"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "1594",
+    "target": "1590\tORef 1583 (ON) ↔ Part 1576.IN0"
+  },
+  {
+    "key": "PC01",
+    "network": 1775,
+    "uid": "24",
+    "target": "1594\tPart 1576.OutValue ↔ ORef 1587 (Data.PC_01)"
+  },
+  {
+    "key": "PC01",
+    "network": 1071,
+    "uid": "118",
+    "target": "24\tPart 1576.Out_of_range ↔ ORef 23 (Allarm.PC01_OFR)"
+  },
+  {
+    "key": "PC01",
+    "network": 1071,
+    "uid": "119",
+    "target": "118\tORef 106 (PC01) ↔ Part 99.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1071,
+    "uid": "116",
+    "target": "119\tPart 99.out1 ↔ ORef 107 (Inputs.PC_01)"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2026",
+    "target": "116\tPart 98.eno ↔ Part 99.en"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1997",
+    "target": "2026\tPart 2025.out ↔ Part 1935.en ↔ Part 2027.in ↔ Part 2029.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1945",
+    "target": "1997\tPart 1935.out ↔ ORef 1975 (App02)"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1948",
+    "target": "1945\tGe\t\tin1 = App02; in2 = 5"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2008",
+    "target": "1948\tLt\t\tin1 = Data.FN_04_ASPIRATOR; in2 = 250"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1957",
+    "target": "2008\tPart 1951.out ↔ ORef 1983 (Data.SET_PERC_FN04)"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "1960",
+    "target": "1957\tLe\t\tin1 = App02; in2 = -1"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2018",
+    "target": "1960\tGt\t\tin1 = Data.SET_PERC_FN04; in2 = 20"
+  },
+  {
+    "key": "PC01",
+    "network": 1901,
+    "uid": "2020",
+    "target": "2018\tPart 1963.out ↔ ORef 1990 (Data.SET_PERC_FN04)"
+  },
+  {
+    "key": "PC01",
+    "network": 1900,
+    "uid": "1860",
+    "target": "2020\tORef 1991 (S5T#4S) ↔ Part 1970.value"
+  },
+  {
+    "key": "PC01",
+    "network": 1689,
+    "uid": "878",
+    "target": "1860\tPart 1849.out1 ↔ ORef 1855 (Data.SET_PERC_FN04)"
+  },
+  {
+    "key": "PC01",
+    "network": 1689,
+    "uid": "875",
+    "target": "878\tPart 877.out ↔ Part 828.pre ↔ Part 836.pre ↔ Part 844.en"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "857",
+    "target": "875\tPart 844.out ↔ ORef 859 (FN04_SP)"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "844",
+    "target": "857\tPart 27.out ↔ Part 797.pre ↔ Part 800.pre ↔ Part 803.pre ↔ Part 860.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "849",
+    "target": "844\tPart 796.out ↔ Part 809.in ↔ Part 858.in"
+  },
+  {
+    "key": "PC01",
+    "network": 1987,
+    "uid": "854",
+    "target": "849\tORef 830 (Allarm.Low_Aspiration) ↔ Part 814.operand"
+  },
+  {
+    "key": "PC01",
+    "network": 1858,
+    "uid": "300",
+    "target": "854\tORef 833 (Allarm.Low_Aspiration) ↔ Part 819.operand"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "511",
+    "target": "511\tORef 504 (R001) ↔ Part 496.Analog_input"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "516",
+    "target": "511\tORef 504 (R001) ↔ Part 496.Analog_input"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "510",
+    "target": "516\tPart 515.out ↔ Part 496.en"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "514",
+    "target": "510\tORef 503 (ON) ↔ Part 496.IN0"
+  },
+  {
+    "key": "RO01",
+    "network": 1748,
+    "uid": "24",
+    "target": "514\tPart 496.OutValue ↔ ORef 507 (Data.Oxigen_RO01)"
+  },
+  {
+    "key": "RO01",
+    "network": 1071,
+    "uid": "163",
+    "target": "24\tPart 496.Out_of_range ↔ ORef 23 (Allarm.Ro01_OFR)"
+  },
+  {
+    "key": "RO01",
+    "network": 1071,
+    "uid": "165",
+    "target": "163\tORef 152 (R001) ↔ Part 146.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1071,
+    "uid": "161",
+    "target": "165\tPart 146.out1 ↔ ORef 153 (Inputs.RO_01)"
+  },
+  {
+    "key": "RO01",
+    "network": 1982,
+    "uid": "24",
+    "target": "161\tPart 145.eno ↔ Part 146.en"
+  },
+  {
+    "key": "RO01",
+    "network": 1982,
+    "uid": "534",
+    "target": "24\tPart 22.out ↔ Part 490.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "35",
+    "target": "534\tPart 497.out ↔ Part 501.in ↔ Part 503.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "651",
+    "target": "35\tPart 32.out1 ↔ ORef 37 (Data.RO01_MAX_SETPOINT)"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "654",
+    "target": "651\tPart 627.out ↔ Part 628.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1983,
+    "uid": "660",
+    "target": "654\tPart 629.out ↔ Part 630.en ↔ Part 631.pre"
+  },
+  {
+    "key": "RO01",
+    "network": 1984,
+    "uid": "659",
+    "target": "660\tPart 631.out ↔ Part 632.in ↔ Part 633.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1984,
+    "uid": "639",
+    "target": "659\tPart 658.out ↔ Part 590.pre ↔ Part 662.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1984,
+    "uid": "654",
+    "target": "639\tPart 593.out ↔ Part 599.in ↔ Part 660.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1985,
+    "uid": "718",
+    "target": "654\tPart 609.out ↔ Part 616.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1985,
+    "uid": "728",
+    "target": "718\tPart 663.out ↔ Part 669.en ↔ Part 676.pre ↔ Part 679.pre"
+  },
+  {
+    "key": "RO01",
+    "network": 1985,
+    "uid": "750",
+    "target": "728\tPart 675.out ↔ Part 685.in ↔ Part 745.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1858,
+    "uid": "296",
+    "target": "750\tPart 749.out ↔ Part 695.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1868,
+    "uid": "1572",
+    "target": "296\tPart 295.out ↔ Part 219.in7"
+  },
+  {
+    "key": "RO01",
+    "network": 1868,
+    "uid": "1573",
+    "target": "1572\tORef 1435 (77) ↔ Part 1272.in2"
+  },
+  {
+    "key": "RO01",
+    "network": 5,
+    "uid": "167",
+    "target": "1573\tPart 1272.out ↔ Part 1278.pre ↔ Part 1286.pre"
+  },
+  {
+    "key": "RO01",
+    "network": 5,
+    "uid": "168",
+    "target": "167\tORef 138 (Real_SPO2) ↔ Part 109.SP_INT"
+  },
+  {
+    "key": "RO01",
+    "network": 5,
+    "uid": "155",
+    "target": "168\tORef 139 (Real_O2) ↔ Part 109.PV_IN"
+  },
+  {
+    "key": "RO01",
+    "network": 1708,
+    "uid": "653",
+    "target": "155\tPart 98.out ↔ Part 109.COM_RST"
+  },
+  {
+    "key": "RO01",
+    "network": 1708,
+    "uid": "697",
+    "target": "653\tPart 652.out ↔ Part 654.in ↔ Part 668.in"
+  },
+  {
+    "key": "RO01",
+    "network": 1931,
+    "uid": "98",
+    "target": "697\tPart 696.out ↔ Part 567.in3"
+  },
+  {
+    "key": "RO01",
+    "network": 1658,
+    "uid": "21",
+    "target": "98\tPart 97.out ↔ Part 56.in2"
+  }
+]

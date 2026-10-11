@@ -1,3 +1,7 @@
+# v1.20.0 실제 게시 후속 확인
+
+PSH01 문서/정적/UI/게시 complete_with_gaps. 기능 38d1068065ccea7eb877e7c015339f9fe5fe398c / Netlify 6acbedb87741590008d798aa ready 2026-10-11T20:13:05.401Z. TIA/현재CPU/실물/현장복구 미수행·미확정. READY10-03-VERIFICATION.json 참조. 당시기록/PDF근거 보존.
+
 # PSH01 READY10-03 최종 로컬 검증
 
 원초안35648B SHA256 72ed1da50d0f612ed7f7c7a2f0a4c21d7ebaadd6ce66a5a2b8f12e96755e7eda·고유 XML/선언·HMI/도면을 독립 대조했습니다. 7영역14항목/18관찰신호/4직접관련경로/22원본강조·합성2기록 저장/복원/재열기/0와빈값·미지필드·타설비 보존 및 A4 8쪽 전체 시각 확인.
