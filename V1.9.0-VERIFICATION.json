@@ -1,0 +1,358 @@
+{
+  "version": "1.9.0",
+  "target": "MC04/P08",
+  "baseline_commit": "f0abee0d2182d7c89394d7aa0ccfd91ea92d7e5f",
+  "documentation": "complete_with_gaps",
+  "static_review": "passed",
+  "ui_records": "passed",
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed",
+  "next": "VS01/P09 received; Dots PV01/P05 research",
+  "source_locations": 169,
+  "source_hashes": {
+    "registers/alarm-recovery.json": "91a915ffc86ec55be2cc1404351968618b2703cd8182fca226fc00396f22b802",
+    "registers/construction-reference.json": "6d3097fe05fae2147f4c4f9f2998f18855093c1c58c527916fe8fa1e877c7dc0",
+    "registers/construction-review.json": "c1169c7ee3aab97c9e7965b887e3992fe5867588653df2380bc1194e6a4f8e91",
+    "registers/control-spec.json": "1e495b32f1f11b910919fbd2945e842a019fce9a27a6a0d7298041a7fab00079",
+    "registers/electrical-trace.json": "c48b993ba8e81e919a625f5ef079cd1bbeb3ce13abf1abac5568d47a2b23c039",
+    "registers/hmi-transfer.json": "235dec78a1a1d87d316df5339a18c19d279f7274d0e08912b5f4b2f0af0e7f9f",
+    "registers/plc-symbols.csv": "a0334b390f06ddb515d6c09ca96a01d35d44029c1b726ef0ff53303ec04ff91f",
+    "registers/regulation-manual.json": "3b5309ec06f35610ab57e6ef85bd7eb6f7c83ec7db149db1b881b9b65bce91fe",
+    "registers/repair-decision.json": "3cc238b6e7bc14ffe997c3c4d4a3c837a2597eadf99a116db1f58cc47a1b6b1f",
+    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+    "registers/requirements-audit.json": "37c6f1a2be70ffa8fe53fa64fa70af03f0861320fca178909a13027b5d820c2e",
+    "registers/signal-trace.json": "03e61ade77cb5881aa9679cb648829023316fa43d948543df983825a33dd2705",
+    "registers/vendor-reference-review.json": "199d37d91451505d12e1840889f767d62fb671dcbdea2434933bb899fb560de5",
+    "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+    "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b",
+    "sources/decoded-original/0014-FlgNet.xml": "2e814adbaac6bab99bc668bfdab74f0fc90576324d0b88728951683869cfac30",
+    "sources/decoded-original/0030-FlgNet.xml": "9252c9da764993de1edb8b2e44c46d6e9f9d4b6118e751a0dbeaa9ffd8ea721b",
+    "sources/decoded-original/0031-FlgNet.xml": "76385eab8f8f72b9faa16f7cf8905f395591b18c0a9ee9e6d7dd085a38c45c65",
+    "sources/decoded-original/0032-FlgNet.xml": "070bb8efa33d03b18add5da81d3f670a47c12b288076b7bfee11ac87fe6fa7e4",
+    "sources/decoded-original/0164-FlgNet.xml": "15884b2b362842279b626b669a484b1daa269f5ecd99112b8391bb0387382491",
+    "sources/decoded-original/0165-FlgNet.xml": "4513a5f6e77717c99c5e869105483be31f7f62ab280e271dc36cd7a2d3e3bb88",
+    "sources/decoded-original/0166-FlgNet.xml": "0330a505877be92172f94bce83222a0bfc8d64aab700a69fc1fa2188010d3853",
+    "sources/decoded-original/0237-FlgNet.xml": "ad3721660c2f357e76c1a351f7898691271f35c341efe775e5780d749b2c4aa0",
+    "sources/decoded-original/0246-FlgNet.xml": "2b1bf0644447f15640214b451281aa3fa5389505936f2a6a1078a9508dfc9f04",
+    "sources/decoded-original/0247-FlgNet.xml": "104690938ac2ebe32d668f237255a3e957e0af9930bfc6587b9e6624bedf13a1",
+    "sources/decoded-original/0280-FlgNet.xml": "77f1860b8424319efcd8fa058eac4177fb6ba24d84d01d690c0e3c361a19f3ca",
+    "sources/decoded-original/0291-FlgNet.xml": "fe0b92f074eba25148ce34084649af3d968962558d652727f1eea19f3e3c2550",
+    "sources/decoded-original/0312-FlgNet.xml": "c871fcc3e52da6fdc937f4891428750ee644e2f545df772f22e2efdbefce9122",
+    "sources/decoded-original/0336-FlgNet.xml": "1be4f76dba11e6cceea057743c8b15b8a4bea4edfe87c19ef0581d7b65ffe56a",
+    "sources/decoded-original/0355-FlgNet.xml": "73592d33f8b3a71effeb36f25427c76e931485e7ce31f5c81f144ddae83c4247",
+    "sources/decoded-original/0361-FlgNet.xml": "485836309d8e52ddf1f6937fba80bd405a6d36363c95e71b0f24491f8cd7a04c",
+    "sources/decoded-original/0397-FlgNet.xml": "bc2eb353109f9585236d6083084613aa31623c8301866a3f72bb7ec682528834",
+    "sources/decoded-original/0402-FlgNet.xml": "808c38e8d0c1849acea83d5ba6641df3af093ba5870932fb41243fc4ed907e86",
+    "sources/decoded-original/0415-FlgNet.xml": "7690a90cbad58f5e8474c94efc4a105e80522fb57e3516a720aab53e1146b07d",
+    "sources/decoded-original/0428-FlgNet.xml": "cb7015f543d0deb26fe0bf23d045dc787b7c9cbc3d02c2c5623c0283709fa69a",
+    "sources/decoded-original/0429-FlgNet.xml": "092dd3ac8f08d5934b6ffdd27e3b649a06e23c3b95900f70aadb0e1d4f592572",
+    "sources/decoded-original/0474-FlgNet.xml": "a706b93232fdc7449a43265c3b953a3180fde5e5b46b05915ca8db7f4327ee4d",
+    "sources/decoded-original/0526-FlgNet.xml": "9cdd52426bf6bc8a8b49a5a292be30d8dcfe854e3f72ef2654ab60d63ecb4bda",
+    "sources/decoded-original/0549-FlgNet.xml": "49f7169c33ed7f54559b0801e21a7d618584900972840e91cf51ad032e8febb1",
+    "sources/decoded-original/0558-IdentXmlPart.xml": "45d49d53b6b41312960bb2a329663e87d8803e28d7832308424a6bf5091e6d1b",
+    "sources/decoded-original/0575-IdentXmlPart.xml": "40e7b2caf89ab7f1ed9075547a7728bd02441e24451bdd8bf97c843637daad06",
+    "sources/decoded-original/0577-IdentXmlPart.xml": "511e01fae619dc385357908a1ac62030dbdfd5f5399bd4c22bc58bebbfc3bf47",
+    "sources/decoded-original/0578-IdentXmlPart.xml": "0f9f41b5dee25ea17c7a29ab6f7b00503c13d0f265266acd660072baf061d32b",
+    "sources/decoded-original/0602-IdentXmlPart.xml": "46ab21151eddaaf616469db520730c60423eb742aa491af194e6710c751b4caf",
+    "sources/decoded-original/0604-IdentXmlPart.xml": "b798d29c5499b5314a1ee3cff9139dae64c887533b86baa43b6e9a052373a6af",
+    "sources/decoded-original/0607-IdentXmlPart.xml": "9b76b53536a26e7b45961fecbf825ae1552e16c2fd9af5736864193c01d77f93",
+    "sources/decoded-original/0609-IdentXmlPart.xml": "395de8ebb2168848cf96fe015bd7334d71107c114a4e441ef36346b8f22031db",
+    "sources/decoded-original/0610-IdentXmlPart.xml": "c58d07b1b9707dc8c6c2f06c34ee6142f72238a4cf3f376bee8502d1a9532f9d",
+    "sources/decoded-original/0611-IdentXmlPart.xml": "0d583915a261703954da22c176ba9f81338ad13ea2810e7cd5f7de8aa1bfa089",
+    "sources/decoded-original/0612-IdentXmlPart.xml": "95b545d4964d371ebfc107894ea90b8b1d0d7ab5d3a70e643f8ce539063c0f38",
+    "sources/decoded-original/0613-IdentXmlPart.xml": "09d3b1397a987898334218f37e025661af162438582e649f671e7abec443d3cb",
+    "sources/decoded-original/0615-IdentXmlPart.xml": "80f4544edca56c6e6bb2713c758c92ade9202255110074931e03fe34d0d0801a",
+    "sources/decoded-original/0616-IdentXmlPart.xml": "650b53354a0c8443d94adc5bd6a860d3c5313014a52e0fb98a5656a65b58cc0d",
+    "sources/decoded-original/0621-IdentXmlPart.xml": "a63e2b97ea9eb2691cb478666afed77fc58a2da2f8170422dc09e24b102c88ee",
+    "sources/decoded-original/0622-IdentXmlPart.xml": "f0b997f1246d76cff71de2160eb617caa936e6987bdf43c73f55cdcf77dccdb6",
+    "sources/decoded-original/0623-IdentXmlPart.xml": "4acd00406ea92466169e57e59fc90b0da4d9ec55fd19e2e96c9556e939cb83a6",
+    "sources/decoded-original/0624-IdentXmlPart.xml": "24607c0827fbde428bccf8637ef4ae490798a69a7c2f3b87861d0749082d367a",
+    "sources/decoded-original/0627-IdentXmlPart.xml": "08363fd28518a9c79f2c5b463956580c770614473d970f910a24dc7da423cefb",
+    "sources/decoded-original/0628-IdentXmlPart.xml": "9f3778ffa85590a78f2f3844b08471385e95bd158820908d1add8e03f8f5c5bd",
+    "sources/decoded-original/0629-IdentXmlPart.xml": "67453a4e499c3e02693e018bfe70a0ba3d7c5ca48b320cc67f6592558ade8972",
+    "sources/decoded-original/0635-IdentXmlPart.xml": "1a057d686446a3fdab7ac61bb09bc543c52f49646c9ca71ac323c10fcdffe457",
+    "sources/decoded-original/0636-IdentXmlPart.xml": "ec3d79f03e2748f8def4409ad676a97b98e28b9d8e68f6a64b3fe894466832ca",
+    "sources/decoded-original/0655-IdentXmlPart.xml": "38e9f323024fba19582b473f39b1ed03ffe6a0b390218894029a6edb0b1ff9fb",
+    "sources/decoded-original/0656-IdentXmlPart.xml": "0dbc45e84732a8848f17b094ea08ab8578dbf240bfe15cd7086859395c27c592",
+    "sources/decoded-original/0657-IdentXmlPart.xml": "0f70cda60a6b1a17175876d58e25b2686952642de6cffb21213aeef8b347a22b",
+    "sources/decoded-original/0658-IdentXmlPart.xml": "998294c0c8a99e00ceb33c2c60def2cd4850e34328917ae506244c2be2df3831",
+    "sources/decoded-original/0661-IdentXmlPart.xml": "90672199fee355011f581d3287046894772f3f3b4cb78bbe0dd0d71bd488ac93",
+    "sources/decoded-original/0662-IdentXmlPart.xml": "1838040bfee800fdb3f13b126eaf69a9d178b17cecc0d59ae03e9185216a48a5",
+    "sources/decoded-original/0664-IdentXmlPart.xml": "68c614e1c6a7fcadeee3f0b2ddc54910c3b337e66074d7a113b9cbc834c271ed",
+    "sources/decoded-original/0675-IdentXmlPart.xml": "b1902886927d8403fab736d9c8ffe73f2fbc8ce4b7ca7c345144964668b051c3",
+    "sources/decoded-original/0676-IdentXmlPart.xml": "c58427c5b0ac6c11cdb52e4c6d0461c7b191fae81ccace191048e9f175fcec59",
+    "sources/decoded-original/0678-IdentXmlPart.xml": "51e637e0b9713c028810f2a717b5c3804a3a26c2f1be7e332a4d6bf277bfc382",
+    "sources/decoded-original/0688-IdentXmlPart.xml": "ceb132457588eb1d4f7c6883240995ac923544aa74467e2686186767c017fcda",
+    "sources/decoded-original/0692-IdentXmlPart.xml": "bc84fe2952bd5542eb2308e88836998cd8daa4e1a82f6501830375987aede037",
+    "sources/decoded-original/0694-IdentXmlPart.xml": "757ccebdf32d0a168dd787bfa735fe6494eac4c4a9f7a5adc63898a88e8b152d",
+    "sources/decoded-original/network-map.json": "c2cab276545dc5d07c1a94ed746e7f4a8d4d725b8a962a1b27fe46c9b71c8f60",
+    "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
+  },
+  "source_bundle_sha256": "5a1a847c7ab2aab0d6ef4dec650a3af45f7caa93377c8e17a18ae796e8cb1d13",
+  "ui": {
+    "origin": "http://127.0.0.1:8877",
+    "screens": 1160,
+    "matrix": [
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 900,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          },
+          {
+            "count": 90,
+            "key": "P08"
+          }
+        ],
+        "views": 316,
+        "width": 1280
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 72,
+            "key": "P01"
+          },
+          {
+            "count": 98,
+            "key": "P02"
+          },
+          {
+            "count": 94,
+            "key": "P15"
+          }
+        ],
+        "views": 264,
+        "width": 390
+      },
+      {
+        "failures": [],
+        "height": 844,
+        "profiles": [
+          {
+            "count": 84,
+            "key": "P16"
+          },
+          {
+            "count": 78,
+            "key": "P17"
+          },
+          {
+            "count": 64,
+            "key": "P18"
+          },
+          {
+            "count": 90,
+            "key": "P08"
+          }
+        ],
+        "views": 316,
+        "width": 390
+      }
+    ],
+    "source_pairs": [
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "기동 명령 · %Q0.4 / start mc04",
+        "sourceHash": "gme-mc04-part-344",
+        "target": "344\tCoil\t\toperand = Start MC04",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "운전 응답 · %I0.6 / mc04_fbk",
+        "sourceHash": "gme-mc04-part-500",
+        "target": "500\tContact\toperand\toperand = Inputs.MC04 run",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "인버터 이상 · %I0.7 / mc04_all_inv",
+        "sourceHash": "gme-mc04-part-496",
+        "target": "496\tContact\t\toperand = Inputs.MC04_All_inv",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "토크 감시 예비 · %I6.5 / mc04_torque",
+        "sourceHash": "gme-mc04-part-480",
+        "target": "480\tContact\toperand\toperand = Inputs.MC04 torque",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "속도 회로 주소 대조 · %QW294 / 102a5_spare3",
+        "sourceHash": "gme-mc04-wire-55",
+        "target": "55\tPart 27.out ↔ ORef 39 (102A5_SPARE3)",
+        "width": 1280
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "기동 명령 · %Q0.4 / start mc04",
+        "sourceHash": "gme-mc04-part-344",
+        "target": "344\tCoil\t\toperand = Start MC04",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "운전 응답 · %I0.6 / mc04_fbk",
+        "sourceHash": "gme-mc04-part-500",
+        "target": "500\tContact\toperand\toperand = Inputs.MC04 run",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "인버터 이상 · %I0.7 / mc04_all_inv",
+        "sourceHash": "gme-mc04-part-496",
+        "target": "496\tContact\t\toperand = Inputs.MC04_All_inv",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "토크 감시 예비 · %I6.5 / mc04_torque",
+        "sourceHash": "gme-mc04-part-480",
+        "target": "480\tContact\toperand\toperand = Inputs.MC04 torque",
+        "width": 390
+      },
+      {
+        "highlight": true,
+        "image": true,
+        "overflow": -12,
+        "selected": "속도 회로 주소 대조 · %QW294 / 102a5_spare3",
+        "sourceHash": "gme-mc04-wire-55",
+        "target": "55\tPart 27.out ↔ ORef 39 (102A5_SPARE3)",
+        "width": 390
+      }
+    ],
+    "saved_reopened": true,
+    "notes_before_restore": 3,
+    "notes_after_restore": 4,
+    "foreign_records_preserved": 2,
+    "unknown_fields_signals_drafts_preserved": true,
+    "zero_and_blank_distinct": true,
+    "compare_zero_to_one": true,
+    "concurrent_change_blocked": true,
+    "quota_failure_preserves_latest_and_draft": true,
+    "stale_report": {
+      "printCalls": 0,
+      "printing": false,
+      "status": "기록이 변경되었습니다. 보고서 미리보기를 다시 생성하세요."
+    },
+    "pdf": {
+      "file": "gme-mc04-v1.9.0-a4.pdf",
+      "sha256": "68fb13cd176beb7d02186a9fba679df1a0f18d6468feb887d58757d42e84b9ce",
+      "bytes": 384759,
+      "pages": 3,
+      "page_points": [
+        595.92,
+        841.92
+      ],
+      "all_pages_visually_reviewed": true,
+      "saved_source_bundle": "606e3b5e9dda6a20bf57454b44f9b719af56116a744d5696a4f45810c4f4c1a9",
+      "initial_Letter_export_replaced_with_explicit_A4": true
+    },
+    "cleanup": {
+      "storage": {
+        "result": {
+          "type": "string",
+          "value": "{\"keys\":[],\"width\":1383,\"notes\":null,\"drafts\":null}"
+        }
+      },
+      "logs": []
+    }
+  },
+  "qa_directory": "/tmp/gme-mc04-qa",
+  "draft_hashes_matched": 66,
+  "received_VS01_hashes_matched": 51,
+  "originals_unchanged": 730,
+  "additional_sources": 3,
+  "simulator_frozen_files": 5,
+  "simulator_changes": 0,
+  "simulator_behavior_tests": "not_run",
+  "operational_record_writes": 0,
+  "PLC_field_SEJIN_changes": 0,
+  "preservation": {
+    "originals": 730,
+    "common_record_logic_and_original_registers_unchanged": true,
+    "existing_profile_content_unchanged": 6,
+    "new_profile": "MC04",
+    "source_locations": 169,
+    "hashes": 78,
+    "bundle": "5a1a847c7ab2aab0d6ef4dec650a3af45f7caa93377c8e17a18ae796e8cb1d13"
+  },
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-11T06:17:43.980109+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.9.0.zip",
+    "version": "1.9.0",
+    "files": 2801,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 53020057,
+    "sha256": "1e7d911de85ea9fc1bd2a08fdb05786b85bca51d07c0ac9af8a2d035d6c6d656",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "node": "24.19.0",
+  "tests": 8,
+  "NETLIFY_build": "passed"
+}

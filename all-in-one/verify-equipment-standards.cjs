@@ -183,6 +183,34 @@ assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([no
 assert.throws(()=>tools.parseBackup(JSON.stringify(tools.backupEnvelope([{...note18,repair_observation:{...note18.repair_observation,equipment:'FN06'}}],data,'2026-10-11T06:00:00Z','P18')),store.decodeNotes,valid,schema18));
 assert.notEqual(tools.referenceContext(data,'P18').source_bundle_sha256,p17.source_bundle_sha256);
 
+const p08=standard.profile(data,'P08');assert.ok(p08,'MC04 profile required');
+assert.deepEqual(plain(p08.specification),readRegister('control-spec.json').specifications.find(p=>p.id==='MC04'));
+assert.deepEqual(plain(p08.alarm),readRegister('alarm-recovery.json').profiles.find(p=>p.id==='MC04'));
+assert.equal(p08.specification.direct_rules.length,18);assert.equal(p08.regulation,null);
+assert.equal(p08.alarm.timers.length,1);assert.equal(p08.alarm.timers[0].name,'Tag_57');assert.equal(p08.alarm.timers[0].preset.literal,'S5T#5S');assert.equal(p08.alarm.alarms.length,2);
+assert.deepEqual(p08.control_reference.native_refs.map(r=>r.rule_id),['1843:460','1844:799','1847:954','1941:340']);
+assert.equal(p08.specification.direct_rules.find(r=>r.rule_id==='1941:340')['정적 조건식'],'((ON AND Allarm.MC_04_FAULT) OR (ON AND Allarm.MC04_INV) OR ((ON AND NOT [Inputs.VS01 run]) AND NOT [Allarm.Maintenance_ON]))');
+const r08=native18('0247-FlgNet.xml');for(const u of ['26','380'])assert.match(r08,new RegExp('<Part UId="'+u+'" Gate="Contact">\\s*<Negated PinName="operand" />'));
+wire18(r08,'29',['<PCon UId="380" PinName="out" />','<PCon UId="333" PinName="in3" />']);wire18(r08,'365',['<OCon UId="352" />','<PCon UId="344" PinName="operand" />']);
+const t08=native18('0656-IdentXmlPart.xml').split('</LiteralConstant>').find(s=>s.includes('RID="175"'));for(const x of ['NID="12" UID="451"','S5T_x0023_5S','V="1280"'])assert.ok(t08.includes(x));
+const alarm08=native18('0428-FlgNet.xml');wire18(alarm08,'34',['<PCon UId="32" PinName="out" />','<PCon UId="437" PinName="in" />']);assert.match(alarm08,/<Part UId="500" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+const off08=native18('0658-IdentXmlPart.xml').match(/<SimpleAccess><ID N="OFF"[^>]*>[\s\S]*?<\/SimpleAccess>/)?.[0];assert.ok(off08?.includes('RID="46"')&&off08.includes('NID="13" UID="35"'));
+const speed08=native18('0474-FlgNet.xml');wire18(speed08,'55',['<PCon UId="27" PinName="out" />','<OCon UId="39" />']);
+const spare08=native18('0664-IdentXmlPart.xml').match(/<SimpleAccess><ID N="102A5_SPARE3"[^>]*>[\s\S]*?<\/SimpleAccess>/)?.[0];for(const x of ['RID="145"','NID="18" UID="39" AK="Write"','AO="2352"','R="Output"','T="Word:'])assert.ok(spare08.includes(x),x);
+const mul08=native18('0661-IdentXmlPart.xml').split('</LiteralConstant>').find(s=>s.includes('RID="16"'));assert.ok(mul08.includes('NID="18" UID="38"')&&mul08.includes('V="272"'));
+const current08=native18('0678-IdentXmlPart.xml').match(/<SimpleAccess><ID N="MV04_M18A"[^>]*>[\s\S]*?<\/SimpleAccess>/)?.[0];for(const x of ['RID="472"','NID="52" UID="26"','AO="2592"','R="Input"','SAM="Peripherie"','T="Int:'])assert.ok(current08.includes(x),x);
+wire18(native18('0526-FlgNet.xml'),'35',['<OCon UId="26" />','<PCon UId="22" PinName="Analog_input" />']);
+for(const [part,source,outWire,sourceRef,destRef] of [['22','23','24','25','26'],['42','52','54','45','46']]){assert.match(word18,new RegExp('<Part UId="'+part+'" Gate="Move" DisableENO="true">'));wire18(word18,source,['<OCon UId="'+sourceRef+'" />','<PCon UId="'+part+'" PinName="in" />']);wire18(word18,outWire,['<PCon UId="'+part+'" PinName="out1" />','<OCon UId="'+destRef+'" />']);}
+const maintenance08=native18('0604-IdentXmlPart.xml').match(/<GlobalAccess><ID N="" S="Global" RID="6"[^>]*>[\s\S]*?<\/GlobalAccess>/)?.[0];for(const x of ['NID="1" UID="41" OID="9" AK="Write"','NID="11" UID="381"','N="Allarm"','N="Maintenance_ON"','AO="61"'])assert.ok(maintenance08.includes(x),x);
+wire18(native18('0237-FlgNet.xml'),'50',['<PCon UId="49" PinName="out" />','<PCon UId="34" PinName="in" />','<PCon UId="36" PinName="in" />']);
+for(const [f,h] of Object.entries(p08.source_hashes))assert.equal(crypto15.createHash('sha256').update(fs.readFileSync(__dirname+'/'+f)).digest('hex'),h,f);
+for(const loc of p08.source_locations)assert.ok(fs.readFileSync(__dirname+'/'+loc.path.split('#')[0],'utf8').includes('id="'+loc.path.split('#')[1]+'"'));
+assert.deepEqual(plain(standard.sections.map(([section])=>standard.items(data,'P08',section).length)),[3,4,19,5,4,5,5]);
+for(const [section] of standard.sections)for(const item of standard.items(data,'P08',section)){const html=standard.render(data,'P08',{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(html.includes('standard-content-title'));assert.ok(!html.includes('undefined'));}
+const html08=standard.render(data,'P08',{bc01Section:'control',bc01Item:'regulation',bc01Text:'standard',bc01Find:''});for(const x of ['MV04_M18A','OFF','VS01 가지','102A5_SPARE3','HOUR+1이아닙니다','8대상'])assert.ok(html08.includes(x),x);
+const schema08=data.repair_record_forms.profiles.find(p=>p.key==='P08');assert.equal(schema08.signals.length,5);
+const note08={...fn01Note,id:'qa-mc04',equipment:'P08',repair_observation:plain(repair.collect(schema08,{first_symptom:'QA MC04',[schema08.signals[0].id+'_value']:'0'}))};assert.deepEqual(plain(tools.parseBackup(JSON.stringify(tools.backupEnvelope([note18,note08],data,'2026-10-11T06:10:00Z','P08')),store.decodeNotes,valid,schema08)).notes,[note08]);assert.notEqual(tools.referenceContext(data,'P08').source_bundle_sha256,p18.source_bundle_sha256);
+
 const schemas=data.repair_record_forms.profiles;
 const allEnvelope=rows=>JSON.stringify(tools.unifiedBackupEnvelope(rows,data),null,2);
 const parseAll=raw=>plain(tools.parseUnifiedBackup(raw,store.decodeNotes,valid,schemas));

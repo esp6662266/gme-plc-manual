@@ -269,3 +269,53 @@ def build_fn06_profile(root,data,source_rows):
             related_links=[['요청 해제1955','networks/network-1955.html'],['버너준비1857','networks/network-1857.html'],['운전시간1032','networks/network-1032.html'],['별도 초기화1051','networks/network-1051.html']],
             field_title='실물·접촉기 보조응답·전기전달과 정상 극성',alarm_recovery='알람 Reset·요청 재설정·출력·접촉기·실제 송풍과 복구는 별개입니다. 원시/처리응답과RD01분기·별칭 알람·Tag67을 같은 시각에 비교하고 원인 조치·승인 재기동과 재발 여부를 따로 기록합니다.',
             search_examples='Q3.3, I4.3, MBVA01_FAULT, Tag_67, S5T#2S, FN_06_HOUR')))
+
+def build_mc04_profile(root,data,source_rows):
+    read=lambda file:json.loads((root/file).read_text(encoding='utf-8'))
+    spec=next(p for p in read('registers/control-spec.json')['specifications'] if p['id']=='MC04')
+    request=[r for r in spec['direct_rules'] if r['대상']=='Flag.M_MC_04']
+    assert {r['rule_id'] for r in request}=={'1843:460','1844:799','1847:954','1941:340'}
+    control=dict(applicability='MC04 inverter speed output; MV04/current conflict and OFF torque preserved; no own PID identified',
+        chain=['MC04/P08은 FG24/PDF25의 단독 M09 금속 컨베이어입니다. 모터11kW·19.3A와24AS1 ACS355 15kW,24QM1 도면49–59A/RATING52A를 서로 구분합니다. 실제 명판·보호 설정·실물 동일성은 확인 전입니다.',
+            '1941: ON AND (MC_04_FAULT OR MC04_INV OR (NOT Inputs.VS01 run AND NOT Allarm.Maintenance_ON))→Flag.M_MC_04 Reset340. 유지보수 조건은 VS01 가지에만 있으며 같은 네트워크 ON·Flag→Start MC04(%Q0.4) Coil344와 구분합니다.',
+            '1930: ON Contact47→Flag.Maintenance_ON Contact49→Coil36 Allarm.Maintenance_ON. 같은 AO61이어도 Flag와Allarm은 별개 DB이며 읽기/쓰기·현재 호출시점을 하나로 합치지 않습니다.',
+            '1791: ON·Start·(Inputs.MC04_All_inv OR NOT Inputs.MC04 run)→SdCoil437 Tag_57(%T54)/S5T#5S. 같은 타이머 뒤 NOT run→FAULT Set443,비반전inv→INV Set487입니다. ON·RESET·own알람 Reset448/495에는 원인 정상 접점을 추가하지 않습니다.',
+            '1792 mc04 deleted: OFF·NOT Inputs.MC04 torque→TORQUE Set454; OFF·RESET·torque·own알람→Reset460. 도면SS10 SPARE와 현재OFF값/설치/활성을 구분합니다.1941 요청해제식에 TORQUE는 직접 포함되지 않습니다.',
+            '1843 preset1/Tempo17 Reset460,1844 preset2/Tempo24 Set799,1847 Auto_ON1·preset5·(Tempo19 OR 비상) Reset954와1941 Reset340의 네 요청쓰기를 보존합니다.1847에 없는ON 접점을 넣지 않고17/24/19를 초 단위로 추정하지 않습니다.',
+            '1070/0397: Move22(W23/24) Tag178 Word IW0→Inputs DB13 Word0,Move42(W52/54) Tag171 Word IW6→DB13 Word6.0627/0629 AO0/48·0628/0655 같은DB13/CID638561979615757134·0657 bit6/7/53로 I0.6/0.7/6.5 정적복사를 확인했습니다. raw와DB는 다른변수이며 DisableENO=true·현재다른쓰기/극성은별도입니다.',
+            '1613/0030: Recipes Handler ENO W32→HMI ENO W33→HMI Output ENO W42→NOT Simulation(1) Contact37→W43 HMI Inputs.en.0692 RID140/NID19UID45=%M180.0,0688/0694 호출선언.1619/1620/1621의ON·아날로그/알람/모터/시간 호출도정적범위이며 현재CPU실행과분리합니다. 시뮬레이터를실행하지않습니다.',
+            '1693: ON·SET_PERC_MC04 <10→Move24 10, >100→Move26 100. Mul27(Int)에서 SET_PERC_MC04×272→102A5_SPARE3 Word %QW294.0474 W53/54/55·0661 RID16=272·0664 RID145/AO2352를 보존합니다. SPARE이름과FG112 PAW294 MC04 4–20mA→FG24 AI1 경로를구분하고 현장Hz/단위/순서·출력범위보증은확인전입니다.',
+            '1769/0526 Signal linearization: ON en/IN0, MV04_M18A peripheral Int %IW324→Analog_input, Coeff100/Zero0→Amp_MC04·MC04_Absorbption_OFR. 입력은MV04위치 이름이고출력은MC04전류 이름입니다. 센서/채널/단위를추측해치환하지않습니다.',
+            '1658/0291 및1659/0014: IN0·Analog_input>-1382·<=32767→형변환/ENO·(input+Zero)×Coeff/28000→Int OutValue. 범위분기→Move193 -9999·ENO→Out_of_range Coil23; 반전IN0→Move162 0. 1769의en도ON에매여ON=0에서호출/초기화를보장하지않습니다. 정수나눗셈/오버플로실행과물리범위는미검증입니다.',
+            '1916 PV02 gate 앞단: ON·(원시MC04_Fbk OR Inputs.MC04 run OR Allarm.Maintenance_ON), OR443 W527/24/31입니다. MC03 spare1940도MC04 run을소비하지만 Start Spare Motor를씁니다. 두경로는MC04 출력소유가아닙니다.',
+            '1022: Tag47·MC04_Fbk·MIN Add1/Ge60 뒤 HOUR Move1334 상수1(W1362/1363)이며 HOUR+1이아닙니다. ENO→MIN Move0→Flag_Aggiorna_DB와1049 HOUR Move0을분리합니다. 주기/의도/누적정상은확인전입니다.',
+            '1182 HMI 호출8대상과 실제NID/인스턴스바인딩은미해석입니다. HMI설정DB11 X8.1/X8.0,DB2 X0.4와일반함수331의Local연결을합쳐 특정알람표시나버튼writer를확정하지않습니다.'],
+        repair=['FG136 MOD14단자5/Q0.4→FG25 XS9/QS보조/XS10/QM보조→25KA1 A1/A2→0V10.6. FG24 드라이브9 +24V→25KA1 1/9→12 DI1 START입니다. PLC출력·릴레이·DI1·실제회전은각각관찰합니다.',
+            'FG24 RUN17/19→I0.6 FG116 MOD8단자7,ALARM20/21→I0.7 단자8. FG112 QV3/QI3단자13/MANA16→PAW294→FG24 AI1 2/GND3·4–20mA. 현재극성/파라미터/실측환산은확인전입니다.',
+            'FG25 SS10 SPARE X1 54/55·11/12→I6.5 FG122단자26. FG17 A7.4→17KA1/FG24 DI4 15와PLC Flag.RESET_ALLARM writer는별도입니다. FG14/24의14KA1/5와STO끝점은부분도면이며상위안전성·실행·현장복구증명이아닙니다.'],
+        pending=['현행PLC/OB·호출ENO·온라인일치·다중쓰기/최종값·실제극성과원시/DB전달',
+            'HMI1182 실제8바인딩·NID/DB11레이아웃·원본프로젝트/dde.cfg/화면이벤트',
+            'M09/24AS1 명판·DI/RUN/ALARM/AI1설정·준공회로·보호값·PAW294단위',
+            'IW324 MV04위치→MC04전류표시/OFR 상충의센서·채널·승인변경근거',
+            'SS10 SPARE/삭제제목/OFF 및MC05접속함/LOC·MC04케이블/TO의설치·소유',
+            'Tag47/48·HOUR Move1/초기화기능명세·PLCReset/DI4Reset/승인된실복구'],
+        native=[331,1022,1049,1070,1182,1613,1619,1620,1621,1658,1659,1693,1769,1791,1792,1843,1844,1847,1916,1930,1940,1941],native_refs=request)
+    pairs=[dict(signal='기동 명령',network=1941,uid='344',label='최종 출력 · Start MC04',boundary='Q0.4→QS/QM보조→25KA1→DI1과 VS01 요청해제 가지를분리합니다. 실제운전은별도입니다.'),
+        dict(signal='운전 응답',network=1791,uid='500',label='처리 응답 · NOT Inputs.MC04 run',boundary='I0.6·IW0→DB13 0.6 정적복사와NOT run/공유5초감시를구분합니다. 현재극성/실행미확정입니다.'),
+        dict(signal='인버터 이상',network=1791,uid='496',label='처리 입력 · Inputs.MC04_All_inv',boundary='I0.7·DB13 0.7·비반전감시와드라이브최초고장코드/정상극성을분리합니다.'),
+        dict(signal='토크 감시 예비',network=1792,uid='480',label='OFF 조건 · NOT Inputs.MC04 torque',boundary='SS10 SPARE·I6.5·DB13 6.5·OFF·deleted 제목을분리하며현재활성을확정하지않습니다.'),
+        dict(signal='속도 회로 주소 대조',network=1693,kind='wire',uid='55',label='속도 출력 · 102A5_SPARE3 / QW294',boundary='SPARE별칭과MC04 PAW294→AI1 경로·10/100제한·×272를비교합니다. 현행단위/드라이브설정은확인전입니다.')]
+    extra=[]
+    locations={1022:('1324 1331 1334 1337 1340','1362 1363 1364 1365 1366 1367'),1049:('2831','2857 2858 2859'),1070:('22 42','21 23 24 52 54'),1613:('37','32 33 42 43 44'),1693:('22 23 24 25 26 27','42 43 44 45 46 47 48 49 50 51 52 53 54 55'),1769:('21','32 33 34 35 36 37 38 39'),1792:('478 480 482 484 486 454 460','36 37 476 487'),1916:('443 524 526 22 29','525 527 24 31'),1930:('47 49 36','43 45 48 50'),1941:('26 380 333 340 344 377','28 29 24 360 362 365 378'),1182:('', '21 24 28 30 32 34 36 42 46'),1658:('258 161 190 259 193 23','21 22 49 252 253')}
+    for n,(parts,wires) in locations.items():extra.extend((n,'part',u) for u in parts.split());extra.extend((n,'wire',u) for u in wires.split())
+    return build_static_profile(root,data,source_rows,dict(catalog_id='MC04',priority_key='P08',type='motor_conveyor_inverter',source_pairs=pairs,extra_locations=extra,
+        extra_sources=['sources/decoded-original/'+f+'-IdentXmlPart.xml' for f in ['0558','0621','0623','0624','0627','0628','0629','0655','0688','0692','0694']],
+        internal_names=['Allarm.MC_04_TORQUE','Allarm.Maintenance_ON','Flag.Maintenance_ON','102A5_SPARE3','MV04_M18A','HMI_DB.SET_PERC_MC04','HMI_DB.Amp_MC04','Allarm.MC04_Absorbption_OFR','hours motors.MC_04_MIN','hours motors.MC_04_HOUR'],control_reference=control,
+        related_alarm_boundary='자체FAULT/INV 두래치·공유Tag57/T54/5초와 별도OFF조건토크·MV04입력의MC04 OFR을구분합니다. VS01/유지보수는요청해제의한가지이며총현장알람개수나현재복구를확정하지않습니다.',
+        presentation=dict(identity_title='M09 인버터 금속 컨베이어와 설비 식별',identity_pending='명판·위치·본체/M09와설비카드의관리관계확인전',
+            oem_baseline='Electrical_Rev2.pdf · FG24/25=PDF25/26,M09 11kW19.3A·ACS355 15kW·440V60Hz·QM49–59A/RATING52A 도면값. FG24/25/112/122/17은Rev2 17.03.2025,FG116/136/14 개정란공란·작성27.05.2024. 현재설정/승인값아님',
+            construction_baseline='Electrical_Can_Decoating_20241118.pdf ·24.11.11 first draft/승인공란·PDF34/51row1_18 EXI+MC04-M09A/4core/CV16 vs PVC-S16SB·SPARE0·100→120→121→122→EXI1TB1→E100/Adjustment15/LEN87. SS10 PDF34 LOC MC05와PDF59row9_7 FROM MC05/EXI1TB2→TO MC04/SS10·CVV2C1.0/E351/Adjustment3/LEN3 상충보존',
+            control_title='VS01·유지보수·5초감시·OFF토크·속도/전류 상충과 제어 경계',control_links=[['요청·출력1941','networks/network-1941.html'],['유지보수1930','networks/network-1930.html'],['속도1693','networks/network-1693.html'],['전류상충1769','networks/network-1769.html'],['입력전달1070','networks/network-1070.html']],
+            timer_title='공유 Tag_57 / T54 · S5T#5S 감시',related_title='OFF 토크·MV04 전류 상충·VS01/유지보수와 시간',related_links=[['OFF토크1792','networks/network-1792.html'],['전류상충1769','networks/network-1769.html'],['변환1658','networks/network-1658.html'],['HMI1182','networks/network-1182.html'],['시간1022','networks/network-1022.html']],
+            field_title='실물·인버터·원시/DB입력·SPARE/상충과 정상극성',alarm_recovery='PLC알람Reset·드라이브DI4 Reset·요청재설정·Q/DI1·실제회전/응답과현장복구를구분합니다. 최초드라이브코드·FAULT/INV/Tag57·VS01/유지보수·원시/DB를같은시각에기록하고OFF토크/전류상충을추측해정상화하지않습니다.',
+            search_examples='Q0.4, I0.6, I6.5, Tag_57, S5T#5S, QW294, 102A5_SPARE3, MV04_M18A')))
