@@ -13,6 +13,8 @@ import hashlib
 import csv
 import re
 import xml.etree.ElementTree as ET
+import subprocess
+import shutil
 
 ROOT = Path(__file__).resolve().parent
 (ROOT/'all-in-one-verification.json').write_text(json.dumps(dict(status='checking',scope='Current integration/source checks; no execution'))+'\n')
@@ -698,10 +700,16 @@ for route in routes:
         assert u.fragment in parsers[p].ids, route
 entry = (ROOT / 'index.html').read_text()
 assert 'data-gme-app="all-in-one"' in entry
-for ref in ('assets/all-in-one.css','assets/all-in-one.js','assets/all-in-one-data.js','assets/program-model-data.js','assets/virtual-plc.js','assets/simulator-workspace.js','assets/note-record-store.js','assets/repair-records.js'):
+for ref in ('assets/all-in-one.css','assets/all-in-one.js','assets/all-in-one-data.js','assets/program-model-data.js','assets/virtual-plc.js','assets/simulator-workspace.js','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css'):
     assert ref in entry and (ROOT / ref).is_file()
 assert "(ROOT/'manual-catalog.html').write_text" in (ROOT / 'build-manual.py').read_text()
 assert "runpy.run_path(str(ROOT / 'build-all-in-one.py')" in (ROOT / 'build-control-spec.py').read_text()
+node=shutil.which('node')
+assert node, 'Node.js 22 or newer is required for BC01 record verification'
+bc01_run=subprocess.run([node,str(ROOT/'verify-bc01-tools.cjs')],cwd=ROOT,text=True,capture_output=True)
+assert bc01_run.returncode==0,bc01_run.stdout+bc01_run.stderr
+bc01_tools=json.loads(bc01_run.stdout)
+assert bc01_tools['status']=='passed'
 
 media=data['bc01_standard']['media_evidence']
 assert media['checked']=='2026-10-11' and not media['raw_images_copied'] and not media['identity_verified'] and not media['field_verified']
@@ -730,7 +738,7 @@ result = dict(drawing_profiles=len(drawing['profiles']),drawing_previews=len(dra
               common_priority_guides=len(common['priority_profiles']),common_checks_pending=len(common['checks']),
               priority_repair_guides=len(repair['records']),repair_decision_branches=sum(len(r['decisions']) for r in repair['records']),
               evidence_review_items=len(hub['items']),evidence_review_counts=hub['counts'],
-              repair_record_forms=record_forms['counts'],
+              repair_record_forms=record_forms['counts'],bc01_record_tools=bc01_tools,
               repair_evidence_steps=evidence_steps,
               improvement_candidates=data['review_counts']['improvement_candidates'],
               improvement_impact_guides=len(impact['items']),

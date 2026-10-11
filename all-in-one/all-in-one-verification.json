@@ -100,6 +100,12 @@
     "signals": 83,
     "steps": 99
   },
+  "bc01_record_tools": {
+    "status": "passed",
+    "scope": "BC01 backup/restore/unknown fields/foreign records/invalid input/ID comparison/source locators; no PLC or simulator",
+    "invalid_cases": 19,
+    "source_locations": 57
+  },
   "repair_evidence_steps": 99,
   "improvement_candidates": 6,
   "improvement_impact_guides": 6,

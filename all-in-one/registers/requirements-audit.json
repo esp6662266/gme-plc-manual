@@ -111,7 +111,7 @@
       "id": "R11",
       "title": "수리·관찰 기록",
       "status": "양식·로컬 저장",
-      "detail": "23개 양식과 메모; 브라우저/주소별 저장. JSON 다운로드는 별도 보관하며 가져오기·공유 동기화 미구현",
+      "detail": "23개 양식과 메모; 브라우저/주소별 저장. JSON 다운로드는 별도 보관. BC01 수동 선택 복원·전후 비교·관찰 보고서 제공; 공유 동기화 미구현",
       "path": "ALL-IN-ONE.md"
     },
     {
@@ -15155,7 +15155,7 @@
     "priority-guides/P20.html": "aac0f36481cfdb97fd302d8d0bf7aaae64efe5729498d9761ab3e86f7369da6a",
     "repair-guides/P21.html": "7e2a515835a41fb709cef246b668ba47ff1ab198106034f9aff60ef6e12d59ce",
     "priority-guides/P21.html": "84574d9971feb5e34df96df582af85389a67cd698a174988dceb475db8b8a055",
-    "ALL-IN-ONE.md": "8b4d8c73c5ae46692f2eed99ddede9203e00d99ff608fc34b4b306b3e7a454e6",
+    "ALL-IN-ONE.md": "cc49a5f5383777060c555a7905affcc0c505c5c2e54db13ecf4844fe35bf95e4",
     "manual-catalog.html": "a7ff75b1e79577a57a182776bb49f77ded51610e32087af5038ecfcd1eb54b8e",
     "repair-decision.html": "421bc137cb9b5dd766fc2793d62347cf35e8043982f1dc8f35c2721e9254a8c6",
     "control-spec.html": "e78ac938bcb03f2aab082d252c71c36fd0b4a972f7dc29ef1ebfc186bcf4c2dc",
@@ -15164,8 +15164,8 @@
     "recipe-settings.html": "a6075096ecf33daaf91d027d917f627bde7d2acf4b44b822e5f08613e964deb7",
     "evidence-review.html": "b7b5f47724919e9756c4a9fb57ab26f64d50aae42f3a92423625ff4f8469faab",
     "improvement-review.html": "5a4109ee2502c9ed4a6fac4a305de32ce0256a8faed900dd7c09426170aa6284",
-    "ACTIVE-WORK.md": "1baca560586f159aff0c72770f23046515c8b9f18b045c7533080468e83a4247",
-    "PACKAGE-NOTES.md": "89c2107bbba775aad6d96cf5936298e1313b2ac506da65ec00a406fcd634084b",
+    "ACTIVE-WORK.md": "c56fe96a453045f3ebddf6f2d3c66f0904f23c3ee2f8ef3ccea079e46850e6be",
+    "PACKAGE-NOTES.md": "af21b79f2c767c4d052789192e7a9c35ff4459bee2edb1061f4ef6febaee2f33",
     "common-guides/P01.html": "197d30df8b42b33562ed9a8dccdd841a6d390feea51bf08cf950bf437c399b09",
     "common-guides/P02.html": "5e8e4ec2f4a7fe6e9b78adb45940f8c820a34da8063f841023f10472d226fc8c",
     "common-guides/P03.html": "8e5c0c294ad8bcd56022852a20a1605e5f56a60f78f4631d4de2dfe39fac44ce",
@@ -15192,8 +15192,8 @@
     "repair-guides/P23.html": "fbf3ca1be04cae4dc3a18bf0c48e50f73d4dac876a34d4cd09b88c53aa84c347",
     "common-guides/P23.html": "ebfac89ae94c2b1a3da1404992656d57a17c8dd6f99146ecfb36320ece2baab0",
     "hmi-transfer.html": "63262e95bfcbae38c35d185f2102476af10926984c1afe6df36af8d1e1da6b3a",
-    "PROJECT-PURPOSE.md": "8f1d7c6f00789904f22473201bc6645d240b529830cd7b748bf17a0502276c27",
-    "build-requirements-audit.py": "5c098b7c61d767867e9f1a6f72a013f5c11af80ec7c3ab38a04092102cecbe54"
+    "PROJECT-PURPOSE.md": "390de7e55bf527173ecafde091e8371f41de604908071cc97a36a4adac2f6aa1",
+    "build-requirements-audit.py": "15712ed2377cada616fa24de90cd910e9abc7757e5f797dd25b0a9f9edbe3b5c"
   },
   "simulator_development": "stopped_by_user",
   "simulator_behavior_tests": "not_rerun",

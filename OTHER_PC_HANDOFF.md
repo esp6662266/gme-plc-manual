@@ -1,3 +1,9 @@
+# 최신 재개 안내: v1.2.0
+
+이 파일의 아래 내용은 2026-10-07 원본 보관 이력입니다. 현재 작업은 [WORKSPACE-HANDOFF.md](WORKSPACE-HANDOFF.md), [AGENTS.md](AGENTS.md), [all-in-one/ACTIVE-WORK.md](all-in-one/ACTIVE-WORK.md)를 먼저 읽습니다. 최신 원본은 main의 all-in-one/이며 옛 ZIP 재해제나 시뮬레이션 시작은 현재 재개 절차가 아닙니다. 시뮬레이터 작성·수정·실행은 영구 중지입니다.
+
+---
+
 # 다른 컴퓨터에서 이어서 작업하기
 
 ## 준비된 파일

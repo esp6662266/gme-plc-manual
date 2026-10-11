@@ -931,6 +931,7 @@
     $('document-frame').title = label || '통합 자료 보기';
   }
   function render() {
+    window.GMEBC01Tools?.close();
     closeBC01ProofPreview();
     window.GMESimulatorWorkspace?.cleanup();
     $('workspace-content').onclick = null;
@@ -965,6 +966,7 @@
     // can leave a pending about:blank navigation that overrides the anchor.
     if ($('document-workspace').hidden) $('document-frame').removeAttribute('src');
     if (state.view==='simulator') window.GMESimulatorWorkspace?.mount(host,render);
+    window.GMEBC01Tools?.mount(host);
   }
   function openEmbedded(path, key = state.selected) {
     if (path === 'index.html' || path.startsWith('index.html#')) path = path.replace(/^index\.html/, 'manual-catalog.html');
@@ -1232,6 +1234,24 @@
     } finally {
       savingNote=false;
       if(submitButton?.isConnected)submitButton.disabled=false;
+    }
+  });
+  window.GMEBC01Tools?.attach({data,base,validEquipment:validNoteEquipment,
+    context:()=>({selected:state.selected,view:state.view,section:state.bc01Section,item:state.bc01Item,drawing:state.drawing,text:state.bc01Text}),
+    snapshot:()=>{const raw=localStorage.getItem(NOTES_KEY);return {raw,notes:noteStore.decodeNotes(raw,validNoteEquipment)};},
+    openRecords:()=>route('repair-record','P01'),
+    restore:async(expected,next)=>{
+      if(state.selected!=='P01'||savingNote||!navigator.locks?.request)throw new Error('다른 저장 작업을 마친 후 다시 시도하세요.');
+      savingNote=true;
+      try{await navigator.locks.request('gme-manual-notes-v1',()=>{
+        if(state.selected!=='P01')throw new Error('선택 설비가 바뀌었습니다. BC01에서 다시 복원하세요.');
+        if(localStorage.getItem(NOTES_KEY)!==expected)throw new Error('미리보기 이후 다른 탭에서 기록이 변경되었습니다. 파일을 다시 선택해 대조하세요.');
+        const serialized=JSON.stringify(next);noteStore.decodeNotes(serialized,validNoteEquipment);
+        localStorage.setItem(NOTES_KEY,serialized);
+        if(localStorage.getItem(NOTES_KEY)!==serialized)throw new Error('복원 저장을 확인하지 못했습니다. 새 복원 전 저장 목록과 백업을 대조하세요.');
+        notes=noteStore.decodeNotes(localStorage.getItem(NOTES_KEY),validNoteEquipment);storageError='';
+        $('app-message').textContent='BC01 기록 복원과 저장 후 재읽기를 확인했습니다. 임시 작성 내용은 유지했습니다.';
+      });}catch(error){$('app-message').textContent=error.message;throw error;}finally{savingNote=false;}
     }
   });
   window.addEventListener('hashchange',readRoute);

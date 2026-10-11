@@ -4909,5 +4909,66 @@
       "index.html": "64ec44e4653209c84c65ed761c3ca75f3e000fe6d1bfcd50e76e483fd1932185",
       "operator-guide.html": "abf9095c7870f2e202052cbe408978288c82c7200b466f9accc649bde67aa10a"
     }
+  },
+  "bc01_record_tools_20261011": {
+    "status": "passed",
+    "date": "2026-10-11",
+    "origin": "http://127.0.0.1:8871",
+    "test_data": "explicit QA records only; restored original empty notes and drafts",
+    "sources": {
+      "paths": 5,
+      "original_locators": 57,
+      "zoom": true,
+      "original_link_keeps_selection": true,
+      "missing_direct_lad_preserved": true
+    },
+    "restore": {
+      "full_backup": true,
+      "individual_export": true,
+      "preview_no_write": true,
+      "replace_preserves_unknown": true,
+      "copy_preserves_both": true,
+      "foreign_records_untouched": true,
+      "drafts_preserved": true,
+      "reopened": true,
+      "cross_tab_conflict_blocked": true,
+      "pending_file_race_preserved": true,
+      "invalid_json_rejected": true,
+      "failed_write_no_false_success": true,
+      "web_lock_required": true
+    },
+    "comparison": {
+      "saved_record_ids": true,
+      "zero_and_missing_separate": true,
+      "stored_metadata": true,
+      "html_escaped": true
+    },
+    "report": {
+      "saved_snapshot": true,
+      "stale_print_blocked": true,
+      "print_action_checked_with_stub": true,
+      "pdf_generated_by_browser": true,
+      "pdf_pages": 2,
+      "pdf_visual_review": "passed: both A4 pages rendered and inspected; no clipping, orphaned heading or gray remainder",
+      "unknown_fields_in_full_json": true
+    },
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "large_text": true,
+    "no_horizontal_page_overflow": true,
+    "escape_and_focus_return": true,
+    "other_equipment_tools_absent": true,
+    "simulator_behavior_tests": "not_rerun",
+    "plc_changed": false,
+    "field_verified": false,
+    "tia_verified": false
   }
 }

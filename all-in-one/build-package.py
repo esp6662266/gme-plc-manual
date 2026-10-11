@@ -5,6 +5,7 @@ from datetime import datetime,timezone
 
 ROOT=Path(__file__).resolve().parent
 manifest=ROOT/'all-in-one-package-manifest.json'
+release=json.loads((ROOT/'VERSION.json').read_text(encoding='utf-8'))
 archive=ROOT.parent/'GME-All-In-One-20261007.zip'
 baseline=ROOT.parent/'GME-All-In-One-20261007-v0.3.zip'
 
@@ -39,10 +40,10 @@ assert json.loads((ROOT/'body-manual-verification.json').read_text())['body_manu
 lock=json.loads((ROOT/'registers/simulator-freeze.json').read_text())
 for file,digest in lock['files'].items():assert sha(ROOT/file)==digest,file
 
-files=[dict(file=str(p.relative_to(ROOT)),sha256=sha(p),bytes=p.stat().st_size) for p in sorted(ROOT.rglob('*')) if p.is_file() and p!=manifest and not any(part in ('__pycache__','.git') for part in p.parts) and p.name!='.DS_Store']
+files=[dict(file=p.relative_to(ROOT).as_posix(),sha256=sha(p),bytes=p.stat().st_size) for p in sorted(ROOT.rglob('*')) if p.is_file() and p!=manifest and not any(part in ('__pycache__','.git') for part in p.parts) and p.name!='.DS_Store']
 additional=json.loads((ROOT/'registers/additional-source-manifest.json').read_text())
 for item in additional:assert sha(ROOT/item['file'])==item['sha256']
-record=dict(fresh_verification_runs=verification_runs,version='0.4.0',date='2026-10-09',entry='index.html',simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',original_files_unchanged=len(source_files),additional_sources_verified=len(additional),field_verified=False,tia_verified=False,files=files)
+record=dict(fresh_verification_runs=verification_runs,version=release['version'],date=release['released'],entry='index.html',simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',original_files_unchanged=len(source_files),additional_sources_verified=len(additional),field_verified=False,tia_verified=False,files=files)
 manifest.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
 temporary=archive.with_name('.GME-All-In-One-20261007.pending.zip')
 with zipfile.ZipFile(temporary,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
@@ -56,6 +57,6 @@ with zipfile.ZipFile(temporary) as z:
     assert z.read(ROOT.name+'/'+manifest.name)==manifest.read_bytes()
 if archive.exists() and isinstance(prior,list) and not baseline.exists():shutil.copy2(archive,baseline)
 temporary.replace(archive)
-report=dict(fresh_verifiers=len(verification_runs),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed',archive=archive.name,version='0.4.0',files=len(files)+1,original_files_unchanged=len(source_files),additional_sources_verified=len(additional),simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',bytes=archive.stat().st_size,sha256=sha(archive),crc_checked=True,all_file_hashes_checked=True,field_verified=False,tia_verified=False)
+report=dict(fresh_verifiers=len(verification_runs),finished_at_utc=datetime.now(timezone.utc).isoformat(),status='passed',archive=archive.name,version=release['version'],files=len(files)+1,original_files_unchanged=len(source_files),additional_sources_verified=len(additional),simulator_development='stopped_by_user',simulator_behavior_tests='not_rerun',bytes=archive.stat().st_size,sha256=sha(archive),crc_checked=True,all_file_hashes_checked=True,field_verified=False,tia_verified=False)
 (ROOT.parent/'GME-All-In-One-20261007.package-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))

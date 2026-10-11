@@ -1,6 +1,6 @@
 {
   "name": "gme-plc-manual",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,7 +8,10 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "verify:bc01": "node all-in-one/verify-bc01-tools.cjs",
+    "verify:manual": "python -X utf8 all-in-one/build-package.py",
+    "serve:manual": "python -X utf8 -m http.server 8770 --directory all-in-one"
   },
   "dependencies": {
     "@netlify/blobs": "11.1.3",

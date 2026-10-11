@@ -113,7 +113,7 @@ for r,p in zip(work,a['priority'][:21]):
 assert '완료한 AB01' in next(r for r in work if r['plc_id']=='AB01')['document_work']
 assert {'equipment-'+i for i in rows}|{'priority-'+p['key'] for p in priority}|{'R'+str(i).zfill(2) for i in range(1,15)}<=anchors
 assert {'bc01-standard','start','repair','structure','records','pending','limits','install'}<=ids('operator-guide.html')
-for text in ['가져오기·병합·서버 동기화는 없습니다','프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다','577개 시험은 설계·미실행']:
+for text in ['BC01은 백업 가져오기·복원','서버 동기화는 없습니다','프로그램 ZIP에 브라우저 기록이 자동 포함되지 않습니다','577개 시험은 설계·미실행']:
     assert text in (ROOT/'operator-guide.html').read_text(),text
 result=dict(status='passed',requirements_audit_sha256=sha(ROOT/'registers/requirements-audit.json'),audit_html_sha256=sha(ROOT/'requirements-audit.html'),operator_guide_sha256=sha(ROOT/'operator-guide.html'),source_hashes_checked=len(a['inputs']),equipment_checked=248,priority_checked=23,detail_depth=c,simulator_files_unchanged=True,simulator_behavior_tests='not_rerun',field_verified=False,tia_verified=False,scope='static document coverage; browser observations separate')
 result['current_priority_open_work_checked']=len(work)

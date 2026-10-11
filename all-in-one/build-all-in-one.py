@@ -84,7 +84,7 @@ for s in all_specs:
         construction_pages=construction_profiles.get(s['id'],{}).get('pages',[]),
     )
 
-paths = sorted(str(p.relative_to(ROOT)) for p in ROOT.rglob('*')
+paths = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*')
                if p.is_file() and p.suffix.lower() in ('.html', '.pdf', '.xml', '.svg', '.png', '.md', '.csv', '.json', '.zap18', '.plf')
                and p.name not in ('all-in-one-data.json', 'all-in-one-verification.json'))
 if 'manual-catalog.html' not in paths:
@@ -101,7 +101,7 @@ virtual_results = json.loads(results_path.read_text()) if results_path.exists() 
 if virtual_results and virtual_results.get('model_sha256') != hashlib.sha256(program_path.read_bytes()).hexdigest():
     virtual_results = None  # A changed source model must be tested again.
 data = dict(
-    version='0.4.0', updated='2026-10-09', equipment=specs, priority=priority,
+    version='1.2.0', updated='2026-10-11', equipment=specs, priority=priority,
     priority_source=dict(canvas='디코팅 시안', url='https://sejin-facility-manager.romancetiger.chatgpt.site/',
                          observed='2026-10-07', equipment_count=23, edge_count=24, group_count=5,
                          revision='2026-09-30T21:57:30.103Z',
@@ -458,7 +458,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="GME 디코팅 설비 매뉴얼, 수리 진단과 PLC 정적 분석을 한곳에서 사용하는 통합 프로그램. 시뮬레이터 영구 중지.">
 <title>GME 올인원 · 설비 매뉴얼과 PLC 작업실</title>
-<link rel="stylesheet" href="assets/all-in-one.css"></head><body>
+<link rel="stylesheet" href="assets/all-in-one.css"><link rel="stylesheet" href="assets/bc01-tools.css"></head><body>
 <a class="skip" href="#workspace">본문으로 이동</a>
 <aside class="sidebar" aria-label="통합 메뉴와 설비 선택">
 <a class="brand" href="#overview"><span class="brand-mark">G</span><span>GME <b>ALL-IN-ONE</b><small>설비 매뉴얼 · PLC 작업실</small></span></a>
@@ -478,7 +478,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <label class="sr-only" for="equipment-search">설비·주소 검색</label><input id="equipment-search" type="search" placeholder="설비명·태그·I/O 주소 검색" autocomplete="off">
 <label class="sr-only" for="equipment-group">설비 영역</label><select id="equipment-group"><option value="">전체 영역</option></select>
 <div id="equipment-list" class="equipment-list" aria-label="설비 목록"></div>
-</section><p class="sidebar-foot">v0.4 · 매뉴얼·수리·구조 분석<br>시뮬레이터 영구 중지</p></aside>
+</section><p class="sidebar-foot">v1.2.0 · 매뉴얼·수리·구조 분석<br>시뮬레이터 영구 중지</p></aside>
 <div class="app-body"><header class="app-header"><div><span class="eyebrow">매뉴얼 · 수리 · 구조 분석 · 개선</span><strong>하나의 화면, 같은 설비 기준</strong></div><div class="header-status"><span class="dot"></span>매뉴얼 작성 중 <span class="chip">시뮬레이터 영구 중지</span></div></header>
 <section class="context" aria-labelledby="context-title"><div><span id="context-kicker" class="eyebrow"></span><h1 id="context-title"></h1><p id="context-meta"></p></div><button type="button" id="context-summary">설비 요약</button></section>
 <nav id="device-tabs" class="device-tabs" aria-label="선택 설비 작업"></nav>
@@ -486,13 +486,13 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <footer class="app-footer">원본·정적 해석·실행 결과·현장 확인을 구분하여 관리합니다.<span id="app-message" role="status" aria-live="polite"></span></footer></div>
 <noscript><p>통합 탐색에는 JavaScript가 필요합니다. <a href="manual-catalog.html">기존 전체 매뉴얼</a>을 열어 자료를 읽을 수 있습니다.</p></noscript>
 <div hidden aria-hidden="true"><span id="overview"></span><span id="purpose"></span><span id="equipment"></span><span id="scope"></span><span id="method"></span><span id="read"></span><span id="workflow"></span><span id="program"></span><span id="conflicts"></span><span id="drawing"></span></div>
-<script src="assets/all-in-one-data.js"></script><script src="assets/program-model-data.js"></script><script src="assets/virtual-plc.js"></script><script src="assets/simulator-workspace.js"></script><script src="assets/note-record-store.js"></script><script src="assets/repair-records.js"></script><script src="assets/all-in-one.js"></script></body></html>
+<script src="assets/all-in-one-data.js"></script><script src="assets/program-model-data.js"></script><script src="assets/virtual-plc.js"></script><script src="assets/simulator-workspace.js"></script><script src="assets/note-record-store.js"></script><script src="assets/repair-records.js"></script><script src="assets/bc01-tools.js"></script><script src="assets/all-in-one.js"></script></body></html>
 ''', encoding='utf-8')
 
 # Refresh the manual UI and register bundle after rebuilds without changing
 # the preserved simulator assets or requiring a cache-clearing action.
 entry=(ROOT/'index.html').read_text(encoding='utf-8')
-for resource in ('assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js'):
+for resource in ('assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css'):
     digest=hashlib.sha256((ROOT/resource).read_bytes()).hexdigest()[:12]
     entry=entry.replace('"'+resource+'"','"'+resource+'?v='+digest+'"')
 (ROOT/'index.html').write_text(entry,encoding='utf-8')
