@@ -1,0 +1,5 @@
+
+> gme-plc-manual@1.18.0 verify:bc01
+> node all-in-one/verify-bc01-tools.cjs
+
+{"status":"passed","scope":"BC01 backup/restore/unknown fields/foreign records/invalid input/ID comparison/source locators; no PLC or simulator","invalid_cases":19,"source_locations":57}

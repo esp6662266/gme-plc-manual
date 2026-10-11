@@ -1,7 +1,7 @@
 {
   "batch": "READY10-01",
   "version": "1.18.0",
-  "status": "local_verified_publication_pending",
+  "status": "publication_verified_complete_with_gaps",
   "equipment": [
     {
       "catalog_id": "CH01",
@@ -86,7 +86,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -161,7 +161,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -233,7 +233,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -357,7 +357,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -451,7 +451,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -540,7 +540,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -631,7 +631,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -712,7 +712,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -798,7 +798,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     },
     {
@@ -880,7 +880,7 @@
         "sources/hmi_plc_tags.csv": "a5a22b082cb03aca20097f87bbfcb5f75b6f87e13d501f82282c514a9037d404"
       },
       "document": "complete_with_gaps",
-      "publication": "pending",
+      "publication": "verified_v1.18.0",
       "identity_verified": false
     }
   ],
@@ -1225,12 +1225,192 @@
     "public_files": 2943
   },
   "record_report_checkpoint": "The UI synthetic records and reports retain their original v1.17.0 version and source bundles. Final v1.18.0 source bundles are listed separately.",
-  "git_feature_commit": null,
-  "github_release": "pending",
-  "netlify_deploy": "pending",
-  "published_files": "pending",
-  "published_UI": "pending",
-  "fresh_clone": "pending",
+  "git_feature_commit": "841aefa1b0caff1451a0fa0769fbf432845b0536",
+  "github_release": {
+    "status": "passed",
+    "tag": "v1.18.0",
+    "url": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.18.0",
+    "asset": {
+      "id": 631127570,
+      "name": "GME-All-In-One-v1.18.0.zip",
+      "size": 64792099,
+      "digest": "sha256:0a4ed1f13a5d833f107c9224c1ab9ecec886996d58aab1bd9c901115f8785b6f",
+      "browser_download_url": "https://github.com/esp6662266/gme-plc-manual/releases/download/v1.18.0/GME-All-In-One-v1.18.0.zip"
+    }
+  },
+  "netlify_deploy": {
+    "status": "passed",
+    "id": "6acbaea9a200f20008a7f0e4",
+    "state": "ready",
+    "commit_ref": "841aefa1b0caff1451a0fa0769fbf432845b0536",
+    "published_at": "2026-10-11T15:43:58.957Z",
+    "deploy_ssl_url": "https://main--gme-plc-manual.netlify.app",
+    "ssl_url": "https://gme-plc-manual.netlify.app"
+  },
+  "published_files": {
+    "status": "passed",
+    "count": 399,
+    "exact": 302,
+    "HTML_semantic": 97,
+    "proof": "docs/equipment-standard/validation/ready10-01/published-files.json"
+  },
+  "published_UI": {
+    "version": "1.18.0",
+    "equipment": [
+      {
+        "key": "CH01",
+        "areas": [
+          "설비·자료 기준5개 세부 항목",
+          "I/O·HMI5개 세부 항목",
+          "제어 구조7개 세부 항목",
+          "전기 전달 경로6개 세부 항목",
+          "알람·복구2개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "ER01",
+        "areas": [
+          "설비·자료 기준4개 세부 항목",
+          "I/O·HMI5개 세부 항목",
+          "제어 구조6개 세부 항목",
+          "전기 전달 경로6개 세부 항목",
+          "알람·복구3개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "FN05",
+        "areas": [
+          "설비·자료 기준4개 세부 항목",
+          "I/O·HMI3개 세부 항목",
+          "제어 구조5개 세부 항목",
+          "전기 전달 경로6개 세부 항목",
+          "알람·복구3개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "MV02",
+        "areas": [
+          "설비·자료 기준4개 세부 항목",
+          "I/O·HMI3개 세부 항목",
+          "제어 구조8개 세부 항목",
+          "전기 전달 경로9개 세부 항목",
+          "알람·복구3개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "MV05",
+        "areas": [
+          "설비·자료 기준2개 세부 항목",
+          "I/O·HMI2개 세부 항목",
+          "제어 구조6개 세부 항목",
+          "전기 전달 경로4개 세부 항목",
+          "알람·복구4개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "PV03",
+        "areas": [
+          "설비·자료 기준4개 세부 항목",
+          "I/O·HMI4개 세부 항목",
+          "제어 구조6개 세부 항목",
+          "전기 전달 경로4개 세부 항목",
+          "알람·복구2개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "SC01",
+        "areas": [
+          "설비·자료 기준2개 세부 항목",
+          "I/O·HMI3개 세부 항목",
+          "제어 구조5개 세부 항목",
+          "전기 전달 경로6개 세부 항목",
+          "알람·복구2개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "VR01",
+        "areas": [
+          "설비·자료 기준2개 세부 항목",
+          "I/O·HMI3개 세부 항목",
+          "제어 구조5개 세부 항목",
+          "전기 전달 경로1개 세부 항목",
+          "알람·복구3개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "VR02",
+        "areas": [
+          "설비·자료 기준3개 세부 항목",
+          "I/O·HMI3개 세부 항목",
+          "제어 구조6개 세부 항목",
+          "전기 전달 경로5개 세부 항목",
+          "알람·복구2개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      },
+      {
+        "key": "VR03",
+        "areas": [
+          "설비·자료 기준2개 세부 항목",
+          "I/O·HMI4개 세부 항목",
+          "제어 구조5개 세부 항목",
+          "전기 전달 경로3개 세부 항목",
+          "알람·복구3개 세부 항목",
+          "증상별 수리1개 세부 항목",
+          "완료 기준1개 세부 항목"
+        ],
+        "completion_visible": true,
+        "version": "1.18.0"
+      }
+    ],
+    "backup": "모든 설비 통합 백업·복원\n닫기\n\n이 브라우저에 저장한 모든 설비의 메모·수리 기록을 JSON 파일 하나로 보관하고 옮깁니다. 작성 중인 초안은 현재 브라우저에 유지합니다.\n\n1. 전체 기록을 한 파일로 백업\n\n0개 설비 · 0건 · 설비 선택과 관계없이 전체를 포함합니다.\n\n모든 설비 통합 JSON 다운로드\n2. 통합 파일 가져오기\n\n기존 전체 백업과 개별 JSON도 가져올 수 있습니다. 미리보기에서 충돌 선택 후 저장합니다. 기존에만 있는 기록과 추가 항목은 보존하며, 저장할 기록을 삭제하지 않습니다.\n\n통합 JSON 백업 파일\n\n최대64MB / 50,000건. 복원은 저장한 메모·수리 기록에 적용합니다.",
+    "no_operational_write": true
+  },
+  "fresh_clone": {
+    "fresh_clone": "passed",
+    "commit": "841aefa1b0caff1451a0fa0769fbf432845b0536",
+    "tests": 8,
+    "bc01": "passed",
+    "equipment_profiles": 28,
+    "catalog_profiles": 10,
+    "NETLIFY_build": "passed",
+    "git_changes": 0
+  },
   "scope": {
     "phase2_candidates": 133,
     "phase2_added": 10,
@@ -1243,5 +1423,19 @@
     "simulator_changes": 0,
     "simulator_behavior_tests": "not_run"
   },
-  "CC01": "Documentary name exists; dedicated owned I/O/current physical existence/identity remain unverified. No absence inference."
+  "CC01": "Documentary name exists; dedicated owned I/O/current physical existence/identity remain unverified. No absence inference.",
+  "published_source_pairs": {
+    "status": "passed",
+    "locations": 55,
+    "equipment": 10,
+    "proof": "docs/equipment-standard/validation/ready10-01/published-pairs.json"
+  },
+  "published_counts": {
+    "manuals": 28,
+    "identity_reports": 3,
+    "phase2_new": 10,
+    "phase2_candidates": 133,
+    "physical_new_identifications": 0
+  },
+  "bookkeeping_commit": "Following root documentation-only commit; fixed feature release and historical package content remain immutable"
 }
