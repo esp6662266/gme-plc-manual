@@ -1,4 +1,4 @@
-## v1.22.0 작성·로컬 검증 완료
+## v1.22.0 실제 게시 완료
 
 PV05·ZT01·PV06·CM01·CM02·UC01·PV14·CR01·SYS-AUTO·SYS-HMI 문서10개(설비8/소프트웨어2)를 추가했습니다. 총68 보존문서, 현재대상66+식별3보고서입니다. 실제게시 여부는 [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md), 검증은 [READY10-05-VERIFICATION.md](READY10-05-VERIFICATION.md)를 확인합니다.
 

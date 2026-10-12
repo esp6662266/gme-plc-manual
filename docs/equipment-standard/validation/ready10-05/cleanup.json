@@ -1,0 +1,497 @@
+{
+  "status": "completed",
+  "verified_at_utc": "2026-10-12T12:00:50.650342+00:00",
+  "authorization": "2026-10-12 user requested deleting agent-created backup/test files after completing work",
+  "synthetic_download_files_removed": 96,
+  "synthetic_download_bytes_removed": 140008344,
+  "temporary_QA_folders_removed": 34,
+  "temporary_QA_files_removed": 71479,
+  "temporary_QA_bytes_removed": 2830395461,
+  "temporary_helpers_removed": 48,
+  "folders": [
+    {
+      "name": "gme-ready10-01-qa",
+      "files": 308,
+      "bytes": 46915576
+    },
+    {
+      "name": "gme-ready10-02-qa",
+      "files": 364,
+      "bytes": 59048655
+    },
+    {
+      "name": "gme-ready10-03-qa",
+      "files": 396,
+      "bytes": 65889344
+    },
+    {
+      "name": "gme-ready10-04-qa",
+      "files": 345,
+      "bytes": 89430632
+    },
+    {
+      "name": "gme-ready10-04-fixture",
+      "files": 5,
+      "bytes": 31147754
+    },
+    {
+      "name": "gme-ready10-04-fresh-20261012",
+      "files": 32084,
+      "bytes": 910769120
+    },
+    {
+      "name": "gme-ready10-05-qa",
+      "files": 528,
+      "bytes": 79406674
+    },
+    {
+      "name": "gme-ready10-05-fresh-20261012",
+      "files": 32241,
+      "bytes": 928949269
+    },
+    {
+      "name": "gme-pv05-qa-hyy60t58",
+      "files": 4115,
+      "bytes": 495867944
+    },
+    {
+      "name": "gme-pv05-qa-36bs6eli",
+      "files": 2,
+      "bytes": 171479
+    },
+    {
+      "name": "gme-mv03-qa",
+      "files": 75,
+      "bytes": 6149399
+    },
+    {
+      "name": "gme-batch01-qa",
+      "files": 34,
+      "bytes": 1657795
+    },
+    {
+      "name": "gme-pv02-qa",
+      "files": 60,
+      "bytes": 3570112
+    },
+    {
+      "name": "gme-ab01-qa",
+      "files": 61,
+      "bytes": 13545463
+    },
+    {
+      "name": "gme-mv06-qa",
+      "files": 68,
+      "bytes": 4771645
+    },
+    {
+      "name": "gme-cc01-qa",
+      "files": 52,
+      "bytes": 13326182
+    },
+    {
+      "name": "gme-p14-qa",
+      "files": 3,
+      "bytes": 172374
+    },
+    {
+      "name": "gme-p04-qa",
+      "files": 3,
+      "bytes": 131441
+    },
+    {
+      "name": "gme-vs01-qa",
+      "files": 62,
+      "bytes": 3582072
+    },
+    {
+      "name": "gme-fn01-qa",
+      "files": 33,
+      "bytes": 1790167
+    },
+    {
+      "name": "gme-rd01-qa",
+      "files": 67,
+      "bytes": 6095998
+    },
+    {
+      "name": "gme-fn06-qa",
+      "files": 49,
+      "bytes": 3709906
+    },
+    {
+      "name": "gme-fn02-qa",
+      "files": 22,
+      "bytes": 917247
+    },
+    {
+      "name": "gme-expansion-qa",
+      "files": 24,
+      "bytes": 1796378
+    },
+    {
+      "name": "gme-p03-qa",
+      "files": 3,
+      "bytes": 130272
+    },
+    {
+      "name": "gme-fn03-qa",
+      "files": 32,
+      "bytes": 1717831
+    },
+    {
+      "name": "gme-pv01-errata-qa",
+      "files": 11,
+      "bytes": 252055
+    },
+    {
+      "name": "gme-mv01-qa",
+      "files": 64,
+      "bytes": 4293887
+    },
+    {
+      "name": "gme-identity-qa",
+      "files": 70,
+      "bytes": 6764460
+    },
+    {
+      "name": "gme-he01-qa",
+      "files": 51,
+      "bytes": 18670115
+    },
+    {
+      "name": "gme-pv01-qa",
+      "files": 73,
+      "bytes": 4138277
+    },
+    {
+      "name": "gme-batch02-qa",
+      "files": 31,
+      "bytes": 1368679
+    },
+    {
+      "name": "gme-br01-qa",
+      "files": 68,
+      "bytes": 19691899
+    },
+    {
+      "name": "gme-mc04-qa",
+      "files": 75,
+      "bytes": 4555360
+    }
+  ],
+  "synthetic_download_names": [
+    "GME-all-equipment-backup-2026-10-11 (8).json",
+    "GME-all-equipment-backup-2026-10-12 (7).json",
+    "READY10-04-TC05-saved-first.json",
+    "VR04-UI-after-backup.json",
+    "READY10-05-PV05-after-backup.json",
+    "READY10-04-TC05-after-backup.json",
+    "PC02-UI-before-backup.json",
+    ":tmp:gme-ready10-03-qa:PSH03-UI-before-backup.json",
+    "PC01-UI-after-backup.json",
+    "RO01-UI-before-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (5).json",
+    "READY10-04-TC11-saved-first.json",
+    "READY10-04-TC07-before-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (1).json",
+    "VR05-UI-before-backup.json",
+    "READY10-04-TC04-before-backup.json",
+    "DP01-UI-after-backup.json",
+    "PSH02-UI-after-backup.json",
+    "READY10-04-TC09-before-backup.json",
+    "READY10-04-TC04-after-backup.json",
+    "PSL05-UI-before-backup.json",
+    "READY10-05-empty-backup.json",
+    "BF01-UI-after-backup.json",
+    "READY10-05-ZT01-after-backup.json",
+    "READY10-04-TC01-after-backup.json",
+    "READY10-04-TC01-saved-first.json",
+    "MC05-UI-after-backup.json",
+    "DP01-UI-before-backup.json",
+    "READY10-04-TC07-after-backup.json",
+    "PSH01-UI-before-backup.json",
+    "READY10-04-TC04-saved-first.json",
+    "GME-all-equipment-backup-2026-10-12 (4).json",
+    "VR05-UI-after-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (6).json",
+    "READY10-04-TC02-before-backup.json",
+    "READY10-04-TC10-saved-first.json",
+    "RO02-UI-after-backup.json",
+    "GME-all-equipment-backup-2026-10-11 (9).json",
+    "VR04-UI-before.json",
+    "READY10-05-PV05-before-backup.json",
+    "VR04-UI-original-backup.json",
+    "READY10-04-TC02-after-backup.json",
+    "READY10-04-TC11-before-backup.json",
+    "BF02-UI-before-backup.json",
+    "READY10-04-TC06-after-backup.json",
+    "READY10-05-PV05-saved-first.json",
+    "READY10-04-TC01-before-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (2).json",
+    "READY10-05-ZT01-before-backup.json",
+    "PSH03-UI-after-backup.json",
+    "SC11-UI-before-backup.json",
+    "READY10-04-TC03-after-backup.json",
+    "GME-all-equipment-backup-2026-10-11 (10).json",
+    "READY10-04-TC10-before-backup.json",
+    "READY10-04-TC07-saved-first.json",
+    "VR06-UI-before-backup.json",
+    "READY10-04-TC03-saved-first.json",
+    "PSL05-UI-after-backup.json",
+    "VR06-UI-after-backup.json",
+    "RO02-UI-before-backup.json",
+    "RO01-UI-after-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (10).json",
+    "GME-all-equipment-backup-2026-10-12 (8).json",
+    "MC05-UI-before-backup.json",
+    "GME-all-equipment-backup-2026-10-11 (7).json",
+    "PC01-UI-before-backup.json",
+    "READY10-04-TC03-before-backup.json",
+    "SC10-UI-after-backup.json",
+    "READY10-04-ALL80-final-restored-backup.json",
+    "BF02-UI-after-backup.json",
+    "MC03-UI-before-backup.json",
+    "READY10-04-TC05-before-backup.json",
+    "LD01-UI-after-backup.json",
+    "MC03-UI-after-backup.json",
+    "READY10-05-ZT01-saved-first.json",
+    "READY10-04-TC11-after-backup.json",
+    "LD01-UI-before-backup.json",
+    "READY10-04-TC06-saved-first.json",
+    "BF01-UI-before-backup.json",
+    "READY10-05-baseline80-backup.json",
+    "DP02-UI-after-backup.json",
+    "PSH01-UI-after-backup.json",
+    "ALL60-UI-final-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (11).json",
+    "READY10-04-ALL80-final-backup.json",
+    "GME-all-equipment-backup-2026-10-12 (9).json",
+    "SC11-UI-after-backup.json",
+    "SC10-UI-before-backup.json",
+    "READY10-04-TC09-after-backup.json",
+    "READY10-04-TC02-saved-first.json",
+    "READY10-04-TC10-after-backup.json",
+    "PSH02-UI-before-backup.json",
+    "PC02-UI-after-backup.json",
+    "READY10-04-TC06-before-backup.json",
+    "DP02-UI-before-backup.json",
+    "READY10-04-TC09-saved-first.json"
+  ],
+  "helpers": [
+    {
+      "name": "gme-ready10-04-preflight.py",
+      "bytes": 2693
+    },
+    {
+      "name": "gme-ready10-04-build-tc02.py",
+      "bytes": 6660
+    },
+    {
+      "name": "gme-ready10-04-check-tc09.py",
+      "bytes": 4307
+    },
+    {
+      "name": "gme-ready10-04-build-tc06.py",
+      "bytes": 5385
+    },
+    {
+      "name": "gme-ready10-05-check-published.py",
+      "bytes": 2902
+    },
+    {
+      "name": "gme-ready10-04-progress.py",
+      "bytes": 7106
+    },
+    {
+      "name": "gme-ready10-04-prepare-release.py",
+      "bytes": 8576
+    },
+    {
+      "name": "gme-ready10-04-fresh-check.py",
+      "bytes": 1299
+    },
+    {
+      "name": "gme-ready10-05-public-ui.cjs.py",
+      "bytes": 2512
+    },
+    {
+      "name": "gme-ready10-04-build-tc07.py",
+      "bytes": 5542
+    },
+    {
+      "name": "gme-ready10-05-fresh-check.py",
+      "bytes": 1299
+    },
+    {
+      "name": "gme-ready10-04-build-tc03.py",
+      "bytes": 9714
+    },
+    {
+      "name": "gme-ready10-04-profile-factory.py",
+      "bytes": 6176
+    },
+    {
+      "name": "gme-ready10-05-published-record.py",
+      "bytes": 7486
+    },
+    {
+      "name": "gme-ready10-04-check-tc03.py",
+      "bytes": 5705
+    },
+    {
+      "name": "gme-ready10-05-cleanup-inventory.py",
+      "bytes": 2294
+    },
+    {
+      "name": "gme-ready10-04-published-record.py",
+      "bytes": 8235
+    },
+    {
+      "name": "gme-ready10-04-check-tc07.py",
+      "bytes": 2430
+    },
+    {
+      "name": "gme-ready10-05-public-ui.cjs",
+      "bytes": 7369
+    },
+    {
+      "name": "gme-ready10-04-check-tc06.py",
+      "bytes": 2993
+    },
+    {
+      "name": "gme-ready10-05-cleanup.py",
+      "bytes": 5802
+    },
+    {
+      "name": "gme-ready10-04-final-record.py",
+      "bytes": 9843
+    },
+    {
+      "name": "gme-ready10-05-regression.cjs",
+      "bytes": 2238
+    },
+    {
+      "name": "gme-ready10-04-native-review.py",
+      "bytes": 2113
+    },
+    {
+      "name": "gme-ready10-04-ro-exceptions.py",
+      "bytes": 5245
+    },
+    {
+      "name": "gme-ready10-04-check-tc02.py",
+      "bytes": 4959
+    },
+    {
+      "name": "gme-ready10-04-build-tc09.py",
+      "bytes": 7373
+    },
+    {
+      "name": "gme-ready10-04-check-tc05.py",
+      "bytes": 3396
+    },
+    {
+      "name": "gme-ready10-04-final-checks.py",
+      "bytes": 1354
+    },
+    {
+      "name": "gme-ready10-04-receive.py",
+      "bytes": 1200
+    },
+    {
+      "name": "gme-ready10-04-check-tc01.py",
+      "bytes": 5188
+    },
+    {
+      "name": "gme-ready10-05-csp-diagnose.cjs",
+      "bytes": 2218
+    },
+    {
+      "name": "gme-ready10-04-check-tc11.py",
+      "bytes": 1806
+    },
+    {
+      "name": "gme-ready10-05-prepare-checks.py",
+      "bytes": 2196
+    },
+    {
+      "name": "gme-ready10-05-preservation.py",
+      "bytes": 3506
+    },
+    {
+      "name": "gme-ready10-04-check-tc10.py",
+      "bytes": 1973
+    },
+    {
+      "name": "gme-ready10-04-check-tc04.py",
+      "bytes": 3098
+    },
+    {
+      "name": "gme-ready10-04-build-tc04.py",
+      "bytes": 6064
+    },
+    {
+      "name": "gme-ready10-05-local-record.py",
+      "bytes": 9087
+    },
+    {
+      "name": "gme-ready10-05-headless.cjs",
+      "bytes": 13151
+    },
+    {
+      "name": "gme-ready10-04-build-tc10.py",
+      "bytes": 3564
+    },
+    {
+      "name": "gme-ready10-05-network-smoke.cjs",
+      "bytes": 1065
+    },
+    {
+      "name": "gme-ready10-05-final-checks.py",
+      "bytes": 1293
+    },
+    {
+      "name": "gme-ready10-04-build-tc01.py",
+      "bytes": 7837
+    },
+    {
+      "name": "gme-ready10-04-build-tc11.py",
+      "bytes": 3079
+    },
+    {
+      "name": "gme-ready10-04-build-tc05.py",
+      "bytes": 7076
+    },
+    {
+      "name": "gme-ready10-04-native-asserts.py",
+      "bytes": 1586
+    },
+    {
+      "name": "gme-ready10-04-check-published.py",
+      "bytes": 2902
+    }
+  ],
+  "QA_servers_stopped": [
+    {
+      "pid": 1489,
+      "purpose": "http.server 8891 --directory /tmp/gme-ready10-04-fixture",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 44875,
+      "purpose": "http.server 18515 --bind 127.0.0.1 --directory all-in-one",
+      "signal": "SIGTERM"
+    }
+  ],
+  "confirmed_deleted_recheck": true,
+  "isolated_headless_profile_deleted": true,
+  "QA_PDFs_and_render_images_deleted": true,
+  "preserved_download_files": 9,
+  "preserved_original_official_files_hash_verified": 13,
+  "original_source_backup_preserved": true,
+  "production_packages_and_immutable_releases_preserved": true,
+  "preexisting_user_browser_profile_not_modified": true,
+  "preexisting_8877_server_preserved": true,
+  "committed_verification_metadata_preserved": true
+}
