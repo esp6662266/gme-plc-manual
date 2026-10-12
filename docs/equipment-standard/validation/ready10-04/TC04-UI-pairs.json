@@ -1,0 +1,116 @@
+[
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "66",
+    "target": "66\tPart 65.out ↔ Part 46.en"
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "60",
+    "target": "60\tORef 53 (ON) ↔ Part 46.IN0"
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "61",
+    "target": "61\tORef 54 (TC04) ↔ Part 46.Analog_input"
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "62",
+    "target": "62\tORef 55 (Coeff.COEFF_TC04) ↔ Part 46.Coeff"
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "63",
+    "target": "63\tORef 56 (Coeff.ZERO_TC04) ↔ Part 46.Zero"
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "64",
+    "target": "64\tPart 46.OutValue ↔ ORef 57 (Data.Temp_TC04)"
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "24",
+    "target": "24\tPart 46.Out_of_range ↔ ORef 23 (Allarm.TC04_OFR)"
+  },
+  {
+    "key": "TC04",
+    "network": 1071,
+    "uid": "23",
+    "target": "23\tORef 25 (TC04) ↔ Part 22.in"
+  },
+  {
+    "key": "TC04",
+    "network": 1071,
+    "uid": "24",
+    "target": "24\tPart 22.out1 ↔ ORef 26 (Inputs.TC_04)"
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "516",
+    "target": "516\tORef 490 (Data.Temp_TC04) ↔ Part 438.in1"
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "525",
+    "target": "525\tPart 437.out ↔ Part 450.in ↔ Part 559.in"
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "560",
+    "target": "560\tPart 559.out ↔ Part 455.in"
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "530",
+    "target": "530\tORef 499 (Allarm.MAX_TC04_TEMP) ↔ Part 455.operand"
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "566",
+    "target": "566\tPart 565.out ↔ Part 484.in"
+  },
+  {
+    "key": "TC04",
+    "network": 1950,
+    "uid": "694",
+    "target": "694\tPart 693.out ↔ Part 707.in1"
+  },
+  {
+    "key": "TC04",
+    "network": 1950,
+    "uid": "685",
+    "target": "685\tORef 670 (S5T#1H_30M) ↔ Part 656.value"
+  },
+  {
+    "key": "TC04",
+    "network": 1951,
+    "uid": "721",
+    "target": "721\tPart 720.out ↔ Part 676.in4"
+  },
+  {
+    "key": "TC04",
+    "network": 1858,
+    "uid": "288",
+    "target": "288\tPart 287.out ↔ Part 219.in3"
+  },
+  {
+    "key": "TC04",
+    "network": 1658,
+    "uid": "21",
+    "target": "21\tPart 193.eno ↔ Part 23.in"
+  }
+]

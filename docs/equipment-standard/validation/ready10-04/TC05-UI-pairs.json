@@ -1,0 +1,140 @@
+[
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "86",
+    "target": "86\tPart 85.out ↔ Part 66.en"
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "80",
+    "target": "80\tORef 73 (ON) ↔ Part 66.IN0"
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "81",
+    "target": "81\tORef 74 (TC05) ↔ Part 66.Analog_input"
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "82",
+    "target": "82\tORef 75 (Coeff.COEFF_TC05) ↔ Part 66.Coeff"
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "83",
+    "target": "83\tORef 76 (Coeff.ZERO_TC05) ↔ Part 66.Zero"
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "84",
+    "target": "84\tPart 66.OutValue ↔ ORef 77 (Data.Temp_TC05)"
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "24",
+    "target": "24\tPart 66.Out_of_range ↔ ORef 23 (Allarm.TC05_OFR)"
+  },
+  {
+    "key": "TC05",
+    "network": 1071,
+    "uid": "33",
+    "target": "33\tPart 22.eno ↔ Part 27.en"
+  },
+  {
+    "key": "TC05",
+    "network": 1071,
+    "uid": "31",
+    "target": "31\tORef 28 (TC05) ↔ Part 27.in"
+  },
+  {
+    "key": "TC05",
+    "network": 1071,
+    "uid": "32",
+    "target": "32\tPart 27.out1 ↔ ORef 29 (Inputs.TC_05)"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "532",
+    "target": "532\tORef 500 (Data.Temp_TC05) ↔ Part 459.in1"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "533",
+    "target": "533\tORef 501 (Data.TC04_TC05_MAX_ALL) ↔ Part 459.in2"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "541",
+    "target": "541\tPart 458.out ↔ Part 471.in ↔ Part 561.in"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "25",
+    "target": "25\tPart 561.out ↔ Part 22.in"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "27",
+    "target": "27\tORef 28 (ServiceBit) ↔ Part 22.operand"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "26",
+    "target": "26\tPart 22.out ↔ Part 476.in"
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "568",
+    "target": "568\tPart 567.out ↔ Part 488.in"
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "676",
+    "target": "676\tORef 664 (Allarm.MAX_TC05_TEMP) ↔ Part 695.operand"
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "25",
+    "target": "25\tPart 695.out ↔ Part 707.in2"
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "685",
+    "target": "685\tORef 670 (S5T#1H_30M) ↔ Part 656.value"
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "27",
+    "target": "27\tPart 705.out ↔ Part 661.in"
+  },
+  {
+    "key": "TC05",
+    "network": 1858,
+    "uid": "290",
+    "target": "290\tPart 289.out ↔ Part 219.in4"
+  },
+  {
+    "key": "TC05",
+    "network": 1658,
+    "uid": "21",
+    "target": "21\tPart 193.eno ↔ Part 23.in"
+  }
+]

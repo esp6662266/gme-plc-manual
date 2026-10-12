@@ -1,0 +1,3556 @@
+{
+  "catalog_id": "TC05",
+  "selection_key": "TC05",
+  "priority_key": null,
+  "type": "sensor",
+  "draft": "catalog-sources/TC05-DOTS-DRAFT.md",
+  "draft_sha256": "593bf66079341f5c22fa181fb4790069343cd13019f99470b24af8f61e7d383c",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1732,
+      "part",
+      "85"
+    ],
+    [
+      1732,
+      "wire",
+      "87"
+    ],
+    [
+      1732,
+      "wire",
+      "79"
+    ],
+    [
+      1732,
+      "wire",
+      "86"
+    ],
+    [
+      1732,
+      "wire",
+      "80"
+    ],
+    [
+      1732,
+      "wire",
+      "81"
+    ],
+    [
+      1732,
+      "wire",
+      "82"
+    ],
+    [
+      1732,
+      "wire",
+      "83"
+    ],
+    [
+      1732,
+      "wire",
+      "84"
+    ],
+    [
+      1732,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "part",
+      "22"
+    ],
+    [
+      1071,
+      "part",
+      "27"
+    ],
+    [
+      1071,
+      "part",
+      "34"
+    ],
+    [
+      1071,
+      "part",
+      "41"
+    ],
+    [
+      1071,
+      "part",
+      "48"
+    ],
+    [
+      1071,
+      "part",
+      "49"
+    ],
+    [
+      1071,
+      "part",
+      "50"
+    ],
+    [
+      1071,
+      "part",
+      "51"
+    ],
+    [
+      1071,
+      "part",
+      "72"
+    ],
+    [
+      1071,
+      "part",
+      "73"
+    ],
+    [
+      1071,
+      "part",
+      "74"
+    ],
+    [
+      1071,
+      "part",
+      "75"
+    ],
+    [
+      1071,
+      "part",
+      "96"
+    ],
+    [
+      1071,
+      "part",
+      "97"
+    ],
+    [
+      1071,
+      "part",
+      "98"
+    ],
+    [
+      1071,
+      "part",
+      "99"
+    ],
+    [
+      1071,
+      "part",
+      "122"
+    ],
+    [
+      1071,
+      "part",
+      "123"
+    ],
+    [
+      1071,
+      "part",
+      "144"
+    ],
+    [
+      1071,
+      "part",
+      "145"
+    ],
+    [
+      1071,
+      "part",
+      "146"
+    ],
+    [
+      1071,
+      "part",
+      "147"
+    ],
+    [
+      1071,
+      "part",
+      "168"
+    ],
+    [
+      1071,
+      "part",
+      "169"
+    ],
+    [
+      1071,
+      "part",
+      "170"
+    ],
+    [
+      1071,
+      "part",
+      "171"
+    ],
+    [
+      1071,
+      "part",
+      "84"
+    ],
+    [
+      1071,
+      "part",
+      "194"
+    ],
+    [
+      1071,
+      "wire",
+      "21"
+    ],
+    [
+      1071,
+      "wire",
+      "23"
+    ],
+    [
+      1071,
+      "wire",
+      "33"
+    ],
+    [
+      1071,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "wire",
+      "31"
+    ],
+    [
+      1071,
+      "wire",
+      "40"
+    ],
+    [
+      1071,
+      "wire",
+      "32"
+    ],
+    [
+      1071,
+      "wire",
+      "38"
+    ],
+    [
+      1071,
+      "wire",
+      "47"
+    ],
+    [
+      1071,
+      "wire",
+      "39"
+    ],
+    [
+      1071,
+      "wire",
+      "45"
+    ],
+    [
+      1071,
+      "wire",
+      "46"
+    ],
+    [
+      1071,
+      "wire",
+      "61"
+    ],
+    [
+      1071,
+      "wire",
+      "62"
+    ],
+    [
+      1071,
+      "wire",
+      "63"
+    ],
+    [
+      1071,
+      "wire",
+      "64"
+    ],
+    [
+      1071,
+      "wire",
+      "65"
+    ],
+    [
+      1071,
+      "wire",
+      "66"
+    ],
+    [
+      1071,
+      "wire",
+      "67"
+    ],
+    [
+      1071,
+      "wire",
+      "68"
+    ],
+    [
+      1071,
+      "wire",
+      "69"
+    ],
+    [
+      1071,
+      "wire",
+      "70"
+    ],
+    [
+      1071,
+      "wire",
+      "71"
+    ],
+    [
+      1071,
+      "wire",
+      "85"
+    ],
+    [
+      1071,
+      "wire",
+      "86"
+    ],
+    [
+      1071,
+      "wire",
+      "87"
+    ],
+    [
+      1071,
+      "wire",
+      "88"
+    ],
+    [
+      1071,
+      "wire",
+      "89"
+    ],
+    [
+      1071,
+      "wire",
+      "90"
+    ],
+    [
+      1071,
+      "wire",
+      "91"
+    ],
+    [
+      1071,
+      "wire",
+      "92"
+    ],
+    [
+      1071,
+      "wire",
+      "93"
+    ],
+    [
+      1071,
+      "wire",
+      "94"
+    ],
+    [
+      1071,
+      "wire",
+      "95"
+    ],
+    [
+      1071,
+      "wire",
+      "109"
+    ],
+    [
+      1071,
+      "wire",
+      "110"
+    ],
+    [
+      1071,
+      "wire",
+      "111"
+    ],
+    [
+      1071,
+      "wire",
+      "112"
+    ],
+    [
+      1071,
+      "wire",
+      "113"
+    ],
+    [
+      1071,
+      "wire",
+      "114"
+    ],
+    [
+      1071,
+      "wire",
+      "115"
+    ],
+    [
+      1071,
+      "wire",
+      "116"
+    ],
+    [
+      1071,
+      "wire",
+      "117"
+    ],
+    [
+      1071,
+      "wire",
+      "118"
+    ],
+    [
+      1071,
+      "wire",
+      "119"
+    ],
+    [
+      1071,
+      "wire",
+      "139"
+    ],
+    [
+      1071,
+      "wire",
+      "140"
+    ],
+    [
+      1071,
+      "wire",
+      "141"
+    ],
+    [
+      1071,
+      "wire",
+      "142"
+    ],
+    [
+      1071,
+      "wire",
+      "143"
+    ],
+    [
+      1071,
+      "wire",
+      "157"
+    ],
+    [
+      1071,
+      "wire",
+      "158"
+    ],
+    [
+      1071,
+      "wire",
+      "159"
+    ],
+    [
+      1071,
+      "wire",
+      "160"
+    ],
+    [
+      1071,
+      "wire",
+      "161"
+    ],
+    [
+      1071,
+      "wire",
+      "162"
+    ],
+    [
+      1071,
+      "wire",
+      "163"
+    ],
+    [
+      1071,
+      "wire",
+      "164"
+    ],
+    [
+      1071,
+      "wire",
+      "165"
+    ],
+    [
+      1071,
+      "wire",
+      "166"
+    ],
+    [
+      1071,
+      "wire",
+      "167"
+    ],
+    [
+      1071,
+      "wire",
+      "181"
+    ],
+    [
+      1071,
+      "wire",
+      "182"
+    ],
+    [
+      1071,
+      "wire",
+      "183"
+    ],
+    [
+      1071,
+      "wire",
+      "184"
+    ],
+    [
+      1071,
+      "wire",
+      "185"
+    ],
+    [
+      1071,
+      "wire",
+      "186"
+    ],
+    [
+      1071,
+      "wire",
+      "187"
+    ],
+    [
+      1071,
+      "wire",
+      "188"
+    ],
+    [
+      1071,
+      "wire",
+      "189"
+    ],
+    [
+      1071,
+      "wire",
+      "190"
+    ],
+    [
+      1071,
+      "wire",
+      "108"
+    ],
+    [
+      1071,
+      "wire",
+      "191"
+    ],
+    [
+      1071,
+      "wire",
+      "132"
+    ],
+    [
+      1071,
+      "wire",
+      "195"
+    ],
+    [
+      1071,
+      "wire",
+      "156"
+    ],
+    [
+      1071,
+      "wire",
+      "196"
+    ],
+    [
+      1071,
+      "wire",
+      "197"
+    ],
+    [
+      1981,
+      "part",
+      "557"
+    ],
+    [
+      1981,
+      "part",
+      "438"
+    ],
+    [
+      1981,
+      "part",
+      "441"
+    ],
+    [
+      1981,
+      "part",
+      "444"
+    ],
+    [
+      1981,
+      "part",
+      "437"
+    ],
+    [
+      1981,
+      "part",
+      "450"
+    ],
+    [
+      1981,
+      "part",
+      "559"
+    ],
+    [
+      1981,
+      "part",
+      "455"
+    ],
+    [
+      1981,
+      "part",
+      "459"
+    ],
+    [
+      1981,
+      "part",
+      "462"
+    ],
+    [
+      1981,
+      "part",
+      "465"
+    ],
+    [
+      1981,
+      "part",
+      "458"
+    ],
+    [
+      1981,
+      "part",
+      "471"
+    ],
+    [
+      1981,
+      "part",
+      "561"
+    ],
+    [
+      1981,
+      "part",
+      "22"
+    ],
+    [
+      1981,
+      "part",
+      "476"
+    ],
+    [
+      1981,
+      "part",
+      "563"
+    ],
+    [
+      1981,
+      "part",
+      "565"
+    ],
+    [
+      1981,
+      "part",
+      "484"
+    ],
+    [
+      1981,
+      "part",
+      "567"
+    ],
+    [
+      1981,
+      "part",
+      "488"
+    ],
+    [
+      1981,
+      "wire",
+      "569"
+    ],
+    [
+      1981,
+      "wire",
+      "515"
+    ],
+    [
+      1981,
+      "wire",
+      "558"
+    ],
+    [
+      1981,
+      "wire",
+      "516"
+    ],
+    [
+      1981,
+      "wire",
+      "517"
+    ],
+    [
+      1981,
+      "wire",
+      "518"
+    ],
+    [
+      1981,
+      "wire",
+      "519"
+    ],
+    [
+      1981,
+      "wire",
+      "520"
+    ],
+    [
+      1981,
+      "wire",
+      "521"
+    ],
+    [
+      1981,
+      "wire",
+      "522"
+    ],
+    [
+      1981,
+      "wire",
+      "523"
+    ],
+    [
+      1981,
+      "wire",
+      "524"
+    ],
+    [
+      1981,
+      "wire",
+      "525"
+    ],
+    [
+      1981,
+      "wire",
+      "526"
+    ],
+    [
+      1981,
+      "wire",
+      "527"
+    ],
+    [
+      1981,
+      "wire",
+      "528"
+    ],
+    [
+      1981,
+      "wire",
+      "560"
+    ],
+    [
+      1981,
+      "wire",
+      "530"
+    ],
+    [
+      1981,
+      "wire",
+      "532"
+    ],
+    [
+      1981,
+      "wire",
+      "533"
+    ],
+    [
+      1981,
+      "wire",
+      "534"
+    ],
+    [
+      1981,
+      "wire",
+      "535"
+    ],
+    [
+      1981,
+      "wire",
+      "536"
+    ],
+    [
+      1981,
+      "wire",
+      "537"
+    ],
+    [
+      1981,
+      "wire",
+      "538"
+    ],
+    [
+      1981,
+      "wire",
+      "539"
+    ],
+    [
+      1981,
+      "wire",
+      "540"
+    ],
+    [
+      1981,
+      "wire",
+      "541"
+    ],
+    [
+      1981,
+      "wire",
+      "542"
+    ],
+    [
+      1981,
+      "wire",
+      "543"
+    ],
+    [
+      1981,
+      "wire",
+      "544"
+    ],
+    [
+      1981,
+      "wire",
+      "25"
+    ],
+    [
+      1981,
+      "wire",
+      "27"
+    ],
+    [
+      1981,
+      "wire",
+      "26"
+    ],
+    [
+      1981,
+      "wire",
+      "546"
+    ],
+    [
+      1981,
+      "wire",
+      "548"
+    ],
+    [
+      1981,
+      "wire",
+      "564"
+    ],
+    [
+      1981,
+      "wire",
+      "549"
+    ],
+    [
+      1981,
+      "wire",
+      "566"
+    ],
+    [
+      1981,
+      "wire",
+      "551"
+    ],
+    [
+      1981,
+      "wire",
+      "552"
+    ],
+    [
+      1981,
+      "wire",
+      "568"
+    ],
+    [
+      1981,
+      "wire",
+      "554"
+    ],
+    [
+      1950,
+      "part",
+      "691"
+    ],
+    [
+      1950,
+      "part",
+      "693"
+    ],
+    [
+      1950,
+      "part",
+      "695"
+    ],
+    [
+      1950,
+      "part",
+      "697"
+    ],
+    [
+      1950,
+      "part",
+      "699"
+    ],
+    [
+      1950,
+      "part",
+      "701"
+    ],
+    [
+      1950,
+      "part",
+      "703"
+    ],
+    [
+      1950,
+      "part",
+      "707"
+    ],
+    [
+      1950,
+      "part",
+      "653"
+    ],
+    [
+      1950,
+      "part",
+      "656"
+    ],
+    [
+      1950,
+      "part",
+      "705"
+    ],
+    [
+      1950,
+      "part",
+      "661"
+    ],
+    [
+      1950,
+      "wire",
+      "708"
+    ],
+    [
+      1950,
+      "wire",
+      "674"
+    ],
+    [
+      1950,
+      "wire",
+      "692"
+    ],
+    [
+      1950,
+      "wire",
+      "675"
+    ],
+    [
+      1950,
+      "wire",
+      "694"
+    ],
+    [
+      1950,
+      "wire",
+      "676"
+    ],
+    [
+      1950,
+      "wire",
+      "25"
+    ],
+    [
+      1950,
+      "wire",
+      "677"
+    ],
+    [
+      1950,
+      "wire",
+      "698"
+    ],
+    [
+      1950,
+      "wire",
+      "678"
+    ],
+    [
+      1950,
+      "wire",
+      "700"
+    ],
+    [
+      1950,
+      "wire",
+      "679"
+    ],
+    [
+      1950,
+      "wire",
+      "702"
+    ],
+    [
+      1950,
+      "wire",
+      "680"
+    ],
+    [
+      1950,
+      "wire",
+      "704"
+    ],
+    [
+      1950,
+      "wire",
+      "683"
+    ],
+    [
+      1950,
+      "wire",
+      "684"
+    ],
+    [
+      1950,
+      "wire",
+      "685"
+    ],
+    [
+      1950,
+      "wire",
+      "686"
+    ],
+    [
+      1950,
+      "wire",
+      "687"
+    ],
+    [
+      1950,
+      "wire",
+      "27"
+    ],
+    [
+      1950,
+      "wire",
+      "689"
+    ],
+    [
+      1858,
+      "part",
+      "273"
+    ],
+    [
+      1858,
+      "part",
+      "275"
+    ],
+    [
+      1858,
+      "part",
+      "277"
+    ],
+    [
+      1858,
+      "part",
+      "279"
+    ],
+    [
+      1858,
+      "part",
+      "281"
+    ],
+    [
+      1858,
+      "part",
+      "283"
+    ],
+    [
+      1858,
+      "part",
+      "285"
+    ],
+    [
+      1858,
+      "part",
+      "287"
+    ],
+    [
+      1858,
+      "part",
+      "289"
+    ],
+    [
+      1858,
+      "part",
+      "291"
+    ],
+    [
+      1858,
+      "part",
+      "293"
+    ],
+    [
+      1858,
+      "part",
+      "295"
+    ],
+    [
+      1858,
+      "part",
+      "297"
+    ],
+    [
+      1858,
+      "part",
+      "299"
+    ],
+    [
+      1858,
+      "part",
+      "301"
+    ],
+    [
+      1858,
+      "part",
+      "303"
+    ],
+    [
+      1858,
+      "part",
+      "22"
+    ],
+    [
+      1858,
+      "part",
+      "219"
+    ],
+    [
+      1858,
+      "part",
+      "305"
+    ],
+    [
+      1858,
+      "part",
+      "213"
+    ],
+    [
+      1858,
+      "part",
+      "232"
+    ],
+    [
+      1858,
+      "wire",
+      "307"
+    ],
+    [
+      1858,
+      "wire",
+      "251"
+    ],
+    [
+      1858,
+      "wire",
+      "274"
+    ],
+    [
+      1858,
+      "wire",
+      "252"
+    ],
+    [
+      1858,
+      "wire",
+      "276"
+    ],
+    [
+      1858,
+      "wire",
+      "253"
+    ],
+    [
+      1858,
+      "wire",
+      "278"
+    ],
+    [
+      1858,
+      "wire",
+      "254"
+    ],
+    [
+      1858,
+      "wire",
+      "280"
+    ],
+    [
+      1858,
+      "wire",
+      "255"
+    ],
+    [
+      1858,
+      "wire",
+      "282"
+    ],
+    [
+      1858,
+      "wire",
+      "256"
+    ],
+    [
+      1858,
+      "wire",
+      "284"
+    ],
+    [
+      1858,
+      "wire",
+      "257"
+    ],
+    [
+      1858,
+      "wire",
+      "286"
+    ],
+    [
+      1858,
+      "wire",
+      "258"
+    ],
+    [
+      1858,
+      "wire",
+      "288"
+    ],
+    [
+      1858,
+      "wire",
+      "259"
+    ],
+    [
+      1858,
+      "wire",
+      "290"
+    ],
+    [
+      1858,
+      "wire",
+      "260"
+    ],
+    [
+      1858,
+      "wire",
+      "292"
+    ],
+    [
+      1858,
+      "wire",
+      "261"
+    ],
+    [
+      1858,
+      "wire",
+      "294"
+    ],
+    [
+      1858,
+      "wire",
+      "262"
+    ],
+    [
+      1858,
+      "wire",
+      "296"
+    ],
+    [
+      1858,
+      "wire",
+      "263"
+    ],
+    [
+      1858,
+      "wire",
+      "298"
+    ],
+    [
+      1858,
+      "wire",
+      "264"
+    ],
+    [
+      1858,
+      "wire",
+      "300"
+    ],
+    [
+      1858,
+      "wire",
+      "265"
+    ],
+    [
+      1858,
+      "wire",
+      "302"
+    ],
+    [
+      1858,
+      "wire",
+      "266"
+    ],
+    [
+      1858,
+      "wire",
+      "304"
+    ],
+    [
+      1858,
+      "wire",
+      "21"
+    ],
+    [
+      1858,
+      "wire",
+      "24"
+    ],
+    [
+      1858,
+      "wire",
+      "267"
+    ],
+    [
+      1858,
+      "wire",
+      "268"
+    ],
+    [
+      1858,
+      "wire",
+      "306"
+    ],
+    [
+      1858,
+      "wire",
+      "270"
+    ],
+    [
+      1858,
+      "wire",
+      "272"
+    ],
+    [
+      1658,
+      "part",
+      "255"
+    ],
+    [
+      1658,
+      "part",
+      "258"
+    ],
+    [
+      1658,
+      "part",
+      "161"
+    ],
+    [
+      1658,
+      "part",
+      "164"
+    ],
+    [
+      1658,
+      "part",
+      "167"
+    ],
+    [
+      1658,
+      "part",
+      "170"
+    ],
+    [
+      1658,
+      "part",
+      "174"
+    ],
+    [
+      1658,
+      "part",
+      "177"
+    ],
+    [
+      1658,
+      "part",
+      "181"
+    ],
+    [
+      1658,
+      "part",
+      "185"
+    ],
+    [
+      1658,
+      "part",
+      "190"
+    ],
+    [
+      1658,
+      "part",
+      "259"
+    ],
+    [
+      1658,
+      "part",
+      "47"
+    ],
+    [
+      1658,
+      "part",
+      "193"
+    ],
+    [
+      1658,
+      "part",
+      "23"
+    ],
+    [
+      1658,
+      "wire",
+      "257"
+    ],
+    [
+      1658,
+      "wire",
+      "220"
+    ],
+    [
+      1658,
+      "wire",
+      "256"
+    ],
+    [
+      1658,
+      "wire",
+      "30"
+    ],
+    [
+      1658,
+      "wire",
+      "31"
+    ],
+    [
+      1658,
+      "wire",
+      "25"
+    ],
+    [
+      1658,
+      "wire",
+      "27"
+    ],
+    [
+      1658,
+      "wire",
+      "28"
+    ],
+    [
+      1658,
+      "wire",
+      "26"
+    ],
+    [
+      1658,
+      "wire",
+      "225"
+    ],
+    [
+      1658,
+      "wire",
+      "227"
+    ],
+    [
+      1658,
+      "wire",
+      "226"
+    ],
+    [
+      1658,
+      "wire",
+      "228"
+    ],
+    [
+      1658,
+      "wire",
+      "230"
+    ],
+    [
+      1658,
+      "wire",
+      "229"
+    ],
+    [
+      1658,
+      "wire",
+      "231"
+    ],
+    [
+      1658,
+      "wire",
+      "232"
+    ],
+    [
+      1658,
+      "wire",
+      "234"
+    ],
+    [
+      1658,
+      "wire",
+      "233"
+    ],
+    [
+      1658,
+      "wire",
+      "235"
+    ],
+    [
+      1658,
+      "wire",
+      "237"
+    ],
+    [
+      1658,
+      "wire",
+      "236"
+    ],
+    [
+      1658,
+      "wire",
+      "238"
+    ],
+    [
+      1658,
+      "wire",
+      "239"
+    ],
+    [
+      1658,
+      "wire",
+      "241"
+    ],
+    [
+      1658,
+      "wire",
+      "240"
+    ],
+    [
+      1658,
+      "wire",
+      "242"
+    ],
+    [
+      1658,
+      "wire",
+      "243"
+    ],
+    [
+      1658,
+      "wire",
+      "245"
+    ],
+    [
+      1658,
+      "wire",
+      "244"
+    ],
+    [
+      1658,
+      "wire",
+      "246"
+    ],
+    [
+      1658,
+      "wire",
+      "247"
+    ],
+    [
+      1658,
+      "wire",
+      "36"
+    ],
+    [
+      1658,
+      "wire",
+      "37"
+    ],
+    [
+      1658,
+      "wire",
+      "35"
+    ],
+    [
+      1658,
+      "wire",
+      "38"
+    ],
+    [
+      1658,
+      "wire",
+      "39"
+    ],
+    [
+      1658,
+      "wire",
+      "48"
+    ],
+    [
+      1658,
+      "wire",
+      "49"
+    ],
+    [
+      1658,
+      "wire",
+      "252"
+    ],
+    [
+      1658,
+      "wire",
+      "21"
+    ],
+    [
+      1658,
+      "wire",
+      "253"
+    ],
+    [
+      1658,
+      "wire",
+      "22"
+    ],
+    [
+      1659,
+      "part",
+      "171"
+    ],
+    [
+      1659,
+      "part",
+      "162"
+    ],
+    [
+      1659,
+      "wire",
+      "173"
+    ],
+    [
+      1659,
+      "wire",
+      "168"
+    ],
+    [
+      1659,
+      "wire",
+      "172"
+    ],
+    [
+      1659,
+      "wire",
+      "169"
+    ],
+    [
+      1659,
+      "wire",
+      "170"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "호출EN",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "86",
+      "label": "OFF→66.en",
+      "boundary": "비반전OFF 원문보존"
+    },
+    {
+      "signal": "IN0",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "80",
+      "label": "ON→IN0",
+      "boundary": "호출과별도"
+    },
+    {
+      "signal": "원시 입력",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "81",
+      "label": "IW260:P→Analog_input",
+      "boundary": "HMI미러와별도"
+    },
+    {
+      "signal": "계수",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "82",
+      "label": "Coeff→CRef",
+      "boundary": "현재값미확정"
+    },
+    {
+      "signal": "영점",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "83",
+      "label": "Zero→CRef",
+      "boundary": "현행교정미확정"
+    },
+    {
+      "signal": "환산 결과",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "84",
+      "label": "OutValue→Temp_TC05",
+      "boundary": "OFF호출/갱신별도"
+    },
+    {
+      "signal": "OFR",
+      "network": 1732,
+      "kind": "wire",
+      "uid": "24",
+      "label": "Out_of_range→X20.3",
+      "boundary": "온도S/R과별도"
+    },
+    {
+      "signal": "미러 선행",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "33",
+      "label": "Move22.eno→27.en",
+      "boundary": "독립환산아님"
+    },
+    {
+      "signal": "미러 입력",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "31",
+      "label": "IW260 SAM=None→Move27",
+      "boundary": "Peripherie와분리"
+    },
+    {
+      "signal": "미러 저장",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "32",
+      "label": "Move27→Word26",
+      "boundary": "HMI INT26설정과별도"
+    },
+    {
+      "signal": "고온 비교",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "532",
+      "label": "Temp_TC05→Gt459",
+      "boundary": "공유MAX/120/-60"
+    },
+    {
+      "signal": "공유 임계",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "533",
+      "label": "MAX→Gt459.in2",
+      "boundary": "현재승인값미확정"
+    },
+    {
+      "signal": "경보 지연",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "541",
+      "label": "OR458→Sd471/Contact561",
+      "boundary": "T77 1분"
+    },
+    {
+      "signal": "서비스 조건",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "25",
+      "label": "T77Contact→ServiceBitContact",
+      "boundary": "TC04에는없는직렬"
+    },
+    {
+      "signal": "서비스 비트",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "27",
+      "label": "M1000.0→22.operand",
+      "boundary": "비반전·Writer미확정"
+    },
+    {
+      "signal": "래치 Set",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "26",
+      "label": "ServiceBit→S476",
+      "boundary": "현재값별도"
+    },
+    {
+      "signal": "래치 Reset",
+      "network": 1981,
+      "kind": "wire",
+      "uid": "568",
+      "label": "ON/RESET/기존MAX→R488",
+      "boundary": "자동온도히스테리시스아님"
+    },
+    {
+      "signal": "FN01 소비",
+      "network": 1950,
+      "kind": "wire",
+      "uid": "676",
+      "label": "MAX_TC05→Contact695",
+      "boundary": "TC05전용팬출력아님"
+    },
+    {
+      "signal": "FN01 합류",
+      "network": 1950,
+      "kind": "wire",
+      "uid": "25",
+      "label": "Contact695→OR707.in2",
+      "boundary": "공유예고장"
+    },
+    {
+      "signal": "팬 지연",
+      "network": 1950,
+      "kind": "wire",
+      "uid": "685",
+      "label": "S5T1H30M→Sd656.value",
+      "boundary": "T77와별도"
+    },
+    {
+      "signal": "팬 정지 요청",
+      "network": 1950,
+      "kind": "wire",
+      "uid": "27",
+      "label": "T130Contact→LocalStop",
+      "boundary": "실제출력복구미확정"
+    },
+    {
+      "signal": "BR01 소비",
+      "network": 1858,
+      "kind": "wire",
+      "uid": "290",
+      "label": "MAX_TC05→OR219.in4",
+      "boundary": "시작래치Reset·밸브별도"
+    },
+    {
+      "signal": "OFR 생성",
+      "network": 1658,
+      "kind": "wire",
+      "uid": "21",
+      "label": "Move−9999.eno→Coil",
+      "boundary": "실행값미확정"
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0047-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0605-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0611-IdentXmlPart.xml",
+    "sources/decoded-original/0612-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0680-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0683-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/live_index.json",
+    "sources/hmi_plc_tags.csv",
+    "assets/catalog-circuits/Electrical_Rev2-P080.png",
+    "assets/catalog-circuits/Electrical_Rev2-P105.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P033.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P058.png"
+  ],
+  "signal_reference": {
+    "id": "TC05",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC05 · Peripherie Int 원시입력",
+        "addresses": [
+          "%IW260:P"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "74",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.TC_05 · Word/HMI INT26 원시미러",
+        "addresses": [
+          "DB13.DBW26"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "29",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Temp_TC05 · 환산Int",
+        "addresses": [
+          "DB1.DBW118"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "77",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_TC05 · 현재교정미확정",
+        "addresses": [
+          "DB4.DBW112"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "76",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_TC05 · 현재값미취득",
+        "addresses": [
+          "DB4.DBW114"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "75",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 비반전 호출EN",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "72",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · IN0/경보전원",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "73",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "TC05_OFR · MAX래치와별도",
+        "addresses": [
+          "DB3.DBX20.3"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "23",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "max",
+        "role": "requests",
+        "name": "TC04_TC05_MAX_ALL · 공유임계",
+        "addresses": [
+          "DB1.DBW84"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "501",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 비반전 Set직렬",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "28",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "alarm",
+        "role": "alarms",
+        "name": "MAX_TC05_TEMP · 고유S/R",
+        "addresses": [
+          "DB3.DBX9.3"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "509",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t77",
+        "role": "responses",
+        "name": "Tag_105 · 1분경보타이머",
+        "addresses": [
+          "T77"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "507",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM · 정상복구와별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "510",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "pre",
+        "role": "alarms",
+        "name": "Prealarms_FN01 · 관련팬소유",
+        "addresses": [
+          "DB3.DBX17.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "669",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t130",
+        "role": "responses",
+        "name": "Tag_122 · 공유90분팬타이머",
+        "addresses": [
+          "T130"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "671",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "stop",
+        "role": "responses",
+        "name": "Stop_Fan_FN01 · Local BO2",
+        "addresses": [
+          "Local Bool BO2"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "673",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "TC05",
+    "timers": [
+      {
+        "name": "Tag_105 T77",
+        "network": 1981,
+        "uid": "471",
+        "preset": "S5T#1M"
+      },
+      {
+        "name": "Tag_122 T130 · FN01 공유",
+        "network": 1950,
+        "uid": "656",
+        "preset": "S5T#1H_30M"
+      }
+    ],
+    "alarms": [
+      {
+        "name": "TC05_OFR",
+        "addresses": [
+          "DB3.DBX20.3"
+        ],
+        "actions": [
+          {
+            "network": 1732,
+            "location_kind": "wire",
+            "uid": "24"
+          }
+        ]
+      },
+      {
+        "name": "MAX_TC05_TEMP",
+        "addresses": [
+          "DB3.DBX9.3"
+        ],
+        "actions": [
+          {
+            "network": 1981,
+            "location_kind": "wire",
+            "uid": "26"
+          },
+          {
+            "network": 1981,
+            "location_kind": "wire",
+            "uid": "568"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1732,
+      1071,
+      1981,
+      1950,
+      1858,
+      1658,
+      1659
+    ],
+    "chain": [
+      "OFF EN/ON IN0→IW260:P 환산→Temp_TC05/OFR",
+      "원시IW260→Word26/HMI INT26",
+      "ON비교→T77→비반전ServiceBit→Set·ON RESET→Reset",
+      "FN01 공유90분/BR01시작래치·현장복구별도"
+    ],
+    "repair": [
+      "IW260:P/IW260,DB13W26,DB1W118,HMI I_TC_05 주소·표시·갱신시각",
+      "OFF/ON 및 FC63 호출,raw/Zero/Coeff/OutValue,마지막 갱신시각",
+      "Temp/공유MAX,120/-60 비교,T77 경과,ServiceBit,Set/Reset 상태",
+      "raw·OFR·EN/IN0·계수,79KA2 전원/출력/기기식별의 승인 수집자료",
+      "DB3X9.3,Prealarms_FN01,T130,Stop_Fan_FN01,Start_Burner 및외부상태의 동시각",
+      "RESET_ALLARM/TC05 S·R가지/원인 지속/ServiceBit·T77 타임라인"
+    ],
+    "pending": [
+      "현재 CPU/호출·OFF/ON/ServiceBit Writer와현행값·교정/계수·승인보호임계 미확정",
+      "OEM250/350℃·IW260주석TC04혼재·PEW260/262중복입력 미해소",
+      "PT1003선 대비2심·CVV-S/KX 구간/실물명판/양끝단자 필요",
+      "T77 1분경보 대 FN01 T13090분·BR01 시작래치 소유분리",
+      "startup CLR뒤 S OFF 원문보존·현재OFF=false 주장안함",
+      "OFR/−9999·HMIACK·RESET·원인제거·현장복구 분리",
+      "시공58 검은8_8 숨은경로 비채택·보호설정/강제입력/운전시험 없음",
+      "TIA/실제CPU/실물/현장복구 미수행"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "TC05",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "정적/UI/게시와현장별도"
+    ],
+    "existing_pending": [
+      "현재 CPU/호출·OFF/ON/ServiceBit Writer와현행값·교정/계수·승인보호임계 미확정",
+      "OEM250/350℃·IW260주석TC04혼재·PEW260/262중복입력 미해소",
+      "PT1003선 대비2심·CVV-S/KX 구간/실물명판/양끝단자 필요",
+      "T77 1분경보 대 FN01 T13090분·BR01 시작래치 소유분리",
+      "startup CLR뒤 S OFF 원문보존·현재OFF=false 주장안함",
+      "OFR/−9999·HMIACK·RESET·원인제거·현장복구 분리",
+      "시공58 검은8_8 숨은경로 비채택·보호설정/강제입력/운전시험 없음",
+      "TIA/실제CPU/실물/현장복구 미수행"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "현재 CPU/호출·OFF/ON/ServiceBit Writer와현행값·교정/계수·승인보호임계 미확정",
+        "OEM250/350℃·IW260주석TC04혼재·PEW260/262중복입력 미해소",
+        "PT1003선 대비2심·CVV-S/KX 구간/실물명판/양끝단자 필요",
+        "T77 1분경보 대 FN01 T13090분·BR01 시작래치 소유분리",
+        "startup CLR뒤 S OFF 원문보존·현재OFF=false 주장안함",
+        "OFR/−9999·HMIACK·RESET·원인제거·현장복구 분리",
+        "시공58 검은8_8 숨은경로 비채택·보호설정/강제입력/운전시험 없음",
+        "TIA/실제CPU/실물/현장복구 미수행"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "TC05",
+    "plc_id": "TC05",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "HMI와 PLC 온도 불일치",
+        "observe": "IW260:P/IW260,DB13W26,DB1W118,HMI I_TC_05 주소·표시·갱신시각",
+        "compare": "미러 원시와 환산값,Peripherie와 이미지 접근,통신/스케일 구분",
+        "next": "미러 원시와 환산값,Peripherie와 이미지 접근,통신/스케일 구분",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "환산값 정체",
+        "observe": "OFF/ON 및 FC63 호출,raw/Zero/Coeff/OutValue,마지막 갱신시각",
+        "compare": "OFF EN을 ON으로 임의 수정하지 않음. 리텐션/실행순서 미확정",
+        "next": "OFF EN을 ON으로 임의 수정하지 않음. 리텐션/실행순서 미확정",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "TC04는 경보·TC05는 무경보",
+        "observe": "Temp/공유MAX,120/-60 비교,T77 경과,ServiceBit,Set/Reset 상태",
+        "compare": "ServiceBit 추가 직렬 및고유 채널을 먼저 비교. 비트강제/보호임계 변경 금지",
+        "next": "ServiceBit 추가 직렬 및고유 채널을 먼저 비교. 비트강제/보호임계 변경 금지",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "-9999/OFR 또는 큰 오차",
+        "observe": "raw·OFR·EN/IN0·계수,79KA2 전원/출력/기기식별의 승인 수집자료",
+        "compare": "단선/모듈/범위 불일치 후보를 구분. 접지·활선 측정은 여기서 실행하지 않음",
+        "next": "단선/모듈/범위 불일치 후보를 구분. 접지·활선 측정은 여기서 실행하지 않음",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "온도경보 후 팬/버너 영향",
+        "observe": "DB3X9.3,Prealarms_FN01,T130,Stop_Fan_FN01,Start_Burner 및외부상태의 동시각",
+        "compare": "1분경보와90분팬 타이머,버너 래치Reset 소유를 분리",
+        "next": "1분경보와90분팬 타이머,버너 래치Reset 소유를 분리",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "Reset 후 다시 발생",
+        "observe": "RESET_ALLARM/TC05 S·R가지/원인 지속/ServiceBit·T77 타임라인",
+        "compare": "표시소거와 원인제거/운전복구·재기동을 구분",
+        "next": "표시소거와 원인제거/운전복구·재기동을 구분",
+        "common": "step-symptom-6"
+      }
+    ],
+    "bindings": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC05 · Peripherie Int 원시입력",
+        "addresses": [
+          "%IW260:P"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "74",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.TC_05 · Word/HMI INT26 원시미러",
+        "addresses": [
+          "DB13.DBW26"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "29",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Temp_TC05 · 환산Int",
+        "addresses": [
+          "DB1.DBW118"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "77",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_TC05 · 현재교정미확정",
+        "addresses": [
+          "DB4.DBW112"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "76",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_TC05 · 현재값미취득",
+        "addresses": [
+          "DB4.DBW114"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "75",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 비반전 호출EN",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "72",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · IN0/경보전원",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "73",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "TC05_OFR · MAX래치와별도",
+        "addresses": [
+          "DB3.DBX20.3"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "23",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max",
+        "role": "requests",
+        "name": "TC04_TC05_MAX_ALL · 공유임계",
+        "addresses": [
+          "DB1.DBW84"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "501",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 비반전 Set직렬",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "28",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "alarm",
+        "role": "alarms",
+        "name": "MAX_TC05_TEMP · 고유S/R",
+        "addresses": [
+          "DB3.DBX9.3"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "509",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t77",
+        "role": "responses",
+        "name": "Tag_105 · 1분경보타이머",
+        "addresses": [
+          "T77"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "507",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM · 정상복구와별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "510",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "pre",
+        "role": "alarms",
+        "name": "Prealarms_FN01 · 관련팬소유",
+        "addresses": [
+          "DB3.DBX17.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "669",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t130",
+        "role": "responses",
+        "name": "Tag_122 · 공유90분팬타이머",
+        "addresses": [
+          "T130"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "671",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "stop",
+        "role": "responses",
+        "name": "Stop_Fan_FN01 · Local BO2",
+        "addresses": [
+          "Local Bool BO2"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "673",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "TC05",
+    "name": "TC05 FN01 베어링 온도 관찰",
+    "reference_plc_id": "TC05",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC05 · Peripherie Int 원시입력",
+        "addresses": [
+          "%IW260:P"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "74",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.TC_05 · Word/HMI INT26 원시미러",
+        "addresses": [
+          "DB13.DBW26"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "29",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Temp_TC05 · 환산Int",
+        "addresses": [
+          "DB1.DBW118"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "77",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_TC05 · 현재교정미확정",
+        "addresses": [
+          "DB4.DBW112"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "76",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_TC05 · 현재값미취득",
+        "addresses": [
+          "DB4.DBW114"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "75",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 비반전 호출EN",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "72",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · IN0/경보전원",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "73",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "TC05_OFR · MAX래치와별도",
+        "addresses": [
+          "DB3.DBX20.3"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1732,
+            "oref": "23",
+            "source": "sources/decoded-original/0482-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max",
+        "role": "requests",
+        "name": "TC04_TC05_MAX_ALL · 공유임계",
+        "addresses": [
+          "DB1.DBW84"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "501",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 비반전 Set직렬",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "28",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "alarm",
+        "role": "alarms",
+        "name": "MAX_TC05_TEMP · 고유S/R",
+        "addresses": [
+          "DB3.DBX9.3"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "509",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t77",
+        "role": "responses",
+        "name": "Tag_105 · 1분경보타이머",
+        "addresses": [
+          "T77"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "507",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM · 정상복구와별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1981,
+            "oref": "510",
+            "source": "sources/decoded-original/0529-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "pre",
+        "role": "alarms",
+        "name": "Prealarms_FN01 · 관련팬소유",
+        "addresses": [
+          "DB3.DBX17.0"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "669",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t130",
+        "role": "responses",
+        "name": "Tag_122 · 공유90분팬타이머",
+        "addresses": [
+          "T130"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "671",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "stop",
+        "role": "responses",
+        "name": "Stop_Fan_FN01 · Local BO2",
+        "addresses": [
+          "Local Bool BO2"
+        ],
+        "boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "673",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "HMI와 PLC 온도 불일치",
+        "observe": "IW260:P/IW260,DB13W26,DB1W118,HMI I_TC_05 주소·표시·갱신시각",
+        "compare": "미러 원시와 환산값,Peripherie와 이미지 접근,통신/스케일 구분",
+        "next": "미러 원시와 환산값,Peripherie와 이미지 접근,통신/스케일 구분",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "환산값 정체",
+        "observe": "OFF/ON 및 FC63 호출,raw/Zero/Coeff/OutValue,마지막 갱신시각",
+        "compare": "OFF EN을 ON으로 임의 수정하지 않음. 리텐션/실행순서 미확정",
+        "next": "OFF EN을 ON으로 임의 수정하지 않음. 리텐션/실행순서 미확정",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "TC04는 경보·TC05는 무경보",
+        "observe": "Temp/공유MAX,120/-60 비교,T77 경과,ServiceBit,Set/Reset 상태",
+        "compare": "ServiceBit 추가 직렬 및고유 채널을 먼저 비교. 비트강제/보호임계 변경 금지",
+        "next": "ServiceBit 추가 직렬 및고유 채널을 먼저 비교. 비트강제/보호임계 변경 금지",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "-9999/OFR 또는 큰 오차",
+        "observe": "raw·OFR·EN/IN0·계수,79KA2 전원/출력/기기식별의 승인 수집자료",
+        "compare": "단선/모듈/범위 불일치 후보를 구분. 접지·활선 측정은 여기서 실행하지 않음",
+        "next": "단선/모듈/범위 불일치 후보를 구분. 접지·활선 측정은 여기서 실행하지 않음",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "온도경보 후 팬/버너 영향",
+        "observe": "DB3X9.3,Prealarms_FN01,T130,Stop_Fan_FN01,Start_Burner 및외부상태의 동시각",
+        "compare": "1분경보와90분팬 타이머,버너 래치Reset 소유를 분리",
+        "next": "1분경보와90분팬 타이머,버너 래치Reset 소유를 분리",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "Reset 후 다시 발생",
+        "observe": "RESET_ALLARM/TC05 S·R가지/원인 지속/ServiceBit·T77 타임라인",
+        "compare": "표시소거와 원인제거/운전복구·재기동을 구분",
+        "next": "표시소거와 원인제거/운전복구·재기동을 구분",
+        "common": "step-symptom-6"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "TC05 고유 정적원본·독립관찰",
+      "sources": {
+        "catalog-sources/TC05-DOTS-DRAFT.md": "593bf66079341f5c22fa181fb4790069343cd13019f99470b24af8f61e7d383c"
+      },
+      "circuit_equipment": "TC05 우측 PT100/79KA2·FN01 베어링",
+      "circuit_distinction": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG79 · PDF80",
+          "path": "sources/Electrical_Rev2.pdf#page=80"
+        },
+        {
+          "label": "FG104 · PDF105",
+          "path": "sources/Electrical_Rev2.pdf#page=105"
+        }
+      ],
+      "construction_boundary": "8_23 CVV-S/KX·2심/3선상충·8_8 마스킹보존",
+      "construction_pages": [
+        {
+          "label": "시공·배관 · PDF33",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=33"
+        },
+        {
+          "label": "시공·케이블 · PDF58",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "현재 CPU/호출·OFF/ON/ServiceBit Writer와현행값·교정/계수·승인보호임계 미확정"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1732",
+            "path": "networks/network-1732.html"
+          },
+          {
+            "label": "1071",
+            "path": "networks/network-1071.html"
+          },
+          {
+            "label": "1981",
+            "path": "networks/network-1981.html"
+          },
+          {
+            "label": "1950",
+            "path": "networks/network-1950.html"
+          },
+          {
+            "label": "1858",
+            "path": "networks/network-1858.html"
+          },
+          {
+            "label": "1658",
+            "path": "networks/network-1658.html"
+          },
+          {
+            "label": "1659",
+            "path": "networks/network-1659.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "IW260:P/IW260,DB13W26,DB1W118,HMI I_TC_05 주소·표시·갱신시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "미러 원시와 환산값,Peripherie와 이미지 접근,통신/스케일 구분"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1732",
+              "path": "networks/network-1732.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1981",
+              "path": "networks/network-1981.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "OFF/ON 및 FC63 호출,raw/Zero/Coeff/OutValue,마지막 갱신시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "OFF EN을 ON으로 임의 수정하지 않음. 리텐션/실행순서 미확정"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1732",
+              "path": "networks/network-1732.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1981",
+              "path": "networks/network-1981.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "Temp/공유MAX,120/-60 비교,T77 경과,ServiceBit,Set/Reset 상태"
+            },
+            {
+              "owner": "현재자료",
+              "work": "ServiceBit 추가 직렬 및고유 채널을 먼저 비교. 비트강제/보호임계 변경 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1732",
+              "path": "networks/network-1732.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1981",
+              "path": "networks/network-1981.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "raw·OFR·EN/IN0·계수,79KA2 전원/출력/기기식별의 승인 수집자료"
+            },
+            {
+              "owner": "현재자료",
+              "work": "단선/모듈/범위 불일치 후보를 구분. 접지·활선 측정은 여기서 실행하지 않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1732",
+              "path": "networks/network-1732.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1981",
+              "path": "networks/network-1981.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DB3X9.3,Prealarms_FN01,T130,Stop_Fan_FN01,Start_Burner 및외부상태의 동시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "1분경보와90분팬 타이머,버너 래치Reset 소유를 분리"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1732",
+              "path": "networks/network-1732.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1981",
+              "path": "networks/network-1981.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-6",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "RESET_ALLARM/TC05 S·R가지/원인 지속/ServiceBit·T77 타임라인"
+            },
+            {
+              "owner": "현재자료",
+              "work": "표시소거와 원인제거/운전복구·재기동을 구분"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1732",
+              "path": "networks/network-1732.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1981",
+              "path": "networks/network-1981.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "TC05",
+    "plc_id": "TC05",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-79",
+        "kind": "OEM 전기",
+        "title": "FG79 · PDF80",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 80,
+        "fg": 79,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P080.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev2 17.03.2025 · DATA27.05.2024"
+      },
+      {
+        "id": "oem-104",
+        "kind": "OEM 전기",
+        "title": "FG104 · PDF105",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 105,
+        "fg": 104,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P105.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev2 17.03.2025 · DATA27.05.2024"
+      },
+      {
+        "id": "construction-33",
+        "kind": "시공·배관",
+        "title": "시공·배관 · PDF33",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 33,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P033.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev1 24.11.11 first draft·승인공란"
+      },
+      {
+        "id": "construction-58",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF58",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 58,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P058.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev1 24.11.11 first draft·승인공란"
+      }
+    ],
+    "circuit": {
+      "id": "TC05",
+      "equipment": "TC05 우측 PT100/79KA2·FN01 베어링",
+      "distinction": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+      "paths": [
+        {
+          "signal": "원시 입력",
+          "fg": 79,
+          "drawing": "TC05 PT1003선→79KA2→PEW260",
+          "backup": "IW260:P 원천",
+          "nodes": [
+            "X1:205→79.4→KA2:1",
+            "X1:206→79.5→KA2:3",
+            "X1:207→79.6→KA2:4·실드208→79SCH3",
+            "KA2:7+24Vdc10.7/8−0Vac9.9"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1732,
+              "uid": "74"
+            }
+          ],
+          "check": "PT100/형번2864273 원본표기·시공2심상충"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": 104,
+          "drawing": "KA2 5+/6−→PEW260→10/14·12/16",
+          "backup": "IW260:P /IW260 SAM=None",
+          "nodes": [
+            "79KA2:5+/6−→+/-PEW260·79SCH4",
+            "10I2+와14I3+ 분기·12/16공통",
+            "PEW260/262 TC05설명·18MANA−0Vdc10.6"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1732,
+              "uid": "74"
+            },
+            {
+              "network": 1071,
+              "uid": "28"
+            }
+          ],
+          "check": "250/350℃·중복입력은독립센서증거아님"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": null,
+          "drawing": "시공8_23 CR→FN01 TC05",
+          "backup": "고유TC05위치",
+          "nodes": [
+            "PDF33 행17 Pipe16·CVV-S1.0/2심",
+            "PDF58 8_23 TC/KX2S1.0 spare0",
+            "100→120RBD1→E1700·Adjustment18·LEN69"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1732,
+              "uid": "74"
+            }
+          ],
+          "check": "OEM3선/시공2심·CVV-S/KX상충·8_8 마스킹보존",
+          "sheet_id": "construction-33"
+        }
+      ],
+      "pending": [
+        "현재 CPU/호출·OFF/ON/ServiceBit Writer와현행값·교정/계수·승인보호임계 미확정",
+        "OEM250/350℃·IW260주석TC04혼재·PEW260/262중복입력 미해소",
+        "PT1003선 대비2심·CVV-S/KX 구간/실물명판/양끝단자 필요",
+        "T77 1분경보 대 FN01 T13090분·BR01 시작래치 소유분리",
+        "startup CLR뒤 S OFF 원문보존·현재OFF=false 주장안함",
+        "OFR/−9999·HMIACK·RESET·원인제거·현장복구 분리",
+        "시공58 검은8_8 숨은경로 비채택·보호설정/강제입력/운전시험 없음",
+        "TIA/실제CPU/실물/현장복구 미수행"
+      ]
+    },
+    "warnings": [
+      "OFF EN/ON IN0·ServiceBit 차이",
+      "250/350℃/중복단자·3선2심상충",
+      "FN01/BR01 관련소유·센서모터출력없음"
+    ]
+  },
+  "related_alarm_boundary": "TC05 고유 OFF EN과 ON IN0를 구분합니다. T77 뒤 비반전 ServiceBit 직렬을 보존하며 TC04 조건으로 복제하지 않습니다. 원시Word/HMI 대 환산Int, OFR 대 고온S/R, 1분경보 대 FN01 90분 지연, BR01 시작래치Reset 소유를 분리합니다. PT1003선·시공2심·250/350℃·입력중복의 상충을 보존하고 현재 CPU/실물/교정/복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "TC05, IW260, DB1.DBW118, DB13.DBW26, ServiceBit, T77, 0482"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "TC05 자료",
+        "devices/TC05.html"
+      ]
+    ],
+    "io": [
+      [
+        "고유환산",
+        "networks/network-1732.html"
+      ],
+      [
+        "원시미러",
+        "networks/network-1071.html"
+      ],
+      [
+        "HMI 설정",
+        "sources/hmi_plc_tags.csv"
+      ]
+    ],
+    "control": [
+      [
+        "1732",
+        "networks/network-1732.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1981",
+        "networks/network-1981.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1858",
+        "networks/network-1858.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG79 · PDF80",
+        "sources/Electrical_Rev2.pdf#page=80"
+      ],
+      [
+        "FG104 · PDF105",
+        "sources/Electrical_Rev2.pdf#page=105"
+      ],
+      [
+        "시공·배관 · PDF33",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=33"
+      ],
+      [
+        "시공·케이블 · PDF58",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "alarms": [
+      [
+        "고유T77/ServiceBit",
+        "networks/network-1981.html"
+      ],
+      [
+        "FN01 공유소비",
+        "networks/network-1950.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1732",
+        "networks/network-1732.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1981",
+        "networks/network-1981.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1858",
+        "networks/network-1858.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ]
+    ],
+    "completion": [
+      [
+        "확인 경계",
+        "catalog-guides/TC05.html#completion"
+      ]
+    ]
+  }
+}

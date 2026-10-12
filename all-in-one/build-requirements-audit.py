@@ -65,6 +65,7 @@ for s in specs:
     elif s['kind'] in ['sensor','software']:next_task='미보강 입력/변환/표시 또는 공통 기능의 원본 조건·소비 위치·다른 쓰기를 상세 추적'
     else:next_task='요청→허가→출력→응답→감시→정지/리셋의 직접 원본 경로와 대표 고장 절차 보강'
     if any(n['id']==ident and n['status']=='manual_deferred_user_reported' for n in body_manual['equipment_status_notes']):next_task='EV01~EV90 매뉴얼 작성 제외 · 사용자 제공(2026-10-09). 추가 요청 전 상세 보강 중단; 기존 원본/문서 보존'
+    if ident in ['RO01','RO02','RO03','RO04']:next_task='미사용 산소농도계 · 사용자 제공(2026-10-12). 상세 조사 제외; 기존 원본·RO01/RO02 매뉴얼·게시 이력·기록 보존, 현재 CPU/현장 검증 미실시'
     if ident=='PV04':next_task='사용 계획 없음 · 사용자 제공(2026-10-09). 현재 상세 조사 제외; 과거 도면·백업 보존, 현재 사용 상태 부모 검증 미실시'
     if ident=='SC12':next_task='현장 없음 · 사용자 제공(2026-10-09). 현재 상세 조사 제외; 과거 도면·백업 보존, 부모 현장 검증 미실시'
     if ident=='MV04':next_task='철거됨 · 사용자 제공(2026-10-09). 현재 상세 조사 제외; 과거 도면·백업·기존 불일치 보존, 현장 검증 미실시'
@@ -188,6 +189,7 @@ requirements=[
  ('R12','577개 시험','설계·미실행','기존 가상 부분 시험19개는 과거 기록. 전체577개 실행·TIA·실물 검증과 구분','registers/simulation-tests.csv'),
  ('R13','시뮬레이터','사용자 지시로 중지','별도 작성 요청 전까지 개발·수정·확장·행동 시험 중지. 기존5개 파일 해시 보존','ACTIVE-WORK.md'),
  ('R14','최종 제공·운영 반영','작업 단위 패키지 갱신','링크·원본·브라우저 검증 후 ZIP. SEJIN 운영 배포/현장 PLC 변경은 별도 요청 범위','PACKAGE-NOTES.md')]
+counts['unused_equipment_excluded']=sum(n['status']=='unused_user_reported' for n in body_manual['equipment_status_notes'])
 counts['eligible_history_baseline_devices']=sum(r['detail_level']=='baseline' and not r['lifecycle_note'] for r in rows)
 requirement_rows=[]
 for key,title,status,note,path in requirements:

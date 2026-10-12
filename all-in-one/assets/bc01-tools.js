@@ -186,7 +186,7 @@
     const profile=ctx.data.drawing_workspace.profiles.find(p=>p.key===selectedKey()),paths=profile.circuit.paths;
     const initial=selectedKey()==='P01'&&ctx.context().view==='drawings'&&ctx.context().drawing==='oem-18'?'path-1':ctx.context().section==='circuits'?ctx.context().item:'path-0';
     const pathIndex=paths.findIndex((_,i)=>'path-'+i===initial);
-    body.innerHTML=`<p>좌측은 보존 OEM 전기도면, 우측은 원본 XML의 Part·Wire 연결 자료입니다. TIA 화면 배치·실행 재현은 별도 확인입니다.</p><label>전기 전달 경로<select data-compare-path>${paths.map((p,i)=>`<option value="${i}" ${i===(pathIndex<0?0:pathIndex)?'selected':''}>${esc(p.signal)} · ${esc(p.backup)}</option>`).join('')}</select></label><p data-compare-boundary></p><div class="bc01-source-grid"><section><h3>보존 전기도면</h3><div class="inline-actions"><button data-tool-drawing-zoom="out">축소</button><button data-tool-drawing-zoom="reset">맞추기</button><button data-tool-drawing-zoom="in">확대</button><a data-compare-pdf target="_blank" rel="noopener">원본 PDF ↗</a></div><div class="bc01-source-image"><img data-compare-image alt="선택 경로의 보존 전기도면"></div></section><section><h3>원본 PLC 연결 자료</h3><label>비교할 원본 위치<select data-compare-lad></select></label><a data-compare-original target="_blank" rel="noopener">원본 따로 열기 ↗</a><iframe data-compare-frame title="${esc(targetLabel())} 원본 PLC 연결 자료"></iframe><p data-compare-empty hidden>선택한 경로의 직접 대응 LAD는 확보 자료에 없습니다. 자동으로 연결하지 않습니다.</p></section></div>`;
+    body.innerHTML=`<p>좌측은 보존 도면, 우측은 원본 XML의 Part·Wire 연결 자료입니다. TIA 화면 배치·실행 재현은 별도 확인입니다.</p><label>전기 전달 경로<select data-compare-path>${paths.map((p,i)=>`<option value="${i}" ${i===(pathIndex<0?0:pathIndex)?'selected':''}>${esc(p.signal)} · ${esc(p.backup)}</option>`).join('') || '<option value="">직접 전기 전달 경로 미확보</option>'}</select></label><p data-compare-boundary></p><div class="bc01-source-grid"><section><h3>보존 도면</h3><div class="inline-actions"><button data-tool-drawing-zoom="out">축소</button><button data-tool-drawing-zoom="reset">맞추기</button><button data-tool-drawing-zoom="in">확대</button><a data-compare-pdf target="_blank" rel="noopener">원본 PDF ↗</a></div><div class="bc01-source-image"><img data-compare-image alt="선택 경로의 보존 전기도면"></div></section><section><h3>원본 PLC 연결 자료</h3><label>비교할 원본 위치<select data-compare-lad></select></label><a data-compare-original target="_blank" rel="noopener">원본 따로 열기 ↗</a><iframe data-compare-frame title="${esc(targetLabel())} 원본 PLC 연결 자료"></iframe><p data-compare-empty hidden>선택한 경로의 직접 대응 LAD는 확보 자료에 없습니다. 자동으로 연결하지 않습니다.</p></section></div>`;
     dialog.querySelector('[data-compare-frame]').addEventListener('load',e=>{
       const frame=e.currentTarget;if(!dialog||frame.hidden||dialog.querySelector('[data-compare-frame]')!==frame)return;
       try{const sourceURL=frame.src,doc=frame.contentDocument;if(!doc)return;doc.querySelectorAll('body > header,body > footer').forEach(n=>n.style.setProperty('display','none','important'));
@@ -203,17 +203,18 @@
     changePath();
   }
   function changePath() {
-    const index=Number(dialog.querySelector('[data-compare-path]').value),profile=ctx.data.drawing_workspace.profiles.find(p=>p.key===selectedKey()),path=profile.circuit.paths[index];if(!path)return;
-    const sheet=profile.sheets.find(s=>s.id==='oem-'+path.fg),img=dialog.querySelector('[data-compare-image]');
-    img.src=sheet.image;img.style.width='100%';img.alt=sheet.title;dialog.querySelector('[data-compare-pdf]').href=sheet.source+'#page='+sheet.page;
-    const sourcePair=standard().source_pairs.find(p=>p.signal===path.signal);
+    const index=Number(dialog.querySelector('[data-compare-path]').value),profile=ctx.data.drawing_workspace.profiles.find(p=>p.key===selectedKey()),path=profile.circuit.paths[index];
+    const sheet=path?profile.sheets.find(s=>s.id===(path.sheet_id||'oem-'+path.fg)):profile.sheets[0],img=dialog.querySelector('[data-compare-image]');
+    const pdf=dialog.querySelector('[data-compare-pdf]');img.hidden=!sheet;pdf.hidden=!sheet;
+    if(sheet){img.src=sheet.image;img.style.width='100%';img.alt=sheet.title;pdf.href=sheet.source+'#page='+sheet.page;}else{img.removeAttribute('src');img.alt='보존 도면 미확보';pdf.removeAttribute('href');}
+    const sourcePair=path?standard().source_pairs.find(p=>p.signal===path.signal):standard().source_pairs.find(p=>p.path);
     const pair=sourcePair?.path?[sourcePair.path,sourcePair.label]:null;
-    dialog.querySelector('[data-compare-boundary]').textContent=sourcePair?.boundary || '직접 대응·실물 연결은 미확정입니다.';
+    dialog.querySelector('[data-compare-boundary]').textContent=(path?'':'직접 전기 전달 경로는 미확보입니다. 보존 도면과 원본 위치를 각각 비교하며 실제 배선 대응을 확정하지 않습니다. ')+(sourcePair?.boundary || '직접 대응·실물 연결은 미확정입니다.');
     const options=sources().map(s=>[s.path,s.label||`LAD${s.network} · ${s.kind==='part'?'Part':'Wire'} ${s.uid}`]);
     if(pair){const match=options.find(o=>o[0]===pair[0]);if(match)match[1]=pair[1]+' · '+match[1];else options.unshift(pair);}
     const select=dialog.querySelector('[data-compare-lad]');select.innerHTML=options.map(([path,label])=>`<option value="${esc(path)}">${esc(label)}</option>`).join('');
-    select.disabled=!pair;dialog.querySelector('[data-compare-frame]').hidden=!pair;dialog.querySelector('[data-compare-empty]').hidden=!!pair;dialog.querySelector('[data-compare-original]').hidden=!pair;
-    if(pair){select.value=pair[0];changeLad();}else dialog.querySelector('[data-compare-frame]').removeAttribute('src');
+    select.disabled=!pair;dialog.querySelector('[data-compare-frame]').hidden=!pair;dialog.querySelector('[data-compare-empty]').hidden=!!pair;dialog.querySelector('[data-compare-empty]').textContent=path?'선택한 경로의 직접 대응 LAD는 확보 자료에 없습니다. 자동으로 연결하지 않습니다.':'이 설비의 고유 원본 PLC 연결 자료는 확보되지 않았습니다. 자동으로 배정하지 않습니다.';dialog.querySelector('[data-compare-original]').hidden=!pair;
+    if(pair){select.value=pair[0];changeLad();}else{const frame=dialog.querySelector('[data-compare-frame]');frame.removeAttribute('src');delete frame.dataset.sourceHash;dialog.querySelector('[data-compare-original]').removeAttribute('href');}
   }
   function changeLad() {
     const path=dialog.querySelector('[data-compare-lad]').value;
@@ -284,13 +285,15 @@
     dialog.querySelector('.bc01-report h2').insertAdjacentHTML('afterend',generationHtml);
     status('저장된 기록의 보고서 미리보기입니다. 원본·기록을 변경하지 않습니다.');
   }
-  function printReport() {
+  function preparePrint() {
     const id=dialog.querySelector('[data-report-note]').value,note=ctx.snapshot().notes.find(n=>n.id===id);
     if(JSON.stringify(note)!==reportSnapshot)throw new Error('기록이 변경되었습니다. 보고서 미리보기를 다시 생성하세요.');
+    if(document.body.classList.contains('bc01-printing'))return;
     printRefs=[...dialog.querySelectorAll('.bc01-report-ref')].map(el=>[el,el.open]);
     printRefs.forEach(([el])=>{el.open=true;});
-    document.body.classList.add('bc01-printing');window.print();
+    document.body.classList.add('bc01-printing');
   }
+  function printReport(){preparePrint();window.print();}
   function resetPrint(){document.body.classList.remove('bc01-printing');printRefs.forEach(([el,open])=>{el.open=open;});printRefs=[];}
   api.attach=context=>{ctx=context;};
   api.close=close;
@@ -329,5 +332,9 @@
     else if(e.target.hasAttribute('data-report-note')){reportSnapshot='';dialog.querySelector('[data-report-preview]').innerHTML='';}
   });
   window.addEventListener('storage',e=>{if(dialog&&e.key==='gme-all-in-one-notes-v1'){reportSnapshot='';status('다른 탭에서 기록이 변경되었습니다. 미리보기·비교를 다시 확인하세요.');}});
+  window.addEventListener('beforeprint',()=>{
+    if(mode!=='report'||!dialog?.open||!reportSnapshot)return;
+    try{preparePrint();}catch(error){resetPrint();status(error.message);}
+  });
   window.addEventListener('afterprint',resetPrint);
 })(typeof window!=='undefined'?window:globalThis);

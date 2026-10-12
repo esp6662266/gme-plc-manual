@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "requirements_audit_sha256": "d232e0a651a978d9d4a0b28b1b3bf8062737d749af13ec0b4ece9454a37f52ae",
-  "audit_html_sha256": "99155a0f2e0acc29835055cee189622318634260efc7e00dbf571fe573f04090",
+  "requirements_audit_sha256": "ab4e648abb048d06aa977c393ea3a833e378734fc531ddd07361075f4aa1aedc",
+  "audit_html_sha256": "f67b877d71421aef5659e1f0948755b30ed7192abfb7eba31dd1edec87711755",
   "operator_guide_sha256": "a312621193b0b9a6b41093775fa38792b8af23f6a9d14d8466e2cabfc6164919",
   "source_hashes_checked": 880,
   "equipment_checked": 248,
@@ -13,7 +13,7 @@
     "absent_equipment_excluded": 1,
     "not_planned_equipment_excluded": 1,
     "manual_deferred_equipment_excluded": 87,
-    "eligible_history_equipment": 158,
+    "eligible_history_equipment": 154,
     "current_equipment_detail_scope": 21,
     "body_source_devices": 3,
     "body_symptom_cases": 12,
@@ -38,6 +38,7 @@
     "review_items": 64,
     "field_verified": 0,
     "tia_verified": 0,
+    "unused_equipment_excluded": 4,
     "eligible_history_baseline_devices": 116
   },
   "simulator_files_unchanged": true,

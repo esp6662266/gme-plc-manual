@@ -273,7 +273,8 @@ body_manual=json.loads((ROOT/'registers/body-manual.json').read_text())
 body_report=json.loads((ROOT/'body-manual-verification.json').read_text())
 assert body_report['status']=='passed' and body_report['body_manual_sha256']==hashlib.sha256((ROOT/'registers/body-manual.json').read_bytes()).hexdigest()
 assert data['body_manual_counts']==body_manual['counts']
-assert {n['id'] for n in data['equipment_status_notes']}==({'MV04','SC12','PV04','P22','P23'} | ({'EV'+str(i).zfill(2) for i in range(1,91)} & {v['id'] for v in json.loads((ROOT/'registers/control-spec.json').read_text())['specifications']}))
+assert {n['id'] for n in data['equipment_status_notes']}==({'MV04','SC12','PV04','P22','P23','RO01','RO02','RO03','RO04'} | ({'EV'+str(i).zfill(2) for i in range(1,91)} & {v['id'] for v in json.loads((ROOT/'registers/control-spec.json').read_text())['specifications']}))
+assert {n['id'] for n in data['equipment_status_notes'] if n['status']=='unused_user_reported'}=={'RO01','RO02','RO03','RO04'}
 assert data['project_work_scope']==body_manual['project_work_scope'] and data['project_work_scope']['phase']=='priority23_first' and data['project_work_scope']['full_catalog_role']=='preserved_reference_only'
 assert data['manual_exclusion_ranges']==body_manual['manual_exclusion_ranges'] and data['manual_exclusion_ranges'][0]['start']==1 and data['manual_exclusion_ranges'][0]['end']==90
 assert data['equipment_status_notes']==body_manual['equipment_status_notes'] and data['current_priority_count']==21 and data['excluded_priority']==['P22','P23']

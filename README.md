@@ -1,3 +1,7 @@
+## 현재 작성 소스 v1.21.0 · 온도계10개와 RO 미사용 예외
+
+총58보존매뉴얼(RO01/02포함)·현재대상56+식별3. TC11 PLC/HMI/알람/타이머 미식별 상태와 자료요청을 명시했습니다. 실제게시는 [게시상태](PUBLICATION_STATUS.md)에서 확인합니다.
+
 ## 현재 게시 v1.20.0 · 세 번째10 catalog 설비
 
 총48매뉴얼+식별3보고서. 실제게시는 [게시상태](PUBLICATION_STATUS.md)에서 확인합니다.
@@ -14,7 +18,7 @@
 
 모든 설비 통합 백업·복원은 선택 설비와 관계없이 이 브라우저에 저장한 전체 메모·수리 기록을 JSON 한 파일로 내보냅니다. 메뉴의 “모든 설비 통합 백업·복원”을 열어 다운로드하거나 기존 전체/개별 JSON을 가져옵니다. 복원 미리보기는 설비·새 기록/충돌별 필터와50건 단위 페이지를 제공하며, 필터로 숨긴 선택도 전체 저장 건수에 포함합니다. 같은 설비·같은 ID는 기존 유지/가져온 값 복원/새 ID 복사, 다른 설비·같은 ID는 기존 유지/새 ID 복사를 선택합니다. 새 기록은 기본 추가, 충돌은 기본 기존 유지입니다. 기존에만 있는 기록·초안·미지 필드/행은 유지합니다. 가져온 저장 근거는 그대로 사용하고 이전 저장 근거는 backup_restore_history에 보존합니다. 통합 파일은64MiB/50,000건까지 지원하며 한계를 넘으면 잘라 내지 않고 차단합니다. 다운로드 문자열과 최종 병합 결과도 같은 검사로 확인합니다. P02와 FN04 같은 키를 명칭으로 합치지 않습니다.
 
-[BC01 기반 작업표준](docs/equipment-standard/WORK-STANDARD.md) · [GPT-6.1 Sol / Ultra 시작](docs/equipment-standard/START-GPT61.md) · [현재 진행/다음 작업](EXPANSION-WORK.md) · [공유 스킬](.agents/skills/gme-equipment-rollout/SKILL.md). 우선23행과 전체248 ID를 대조하고 기존 제외를 유지한 2차133개 후보를 관리합니다. 표준 준비와 실제 설비 구현 완료는 구분합니다.
+[BC01 기반 작업표준](docs/equipment-standard/WORK-STANDARD.md) · [GPT-6.1 Sol / Ultra 시작](docs/equipment-standard/START-GPT61.md) · [현재 진행/다음 작업](EXPANSION-WORK.md) · [공유 스킬](.agents/skills/gme-equipment-rollout/SKILL.md). 우선23행과 전체248 ID를 대조하고 기존 제외와 사용자 RO미사용 예외를 반영한 현재2차129개 후보를 관리합니다. 표준 준비와 실제 설비 구현 완료는 구분합니다.
 
 ## 현재 작성 소스: GME All-in-One v1.17.0 · HE01와 식별 보고서 3건
 

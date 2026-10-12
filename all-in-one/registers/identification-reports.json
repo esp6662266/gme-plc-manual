@@ -8244,7 +8244,7 @@
     "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
     "registers/priority-equipment.csv": "953c2c4df5b3a6e40d926d1f0f08f91900b7d6565e4dcd64191b548e438edeba",
     "registers/equipment.json": "7870325dff32bbca90fa34507b301c4aad3347d669fddcd03b910343663996fa",
-    "registers/repair-record-forms.json": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa"
+    "registers/repair-record-forms.json": "aaedc320f1a790205bdf7537b0eeeb5c9814d989d08b4231d6aaf1a1b7ab0efe"
   },
   "PDF_pages_visually_reviewed": [
     {
@@ -8363,5 +8363,14 @@
   "live_cpu": "not_performed",
   "field_recovery": "not_performed",
   "simulator_changes": 0,
-  "PLC_SEJIN_changes": 0
+  "PLC_SEJIN_changes": 0,
+  "source_hash_history": [
+    {
+      "path": "registers/repair-record-forms.json",
+      "previous_sha256": "4d7a3a3acc3a08b3adba25769fb2a6642e13cd5c2abdde44920d026fc41b3caa",
+      "current_sha256": "aaedc320f1a790205bdf7537b0eeeb5c9814d989d08b4231d6aaf1a1b7ab0efe",
+      "updated_on": "2026-10-12",
+      "reason": "RO01-04 user-reported unused scope changes body-manual provenance only; existing23 schemas and unidentified assignments preserved"
+    }
+  ]
 }

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "assertions": 28,
+  "checks": [
+    "LAD1734 W119",
+    "LAD1734 W126",
+    "LAD1734 W120",
+    "LAD1734 W121",
+    "LAD1734 W122",
+    "LAD1734 W123",
+    "LAD1734 W124",
+    "LAD1734 W24",
+    "LAD1734 ORef112 SSD.AO",
+    "LAD1734 ORef113 SSD.AO",
+    "LAD1734 ORef114 SSD.AO",
+    "LAD1734 ORef115 SSD.AO",
+    "LAD1734 ORef116 SSD.AO",
+    "LAD1734 ORef117 SSD.AO",
+    "LAD1734 ORef23 SSD.AO",
+    "LAD1734 ORef114 SAD.SAM",
+    "OFF no negation",
+    "LAD1619 W283",
+    "LAD1619 ORef271 SSD.AO",
+    "shared exact 1658",
+    "shared exact 1659",
+    "LAD1658 W21",
+    "LAD1659 NOT171",
+    "HMI data_DB1_DBW264",
+    "HMI Coeff_DB4_DBW214",
+    "HMI Coeff_DB4_DBW216",
+    "HMI Allarmi_203",
+    "unique call has no latch/timer"
+  ],
+  "selected_native_networks": 4,
+  "original_execution": "not_performed",
+  "field_recovery": "not_performed",
+  "pdf_pages_visually_reviewed": [
+    "OEM172"
+  ],
+  "boundaries": [
+    "printed390/392 terminals not connected endpoints",
+    "SPARE not removal evidence",
+    "TC09 endpoints thresholds consumers not copied",
+    "OFFEN ONIN0 separate",
+    "saved coefficient0 not approved calibration"
+  ]
+}

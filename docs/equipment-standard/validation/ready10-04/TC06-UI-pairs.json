@@ -1,0 +1,74 @@
+[
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "396",
+    "target": "396\tPart 395.out ↔ Part 376.en"
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "390",
+    "target": "390\tORef 383 (ON) ↔ Part 376.IN0"
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "391",
+    "target": "391\tORef 384 (TC06) ↔ Part 376.Analog_input"
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "392",
+    "target": "392\tORef 385 (Coeff.COEFF_TC06) ↔ Part 376.Coeff"
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "393",
+    "target": "393\tORef 386 (Coeff.ZERO_TC06) ↔ Part 376.Zero"
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "394",
+    "target": "394\tPart 376.OutValue ↔ ORef 387 (Data.Temp_T6)"
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "24",
+    "target": "24\tPart 376.Out_of_range ↔ ORef 23 (Allarm.TC06_OFR)"
+  },
+  {
+    "key": "TC06",
+    "network": 1071,
+    "uid": "86",
+    "target": "86\tPart 72.eno ↔ Part 73.en"
+  },
+  {
+    "key": "TC06",
+    "network": 1071,
+    "uid": "88",
+    "target": "88\tORef 78 (TC06) ↔ Part 73.in"
+  },
+  {
+    "key": "TC06",
+    "network": 1071,
+    "uid": "90",
+    "target": "90\tPart 73.out1 ↔ ORef 79 (Inputs.TC_06)"
+  },
+  {
+    "key": "TC06",
+    "network": 1658,
+    "uid": "21",
+    "target": "21\tPart 193.eno ↔ Part 23.in"
+  },
+  {
+    "key": "TC06",
+    "network": 1659,
+    "uid": "172",
+    "target": "172\tPart 171.out ↔ Part 162.en"
+  }
+]

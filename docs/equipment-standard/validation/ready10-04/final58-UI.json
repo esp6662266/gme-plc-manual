@@ -1,0 +1,2032 @@
+[
+  {
+    "key": "P01",
+    "catalog": "BC01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비 식별·역할"
+      },
+      {
+        "area": 1,
+        "title": "%I0.1 · bc01_all_inv"
+      },
+      {
+        "area": 2,
+        "title": "자동 단계·운전 요청"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "운전 응답 고장"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·근거 표준"
+      }
+    ]
+  },
+  {
+    "key": "P02",
+    "catalog": "FN04",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "팬·공동 구동부와 설비 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "404:313 · Flag.FN_04_AUTO"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.FN_04_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P15",
+    "catalog": "FN01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "주팬·별도 냉각팬과 설비 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1028:1658 · hours motors.FN_01_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.FN_01_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P16",
+    "catalog": "FN02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "열회수 블로어·단일 모터와 설비 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1026:1550 · hours motors.FN_02_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.FN_02_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P17",
+    "catalog": "FN03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "소프트스타터·단독 M25와 설비 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1031:1820 · hours motors.FN_03_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "소프트스타터 기동"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.FN03_INV · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P18",
+    "catalog": "FN06",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "접촉기 직접기동·단독 M26와 설비 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1032:1874 · hours motors.FN_06_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.MBVA01_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P08",
+    "catalog": "MC04",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "M09 인버터 금속 컨베이어와 설비 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1022:1334 · hours motors.MC_04_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.MC_04_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P09",
+    "catalog": "VS01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "공통 인버터·M06/M07 두 모터와 스크린 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1024:1442 · hours motors.VS_01_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "공통 기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.VS_01_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P05",
+    "catalog": "PV01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "드럼 투입 A/B 공압게이트·밸브와 실물 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "405:307 · Flag.PV_01_GATE_A_MEM_CLOSE"
+      },
+      {
+        "area": 3,
+        "title": "게이트 A 밸브 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.PV_01_GATE_A_NOT_OPEN · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P07",
+    "catalog": "PV02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "드럼 배출 A/B 공압게이트·밸브와 실물 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "405:303 · Flag.PV_02_GATE_A_MEM_CLOSE"
+      },
+      {
+        "area": 3,
+        "title": "게이트 A 밸브 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.PV_02_GATE_A_NOT_OPEN · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P19",
+    "catalog": "MV01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "온도제어 댐퍼·M20·LS23/24·ZT02 실물 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "404:293 · Flag.MV01_Auto"
+      },
+      {
+        "area": 3,
+        "title": "열기 방향 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.MV01_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P20",
+    "catalog": "MV03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "오버플로 밸브·M17·LS19/20·ZT04 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "404:300 · Flag.MV03_Auto"
+      },
+      {
+        "area": 3,
+        "title": "열기 방향 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.MV03_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P21",
+    "catalog": "MV06",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "공통인버터·M14·LS40/41 대LS34/35·ZT06 식별"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "404:310 · Flag.MV06_Auto"
+      },
+      {
+        "area": 3,
+        "title": "MV02·MV05·MV06 공통 인버터 기동"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.MV_06_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P06",
+    "catalog": "RD01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "킬른 후보·M03 구동/M04 팬·EV03 구분"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1019:1172 · hours motors.RD_01_HOUR"
+      },
+      {
+        "area": 3,
+        "title": "기동 명령"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.RD_01_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P11",
+    "catalog": "BR01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "GME PLC·외부 버너반과 본체 관계"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "1071:170 · Inputs.BR_01_RETRANSMISSION_GAS"
+      },
+      {
+        "area": 3,
+        "title": "버너 ON"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.BURNER_LDU_FAULT · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "운전 요청이 없거나 곧 해제됨"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P10",
+    "catalog": "CC01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "투입 챔버 후보·주변 소유와 자료 경계"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "본체 직접제어 미확보·주변 TC06/RO04 환산·OFF 호출"
+      },
+      {
+        "area": 3,
+        "title": "주변 TC06 직접 입력"
+      },
+      {
+        "area": 4,
+        "title": "CC01 고유 타이머 미확보"
+      },
+      {
+        "area": 5,
+        "title": "설비와 제어 주체 식별"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P12",
+    "catalog": "AB01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "재연소 챔버 후보·본체/버너/계측 소유"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "주변온도·산소/선택·알람·BR01 소유 경계"
+      },
+      {
+        "area": 3,
+        "title": "TC01 주변 직접 입력"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.MAX_TC01_TEMP · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "설비와 제어 주체 식별"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "P13",
+    "catalog": "HE01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "열교환 본체 후보·두 유로/주변 소유"
+      },
+      {
+        "area": 1,
+        "title": "물리 입력"
+      },
+      {
+        "area": 2,
+        "title": "주변 환산/HMI·댐퍼·팬/공정 영향"
+      },
+      {
+        "area": 3,
+        "title": "TC03 주변 직접입력"
+      },
+      {
+        "area": 4,
+        "title": "Allarm.LOW_TC03_TEMP · 발생/해제"
+      },
+      {
+        "area": 5,
+        "title": "설비와 제어 주체 식별"
+      },
+      {
+        "area": 6,
+        "title": "문서·원본 연결과 부족 자료"
+      }
+    ]
+  },
+  {
+    "key": "BF01",
+    "catalog": "BF01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "본체와 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "직접 선언과 주소"
+      },
+      {
+        "area": 2,
+        "title": "타이머 이외 ON 가지가 있는 Forza"
+      },
+      {
+        "area": 3,
+        "title": "개별 시트·페이지·footer"
+      },
+      {
+        "area": 4,
+        "title": "두 필터 공통 차압 경보"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 준비"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "BF02",
+    "catalog": "BF02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "본체·하위·주변 소유"
+      },
+      {
+        "area": 1,
+        "title": "BF02·공통 세정 주요 선언"
+      },
+      {
+        "area": 2,
+        "title": "BF02 세정 허가와 BF02_RUN"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달·도면 페이지·개정"
+      },
+      {
+        "area": 4,
+        "title": "공유 MAX_DP_FILTER의 실제 Set/Reset"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "CH01",
+    "catalog": "CH01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI"
+      },
+      {
+        "area": 2,
+        "title": "CH01 고유 출력과 알람 시 요청 해제"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로"
+      },
+      {
+        "area": 4,
+        "title": "CH_01_FAULT의2초 검출과 래치"
+      },
+      {
+        "area": 5,
+        "title": "증상별 수리·관찰 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "DP01",
+    "catalog": "DP01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·공정·문서 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "원본 선언 및 주소"
+      },
+      {
+        "area": 2,
+        "title": "상위 호출과 DP01 고유 호출"
+      },
+      {
+        "area": 3,
+        "title": "실제 확인한 페이지와 개정란"
+      },
+      {
+        "area": 4,
+        "title": "OFR와 공통 MAX_DP_FILTER"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·원인 배제 준비"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "DP02",
+    "catalog": "DP02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "직접 선언"
+      },
+      {
+        "area": 2,
+        "title": "호출 0522 LAD1774 / index44 / NID41"
+      },
+      {
+        "area": 3,
+        "title": "전기 양 끝점·실제 PDF·개정"
+      },
+      {
+        "area": 4,
+        "title": "BF02_OFR와 공유 MAX_DP_FILTER의 구별"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "ER01",
+    "catalog": "ER01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "ID와 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "물리 신호와 DB 주소"
+      },
+      {
+        "area": 2,
+        "title": "호출자와 실행순서"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로"
+      },
+      {
+        "area": 4,
+        "title": "고유 피드백 감시"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰과 원인 배제 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "FN05",
+    "catalog": "FN05",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "대상 대조와 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "선언·주소·역할"
+      },
+      {
+        "area": 2,
+        "title": "호출과 순서의 경계"
+      },
+      {
+        "area": 3,
+        "title": "실제 렌더 대조와 페이지"
+      },
+      {
+        "area": 4,
+        "title": "FN05 고유 FAULT와 지연"
+      },
+      {
+        "area": 5,
+        "title": "증상별 수리·관찰 설계"
+      },
+      {
+        "area": 6,
+        "title": "남은 자료와 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "LD01",
+    "catalog": "LD01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·계통·소유 범위"
+      },
+      {
+        "area": 1,
+        "title": "주신호 및 관련 신호"
+      },
+      {
+        "area": 2,
+        "title": "LD01 요청Reset과 출력"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로·자료 상충"
+      },
+      {
+        "area": 4,
+        "title": "모터별 고장2초"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 판단"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "MC03",
+    "catalog": "MC03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "대장과 도면의 역할"
+      },
+      {
+        "area": 1,
+        "title": "고유 선언과 주소"
+      },
+      {
+        "area": 2,
+        "title": "요청 해제와 Q0.3의 별도 Coil"
+      },
+      {
+        "area": 3,
+        "title": "도면 페이지·개정"
+      },
+      {
+        "area": 4,
+        "title": "MC_03_FAULT: OFF 아래의 2초 운전 미응답 래치"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "MC05",
+    "catalog": "MC05",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "대장 및 자료별 정체성"
+      },
+      {
+        "area": 1,
+        "title": "고유 선언과 주소"
+      },
+      {
+        "area": 2,
+        "title": "예열은 Reset: D/0164 / LAD1843 / NID3"
+      },
+      {
+        "area": 3,
+        "title": "FG26/PDF27, SPARE 접촉기 회로"
+      },
+      {
+        "area": 4,
+        "title": "확보하지 못한 전용 보호 로직"
+      },
+      {
+        "area": 5,
+        "title": "증상별 수리·관찰 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "MV02",
+    "catalog": "MV02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "대장 중복과 하위 항목"
+      },
+      {
+        "area": 1,
+        "title": "물리/처리/요청 주소"
+      },
+      {
+        "area": 2,
+        "title": "LAD1704 방향/수동요청 해제"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로와 PDF 실제 렌더"
+      },
+      {
+        "area": 4,
+        "title": "방향 명령/접촉기 응답 불일치"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·분리안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "MV05",
+    "catalog": "MV05",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "물리·처리·요청의 분리"
+      },
+      {
+        "area": 2,
+        "title": "main 호출과 NOT ON 내부 경계"
+      },
+      {
+        "area": 3,
+        "title": "공유 인버터와 개별 모터 분리"
+      },
+      {
+        "area": 4,
+        "title": "MV05 전용 응답 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 확인·수리 문서 경계"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PC01",
+    "catalog": "PC01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "고유 선언과 주소"
+      },
+      {
+        "area": 2,
+        "title": "PC01 고유 FC63 결속"
+      },
+      {
+        "area": 3,
+        "title": "OEM FG76 / 실제 PDF77"
+      },
+      {
+        "area": 4,
+        "title": "Low_Aspiration 고유 발생·유지·Reset"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 준비"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PC02",
+    "catalog": "PC02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI — 주소·형식·읽기/쓰기"
+      },
+      {
+        "area": 2,
+        "title": "Local 값의 상류와 호출 맥락"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로 — software의 비해당과 관련 끝점"
+      },
+      {
+        "area": 4,
+        "title": "알람·Reset·복구 경계"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·원인 배제 인계"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PSH01",
+    "catalog": "PSH01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·공정·자료 시점"
+      },
+      {
+        "area": 1,
+        "title": "직접 선언"
+      },
+      {
+        "area": 2,
+        "title": "PSH01 고유 환산 호출"
+      },
+      {
+        "area": 3,
+        "title": "OEM 전기도 직접 렌더"
+      },
+      {
+        "area": 4,
+        "title": "알람·영향·복구 경계"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰 기록안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PSH02",
+    "catalog": "PSH02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI: 원시·복사·환산·설정의 분리"
+      },
+      {
+        "area": 2,
+        "title": "PSH02 고유 환산 호출"
+      },
+      {
+        "area": 3,
+        "title": "OEM 센서 → 입력 채널"
+      },
+      {
+        "area": 4,
+        "title": "고압 래치: PSH02 독립 확인"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PSH03",
+    "catalog": "PSH03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·공정·자료 경계"
+      },
+      {
+        "area": 1,
+        "title": "직접 선언표"
+      },
+      {
+        "area": 2,
+        "title": "PSH03 환산 호출"
+      },
+      {
+        "area": 3,
+        "title": "OEM FG75/PDF76"
+      },
+      {
+        "area": 4,
+        "title": "알람·영향·복구"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·배제 순서"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PSL05",
+    "catalog": "PSL05",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI"
+      },
+      {
+        "area": 2,
+        "title": "저압 감지와 유지"
+      },
+      {
+        "area": 3,
+        "title": "전기 끝점"
+      },
+      {
+        "area": 4,
+        "title": "알람·공통 경보·복구 경계"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰 준비"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "PV03",
+    "catalog": "PV03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "식별, 역할, 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "물리 신호와 전기 끝점"
+      },
+      {
+        "area": 2,
+        "title": "제어 구조"
+      },
+      {
+        "area": 3,
+        "title": "FG73/PDF74: 출력·코일·부하·센서"
+      },
+      {
+        "area": 4,
+        "title": "PV03 전용 두 도달 감시"
+      },
+      {
+        "area": 5,
+        "title": "증상별 수리·관찰 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "RO01",
+    "catalog": "RO01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "직접 주소와 자료형"
+      },
+      {
+        "area": 2,
+        "title": "RO01 선형화 호출"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로와 실제 PDF 확인"
+      },
+      {
+        "area": 4,
+        "title": "알람·복구: 원본 발생식과 실제 안전복귀 분리"
+      },
+      {
+        "area": 5,
+        "title": "증상별 읽기 전용 관찰·증거 틀"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "RO02",
+    "catalog": "RO02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "원본 선언과 주소"
+      },
+      {
+        "area": 2,
+        "title": "호출과 RO02 고유 결속"
+      },
+      {
+        "area": 3,
+        "title": "OEM RO02 전체 체인"
+      },
+      {
+        "area": 4,
+        "title": "RO01−RO02 비교 원본"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰 설계"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "SC01",
+    "catalog": "SC01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비와 자료의 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "직접 신호와 처리 메모리"
+      },
+      {
+        "area": 2,
+        "title": "운전 요청 Reset과 출력"
+      },
+      {
+        "area": 3,
+        "title": "시트와 실제 PDF 페이지"
+      },
+      {
+        "area": 4,
+        "title": "SC01 직접 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰과 수리 판단"
+      },
+      {
+        "area": 6,
+        "title": "기능 적용과 완료 기준"
+      }
+    ]
+  },
+  {
+    "key": "SC10",
+    "catalog": "SC10",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비와 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "신호 대응"
+      },
+      {
+        "area": 2,
+        "title": "SC10 요청 Reset과 출력"
+      },
+      {
+        "area": 3,
+        "title": "페이지와 판본"
+      },
+      {
+        "area": 4,
+        "title": "SC10 고장 Set/Reset"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 판단 계획"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "SC11",
+    "catalog": "SC11",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비와 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "주소·형식·읽기/쓰기"
+      },
+      {
+        "area": 2,
+        "title": "SC11 요청 Reset과 실제 출력"
+      },
+      {
+        "area": 3,
+        "title": "렌더 확인 목록·판본"
+      },
+      {
+        "area": 4,
+        "title": "SC11 자체 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 인계"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC01",
+    "catalog": "TC01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "선언과 주소"
+      },
+      {
+        "area": 2,
+        "title": "TC01 환산 고유 결속"
+      },
+      {
+        "area": 3,
+        "title": "OEM 실제 PDF 렌더"
+      },
+      {
+        "area": 4,
+        "title": "TC01 고유 범위고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC02",
+    "catalog": "TC02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "IO/HMI와 정확한 선언"
+      },
+      {
+        "area": 2,
+        "title": "TC02 환산 고유 결속"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로와 실제 PDF"
+      },
+      {
+        "area": 4,
+        "title": "TC02_OFR"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰 설계"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC03",
+    "catalog": "TC03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "고유 선언·주소"
+      },
+      {
+        "area": 2,
+        "title": "TC03 환산의 직접 핀"
+      },
+      {
+        "area": 3,
+        "title": "전기 끝점·실제 PDF"
+      },
+      {
+        "area": 4,
+        "title": "고유 경보·복구"
+      },
+      {
+        "area": 5,
+        "title": "증상별 읽기 전용 관찰"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC04",
+    "catalog": "TC04",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI"
+      },
+      {
+        "area": 2,
+        "title": "고유 환산 호출"
+      },
+      {
+        "area": 3,
+        "title": "전기 끝점·실제 PDF"
+      },
+      {
+        "area": 4,
+        "title": "알람·복구"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 기록 설계"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC05",
+    "catalog": "TC05",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "선언·주소·쓰기"
+      },
+      {
+        "area": 2,
+        "title": "고유 호출 조건"
+      },
+      {
+        "area": 3,
+        "title": "OEM FG79 = PDF80"
+      },
+      {
+        "area": 4,
+        "title": "TC05 온도경보 고유 회로"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 기록 지침"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC06",
+    "catalog": "TC06",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "선언과 저장부"
+      },
+      {
+        "area": 2,
+        "title": "TC06 고유 호출"
+      },
+      {
+        "area": 3,
+        "title": "전기 끝점·실제 PDF 판독"
+      },
+      {
+        "area": 4,
+        "title": "고유 경보·타이머·복구"
+      },
+      {
+        "area": 5,
+        "title": "증상별 읽기 전용 관찰 계획"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC07",
+    "catalog": "TC07",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "원본 선언·주소"
+      },
+      {
+        "area": 2,
+        "title": "고유 호출 전체 핀"
+      },
+      {
+        "area": 3,
+        "title": "전기 끝점·실제 PDF"
+      },
+      {
+        "area": 4,
+        "title": "알람·복구"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC09",
+    "catalog": "TC09",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "선언 결속"
+      },
+      {
+        "area": 2,
+        "title": "고유 환산 호출"
+      },
+      {
+        "area": 3,
+        "title": "전기 끝점·실제 PDF 확인"
+      },
+      {
+        "area": 4,
+        "title": "고유 알람·복구·Word 겹침"
+      },
+      {
+        "area": 5,
+        "title": "증상별 읽기 전용 관찰 계획"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC10",
+    "catalog": "TC10",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI·백업 저장값"
+      },
+      {
+        "area": 2,
+        "title": "제어 구조·호출·환산"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로·실제 PDF"
+      },
+      {
+        "area": 4,
+        "title": "알람·복구·쓰기 범위"
+      },
+      {
+        "area": 5,
+        "title": "증상별 읽기전용 관찰 계획"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "TC11",
+    "catalog": "TC11",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI와 부재 검색의 한계"
+      },
+      {
+        "area": 2,
+        "title": "제어 구조와 소유 경계"
+      },
+      {
+        "area": 3,
+        "title": "TC11 고유 끝점"
+      },
+      {
+        "area": 4,
+        "title": "알람·복구"
+      },
+      {
+        "area": 5,
+        "title": "증상별 비조작 관찰 계획"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "VR01",
+    "catalog": "VR01",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 기준과 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "I/O·HMI와 데이터 전달"
+      },
+      {
+        "area": 2,
+        "title": "전용 모터 로직: 1949/0251, motors 1 NID20"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로: 실제 PDF 렌더 확인"
+      },
+      {
+        "area": 4,
+        "title": "VR01 전용 FAULT: 1797/0432, allarms 1 NID19"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 검토 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "VR02",
+    "catalog": "VR02",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "확인한 관계와 확인하지 못한 관계"
+      },
+      {
+        "area": 1,
+        "title": "주소와 선언"
+      },
+      {
+        "area": 2,
+        "title": "요청 Reset과 출력은 두 가지 쓰기"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로: 실제 원본 렌더 확인"
+      },
+      {
+        "area": 4,
+        "title": "전용 VR02 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·원인 배제 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "VR03",
+    "catalog": "VR03",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비와 자료의 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "직접 신호와 처리 메모리"
+      },
+      {
+        "area": 2,
+        "title": "직접 요청 해제와 출력"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로"
+      },
+      {
+        "area": 4,
+        "title": "VR03 전용 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰과 수리 판단"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "VR04",
+    "catalog": "VR04",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비·자료 및 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "직접 주소와 저장부"
+      },
+      {
+        "area": 2,
+        "title": "VR04 요청 해제와 출력"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로"
+      },
+      {
+        "area": 4,
+        "title": "전용 2초 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 판단"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "VR05",
+    "catalog": "VR05",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비와 자료 소유"
+      },
+      {
+        "area": 1,
+        "title": "직접·내부·처리 신호"
+      },
+      {
+        "area": 2,
+        "title": "직접 요청 Reset과 출력"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로"
+      },
+      {
+        "area": 4,
+        "title": "VR05 전용2초 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·원인 배제 초안"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  },
+  {
+    "key": "VR06",
+    "catalog": "VR06",
+    "version": "1.21.0",
+    "sections": [
+      {
+        "area": 0,
+        "title": "설비와 자료의 소유 경계"
+      },
+      {
+        "area": 1,
+        "title": "직접 신호·메모리·시간부"
+      },
+      {
+        "area": 2,
+        "title": "직접 운전 요청 해제와 출력"
+      },
+      {
+        "area": 3,
+        "title": "전기 전달 경로와 시공 자료"
+      },
+      {
+        "area": 4,
+        "title": "VR06 전용 고장"
+      },
+      {
+        "area": 5,
+        "title": "증상별 관찰·수리 판단"
+      },
+      {
+        "area": 6,
+        "title": "현재 근거 공백과 판정 기준"
+      }
+    ]
+  }
+]

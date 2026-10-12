@@ -1,0 +1,158 @@
+[
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "106",
+    "target": "106\tPart 105.out ↔ Part 86.en"
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "100",
+    "target": "100\tORef 93 (ON) ↔ Part 86.IN0"
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "101",
+    "target": "101\tORef 94 (TC09) ↔ Part 86.Analog_input"
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "102",
+    "target": "102\tORef 95 (Coeff.COEFF_TC09) ↔ Part 86.Coeff"
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "103",
+    "target": "103\tORef 96 (Coeff.ZERO_TC09) ↔ Part 86.Zero"
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "104",
+    "target": "104\tPart 86.OutValue ↔ ORef 97 (Data.TC_09)"
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "24",
+    "target": "24\tPart 86.Out_of_range ↔ ORef 23 (Allarm.TC09_OFR)"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1133",
+    "target": "1133\tPart 1046.out ↔ Part 1049.in"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1139",
+    "target": "1139\tPart 1053.eno ↔ Part 1057.pre"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1142",
+    "target": "1142\tPart 1057.out ↔ Part 1060.in"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1148",
+    "target": "1148\tPart 1064.eno ↔ Part 1068.pre"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1151",
+    "target": "1151\tPart 1068.out ↔ Part 1177.in ↔ Part 1082.in"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1178",
+    "target": "1178\tPart 1177.out ↔ Part 1076.in ↔ Part 1078.in"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1167",
+    "target": "1167\tPart 1085.out ↔ Part 1095.in"
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1182",
+    "target": "1182\tPart 1181.out ↔ Part 1100.in"
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2044",
+    "target": "2044\tPart 2043.out ↔ Part 2007.in2"
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2046",
+    "target": "2046\tPart 2045.out ↔ Part 2007.in3"
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2048",
+    "target": "2048\tPart 2047.out ↔ Part 2007.in4"
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2033",
+    "target": "2033\tORef 2021 (PV-14) ↔ Part 2012.operand"
+  },
+  {
+    "key": "TC09",
+    "network": 1965,
+    "uid": "1045",
+    "target": "1045\tPart 1044.out ↔ Part 1003.in5"
+  },
+  {
+    "key": "TC09",
+    "network": 1931,
+    "uid": "104",
+    "target": "104\tPart 103.out ↔ Part 56.in5"
+  },
+  {
+    "key": "TC09",
+    "network": 1856,
+    "uid": "162",
+    "target": "162\tContact\toperand\toperand = Allarm.MAX_MAX_TC09"
+  },
+  {
+    "key": "TC09",
+    "network": 1857,
+    "uid": "209",
+    "target": "209\tContact\toperand\toperand = Allarm.MAX_MAX_TC09"
+  },
+  {
+    "key": "TC09",
+    "network": 1858,
+    "uid": "278",
+    "target": "278\tPart 277.out ↔ Part 213.in2"
+  },
+  {
+    "key": "TC09",
+    "network": 403,
+    "uid": "316",
+    "target": "316\tPart 267.out1 ↔ ORef 294 (RefId 32)"
+  },
+  {
+    "key": "TC09",
+    "network": 1658,
+    "uid": "21",
+    "target": "21\tPart 193.eno ↔ Part 23.in"
+  }
+]

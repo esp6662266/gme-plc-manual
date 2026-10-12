@@ -1,0 +1,687 @@
+{
+  "catalog_id": "TC11",
+  "selection_key": "TC11",
+  "priority_key": null,
+  "type": "sensor",
+  "draft": "catalog-sources/TC11-DOTS-DRAFT.md",
+  "draft_sha256": "23a821982581a9cd51f24acce6257889c2606c89610643a064a862c68114d836",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [],
+  "internal_names": [],
+  "source_pairs": [],
+  "extra_sources": [
+    "sources/decoded-original/0035-IdentXmlPart.xml",
+    "sources/decoded-original/0036-IdentXmlPart.xml",
+    "sources/decoded-original/0037-IdentXmlPart.xml",
+    "sources/decoded-original/0038-IdentXmlPart.xml",
+    "sources/decoded-original/0039-IdentXmlPart.xml",
+    "sources/decoded-original/0040-IdentXmlPart.xml",
+    "sources/decoded-original/0041-IdentXmlPart.xml",
+    "sources/decoded-original/0042-IdentXmlPart.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0047-IdentXmlPart.xml",
+    "sources/decoded-original/0048-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0050-IdentXmlPart.xml",
+    "sources/decoded-original/0051-IdentXmlPart.xml",
+    "sources/decoded-original/0052-IdentXmlPart.xml",
+    "sources/decoded-original/0053-IdentXmlPart.xml",
+    "sources/decoded-original/0054-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0056-IdentXmlPart.xml",
+    "sources/decoded-original/0057-IdentXmlPart.xml",
+    "sources/decoded-original/0058-IdentXmlPart.xml",
+    "sources/decoded-original/0059-IdentXmlPart.xml",
+    "sources/decoded-original/0060-IdentXmlPart.xml",
+    "sources/decoded-original/0061-IdentXmlPart.xml",
+    "sources/decoded-original/0062-IdentXmlPart.xml",
+    "sources/decoded-original/0063-IdentXmlPart.xml",
+    "sources/decoded-original/0064-IdentXmlPart.xml",
+    "sources/decoded-original/0065-IdentXmlPart.xml",
+    "sources/decoded-original/0066-IdentXmlPart.xml",
+    "sources/decoded-original/0067-IdentXmlPart.xml",
+    "sources/decoded-original/0068-IdentXmlPart.xml",
+    "sources/decoded-original/0069-IdentXmlPart.xml",
+    "sources/decoded-original/0070-IdentXmlPart.xml",
+    "sources/decoded-original/0071-IdentXmlPart.xml",
+    "sources/decoded-original/0072-IdentXmlPart.xml",
+    "sources/decoded-original/0552-IdentXmlPart.xml",
+    "sources/decoded-original/0553-IdentXmlPart.xml",
+    "sources/decoded-original/0554-IdentXmlPart.xml",
+    "sources/decoded-original/0555-IdentXmlPart.xml",
+    "sources/decoded-original/0556-IdentXmlPart.xml",
+    "sources/decoded-original/0557-IdentXmlPart.xml",
+    "sources/decoded-original/0558-IdentXmlPart.xml",
+    "sources/decoded-original/0559-IdentXmlPart.xml",
+    "sources/decoded-original/0560-IdentXmlPart.xml",
+    "sources/decoded-original/0561-IdentXmlPart.xml",
+    "sources/decoded-original/0562-IdentXmlPart.xml",
+    "sources/decoded-original/0563-IdentXmlPart.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0570-IdentXmlPart.xml",
+    "sources/decoded-original/0571-IdentXmlPart.xml",
+    "sources/decoded-original/0572-IdentXmlPart.xml",
+    "sources/decoded-original/0573-IdentXmlPart.xml",
+    "sources/decoded-original/0574-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0579-IdentXmlPart.xml",
+    "sources/decoded-original/0580-IdentXmlPart.xml",
+    "sources/decoded-original/0581-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0587-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0594-IdentXmlPart.xml",
+    "sources/decoded-original/0595-IdentXmlPart.xml",
+    "sources/decoded-original/0596-IdentXmlPart.xml",
+    "sources/decoded-original/0597-IdentXmlPart.xml",
+    "sources/decoded-original/0598-IdentXmlPart.xml",
+    "sources/decoded-original/0599-IdentXmlPart.xml",
+    "sources/decoded-original/0600-IdentXmlPart.xml",
+    "sources/decoded-original/0601-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0605-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0607-IdentXmlPart.xml",
+    "sources/decoded-original/0608-IdentXmlPart.xml",
+    "sources/decoded-original/0609-IdentXmlPart.xml",
+    "sources/decoded-original/0610-IdentXmlPart.xml",
+    "sources/decoded-original/0611-IdentXmlPart.xml",
+    "sources/decoded-original/0612-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0617-IdentXmlPart.xml",
+    "sources/decoded-original/0618-IdentXmlPart.xml",
+    "sources/decoded-original/0619-IdentXmlPart.xml",
+    "sources/decoded-original/0620-IdentXmlPart.xml",
+    "sources/decoded-original/0621-IdentXmlPart.xml",
+    "sources/decoded-original/0622-IdentXmlPart.xml",
+    "sources/decoded-original/0623-IdentXmlPart.xml",
+    "sources/decoded-original/0624-IdentXmlPart.xml",
+    "sources/decoded-original/0625-IdentXmlPart.xml",
+    "sources/decoded-original/0626-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0630-IdentXmlPart.xml",
+    "sources/decoded-original/0631-IdentXmlPart.xml",
+    "sources/decoded-original/0632-IdentXmlPart.xml",
+    "sources/decoded-original/0633-IdentXmlPart.xml",
+    "sources/decoded-original/0634-IdentXmlPart.xml",
+    "sources/decoded-original/0635-IdentXmlPart.xml",
+    "sources/decoded-original/0636-IdentXmlPart.xml",
+    "sources/decoded-original/0637-IdentXmlPart.xml",
+    "sources/decoded-original/0638-IdentXmlPart.xml",
+    "sources/decoded-original/0639-IdentXmlPart.xml",
+    "sources/decoded-original/0640-IdentXmlPart.xml",
+    "sources/decoded-original/0641-IdentXmlPart.xml",
+    "sources/decoded-original/0642-IdentXmlPart.xml",
+    "sources/decoded-original/0643-IdentXmlPart.xml",
+    "sources/decoded-original/0644-IdentXmlPart.xml",
+    "sources/decoded-original/0645-IdentXmlPart.xml",
+    "sources/decoded-original/0646-IdentXmlPart.xml",
+    "sources/decoded-original/0647-IdentXmlPart.xml",
+    "sources/decoded-original/0648-IdentXmlPart.xml",
+    "sources/decoded-original/0649-IdentXmlPart.xml",
+    "sources/decoded-original/0650-IdentXmlPart.xml",
+    "sources/decoded-original/0651-IdentXmlPart.xml",
+    "sources/decoded-original/0652-IdentXmlPart.xml",
+    "sources/decoded-original/0653-IdentXmlPart.xml",
+    "sources/decoded-original/0654-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0656-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0658-IdentXmlPart.xml",
+    "sources/decoded-original/0659-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0663-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0673-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0677-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0679-IdentXmlPart.xml",
+    "sources/decoded-original/0680-IdentXmlPart.xml",
+    "sources/decoded-original/0681-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0683-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0685-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0687-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0691-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/0693-IdentXmlPart.xml",
+    "sources/decoded-original/0694-IdentXmlPart.xml",
+    "sources/live_index.json",
+    "sources/hmi_plc_tags.csv",
+    "assets/catalog-circuits/PID_1684n002I-P001.png",
+    "assets/catalog-circuits/Electrical_Rev2-P067.png"
+  ],
+  "signal_reference": {
+    "id": "TC11",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC11 현장 표시값 · 단위/PLC주소 미확정",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "display",
+        "role": "responses",
+        "name": "TC11 표시 상태 · 현장관찰/PLC결속없음",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "TC11 명판·위치·루프도 · 자료요청",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "TC11",
+    "timers": [],
+    "alarms": []
+  },
+  "control_reference": {
+    "native": [],
+    "chain": [
+      "P&ID FN05→ER01 계통 TC11/I 고유표시",
+      "PLC/HMI/제어/타이머/알람 미식별·고유LAD0",
+      "ER01관련전기도면과TC11 소유분리",
+      "자료요청·관찰기록 기능검증/현장복구별도"
+    ],
+    "repair": [
+      "관찰시각/위치, ER01 주변 전체사진, 태그/명판, 최신 배치도·기기목록",
+      "계기 전면/모델/표시상태 사진, 명판 전원방식, 승인된 결선도",
+      "표시값·단위·시각·운전상태, 비교계기 교정/위치/시간조건",
+      "현재 승인 HMI 화면명·태그주소 교차참조, 동일시각 로컬 표시",
+      "별도 ER01 알람명·시각, TC11 관찰시각, 실제 배선/제어기 자료",
+      "승인 작업기록, 조치자·시각, 동일조건 전후 관찰·서명"
+    ],
+    "pending": [
+      "TC11 고유 PLC선언/주소/NID/RID/UID/핀·HMI 미식별·관련ER01로대체금지",
+      "원시/환산/계수/OFR/온도SR/타이머/Reset/제어출력 근거미확보·기능판정보류",
+      "센서타입/로컬표시기/전원/케이블/JB/양끝단자/실드 미확보",
+      "P&ID2013 vsOEM/시공2024 시점차이·철거/미설치/PLC비연결 확정안함",
+      "명판·설치위치사진+최신ER01/TC11 루프/단자도 우선필요",
+      "707텍스트/695XML 음성검색과726원본해시는 전체의미검토완료 아님",
+      "ER01 A5.0→66KA1/E6.1/전력/보호값은TC11 I/O나정격아님",
+      "현장표시 관찰양식의3항목은PLC신호가아님·실제관찰/복구기록없음",
+      "새자료없는반복부재검색없음·TIA/CPU/실물/현장복구 미수행"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "TC11",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "정적/UI/게시와현장별도"
+    ],
+    "existing_pending": [
+      "TC11 고유 PLC선언/주소/NID/RID/UID/핀·HMI 미식별·관련ER01로대체금지",
+      "원시/환산/계수/OFR/온도SR/타이머/Reset/제어출력 근거미확보·기능판정보류",
+      "센서타입/로컬표시기/전원/케이블/JB/양끝단자/실드 미확보",
+      "P&ID2013 vsOEM/시공2024 시점차이·철거/미설치/PLC비연결 확정안함",
+      "명판·설치위치사진+최신ER01/TC11 루프/단자도 우선필요",
+      "707텍스트/695XML 음성검색과726원본해시는 전체의미검토완료 아님",
+      "ER01 A5.0→66KA1/E6.1/전력/보호값은TC11 I/O나정격아님",
+      "현장표시 관찰양식의3항목은PLC신호가아님·실제관찰/복구기록없음",
+      "새자료없는반복부재검색없음·TIA/CPU/실물/현장복구 미수행"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "TC11 고유 PLC선언/주소/NID/RID/UID/핀·HMI 미식별·관련ER01로대체금지",
+        "원시/환산/계수/OFR/온도SR/타이머/Reset/제어출력 근거미확보·기능판정보류",
+        "센서타입/로컬표시기/전원/케이블/JB/양끝단자/실드 미확보",
+        "P&ID2013 vsOEM/시공2024 시점차이·철거/미설치/PLC비연결 확정안함",
+        "명판·설치위치사진+최신ER01/TC11 루프/단자도 우선필요",
+        "707텍스트/695XML 음성검색과726원본해시는 전체의미검토완료 아님",
+        "ER01 A5.0→66KA1/E6.1/전력/보호값은TC11 I/O나정격아님",
+        "현장표시 관찰양식의3항목은PLC신호가아님·실제관찰/복구기록없음",
+        "새자료없는반복부재검색없음·TIA/CPU/실물/현장복구 미수행"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "TC11",
+    "plc_id": "TC11",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "현장에 TC11을 못 찾음",
+        "observe": "관찰시각/위치, ER01 주변 전체사진, 태그/명판, 최신 배치도·기기목록",
+        "compare": "미설치/철거/다른이름 여부",
+        "next": "미설치/철거/다른이름 여부",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "표시가 없음",
+        "observe": "계기 전면/모델/표시상태 사진, 명판 전원방식, 승인된 결선도",
+        "compare": "무전원/고장/기계식 표시 여부",
+        "next": "무전원/고장/기계식 표시 여부",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "값이 높거나 낮음",
+        "observe": "표시값·단위·시각·운전상태, 비교계기 교정/위치/시간조건",
+        "compare": "정상온도·위험임계·계기고장 원인",
+        "next": "정상온도·위험임계·계기고장 원인",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "HMI에서 못 찾음",
+        "observe": "현재 승인 HMI 화면명·태그주소 교차참조, 동일시각 로컬 표시",
+        "compare": "PLC 비연결 또는 숨은 화면 여부",
+        "next": "PLC 비연결 또는 숨은 화면 여부",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "ER01 알람과 동시 발생",
+        "observe": "별도 ER01 알람명·시각, TC11 관찰시각, 실제 배선/제어기 자료",
+        "compare": "TC11이 정지 원인 또는 인터록이라는 결론",
+        "next": "TC11이 정지 원인 또는 인터록이라는 결론",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "현장 조치 후 상태",
+        "observe": "승인 작업기록, 조치자·시각, 동일조건 전후 관찰·서명",
+        "compare": "단순 오류 소거만으로 복구완료 판정",
+        "next": "단순 오류 소거만으로 복구완료 판정",
+        "common": "step-symptom-6"
+      }
+    ],
+    "bindings": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC11 현장 표시값 · 단위/PLC주소 미확정",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "display",
+        "role": "responses",
+        "name": "TC11 표시 상태 · 현장관찰/PLC결속없음",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "TC11 명판·위치·루프도 · 자료요청",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": []
+      }
+    ]
+  },
+  "record_form": {
+    "key": "TC11",
+    "name": "TC11 ER01 계통 현장표시 관찰",
+    "reference_plc_id": "TC11",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC11 현장 표시값 · 단위/PLC주소 미확정",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "display",
+        "role": "responses",
+        "name": "TC11 표시 상태 · 현장관찰/PLC결속없음",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "TC11 명판·위치·루프도 · 자료요청",
+        "addresses": [],
+        "boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+        "refs": []
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "현장에 TC11을 못 찾음",
+        "observe": "관찰시각/위치, ER01 주변 전체사진, 태그/명판, 최신 배치도·기기목록",
+        "compare": "미설치/철거/다른이름 여부",
+        "next": "미설치/철거/다른이름 여부",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "표시가 없음",
+        "observe": "계기 전면/모델/표시상태 사진, 명판 전원방식, 승인된 결선도",
+        "compare": "무전원/고장/기계식 표시 여부",
+        "next": "무전원/고장/기계식 표시 여부",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "값이 높거나 낮음",
+        "observe": "표시값·단위·시각·운전상태, 비교계기 교정/위치/시간조건",
+        "compare": "정상온도·위험임계·계기고장 원인",
+        "next": "정상온도·위험임계·계기고장 원인",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "HMI에서 못 찾음",
+        "observe": "현재 승인 HMI 화면명·태그주소 교차참조, 동일시각 로컬 표시",
+        "compare": "PLC 비연결 또는 숨은 화면 여부",
+        "next": "PLC 비연결 또는 숨은 화면 여부",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "ER01 알람과 동시 발생",
+        "observe": "별도 ER01 알람명·시각, TC11 관찰시각, 실제 배선/제어기 자료",
+        "compare": "TC11이 정지 원인 또는 인터록이라는 결론",
+        "next": "TC11이 정지 원인 또는 인터록이라는 결론",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "현장 조치 후 상태",
+        "observe": "승인 작업기록, 조치자·시각, 동일조건 전후 관찰·서명",
+        "compare": "단순 오류 소거만으로 복구완료 판정",
+        "next": "단순 오류 소거만으로 복구완료 판정",
+        "common": "step-symptom-6"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "TC11 고유 정적원본·독립관찰",
+      "sources": {
+        "catalog-sources/TC11-DOTS-DRAFT.md": "23a821982581a9cd51f24acce6257889c2606c89610643a064a862c68114d836"
+      },
+      "circuit_equipment": "TC11 P&ID 로컬표시 후보·PLC고유원본 미확보",
+      "circuit_distinction": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+      "circuit_pages": [],
+      "construction_boundary": "TC11 시공/루프/양끝점미확보·관련ER01소유별도",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "TC11 고유 PLC선언/주소/NID/RID/UID/핀·HMI 미식별·관련ER01로대체금지"
+          }
+        ],
+        "source_links": [],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "관찰시각/위치, ER01 주변 전체사진, 태그/명판, 최신 배치도·기기목록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "미설치/철거/다른이름 여부"
+            }
+          ],
+          "source_links": [],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "계기 전면/모델/표시상태 사진, 명판 전원방식, 승인된 결선도"
+            },
+            {
+              "owner": "현재자료",
+              "work": "무전원/고장/기계식 표시 여부"
+            }
+          ],
+          "source_links": [],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "표시값·단위·시각·운전상태, 비교계기 교정/위치/시간조건"
+            },
+            {
+              "owner": "현재자료",
+              "work": "정상온도·위험임계·계기고장 원인"
+            }
+          ],
+          "source_links": [],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "현재 승인 HMI 화면명·태그주소 교차참조, 동일시각 로컬 표시"
+            },
+            {
+              "owner": "현재자료",
+              "work": "PLC 비연결 또는 숨은 화면 여부"
+            }
+          ],
+          "source_links": [],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "별도 ER01 알람명·시각, TC11 관찰시각, 실제 배선/제어기 자료"
+            },
+            {
+              "owner": "현재자료",
+              "work": "TC11이 정지 원인 또는 인터록이라는 결론"
+            }
+          ],
+          "source_links": [],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-6",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "승인 작업기록, 조치자·시각, 동일조건 전후 관찰·서명"
+            },
+            {
+              "owner": "현재자료",
+              "work": "단순 오류 소거만으로 복구완료 판정"
+            }
+          ],
+          "source_links": [],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "TC11",
+    "plc_id": "TC11",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "도번1684n002 ApexI 15/01/2013 · 최초06/04/2011 · FG−"
+      },
+      {
+        "id": "oem-66",
+        "kind": "관련 OEM 전기 · ER01",
+        "title": "FG66 · PDF67",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 67,
+        "fg": 66,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P067.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "ER01 관련소유만·DATA27.05.2024 · 개정기입관찰없음"
+      }
+    ],
+    "circuit": {
+      "id": "TC11",
+      "equipment": "TC11 P&ID 로컬표시 후보·PLC고유원본 미확보",
+      "distinction": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+      "paths": [],
+      "pending": [
+        "TC11 고유 PLC선언/주소/NID/RID/UID/핀·HMI 미식별·관련ER01로대체금지",
+        "원시/환산/계수/OFR/온도SR/타이머/Reset/제어출력 근거미확보·기능판정보류",
+        "센서타입/로컬표시기/전원/케이블/JB/양끝단자/실드 미확보",
+        "P&ID2013 vsOEM/시공2024 시점차이·철거/미설치/PLC비연결 확정안함",
+        "명판·설치위치사진+최신ER01/TC11 루프/단자도 우선필요",
+        "707텍스트/695XML 음성검색과726원본해시는 전체의미검토완료 아님",
+        "ER01 A5.0→66KA1/E6.1/전력/보호값은TC11 I/O나정격아님",
+        "현장표시 관찰양식의3항목은PLC신호가아님·실제관찰/복구기록없음",
+        "새자료없는반복부재검색없음·TIA/CPU/실물/현장복구 미수행"
+      ]
+    },
+    "warnings": [
+      "TC11고유LAD/직접전기경로 미확보",
+      "ER01 관련자료를TC11소유로대체금지",
+      "PLC비연결/철거/실물부재 미확정"
+    ]
+  },
+  "related_alarm_boundary": "TC11의 고유 직접근거는 P&ID2013의 TC-11·마름모I·ER01 연결입니다. PLC선언/주소/원시/환산/HMI/알람/타이머/직접전기경로는 미식별로 기능판정을 보류합니다. ER01 FG66의 히터명령/피드백을 TC11에 배정하지 않습니다. 아래 기록항목은 현장표시 관찰양식이며 PLC신호 결속이 아닙니다. 현재 실물/PLC비연결/철거 여부는 미확정입니다.",
+  "presentation": {
+    "search_examples": "TC11, TC-11, 마름모 I, ER01, 루프도, 명판"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "TC11 자료",
+        "devices/TC11.html"
+      ]
+    ],
+    "io": [
+      [
+        "HMI 원본·TC11미식별",
+        "sources/hmi_plc_tags.csv"
+      ],
+      [
+        "P&ID 고유표시",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "control": [],
+    "circuits": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FG66 · PDF67",
+        "sources/Electrical_Rev2.pdf#page=67"
+      ]
+    ],
+    "alarms": [
+      [
+        "TC11알람미식별·HMI원본",
+        "sources/hmi_plc_tags.csv"
+      ]
+    ],
+    "repair": [],
+    "completion": [
+      [
+        "확인 경계",
+        "catalog-guides/TC11.html#completion"
+      ]
+    ]
+  }
+}

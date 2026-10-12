@@ -55,8 +55,13 @@ for file,nid,outuid,rid,ao,orgate,orwire,reset,output,neg4,neg5 in [('0239-FlgNe
  declaration('0602-IdentXmlPart.xml',rid,nid,outuid,'Global','Output',ao)
  assert sum(1 for w in root.iter() if tag(w)=='Wire' for c in w if tag(c)=='PCon' and c.get('UId')==orgate and c.get('PinName','').startswith('in'))==6
 # Human supplied status does not imply field proof, and original inventory remains unchanged.
-notes=load('registers/body-manual.json')['equipment_status_notes'];assert {n['id'] for n in notes}==({'MV04','SC12','PV04','P22','P23'} | ({'EV'+str(i).zfill(2) for i in range(1,91)} & {v['id'] for v in json.loads((R/'registers/control-spec.json').read_text())['specifications']}))
+notes=load('registers/body-manual.json')['equipment_status_notes'];assert {n['id'] for n in notes}==({'MV04','SC12','PV04','P22','P23','RO01','RO02','RO03','RO04'} | ({'EV'+str(i).zfill(2) for i in range(1,91)} & {v['id'] for v in json.loads((R/'registers/control-spec.json').read_text())['specifications']}))
 assert all(n['source_kind']=='user_statement' and n['exclude_from_current_detailed_analysis'] and not n['field_verified'] and n['historical_sources_preserved'] for n in notes)
+for n in notes:
+ if n['id'].startswith('RO'):
+  assert n['status']=='unused_user_reported' and n['reported_on']=='2026-10-12'
+  assert n['original_text']=='ro는 전부 산소농도계인데 이거 전부 안쓰는거라서 예외 처리해' and n['resume_requires_user_request']
+
 assert load('registers/evidence-review.json')['counts']['source']==18
 forms=load('registers/repair-record-forms.json')
 for p in b['profiles']:

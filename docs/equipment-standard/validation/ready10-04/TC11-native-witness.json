@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "assertions": 8,
+  "checks": [
+    "bounded707textfiles/695XML no TC11 name",
+    "Electrical_Rev2 bounded text search not visual allpages",
+    "Electrical_Can_Decoating_20241118 bounded text search not visual allpages",
+    "PID_1684n002I bounded text search not visual allpages",
+    "PID textlayer empty; actual visual TC11/I retained",
+    "ER01 boundary only ER_01\\Allarme1",
+    "ER01 boundary only ER_01\\RispostaA",
+    "ER01 boundary only ER_01\\Flag"
+  ],
+  "selected_native_networks": 0,
+  "unique_PLC_unidentified": true,
+  "pdf_pages_visually_reviewed": [
+    "PID1/full/detail/footer",
+    "OEM67 ER01 boundary only"
+  ],
+  "pdf_text_search": [
+    {
+      "source": "Electrical_Rev2",
+      "pages": 265,
+      "text_length": 114909,
+      "name_hits": 0
+    },
+    {
+      "source": "Electrical_Can_Decoating_20241118",
+      "pages": 64,
+      "text_length": 87147,
+      "name_hits": 0
+    },
+    {
+      "source": "PID_1684n002I",
+      "pages": 1,
+      "text_length": 0,
+      "name_hits": 0
+    }
+  ],
+  "original_execution": "not_performed",
+  "field_recovery": "not_performed",
+  "boundaries": [
+    "no TC11 PLC/HMI/I/O/timer/alarm claimed",
+    "PID2013 vsOEM2024 gap",
+    "ER01 A5.0/E6.1 not TC11",
+    "707hash/textsearch not semantic completion"
+  ]
+}

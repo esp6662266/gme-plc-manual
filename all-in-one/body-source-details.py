@@ -135,4 +135,8 @@ EQUIPMENT_STATUS_NOTES.append(dict(id='PV04',status='not_planned_user_reported',
 
 MANUAL_EXCLUSION_RANGES=[dict(prefix='EV',start=1,end=90,status='manual_deferred_user_reported',label='매뉴얼 작성 제외 · 사용자 제공',reported_on='2026-10-09',source_kind='user_statement',original_text='ev1~90 이거도 매뉴얼 안만들어도 되 단순 필터거든 필요하면 내가 추가로 얘기할게',exclude_from_current_detailed_analysis=True,field_verified=False,historical_sources_preserved=True,resume_requires_user_request=True)]
 
+# Human instruction verified in the Dots conversation, 2026-10-12 12:22 KST.
+# Preserve the historical RO01/RO02 manuals and all original sources.
+MANUAL_EXCLUSION_RANGES.append(dict(prefix='RO',start=1,end=4,status='unused_user_reported',label='미사용 산소농도계 · 사용자 제공',reported_on='2026-10-12',source_kind='user_statement',original_text='ro는 전부 산소농도계인데 이거 전부 안쓰는거라서 예외 처리해',exclude_from_current_detailed_analysis=True,field_verified=False,historical_sources_preserved=True,resume_requires_user_request=True))
+
 PROJECT_WORK_SCOPE=dict(phase='priority23_first',priority_history_count=23,current_priority_count=21,excluded_priority=['P22','P23'],full_catalog_role='preserved_reference_only',full_catalog_expansion='deferred_until_priority_complete',source_kind='user_statement',reported_on='2026-10-09',original_text='우선23이거만 완벽하게 만들고 그다음 전체248목록은 추가하는식으로만 하자',priority_completion_proven=False,field_completion_proven=False)

@@ -61,7 +61,11 @@ c=a['counts'];levels=Counter(r['detail_level'] for r in rows.values())
 assert [c[k] for k in ['equipment','base_manuals','base_specs','base_procedures']]==[248]*4
 assert (c['representative_symptom_devices'],c['specialist_only_devices'],c['baseline_only_devices'])==(levels['symptom'],levels['specialist'],levels['baseline'])==(15,28,205)
 assert c['current_priority']==21 and c['other_process_excluded']==2 and c['retired_equipment_excluded']==1 and c['absent_equipment_excluded']==1
-assert c['manual_deferred_equipment_excluded']==87 and c['current_equipment_detail_scope']==21 and c['eligible_history_equipment']==158
+assert c['manual_deferred_equipment_excluded']==87 and c['current_equipment_detail_scope']==21 and c['eligible_history_equipment']==154
+assert c['unused_equipment_excluded']==4
+for ident in ['RO01','RO02','RO03','RO04']:
+    assert rows[ident]['lifecycle_note']['status']=='unused_user_reported'
+    assert rows[ident]['lifecycle_note']['historical_sources_preserved'] and not rows[ident]['field_verified']
 assert c['eligible_history_baseline_devices']==sum(r['detail_level']=='baseline' and not r['lifecycle_note'] for r in rows.values())
 for i in range(1,91):
     ident='EV'+str(i).zfill(2)

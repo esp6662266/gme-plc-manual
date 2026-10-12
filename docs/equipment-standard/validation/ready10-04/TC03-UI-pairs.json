@@ -1,0 +1,194 @@
+[
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "376",
+    "target": "376\tPart 375.out ↔ Part 356.en"
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "370",
+    "target": "370\tORef 363 (ON) ↔ Part 356.IN0"
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "371",
+    "target": "371\tORef 364 (TC03) ↔ Part 356.Analog_input"
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "374",
+    "target": "374\tPart 356.OutValue ↔ ORef 367 (Data.Temp_TC03)"
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "24",
+    "target": "24\tPart 356.Out_of_range ↔ ORef 23 (Allarm.TC03_OFR)"
+  },
+  {
+    "key": "TC03",
+    "network": 1071,
+    "uid": "85",
+    "target": "85\tORef 76 (TC03) ↔ Part 72.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1071,
+    "uid": "87",
+    "target": "87\tPart 72.out1 ↔ ORef 77 (Inputs.TC_03)"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "476",
+    "target": "476\tPart 333.out ↔ Part 336.pre"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "479",
+    "target": "479\tPart 336.out ↔ Part 342.in ↔ Part 549.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "550",
+    "target": "550\tPart 549.out ↔ Part 347.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "491",
+    "target": "491\tPart 352.eno ↔ Part 356.pre"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "494",
+    "target": "494\tPart 356.out ↔ Part 360.in ↔ Part 362.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "500",
+    "target": "500\tPart 366.out ↔ Part 372.in ↔ Part 553.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "554",
+    "target": "554\tPart 553.out ↔ Part 377.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "512",
+    "target": "512\tPart 382.eno ↔ Part 386.pre"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "515",
+    "target": "515\tPart 386.out ↔ Part 390.in ↔ Part 392.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "409",
+    "target": "409\tLt\t\tin1 = Data.Temp_TC03; in2 = -60"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "531",
+    "target": "531\tPart 402.out ↔ Part 415.in ↔ Part 557.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "558",
+    "target": "558\tPart 557.out ↔ Part 420.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "560",
+    "target": "560\tPart 559.out ↔ Part 561.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "562",
+    "target": "562\tPart 561.out ↔ Part 425.in"
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "30",
+    "target": "30\tPart 27.out1 ↔ ORef 32 (Data.TC03_MIN_ALL)"
+  },
+  {
+    "key": "TC03",
+    "network": 8,
+    "uid": "21",
+    "target": "21\tPowerrail {} ↔ Part 22.pre"
+  },
+  {
+    "key": "TC03",
+    "network": 8,
+    "uid": "35",
+    "target": "35\tPart 32.out1 ↔ ORef 37 (Data.TC03_SETPOINT)"
+  },
+  {
+    "key": "TC03",
+    "network": 11,
+    "uid": "442",
+    "target": "442\tORef 401 (Real_SP_TC03xMV01) ↔ Part 366.SP_INT"
+  },
+  {
+    "key": "TC03",
+    "network": 11,
+    "uid": "443",
+    "target": "443\tORef 402 (Real_TC03xMV01) ↔ Part 366.PV_IN"
+  },
+  {
+    "key": "TC03",
+    "network": 11,
+    "uid": "466",
+    "target": "466\tPart 465.out ↔ Part 366.COM_RST"
+  },
+  {
+    "key": "TC03",
+    "network": 1931,
+    "uid": "96",
+    "target": "96\tPart 95.out ↔ Part 56.in1"
+  },
+  {
+    "key": "TC03",
+    "network": 1931,
+    "uid": "90",
+    "target": "90\tORef 77 (Disable_Load_RD01) ↔ Part 66.operand"
+  },
+  {
+    "key": "TC03",
+    "network": 1858,
+    "uid": "260",
+    "target": "260\tORef 242 (Allarm.MAX_MAX_TC03_TEMP) ↔ Part 291.operand"
+  },
+  {
+    "key": "TC03",
+    "network": 1843,
+    "uid": "774",
+    "target": "774\tPart 573.out1 ↔ ORef 662 (Data.TC03_SETPOINT)"
+  },
+  {
+    "key": "TC03",
+    "network": 1844,
+    "uid": "1134",
+    "target": "1134\tPart 917.out1 ↔ ORef 1011 (Data.TC03_SETPOINT)"
+  }
+]

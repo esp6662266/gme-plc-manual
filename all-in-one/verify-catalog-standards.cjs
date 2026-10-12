@@ -316,4 +316,36 @@ const bf2Circuits=JSON.stringify(standard.items(data,'BF02','circuits'));
 assert.ok(bf2Circuits.includes('6ES7523-1BL00-0AA0')&&bf2Circuits.includes('6ES7523-1BL01-0AB0'));
 assert.ok(!JSON.stringify(standard.items(data,'BF02','circuits').find(x=>x.id==='review-4-2')).includes('6ES7523-1BL01-0AA0'));
 assert.equal(bf2f.signals.find(x=>x.id==='ofr').role,'responses');
-console.log(JSON.stringify({status:'passed',catalog_profiles:keys,scope:'actual catalog IDs, seven areas, source hashes, native timers/reset/output branches, automatic counters, shared DP01 threshold and preceding Run gates, Data.LAVA writers, HOUR Move1/ENO, startup Word2, HMI8 unbound, MC05 unavailable logic and OFF Set, safe rendering and record preservation; no PLC execution'}));
+/* Temperature channels keep their own call gates and lack-of-evidence boundaries. */
+for(const [key,file,wireID,contact,call,raw,result]of [
+ ['TC03','0491','376','375','356','%IW276:P','DB1.DBW112'],
+ ['TC01','0489','336','335','316','%IW272:P','DB1.DBW110'],
+ ['TC02','0490','356','355','336','%IW274:P','DB1.DBW108'],
+ ['TC06','0492','396','395','376','%IW278:P','DB1.DBW120'],
+ ['TC05','0482','86','85','66','%IW260:P','DB1.DBW118'],
+ ['TC07','0493','416','415','396','%IW280:P','DB1.DBW190'],
+ ['TC09','0483','106','105','86','%IW386:P','DB1.DBW262'],
+ ['TC04','0481','66','65','46','%IW256:P','DB1.DBW116'],
+ ['TC10','0484','126','125','106','%IW390:P','DB1.DBW264']]){
+ const form=data.repair_record_forms.profiles.find(x=>x.key===key);
+ assert.deepEqual(Array.from(form.signals.find(x=>x.id==='raw').addresses),[raw]);
+ assert.deepEqual(Array.from(form.signals.find(x=>x.id==='result').addresses),[result]);
+ wire(xml(file),wireID,[`<PCon UId="${contact}" PinName="out" />`,`<PCon UId="${call}" PinName="en" />`]);
+}
+const bearingAlarm=xml('0529');
+wire(bearingAlarm,'560',['<PCon UId="559" PinName="out" />','<PCon UId="455" PinName="in" />']);
+wire(bearingAlarm,'25',['<PCon UId="561" PinName="out" />','<PCon UId="22" PinName="in" />']);
+wire(bearingAlarm,'26',['<PCon UId="22" PinName="out" />','<PCon UId="476" PinName="in" />']);
+assert.match(bearingAlarm,/<Part UId="22" Gate="Contact"\s*\/>/);
+assert.ok(!xml('0539').includes('Gate="SdCoil"'));
+wire(xml('0539'),'1151',['<PCon UId="1068" PinName="out" />','<PCon UId="1177" PinName="in" />','<PCon UId="1082" PinName="in" />']);
+for(const [key,page]of [['TC03',32],['TC01',56],['TC02',56],['TC06',23],['TC05',33],['TC07',30],['TC09',60],['TC04',33]]){
+ const drawing=data.drawing_workspace.profiles.find(x=>x.key===key),path=drawing.circuit.paths.find(x=>x.fg===null);
+ assert.equal(path.sheet_id,'construction-'+page);assert.equal(drawing.sheets.find(x=>x.id===path.sheet_id).page,page);
+}
+const tc10draw=data.drawing_workspace.profiles.find(x=>x.key==='TC10');assert.equal(tc10draw.circuit.paths.length,0);
+const tc11=standard.profile(data,'TC11'),tc11form=data.repair_record_forms.profiles.find(x=>x.key==='TC11');
+assert.equal(tc11.source_pairs.length,0);assert.equal(tc11.alarm.timers.length,0);assert.equal(tc11.alarm.alarms.length,0);
+assert.ok(tc11form.signals.every(x=>x.addresses.length===0&&x.refs.length===0));
+assert.equal(data.drawing_workspace.profiles.find(x=>x.key==='TC11').circuit.paths.length,0);
+console.log(JSON.stringify({status:'passed',catalog_profiles:keys,scope:'catalog identity, original hashes, native call and alarm branches, temperature gate differences, TC10 external endpoints and TC11 PLC evidence unavailable, safe rendering and record preservation; no PLC execution'}));

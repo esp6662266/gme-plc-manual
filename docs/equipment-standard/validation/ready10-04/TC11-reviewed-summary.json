@@ -1,0 +1,43 @@
+{
+  "original_bytes": 141603,
+  "original_sha256": "23a821982581a9cd51f24acce6257889c2606c89610643a064a862c68114d836",
+  "source_hashes_checked": 732,
+  "original_differences": 0,
+  "operational_metadata_differences": 6,
+  "selected_native_networks": 0,
+  "drawings": [
+    {
+      "id": "pid",
+      "kind": "P&ID",
+      "title": "P&ID · PDF1",
+      "source": "sources/PID_1684n002I.pdf",
+      "page": 1,
+      "fg": null,
+      "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "도번1684n002 ApexI 15/01/2013 · 최초06/04/2011 · FG−"
+    },
+    {
+      "id": "oem-66",
+      "kind": "관련 OEM 전기 · ER01",
+      "title": "FG66 · PDF67",
+      "source": "sources/Electrical_Rev2.pdf",
+      "page": 67,
+      "fg": 66,
+      "image": "assets/catalog-circuits/Electrical_Rev2-P067.png",
+      "extent": "원본 전체 페이지",
+      "status": "보존 설계 · 현행 실물/승인판본 별도",
+      "revision": "ER01 관련소유만·DATA27.05.2024 · 개정기입관찰없음"
+    }
+  ],
+  "new_signals": 3,
+  "steps": 6,
+  "source_pair_positions": 0,
+  "direct_paths": 0,
+  "ui_records": "pending",
+  "publication": "pending",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed"
+}

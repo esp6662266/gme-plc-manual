@@ -106,7 +106,11 @@ assert all('=ENT+CC01-BR01F' in byrow[x]['note'] for x in ['14_17','14_18'])
 assert all(not r['current_wiring_verified'] for r in b['cable_rows'])
 assert b['counts']['body_checks_pending']==7 and b['counts']['body_checks_excluded']==1
 assert [c['id'] for c in b['checks'] if c['excluded_from_current_analysis']]==['BODY-07']
-assert {n['id'] for n in b['equipment_status_notes']}==({'MV04','SC12','PV04','P22','P23'} | ({'EV'+str(i).zfill(2) for i in range(1,91)} & {v['id'] for v in json.loads((R/'registers/control-spec.json').read_text())['specifications']}))
+assert {n['id'] for n in b['equipment_status_notes']}==({'MV04','SC12','PV04','P22','P23','RO01','RO02','RO03','RO04'} | ({'EV'+str(i).zfill(2) for i in range(1,91)} & {v['id'] for v in json.loads((R/'registers/control-spec.json').read_text())['specifications']}))
+for ident in ['RO01','RO02','RO03','RO04']:
+    note=next(n for n in b['equipment_status_notes'] if n['id']==ident)
+    assert note['status']=='unused_user_reported' and note['reported_on']=='2026-10-12' and note['resume_requires_user_request']
+    assert note['original_text']=='ro는 전부 산소농도계인데 이거 전부 안쓰는거라서 예외 처리해'
 assert all(n['exclude_from_current_detailed_analysis'] and n['source_kind']=='user_statement' and not n['field_verified'] and n['historical_sources_preserved'] for n in b['equipment_status_notes'])
 assert b['equipment_status_notes'][0]['id']=='MV04' and b['equipment_status_notes'][0]['status']=='removed_user_reported' and b['equipment_status_notes'][0]['exclude_from_current_detailed_analysis'] and not b['equipment_status_notes'][0]['field_verified']
 assert len(b['checks'])==8 and all(not r['resolved'] and not r['field_verified'] for r in b['checks'])

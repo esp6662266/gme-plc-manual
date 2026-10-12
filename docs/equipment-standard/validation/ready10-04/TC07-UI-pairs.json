@@ -1,0 +1,86 @@
+[
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "416",
+    "target": "416\tPart 415.out ↔ Part 396.en"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "409",
+    "target": "409\tORef 402 (OFF) ↔ Part 415.operand"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "410",
+    "target": "410\tORef 403 (ON) ↔ Part 396.IN0"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "411",
+    "target": "411\tORef 404 (TC07) ↔ Part 396.Analog_input"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "412",
+    "target": "412\tORef 405 (Coeff.COEFF_TC07) ↔ Part 396.Coeff"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "413",
+    "target": "413\tORef 406 (Coeff.ZERO_TC07) ↔ Part 396.Zero"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "414",
+    "target": "414\tPart 396.OutValue ↔ ORef 407 (Data.TC_07)"
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "24",
+    "target": "24\tPart 396.Out_of_range ↔ ORef 23 (Allarm.TC07_OFR)"
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "89",
+    "target": "89\tPart 73.eno ↔ Part 74.en"
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "91",
+    "target": "91\tORef 80 (TC07) ↔ Part 74.in"
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "93",
+    "target": "93\tPart 74.out1 ↔ ORef 81 (Inputs.TC_07)"
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "92",
+    "target": "92\tPart 74.eno ↔ Part 75.en"
+  },
+  {
+    "key": "TC07",
+    "network": 1658,
+    "uid": "21",
+    "target": "21\tPart 193.eno ↔ Part 23.in"
+  },
+  {
+    "key": "TC07",
+    "network": 1659,
+    "uid": "172",
+    "target": "172\tPart 171.out ↔ Part 162.en"
+  }
+]

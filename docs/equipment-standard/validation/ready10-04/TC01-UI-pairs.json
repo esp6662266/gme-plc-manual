@@ -1,0 +1,158 @@
+[
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "336",
+    "target": "336\tPart 335.out ↔ Part 316.en"
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "330",
+    "target": "330\tORef 323 (ON) ↔ Part 316.IN0"
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "331",
+    "target": "331\tORef 324 (TC01) ↔ Part 316.Analog_input"
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "334",
+    "target": "334\tPart 316.OutValue ↔ ORef 327 (Data.Temp_TC01)"
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "24",
+    "target": "24\tPart 316.Out_of_range ↔ ORef 23 (Allarm.TC01_OFR)"
+  },
+  {
+    "key": "TC01",
+    "network": 1071,
+    "uid": "65",
+    "target": "65\tPart 49.eno ↔ Part 50.en"
+  },
+  {
+    "key": "TC01",
+    "network": 1071,
+    "uid": "69",
+    "target": "69\tPart 50.out1 ↔ ORef 57 (Inputs.TC_01)"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "241",
+    "target": "241\tORef 210 (Manage_TC1_2.PID_Ref_Temp) ↔ Part 149.in1"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "243",
+    "target": "243\tPart 149.out ↔ Part 155.in ↔ Part 288.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "289",
+    "target": "289\tPart 288.out ↔ Part 160.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "255",
+    "target": "255\tPart 165.eno ↔ Part 169.pre"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "258",
+    "target": "258\tPart 169.out ↔ Part 173.in ↔ Part 175.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "192",
+    "target": "192\tLt\t\tin1 = Manage_TC1_2.PID_Ref_Temp; in2 = -60.0"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "293",
+    "target": "293\tPart 292.out ↔ Part 203.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "295",
+    "target": "295\tPart 294.out ↔ Part 296.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "297",
+    "target": "297\tPart 296.out ↔ Part 208.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "834",
+    "target": "834\tContact\toperand\toperand = TC01-TC02control disable"
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "809",
+    "target": "809\tPart 744.out ↔ Part 754.en ↔ Part 761.pre ↔ Part 764.pre"
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "819",
+    "target": "819\tPart 760.out ↔ Part 770.in ↔ Part 836.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "837",
+    "target": "837\tPart 836.out ↔ Part 775.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "833",
+    "target": "833\tPart 832.out ↔ Part 834.in ↔ Part 838.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "841",
+    "target": "841\tPart 840.out ↔ Part 780.in"
+  },
+  {
+    "key": "TC01",
+    "network": 1858,
+    "uid": "294",
+    "target": "294\tPart 293.out ↔ Part 219.in6"
+  },
+  {
+    "key": "TC01",
+    "network": 1858,
+    "uid": "298",
+    "target": "298\tPart 297.out ↔ Part 219.in8"
+  },
+  {
+    "key": "TC01",
+    "network": 1092,
+    "uid": "91",
+    "target": "91\tPart 42.out ↔ ORef 60 (Data.Temp_TC01)"
+  },
+  {
+    "key": "TC01",
+    "network": 1092,
+    "uid": "99",
+    "target": "99\tPart 45.out ↔ ORef 66 (Data.Temp_TC01)"
+  }
+]

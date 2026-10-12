@@ -1,0 +1,4362 @@
+{
+  "catalog_id": "TC01",
+  "selection_key": "TC01",
+  "priority_key": null,
+  "type": "sensor",
+  "draft": "catalog-sources/TC01-DOTS-DRAFT.md",
+  "draft_sha256": "7d719a3d2a94ce49bb8e613c44710b4a83b0a6c3fe9e7412f3c95b21dbae1ccd",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1739,
+      "part",
+      "335"
+    ],
+    [
+      1739,
+      "wire",
+      "337"
+    ],
+    [
+      1739,
+      "wire",
+      "329"
+    ],
+    [
+      1739,
+      "wire",
+      "336"
+    ],
+    [
+      1739,
+      "wire",
+      "330"
+    ],
+    [
+      1739,
+      "wire",
+      "331"
+    ],
+    [
+      1739,
+      "wire",
+      "332"
+    ],
+    [
+      1739,
+      "wire",
+      "333"
+    ],
+    [
+      1739,
+      "wire",
+      "334"
+    ],
+    [
+      1739,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "part",
+      "22"
+    ],
+    [
+      1071,
+      "part",
+      "27"
+    ],
+    [
+      1071,
+      "part",
+      "34"
+    ],
+    [
+      1071,
+      "part",
+      "41"
+    ],
+    [
+      1071,
+      "part",
+      "48"
+    ],
+    [
+      1071,
+      "part",
+      "49"
+    ],
+    [
+      1071,
+      "part",
+      "50"
+    ],
+    [
+      1071,
+      "part",
+      "51"
+    ],
+    [
+      1071,
+      "part",
+      "72"
+    ],
+    [
+      1071,
+      "part",
+      "73"
+    ],
+    [
+      1071,
+      "part",
+      "74"
+    ],
+    [
+      1071,
+      "part",
+      "75"
+    ],
+    [
+      1071,
+      "part",
+      "96"
+    ],
+    [
+      1071,
+      "part",
+      "97"
+    ],
+    [
+      1071,
+      "part",
+      "98"
+    ],
+    [
+      1071,
+      "part",
+      "99"
+    ],
+    [
+      1071,
+      "part",
+      "122"
+    ],
+    [
+      1071,
+      "part",
+      "123"
+    ],
+    [
+      1071,
+      "part",
+      "144"
+    ],
+    [
+      1071,
+      "part",
+      "145"
+    ],
+    [
+      1071,
+      "part",
+      "146"
+    ],
+    [
+      1071,
+      "part",
+      "147"
+    ],
+    [
+      1071,
+      "part",
+      "168"
+    ],
+    [
+      1071,
+      "part",
+      "169"
+    ],
+    [
+      1071,
+      "part",
+      "170"
+    ],
+    [
+      1071,
+      "part",
+      "171"
+    ],
+    [
+      1071,
+      "part",
+      "84"
+    ],
+    [
+      1071,
+      "part",
+      "194"
+    ],
+    [
+      1071,
+      "wire",
+      "21"
+    ],
+    [
+      1071,
+      "wire",
+      "23"
+    ],
+    [
+      1071,
+      "wire",
+      "33"
+    ],
+    [
+      1071,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "wire",
+      "31"
+    ],
+    [
+      1071,
+      "wire",
+      "40"
+    ],
+    [
+      1071,
+      "wire",
+      "32"
+    ],
+    [
+      1071,
+      "wire",
+      "38"
+    ],
+    [
+      1071,
+      "wire",
+      "47"
+    ],
+    [
+      1071,
+      "wire",
+      "39"
+    ],
+    [
+      1071,
+      "wire",
+      "45"
+    ],
+    [
+      1071,
+      "wire",
+      "46"
+    ],
+    [
+      1071,
+      "wire",
+      "61"
+    ],
+    [
+      1071,
+      "wire",
+      "62"
+    ],
+    [
+      1071,
+      "wire",
+      "63"
+    ],
+    [
+      1071,
+      "wire",
+      "64"
+    ],
+    [
+      1071,
+      "wire",
+      "65"
+    ],
+    [
+      1071,
+      "wire",
+      "66"
+    ],
+    [
+      1071,
+      "wire",
+      "67"
+    ],
+    [
+      1071,
+      "wire",
+      "68"
+    ],
+    [
+      1071,
+      "wire",
+      "69"
+    ],
+    [
+      1071,
+      "wire",
+      "70"
+    ],
+    [
+      1071,
+      "wire",
+      "71"
+    ],
+    [
+      1071,
+      "wire",
+      "85"
+    ],
+    [
+      1071,
+      "wire",
+      "86"
+    ],
+    [
+      1071,
+      "wire",
+      "87"
+    ],
+    [
+      1071,
+      "wire",
+      "88"
+    ],
+    [
+      1071,
+      "wire",
+      "89"
+    ],
+    [
+      1071,
+      "wire",
+      "90"
+    ],
+    [
+      1071,
+      "wire",
+      "91"
+    ],
+    [
+      1071,
+      "wire",
+      "92"
+    ],
+    [
+      1071,
+      "wire",
+      "93"
+    ],
+    [
+      1071,
+      "wire",
+      "94"
+    ],
+    [
+      1071,
+      "wire",
+      "95"
+    ],
+    [
+      1071,
+      "wire",
+      "109"
+    ],
+    [
+      1071,
+      "wire",
+      "110"
+    ],
+    [
+      1071,
+      "wire",
+      "111"
+    ],
+    [
+      1071,
+      "wire",
+      "112"
+    ],
+    [
+      1071,
+      "wire",
+      "113"
+    ],
+    [
+      1071,
+      "wire",
+      "114"
+    ],
+    [
+      1071,
+      "wire",
+      "115"
+    ],
+    [
+      1071,
+      "wire",
+      "116"
+    ],
+    [
+      1071,
+      "wire",
+      "117"
+    ],
+    [
+      1071,
+      "wire",
+      "118"
+    ],
+    [
+      1071,
+      "wire",
+      "119"
+    ],
+    [
+      1071,
+      "wire",
+      "139"
+    ],
+    [
+      1071,
+      "wire",
+      "140"
+    ],
+    [
+      1071,
+      "wire",
+      "141"
+    ],
+    [
+      1071,
+      "wire",
+      "142"
+    ],
+    [
+      1071,
+      "wire",
+      "143"
+    ],
+    [
+      1071,
+      "wire",
+      "157"
+    ],
+    [
+      1071,
+      "wire",
+      "158"
+    ],
+    [
+      1071,
+      "wire",
+      "159"
+    ],
+    [
+      1071,
+      "wire",
+      "160"
+    ],
+    [
+      1071,
+      "wire",
+      "161"
+    ],
+    [
+      1071,
+      "wire",
+      "162"
+    ],
+    [
+      1071,
+      "wire",
+      "163"
+    ],
+    [
+      1071,
+      "wire",
+      "164"
+    ],
+    [
+      1071,
+      "wire",
+      "165"
+    ],
+    [
+      1071,
+      "wire",
+      "166"
+    ],
+    [
+      1071,
+      "wire",
+      "167"
+    ],
+    [
+      1071,
+      "wire",
+      "181"
+    ],
+    [
+      1071,
+      "wire",
+      "182"
+    ],
+    [
+      1071,
+      "wire",
+      "183"
+    ],
+    [
+      1071,
+      "wire",
+      "184"
+    ],
+    [
+      1071,
+      "wire",
+      "185"
+    ],
+    [
+      1071,
+      "wire",
+      "186"
+    ],
+    [
+      1071,
+      "wire",
+      "187"
+    ],
+    [
+      1071,
+      "wire",
+      "188"
+    ],
+    [
+      1071,
+      "wire",
+      "189"
+    ],
+    [
+      1071,
+      "wire",
+      "190"
+    ],
+    [
+      1071,
+      "wire",
+      "108"
+    ],
+    [
+      1071,
+      "wire",
+      "191"
+    ],
+    [
+      1071,
+      "wire",
+      "132"
+    ],
+    [
+      1071,
+      "wire",
+      "195"
+    ],
+    [
+      1071,
+      "wire",
+      "156"
+    ],
+    [
+      1071,
+      "wire",
+      "196"
+    ],
+    [
+      1071,
+      "wire",
+      "197"
+    ],
+    [
+      1979,
+      "part",
+      "286"
+    ],
+    [
+      1979,
+      "part",
+      "149"
+    ],
+    [
+      1979,
+      "part",
+      "155"
+    ],
+    [
+      1979,
+      "part",
+      "288"
+    ],
+    [
+      1979,
+      "part",
+      "160"
+    ],
+    [
+      1979,
+      "part",
+      "290"
+    ],
+    [
+      1979,
+      "part",
+      "165"
+    ],
+    [
+      1979,
+      "part",
+      "169"
+    ],
+    [
+      1979,
+      "part",
+      "173"
+    ],
+    [
+      1979,
+      "part",
+      "175"
+    ],
+    [
+      1979,
+      "part",
+      "179"
+    ],
+    [
+      1979,
+      "part",
+      "186"
+    ],
+    [
+      1979,
+      "part",
+      "189"
+    ],
+    [
+      1979,
+      "part",
+      "192"
+    ],
+    [
+      1979,
+      "part",
+      "185"
+    ],
+    [
+      1979,
+      "part",
+      "198"
+    ],
+    [
+      1979,
+      "part",
+      "292"
+    ],
+    [
+      1979,
+      "part",
+      "203"
+    ],
+    [
+      1979,
+      "part",
+      "294"
+    ],
+    [
+      1979,
+      "part",
+      "296"
+    ],
+    [
+      1979,
+      "part",
+      "208"
+    ],
+    [
+      1979,
+      "wire",
+      "298"
+    ],
+    [
+      1979,
+      "wire",
+      "240"
+    ],
+    [
+      1979,
+      "wire",
+      "287"
+    ],
+    [
+      1979,
+      "wire",
+      "241"
+    ],
+    [
+      1979,
+      "wire",
+      "242"
+    ],
+    [
+      1979,
+      "wire",
+      "243"
+    ],
+    [
+      1979,
+      "wire",
+      "244"
+    ],
+    [
+      1979,
+      "wire",
+      "245"
+    ],
+    [
+      1979,
+      "wire",
+      "246"
+    ],
+    [
+      1979,
+      "wire",
+      "289"
+    ],
+    [
+      1979,
+      "wire",
+      "248"
+    ],
+    [
+      1979,
+      "wire",
+      "250"
+    ],
+    [
+      1979,
+      "wire",
+      "291"
+    ],
+    [
+      1979,
+      "wire",
+      "252"
+    ],
+    [
+      1979,
+      "wire",
+      "253"
+    ],
+    [
+      1979,
+      "wire",
+      "255"
+    ],
+    [
+      1979,
+      "wire",
+      "254"
+    ],
+    [
+      1979,
+      "wire",
+      "256"
+    ],
+    [
+      1979,
+      "wire",
+      "257"
+    ],
+    [
+      1979,
+      "wire",
+      "258"
+    ],
+    [
+      1979,
+      "wire",
+      "259"
+    ],
+    [
+      1979,
+      "wire",
+      "260"
+    ],
+    [
+      1979,
+      "wire",
+      "262"
+    ],
+    [
+      1979,
+      "wire",
+      "263"
+    ],
+    [
+      1979,
+      "wire",
+      "264"
+    ],
+    [
+      1979,
+      "wire",
+      "265"
+    ],
+    [
+      1979,
+      "wire",
+      "266"
+    ],
+    [
+      1979,
+      "wire",
+      "267"
+    ],
+    [
+      1979,
+      "wire",
+      "268"
+    ],
+    [
+      1979,
+      "wire",
+      "269"
+    ],
+    [
+      1979,
+      "wire",
+      "270"
+    ],
+    [
+      1979,
+      "wire",
+      "271"
+    ],
+    [
+      1979,
+      "wire",
+      "272"
+    ],
+    [
+      1979,
+      "wire",
+      "273"
+    ],
+    [
+      1979,
+      "wire",
+      "274"
+    ],
+    [
+      1979,
+      "wire",
+      "275"
+    ],
+    [
+      1979,
+      "wire",
+      "276"
+    ],
+    [
+      1979,
+      "wire",
+      "277"
+    ],
+    [
+      1979,
+      "wire",
+      "293"
+    ],
+    [
+      1979,
+      "wire",
+      "279"
+    ],
+    [
+      1979,
+      "wire",
+      "281"
+    ],
+    [
+      1979,
+      "wire",
+      "295"
+    ],
+    [
+      1979,
+      "wire",
+      "282"
+    ],
+    [
+      1979,
+      "wire",
+      "297"
+    ],
+    [
+      1979,
+      "wire",
+      "284"
+    ],
+    [
+      1986,
+      "part",
+      "832"
+    ],
+    [
+      1986,
+      "part",
+      "834"
+    ],
+    [
+      1986,
+      "part",
+      "745"
+    ],
+    [
+      1986,
+      "part",
+      "748"
+    ],
+    [
+      1986,
+      "part",
+      "744"
+    ],
+    [
+      1986,
+      "part",
+      "754"
+    ],
+    [
+      1986,
+      "part",
+      "761"
+    ],
+    [
+      1986,
+      "part",
+      "764"
+    ],
+    [
+      1986,
+      "part",
+      "760"
+    ],
+    [
+      1986,
+      "part",
+      "770"
+    ],
+    [
+      1986,
+      "part",
+      "836"
+    ],
+    [
+      1986,
+      "part",
+      "775"
+    ],
+    [
+      1986,
+      "part",
+      "838"
+    ],
+    [
+      1986,
+      "part",
+      "840"
+    ],
+    [
+      1986,
+      "part",
+      "780"
+    ],
+    [
+      1986,
+      "wire",
+      "842"
+    ],
+    [
+      1986,
+      "wire",
+      "801"
+    ],
+    [
+      1986,
+      "wire",
+      "833"
+    ],
+    [
+      1986,
+      "wire",
+      "802"
+    ],
+    [
+      1986,
+      "wire",
+      "835"
+    ],
+    [
+      1986,
+      "wire",
+      "803"
+    ],
+    [
+      1986,
+      "wire",
+      "804"
+    ],
+    [
+      1986,
+      "wire",
+      "805"
+    ],
+    [
+      1986,
+      "wire",
+      "806"
+    ],
+    [
+      1986,
+      "wire",
+      "807"
+    ],
+    [
+      1986,
+      "wire",
+      "808"
+    ],
+    [
+      1986,
+      "wire",
+      "809"
+    ],
+    [
+      1986,
+      "wire",
+      "810"
+    ],
+    [
+      1986,
+      "wire",
+      "811"
+    ],
+    [
+      1986,
+      "wire",
+      "812"
+    ],
+    [
+      1986,
+      "wire",
+      "813"
+    ],
+    [
+      1986,
+      "wire",
+      "814"
+    ],
+    [
+      1986,
+      "wire",
+      "815"
+    ],
+    [
+      1986,
+      "wire",
+      "816"
+    ],
+    [
+      1986,
+      "wire",
+      "817"
+    ],
+    [
+      1986,
+      "wire",
+      "818"
+    ],
+    [
+      1986,
+      "wire",
+      "819"
+    ],
+    [
+      1986,
+      "wire",
+      "820"
+    ],
+    [
+      1986,
+      "wire",
+      "821"
+    ],
+    [
+      1986,
+      "wire",
+      "822"
+    ],
+    [
+      1986,
+      "wire",
+      "837"
+    ],
+    [
+      1986,
+      "wire",
+      "824"
+    ],
+    [
+      1986,
+      "wire",
+      "827"
+    ],
+    [
+      1986,
+      "wire",
+      "839"
+    ],
+    [
+      1986,
+      "wire",
+      "828"
+    ],
+    [
+      1986,
+      "wire",
+      "841"
+    ],
+    [
+      1986,
+      "wire",
+      "830"
+    ],
+    [
+      1856,
+      "part",
+      "160"
+    ],
+    [
+      1856,
+      "part",
+      "162"
+    ],
+    [
+      1856,
+      "part",
+      "164"
+    ],
+    [
+      1856,
+      "part",
+      "150"
+    ],
+    [
+      1856,
+      "wire",
+      "166"
+    ],
+    [
+      1856,
+      "wire",
+      "155"
+    ],
+    [
+      1856,
+      "wire",
+      "161"
+    ],
+    [
+      1856,
+      "wire",
+      "156"
+    ],
+    [
+      1856,
+      "wire",
+      "163"
+    ],
+    [
+      1856,
+      "wire",
+      "157"
+    ],
+    [
+      1856,
+      "wire",
+      "165"
+    ],
+    [
+      1856,
+      "wire",
+      "159"
+    ],
+    [
+      1858,
+      "part",
+      "273"
+    ],
+    [
+      1858,
+      "part",
+      "275"
+    ],
+    [
+      1858,
+      "part",
+      "277"
+    ],
+    [
+      1858,
+      "part",
+      "279"
+    ],
+    [
+      1858,
+      "part",
+      "281"
+    ],
+    [
+      1858,
+      "part",
+      "283"
+    ],
+    [
+      1858,
+      "part",
+      "285"
+    ],
+    [
+      1858,
+      "part",
+      "287"
+    ],
+    [
+      1858,
+      "part",
+      "289"
+    ],
+    [
+      1858,
+      "part",
+      "291"
+    ],
+    [
+      1858,
+      "part",
+      "293"
+    ],
+    [
+      1858,
+      "part",
+      "295"
+    ],
+    [
+      1858,
+      "part",
+      "297"
+    ],
+    [
+      1858,
+      "part",
+      "299"
+    ],
+    [
+      1858,
+      "part",
+      "301"
+    ],
+    [
+      1858,
+      "part",
+      "303"
+    ],
+    [
+      1858,
+      "part",
+      "22"
+    ],
+    [
+      1858,
+      "part",
+      "219"
+    ],
+    [
+      1858,
+      "part",
+      "305"
+    ],
+    [
+      1858,
+      "part",
+      "213"
+    ],
+    [
+      1858,
+      "part",
+      "232"
+    ],
+    [
+      1858,
+      "wire",
+      "307"
+    ],
+    [
+      1858,
+      "wire",
+      "251"
+    ],
+    [
+      1858,
+      "wire",
+      "274"
+    ],
+    [
+      1858,
+      "wire",
+      "252"
+    ],
+    [
+      1858,
+      "wire",
+      "276"
+    ],
+    [
+      1858,
+      "wire",
+      "253"
+    ],
+    [
+      1858,
+      "wire",
+      "278"
+    ],
+    [
+      1858,
+      "wire",
+      "254"
+    ],
+    [
+      1858,
+      "wire",
+      "280"
+    ],
+    [
+      1858,
+      "wire",
+      "255"
+    ],
+    [
+      1858,
+      "wire",
+      "282"
+    ],
+    [
+      1858,
+      "wire",
+      "256"
+    ],
+    [
+      1858,
+      "wire",
+      "284"
+    ],
+    [
+      1858,
+      "wire",
+      "257"
+    ],
+    [
+      1858,
+      "wire",
+      "286"
+    ],
+    [
+      1858,
+      "wire",
+      "258"
+    ],
+    [
+      1858,
+      "wire",
+      "288"
+    ],
+    [
+      1858,
+      "wire",
+      "259"
+    ],
+    [
+      1858,
+      "wire",
+      "290"
+    ],
+    [
+      1858,
+      "wire",
+      "260"
+    ],
+    [
+      1858,
+      "wire",
+      "292"
+    ],
+    [
+      1858,
+      "wire",
+      "261"
+    ],
+    [
+      1858,
+      "wire",
+      "294"
+    ],
+    [
+      1858,
+      "wire",
+      "262"
+    ],
+    [
+      1858,
+      "wire",
+      "296"
+    ],
+    [
+      1858,
+      "wire",
+      "263"
+    ],
+    [
+      1858,
+      "wire",
+      "298"
+    ],
+    [
+      1858,
+      "wire",
+      "264"
+    ],
+    [
+      1858,
+      "wire",
+      "300"
+    ],
+    [
+      1858,
+      "wire",
+      "265"
+    ],
+    [
+      1858,
+      "wire",
+      "302"
+    ],
+    [
+      1858,
+      "wire",
+      "266"
+    ],
+    [
+      1858,
+      "wire",
+      "304"
+    ],
+    [
+      1858,
+      "wire",
+      "21"
+    ],
+    [
+      1858,
+      "wire",
+      "24"
+    ],
+    [
+      1858,
+      "wire",
+      "267"
+    ],
+    [
+      1858,
+      "wire",
+      "268"
+    ],
+    [
+      1858,
+      "wire",
+      "306"
+    ],
+    [
+      1858,
+      "wire",
+      "270"
+    ],
+    [
+      1858,
+      "wire",
+      "272"
+    ],
+    [
+      1092,
+      "part",
+      "22"
+    ],
+    [
+      1092,
+      "part",
+      "27"
+    ],
+    [
+      1092,
+      "part",
+      "31"
+    ],
+    [
+      1092,
+      "part",
+      "33"
+    ],
+    [
+      1092,
+      "part",
+      "36"
+    ],
+    [
+      1092,
+      "part",
+      "38"
+    ],
+    [
+      1092,
+      "part",
+      "39"
+    ],
+    [
+      1092,
+      "part",
+      "40"
+    ],
+    [
+      1092,
+      "part",
+      "41"
+    ],
+    [
+      1092,
+      "part",
+      "42"
+    ],
+    [
+      1092,
+      "part",
+      "43"
+    ],
+    [
+      1092,
+      "part",
+      "44"
+    ],
+    [
+      1092,
+      "part",
+      "45"
+    ],
+    [
+      1092,
+      "part",
+      "46"
+    ],
+    [
+      1092,
+      "part",
+      "47"
+    ],
+    [
+      1092,
+      "part",
+      "48"
+    ],
+    [
+      1092,
+      "part",
+      "49"
+    ],
+    [
+      1092,
+      "part",
+      "50"
+    ],
+    [
+      1092,
+      "wire",
+      "21"
+    ],
+    [
+      1092,
+      "wire",
+      "25"
+    ],
+    [
+      1092,
+      "wire",
+      "29"
+    ],
+    [
+      1092,
+      "wire",
+      "26"
+    ],
+    [
+      1092,
+      "wire",
+      "30"
+    ],
+    [
+      1092,
+      "wire",
+      "24"
+    ],
+    [
+      1092,
+      "wire",
+      "35"
+    ],
+    [
+      1092,
+      "wire",
+      "78"
+    ],
+    [
+      1092,
+      "wire",
+      "79"
+    ],
+    [
+      1092,
+      "wire",
+      "80"
+    ],
+    [
+      1092,
+      "wire",
+      "81"
+    ],
+    [
+      1092,
+      "wire",
+      "82"
+    ],
+    [
+      1092,
+      "wire",
+      "83"
+    ],
+    [
+      1092,
+      "wire",
+      "84"
+    ],
+    [
+      1092,
+      "wire",
+      "85"
+    ],
+    [
+      1092,
+      "wire",
+      "86"
+    ],
+    [
+      1092,
+      "wire",
+      "87"
+    ],
+    [
+      1092,
+      "wire",
+      "88"
+    ],
+    [
+      1092,
+      "wire",
+      "89"
+    ],
+    [
+      1092,
+      "wire",
+      "90"
+    ],
+    [
+      1092,
+      "wire",
+      "91"
+    ],
+    [
+      1092,
+      "wire",
+      "92"
+    ],
+    [
+      1092,
+      "wire",
+      "93"
+    ],
+    [
+      1092,
+      "wire",
+      "94"
+    ],
+    [
+      1092,
+      "wire",
+      "95"
+    ],
+    [
+      1092,
+      "wire",
+      "96"
+    ],
+    [
+      1092,
+      "wire",
+      "97"
+    ],
+    [
+      1092,
+      "wire",
+      "98"
+    ],
+    [
+      1092,
+      "wire",
+      "99"
+    ],
+    [
+      1092,
+      "wire",
+      "100"
+    ],
+    [
+      1092,
+      "wire",
+      "101"
+    ],
+    [
+      1092,
+      "wire",
+      "102"
+    ],
+    [
+      1092,
+      "wire",
+      "103"
+    ],
+    [
+      1092,
+      "wire",
+      "104"
+    ],
+    [
+      1092,
+      "wire",
+      "105"
+    ],
+    [
+      1092,
+      "wire",
+      "106"
+    ],
+    [
+      1092,
+      "wire",
+      "107"
+    ],
+    [
+      1092,
+      "wire",
+      "108"
+    ],
+    [
+      1092,
+      "wire",
+      "109"
+    ],
+    [
+      1092,
+      "wire",
+      "110"
+    ],
+    [
+      1092,
+      "wire",
+      "111"
+    ],
+    [
+      1092,
+      "wire",
+      "112"
+    ],
+    [
+      1658,
+      "part",
+      "255"
+    ],
+    [
+      1658,
+      "part",
+      "258"
+    ],
+    [
+      1658,
+      "part",
+      "161"
+    ],
+    [
+      1658,
+      "part",
+      "164"
+    ],
+    [
+      1658,
+      "part",
+      "167"
+    ],
+    [
+      1658,
+      "part",
+      "170"
+    ],
+    [
+      1658,
+      "part",
+      "174"
+    ],
+    [
+      1658,
+      "part",
+      "177"
+    ],
+    [
+      1658,
+      "part",
+      "181"
+    ],
+    [
+      1658,
+      "part",
+      "185"
+    ],
+    [
+      1658,
+      "part",
+      "190"
+    ],
+    [
+      1658,
+      "part",
+      "259"
+    ],
+    [
+      1658,
+      "part",
+      "47"
+    ],
+    [
+      1658,
+      "part",
+      "193"
+    ],
+    [
+      1658,
+      "part",
+      "23"
+    ],
+    [
+      1658,
+      "wire",
+      "257"
+    ],
+    [
+      1658,
+      "wire",
+      "220"
+    ],
+    [
+      1658,
+      "wire",
+      "256"
+    ],
+    [
+      1658,
+      "wire",
+      "30"
+    ],
+    [
+      1658,
+      "wire",
+      "31"
+    ],
+    [
+      1658,
+      "wire",
+      "25"
+    ],
+    [
+      1658,
+      "wire",
+      "27"
+    ],
+    [
+      1658,
+      "wire",
+      "28"
+    ],
+    [
+      1658,
+      "wire",
+      "26"
+    ],
+    [
+      1658,
+      "wire",
+      "225"
+    ],
+    [
+      1658,
+      "wire",
+      "227"
+    ],
+    [
+      1658,
+      "wire",
+      "226"
+    ],
+    [
+      1658,
+      "wire",
+      "228"
+    ],
+    [
+      1658,
+      "wire",
+      "230"
+    ],
+    [
+      1658,
+      "wire",
+      "229"
+    ],
+    [
+      1658,
+      "wire",
+      "231"
+    ],
+    [
+      1658,
+      "wire",
+      "232"
+    ],
+    [
+      1658,
+      "wire",
+      "234"
+    ],
+    [
+      1658,
+      "wire",
+      "233"
+    ],
+    [
+      1658,
+      "wire",
+      "235"
+    ],
+    [
+      1658,
+      "wire",
+      "237"
+    ],
+    [
+      1658,
+      "wire",
+      "236"
+    ],
+    [
+      1658,
+      "wire",
+      "238"
+    ],
+    [
+      1658,
+      "wire",
+      "239"
+    ],
+    [
+      1658,
+      "wire",
+      "241"
+    ],
+    [
+      1658,
+      "wire",
+      "240"
+    ],
+    [
+      1658,
+      "wire",
+      "242"
+    ],
+    [
+      1658,
+      "wire",
+      "243"
+    ],
+    [
+      1658,
+      "wire",
+      "245"
+    ],
+    [
+      1658,
+      "wire",
+      "244"
+    ],
+    [
+      1658,
+      "wire",
+      "246"
+    ],
+    [
+      1658,
+      "wire",
+      "247"
+    ],
+    [
+      1658,
+      "wire",
+      "36"
+    ],
+    [
+      1658,
+      "wire",
+      "37"
+    ],
+    [
+      1658,
+      "wire",
+      "35"
+    ],
+    [
+      1658,
+      "wire",
+      "38"
+    ],
+    [
+      1658,
+      "wire",
+      "39"
+    ],
+    [
+      1658,
+      "wire",
+      "48"
+    ],
+    [
+      1658,
+      "wire",
+      "49"
+    ],
+    [
+      1658,
+      "wire",
+      "252"
+    ],
+    [
+      1658,
+      "wire",
+      "21"
+    ],
+    [
+      1658,
+      "wire",
+      "253"
+    ],
+    [
+      1658,
+      "wire",
+      "22"
+    ],
+    [
+      1659,
+      "part",
+      "171"
+    ],
+    [
+      1659,
+      "part",
+      "162"
+    ],
+    [
+      1659,
+      "wire",
+      "173"
+    ],
+    [
+      1659,
+      "wire",
+      "168"
+    ],
+    [
+      1659,
+      "wire",
+      "172"
+    ],
+    [
+      1659,
+      "wire",
+      "169"
+    ],
+    [
+      1659,
+      "wire",
+      "170"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "호출허가",
+      "network": 1739,
+      "kind": "wire",
+      "uid": "336",
+      "label": "ON→환산.en",
+      "boundary": "현재실행별도"
+    },
+    {
+      "signal": "IN0",
+      "network": 1739,
+      "kind": "wire",
+      "uid": "330",
+      "label": "ON→IN0",
+      "boundary": "현재ON별도"
+    },
+    {
+      "signal": "원시 입력",
+      "network": 1739,
+      "kind": "wire",
+      "uid": "331",
+      "label": "IW272:P→Analog_input",
+      "boundary": "미러와별도"
+    },
+    {
+      "signal": "환산 결과",
+      "network": 1739,
+      "kind": "wire",
+      "uid": "334",
+      "label": "OutValue→W110",
+      "boundary": "최종Writer별도"
+    },
+    {
+      "signal": "OFR",
+      "network": 1739,
+      "kind": "wire",
+      "uid": "24",
+      "label": "Out_of_range→X21.2",
+      "boundary": "Latch아님"
+    },
+    {
+      "signal": "HMI 원시미러",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "65",
+      "label": "Move49.eno→Move50.en",
+      "boundary": "앞ENO연쇄"
+    },
+    {
+      "signal": "HMI 원시미러",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "69",
+      "label": "Move50→DB13W36",
+      "boundary": "Int 미러"
+    },
+    {
+      "signal": "선택온도",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "241",
+      "label": "PID_Ref_Temp→Gt.in1",
+      "boundary": "Real 선택값"
+    },
+    {
+      "signal": "MAX 지연",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "243",
+      "label": "Gt.out→SD·T접점",
+      "boundary": "S5T6S"
+    },
+    {
+      "signal": "MAX Set",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "289",
+      "label": "T85→SCoil",
+      "boundary": "선택온도경보"
+    },
+    {
+      "signal": "MAX 회복",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "255",
+      "label": "Sub(Int MAX−5).eno→Lt(Real).pre",
+      "boundary": "형식/ENO경계"
+    },
+    {
+      "signal": "MAX Reset",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "258",
+      "label": "Lt.out→RCoil·STOP_HORN S",
+      "boundary": "전체복구아님"
+    },
+    {
+      "signal": "MAXMAX 비교",
+      "network": 1979,
+      "kind": "part",
+      "uid": "192",
+      "label": "선택온도<−60.0",
+      "boundary": "저범위포함"
+    },
+    {
+      "signal": "MAXMAX Set",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "293",
+      "label": "T86→SCoil",
+      "boundary": "S5T6S"
+    },
+    {
+      "signal": "MAXMAX Reset",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "295",
+      "label": "RESET_ALLARM→자기경보",
+      "boundary": "정상온도조건없음"
+    },
+    {
+      "signal": "MAXMAX Reset 출력",
+      "network": 1979,
+      "kind": "wire",
+      "uid": "297",
+      "label": "기존경보→RCoil",
+      "boundary": "재Set별도"
+    },
+    {
+      "signal": "비교 disable",
+      "network": 1986,
+      "kind": "part",
+      "uid": "834",
+      "label": "NOT M80.2",
+      "boundary": "Reset가지는별도"
+    },
+    {
+      "signal": "비교 선행",
+      "network": 1986,
+      "kind": "wire",
+      "uid": "809",
+      "label": "OR>400→Sub.en·두비교.pre",
+      "boundary": "ENO직렬아님"
+    },
+    {
+      "signal": "비교 지연",
+      "network": 1986,
+      "kind": "wire",
+      "uid": "819",
+      "label": "±100밖OR→SD·T접점",
+      "boundary": "1분별도타이머"
+    },
+    {
+      "signal": "비교 Set",
+      "network": 1986,
+      "kind": "wire",
+      "uid": "837",
+      "label": "T116→SCoil",
+      "boundary": "TC01_OFR와별도"
+    },
+    {
+      "signal": "비교 Reset",
+      "network": 1986,
+      "kind": "wire",
+      "uid": "833",
+      "label": "ON→발생/Reset분기",
+      "boundary": "disable이Reset전제아님"
+    },
+    {
+      "signal": "비교 Reset 출력",
+      "network": 1986,
+      "kind": "wire",
+      "uid": "841",
+      "label": "기존래치→RCoil",
+      "boundary": "원인제거별도"
+    },
+    {
+      "signal": "버너 MAXMAX",
+      "network": 1858,
+      "kind": "wire",
+      "uid": "294",
+      "label": "MAXMAX→OR219.in6",
+      "boundary": "요청정지관련소유"
+    },
+    {
+      "signal": "버너 비교고장",
+      "network": 1858,
+      "kind": "wire",
+      "uid": "298",
+      "label": "비교고장→OR219.in8",
+      "boundary": "외부버너별도"
+    },
+    {
+      "signal": "복수Writer",
+      "network": 1092,
+      "kind": "wire",
+      "uid": "91",
+      "label": "기존simulation명칭Add→W110",
+      "boundary": "정적원본만·실행없음"
+    },
+    {
+      "signal": "복수Writer",
+      "network": 1092,
+      "kind": "wire",
+      "uid": "99",
+      "label": "기존simulation명칭Sub→W110",
+      "boundary": "활성/최종값미확정"
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0035-IdentXmlPart.xml",
+    "sources/decoded-original/0036-IdentXmlPart.xml",
+    "sources/decoded-original/0037-IdentXmlPart.xml",
+    "sources/decoded-original/0038-IdentXmlPart.xml",
+    "sources/decoded-original/0039-IdentXmlPart.xml",
+    "sources/decoded-original/0040-IdentXmlPart.xml",
+    "sources/decoded-original/0041-IdentXmlPart.xml",
+    "sources/decoded-original/0042-IdentXmlPart.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0047-IdentXmlPart.xml",
+    "sources/decoded-original/0048-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0050-IdentXmlPart.xml",
+    "sources/decoded-original/0051-IdentXmlPart.xml",
+    "sources/decoded-original/0052-IdentXmlPart.xml",
+    "sources/decoded-original/0053-IdentXmlPart.xml",
+    "sources/decoded-original/0054-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0056-IdentXmlPart.xml",
+    "sources/decoded-original/0057-IdentXmlPart.xml",
+    "sources/decoded-original/0058-IdentXmlPart.xml",
+    "sources/decoded-original/0059-IdentXmlPart.xml",
+    "sources/decoded-original/0060-IdentXmlPart.xml",
+    "sources/decoded-original/0061-IdentXmlPart.xml",
+    "sources/decoded-original/0062-IdentXmlPart.xml",
+    "sources/decoded-original/0063-IdentXmlPart.xml",
+    "sources/decoded-original/0064-IdentXmlPart.xml",
+    "sources/decoded-original/0065-IdentXmlPart.xml",
+    "sources/decoded-original/0066-IdentXmlPart.xml",
+    "sources/decoded-original/0067-IdentXmlPart.xml",
+    "sources/decoded-original/0068-IdentXmlPart.xml",
+    "sources/decoded-original/0069-IdentXmlPart.xml",
+    "sources/decoded-original/0070-IdentXmlPart.xml",
+    "sources/decoded-original/0071-IdentXmlPart.xml",
+    "sources/decoded-original/0072-IdentXmlPart.xml",
+    "sources/decoded-original/0552-IdentXmlPart.xml",
+    "sources/decoded-original/0553-IdentXmlPart.xml",
+    "sources/decoded-original/0554-IdentXmlPart.xml",
+    "sources/decoded-original/0555-IdentXmlPart.xml",
+    "sources/decoded-original/0556-IdentXmlPart.xml",
+    "sources/decoded-original/0557-IdentXmlPart.xml",
+    "sources/decoded-original/0558-IdentXmlPart.xml",
+    "sources/decoded-original/0559-IdentXmlPart.xml",
+    "sources/decoded-original/0560-IdentXmlPart.xml",
+    "sources/decoded-original/0561-IdentXmlPart.xml",
+    "sources/decoded-original/0562-IdentXmlPart.xml",
+    "sources/decoded-original/0563-IdentXmlPart.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0570-IdentXmlPart.xml",
+    "sources/decoded-original/0571-IdentXmlPart.xml",
+    "sources/decoded-original/0572-IdentXmlPart.xml",
+    "sources/decoded-original/0573-IdentXmlPart.xml",
+    "sources/decoded-original/0574-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0579-IdentXmlPart.xml",
+    "sources/decoded-original/0580-IdentXmlPart.xml",
+    "sources/decoded-original/0581-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0587-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0594-IdentXmlPart.xml",
+    "sources/decoded-original/0595-IdentXmlPart.xml",
+    "sources/decoded-original/0596-IdentXmlPart.xml",
+    "sources/decoded-original/0597-IdentXmlPart.xml",
+    "sources/decoded-original/0598-IdentXmlPart.xml",
+    "sources/decoded-original/0599-IdentXmlPart.xml",
+    "sources/decoded-original/0600-IdentXmlPart.xml",
+    "sources/decoded-original/0601-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0605-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0607-IdentXmlPart.xml",
+    "sources/decoded-original/0608-IdentXmlPart.xml",
+    "sources/decoded-original/0609-IdentXmlPart.xml",
+    "sources/decoded-original/0610-IdentXmlPart.xml",
+    "sources/decoded-original/0611-IdentXmlPart.xml",
+    "sources/decoded-original/0612-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0617-IdentXmlPart.xml",
+    "sources/decoded-original/0618-IdentXmlPart.xml",
+    "sources/decoded-original/0619-IdentXmlPart.xml",
+    "sources/decoded-original/0620-IdentXmlPart.xml",
+    "sources/decoded-original/0621-IdentXmlPart.xml",
+    "sources/decoded-original/0622-IdentXmlPart.xml",
+    "sources/decoded-original/0623-IdentXmlPart.xml",
+    "sources/decoded-original/0624-IdentXmlPart.xml",
+    "sources/decoded-original/0625-IdentXmlPart.xml",
+    "sources/decoded-original/0626-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0630-IdentXmlPart.xml",
+    "sources/decoded-original/0631-IdentXmlPart.xml",
+    "sources/decoded-original/0632-IdentXmlPart.xml",
+    "sources/decoded-original/0633-IdentXmlPart.xml",
+    "sources/decoded-original/0634-IdentXmlPart.xml",
+    "sources/decoded-original/0635-IdentXmlPart.xml",
+    "sources/decoded-original/0636-IdentXmlPart.xml",
+    "sources/decoded-original/0637-IdentXmlPart.xml",
+    "sources/decoded-original/0638-IdentXmlPart.xml",
+    "sources/decoded-original/0639-IdentXmlPart.xml",
+    "sources/decoded-original/0640-IdentXmlPart.xml",
+    "sources/decoded-original/0641-IdentXmlPart.xml",
+    "sources/decoded-original/0642-IdentXmlPart.xml",
+    "sources/decoded-original/0643-IdentXmlPart.xml",
+    "sources/decoded-original/0644-IdentXmlPart.xml",
+    "sources/decoded-original/0645-IdentXmlPart.xml",
+    "sources/decoded-original/0646-IdentXmlPart.xml",
+    "sources/decoded-original/0647-IdentXmlPart.xml",
+    "sources/decoded-original/0648-IdentXmlPart.xml",
+    "sources/decoded-original/0649-IdentXmlPart.xml",
+    "sources/decoded-original/0650-IdentXmlPart.xml",
+    "sources/decoded-original/0651-IdentXmlPart.xml",
+    "sources/decoded-original/0652-IdentXmlPart.xml",
+    "sources/decoded-original/0653-IdentXmlPart.xml",
+    "sources/decoded-original/0654-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0656-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0658-IdentXmlPart.xml",
+    "sources/decoded-original/0659-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0663-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0673-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0677-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0679-IdentXmlPart.xml",
+    "sources/decoded-original/0680-IdentXmlPart.xml",
+    "sources/decoded-original/0681-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0683-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0685-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0687-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0691-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/0693-IdentXmlPart.xml",
+    "sources/decoded-original/0694-IdentXmlPart.xml",
+    "sources/live_index.json",
+    "sources/hmi_plc_tags.csv",
+    "assets/catalog-circuits/Electrical_Rev2-P078.png",
+    "assets/catalog-circuits/Electrical_Rev2-P107.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P056.png"
+  ],
+  "signal_reference": {
+    "id": "TC01",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC01 · Peripherie Int·환산 전",
+        "addresses": [
+          "%IW272:P"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "324",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.TC_01 · Int·SAM=None HMI 미러",
+        "addresses": [
+          "DB13.DBW36"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "57",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Temp_TC01 · 환산 Int·별도Writer",
+        "addresses": [
+          "DB1.DBW110"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "327",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_TC01 · 현재값 미취득",
+        "addresses": [
+          "DB4.DBW12"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "326",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_TC01 · 현재값 미취득",
+        "addresses": [
+          "DB4.DBW14"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "325",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · en/IN0 현재값 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "322",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "TC01_OFR · 일반Coil·선택기/고온과별도",
+        "addresses": [
+          "DB3.DBX21.2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "23",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "selected",
+        "role": "responses",
+        "name": "Manage_TC1_2.PID_Ref_Temp · Real 선택온도",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "210",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "maxset",
+        "role": "requests",
+        "name": "TC01_MAX_ALL · Int 설정·현행승인값아님",
+        "addresses": [
+          "DB1.DBW68"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "211",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "high",
+        "role": "alarms",
+        "name": "MAX_TC01_TEMP · 선택온도6초",
+        "addresses": [
+          "DB3.DBX8.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "215",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "maxmax",
+        "role": "alarms",
+        "name": "MAX_MAX_TC01_TEMP · 낮은범위고장포함",
+        "addresses": [
+          "DB3.DBX8.1"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "236",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t85",
+        "role": "responses",
+        "name": "Tag_99 · T85 · S5T6S",
+        "addresses": [
+          "%T85"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "213",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t86",
+        "role": "responses",
+        "name": "Tag_100 · T86 · S5T6S",
+        "addresses": [
+          "%T86"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "234",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "peer",
+        "role": "responses",
+        "name": "관련 Temp_TC02 · 별도채널 Int",
+        "addresses": [
+          "DB1.DBW108"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "785",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "disable",
+        "role": "requests",
+        "name": "TC01-TC02control disable · NOT 접점",
+        "addresses": [
+          "%M80.2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "782",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "diff",
+        "role": "responses",
+        "name": "Local app02 · Int 차이·주소미배정",
+        "addresses": [],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "789",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t116",
+        "role": "responses",
+        "name": "Tag_108 · T116 · S5T1M",
+        "addresses": [
+          "%T116"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "795",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mismatch",
+        "role": "alarms",
+        "name": "TC01_TC02_COMP_FAULT · 공동비교",
+        "addresses": [
+          "DB3.DBX9.1"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "797",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 원인해소와별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "798",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "TC01",
+    "timers": [
+      {
+        "name": "Tag_99",
+        "addresses": [
+          "%T85"
+        ],
+        "network": 1979,
+        "uid": "155",
+        "preset": "S5T#6S"
+      },
+      {
+        "name": "Tag_100",
+        "addresses": [
+          "%T86"
+        ],
+        "network": 1979,
+        "uid": "198",
+        "preset": "S5T#6S"
+      },
+      {
+        "name": "Tag_108",
+        "addresses": [
+          "%T116"
+        ],
+        "network": 1986,
+        "uid": "770",
+        "preset": "S5T#1M"
+      }
+    ],
+    "alarms": [
+      {
+        "name": "MAX_TC01_TEMP",
+        "addresses": [
+          "DB3.DBX8.0"
+        ],
+        "actions": [
+          {
+            "network": 1979,
+            "uid": "160"
+          },
+          {
+            "network": 1979,
+            "uid": "173"
+          }
+        ]
+      },
+      {
+        "name": "MAX_MAX_TC01_TEMP",
+        "addresses": [
+          "DB3.DBX8.1"
+        ],
+        "actions": [
+          {
+            "network": 1979,
+            "uid": "203"
+          },
+          {
+            "network": 1979,
+            "uid": "208"
+          }
+        ]
+      },
+      {
+        "name": "TC01_TC02_COMP_FAULT",
+        "addresses": [
+          "DB3.DBX9.1"
+        ],
+        "actions": [
+          {
+            "network": 1986,
+            "uid": "775"
+          },
+          {
+            "network": 1986,
+            "uid": "780"
+          }
+        ]
+      },
+      {
+        "name": "TC01_OFR",
+        "addresses": [
+          "DB3.DBX21.2"
+        ],
+        "actions": [
+          {
+            "network": 1739,
+            "location_kind": "wire",
+            "uid": "24"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1739,
+      1071,
+      1979,
+      1986,
+      1856,
+      1858,
+      1092,
+      1658,
+      1659
+    ],
+    "chain": [
+      "ON en/IN0→IW272:P Int환산→DB1W110·OFR",
+      "SAM=None 원시미러→DB13W36·앞Move ENO",
+      "TC01/TC02 공유선택→Real PID_Ref_Temp→MAX/MAXMAX 6초",
+      "두Int온도OR>400·NOTdisable→Int차이±100밖→1분공동경보",
+      "BR01 허가/요청·별도Writer·현재CPU/현장 별도"
+    ],
+    "repair": [
+      "IW272:P, IW272 process-image, DB13W36, DB1W110, DB39D2 및 각 수집 시각",
+      "원시 Int 부호값, DB3X21.2, TC02 OFR, 송신기 루프/채널 진단 자료",
+      "DB39D2, EnableTC01/02, TC01/02 값, TC01_MAX_ALL, T85/T86",
+      "M80.2, 두 온도, 차이 app02, T116, DB3X9.1, Reset 요청 시각",
+      "DB3X8.1/9.1, 공동 EmergencyStopTC1_2, Temperature Interlock OK, Start_Burner",
+      "센서/송신기 명판, 실제 설치장소, 단자번호·케이블 식별표, 승인준공도"
+    ],
+    "pending": [
+      "현행센서/송신기명판·교정·제로/계수·정상극성/범위미확정",
+      "OEM AB01 대 시공 HE01·KX/4–20mA 구간상충",
+      "PID_Ref_Temp 선택Real 대 Temp_TC01 Int·두채널Enable/OFR 별도",
+      "doc1719 TC02-only 가지 TC01_OFR/EnableTC01 원문혼재·현재SCL미확보",
+      "6초온도경보 대1분공동비교·Int/Real/ENO/strict 비교보존",
+      "MAXMAX Reset 정상온도조건없음·비교Reset은disable발생조건과별도",
+      "기존simulation명칭XML 별도Writer 정적원본만·실행/생성/변경없음",
+      "SETPOINT/레시피/HMI·전체Word·간접Writer의현재최종값미확정",
+      "BR01 인터록/요청Reset·외부연소보호/실물복구별도",
+      "TIA/현재CPU/실물/현장복구 미수행"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "TC01",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "정적/UI/게시와현장별도"
+    ],
+    "existing_pending": [
+      "현행센서/송신기명판·교정·제로/계수·정상극성/범위미확정",
+      "OEM AB01 대 시공 HE01·KX/4–20mA 구간상충",
+      "PID_Ref_Temp 선택Real 대 Temp_TC01 Int·두채널Enable/OFR 별도",
+      "doc1719 TC02-only 가지 TC01_OFR/EnableTC01 원문혼재·현재SCL미확보",
+      "6초온도경보 대1분공동비교·Int/Real/ENO/strict 비교보존",
+      "MAXMAX Reset 정상온도조건없음·비교Reset은disable발생조건과별도",
+      "기존simulation명칭XML 별도Writer 정적원본만·실행/생성/변경없음",
+      "SETPOINT/레시피/HMI·전체Word·간접Writer의현재최종값미확정",
+      "BR01 인터록/요청Reset·외부연소보호/실물복구별도",
+      "TIA/현재CPU/실물/현장복구 미수행"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "현행센서/송신기명판·교정·제로/계수·정상극성/범위미확정",
+        "OEM AB01 대 시공 HE01·KX/4–20mA 구간상충",
+        "PID_Ref_Temp 선택Real 대 Temp_TC01 Int·두채널Enable/OFR 별도",
+        "doc1719 TC02-only 가지 TC01_OFR/EnableTC01 원문혼재·현재SCL미확보",
+        "6초온도경보 대1분공동비교·Int/Real/ENO/strict 비교보존",
+        "MAXMAX Reset 정상온도조건없음·비교Reset은disable발생조건과별도",
+        "기존simulation명칭XML 별도Writer 정적원본만·실행/생성/변경없음",
+        "SETPOINT/레시피/HMI·전체Word·간접Writer의현재최종값미확정",
+        "BR01 인터록/요청Reset·외부연소보호/실물복구별도",
+        "TIA/현재CPU/실물/현장복구 미수행"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "TC01",
+    "plc_id": "TC01",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "HMI 온도 고정/서로 다름",
+        "observe": "IW272:P, IW272 process-image, DB13W36, DB1W110, DB39D2 및 각 수집 시각",
+        "compare": "원시 미러/환산/선택값 구분; 0398 ENO·0489 호출·계수/제로·별도 Writer 활성 확인 필요",
+        "next": "원시 미러/환산/선택값 구분; 0398 ENO·0489 호출·계수/제로·별도 Writer 활성 확인 필요",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "OFR 경보",
+        "observe": "원시 Int 부호값, DB3X21.2, TC02 OFR, 송신기 루프/채널 진단 자료",
+        "compare": "범위조건·단선·전원·교정 구분. -9999/0으로 실제 온도를 판정하지 않음",
+        "next": "범위조건·단선·전원·교정 구분. -9999/0으로 실제 온도를 판정하지 않음",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "TC01 표시가 낮아도 MAX",
+        "observe": "DB39D2, EnableTC01/02, TC01/02 값, TC01_MAX_ALL, T85/T86",
+        "compare": "직접TC01 대신 선택값 비교임을 확인; 선택기 원본 결손·Real/Int 경계 유지",
+        "next": "직접TC01 대신 선택값 비교임을 확인; 선택기 원본 결손·Real/Int 경계 유지",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "TC01/02 비교고장",
+        "observe": "M80.2, 두 온도, 차이 app02, T116, DB3X9.1, Reset 요청 시각",
+        "compare": "OR>400 및 ±100 조건과1분 경로를 구분; disable/reset 변경하지 않음",
+        "next": "OR>400 및 ±100 조건과1분 경로를 구분; disable/reset 변경하지 않음",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "고장이 없어져도 버너 정지",
+        "observe": "DB3X8.1/9.1, 공동 EmergencyStopTC1_2, Temperature Interlock OK, Start_Burner",
+        "compare": "BR01 요청/인터록/외부 응답을 별도 검토; TC01 수리만으로 재기동 완료 아님",
+        "next": "BR01 요청/인터록/외부 응답을 별도 검토; TC01 수리만으로 재기동 완료 아님",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "도면 위치와 설치가 다름",
+        "observe": "센서/송신기 명판, 실제 설치장소, 단자번호·케이블 식별표, 승인준공도",
+        "compare": "AB01/HE01 상충 및 KX/4–20mA 구간 결속 확인. 무전압/작업허가 등 승인 정비절차는 별도 담당",
+        "next": "AB01/HE01 상충 및 KX/4–20mA 구간 결속 확인. 무전압/작업허가 등 승인 정비절차는 별도 담당",
+        "common": "step-symptom-6"
+      }
+    ],
+    "bindings": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC01 · Peripherie Int·환산 전",
+        "addresses": [
+          "%IW272:P"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "324",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.TC_01 · Int·SAM=None HMI 미러",
+        "addresses": [
+          "DB13.DBW36"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "57",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Temp_TC01 · 환산 Int·별도Writer",
+        "addresses": [
+          "DB1.DBW110"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "327",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_TC01 · 현재값 미취득",
+        "addresses": [
+          "DB4.DBW12"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "326",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_TC01 · 현재값 미취득",
+        "addresses": [
+          "DB4.DBW14"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "325",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · en/IN0 현재값 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "322",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "TC01_OFR · 일반Coil·선택기/고온과별도",
+        "addresses": [
+          "DB3.DBX21.2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "23",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "selected",
+        "role": "responses",
+        "name": "Manage_TC1_2.PID_Ref_Temp · Real 선택온도",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "210",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "maxset",
+        "role": "requests",
+        "name": "TC01_MAX_ALL · Int 설정·현행승인값아님",
+        "addresses": [
+          "DB1.DBW68"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "211",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "high",
+        "role": "alarms",
+        "name": "MAX_TC01_TEMP · 선택온도6초",
+        "addresses": [
+          "DB3.DBX8.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "215",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "maxmax",
+        "role": "alarms",
+        "name": "MAX_MAX_TC01_TEMP · 낮은범위고장포함",
+        "addresses": [
+          "DB3.DBX8.1"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "236",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t85",
+        "role": "responses",
+        "name": "Tag_99 · T85 · S5T6S",
+        "addresses": [
+          "%T85"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "213",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t86",
+        "role": "responses",
+        "name": "Tag_100 · T86 · S5T6S",
+        "addresses": [
+          "%T86"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "234",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "peer",
+        "role": "responses",
+        "name": "관련 Temp_TC02 · 별도채널 Int",
+        "addresses": [
+          "DB1.DBW108"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "785",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "disable",
+        "role": "requests",
+        "name": "TC01-TC02control disable · NOT 접점",
+        "addresses": [
+          "%M80.2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "782",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "diff",
+        "role": "responses",
+        "name": "Local app02 · Int 차이·주소미배정",
+        "addresses": [],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "789",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t116",
+        "role": "responses",
+        "name": "Tag_108 · T116 · S5T1M",
+        "addresses": [
+          "%T116"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "795",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mismatch",
+        "role": "alarms",
+        "name": "TC01_TC02_COMP_FAULT · 공동비교",
+        "addresses": [
+          "DB3.DBX9.1"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "797",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 원인해소와별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "798",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "TC01",
+    "name": "TC01 챔버 온도 관찰",
+    "reference_plc_id": "TC01",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "raw",
+        "role": "raw_inputs",
+        "name": "TC01 · Peripherie Int·환산 전",
+        "addresses": [
+          "%IW272:P"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "324",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.TC_01 · Int·SAM=None HMI 미러",
+        "addresses": [
+          "DB13.DBW36"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "57",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "role": "responses",
+        "name": "Data.Temp_TC01 · 환산 Int·별도Writer",
+        "addresses": [
+          "DB1.DBW110"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "327",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "Coeff.ZERO_TC01 · 현재값 미취득",
+        "addresses": [
+          "DB4.DBW12"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "326",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "Coeff.COEFF_TC01 · 현재값 미취득",
+        "addresses": [
+          "DB4.DBW14"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "325",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · en/IN0 현재값 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "322",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "alarms",
+        "name": "TC01_OFR · 일반Coil·선택기/고온과별도",
+        "addresses": [
+          "DB3.DBX21.2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1739,
+            "oref": "23",
+            "source": "sources/decoded-original/0489-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "selected",
+        "role": "responses",
+        "name": "Manage_TC1_2.PID_Ref_Temp · Real 선택온도",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "210",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "maxset",
+        "role": "requests",
+        "name": "TC01_MAX_ALL · Int 설정·현행승인값아님",
+        "addresses": [
+          "DB1.DBW68"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "211",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "high",
+        "role": "alarms",
+        "name": "MAX_TC01_TEMP · 선택온도6초",
+        "addresses": [
+          "DB3.DBX8.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "215",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "maxmax",
+        "role": "alarms",
+        "name": "MAX_MAX_TC01_TEMP · 낮은범위고장포함",
+        "addresses": [
+          "DB3.DBX8.1"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "236",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t85",
+        "role": "responses",
+        "name": "Tag_99 · T85 · S5T6S",
+        "addresses": [
+          "%T85"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "213",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t86",
+        "role": "responses",
+        "name": "Tag_100 · T86 · S5T6S",
+        "addresses": [
+          "%T86"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1979,
+            "oref": "234",
+            "source": "sources/decoded-original/0527-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "peer",
+        "role": "responses",
+        "name": "관련 Temp_TC02 · 별도채널 Int",
+        "addresses": [
+          "DB1.DBW108"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "785",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "disable",
+        "role": "requests",
+        "name": "TC01-TC02control disable · NOT 접점",
+        "addresses": [
+          "%M80.2"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "782",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "diff",
+        "role": "responses",
+        "name": "Local app02 · Int 차이·주소미배정",
+        "addresses": [],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "789",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t116",
+        "role": "responses",
+        "name": "Tag_108 · T116 · S5T1M",
+        "addresses": [
+          "%T116"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "795",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mismatch",
+        "role": "alarms",
+        "name": "TC01_TC02_COMP_FAULT · 공동비교",
+        "addresses": [
+          "DB3.DBX9.1"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "797",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 원인해소와별도",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+        "refs": [
+          {
+            "network": 1986,
+            "oref": "798",
+            "source": "sources/decoded-original/0534-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "HMI 온도 고정/서로 다름",
+        "observe": "IW272:P, IW272 process-image, DB13W36, DB1W110, DB39D2 및 각 수집 시각",
+        "compare": "원시 미러/환산/선택값 구분; 0398 ENO·0489 호출·계수/제로·별도 Writer 활성 확인 필요",
+        "next": "원시 미러/환산/선택값 구분; 0398 ENO·0489 호출·계수/제로·별도 Writer 활성 확인 필요",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "OFR 경보",
+        "observe": "원시 Int 부호값, DB3X21.2, TC02 OFR, 송신기 루프/채널 진단 자료",
+        "compare": "범위조건·단선·전원·교정 구분. -9999/0으로 실제 온도를 판정하지 않음",
+        "next": "범위조건·단선·전원·교정 구분. -9999/0으로 실제 온도를 판정하지 않음",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "TC01 표시가 낮아도 MAX",
+        "observe": "DB39D2, EnableTC01/02, TC01/02 값, TC01_MAX_ALL, T85/T86",
+        "compare": "직접TC01 대신 선택값 비교임을 확인; 선택기 원본 결손·Real/Int 경계 유지",
+        "next": "직접TC01 대신 선택값 비교임을 확인; 선택기 원본 결손·Real/Int 경계 유지",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "TC01/02 비교고장",
+        "observe": "M80.2, 두 온도, 차이 app02, T116, DB3X9.1, Reset 요청 시각",
+        "compare": "OR>400 및 ±100 조건과1분 경로를 구분; disable/reset 변경하지 않음",
+        "next": "OR>400 및 ±100 조건과1분 경로를 구분; disable/reset 변경하지 않음",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "고장이 없어져도 버너 정지",
+        "observe": "DB3X8.1/9.1, 공동 EmergencyStopTC1_2, Temperature Interlock OK, Start_Burner",
+        "compare": "BR01 요청/인터록/외부 응답을 별도 검토; TC01 수리만으로 재기동 완료 아님",
+        "next": "BR01 요청/인터록/외부 응답을 별도 검토; TC01 수리만으로 재기동 완료 아님",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "도면 위치와 설치가 다름",
+        "observe": "센서/송신기 명판, 실제 설치장소, 단자번호·케이블 식별표, 승인준공도",
+        "compare": "AB01/HE01 상충 및 KX/4–20mA 구간 결속 확인. 무전압/작업허가 등 승인 정비절차는 별도 담당",
+        "next": "AB01/HE01 상충 및 KX/4–20mA 구간 결속 확인. 무전압/작업허가 등 승인 정비절차는 별도 담당",
+        "common": "step-symptom-6"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "TC01 고유 정적원본·독립관찰",
+      "sources": {
+        "catalog-sources/TC01-DOTS-DRAFT.md": "7d719a3d2a94ce49bb8e613c44710b4a83b0a6c3fe9e7412f3c95b21dbae1ccd"
+      },
+      "circuit_equipment": "TC01 송신기 · OEM AB01 대 시공 HE01 위치 상충",
+      "circuit_distinction": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+      "circuit_pages": [
+        {
+          "label": "FG77 · PDF78",
+          "path": "sources/Electrical_Rev2.pdf#page=78"
+        },
+        {
+          "label": "FG106 · PDF107",
+          "path": "sources/Electrical_Rev2.pdf#page=107"
+        }
+      ],
+      "construction_boundary": "6_23 CR→HE01 대 OEM AB01 · KX/4–20mA 구간/현행실물미확정",
+      "construction_pages": [
+        {
+          "label": "시공·케이블 · PDF56",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=56"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "현행센서/송신기명판·교정·제로/계수·정상극성/범위미확정"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1739",
+            "path": "networks/network-1739.html"
+          },
+          {
+            "label": "1071",
+            "path": "networks/network-1071.html"
+          },
+          {
+            "label": "1979",
+            "path": "networks/network-1979.html"
+          },
+          {
+            "label": "1986",
+            "path": "networks/network-1986.html"
+          },
+          {
+            "label": "1856",
+            "path": "networks/network-1856.html"
+          },
+          {
+            "label": "1858",
+            "path": "networks/network-1858.html"
+          },
+          {
+            "label": "1092",
+            "path": "networks/network-1092.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "IW272:P, IW272 process-image, DB13W36, DB1W110, DB39D2 및 각 수집 시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "원시 미러/환산/선택값 구분; 0398 ENO·0489 호출·계수/제로·별도 Writer 활성 확인 필요"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1739",
+              "path": "networks/network-1739.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1979",
+              "path": "networks/network-1979.html"
+            },
+            {
+              "label": "1986",
+              "path": "networks/network-1986.html"
+            },
+            {
+              "label": "1856",
+              "path": "networks/network-1856.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "원시 Int 부호값, DB3X21.2, TC02 OFR, 송신기 루프/채널 진단 자료"
+            },
+            {
+              "owner": "현재자료",
+              "work": "범위조건·단선·전원·교정 구분. -9999/0으로 실제 온도를 판정하지 않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1739",
+              "path": "networks/network-1739.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1979",
+              "path": "networks/network-1979.html"
+            },
+            {
+              "label": "1986",
+              "path": "networks/network-1986.html"
+            },
+            {
+              "label": "1856",
+              "path": "networks/network-1856.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DB39D2, EnableTC01/02, TC01/02 값, TC01_MAX_ALL, T85/T86"
+            },
+            {
+              "owner": "현재자료",
+              "work": "직접TC01 대신 선택값 비교임을 확인; 선택기 원본 결손·Real/Int 경계 유지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1739",
+              "path": "networks/network-1739.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1979",
+              "path": "networks/network-1979.html"
+            },
+            {
+              "label": "1986",
+              "path": "networks/network-1986.html"
+            },
+            {
+              "label": "1856",
+              "path": "networks/network-1856.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "M80.2, 두 온도, 차이 app02, T116, DB3X9.1, Reset 요청 시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "OR>400 및 ±100 조건과1분 경로를 구분; disable/reset 변경하지 않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1739",
+              "path": "networks/network-1739.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1979",
+              "path": "networks/network-1979.html"
+            },
+            {
+              "label": "1986",
+              "path": "networks/network-1986.html"
+            },
+            {
+              "label": "1856",
+              "path": "networks/network-1856.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DB3X8.1/9.1, 공동 EmergencyStopTC1_2, Temperature Interlock OK, Start_Burner"
+            },
+            {
+              "owner": "현재자료",
+              "work": "BR01 요청/인터록/외부 응답을 별도 검토; TC01 수리만으로 재기동 완료 아님"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1739",
+              "path": "networks/network-1739.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1979",
+              "path": "networks/network-1979.html"
+            },
+            {
+              "label": "1986",
+              "path": "networks/network-1986.html"
+            },
+            {
+              "label": "1856",
+              "path": "networks/network-1856.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-6",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "센서/송신기 명판, 실제 설치장소, 단자번호·케이블 식별표, 승인준공도"
+            },
+            {
+              "owner": "현재자료",
+              "work": "AB01/HE01 상충 및 KX/4–20mA 구간 결속 확인. 무전압/작업허가 등 승인 정비절차는 별도 담당"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1739",
+              "path": "networks/network-1739.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1979",
+              "path": "networks/network-1979.html"
+            },
+            {
+              "label": "1986",
+              "path": "networks/network-1986.html"
+            },
+            {
+              "label": "1856",
+              "path": "networks/network-1856.html"
+            },
+            {
+              "label": "1858",
+              "path": "networks/network-1858.html"
+            },
+            {
+              "label": "1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "TC01",
+    "plc_id": "TC01",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-77",
+        "kind": "OEM 전기",
+        "title": "FG77 · PDF78",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 78,
+        "fg": 77,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P078.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "27.05.2024 · 개정행공란"
+      },
+      {
+        "id": "oem-106",
+        "kind": "OEM 전기",
+        "title": "FG106 · PDF107",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 107,
+        "fg": 106,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P107.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "27.05.2024 · CPU515/MOD3 현행미확정"
+      },
+      {
+        "id": "construction-56",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF56",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 56,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P056.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/승인판본 별도",
+        "revision": "Rev1 24.11.11 first draft·승인공란"
+      }
+    ],
+    "circuit": {
+      "id": "TC01",
+      "equipment": "TC01 송신기 · OEM AB01 대 시공 HE01 위치 상충",
+      "distinction": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+      "paths": [
+        {
+          "signal": "원시 입력",
+          "fg": 77,
+          "drawing": "24Vdc10.7→50mAF→X1:186→TC01+5",
+          "backup": "IW272:P 입력원천",
+          "nodes": [
+            "24Vdc10.7→5×20 50mAF",
+            "X1:186→77.1→TC01+5"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1739,
+              "uid": "324"
+            }
+          ],
+          "check": "보호권장값·현재송신기형식아님"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": 106,
+          "drawing": "TC01−6→X1:187→PEW272/AI단자2I0+",
+          "backup": "IW272:P와SAM=None미러별도",
+          "nodes": [
+            "TC01−6→X1:187→+PEW272",
+            "MOD3 단자2I0+/4U0−I0−",
+            "공통4→8/12/16/18MANA→−0Vdc10.6",
+            "X1:188→77SCH1·실드반환선아님"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1739,
+              "uid": "324"
+            },
+            {
+              "network": 1071,
+              "uid": "56"
+            }
+          ],
+          "check": "0/1300℃·4–20mA OEM 표기·현재교정미확정"
+        },
+        {
+          "signal": "원시 입력",
+          "fg": null,
+          "drawing": "시공PDF56 6_23 CR→HE01/TC01",
+          "backup": "OEM AB01 대 시공 HE01 위치상충",
+          "nodes": [
+            "6_23 =FLA+HE01-TC01A",
+            "TC/KX2S1.0·spare0",
+            "100LCD1→E500·Adjustment10·LEN50"
+          ],
+          "destination": "보존 양끝점 · 현행자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1739,
+              "uid": "324"
+            }
+          ],
+          "check": "단위추정없음·센서/송신기구간 미결속",
+          "sheet_id": "construction-56"
+        }
+      ],
+      "pending": [
+        "현행센서/송신기명판·교정·제로/계수·정상극성/범위미확정",
+        "OEM AB01 대 시공 HE01·KX/4–20mA 구간상충",
+        "PID_Ref_Temp 선택Real 대 Temp_TC01 Int·두채널Enable/OFR 별도",
+        "doc1719 TC02-only 가지 TC01_OFR/EnableTC01 원문혼재·현재SCL미확보",
+        "6초온도경보 대1분공동비교·Int/Real/ENO/strict 비교보존",
+        "MAXMAX Reset 정상온도조건없음·비교Reset은disable발생조건과별도",
+        "기존simulation명칭XML 별도Writer 정적원본만·실행/생성/변경없음",
+        "SETPOINT/레시피/HMI·전체Word·간접Writer의현재최종값미확정",
+        "BR01 인터록/요청Reset·외부연소보호/실물복구별도",
+        "TIA/현재CPU/실물/현장복구 미수행"
+      ]
+    },
+    "warnings": [
+      "AB01/HE01상충",
+      "선택Real/직접Int/OFR/공동고장구분",
+      "TC02-only 혼재원문보존"
+    ]
+  },
+  "related_alarm_boundary": "TC01 고유 IW272:P 환산과 SAM=None 미러·DB39 선택온도는 다릅니다. MAX라는 이름이어도 실제 비교는 선택온도 Real이며 설정/지역계산 Int와 구분합니다. TC02-only 색인 혼재, 별도 Writer, AB01/HE01·KX/4–20mA 상충과 현재CPU/교정/실물/현장복구 미확정을 보존합니다.",
+  "presentation": {
+    "search_examples": "TC01, IW272, DB13.DBW36, DB1.DBW110, DB39.DBD2, T85, T86, T116"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "TC01 자료",
+        "devices/TC01.html"
+      ]
+    ],
+    "io": [
+      [
+        "환산원문",
+        "networks/network-1739.html"
+      ],
+      [
+        "HMI 미러",
+        "networks/network-1071.html"
+      ],
+      [
+        "HMI 설정",
+        "sources/hmi_plc_tags.csv"
+      ]
+    ],
+    "control": [
+      [
+        "1739",
+        "networks/network-1739.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1979",
+        "networks/network-1979.html"
+      ],
+      [
+        "1986",
+        "networks/network-1986.html"
+      ],
+      [
+        "1856",
+        "networks/network-1856.html"
+      ],
+      [
+        "1858",
+        "networks/network-1858.html"
+      ],
+      [
+        "1092",
+        "networks/network-1092.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG77 · PDF78",
+        "sources/Electrical_Rev2.pdf#page=78"
+      ],
+      [
+        "FG106 · PDF107",
+        "sources/Electrical_Rev2.pdf#page=107"
+      ],
+      [
+        "시공·케이블 · PDF56",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=56"
+      ]
+    ],
+    "alarms": [
+      [
+        "선택온도경보",
+        "networks/network-1979.html"
+      ],
+      [
+        "공동비교",
+        "networks/network-1986.html"
+      ],
+      [
+        "OFR",
+        "networks/network-1739.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1739",
+        "networks/network-1739.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1979",
+        "networks/network-1979.html"
+      ],
+      [
+        "1986",
+        "networks/network-1986.html"
+      ],
+      [
+        "1856",
+        "networks/network-1856.html"
+      ],
+      [
+        "1858",
+        "networks/network-1858.html"
+      ],
+      [
+        "1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "completion": [
+      [
+        "확인 경계",
+        "catalog-guides/TC01.html#completion"
+      ]
+    ]
+  }
+}

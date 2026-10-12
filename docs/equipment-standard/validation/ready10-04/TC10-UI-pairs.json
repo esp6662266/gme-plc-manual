@@ -1,0 +1,68 @@
+[
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "126",
+    "target": "126\tPart 125.out ↔ Part 106.en"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "119",
+    "target": "119\tORef 112 (OFF) ↔ Part 125.operand"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "120",
+    "target": "120\tORef 113 (ON) ↔ Part 106.IN0"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "121",
+    "target": "121\tORef 114 (TC-10) ↔ Part 106.Analog_input"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "122",
+    "target": "122\tORef 115 (Coeff.COEFF_TC10) ↔ Part 106.Coeff"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "123",
+    "target": "123\tORef 116 (Coeff.ZERO_TC10) ↔ Part 106.Zero"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "124",
+    "target": "124\tPart 106.OutValue ↔ ORef 117 (Data.TC_10)"
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "24",
+    "target": "24\tPart 106.Out_of_range ↔ ORef 23 (Allarm.TC10_OFR)"
+  },
+  {
+    "key": "TC10",
+    "network": 1619,
+    "uid": "283",
+    "target": "283\tPart 282.out ↔ Part 261.en ↔ Part 264.en ↔ Part 267.en ↔ Part 270.en"
+  },
+  {
+    "key": "TC10",
+    "network": 1658,
+    "uid": "21",
+    "target": "21\tPart 193.eno ↔ Part 23.in"
+  },
+  {
+    "key": "TC10",
+    "network": 1659,
+    "uid": "172",
+    "target": "172\tPart 171.out ↔ Part 162.en"
+  }
+]
