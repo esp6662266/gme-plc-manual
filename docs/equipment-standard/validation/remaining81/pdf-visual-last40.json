@@ -1,0 +1,2235 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "review_kind": "actual pixel visual review of latest12mm report PNGs",
+  "reviewed_at_utc": "2026-10-12T13:30:23.466099+00:00",
+  "assignment": {
+    "file_index_start": 41,
+    "file_index_end": 80,
+    "documents": 40,
+    "pages": 80
+  },
+  "full_generation": {
+    "documents": 81,
+    "pages": 169,
+    "report_structure_sha256": "4aaf944cd3895e63f0760fed5c82823c8f7a97a70f584ecadfd19ea478b16143"
+  },
+  "actual_checked_document_count": 40,
+  "actual_checked_page_count": 80,
+  "actual_checked_pages": [
+    {
+      "key": "ZT03",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT03-1.png",
+      "png_sha256": "ae970811236f59d21b01a76d37fc3392bbffa220131e0712acc250687f9afb01",
+      "original_pdf_sha256": "73ccd893c33a323652f5a190383a08d28e3b0294e515d37857e9276ef7c346d0",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-01.png",
+      "contact_sheet_number": 1,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT03",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT03-2.png",
+      "png_sha256": "7953f039e141767a915a943ac6bbf574ff8a222662714e823c3d318c0ae653a0",
+      "original_pdf_sha256": "73ccd893c33a323652f5a190383a08d28e3b0294e515d37857e9276ef7c346d0",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-01.png",
+      "contact_sheet_number": 1,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT04",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT04-1.png",
+      "png_sha256": "879fe7377423c64eeb6925d1ec9d22357e5529a07dca6cfe70d8819397676491",
+      "original_pdf_sha256": "a56982435dd70037ba1f80f69e4e0258b5e6540efb6719c70b3a65bee09119ef",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-01.png",
+      "contact_sheet_number": 1,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT04",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT04-2.png",
+      "png_sha256": "181732e01c88e65fb90fe9802b99b491695c83a5bef2ecd272b4baeecfe10ccc",
+      "original_pdf_sha256": "a56982435dd70037ba1f80f69e4e0258b5e6540efb6719c70b3a65bee09119ef",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-01.png",
+      "contact_sheet_number": 1,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT05",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT05-1.png",
+      "png_sha256": "26ee9776d1cc99bf71c2a1369600d7198d5b4a4b13119cebd0f5d74856ca2876",
+      "original_pdf_sha256": "6b4022fc61e64607cb3af6b44315805ea73f88347d6bd9558e95b3da89fc1ad9",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-02.png",
+      "contact_sheet_number": 2,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT05",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT05-2.png",
+      "png_sha256": "0efc51fb2af360315e4a31e8a61b5ecef8f861f5dadece75dd12c4792d0b4cc2",
+      "original_pdf_sha256": "6b4022fc61e64607cb3af6b44315805ea73f88347d6bd9558e95b3da89fc1ad9",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-02.png",
+      "contact_sheet_number": 2,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT06",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT06-1.png",
+      "png_sha256": "ca15a489acfefe850c356aa3adc262bebfb7ea1cfcec1bf6b269f03182d19d1f",
+      "original_pdf_sha256": "29db1f3fc4c87f8cfee7e669d5c8c84b53f65fc3ed23819aeffdfdc748e4c5bc",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-02.png",
+      "contact_sheet_number": 2,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "ZT06",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/ZT06-2.png",
+      "png_sha256": "49ca608602cfee714afef8e8d20be19ef51401d4866678ca2a5c53a9d30d1e33",
+      "original_pdf_sha256": "29db1f3fc4c87f8cfee7e669d5c8c84b53f65fc3ed23819aeffdfdc748e4c5bc",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-02.png",
+      "contact_sheet_number": 2,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "FN01-FAN",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/FN01-FAN-1.png",
+      "png_sha256": "7c3247224229503d6f827938384bb09ced97f23e851609d620ff1065aef91ea5",
+      "original_pdf_sha256": "bf3fa737bf8ad8e62b24a5b4f7886a356f83c8db44972b0d1973c96ef6a0f4e5",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-03.png",
+      "contact_sheet_number": 3,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "FN01-FAN",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/FN01-FAN-2.png",
+      "png_sha256": "a517960dfc34827dd9944f32c2cb0eb82146f818d84ad7fb74cce77f66fa50a3",
+      "original_pdf_sha256": "bf3fa737bf8ad8e62b24a5b4f7886a356f83c8db44972b0d1973c96ef6a0f4e5",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-03.png",
+      "contact_sheet_number": 3,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "RD01-FAN",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/RD01-FAN-1.png",
+      "png_sha256": "6f3e335f4d29419446cda63874340a14844730b1c102c4e16620d2ca2900e6b6",
+      "original_pdf_sha256": "4b9175eb02744735563597ed44d26efcf0d29a176073ffcbd5cc95b644453f68",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-03.png",
+      "contact_sheet_number": 3,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "RD01-FAN",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/RD01-FAN-2.png",
+      "png_sha256": "3e75f79d518db50d25d5f798993a98e735e8e2c9014a4fe7d850986d9a80d033",
+      "original_pdf_sha256": "4b9175eb02744735563597ed44d26efcf0d29a176073ffcbd5cc95b644453f68",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-03.png",
+      "contact_sheet_number": 3,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LD01A",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LD01A-1.png",
+      "png_sha256": "f1284a51dbcd50cfe7f48a32fcc52bf3d721ff1177b892f158e54bbc93490ced",
+      "original_pdf_sha256": "2d2c2a3932840b646aef582e1c8129d7e6149d6d927105272aed47023cfcbd27",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-04.png",
+      "contact_sheet_number": 4,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LD01A",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LD01A-2.png",
+      "png_sha256": "34ebefa902af16bee4464e7f0b970d64cbd5fda73376621080ce619f22e7b2e1",
+      "original_pdf_sha256": "2d2c2a3932840b646aef582e1c8129d7e6149d6d927105272aed47023cfcbd27",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-04.png",
+      "contact_sheet_number": 4,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL01",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL01-1.png",
+      "png_sha256": "39012502a7f3c62c79851ad619e0bddf640df18f312f0d63858d7a17f331ab98",
+      "original_pdf_sha256": "ec87ea39cfc662fc38a9dc2873d78528e7e46bd483fa421644ede345f785c111",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-04.png",
+      "contact_sheet_number": 4,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL01",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL01-2.png",
+      "png_sha256": "64b538ab792fc0f6fb7dde2d8320541b7794bbdf5da8642b9197643317a4763d",
+      "original_pdf_sha256": "ec87ea39cfc662fc38a9dc2873d78528e7e46bd483fa421644ede345f785c111",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-04.png",
+      "contact_sheet_number": 4,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL02",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL02-1.png",
+      "png_sha256": "4365aaeadba4f3282989d93b9c6ea5227c9b44c62362c1a63992ddf252423164",
+      "original_pdf_sha256": "801eaca080f4ba469e22b81c613857a8e3c2ab6c8ecc822039cf7d699faf9036",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-05.png",
+      "contact_sheet_number": 5,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL02",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL02-2.png",
+      "png_sha256": "5ddc78f6fe08b7da5e0f51d0409dddce0d100be3248d6b8927e9a07b2b1cc819",
+      "original_pdf_sha256": "801eaca080f4ba469e22b81c613857a8e3c2ab6c8ecc822039cf7d699faf9036",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-05.png",
+      "contact_sheet_number": 5,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL03",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL03-1.png",
+      "png_sha256": "5f92b142200def419d12f0aaaa1d78b02cc08741085c9bcd2aa63cf3127e46cb",
+      "original_pdf_sha256": "e89f523921228831000c552bc2225361159768aac4ed119f7cdc4c51c47275f0",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-05.png",
+      "contact_sheet_number": 5,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL03",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL03-2.png",
+      "png_sha256": "b29c6f672684de6ba4d577a8d581d7bce82a5ef4fb96d1b595122c3c3d3196aa",
+      "original_pdf_sha256": "e89f523921228831000c552bc2225361159768aac4ed119f7cdc4c51c47275f0",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-05.png",
+      "contact_sheet_number": 5,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL04",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL04-1.png",
+      "png_sha256": "ec52914af53282da3be4540bc5d7264ab98801847190d74fb037b2b92fa7157e",
+      "original_pdf_sha256": "f7bec01302ee2187e7d54b637fc5d0df68867ae6f6fb8e8062b6e717fa3359f4",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-06.png",
+      "contact_sheet_number": 6,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL04",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL04-2.png",
+      "png_sha256": "c9284d859ae341bbafe4ab8d7271c753a8e841da65532cae507089c27fb0caca",
+      "original_pdf_sha256": "f7bec01302ee2187e7d54b637fc5d0df68867ae6f6fb8e8062b6e717fa3359f4",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-06.png",
+      "contact_sheet_number": 6,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL05",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL05-1.png",
+      "png_sha256": "d1a9d096b6260c8f35c3a4f01a7f02a8e09c7fffb2575880a59fe910c59024c7",
+      "original_pdf_sha256": "54c524517ab42d2d1803325e9ec6a532a527ac1ade0396c0aec1e92839b54973",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-06.png",
+      "contact_sheet_number": 6,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL05",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL05-2.png",
+      "png_sha256": "fb63dfbf9c7cc22e81e16194e5c85f03d6a65175effddd5cf310ebc4b239b557",
+      "original_pdf_sha256": "54c524517ab42d2d1803325e9ec6a532a527ac1ade0396c0aec1e92839b54973",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-06.png",
+      "contact_sheet_number": 6,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL06",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL06-1.png",
+      "png_sha256": "e261265631d32ccb9321d5c3f4223ceff3d1bb1a7f417416b34f34e3c442098f",
+      "original_pdf_sha256": "881e6a4a7898c731a53f90a2cac3b9b6d9bfb53827072b79c5c94a7011ed52b3",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-07.png",
+      "contact_sheet_number": 7,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL06",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL06-2.png",
+      "png_sha256": "9233cae29e14f9a0a8212def3dfefbddfd6f53544c1c02fd6ee8ea0bd342c784",
+      "original_pdf_sha256": "881e6a4a7898c731a53f90a2cac3b9b6d9bfb53827072b79c5c94a7011ed52b3",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-07.png",
+      "contact_sheet_number": 7,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL07",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL07-1.png",
+      "png_sha256": "69f5d6542852a05785c589796c4a2f3b18131d7efcd942f842762ea07df7b2b2",
+      "original_pdf_sha256": "18bc8cd086238456fc21b2b812245130d06d95b7c52f4597f0f908e89dac67d5",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-07.png",
+      "contact_sheet_number": 7,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL07",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL07-2.png",
+      "png_sha256": "d0db7d0c7b7f5db2634a15d4bb0581bd56907f82af0dd055f8c30ea632a5d88e",
+      "original_pdf_sha256": "18bc8cd086238456fc21b2b812245130d06d95b7c52f4597f0f908e89dac67d5",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-07.png",
+      "contact_sheet_number": 7,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL08",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL08-1.png",
+      "png_sha256": "ac17947a1675530315c66c8591c0342540d5ab1db4de5e490bc923c5bd9530b3",
+      "original_pdf_sha256": "b1472c1dbb0af1928ee1e8e1505ba811485c5d18095096e2e8c1dcb2421c4a4f",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-08.png",
+      "contact_sheet_number": 8,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL08",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL08-2.png",
+      "png_sha256": "4bb9d3dd15d28ec7a64306798bb2eda20f378a261bdf446736cd11dd68df7bde",
+      "original_pdf_sha256": "b1472c1dbb0af1928ee1e8e1505ba811485c5d18095096e2e8c1dcb2421c4a4f",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-08.png",
+      "contact_sheet_number": 8,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL09",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL09-1.png",
+      "png_sha256": "13e133eef74c8ff34efd90d766436718d67445c9493784cf4043c2fe5659a2cd",
+      "original_pdf_sha256": "7d110dd5eb47f1358bdfe92371df35b40794c4106491a9f7f8ac75cba31a8969",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-08.png",
+      "contact_sheet_number": 8,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL09",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL09-2.png",
+      "png_sha256": "cefbdc8effed91750ed8aef3ea0eb39ebc50417368dfef86f41c74b202ac74a2",
+      "original_pdf_sha256": "7d110dd5eb47f1358bdfe92371df35b40794c4106491a9f7f8ac75cba31a8969",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-08.png",
+      "contact_sheet_number": 8,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL10",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL10-1.png",
+      "png_sha256": "99b41a0a6d69bd7dc2ef26fc62920582c7da9735689d529a62fe4d7f931a81e8",
+      "original_pdf_sha256": "94de6b380eb4a29686e2a65ebf56dad1215761531b2b1aad2795d9d3e0876cc2",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-09.png",
+      "contact_sheet_number": 9,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL10",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL10-2.png",
+      "png_sha256": "e88a1c5b0d4c92f2cc6a161c376ab0cb669743ddc414bee715fef53c31dcc160",
+      "original_pdf_sha256": "94de6b380eb4a29686e2a65ebf56dad1215761531b2b1aad2795d9d3e0876cc2",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-09.png",
+      "contact_sheet_number": 9,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL12",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL12-1.png",
+      "png_sha256": "9ed07c5a198f9382b4ad9d7c5c496a26485eef20ebec6412ac8094bb6b71ef03",
+      "original_pdf_sha256": "fe9fcc32375babdc89960298cb4c66275a3614c55a0b4359f594f4d26be9e40e",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-09.png",
+      "contact_sheet_number": 9,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "CYL-CL12",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/CYL-CL12-2.png",
+      "png_sha256": "98f4f55b28b48589f56f4c2555512845ce824b3f490a2ed684218b0968d48ad1",
+      "original_pdf_sha256": "fe9fcc32375babdc89960298cb4c66275a3614c55a0b4359f594f4d26be9e40e",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-09.png",
+      "contact_sheet_number": 9,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS01",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS01-1.png",
+      "png_sha256": "5e7beeb202576d3770c751b84070dd9a9d47ddb9ac6bc40c36206bac0f9a8f6d",
+      "original_pdf_sha256": "56d540bafde503032caa9c725aa5eedd8decca3e50e1bce47c7505315fa6b10c",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-10.png",
+      "contact_sheet_number": 10,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS01",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS01-2.png",
+      "png_sha256": "02e74a487118f4f29b76f206fef4e0a740523dfbc591a1e3fd3c8819fcbadf3e",
+      "original_pdf_sha256": "56d540bafde503032caa9c725aa5eedd8decca3e50e1bce47c7505315fa6b10c",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-10.png",
+      "contact_sheet_number": 10,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS02",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS02-1.png",
+      "png_sha256": "ead0f20f39e005c0199b310d0d17feb217213db9fa92013a89d62102b64d998e",
+      "original_pdf_sha256": "fc55a35160e98f59adc7c96679248262b9859273ae6f0d8fa33d581e3b3f3472",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-10.png",
+      "contact_sheet_number": 10,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS02",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS02-2.png",
+      "png_sha256": "66d38a53f81b57edc6688c16dd5add7f11d1cfcb4a8416ddbe0f1d550f220b35",
+      "original_pdf_sha256": "fc55a35160e98f59adc7c96679248262b9859273ae6f0d8fa33d581e3b3f3472",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-10.png",
+      "contact_sheet_number": 10,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS05",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS05-1.png",
+      "png_sha256": "637a3da7a7d3ba2f5d1e44e1f7845fddec149f10842ee015fa89888d5044799b",
+      "original_pdf_sha256": "f011f0b4f54f9f5af21d11c1d580d21d2bbc953d06e282a94405b24cb022dd80",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-11.png",
+      "contact_sheet_number": 11,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS05",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS05-2.png",
+      "png_sha256": "d31c037ab1a49dcdcab4dea1938728229c2548bad8cfa5327d8101e044267968",
+      "original_pdf_sha256": "f011f0b4f54f9f5af21d11c1d580d21d2bbc953d06e282a94405b24cb022dd80",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-11.png",
+      "contact_sheet_number": 11,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS06",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS06-1.png",
+      "png_sha256": "ee16141f5e2b42a650cf3398f204ee4a131a5fb428dba09b905531eb8a98d72d",
+      "original_pdf_sha256": "84b4eb0c4b5ce3f6b87054e4ca8b413f2680da03274bba957db40f09f138763a",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-11.png",
+      "contact_sheet_number": 11,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS06",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS06-2.png",
+      "png_sha256": "23fca98ceee53352b011fe4cefb60630d6d9abfaa7ee46fd3869c6056936cb72",
+      "original_pdf_sha256": "84b4eb0c4b5ce3f6b87054e4ca8b413f2680da03274bba957db40f09f138763a",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-11.png",
+      "contact_sheet_number": 11,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS09",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS09-1.png",
+      "png_sha256": "bf4535677f7bbfe1aaa6dad869c90bdf52ad24b85317ff251fa9bd24844c6778",
+      "original_pdf_sha256": "afb7dbcf4b9b6deeca92aab147f28da855e88ba2544a4662dcd8c1fcc42660a7",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-12.png",
+      "contact_sheet_number": 12,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS09",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS09-2.png",
+      "png_sha256": "a65d2774d3d5d0de6bd7a8fb1a33f9b07501b78279d0d93eecef5fb38f33e7b7",
+      "original_pdf_sha256": "afb7dbcf4b9b6deeca92aab147f28da855e88ba2544a4662dcd8c1fcc42660a7",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-12.png",
+      "contact_sheet_number": 12,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS10",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS10-1.png",
+      "png_sha256": "7cdb2d1c21c8c4857f7483199a093ac0ab72b4b58402b6db7f430437311ed8a2",
+      "original_pdf_sha256": "e3ea25e31c38565e9a76327e26b60bbd3a2f021478b29a5bc6e7c40354f71530",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-12.png",
+      "contact_sheet_number": 12,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS10",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS10-2.png",
+      "png_sha256": "1226ada9c7c3634b58e8b32f815eb8f327d1f606d875025479940174ef5c5baf",
+      "original_pdf_sha256": "e3ea25e31c38565e9a76327e26b60bbd3a2f021478b29a5bc6e7c40354f71530",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-12.png",
+      "contact_sheet_number": 12,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS15",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS15-1.png",
+      "png_sha256": "44bf9bbc6eb8b53f686bcebefa09f4160bedc23714fee0df64975c13dfb0de13",
+      "original_pdf_sha256": "52fca0f775931190b800fae43c526d5a2ce3e2eab960c904aae94f833f118d7e",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-13.png",
+      "contact_sheet_number": 13,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS15",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS15-2.png",
+      "png_sha256": "57c9b73094c260d3922307f6a1123b26a7870f9cea3ca383200779bcc60c505a",
+      "original_pdf_sha256": "52fca0f775931190b800fae43c526d5a2ce3e2eab960c904aae94f833f118d7e",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-13.png",
+      "contact_sheet_number": 13,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS16",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS16-1.png",
+      "png_sha256": "635bcca25c242fecfcf012673607bb4b4e7d42271fcab87e6028269e929a830e",
+      "original_pdf_sha256": "ed1342f55a34a070313f0227af945159949c5c94b33a19caca0adc5ff1759e20",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-13.png",
+      "contact_sheet_number": 13,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS16",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS16-2.png",
+      "png_sha256": "6d566e05b82b7b834f97b3022d324b6d799c15901ac8c2d461528b908e2734a6",
+      "original_pdf_sha256": "ed1342f55a34a070313f0227af945159949c5c94b33a19caca0adc5ff1759e20",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-13.png",
+      "contact_sheet_number": 13,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS17",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS17-1.png",
+      "png_sha256": "6f100661c08a450ab0e763a44e01b7a582911660bbb98b931071f5f3c29c0036",
+      "original_pdf_sha256": "16bb3e8550acfe51454f8b4137e173677b81d4e936565d5a9657546baefd6b99",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-14.png",
+      "contact_sheet_number": 14,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS17",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS17-2.png",
+      "png_sha256": "845f252932f476e6ea5f3e78295f238f078da9f1d4fece8a90e01c616c531e2a",
+      "original_pdf_sha256": "16bb3e8550acfe51454f8b4137e173677b81d4e936565d5a9657546baefd6b99",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-14.png",
+      "contact_sheet_number": 14,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS18",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS18-1.png",
+      "png_sha256": "b48cdf8670d5410dc333cfba37071e4d2ff17da2c122021a138c36125da37492",
+      "original_pdf_sha256": "134e964fd691baf0b28b56b5a4829310f1a6259d6cb791a5b6fd0927703dea9d",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-14.png",
+      "contact_sheet_number": 14,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS18",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS18-2.png",
+      "png_sha256": "3cbee634b543ae8468ed12e8adac9d18f7bbee9ce98d6d9e3bbcbbf9ce69f08a",
+      "original_pdf_sha256": "134e964fd691baf0b28b56b5a4829310f1a6259d6cb791a5b6fd0927703dea9d",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-14.png",
+      "contact_sheet_number": 14,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS19",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS19-1.png",
+      "png_sha256": "7d1ee918598434083713621fd87d7d3e04d13ce55fb637342353a7345c882ba9",
+      "original_pdf_sha256": "2596ff9452655970fb4ad1b9d1556d13190d6f41264789b36c66acb184d02961",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-15.png",
+      "contact_sheet_number": 15,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS19",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS19-2.png",
+      "png_sha256": "04d35975c550db52d64280f9cb7e72cd7b31f59bd7056e14c0ef5d92d9159d04",
+      "original_pdf_sha256": "2596ff9452655970fb4ad1b9d1556d13190d6f41264789b36c66acb184d02961",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-15.png",
+      "contact_sheet_number": 15,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS20",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS20-1.png",
+      "png_sha256": "85235605a1a396bddaefb49ea9e45e6f5527ba9e355a8121211d0b6df5b0485a",
+      "original_pdf_sha256": "b31abd4a7c56e9eb65be6177491e0c38c2dd32be43ac5db3d63ae29b7c29542d",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-15.png",
+      "contact_sheet_number": 15,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS20",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS20-2.png",
+      "png_sha256": "5d965502649b99f451c9994d37166bff37bb9c3d6c00202e2d63968b8c792888",
+      "original_pdf_sha256": "b31abd4a7c56e9eb65be6177491e0c38c2dd32be43ac5db3d63ae29b7c29542d",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-15.png",
+      "contact_sheet_number": 15,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS23",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS23-1.png",
+      "png_sha256": "dd86a3c07f4737b1bb57644d02d0a659424bf6fc38220527207dd995e7a7ef46",
+      "original_pdf_sha256": "ee4320a73e6e91afa9f2066029a8f5366f470147d7e8759570d037b9949a3f3d",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-16.png",
+      "contact_sheet_number": 16,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS23",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS23-2.png",
+      "png_sha256": "c0f9e840e8a6e51a8a967c5e833a7081bed367fe3472f260f60212c3de0f8b06",
+      "original_pdf_sha256": "ee4320a73e6e91afa9f2066029a8f5366f470147d7e8759570d037b9949a3f3d",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-16.png",
+      "contact_sheet_number": 16,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS24",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS24-1.png",
+      "png_sha256": "86f2d28cd6b4ef78538cf2e87aa4918be02ece351e9a6b14b622c7b27fd5e2ba",
+      "original_pdf_sha256": "c18649707d67ae3bf5a75ae1e72242ea7677a7af5628ca81c22680c76f3c4398",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-16.png",
+      "contact_sheet_number": 16,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS24",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS24-2.png",
+      "png_sha256": "cd466584c9f0cee18bd34f0b9dba8512cd589e4815685e452635d84df4947b41",
+      "original_pdf_sha256": "c18649707d67ae3bf5a75ae1e72242ea7677a7af5628ca81c22680c76f3c4398",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-16.png",
+      "contact_sheet_number": 16,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS25",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS25-1.png",
+      "png_sha256": "c725b637bda1667bb66c6fc081e4c1c4132b946df45ee294ce259bfddaa7ca26",
+      "original_pdf_sha256": "581607372157cfd49925a90efb6a7a10db4e086064226d3b04564854c3c5101a",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-17.png",
+      "contact_sheet_number": 17,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS25",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS25-2.png",
+      "png_sha256": "8856dd59eac070c90c9bf9ec845d91b96e671682d7f3c469513f7bfd5081b4f4",
+      "original_pdf_sha256": "581607372157cfd49925a90efb6a7a10db4e086064226d3b04564854c3c5101a",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-17.png",
+      "contact_sheet_number": 17,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS26",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS26-1.png",
+      "png_sha256": "5befe68422f75db129396127f50b09f8b9025d73d54e08b122ef7611ec423156",
+      "original_pdf_sha256": "33af4c836757d929d65256975a88637dbbb84765c2b332144677685b42d1d44c",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-17.png",
+      "contact_sheet_number": 17,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS26",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS26-2.png",
+      "png_sha256": "06be57125049ae9d123a4ff5a465805b1b0575b936d73cf63414e61cf67156f7",
+      "original_pdf_sha256": "33af4c836757d929d65256975a88637dbbb84765c2b332144677685b42d1d44c",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-17.png",
+      "contact_sheet_number": 17,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS29",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS29-1.png",
+      "png_sha256": "2ddb84b8f6b1ad5991a99164cc1e48bfc3f341e18b98b82a1ebec5c0087b4761",
+      "original_pdf_sha256": "082c2de56725a95102c260eb1170b3f944d24313b17818176a717b24206689ed",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-18.png",
+      "contact_sheet_number": 18,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS29",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS29-2.png",
+      "png_sha256": "7d76701f2f49f0c4b9b0d53a832ba11d984ead574a1cf6af3e8ea08164a695d6",
+      "original_pdf_sha256": "082c2de56725a95102c260eb1170b3f944d24313b17818176a717b24206689ed",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-18.png",
+      "contact_sheet_number": 18,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS30",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS30-1.png",
+      "png_sha256": "e1bd553b68d8273f983a4a64a167e1691ac7c90ea24e23b1169eda2091301289",
+      "original_pdf_sha256": "fbf2af1e74982429fda0f01c34cdcee19657902f0349132c7f1ba5708088bdf8",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-18.png",
+      "contact_sheet_number": 18,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS30",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS30-2.png",
+      "png_sha256": "e57b23aa45d42dde9b7ae79a9b04e3ee8447b93bcb54e0a8d13d507a71b35d3d",
+      "original_pdf_sha256": "fbf2af1e74982429fda0f01c34cdcee19657902f0349132c7f1ba5708088bdf8",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-18.png",
+      "contact_sheet_number": 18,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS34",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS34-1.png",
+      "png_sha256": "d94559cf3abb61bdcdbf2e8c143bda4064d5840bf99bfc241380b1b4f722e1d7",
+      "original_pdf_sha256": "dc034aecb404ddd945033b4486ab0a2d224e69c501f8eba999682f470dc73bbc",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-19.png",
+      "contact_sheet_number": 19,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS34",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS34-2.png",
+      "png_sha256": "89c040fdf1b31f299f88064a5d85a83611112f3f695aefca131c106d6d1bd199",
+      "original_pdf_sha256": "dc034aecb404ddd945033b4486ab0a2d224e69c501f8eba999682f470dc73bbc",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-19.png",
+      "contact_sheet_number": 19,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS35",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS35-1.png",
+      "png_sha256": "f4390af8c03195c65f0721d7aeed092166ae8009d8c954d5006fddbaf49ed052",
+      "original_pdf_sha256": "0c47efff8363a84ac0d263bad88edd406a6b057231e385ecd5e742e599faf736",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-19.png",
+      "contact_sheet_number": 19,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS35",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS35-2.png",
+      "png_sha256": "6026b81409973071cfb6def641349e5f5f831293f2e4a53a96e5e143962d2a98",
+      "original_pdf_sha256": "0c47efff8363a84ac0d263bad88edd406a6b057231e385ecd5e742e599faf736",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-19.png",
+      "contact_sheet_number": 19,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS40",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS40-1.png",
+      "png_sha256": "814e1b91497d9aa94e78cd45b2ea1f3d6d396cc39453aa615fcf49c546a124c0",
+      "original_pdf_sha256": "7b9171c28cba1e13cfb2e455d66b80d06b2edcc4dcfacaab19bfb9303907e78c",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-20.png",
+      "contact_sheet_number": 20,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS40",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS40-2.png",
+      "png_sha256": "e74b8493418034966f3589d7dfc30c75543468595aba9ffd610ddc222f41bd86",
+      "original_pdf_sha256": "7b9171c28cba1e13cfb2e455d66b80d06b2edcc4dcfacaab19bfb9303907e78c",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-20.png",
+      "contact_sheet_number": 20,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS41",
+      "page": 1,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS41-1.png",
+      "png_sha256": "7f8cc6dc2a98b64ad954d4bd06dbcad3c7d77f0e2d55c7c25bbe16f3953f9983",
+      "original_pdf_sha256": "7c5cfa99b1eb088aaa887f52a4b9f0dacec20366332ed0ce07c57c5734f825ff",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-20.png",
+      "contact_sheet_number": 20,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    },
+    {
+      "key": "LS41",
+      "page": 2,
+      "png_file": "/tmp/gme-remaining-qa/pdf-renders/LS41-2.png",
+      "png_sha256": "19e7cc6de217071adc231ad558f5bb4c518b883e47e569e2d1941d194e0b9043",
+      "original_pdf_sha256": "7c5cfa99b1eb088aaa887f52a4b9f0dacec20366332ed0ce07c57c5734f825ff",
+      "contact_sheet": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-sheet-20.png",
+      "contact_sheet_number": 20,
+      "actual_pixel_inspected": true,
+      "checks": {
+        "text_clipping": false,
+        "text_overlap": false,
+        "missing_glyph_black_boxes": false,
+        "broken_or_split_table_rows": false,
+        "margins_visible": true,
+        "legible_labels_addresses_and_paths": true
+      },
+      "observation": "최신12mm 렌더의 전 페이지 픽셀을 확인. 제목·기록표·신호표·증상별 관찰·참고 링크가 여백 안에 있으며 표 행과 XML 경로 줄바꿈이 보임."
+    }
+  ],
+  "files": [
+    {
+      "key": "ZT03",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/ZT03.pdf",
+      "original_pdf_sha256": "73ccd893c33a323652f5a190383a08d28e3b0294e515d37857e9276ef7c346d0",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "ZT04",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/ZT04.pdf",
+      "original_pdf_sha256": "a56982435dd70037ba1f80f69e4e0258b5e6540efb6719c70b3a65bee09119ef",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "ZT05",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/ZT05.pdf",
+      "original_pdf_sha256": "6b4022fc61e64607cb3af6b44315805ea73f88347d6bd9558e95b3da89fc1ad9",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "ZT06",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/ZT06.pdf",
+      "original_pdf_sha256": "29db1f3fc4c87f8cfee7e669d5c8c84b53f65fc3ed23819aeffdfdc748e4c5bc",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "FN01-FAN",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/FN01-FAN.pdf",
+      "original_pdf_sha256": "bf3fa737bf8ad8e62b24a5b4f7886a356f83c8db44972b0d1973c96ef6a0f4e5",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "RD01-FAN",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/RD01-FAN.pdf",
+      "original_pdf_sha256": "4b9175eb02744735563597ed44d26efcf0d29a176073ffcbd5cc95b644453f68",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LD01A",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LD01A.pdf",
+      "original_pdf_sha256": "2d2c2a3932840b646aef582e1c8129d7e6149d6d927105272aed47023cfcbd27",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL01",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL01.pdf",
+      "original_pdf_sha256": "ec87ea39cfc662fc38a9dc2873d78528e7e46bd483fa421644ede345f785c111",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL02",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL02.pdf",
+      "original_pdf_sha256": "801eaca080f4ba469e22b81c613857a8e3c2ab6c8ecc822039cf7d699faf9036",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL03",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL03.pdf",
+      "original_pdf_sha256": "e89f523921228831000c552bc2225361159768aac4ed119f7cdc4c51c47275f0",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL04",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL04.pdf",
+      "original_pdf_sha256": "f7bec01302ee2187e7d54b637fc5d0df68867ae6f6fb8e8062b6e717fa3359f4",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL05",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL05.pdf",
+      "original_pdf_sha256": "54c524517ab42d2d1803325e9ec6a532a527ac1ade0396c0aec1e92839b54973",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL06",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL06.pdf",
+      "original_pdf_sha256": "881e6a4a7898c731a53f90a2cac3b9b6d9bfb53827072b79c5c94a7011ed52b3",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL07",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL07.pdf",
+      "original_pdf_sha256": "18bc8cd086238456fc21b2b812245130d06d95b7c52f4597f0f908e89dac67d5",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL08",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL08.pdf",
+      "original_pdf_sha256": "b1472c1dbb0af1928ee1e8e1505ba811485c5d18095096e2e8c1dcb2421c4a4f",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL09",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL09.pdf",
+      "original_pdf_sha256": "7d110dd5eb47f1358bdfe92371df35b40794c4106491a9f7f8ac75cba31a8969",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL10",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL10.pdf",
+      "original_pdf_sha256": "94de6b380eb4a29686e2a65ebf56dad1215761531b2b1aad2795d9d3e0876cc2",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "CYL-CL12",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/CYL-CL12.pdf",
+      "original_pdf_sha256": "fe9fcc32375babdc89960298cb4c66275a3614c55a0b4359f594f4d26be9e40e",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS01",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS01.pdf",
+      "original_pdf_sha256": "56d540bafde503032caa9c725aa5eedd8decca3e50e1bce47c7505315fa6b10c",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS02",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS02.pdf",
+      "original_pdf_sha256": "fc55a35160e98f59adc7c96679248262b9859273ae6f0d8fa33d581e3b3f3472",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS05",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS05.pdf",
+      "original_pdf_sha256": "f011f0b4f54f9f5af21d11c1d580d21d2bbc953d06e282a94405b24cb022dd80",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS06",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS06.pdf",
+      "original_pdf_sha256": "84b4eb0c4b5ce3f6b87054e4ca8b413f2680da03274bba957db40f09f138763a",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS09",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS09.pdf",
+      "original_pdf_sha256": "afb7dbcf4b9b6deeca92aab147f28da855e88ba2544a4662dcd8c1fcc42660a7",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS10",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS10.pdf",
+      "original_pdf_sha256": "e3ea25e31c38565e9a76327e26b60bbd3a2f021478b29a5bc6e7c40354f71530",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS15",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS15.pdf",
+      "original_pdf_sha256": "52fca0f775931190b800fae43c526d5a2ce3e2eab960c904aae94f833f118d7e",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS16",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS16.pdf",
+      "original_pdf_sha256": "ed1342f55a34a070313f0227af945159949c5c94b33a19caca0adc5ff1759e20",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS17",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS17.pdf",
+      "original_pdf_sha256": "16bb3e8550acfe51454f8b4137e173677b81d4e936565d5a9657546baefd6b99",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS18",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS18.pdf",
+      "original_pdf_sha256": "134e964fd691baf0b28b56b5a4829310f1a6259d6cb791a5b6fd0927703dea9d",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS19",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS19.pdf",
+      "original_pdf_sha256": "2596ff9452655970fb4ad1b9d1556d13190d6f41264789b36c66acb184d02961",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS20",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS20.pdf",
+      "original_pdf_sha256": "b31abd4a7c56e9eb65be6177491e0c38c2dd32be43ac5db3d63ae29b7c29542d",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS23",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS23.pdf",
+      "original_pdf_sha256": "ee4320a73e6e91afa9f2066029a8f5366f470147d7e8759570d037b9949a3f3d",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS24",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS24.pdf",
+      "original_pdf_sha256": "c18649707d67ae3bf5a75ae1e72242ea7677a7af5628ca81c22680c76f3c4398",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS25",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS25.pdf",
+      "original_pdf_sha256": "581607372157cfd49925a90efb6a7a10db4e086064226d3b04564854c3c5101a",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS26",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS26.pdf",
+      "original_pdf_sha256": "33af4c836757d929d65256975a88637dbbb84765c2b332144677685b42d1d44c",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS29",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS29.pdf",
+      "original_pdf_sha256": "082c2de56725a95102c260eb1170b3f944d24313b17818176a717b24206689ed",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS30",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS30.pdf",
+      "original_pdf_sha256": "fbf2af1e74982429fda0f01c34cdcee19657902f0349132c7f1ba5708088bdf8",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS34",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS34.pdf",
+      "original_pdf_sha256": "dc034aecb404ddd945033b4486ab0a2d224e69c501f8eba999682f470dc73bbc",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS35",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS35.pdf",
+      "original_pdf_sha256": "0c47efff8363a84ac0d263bad88edd406a6b057231e385ecd5e742e599faf736",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS40",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS40.pdf",
+      "original_pdf_sha256": "7b9171c28cba1e13cfb2e455d66b80d06b2edcc4dcfacaab19bfb9303907e78c",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    },
+    {
+      "key": "LS41",
+      "original_pdf_file": "/tmp/gme-remaining-qa/pdfs/LS41.pdf",
+      "original_pdf_sha256": "7c5cfa99b1eb088aaa887f52a4b9f0dacec20366332ed0ce07c57c5734f825ff",
+      "pages": 2,
+      "actual_checked_pages": [
+        1,
+        2
+      ],
+      "status": "passed",
+      "defects": [],
+      "visual_observations": [
+        "12mm 여백 내 제목·한글·주소·해시·자료 경로를 확인했습니다.",
+        "신호표는 두 번째 페이지에 온전한 행으로 표시되며 행 중간 잘림·겹침이 보이지 않습니다.",
+        "빈 관찰 필드와0 값은 QA 합성 자료 표기이며 실제 운영·CPU 상태를 뜻하지 않습니다."
+      ]
+    }
+  ],
+  "defects": [],
+  "scope": "QA 합성 PDF의 시각 검토; 구조 검사·문서 원본 검토·실제 CPU·현장·배포 검증과 별도",
+  "basis": "새20개 contact sheet의 전체80개 페이지를 원래596x843픽셀 크기로 직접 확인. contact sheet는1220x1744이며 페이지를 축소하지 않음. 이전0여백 이미지 또는 구조 검사 수치만으로 통과하지 않음.",
+  "read_only_constraints": {
+    "repository_writes": 0,
+    "browser_actions": 0,
+    "generator_runs": 0,
+    "new_pdf_authored": 0,
+    "tests_or_simulator_runs": 0,
+    "plc_or_field_changes": 0
+  },
+  "contact_manifest": "/tmp/gme-remaining-qa/visual-assets-reader/latest12mm-contact-manifest.json"
+}

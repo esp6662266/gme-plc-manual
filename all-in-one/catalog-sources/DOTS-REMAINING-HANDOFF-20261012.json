@@ -1,0 +1,67 @@
+{
+  "archive_bytes": 122811,
+  "archive_sha256": "328fdd2b34cffb7d9dc35fb3a90f54bba567aca45f230f99d9b528e79669fb05",
+  "files": [
+    {
+      "file": "SYS-POWER-DOTS-DRAFT.md",
+      "bytes": 24516,
+      "sha256": "e1fe08e0095e794a02b075b1d4472f26c9859093278ec3875d0bc291e441d8d2"
+    },
+    {
+      "file": "SYS-PLC-IO-DOTS-DRAFT.md",
+      "bytes": 33572,
+      "sha256": "37e482f722035b489fa93f2e30bc33fb4510d1cb5e862f0af6b1bc7d443e8caf"
+    },
+    {
+      "file": "SYS-SAFETY-DOTS-DRAFT.md",
+      "bytes": 27281,
+      "sha256": "5bd5ac42ff003b5c2d1d1457ab2abc5717f51ea35b1247bfa35eb9f6646f9b30"
+    },
+    {
+      "file": "SYS-ALARM-DOTS-DRAFT.md",
+      "bytes": 37227,
+      "sha256": "601bb47c72bb87274b6278739fd094d11a0946e1f95cbefbf2b7c24b11f1035f"
+    },
+    {
+      "file": "SYS-LEGACY-DOTS-DRAFT.md",
+      "bytes": 27474,
+      "sha256": "6c8e7da4d0af797ebc2a716bf4398d1ee089f999d7a59826a5077cafe5cd9719"
+    },
+    {
+      "file": "SYS-RECIPES-DOTS-DRAFT.md",
+      "bytes": 35426,
+      "sha256": "2506273efe61e4ab78ee9fbf9d4a356478e255c957437a0196a945495e573ff7"
+    },
+    {
+      "file": "SYS-PID-DOTS-DRAFT.md",
+      "bytes": 36689,
+      "sha256": "1c2bada44b2caa4a5fec1d2a66904b9a697bdf27d9cad971bf534fc148812754"
+    },
+    {
+      "file": "SYS-COUNTERS-DOTS-DRAFT.md",
+      "bytes": 30119,
+      "sha256": "ca2aa1e637287fca278b27dc2a3d9090ce1f8fd13161fa7871f9f38e198c21a0"
+    },
+    {
+      "file": "SYS-RUNHOURS-DOTS-DRAFT.md",
+      "bytes": 40465,
+      "sha256": "aa3a248f04d888378aef3bb484ad58dbec7596a79e17c73143e60470ad0025ea"
+    }
+  ],
+  "source": "existing Dots conversation, direct DOM read",
+  "original_research_base": "abcf31c5030bc7ef8749ed8e869a857f2387a28a",
+  "source_version": "1.12.0",
+  "consultation_order": [
+    "SYS-POWER",
+    "SYS-PLC-IO",
+    "SYS-SAFETY",
+    "SYS-ALARM",
+    "SYS-LEGACY",
+    "SYS-RECIPES",
+    "SYS-PID",
+    "SYS-COUNTERS",
+    "SYS-RUNHOURS"
+  ],
+  "current_original_source_review_base": "93fa00c447229202bbffc4096c2fe004f12a83ae",
+  "simulation_policy": "reference document only; permanent simulator stop unchanged"
+}

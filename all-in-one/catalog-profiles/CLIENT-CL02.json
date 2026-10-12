@@ -1,0 +1,781 @@
+{
+  "catalog_id": "CLIENT-CL02",
+  "selection_key": "CLIENT-CL02",
+  "priority_key": null,
+  "type": "part",
+  "draft": "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md",
+  "draft_sha256": "b0098a57bc20936bdf7be33a0f97a090aaf45b922538b031d6bcf066731814e5",
+  "draft_provenance": "Codex 현재 원본 대조 기준 93fa00c447229202bbffc4096c2fe004f12a83ae / v1.22.0. Dots와 자료/상충을 상담하고 기존 원문을 별도 보존했습니다. 해시 대조와 현재 CPU·실물 검증은 별개입니다.",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      411,
+      "part",
+      "87"
+    ],
+    [
+      411,
+      "part",
+      "89"
+    ],
+    [
+      411,
+      "wire",
+      "77"
+    ],
+    [
+      411,
+      "wire",
+      "80"
+    ],
+    [
+      1003,
+      "part",
+      "184"
+    ],
+    [
+      1003,
+      "wire",
+      "166"
+    ]
+  ],
+  "internal_names": [
+    "impactor fault",
+    "impactor run",
+    "CLIENT-CL02 현재 자료 판본·실물 동일성·관찰 시각"
+  ],
+  "source_pairs": [
+    {
+      "signal": "impactor fault",
+      "network": 411,
+      "kind": "wire",
+      "uid": "77",
+      "label": "원본 411 · impactor fault · Contact.operand",
+      "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "signal": "impactor run",
+      "network": 1003,
+      "kind": "wire",
+      "uid": "166",
+      "label": "원본 1003 · impactor run · Contact.operand",
+      "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Rev2-P089.png",
+    "assets/catalog-circuits/Electrical_Rev2-P093.png",
+    "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md",
+    "catalog-sources/DOTS-ASSET-62-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json",
+    "sources/decoded-original/0221-FlgNet.xml",
+    "sources/decoded-original/0293-FlgNet.xml",
+    "sources/decoded-original/0558-IdentXmlPart.xml",
+    "sources/decoded-original/0599-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "CLIENT-CL02",
+    "signals": [
+      {
+        "name": "impactor fault",
+        "addresses": [
+          "%i14.7"
+        ],
+        "refs": [
+          {
+            "network": 411,
+            "oref": "71",
+            "source": "sources/decoded-original/0221-FlgNet.xml",
+            "part": "87",
+            "wire": "77"
+          },
+          {
+            "network": 411,
+            "oref": "73",
+            "source": "sources/decoded-original/0221-FlgNet.xml",
+            "part": "89",
+            "wire": "80"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "impactor run",
+        "addresses": [
+          "%i12.4"
+        ],
+        "refs": [
+          {
+            "network": 1003,
+            "oref": "154",
+            "source": "sources/decoded-original/0293-FlgNet.xml",
+            "part": "184",
+            "wire": "166"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "CLIENT-CL02 현재 자료 판본·실물 동일성·관찰 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "CLIENT-CL02",
+    "timers": [],
+    "alarms": [],
+    "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다."
+  },
+  "control_reference": {
+    "native": [
+      411,
+      1003
+    ],
+    "chain": [
+      "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.\n\nCLIENT-CL02의 직접 제어 명세 규칙은 0개입니다. 고객 인터페이스 또는 운전시간 참조를 고객 모터 내부 기동·정지·안전 순서로 확대하지 않습니다.\n\n- 원시 이름의 핀 참조를 확인한 네트워크: 411, 1003. 읽기·쓰기·호출은 원본 Part/Wire/ORef 표로 구분합니다.\n- 대장 연결 네트워크 411, 1003은 연관 범위입니다. 현재 소유와 실제 동작은 원본 핀·외부 계약·현장 자료로 별도 확인합니다.\n\n| 고유/관련 원문 이름 | 원본 네트워크 | 명령 UID·Gate·Pin | Wire·ORef | 소유 경계 |\n| --- | --- | --- | --- | --- |\n| IMPACTOR FAULT | 411 | 87 Contact.operand | 77 / 71 | 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. |\n| IMPACTOR FAULT | 411 | 89 Contact.operand | 80 / 73 | 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. |\n| IMPACTOR RUN | 1003 | 184 Contact.operand | 166 / 154 | 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. |"
+    ],
+    "repair": [
+      "OEM FG88/PDF89, FG92/PDF93와 현재 명판·태그·배선 끝점을 비교합니다.",
+      "원시 핀 네트워크 411, 1003 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+      "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다."
+    ],
+    "pending": [
+      "고객 제어반의 실제 끝점·신호 계약·정상 접점 극성·현재 명판·설치 상태가 필요합니다. 외부 안전 내부 순서는 이번 원본으로 확정하지 않습니다.",
+      "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "CLIENT-CL02",
+    "boundary": "complete_with_gaps; source-linked documentation only",
+    "existing_notes": [
+      "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "고객 제어반의 실제 끝점·신호 계약·정상 접점 극성·현재 명판·설치 상태가 필요합니다. 외부 안전 내부 순서는 이번 원본으로 확정하지 않습니다.",
+      "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "CLIENT-CL02의 문서·정적 검토 결과와 다음에 필요한 증거를 구분하여 인계합니다.\n\n- 고객 제어반의 실제 끝점·신호 계약·정상 접점 극성·현재 명판·설치 상태가 필요합니다. 외부 안전 내부 순서는 이번 원본으로 확정하지 않습니다.\n- 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.\n- 이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.\n- 시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    },
+    {
+      "type": "paragraph",
+      "text": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "고객 제어반의 실제 끝점·신호 계약·정상 접점 극성·현재 명판·설치 상태가 필요합니다. 외부 안전 내부 순서는 이번 원본으로 확정하지 않습니다.",
+        "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "CLIENT-CL02",
+    "plc_id": "CLIENT-CL02",
+    "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "CLIENT-CL02 식별·연결 관찰",
+        "observe": "Impactor 인터페이스의 실제 값·시각·주소(impactor fault %i14.7, impactor run %i12.4)와 OEM 단자 및 고객 제어반 끝점의 비교",
+        "compare": "OEM FG88/PDF89, FG92/PDF93와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "CLIENT-CL02 상태·반응 분리",
+        "observe": "고객 인터페이스·운전시간 원본 참조를 대조하되 고객 안전·기동 내부 회로를 추정하지 않음",
+        "compare": "원시 핀 네트워크 411, 1003 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "CLIENT-CL02 미확정 범위 인계",
+        "observe": "현재 설치·명판·호출 주체·명령 계약을 독립 확인",
+        "compare": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "impactor fault",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i14.7"
+        ],
+        "refs": [
+          {
+            "network": 411,
+            "oref": "71",
+            "source": "sources/decoded-original/0221-FlgNet.xml",
+            "part": "87",
+            "wire": "77"
+          },
+          {
+            "network": 411,
+            "oref": "73",
+            "source": "sources/decoded-original/0221-FlgNet.xml",
+            "part": "89",
+            "wire": "80"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "signal-2",
+        "name": "impactor run",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i12.4"
+        ],
+        "refs": [
+          {
+            "network": 1003,
+            "oref": "154",
+            "source": "sources/decoded-original/0293-FlgNet.xml",
+            "part": "184",
+            "wire": "166"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "CLIENT-CL02 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "CLIENT-CL02",
+    "name": "CLIENT-CL02 Impactor 근거 관찰",
+    "reference_plc_id": "CLIENT-CL02",
+    "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "impactor fault",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i14.7"
+        ],
+        "refs": [
+          {
+            "network": 411,
+            "oref": "71",
+            "source": "sources/decoded-original/0221-FlgNet.xml",
+            "part": "87",
+            "wire": "77"
+          },
+          {
+            "network": 411,
+            "oref": "73",
+            "source": "sources/decoded-original/0221-FlgNet.xml",
+            "part": "89",
+            "wire": "80"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "signal-2",
+        "name": "impactor run",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i12.4"
+        ],
+        "refs": [
+          {
+            "network": 1003,
+            "oref": "154",
+            "source": "sources/decoded-original/0293-FlgNet.xml",
+            "part": "184",
+            "wire": "166"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. 외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "CLIENT-CL02 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "CLIENT-CL02 식별·연결 관찰",
+        "observe": "Impactor 인터페이스의 실제 값·시각·주소(impactor fault %i14.7, impactor run %i12.4)와 OEM 단자 및 고객 제어반 끝점의 비교",
+        "compare": "OEM FG88/PDF89, FG92/PDF93와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "CLIENT-CL02 상태·반응 분리",
+        "observe": "고객 인터페이스·운전시간 원본 참조를 대조하되 고객 안전·기동 내부 회로를 추정하지 않음",
+        "compare": "원시 핀 네트워크 411, 1003 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "CLIENT-CL02 미확정 범위 인계",
+        "observe": "현재 설치·명판·호출 주체·명령 계약을 독립 확인",
+        "compare": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "CLIENT-CL02 고유 근거·관련 부모/외부 장치 소유 대조",
+      "sources": {
+        "draft": "b0098a57bc20936bdf7be33a0f97a090aaf45b922538b031d6bcf066731814e5"
+      },
+      "circuit_equipment": "CLIENT-CL02",
+      "circuit_distinction": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+      "circuit_pages": [
+        {
+          "label": "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+          "path": "sources/Electrical_Rev2.pdf#page=89"
+        },
+        {
+          "label": "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+          "path": "sources/Electrical_Rev2.pdf#page=93"
+        }
+      ],
+      "construction_boundary": "FOR APPROVAL / first draft design와 현행 준공·단자·실물 동일성 별도",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "현재 검토 원문",
+            "path": "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+          },
+          {
+            "label": "Dots 보존 원초안",
+            "path": "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 원본 독립 조사",
+            "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+            "path": "sources/Electrical_Rev2.pdf#page=89"
+          },
+          {
+            "label": "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+            "path": "sources/Electrical_Rev2.pdf#page=93"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "Impactor 인터페이스의 실제 값·시각·주소(impactor fault %i14.7, impactor run %i12.4)와 OEM 단자 및 고객 제어반 끝점의 비교"
+            },
+            {
+              "owner": "대조",
+              "work": "OEM FG88/PDF89, FG92/PDF93와 현재 명판·태그·배선 끝점을 비교합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+              "path": "sources/Electrical_Rev2.pdf#page=89"
+            },
+            {
+              "label": "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+              "path": "sources/Electrical_Rev2.pdf#page=93"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "고객 인터페이스·운전시간 원본 참조를 대조하되 고객 안전·기동 내부 회로를 추정하지 않음"
+            },
+            {
+              "owner": "대조",
+              "work": "원시 핀 네트워크 411, 1003 및 부모 처리·명령·알람을 같은 시각에 구분합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+              "path": "sources/Electrical_Rev2.pdf#page=89"
+            },
+            {
+              "label": "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+              "path": "sources/Electrical_Rev2.pdf#page=93"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "현재 설치·명판·호출 주체·명령 계약을 독립 확인"
+            },
+            {
+              "owner": "대조",
+              "work": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+              "path": "sources/Electrical_Rev2.pdf#page=89"
+            },
+            {
+              "label": "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+              "path": "sources/Electrical_Rev2.pdf#page=93"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "CLIENT-CL02",
+    "plc_id": "CLIENT-CL02",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-89",
+        "kind": "OEM 전기",
+        "title": "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 89,
+        "fg": 88,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P089.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      },
+      {
+        "id": "oem-93",
+        "kind": "OEM 전기",
+        "title": "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 93,
+        "fg": 92,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P093.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      }
+    ],
+    "circuit": {
+      "id": "CLIENT-CL02",
+      "equipment": "CLIENT-CL02 고유·관련 도면 소유 구분",
+      "distinction": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+      "paths": [
+        {
+          "signal": "impactor fault",
+          "backup": "%i14.7",
+          "drawing": "E14.7",
+          "fg": 92,
+          "sheet_id": "oem-93",
+          "nodes": [
+            "Electrical_Rev2 FG92 / PDF93 원문 E14.7",
+            "원문 인터페이스 끝점 X1:324/325",
+            "백업 원문 신호 impactor fault / %i14.7"
+          ],
+          "destination": "원문 도면과 백업 선언을 대조하는 경로; 현재 배선·전달·실제 응답은 별도",
+          "check": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+          "native_symbol_references": [
+            {
+              "network": 411,
+              "uid": "71"
+            }
+          ]
+        },
+        {
+          "signal": "impactor run",
+          "backup": "%i12.4",
+          "drawing": "E12.4",
+          "fg": 88,
+          "sheet_id": "oem-89",
+          "nodes": [
+            "Electrical_Rev2 FG88 / PDF89 원문 E12.4",
+            "원문 인터페이스 끝점 X1:286/287",
+            "백업 원문 신호 impactor run / %i12.4"
+          ],
+          "destination": "원문 도면과 백업 선언을 대조하는 경로; 현재 배선·전달·실제 응답은 별도",
+          "check": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+          "native_symbol_references": [
+            {
+              "network": 1003,
+              "uid": "154"
+            }
+          ]
+        }
+      ],
+      "pending": [
+        "고객 제어반의 실제 끝점·신호 계약·정상 접점 극성·현재 명판·설치 상태가 필요합니다. 외부 안전 내부 순서는 이번 원본으로 확정하지 않습니다.",
+        "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "외부 인터페이스 범위입니다. 명령·피드백·상태 원본 참조만으로 고객 모터의 배선·내부 인터록·현재 실물 동일성을 확정하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "CLIENT-CL02, 자료 확인, impactor fault, impactor run, CLIENT-CL02 현재 자료 판본·실물 동일성·관찰 시각"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=89"
+      ],
+      [
+        "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=93"
+      ]
+    ],
+    "io": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "원본 411 · impactor fault · Contact.operand",
+        "networks/network-411.html#gme-client-cl02-wire-77"
+      ],
+      [
+        "원본 1003 · impactor run · Contact.operand",
+        "networks/network-1003.html#gme-client-cl02-wire-166"
+      ]
+    ],
+    "control": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "원본 411 · impactor fault · Contact.operand",
+        "networks/network-411.html#gme-client-cl02-wire-77"
+      ],
+      [
+        "원본 1003 · impactor run · Contact.operand",
+        "networks/network-1003.html#gme-client-cl02-wire-166"
+      ]
+    ],
+    "circuits": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=89"
+      ],
+      [
+        "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=93"
+      ]
+    ],
+    "alarms": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "원본 411 · impactor fault · Contact.operand",
+        "networks/network-411.html#gme-client-cl02-wire-77"
+      ],
+      [
+        "원본 1003 · impactor run · Contact.operand",
+        "networks/network-1003.html#gme-client-cl02-wire-166"
+      ]
+    ],
+    "repair": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=89"
+      ],
+      [
+        "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=93"
+      ]
+    ],
+    "completion": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/CLIENT-CL02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/CLIENT-CL02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG88 · PDF89 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=89"
+      ],
+      [
+        "FG92 · PDF93 · DIGITAL INPUT FROM CLIENT MACHINE",
+        "sources/Electrical_Rev2.pdf#page=93"
+      ]
+    ]
+  }
+}

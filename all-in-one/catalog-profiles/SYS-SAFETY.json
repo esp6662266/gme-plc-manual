@@ -1,0 +1,1301 @@
+{
+  "catalog_id": "SYS-SAFETY",
+  "selection_key": "SYS-SAFETY",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md",
+  "draft_sha256": "5bd5ac42ff003b5c2d1d1457ab2abc5717f51ea35b1247bfa35eb9f6646f9b30",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1824,
+      "part",
+      "26"
+    ],
+    [
+      1824,
+      "part",
+      "31"
+    ],
+    [
+      1824,
+      "part",
+      "36"
+    ],
+    [
+      1824,
+      "part",
+      "37"
+    ],
+    [
+      1824,
+      "part",
+      "38"
+    ],
+    [
+      1824,
+      "wire",
+      "25"
+    ],
+    [
+      1824,
+      "wire",
+      "42"
+    ],
+    [
+      1824,
+      "wire",
+      "48"
+    ],
+    [
+      1824,
+      "wire",
+      "43"
+    ],
+    [
+      1824,
+      "wire",
+      "44"
+    ],
+    [
+      1824,
+      "wire",
+      "45"
+    ],
+    [
+      1824,
+      "wire",
+      "46"
+    ],
+    [
+      1824,
+      "wire",
+      "47"
+    ],
+    [
+      1846,
+      "part",
+      "21"
+    ],
+    [
+      1846,
+      "part",
+      "22"
+    ],
+    [
+      1846,
+      "part",
+      "23"
+    ],
+    [
+      1846,
+      "part",
+      "24"
+    ],
+    [
+      1846,
+      "wire",
+      "31"
+    ],
+    [
+      1846,
+      "wire",
+      "49"
+    ],
+    [
+      1846,
+      "wire",
+      "50"
+    ],
+    [
+      1846,
+      "wire",
+      "48"
+    ],
+    [
+      1846,
+      "wire",
+      "34"
+    ],
+    [
+      1846,
+      "wire",
+      "36"
+    ],
+    [
+      1846,
+      "wire",
+      "35"
+    ],
+    [
+      1846,
+      "wire",
+      "37"
+    ],
+    [
+      1846,
+      "wire",
+      "39"
+    ],
+    [
+      1846,
+      "wire",
+      "38"
+    ],
+    [
+      1846,
+      "wire",
+      "40"
+    ],
+    [
+      1070,
+      "part",
+      "78"
+    ],
+    [
+      1070,
+      "wire",
+      "21"
+    ],
+    [
+      1070,
+      "wire",
+      "88"
+    ],
+    [
+      1070,
+      "wire",
+      "89"
+    ],
+    [
+      1070,
+      "wire",
+      "90"
+    ]
+  ],
+  "internal_names": [
+    "processed Inputs.EM_OK",
+    "Allarm.Emergency_module_fault",
+    "shared internalReset",
+    "Tag292 positiveedge memory",
+    "Tempo_presetting afteremergencyedge",
+    "Tipo_preset stopstate",
+    "Auto_ON1 stoprequest",
+    "raw EM_OK"
+  ],
+  "source_pairs": [
+    {
+      "signal": "NOT processedEM_OK→faultSet",
+      "network": 1824,
+      "kind": "wire",
+      "uid": "42",
+      "label": "NOT processedEM_OK→faultSet",
+      "boundary": "FG13rawE19.4관련회로와processedDBbit별도;안전인증아님"
+    },
+    {
+      "signal": "emergencyedge→Move0→ENO Move5",
+      "network": 1846,
+      "kind": "wire",
+      "uid": "35",
+      "label": "emergencyedge→Move0→ENO Move5",
+      "boundary": "실제전원차단/최종출력/현장복구별도"
+    },
+    {
+      "signal": "비상 입력 관련 Word 복사",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "90",
+      "label": "IW18→DB13.DBW18 · EM_OK 범위",
+      "boundary": "FG13 E19.4 관련 상태와 Word 복사를 대조합니다. 개별 Bool의 현재 최종 쓰기·안전회로 인증·실제 전원 차단/복구는 별도입니다."
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Rev2-P013.png",
+    "assets/catalog-circuits/Electrical_Rev2-P014.png",
+    "assets/catalog-circuits/Electrical_Rev2-P100.png",
+    "catalog-sources/DOTS-REMAINING-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json",
+    "sources/Electrical_Rev2.pdf",
+    "sources/block_summary.json",
+    "sources/decoded-original/0000-FlgNet.xml",
+    "sources/decoded-original/0001-FlgNet.xml",
+    "sources/decoded-original/0002-FlgNet.xml",
+    "sources/decoded-original/0003-FlgNet.xml",
+    "sources/decoded-original/0004-FlgNet.xml",
+    "sources/decoded-original/0019-FlgNet.xml",
+    "sources/decoded-original/0030-FlgNet.xml",
+    "sources/decoded-original/0033-FlgNet.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0151-FlgNet.xml",
+    "sources/decoded-original/0152-FlgNet.xml",
+    "sources/decoded-original/0153-FlgNet.xml",
+    "sources/decoded-original/0154-FlgNet.xml",
+    "sources/decoded-original/0155-FlgNet.xml",
+    "sources/decoded-original/0156-FlgNet.xml",
+    "sources/decoded-original/0157-FlgNet.xml",
+    "sources/decoded-original/0158-FlgNet.xml",
+    "sources/decoded-original/0168-FlgNet.xml",
+    "sources/decoded-original/0180-FlgNet.xml",
+    "sources/decoded-original/0195-FlgNet.xml",
+    "sources/decoded-original/0255-FlgNet.xml",
+    "sources/decoded-original/0308-FlgNet.xml",
+    "sources/decoded-original/0335-FlgNet.xml",
+    "sources/decoded-original/0341-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0457-FlgNet.xml",
+    "sources/decoded-original/0458-FlgNet.xml",
+    "sources/decoded-original/0465-FlgNet.xml",
+    "sources/decoded-original/0466-FlgNet.xml",
+    "sources/decoded-original/0476-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0480-FlgNet.xml",
+    "sources/decoded-original/0524-FlgNet.xml",
+    "sources/decoded-original/0542-FlgNet.xml",
+    "sources/decoded-original/0544-FlgNet.xml",
+    "sources/decoded-original/0546-FlgNet.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/identifier-declarations.json",
+    "sources/decoded-original/network-map.json",
+    "sources/electrical-page-text.json",
+    "sources/hmi-windows.csv",
+    "sources/hmi_plc_tags.csv",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "SYS-SAFETY",
+    "signals": [
+      {
+        "name": "processed Inputs.EM_OK",
+        "addresses": [
+          "DB13.DBX19.4"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "27",
+            "rid": "250",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Allarm.Emergency_module_fault",
+        "addresses": [
+          "DB3.DBX16.6"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "49",
+            "rid": "253",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "shared internalReset",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "39",
+            "rid": "13",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Tag292 positiveedge memory",
+        "addresses": [
+          "%M90.5"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "51",
+            "rid": "109",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0575-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Tempo_presetting afteremergencyedge",
+        "addresses": [
+          "DB1.DBW96"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "27",
+            "rid": "7",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Tipo_preset stopstate",
+        "addresses": [
+          "DB1.DBW98"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "29",
+            "rid": "12",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Auto_ON1 stoprequest",
+        "addresses": [
+          "DB2.DBX7.3"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "30",
+            "rid": "4",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "raw EM_OK",
+        "addresses": [
+          "%I19.4"
+        ],
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-SAFETY",
+    "timers": [],
+    "alarms": [],
+    "boundary": "고유 장치 알람의 복제 없이 아래 검토 영역에 공통 Set/Reset·시간·쓰기 근거를 명시합니다."
+  },
+  "control_reference": {
+    "native": [
+      1824,
+      1846,
+      1070
+    ],
+    "chain": [
+      "NOT 처리 신호 Inputs.EM_OK는 공통 Emergency_module_fault 래치를 Set합니다. RESET_ALLARM AND 기존 래치는 같은 고장을 Reset합니다. Reset 분기에는 EM_OK 복귀 조건이 없습니다. 1824 원본 0458 Part26 Negated operand W25/ORef27 RID250 Inputs.EM_OK→W42 SCoil31, operand W48/ORef49 RID253 Allarm.Emergency_module_fault입니다. Reset Part36 Flag.RESET_ALLARM W43/ORef39 RID13→W44 Part37 같은 알람 W45/ORef40 RID253→W46 RCoil38 operand W47/ORef41 RID253입니다. 0655 Inputs TOD13 + 0657 BO156→처리 DB13.DBX19.4, Allarm TOD3 BO134→DB3.DBX16.6입니다.",
+      "비상 고장의 상승 에지는 직렬 쓰기 3개로 자동 정지 시퀀스 상태를 설정합니다. Tag292는 PContact의 에지 메모리이며 OR 원인이 아닙니다. 1846 원본 0168 PContact21.pre W31 Powerrail, operand W50/ORef52 RID108 Allarm.Emergency_module_fault, bit W49/ORef51 RID109 Tag292 메모리입니다. PContact.out W48→Move22.en, in W34/ORef26 상수 0→Data.Tempo_presetting W36/ORef27, eno W35→Move23.en, in W37/ORef28 상수 5→Data.Tipo_preset W39/ORef29, eno W38→SCoil24 Flag.Auto_ON1 W40/ORef30입니다. 부모 DB 0576, 멤버 0577, 상수 0578과 에지 메모리 0575를 대조했습니다.",
+      "원본 IW18→DB13.DBW18 워드 복사는 처리 EM_OK가 저장된 byte19 범위를 포함합니다. 원시 EM_OK I19.4와 처리 DB13 비트는 별도 관찰 단계로 구분합니다. 1070 Move78 en W21, in W88 ORef81 RID25 Word IW18의 선언은 0627입니다. out W90 ORef82 RID26 절대 DB13DBW18은 0629 BIRID4/0628 TOD13으로 확인했습니다. 1824의 처리 Inputs.EM_OK BO156은 bit19.4이며, 원시 EM_OK 0678 SAD Input AO156과 구분합니다."
+    ],
+    "repair": [
+      "원인복귀·Reset·자동정지상태·최종출력/응답따로대조; 비상회로우회또는보호값변경하지않음",
+      "FG99X1:390391/010-390경계확인;일반PLCbit만으로안전보장·외부순서판정금지"
+    ],
+    "pending": [
+      "정적 IW18→DB13.DBW18은 EM_OK의 byte19 범위를 포함합니다. 실제 Boolean 최종 쓰기 위치, 현재 호출, 극성과 승인 회로는 여전히 미확인입니다.",
+      "OEM 일반 제어기의 정확한 현행 모델, category·performance level·SIL·인증과 승인 배선 구성은 미확인입니다.",
+      "EM_OK 복귀, 래치 Reset, Auto의 Tipo5 요청, 실제 전원 차단과 현장 복구는 각각 확인해야 합니다.",
+      "정확한 현행 온도 인터록 값·177T1 경로·전기 승인과 외부 010-390 버너 제어기의 내부 기능은 미확인입니다.",
+      "현재 OB·순서, 에지 메모리 Retain과 다른 쓰기 위치는 미확인입니다. 안전 시험이나 실제 PLC 명령은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-SAFETY",
+    "boundary": "complete_with_gaps; document and read-only observations",
+    "existing_notes": [
+      "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "정적 IW18→DB13.DBW18은 EM_OK의 byte19 범위를 포함합니다. 실제 Boolean 최종 쓰기 위치, 현재 호출, 극성과 승인 회로는 여전히 미확인입니다.",
+      "OEM 일반 제어기의 정확한 현행 모델, category·performance level·SIL·인증과 승인 배선 구성은 미확인입니다.",
+      "EM_OK 복귀, 래치 Reset, Auto의 Tipo5 요청, 실제 전원 차단과 현장 복구는 각각 확인해야 합니다.",
+      "정확한 현행 온도 인터록 값·177T1 경로·전기 승인과 외부 010-390 버너 제어기의 내부 기능은 미확인입니다.",
+      "현재 OB·순서, 에지 메모리 Retain과 다른 쓰기 위치는 미확인입니다. 안전 시험이나 실제 PLC 명령은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "정적 IW18→DB13.DBW18은 EM_OK의 byte19 범위를 포함합니다. 실제 Boolean 최종 쓰기 위치, 현재 호출, 극성과 승인 회로는 여전히 미확인입니다.",
+        "OEM 일반 제어기의 정확한 현행 모델, category·performance level·SIL·인증과 승인 배선 구성은 미확인입니다.",
+        "EM_OK 복귀, 래치 Reset, Auto의 Tipo5 요청, 실제 전원 차단과 현장 복구는 각각 확인해야 합니다.",
+        "정확한 현행 온도 인터록 값·177T1 경로·전기 승인과 외부 010-390 버너 제어기의 내부 기능은 미확인입니다.",
+        "현재 OB·순서, 에지 메모리 Retain과 다른 쓰기 위치는 미확인입니다. 안전 시험이나 실제 PLC 명령은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-SAFETY",
+    "plc_id": "SYS-SAFETY",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "비상정지복귀후운전재개불가",
+        "observe": "rawEM_OK/processedEM_OK/latchedfault/internalreset/TipoTempoAuto/실제전원·허가같은시각",
+        "compare": "원인복귀·Reset·자동정지상태·최종출력/응답따로대조; 비상회로우회또는보호값변경하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "온도허가와버너정지상태불일치",
+        "observe": "현재전용온도기/실제허가접점/최종Q6.6및99KA2외부끝점",
+        "compare": "FG99X1:390391/010-390경계확인;일반PLCbit만으로안전보장·외부순서판정금지",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "1824-27",
+        "name": "processed Inputs.EM_OK",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBX19.4"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "27",
+            "rid": "250",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1824-49",
+        "name": "Allarm.Emergency_module_fault",
+        "role": "responses",
+        "addresses": [
+          "DB3.DBX16.6"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "49",
+            "rid": "253",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1824-39",
+        "name": "shared internalReset",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "39",
+            "rid": "13",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-51",
+        "name": "Tag292 positiveedge memory",
+        "role": "responses",
+        "addresses": [
+          "%M90.5"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "51",
+            "rid": "109",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0575-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-27",
+        "name": "Tempo_presetting afteremergencyedge",
+        "role": "responses",
+        "addresses": [
+          "DB1.DBW96"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "27",
+            "rid": "7",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-29",
+        "name": "Tipo_preset stopstate",
+        "role": "requests",
+        "addresses": [
+          "DB1.DBW98"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "29",
+            "rid": "12",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-30",
+        "name": "Auto_ON1 stoprequest",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX7.3"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "30",
+            "rid": "4",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "raw-em",
+        "name": "raw EM_OK",
+        "role": "responses",
+        "addresses": [
+          "%I19.4"
+        ],
+        "refs": [],
+        "boundary": "원본의 원시 입력 선언입니다. 처리 DB13 비트와 구분하며, 정상 극성이나 안전 인증을 확정하지 않습니다.",
+        "source_class": "backup_reference"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-SAFETY",
+    "name": "SYS-SAFETY 공통 시스템 근거 관찰",
+    "reference_plc_id": "SYS-SAFETY",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "signals": [
+      {
+        "id": "1824-27",
+        "name": "processed Inputs.EM_OK",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBX19.4"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "27",
+            "rid": "250",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1824-49",
+        "name": "Allarm.Emergency_module_fault",
+        "role": "responses",
+        "addresses": [
+          "DB3.DBX16.6"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "49",
+            "rid": "253",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1824-39",
+        "name": "shared internalReset",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1824,
+            "oref": "39",
+            "rid": "13",
+            "nid": "51",
+            "source": "sources/decoded-original/0458-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0657-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-51",
+        "name": "Tag292 positiveedge memory",
+        "role": "responses",
+        "addresses": [
+          "%M90.5"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "51",
+            "rid": "109",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0575-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-27",
+        "name": "Tempo_presetting afteremergencyedge",
+        "role": "responses",
+        "addresses": [
+          "DB1.DBW96"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "27",
+            "rid": "7",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-29",
+        "name": "Tipo_preset stopstate",
+        "role": "requests",
+        "addresses": [
+          "DB1.DBW98"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "29",
+            "rid": "12",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1846-30",
+        "name": "Auto_ON1 stoprequest",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX7.3"
+        ],
+        "refs": [
+          {
+            "network": 1846,
+            "oref": "30",
+            "rid": "4",
+            "nid": "10",
+            "source": "sources/decoded-original/0168-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0577-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "raw-em",
+        "name": "raw EM_OK",
+        "role": "responses",
+        "addresses": [
+          "%I19.4"
+        ],
+        "refs": [],
+        "boundary": "원본의 원시 입력 선언입니다. 처리 DB13 비트와 구분하며, 정상 극성이나 안전 인증을 확정하지 않습니다.",
+        "source_class": "backup_reference"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "비상정지복귀후운전재개불가",
+        "observe": "rawEM_OK/processedEM_OK/latchedfault/internalreset/TipoTempoAuto/실제전원·허가같은시각",
+        "compare": "원인복귀·Reset·자동정지상태·최종출력/응답따로대조; 비상회로우회또는보호값변경하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "온도허가와버너정지상태불일치",
+        "observe": "현재전용온도기/실제허가접점/최종Q6.6및99KA2외부끝점",
+        "compare": "FG99X1:390391/010-390경계확인;일반PLCbit만으로안전보장·외부순서판정금지",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-SAFETY 원본 쓰기·주소·공통 기능과 관찰의 분리",
+      "sources": {
+        "draft": "5bd5ac42ff003b5c2d1d1457ab2abc5717f51ea35b1247bfa35eb9f6646f9b30"
+      },
+      "circuit_equipment": "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다.",
+      "circuit_distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG12 · PDF13 · EMERGENCY CIRCUIT",
+          "path": "sources/Electrical_Rev2.pdf#page=13"
+        },
+        {
+          "label": "FG13 · PDF14 · GENERAL SAFETY CONTROL UNIT",
+          "path": "sources/Electrical_Rev2.pdf#page=14"
+        },
+        {
+          "label": "FG99 · PDF100 · BURNER INTERLOCK OUTPUT",
+          "path": "sources/Electrical_Rev2.pdf#page=100"
+        }
+      ],
+      "construction_boundary": "전용 시공 연결·현행 준공은 미확정. 공통 소프트웨어를 별도 실물로 세지 않습니다.",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "SYS-SAFETY 원초안",
+            "path": "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 독립 원본 대조",
+            "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "FG12 · PDF13 · EMERGENCY CIRCUIT",
+            "path": "sources/Electrical_Rev2.pdf#page=13"
+          },
+          {
+            "label": "FG13 · PDF14 · GENERAL SAFETY CONTROL UNIT",
+            "path": "sources/Electrical_Rev2.pdf#page=14"
+          },
+          {
+            "label": "FG99 · PDF100 · BURNER INTERLOCK OUTPUT",
+            "path": "sources/Electrical_Rev2.pdf#page=100"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "rawEM_OK/processedEM_OK/latchedfault/internalreset/TipoTempoAuto/실제전원·허가같은시각"
+            },
+            {
+              "owner": "대조",
+              "work": "원인복귀·Reset·자동정지상태·최종출력/응답따로대조; 비상회로우회또는보호값변경하지않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-SAFETY 원초안",
+              "path": "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG12 · PDF13 · EMERGENCY CIRCUIT",
+              "path": "sources/Electrical_Rev2.pdf#page=13"
+            },
+            {
+              "label": "FG13 · PDF14 · GENERAL SAFETY CONTROL UNIT",
+              "path": "sources/Electrical_Rev2.pdf#page=14"
+            },
+            {
+              "label": "FG99 · PDF100 · BURNER INTERLOCK OUTPUT",
+              "path": "sources/Electrical_Rev2.pdf#page=100"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "현재전용온도기/실제허가접점/최종Q6.6및99KA2외부끝점"
+            },
+            {
+              "owner": "대조",
+              "work": "FG99X1:390391/010-390경계확인;일반PLCbit만으로안전보장·외부순서판정금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-SAFETY 원초안",
+              "path": "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG12 · PDF13 · EMERGENCY CIRCUIT",
+              "path": "sources/Electrical_Rev2.pdf#page=13"
+            },
+            {
+              "label": "FG13 · PDF14 · GENERAL SAFETY CONTROL UNIT",
+              "path": "sources/Electrical_Rev2.pdf#page=14"
+            },
+            {
+              "label": "FG99 · PDF100 · BURNER INTERLOCK OUTPUT",
+              "path": "sources/Electrical_Rev2.pdf#page=100"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-SAFETY",
+    "plc_id": "SYS-SAFETY",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-13",
+        "kind": "OEM 전기",
+        "title": "FG12 · PDF13 · EMERGENCY CIRCUIT",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 13,
+        "fg": 12,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P013.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-14",
+        "kind": "OEM 전기",
+        "title": "FG13 · PDF14 · GENERAL SAFETY CONTROL UNIT",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 14,
+        "fg": 13,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P014.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-100",
+        "kind": "OEM 전기",
+        "title": "FG99 · PDF100 · BURNER INTERLOCK OUTPUT",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 100,
+        "fg": 99,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P100.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      }
+    ],
+    "circuit": {
+      "id": "SYS-SAFETY",
+      "equipment": "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다.",
+      "distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "paths": [
+        {
+          "signal": "비상 입력 관련 Word 복사",
+          "backup": "%I19.4 / %IW18 → DB13.DBW18",
+          "drawing": "E19.4 · GENERAL SAFETY CONTROL UNIT",
+          "fg": 13,
+          "nodes": [
+            "13KA1 GENERAL SAFETY CONTROL UNIT 원문 상태 경로",
+            "E19.4 → FG135/5; 현재 승인 배선·극성은 별도",
+            "원본 IW18→DB13.DBW18 Word 복사; Inputs.EM_OK byte19.4 범위"
+          ],
+          "destination": "소프트웨어 입력 감시와 인증된 하드웨어 안전/전원차단을 동일시하지 않음",
+          "check": "FG13 E19.4 관련 상태와 Word 복사를 대조합니다. 개별 Bool의 현재 최종 쓰기·안전회로 인증·실제 전원 차단/복구는 별도입니다.",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "81"
+            },
+            {
+              "network": 1070,
+              "uid": "82"
+            }
+          ],
+          "sheet_id": "oem-14"
+        }
+      ],
+      "pending": [
+        "정적 IW18→DB13.DBW18은 EM_OK의 byte19 범위를 포함합니다. 실제 Boolean 최종 쓰기 위치, 현재 호출, 극성과 승인 회로는 여전히 미확인입니다.",
+        "OEM 일반 제어기의 정확한 현행 모델, category·performance level·SIL·인증과 승인 배선 구성은 미확인입니다.",
+        "EM_OK 복귀, 래치 Reset, Auto의 Tipo5 요청, 실제 전원 차단과 현장 복구는 각각 확인해야 합니다.",
+        "정확한 현행 온도 인터록 값·177T1 경로·전기 승인과 외부 010-390 버너 제어기의 내부 기능은 미확인입니다.",
+        "현재 OB·순서, 에지 메모리 Retain과 다른 쓰기 위치는 미확인입니다. 안전 시험이나 실제 PLC 명령은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "processed Inputs.EM_OK, Allarm.Emergency_module_fault, shared internalReset, Tag292 positiveedge memory, Tempo_presetting afteremergencyedge"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT processedEM_OK→faultSet",
+        "networks/network-1824.html#gme-sys-safety-wire-42"
+      ],
+      [
+        "emergencyedge→Move0→ENO Move5",
+        "networks/network-1846.html#gme-sys-safety-wire-35"
+      ]
+    ],
+    "io": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT processedEM_OK→faultSet",
+        "networks/network-1824.html#gme-sys-safety-wire-42"
+      ],
+      [
+        "emergencyedge→Move0→ENO Move5",
+        "networks/network-1846.html#gme-sys-safety-wire-35"
+      ]
+    ],
+    "control": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT processedEM_OK→faultSet",
+        "networks/network-1824.html#gme-sys-safety-wire-42"
+      ],
+      [
+        "emergencyedge→Move0→ENO Move5",
+        "networks/network-1846.html#gme-sys-safety-wire-35"
+      ]
+    ],
+    "circuits": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG12 · PDF13 · EMERGENCY CIRCUIT",
+        "sources/Electrical_Rev2.pdf#page=13"
+      ],
+      [
+        "FG13 · PDF14 · GENERAL SAFETY CONTROL UNIT",
+        "sources/Electrical_Rev2.pdf#page=14"
+      ],
+      [
+        "FG99 · PDF100 · BURNER INTERLOCK OUTPUT",
+        "sources/Electrical_Rev2.pdf#page=100"
+      ]
+    ],
+    "alarms": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT processedEM_OK→faultSet",
+        "networks/network-1824.html#gme-sys-safety-wire-42"
+      ],
+      [
+        "emergencyedge→Move0→ENO Move5",
+        "networks/network-1846.html#gme-sys-safety-wire-35"
+      ]
+    ],
+    "repair": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT processedEM_OK→faultSet",
+        "networks/network-1824.html#gme-sys-safety-wire-42"
+      ],
+      [
+        "emergencyedge→Move0→ENO Move5",
+        "networks/network-1846.html#gme-sys-safety-wire-35"
+      ]
+    ],
+    "completion": [
+      [
+        "SYS-SAFETY 원초안",
+        "catalog-sources/SYS-SAFETY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT processedEM_OK→faultSet",
+        "networks/network-1824.html#gme-sys-safety-wire-42"
+      ],
+      [
+        "emergencyedge→Move0→ENO Move5",
+        "networks/network-1846.html#gme-sys-safety-wire-35"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "type": "reviewed",
+        "id": "current-native-review",
+        "title": "현재 원본 독립 대조와 소유 경계",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "공통 비상 입력 감시 래치와 자동 정지 요청 소프트웨어입니다. 실물의 일반 안전 제어기와 외부 버너 제어기를 구분합니다. 일반 CPU·PLC 비트만으로 인증된 안전 기능을 확인하지 않습니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "현재 2차 대상은 실제 대장129개입니다. 원초안의 v1.12.0·133개·과거 게시 상태는 당시 조사 이력입니다."
+            },
+            {
+              "type": "list",
+              "items": [
+                "NOT 처리 신호 Inputs.EM_OK는 공통 Emergency_module_fault 래치를 Set합니다. RESET_ALLARM AND 기존 래치는 같은 고장을 Reset합니다. Reset 분기에는 EM_OK 복귀 조건이 없습니다. 1824 원본 0458 Part26 Negated operand W25/ORef27 RID250 Inputs.EM_OK→W42 SCoil31, operand W48/ORef49 RID253 Allarm.Emergency_module_fault입니다. Reset Part36 Flag.RESET_ALLARM W43/ORef39 RID13→W44 Part37 같은 알람 W45/ORef40 RID253→W46 RCoil38 operand W47/ORef41 RID253입니다. 0655 Inputs TOD13 + 0657 BO156→처리 DB13.DBX19.4, Allarm TOD3 BO134→DB3.DBX16.6입니다. 소프트웨어 래치 감시, 실물 비상 접점, 원시 %I19.4와 인증된 안전 논리는 구분합니다. 원인 복귀 없이 Reset하면 실제 순서에 따라 다시 래치될 수 있으며, 현장 복구 완료를 뜻하지 않습니다.",
+                "비상 고장의 상승 에지는 직렬 쓰기 3개로 자동 정지 시퀀스 상태를 설정합니다. Tag292는 PContact의 에지 메모리이며 OR 원인이 아닙니다. 1846 원본 0168 PContact21.pre W31 Powerrail, operand W50/ORef52 RID108 Allarm.Emergency_module_fault, bit W49/ORef51 RID109 Tag292 메모리입니다. PContact.out W48→Move22.en, in W34/ORef26 상수 0→Data.Tempo_presetting W36/ORef27, eno W35→Move23.en, in W37/ORef28 상수 5→Data.Tipo_preset W39/ORef29, eno W38→SCoil24 Flag.Auto_ON1 W40/ORef30입니다. 부모 DB 0576, 멤버 0577, 상수 0578과 에지 메모리 0575를 대조했습니다. 자동 정지 요청·상태를 모든 최종 출력 OFF, 하드웨어 전원 차단이나 검증된 비상 복구로 판단하지 않습니다. 현재 시퀀스 호출과 하위 출력은 별도로 관찰해야 합니다.",
+                "원본 IW18→DB13.DBW18 워드 복사는 처리 EM_OK가 저장된 byte19 범위를 포함합니다. 원시 EM_OK I19.4와 처리 DB13 비트는 별도 관찰 단계로 구분합니다. 1070 Move78 en W21, in W88 ORef81 RID25 Word IW18의 선언은 0627입니다. out W90 ORef82 RID26 절대 DB13DBW18은 0629 BIRID4/0628 TOD13으로 확인했습니다. 1824의 처리 Inputs.EM_OK BO156은 bit19.4이며, 원시 EM_OK 0678 SAD Input AO156과 구분합니다. 정적 워드 전체 복사의 근거입니다. 개별 Boolean 코일, 실제 호출·다른 쓰기·현재 최종값, 안전 인증이나 정상 극성은 증명하지 않습니다."
+              ]
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

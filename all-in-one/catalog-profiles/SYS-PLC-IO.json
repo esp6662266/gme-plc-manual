@@ -1,0 +1,1667 @@
+{
+  "catalog_id": "SYS-PLC-IO",
+  "selection_key": "SYS-PLC-IO",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md",
+  "draft_sha256": "37e482f722035b489fa93f2e30bc33fb4510d1cb5e862f0af6b1bc7d443e8caf",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1614,
+      "part",
+      "69"
+    ],
+    [
+      1614,
+      "part",
+      "73"
+    ],
+    [
+      1614,
+      "part",
+      "76"
+    ],
+    [
+      1614,
+      "part",
+      "79"
+    ],
+    [
+      1614,
+      "wire",
+      "103"
+    ],
+    [
+      1614,
+      "wire",
+      "92"
+    ],
+    [
+      1614,
+      "wire",
+      "93"
+    ],
+    [
+      1614,
+      "wire",
+      "94"
+    ],
+    [
+      1614,
+      "wire",
+      "95"
+    ],
+    [
+      1614,
+      "wire",
+      "96"
+    ],
+    [
+      1614,
+      "wire",
+      "97"
+    ],
+    [
+      1614,
+      "wire",
+      "98"
+    ],
+    [
+      1614,
+      "wire",
+      "99"
+    ],
+    [
+      1614,
+      "wire",
+      "100"
+    ],
+    [
+      1614,
+      "wire",
+      "101"
+    ],
+    [
+      1614,
+      "wire",
+      "102"
+    ],
+    [
+      1616,
+      "part",
+      "144"
+    ],
+    [
+      1616,
+      "part",
+      "148"
+    ],
+    [
+      1616,
+      "part",
+      "151"
+    ],
+    [
+      1616,
+      "part",
+      "154"
+    ],
+    [
+      1616,
+      "wire",
+      "178"
+    ],
+    [
+      1616,
+      "wire",
+      "167"
+    ],
+    [
+      1616,
+      "wire",
+      "168"
+    ],
+    [
+      1616,
+      "wire",
+      "169"
+    ],
+    [
+      1616,
+      "wire",
+      "170"
+    ],
+    [
+      1616,
+      "wire",
+      "171"
+    ],
+    [
+      1616,
+      "wire",
+      "172"
+    ],
+    [
+      1616,
+      "wire",
+      "173"
+    ],
+    [
+      1616,
+      "wire",
+      "174"
+    ],
+    [
+      1616,
+      "wire",
+      "175"
+    ],
+    [
+      1616,
+      "wire",
+      "176"
+    ],
+    [
+      1616,
+      "wire",
+      "177"
+    ],
+    [
+      1994,
+      "part",
+      "1269"
+    ],
+    [
+      1994,
+      "part",
+      "1271"
+    ],
+    [
+      1994,
+      "part",
+      "1273"
+    ],
+    [
+      1994,
+      "part",
+      "1275"
+    ],
+    [
+      1994,
+      "part",
+      "1277"
+    ],
+    [
+      1994,
+      "part",
+      "1279"
+    ],
+    [
+      1994,
+      "part",
+      "1211"
+    ],
+    [
+      1994,
+      "part",
+      "1217"
+    ],
+    [
+      1994,
+      "part",
+      "1281"
+    ],
+    [
+      1994,
+      "part",
+      "1283"
+    ],
+    [
+      1994,
+      "part",
+      "1223"
+    ],
+    [
+      1994,
+      "part",
+      "1225"
+    ],
+    [
+      1994,
+      "part",
+      "1227"
+    ],
+    [
+      1994,
+      "part",
+      "1229"
+    ],
+    [
+      1994,
+      "part",
+      "1231"
+    ],
+    [
+      1994,
+      "part",
+      "1233"
+    ],
+    [
+      1994,
+      "wire",
+      "1250"
+    ],
+    [
+      1994,
+      "wire",
+      "1270"
+    ],
+    [
+      1994,
+      "wire",
+      "1251"
+    ],
+    [
+      1994,
+      "wire",
+      "1252"
+    ],
+    [
+      1994,
+      "wire",
+      "1253"
+    ],
+    [
+      1994,
+      "wire",
+      "1254"
+    ],
+    [
+      1994,
+      "wire",
+      "1255"
+    ],
+    [
+      1994,
+      "wire",
+      "1256"
+    ],
+    [
+      1994,
+      "wire",
+      "1258"
+    ],
+    [
+      1994,
+      "wire",
+      "1259"
+    ],
+    [
+      1994,
+      "wire",
+      "1260"
+    ],
+    [
+      1994,
+      "wire",
+      "1284"
+    ],
+    [
+      1994,
+      "wire",
+      "1261"
+    ],
+    [
+      1994,
+      "wire",
+      "1262"
+    ],
+    [
+      1994,
+      "wire",
+      "1263"
+    ],
+    [
+      1994,
+      "wire",
+      "1264"
+    ],
+    [
+      1994,
+      "wire",
+      "1265"
+    ],
+    [
+      1994,
+      "wire",
+      "1266"
+    ]
+  ],
+  "internal_names": [
+    "Tag_171",
+    "Word_inputs.word1",
+    "Outputimage QW0 read",
+    "DB101 snapshot W0",
+    "I/O FLT",
+    "OB Fault",
+    "Rack FAULT",
+    "Module Access FLT",
+    "Prog FAULT",
+    "Allarm.PLC_DIAGNOSTIC_FAULT",
+    "Flag.RESET_ALLARM"
+  ],
+  "source_pairs": [
+    {
+      "signal": "IW6→DB100 input snapshot",
+      "network": 1614,
+      "kind": "wire",
+      "uid": "93",
+      "label": "IW6→DB100 input snapshot",
+      "boundary": "원시워드복사이며센서정상/가공Inputs확정아님"
+    },
+    {
+      "signal": "QW0→DB101 output snapshot",
+      "network": 1616,
+      "kind": "wire",
+      "uid": "168",
+      "label": "QW0→DB101 output snapshot",
+      "boundary": "방향은물리출력읽기→DB쓰기; 실제출력명령/피드백아님"
+    },
+    {
+      "signal": "aggregateReset→6RCoils",
+      "network": 1994,
+      "kind": "wire",
+      "uid": "1284",
+      "label": "aggregateReset→6RCoils",
+      "boundary": "공통진단비트해제는하드웨어원인복구와별도"
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Rev2-P103.png",
+    "assets/catalog-circuits/Electrical_Rev2-P185.png",
+    "catalog-sources/DOTS-REMAINING-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json",
+    "sources/Electrical_Rev2.pdf",
+    "sources/block_summary.json",
+    "sources/decoded-original/0000-FlgNet.xml",
+    "sources/decoded-original/0001-FlgNet.xml",
+    "sources/decoded-original/0002-FlgNet.xml",
+    "sources/decoded-original/0003-FlgNet.xml",
+    "sources/decoded-original/0004-FlgNet.xml",
+    "sources/decoded-original/0019-FlgNet.xml",
+    "sources/decoded-original/0030-FlgNet.xml",
+    "sources/decoded-original/0033-FlgNet.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0151-FlgNet.xml",
+    "sources/decoded-original/0152-FlgNet.xml",
+    "sources/decoded-original/0153-FlgNet.xml",
+    "sources/decoded-original/0154-FlgNet.xml",
+    "sources/decoded-original/0155-FlgNet.xml",
+    "sources/decoded-original/0156-FlgNet.xml",
+    "sources/decoded-original/0157-FlgNet.xml",
+    "sources/decoded-original/0158-FlgNet.xml",
+    "sources/decoded-original/0168-FlgNet.xml",
+    "sources/decoded-original/0180-FlgNet.xml",
+    "sources/decoded-original/0195-FlgNet.xml",
+    "sources/decoded-original/0255-FlgNet.xml",
+    "sources/decoded-original/0308-FlgNet.xml",
+    "sources/decoded-original/0335-FlgNet.xml",
+    "sources/decoded-original/0341-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0457-FlgNet.xml",
+    "sources/decoded-original/0458-FlgNet.xml",
+    "sources/decoded-original/0465-FlgNet.xml",
+    "sources/decoded-original/0466-FlgNet.xml",
+    "sources/decoded-original/0476-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0480-FlgNet.xml",
+    "sources/decoded-original/0524-FlgNet.xml",
+    "sources/decoded-original/0542-FlgNet.xml",
+    "sources/decoded-original/0544-FlgNet.xml",
+    "sources/decoded-original/0546-FlgNet.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/identifier-declarations.json",
+    "sources/decoded-original/network-map.json",
+    "sources/electrical-page-text.json",
+    "sources/hmi-windows.csv",
+    "sources/hmi_plc_tags.csv",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "SYS-PLC-IO",
+    "signals": [
+      {
+        "name": "Tag_171",
+        "addresses": [
+          "%IW6"
+        ],
+        "refs": [
+          {
+            "network": 1614,
+            "oref": "82",
+            "rid": "1",
+            "nid": "1",
+            "source": "sources/decoded-original/0544-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0692-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Word_inputs.word1",
+        "addresses": [
+          "DB100.DBW0"
+        ],
+        "refs": [
+          {
+            "network": 1614,
+            "oref": "83",
+            "rid": "3",
+            "nid": "1",
+            "source": "sources/decoded-original/0544-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0690-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Outputimage QW0 read",
+        "addresses": [
+          "%IW0"
+        ],
+        "refs": [
+          {
+            "network": 1616,
+            "oref": "157",
+            "rid": "21",
+            "nid": "3",
+            "source": "sources/decoded-original/0546-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0692-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "DB101 snapshot W0",
+        "addresses": [
+          "DB101.DBW0"
+        ],
+        "refs": [
+          {
+            "network": 1616,
+            "oref": "158",
+            "rid": "23",
+            "nid": "3",
+            "source": "sources/decoded-original/0546-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0690-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "I/O FLT",
+        "addresses": [
+          "%M32.0"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1236",
+            "rid": "129",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "OB Fault",
+        "addresses": [
+          "%M32.1"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1237",
+            "rid": "130",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Rack FAULT",
+        "addresses": [
+          "%M32.2"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1238",
+            "rid": "131",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Module Access FLT",
+        "addresses": [
+          "%M32.3"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1239",
+            "rid": "132",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Prog FAULT",
+        "addresses": [
+          "%M32.4"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1240",
+            "rid": "133",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Allarm.PLC_DIAGNOSTIC_FAULT",
+        "addresses": [
+          "DB3.DBX17.3"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1241",
+            "rid": "134",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0684-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Flag.RESET_ALLARM",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1242",
+            "rid": "24",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0684-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-PLC-IO",
+    "timers": [],
+    "alarms": [],
+    "boundary": "고유 장치 알람의 복제 없이 아래 검토 영역에 공통 Set/Reset·시간·쓰기 근거를 명시합니다."
+  },
+  "control_reference": {
+    "native": [
+      1614,
+      1616,
+      1994,
+      434,
+      439,
+      444,
+      765,
+      449,
+      1070
+    ],
+    "chain": [
+      "main의 입력 워드 스냅샷은 명시된 ENO→en 직렬 연결을 거쳐 원시 워드를 Word_inputs DB100으로 복사합니다. 1614 Move69.in W92/ORef82 Tag171(SSD AO48/SAD Input→%IW6), out1 W93/ORef83 Word_inputs.word1(부모 0689 TOD100; 0690 BO0→DB100.DBW0), eno W94→Move73.en입니다. Tag172 %IW28→word2 DBW2 W95/96, eno W97→Move76, Tag173 %IW32→word3 DBW4 W98/99, eno W100→Move79 Tag174 %IW36→word4 DBW6 W101/102입니다.",
+      "main의 출력 워드 스냅샷은 Tag178/179/180/181의 OUTPUT 이미지 워드를 읽어 DB101 Word_outputs에 씁니다. 이 분기는 물리 Q를 쓰지 않습니다. 1616 Move144.in W167/ORef157 Tag178 %QW0, out1 W168/ORef158 Word_outputs.WORD1 DB101.DBW0, eno W169→Move148입니다. Tag179 %QW4→DB101W2 W170/171, eno W172→Move151, Tag180 %QW6→DB101W4 W173/174, eno W175→Move154, Tag181 %QW8→DB101W6 W176/177입니다. 0692 SAD Output의 AO0/32/48/64, 0689 Word_outputs TOD101, 0690 멤버 BO0/16/32/48을 대조했습니다.",
+      "ON으로 허가된 진단 메모리 플래그 5개의 OR은 통합 PLC_DIAGNOSTIC_FAULT를 Set합니다. RESET_ALLARM AND 통합 알람 조건은 통합 알람과 메모리 플래그 5개를 Reset합니다. 1994 Part1269 ON→W1270, Contact1271 I/OFLT/1273 OBFault/1275 RackFAULT/1277 ModuleAccessFLT/1279 ProgFAULT→O1211→W1256 SCoil1217 W1258/ORef1241 Allarm.PLC_DIAGNOSTIC_FAULT입니다. 공유 Reset Contact1281(ORef1242/W1259)→Contact1283(알람 ORef1243/W1260)→W1284 RCoil1223 통합 알람/RCoil1225 I/O/RCoil1227 OB/RCoil1229 Rack/RCoil1231 Module/RCoil1233 Prog입니다. 0686 메모리 AO256..260→M32.0..4, 0684 통합 알람 BO139 + 0682 TOD3→DB3.DBX17.3입니다.",
+      "원본 고장·이벤트 블록은 ON 조건 뒤에서 명명된 진단 메모리를 Set합니다. 정확한 이벤트 발생 종류는 원본 메타데이터의 사실이며 현재 실행 일정의 증거는 아닙니다. 434/439/444/765의 원본 0000/1/2/3은 각각 Part33 ON→W34 SCoil28을 통해 I/OFLT/ModuleAccessFLT/ProgFAULT/RackFAULT를 Set합니다. 449의 원본 0004는 같은 허가 구조에서 Tag191을 Set하며, SID M32.1은 OBFault와 같은 백업 주소 범위입니다.",
+      "원본 hmi inputs에는 절대 주소 IW18→DB13DBW18의 워드 전체 복사가 있습니다. 목적지 AOS 이름이 비어 있어 검색 선언 색인에서는 빠져 있습니다. 1070 Move78 DisableENO=true, W21 en, W88 in(ORef81 RID25), W90 out1(ORef82 RID26), W89 eno→Move79.en입니다. 입력 0627 Word/SAD Input AO144, 목적지 0629 GlobalAccess Word/SSD.AO144/BAD BIRID4, 부모 0628 TOD13/C NID1 UID82를 대조했습니다."
+    ],
+    "repair": [
+      "복사방향과현재호출/채널을먼저대조; Qimage표시를실제응답으로판정하지않음",
+      "1994리셋은원인해제아님; 현재원인이벤트·모듈/통신상태확인"
+    ],
+    "pending": [
+      "현재 CPU·모듈 품번·펌웨어, I/O 할당·랙 존재, PROFINET 구성과 실제 채널 설정은 미확인입니다.",
+      "원본 도면의 모델 문자열과 소스 백업만으로 현재 하드웨어나 안전 인증을 확인하지 않습니다.",
+      "원본 고장 메모리의 이벤트 발생 조건, 현재 OB 구성, 진단 버퍼의 실제 원인과 재기동 조건은 미확인입니다.",
+      "원본 1070의 IW18→DB13DBW18 워드 전체 전달은 확인했습니다. 개별 Boolean 쓰기, 현재 최종 쓰기 위치와 실물 극성은 미확인입니다. 출력 이미지와 피드백은 계속 구분합니다.",
+      "물리 I/O 자동 시험이나 PLC 고장 주입 시험은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-PLC-IO",
+    "boundary": "complete_with_gaps; document and read-only observations",
+    "existing_notes": [
+      "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "현재 CPU·모듈 품번·펌웨어, I/O 할당·랙 존재, PROFINET 구성과 실제 채널 설정은 미확인입니다.",
+      "원본 도면의 모델 문자열과 소스 백업만으로 현재 하드웨어나 안전 인증을 확인하지 않습니다.",
+      "원본 고장 메모리의 이벤트 발생 조건, 현재 OB 구성, 진단 버퍼의 실제 원인과 재기동 조건은 미확인입니다.",
+      "원본 1070의 IW18→DB13DBW18 워드 전체 전달은 확인했습니다. 개별 Boolean 쓰기, 현재 최종 쓰기 위치와 실물 극성은 미확인입니다. 출력 이미지와 피드백은 계속 구분합니다.",
+      "물리 I/O 자동 시험이나 PLC 고장 주입 시험은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "현재 CPU·모듈 품번·펌웨어, I/O 할당·랙 존재, PROFINET 구성과 실제 채널 설정은 미확인입니다.",
+        "원본 도면의 모델 문자열과 소스 백업만으로 현재 하드웨어나 안전 인증을 확인하지 않습니다.",
+        "원본 고장 메모리의 이벤트 발생 조건, 현재 OB 구성, 진단 버퍼의 실제 원인과 재기동 조건은 미확인입니다.",
+        "원본 1070의 IW18→DB13DBW18 워드 전체 전달은 확인했습니다. 개별 Boolean 쓰기, 현재 최종 쓰기 위치와 실물 극성은 미확인입니다. 출력 이미지와 피드백은 계속 구분합니다.",
+        "물리 I/O 자동 시험이나 PLC 고장 주입 시험은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-PLC-IO",
+    "plc_id": "SYS-PLC-IO",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "HMI I/O값과실물상태다름",
+        "observe": "원시IW/QW/DB100101snapshot/가공DB13/currentcpu버전·시각",
+        "compare": "복사방향과현재호출/채널을먼저대조; Qimage표시를실제응답으로판정하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "PLC진단알람재발",
+        "observe": "M32.0..4/aggregateDB3X17.3/CPU진단버퍼원인/Reset시각",
+        "compare": "1994리셋은원인해제아님; 현재원인이벤트·모듈/통신상태확인",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "1614-82",
+        "name": "Tag_171",
+        "role": "responses",
+        "addresses": [
+          "%IW6"
+        ],
+        "refs": [
+          {
+            "network": 1614,
+            "oref": "82",
+            "rid": "1",
+            "nid": "1",
+            "source": "sources/decoded-original/0544-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0692-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1614-83",
+        "name": "Word_inputs.word1",
+        "role": "responses",
+        "addresses": [
+          "DB100.DBW0"
+        ],
+        "refs": [
+          {
+            "network": 1614,
+            "oref": "83",
+            "rid": "3",
+            "nid": "1",
+            "source": "sources/decoded-original/0544-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0690-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1616-157",
+        "name": "Outputimage QW0 read",
+        "role": "responses",
+        "addresses": [
+          "%IW0"
+        ],
+        "refs": [
+          {
+            "network": 1616,
+            "oref": "157",
+            "rid": "21",
+            "nid": "3",
+            "source": "sources/decoded-original/0546-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0692-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1616-158",
+        "name": "DB101 snapshot W0",
+        "role": "responses",
+        "addresses": [
+          "DB101.DBW0"
+        ],
+        "refs": [
+          {
+            "network": 1616,
+            "oref": "158",
+            "rid": "23",
+            "nid": "3",
+            "source": "sources/decoded-original/0546-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0690-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1236",
+        "name": "I/O FLT",
+        "role": "responses",
+        "addresses": [
+          "%M32.0"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1236",
+            "rid": "129",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1237",
+        "name": "OB Fault",
+        "role": "responses",
+        "addresses": [
+          "%M32.1"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1237",
+            "rid": "130",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1238",
+        "name": "Rack FAULT",
+        "role": "responses",
+        "addresses": [
+          "%M32.2"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1238",
+            "rid": "131",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1239",
+        "name": "Module Access FLT",
+        "role": "responses",
+        "addresses": [
+          "%M32.3"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1239",
+            "rid": "132",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1240",
+        "name": "Prog FAULT",
+        "role": "responses",
+        "addresses": [
+          "%M32.4"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1240",
+            "rid": "133",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1241",
+        "name": "Allarm.PLC_DIAGNOSTIC_FAULT",
+        "role": "responses",
+        "addresses": [
+          "DB3.DBX17.3"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1241",
+            "rid": "134",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0684-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1242",
+        "name": "Flag.RESET_ALLARM",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1242",
+            "rid": "24",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0684-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-PLC-IO",
+    "name": "SYS-PLC-IO 공통 시스템 근거 관찰",
+    "reference_plc_id": "SYS-PLC-IO",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "signals": [
+      {
+        "id": "1614-82",
+        "name": "Tag_171",
+        "role": "responses",
+        "addresses": [
+          "%IW6"
+        ],
+        "refs": [
+          {
+            "network": 1614,
+            "oref": "82",
+            "rid": "1",
+            "nid": "1",
+            "source": "sources/decoded-original/0544-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0692-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1614-83",
+        "name": "Word_inputs.word1",
+        "role": "responses",
+        "addresses": [
+          "DB100.DBW0"
+        ],
+        "refs": [
+          {
+            "network": 1614,
+            "oref": "83",
+            "rid": "3",
+            "nid": "1",
+            "source": "sources/decoded-original/0544-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0690-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1616-157",
+        "name": "Outputimage QW0 read",
+        "role": "responses",
+        "addresses": [
+          "%IW0"
+        ],
+        "refs": [
+          {
+            "network": 1616,
+            "oref": "157",
+            "rid": "21",
+            "nid": "3",
+            "source": "sources/decoded-original/0546-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0692-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1616-158",
+        "name": "DB101 snapshot W0",
+        "role": "responses",
+        "addresses": [
+          "DB101.DBW0"
+        ],
+        "refs": [
+          {
+            "network": 1616,
+            "oref": "158",
+            "rid": "23",
+            "nid": "3",
+            "source": "sources/decoded-original/0546-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0690-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1236",
+        "name": "I/O FLT",
+        "role": "responses",
+        "addresses": [
+          "%M32.0"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1236",
+            "rid": "129",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1237",
+        "name": "OB Fault",
+        "role": "responses",
+        "addresses": [
+          "%M32.1"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1237",
+            "rid": "130",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1238",
+        "name": "Rack FAULT",
+        "role": "responses",
+        "addresses": [
+          "%M32.2"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1238",
+            "rid": "131",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1239",
+        "name": "Module Access FLT",
+        "role": "responses",
+        "addresses": [
+          "%M32.3"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1239",
+            "rid": "132",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1240",
+        "name": "Prog FAULT",
+        "role": "responses",
+        "addresses": [
+          "%M32.4"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1240",
+            "rid": "133",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0686-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1241",
+        "name": "Allarm.PLC_DIAGNOSTIC_FAULT",
+        "role": "responses",
+        "addresses": [
+          "DB3.DBX17.3"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1241",
+            "rid": "134",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0684-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1994-1242",
+        "name": "Flag.RESET_ALLARM",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1994,
+            "oref": "1242",
+            "rid": "24",
+            "nid": "16",
+            "source": "sources/decoded-original/0542-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0684-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "HMI I/O값과실물상태다름",
+        "observe": "원시IW/QW/DB100101snapshot/가공DB13/currentcpu버전·시각",
+        "compare": "복사방향과현재호출/채널을먼저대조; Qimage표시를실제응답으로판정하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "PLC진단알람재발",
+        "observe": "M32.0..4/aggregateDB3X17.3/CPU진단버퍼원인/Reset시각",
+        "compare": "1994리셋은원인해제아님; 현재원인이벤트·모듈/통신상태확인",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-PLC-IO 원본 쓰기·주소·공통 기능과 관찰의 분리",
+      "sources": {
+        "draft": "37e482f722035b489fa93f2e30bc33fb4510d1cb5e862f0af6b1bc7d443e8caf"
+      },
+      "circuit_equipment": "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다.",
+      "circuit_distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG102 · PDF103 · CONFIGURATION PLC",
+          "path": "sources/Electrical_Rev2.pdf#page=103"
+        },
+        {
+          "label": "FG182 · PDF185 · CONFIGURATION PLC JB2 BOX",
+          "path": "sources/Electrical_Rev2.pdf#page=185"
+        }
+      ],
+      "construction_boundary": "전용 시공 연결·현행 준공은 미확정. 공통 소프트웨어를 별도 실물로 세지 않습니다.",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "SYS-PLC-IO 원초안",
+            "path": "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 독립 원본 대조",
+            "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "FG102 · PDF103 · CONFIGURATION PLC",
+            "path": "sources/Electrical_Rev2.pdf#page=103"
+          },
+          {
+            "label": "FG182 · PDF185 · CONFIGURATION PLC JB2 BOX",
+            "path": "sources/Electrical_Rev2.pdf#page=185"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "원시IW/QW/DB100101snapshot/가공DB13/currentcpu버전·시각"
+            },
+            {
+              "owner": "대조",
+              "work": "복사방향과현재호출/채널을먼저대조; Qimage표시를실제응답으로판정하지않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-PLC-IO 원초안",
+              "path": "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG102 · PDF103 · CONFIGURATION PLC",
+              "path": "sources/Electrical_Rev2.pdf#page=103"
+            },
+            {
+              "label": "FG182 · PDF185 · CONFIGURATION PLC JB2 BOX",
+              "path": "sources/Electrical_Rev2.pdf#page=185"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "M32.0..4/aggregateDB3X17.3/CPU진단버퍼원인/Reset시각"
+            },
+            {
+              "owner": "대조",
+              "work": "1994리셋은원인해제아님; 현재원인이벤트·모듈/통신상태확인"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-PLC-IO 원초안",
+              "path": "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG102 · PDF103 · CONFIGURATION PLC",
+              "path": "sources/Electrical_Rev2.pdf#page=103"
+            },
+            {
+              "label": "FG182 · PDF185 · CONFIGURATION PLC JB2 BOX",
+              "path": "sources/Electrical_Rev2.pdf#page=185"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-PLC-IO",
+    "plc_id": "SYS-PLC-IO",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-103",
+        "kind": "OEM 전기",
+        "title": "FG102 · PDF103 · CONFIGURATION PLC",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 103,
+        "fg": 102,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P103.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-185",
+        "kind": "OEM 전기",
+        "title": "FG182 · PDF185 · CONFIGURATION PLC JB2 BOX",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 185,
+        "fg": 182,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P185.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      }
+    ],
+    "circuit": {
+      "id": "SYS-PLC-IO",
+      "equipment": "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다.",
+      "distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "paths": [],
+      "pending": [
+        "현재 CPU·모듈 품번·펌웨어, I/O 할당·랙 존재, PROFINET 구성과 실제 채널 설정은 미확인입니다.",
+        "원본 도면의 모델 문자열과 소스 백업만으로 현재 하드웨어나 안전 인증을 확인하지 않습니다.",
+        "원본 고장 메모리의 이벤트 발생 조건, 현재 OB 구성, 진단 버퍼의 실제 원인과 재기동 조건은 미확인입니다.",
+        "원본 1070의 IW18→DB13DBW18 워드 전체 전달은 확인했습니다. 개별 Boolean 쓰기, 현재 최종 쓰기 위치와 실물 극성은 미확인입니다. 출력 이미지와 피드백은 계속 구분합니다.",
+        "물리 I/O 자동 시험이나 PLC 고장 주입 시험은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "Tag_171, Word_inputs.word1, Outputimage QW0 read, DB101 snapshot W0, I/O FLT"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "IW6→DB100 input snapshot",
+        "networks/network-1614.html#gme-sys-plc-io-wire-93"
+      ],
+      [
+        "QW0→DB101 output snapshot",
+        "networks/network-1616.html#gme-sys-plc-io-wire-168"
+      ],
+      [
+        "aggregateReset→6RCoils",
+        "networks/network-1994.html#gme-sys-plc-io-wire-1284"
+      ]
+    ],
+    "io": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "IW6→DB100 input snapshot",
+        "networks/network-1614.html#gme-sys-plc-io-wire-93"
+      ],
+      [
+        "QW0→DB101 output snapshot",
+        "networks/network-1616.html#gme-sys-plc-io-wire-168"
+      ],
+      [
+        "aggregateReset→6RCoils",
+        "networks/network-1994.html#gme-sys-plc-io-wire-1284"
+      ]
+    ],
+    "control": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "IW6→DB100 input snapshot",
+        "networks/network-1614.html#gme-sys-plc-io-wire-93"
+      ],
+      [
+        "QW0→DB101 output snapshot",
+        "networks/network-1616.html#gme-sys-plc-io-wire-168"
+      ],
+      [
+        "aggregateReset→6RCoils",
+        "networks/network-1994.html#gme-sys-plc-io-wire-1284"
+      ]
+    ],
+    "circuits": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG102 · PDF103 · CONFIGURATION PLC",
+        "sources/Electrical_Rev2.pdf#page=103"
+      ],
+      [
+        "FG182 · PDF185 · CONFIGURATION PLC JB2 BOX",
+        "sources/Electrical_Rev2.pdf#page=185"
+      ]
+    ],
+    "alarms": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "IW6→DB100 input snapshot",
+        "networks/network-1614.html#gme-sys-plc-io-wire-93"
+      ],
+      [
+        "QW0→DB101 output snapshot",
+        "networks/network-1616.html#gme-sys-plc-io-wire-168"
+      ],
+      [
+        "aggregateReset→6RCoils",
+        "networks/network-1994.html#gme-sys-plc-io-wire-1284"
+      ]
+    ],
+    "repair": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "IW6→DB100 input snapshot",
+        "networks/network-1614.html#gme-sys-plc-io-wire-93"
+      ],
+      [
+        "QW0→DB101 output snapshot",
+        "networks/network-1616.html#gme-sys-plc-io-wire-168"
+      ],
+      [
+        "aggregateReset→6RCoils",
+        "networks/network-1994.html#gme-sys-plc-io-wire-1284"
+      ]
+    ],
+    "completion": [
+      [
+        "SYS-PLC-IO 원초안",
+        "catalog-sources/SYS-PLC-IO-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "IW6→DB100 input snapshot",
+        "networks/network-1614.html#gme-sys-plc-io-wire-93"
+      ],
+      [
+        "QW0→DB101 output snapshot",
+        "networks/network-1616.html#gme-sys-plc-io-wire-168"
+      ],
+      [
+        "aggregateReset→6RCoils",
+        "networks/network-1994.html#gme-sys-plc-io-wire-1284"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "type": "reviewed",
+        "id": "current-native-review",
+        "title": "현재 원본 독립 대조와 소유 경계",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "공통 원시 I/O 스냅샷·진단 소프트웨어와 실제 랙 구성은 구분합니다. Word_outputs 블록은 출력 이미지의 스냅샷을 저장합니다. 블록 이름만으로 물리 출력을 쓰는 주체라고 판단하지 않습니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "현재 2차 대상은 실제 대장129개입니다. 원초안의 v1.12.0·133개·과거 게시 상태는 당시 조사 이력입니다."
+            },
+            {
+              "type": "list",
+              "items": [
+                "main의 입력 워드 스냅샷은 명시된 ENO→en 직렬 연결을 거쳐 원시 워드를 Word_inputs DB100으로 복사합니다. 1614 Move69.in W92/ORef82 Tag171(SSD AO48/SAD Input→%IW6), out1 W93/ORef83 Word_inputs.word1(부모 0689 TOD100; 0690 BO0→DB100.DBW0), eno W94→Move73.en입니다. Tag172 %IW28→word2 DBW2 W95/96, eno W97→Move76, Tag173 %IW32→word3 DBW4 W98/99, eno W100→Move79 Tag174 %IW36→word4 DBW6 W101/102입니다. 입력 스냅샷은 현재 센서·상태가 정확하다는 근거가 아닙니다. 현재 출력·인터럽트의 읽기 시점과 외부 쓰기는 미확인입니다.",
+                "main의 출력 워드 스냅샷은 Tag178/179/180/181의 OUTPUT 이미지 워드를 읽어 DB101 Word_outputs에 씁니다. 이 분기는 물리 Q를 쓰지 않습니다. 1616 Move144.in W167/ORef157 Tag178 %QW0, out1 W168/ORef158 Word_outputs.WORD1 DB101.DBW0, eno W169→Move148입니다. Tag179 %QW4→DB101W2 W170/171, eno W172→Move151, Tag180 %QW6→DB101W4 W173/174, eno W175→Move154, Tag181 %QW8→DB101W6 W176/177입니다. 0692 SAD Output의 AO0/32/48/64, 0689 Word_outputs TOD101, 0690 멤버 BO0/16/32/48을 대조했습니다. 출력 영역 스냅샷 읽기는 실제 피드백, 현장 릴레이 동작이나 PLC의 쓰기 소유를 증명하지 않습니다.",
+                "ON으로 허가된 진단 메모리 플래그 5개의 OR은 통합 PLC_DIAGNOSTIC_FAULT를 Set합니다. RESET_ALLARM AND 통합 알람 조건은 통합 알람과 메모리 플래그 5개를 Reset합니다. 1994 Part1269 ON→W1270, Contact1271 I/OFLT/1273 OBFault/1275 RackFAULT/1277 ModuleAccessFLT/1279 ProgFAULT→O1211→W1256 SCoil1217 W1258/ORef1241 Allarm.PLC_DIAGNOSTIC_FAULT입니다. 공유 Reset Contact1281(ORef1242/W1259)→Contact1283(알람 ORef1243/W1260)→W1284 RCoil1223 통합 알람/RCoil1225 I/O/RCoil1227 OB/RCoil1229 Rack/RCoil1231 Module/RCoil1233 Prog입니다. 0686 메모리 AO256..260→M32.0..4, 0684 통합 알람 BO139 + 0682 TOD3→DB3.DBX17.3입니다. 진단 메모리 해제는 실물·이벤트 원인 해소나 PLC 정상 상태를 증명하지 않습니다. 현재 이벤트 재개·새 이벤트와 고장 원인은 실제 진단 자료에서 확인해야 합니다.",
+                "원본 고장·이벤트 블록은 ON 조건 뒤에서 명명된 진단 메모리를 Set합니다. 정확한 이벤트 발생 종류는 원본 메타데이터의 사실이며 현재 실행 일정의 증거는 아닙니다. 434/439/444/765의 원본 0000/1/2/3은 각각 Part33 ON→W34 SCoil28을 통해 I/OFLT/ModuleAccessFLT/ProgFAULT/RackFAULT를 Set합니다. 449의 원본 0004는 같은 허가 구조에서 Tag191을 Set하며, SID M32.1은 OBFault와 같은 백업 주소 범위입니다. 원본 속성·현재 TIA 확인 없이 이벤트 블록 이름을 현재 진단 OB ID나 이벤트 종류로 대신 쓰지 않습니다. Tag191과 OBFault는 이름이 다르고 주소가 같은 별칭으로 구분합니다.",
+                "원본 hmi inputs에는 절대 주소 IW18→DB13DBW18의 워드 전체 복사가 있습니다. 목적지 AOS 이름이 비어 있어 검색 선언 색인에서는 빠져 있습니다. 1070 Move78 DisableENO=true, W21 en, W88 in(ORef81 RID25), W90 out1(ORef82 RID26), W89 eno→Move79.en입니다. 입력 0627 Word/SAD Input AO144, 목적지 0629 GlobalAccess Word/SSD.AO144/BAD BIRID4, 부모 0628 TOD13/C NID1 UID82를 대조했습니다. 원본 주소와 워드 전체 전달은 확인했습니다. 현재 byte·bit 값의 실제 상태, 주변 I/O 전달과 마지막 쓰기 위치는 미확인입니다."
+              ]
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,906 @@
+{
+  "catalog_id": "LS24",
+  "selection_key": "LS24",
+  "priority_key": null,
+  "type": "part",
+  "draft": "catalog-sources/LS24-CODEX-REVIEW.md",
+  "draft_sha256": "c8e1d859b51766731c882b1d1271a32c29e55b7739e2ebf3e881f6ac75da6f4f",
+  "draft_provenance": "Codex 현재 원본 대조 기준 93fa00c447229202bbffc4096c2fe004f12a83ae / v1.22.0. Dots와 자료/상충을 상담하고 기존 원문을 별도 보존했습니다. 해시 대조와 현재 CPU·실물 검증은 별개입니다.",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      11,
+      "part",
+      "475"
+    ],
+    [
+      11,
+      "wire",
+      "425"
+    ],
+    [
+      1702,
+      "part",
+      "236"
+    ],
+    [
+      1702,
+      "part",
+      "270"
+    ],
+    [
+      1702,
+      "wire",
+      "192"
+    ],
+    [
+      1702,
+      "wire",
+      "221"
+    ],
+    [
+      1703,
+      "part",
+      "22"
+    ],
+    [
+      1703,
+      "wire",
+      "37"
+    ],
+    [
+      1762,
+      "part",
+      "1115"
+    ],
+    [
+      1762,
+      "wire",
+      "1088"
+    ]
+  ],
+  "internal_names": [
+    "mv01_close",
+    "LS24 현재 자료 판본·실물 동일성·관찰 시각",
+    "MV01 관련 경보 원문·원래 소유·발생/해제 시각"
+  ],
+  "source_pairs": [
+    {
+      "signal": "mv01_close",
+      "network": 1762,
+      "kind": "wire",
+      "uid": "1088",
+      "label": "원본 1762 · mv01_close · Contact.operand",
+      "boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P029.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P057.png",
+    "assets/catalog-circuits/Electrical_Rev2-P045.png",
+    "assets/catalog-circuits/Electrical_Rev2-P046.png",
+    "assets/catalog-circuits/PID_1684n002I-P001.png",
+    "catalog-sources/DOTS-ASSET-62-HANDOFF-20261012.json",
+    "catalog-sources/LS24-DOTS-DRAFT.md",
+    "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json",
+    "sources/decoded-original/0342-FlgNet.xml",
+    "sources/decoded-original/0354-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0512-FlgNet.xml",
+    "sources/decoded-original/0617-IdentXmlPart.xml",
+    "sources/decoded-original/0619-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "LS24",
+    "signals": [
+      {
+        "name": "mv01_close",
+        "addresses": [
+          "%i8.2"
+        ],
+        "refs": [
+          {
+            "network": 1762,
+            "oref": "1065",
+            "source": "sources/decoded-original/0512-FlgNet.xml",
+            "part": "1115",
+            "wire": "1088"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "LS24 현재 자료 판본·실물 동일성·관찰 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      },
+      {
+        "name": "MV01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "LS24",
+    "timers": [],
+    "alarms": [],
+    "boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다."
+  },
+  "control_reference": {
+    "native": [
+      11,
+      1702,
+      1703,
+      1762
+    ],
+    "chain": [
+      "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.\n\nMV01의 구동 명령과 LS24의 실제 끝위치를 구분하여 읽습니다. 원시 접점·처리 비트·열림/닫힘 기억은 같은 실물 신호로 합치지 않습니다.\n\n- 원시 이름의 핀 참조를 확인한 네트워크: 1762. 읽기·쓰기·호출은 원본 Part/Wire/ORef 표로 구분합니다.\n- 관련 처리·부모 신호: Inputs.MV01 Close. 관련 신호를 새로운 구성품 전용 제어로 복제하지 않습니다.\n\n| 고유/관련 원문 이름 | 원본 네트워크 | 명령 UID·Gate·Pin | Wire·ORef | 소유 경계 |\n| --- | --- | --- | --- | --- |\n| MV01_Close | 1762 | 1115 Contact.operand | 1088 / 1065 | LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. |\n| Inputs.MV01 Close | 1702 | 236 Contact.operand | 192 / 163 | LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. |\n| Inputs.MV01 Close | 1702 | 270 Contact.operand | 221 / 182 | LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. |\n| Inputs.MV01 Close | 1703 | 22 Contact.operand | 37 / 28 | LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. |\n| Inputs.MV01 Close | 11 | 475 Contact.operand | 425 / 396 | LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. |"
+    ],
+    "repair": [
+      "OEM FG44/PDF45, FG45/PDF46와 현재 명판·태그·배선 끝점을 비교합니다.",
+      "원시 핀 네트워크 1762 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+      "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다."
+    ],
+    "pending": [
+      "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "LS24",
+    "boundary": "complete_with_gaps; source-linked documentation only",
+    "existing_notes": [
+      "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "LS24의 문서·정적 검토 결과와 다음에 필요한 증거를 구분하여 인계합니다.\n\n- LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.\n- 이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.\n- 시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    },
+    {
+      "type": "paragraph",
+      "text": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "LS24",
+    "plc_id": "LS24",
+    "boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "LS24 식별·연결 관찰",
+        "observe": "LS24 접점·X1:114/115와 원시 PLC 입력 E8.2의 대응",
+        "compare": "OEM FG44/PDF45, FG45/PDF46와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "LS24 상태·반응 분리",
+        "observe": "실제 기계 끝위치와 전기 접점·처리 비트·기억 비트의 별도 상태",
+        "compare": "원시 핀 네트워크 1762 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "LS24 미확정 범위 인계",
+        "observe": "MV01 명령·출력·끝위치 접점의 시각차; 고장·Reset 로직은 부모 소유로 유지",
+        "compare": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "mv01_close",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i8.2"
+        ],
+        "refs": [
+          {
+            "network": 1762,
+            "oref": "1065",
+            "source": "sources/decoded-original/0512-FlgNet.xml",
+            "part": "1115",
+            "wire": "1088"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "LS24 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      },
+      {
+        "id": "parent-event",
+        "name": "MV01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "부모 경보의 관찰 기록이며 LS24 전용 알람으로 재분류하지 않습니다.",
+        "source_class": "parent_observation"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "LS24",
+    "name": "LS24 밸브 위치 리미트 스위치 근거 관찰",
+    "reference_plc_id": "LS24",
+    "boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "mv01_close",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i8.2"
+        ],
+        "refs": [
+          {
+            "network": 1762,
+            "oref": "1065",
+            "source": "sources/decoded-original/0512-FlgNet.xml",
+            "part": "1115",
+            "wire": "1088"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "LS24 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      },
+      {
+        "id": "parent-event",
+        "name": "MV01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "부모 경보의 관찰 기록이며 LS24 전용 알람으로 재분류하지 않습니다.",
+        "source_class": "parent_observation"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "LS24 식별·연결 관찰",
+        "observe": "LS24 접점·X1:114/115와 원시 PLC 입력 E8.2의 대응",
+        "compare": "OEM FG44/PDF45, FG45/PDF46와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "LS24 상태·반응 분리",
+        "observe": "실제 기계 끝위치와 전기 접점·처리 비트·기억 비트의 별도 상태",
+        "compare": "원시 핀 네트워크 1762 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "LS24 미확정 범위 인계",
+        "observe": "MV01 명령·출력·끝위치 접점의 시각차; 고장·Reset 로직은 부모 소유로 유지",
+        "compare": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "LS24 고유 근거·관련 부모/외부 장치 소유 대조",
+      "sources": {
+        "draft": "c8e1d859b51766731c882b1d1271a32c29e55b7739e2ebf3e881f6ac75da6f4f"
+      },
+      "circuit_equipment": "LS24",
+      "circuit_distinction": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "circuit_pages": [
+        {
+          "label": "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+          "path": "sources/Electrical_Rev2.pdf#page=45"
+        },
+        {
+          "label": "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+          "path": "sources/Electrical_Rev2.pdf#page=46"
+        },
+        {
+          "label": "P&ID · PDF1 · LS-24",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "FOR APPROVAL / first draft design와 현행 준공·단자·실물 동일성 별도",
+      "construction_pages": [
+        {
+          "label": "시공 원본 PDF29",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+        },
+        {
+          "label": "시공 원본 PDF57",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "현재 검토 원문",
+            "path": "catalog-sources/LS24-CODEX-REVIEW.md"
+          },
+          {
+            "label": "Dots 보존 원초안",
+            "path": "catalog-sources/LS24-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 원본 독립 조사",
+            "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "MV01 관련 명세",
+            "path": "control-specs/MV01.html"
+          },
+          {
+            "label": "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+            "path": "sources/Electrical_Rev2.pdf#page=45"
+          },
+          {
+            "label": "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+            "path": "sources/Electrical_Rev2.pdf#page=46"
+          },
+          {
+            "label": "시공 원본 PDF29",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+          },
+          {
+            "label": "시공 원본 PDF57",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+          },
+          {
+            "label": "P&ID · PDF1 · LS-24",
+            "path": "sources/PID_1684n002I.pdf#page=1"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "LS24 접점·X1:114/115와 원시 PLC 입력 E8.2의 대응"
+            },
+            {
+              "owner": "대조",
+              "work": "OEM FG44/PDF45, FG45/PDF46와 현재 명판·태그·배선 끝점을 비교합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LS24-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LS24-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "MV01 관련 명세",
+              "path": "control-specs/MV01.html"
+            },
+            {
+              "label": "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=45"
+            },
+            {
+              "label": "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=46"
+            },
+            {
+              "label": "시공 원본 PDF29",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+            },
+            {
+              "label": "시공 원본 PDF57",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+            },
+            {
+              "label": "P&ID · PDF1 · LS-24",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "실제 기계 끝위치와 전기 접점·처리 비트·기억 비트의 별도 상태"
+            },
+            {
+              "owner": "대조",
+              "work": "원시 핀 네트워크 1762 및 부모 처리·명령·알람을 같은 시각에 구분합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LS24-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LS24-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "MV01 관련 명세",
+              "path": "control-specs/MV01.html"
+            },
+            {
+              "label": "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=45"
+            },
+            {
+              "label": "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=46"
+            },
+            {
+              "label": "시공 원본 PDF29",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+            },
+            {
+              "label": "시공 원본 PDF57",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+            },
+            {
+              "label": "P&ID · PDF1 · LS-24",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "MV01 명령·출력·끝위치 접점의 시각차; 고장·Reset 로직은 부모 소유로 유지"
+            },
+            {
+              "owner": "대조",
+              "work": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LS24-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LS24-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "MV01 관련 명세",
+              "path": "control-specs/MV01.html"
+            },
+            {
+              "label": "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=45"
+            },
+            {
+              "label": "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=46"
+            },
+            {
+              "label": "시공 원본 PDF29",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+            },
+            {
+              "label": "시공 원본 PDF57",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+            },
+            {
+              "label": "P&ID · PDF1 · LS-24",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "LS24",
+    "plc_id": "LS24",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-45",
+        "kind": "OEM 전기",
+        "title": "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 45,
+        "fg": 44,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P045.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      },
+      {
+        "id": "oem-46",
+        "kind": "OEM 전기",
+        "title": "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 46,
+        "fg": 45,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P046.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      },
+      {
+        "id": "construction-29",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF29",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 29,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P029.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "construction-57",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF57",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 57,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P057.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1 · LS-24",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "2013 보존 공정 도식; 현행 실물 미확정",
+        "revision": "I 15/01/2013; 최초06/04/2011"
+      }
+    ],
+    "circuit": {
+      "id": "LS24",
+      "equipment": "LS24 고유·관련 도면 소유 구분",
+      "distinction": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "paths": [
+        {
+          "signal": "mv01_close",
+          "backup": "%i8.2",
+          "drawing": "E8.2",
+          "fg": 45,
+          "sheet_id": "oem-46",
+          "nodes": [
+            "Electrical_Rev2 FG45 / PDF46 원문 E8.2",
+            "백업 원문 신호 mv01_close / %i8.2"
+          ],
+          "destination": "원문 도면과 백업 선언을 대조하는 경로; 현재 배선·전달·실제 응답은 별도",
+          "check": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+          "native_symbol_references": [
+            {
+              "network": 1762,
+              "uid": "1065"
+            }
+          ]
+        }
+      ],
+      "pending": [
+        "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "LS24는 MV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "LS24, MV01, mv01_close, LS24 현재 자료 판본·실물 동일성·관찰 시각, MV01 관련 경보 원문·원래 소유·발생/해제 시각"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=45"
+      ],
+      [
+        "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=46"
+      ],
+      [
+        "시공 원본 PDF29",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+      ],
+      [
+        "시공 원본 PDF57",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+      ],
+      [
+        "P&ID · PDF1 · LS-24",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "io": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "원본 1762 · mv01_close · Contact.operand",
+        "networks/network-1762.html#gme-ls24-wire-1088"
+      ]
+    ],
+    "control": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "원본 1762 · mv01_close · Contact.operand",
+        "networks/network-1762.html#gme-ls24-wire-1088"
+      ]
+    ],
+    "circuits": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=45"
+      ],
+      [
+        "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=46"
+      ],
+      [
+        "시공 원본 PDF29",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+      ],
+      [
+        "시공 원본 PDF57",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+      ],
+      [
+        "P&ID · PDF1 · LS-24",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "alarms": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "원본 1762 · mv01_close · Contact.operand",
+        "networks/network-1762.html#gme-ls24-wire-1088"
+      ]
+    ],
+    "repair": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=45"
+      ],
+      [
+        "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=46"
+      ],
+      [
+        "시공 원본 PDF29",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+      ],
+      [
+        "시공 원본 PDF57",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+      ],
+      [
+        "P&ID · PDF1 · LS-24",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "completion": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS24-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS24-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "MV01 관련 명세",
+        "control-specs/MV01.html"
+      ],
+      [
+        "FG44 · PDF45 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=45"
+      ],
+      [
+        "FG45 · PDF46 · MOTORIZED VALVE MV-01",
+        "sources/Electrical_Rev2.pdf#page=46"
+      ],
+      [
+        "시공 원본 PDF29",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=29"
+      ],
+      [
+        "시공 원본 PDF57",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=57"
+      ],
+      [
+        "P&ID · PDF1 · LS-24",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ]
+  }
+}

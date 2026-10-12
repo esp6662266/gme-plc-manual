@@ -1,0 +1,1343 @@
+{
+  "catalog_id": "SYS-LEGACY",
+  "selection_key": "SYS-LEGACY",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md",
+  "draft_sha256": "6c8e7da4d0af797ebc2a716bf4398d1ee089f999d7a59826a5077cafe5cd9719",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1684,
+      "part",
+      "455"
+    ],
+    [
+      1684,
+      "part",
+      "406"
+    ],
+    [
+      1684,
+      "part",
+      "409"
+    ],
+    [
+      1684,
+      "part",
+      "414"
+    ],
+    [
+      1684,
+      "part",
+      "417"
+    ],
+    [
+      1684,
+      "part",
+      "422"
+    ],
+    [
+      1684,
+      "wire",
+      "438"
+    ],
+    [
+      1684,
+      "wire",
+      "456"
+    ],
+    [
+      1684,
+      "wire",
+      "439"
+    ],
+    [
+      1684,
+      "wire",
+      "440"
+    ],
+    [
+      1684,
+      "wire",
+      "441"
+    ],
+    [
+      1684,
+      "wire",
+      "443"
+    ],
+    [
+      1684,
+      "wire",
+      "444"
+    ],
+    [
+      1684,
+      "wire",
+      "445"
+    ],
+    [
+      1684,
+      "wire",
+      "446"
+    ],
+    [
+      1684,
+      "wire",
+      "447"
+    ],
+    [
+      1684,
+      "wire",
+      "449"
+    ],
+    [
+      1684,
+      "wire",
+      "450"
+    ],
+    [
+      1684,
+      "wire",
+      "451"
+    ],
+    [
+      1684,
+      "wire",
+      "452"
+    ],
+    [
+      1684,
+      "wire",
+      "453"
+    ],
+    [
+      1685,
+      "part",
+      "506"
+    ],
+    [
+      1685,
+      "part",
+      "457"
+    ],
+    [
+      1685,
+      "part",
+      "460"
+    ],
+    [
+      1685,
+      "part",
+      "465"
+    ],
+    [
+      1685,
+      "part",
+      "468"
+    ],
+    [
+      1685,
+      "part",
+      "473"
+    ],
+    [
+      1685,
+      "wire",
+      "489"
+    ],
+    [
+      1685,
+      "wire",
+      "507"
+    ],
+    [
+      1685,
+      "wire",
+      "490"
+    ],
+    [
+      1685,
+      "wire",
+      "491"
+    ],
+    [
+      1685,
+      "wire",
+      "492"
+    ],
+    [
+      1685,
+      "wire",
+      "494"
+    ],
+    [
+      1685,
+      "wire",
+      "495"
+    ],
+    [
+      1685,
+      "wire",
+      "496"
+    ],
+    [
+      1685,
+      "wire",
+      "497"
+    ],
+    [
+      1685,
+      "wire",
+      "498"
+    ],
+    [
+      1685,
+      "wire",
+      "500"
+    ],
+    [
+      1685,
+      "wire",
+      "501"
+    ],
+    [
+      1685,
+      "wire",
+      "502"
+    ],
+    [
+      1685,
+      "wire",
+      "503"
+    ],
+    [
+      1685,
+      "wire",
+      "504"
+    ],
+    [
+      1864,
+      "part",
+      "577"
+    ],
+    [
+      1864,
+      "part",
+      "517"
+    ],
+    [
+      1864,
+      "part",
+      "523"
+    ],
+    [
+      1864,
+      "part",
+      "579"
+    ],
+    [
+      1864,
+      "part",
+      "533"
+    ],
+    [
+      1864,
+      "part",
+      "536"
+    ],
+    [
+      1864,
+      "part",
+      "539"
+    ],
+    [
+      1864,
+      "part",
+      "542"
+    ],
+    [
+      1864,
+      "wire",
+      "557"
+    ],
+    [
+      1864,
+      "wire",
+      "578"
+    ],
+    [
+      1864,
+      "wire",
+      "558"
+    ],
+    [
+      1864,
+      "wire",
+      "559"
+    ],
+    [
+      1864,
+      "wire",
+      "560"
+    ],
+    [
+      1864,
+      "wire",
+      "561"
+    ],
+    [
+      1864,
+      "wire",
+      "562"
+    ],
+    [
+      1864,
+      "wire",
+      "563"
+    ],
+    [
+      1864,
+      "wire",
+      "564"
+    ],
+    [
+      1864,
+      "wire",
+      "580"
+    ],
+    [
+      1864,
+      "wire",
+      "565"
+    ],
+    [
+      1864,
+      "wire",
+      "566"
+    ],
+    [
+      1864,
+      "wire",
+      "567"
+    ],
+    [
+      1864,
+      "wire",
+      "569"
+    ],
+    [
+      1864,
+      "wire",
+      "570"
+    ],
+    [
+      1864,
+      "wire",
+      "571"
+    ],
+    [
+      1864,
+      "wire",
+      "572"
+    ],
+    [
+      1864,
+      "wire",
+      "574"
+    ]
+  ],
+  "internal_names": [
+    "Data.SET_PERC_FR01",
+    "RD01_SP_SPEED",
+    "Data.SET_PERC_VT01",
+    "FN01_SP_SPEED",
+    "OFF call gate",
+    "Manage_TC1_2.PID_Ref_Temp",
+    "Riduce MN01"
+  ],
+  "source_pairs": [
+    {
+      "signal": "FR01名설정→RD01출력",
+      "network": 1684,
+      "kind": "wire",
+      "uid": "453",
+      "label": "FR01名설정→RD01출력",
+      "boundary": "프로그램멤버대응이며실물명칭/현장동일성아님"
+    },
+    {
+      "signal": "VT01名설정→FN01출력",
+      "network": 1685,
+      "kind": "wire",
+      "uid": "504",
+      "label": "VT01名설정→FN01출력",
+      "boundary": "서로다른Global멤버및장치소유보존"
+    },
+    {
+      "signal": "RiduceMN01 memory Set",
+      "network": 1864,
+      "kind": "wire",
+      "uid": "569",
+      "label": "RiduceMN01 memory Set",
+      "boundary": "현재구동소유/시행효과미확정;과거이름만으로설비병합불가"
+    }
+  ],
+  "extra_sources": [
+    "catalog-sources/DOTS-REMAINING-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json",
+    "sources/Electrical_Rev2.pdf",
+    "sources/block_summary.json",
+    "sources/decoded-original/0000-FlgNet.xml",
+    "sources/decoded-original/0001-FlgNet.xml",
+    "sources/decoded-original/0002-FlgNet.xml",
+    "sources/decoded-original/0003-FlgNet.xml",
+    "sources/decoded-original/0004-FlgNet.xml",
+    "sources/decoded-original/0019-FlgNet.xml",
+    "sources/decoded-original/0030-FlgNet.xml",
+    "sources/decoded-original/0033-FlgNet.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0151-FlgNet.xml",
+    "sources/decoded-original/0152-FlgNet.xml",
+    "sources/decoded-original/0153-FlgNet.xml",
+    "sources/decoded-original/0154-FlgNet.xml",
+    "sources/decoded-original/0155-FlgNet.xml",
+    "sources/decoded-original/0156-FlgNet.xml",
+    "sources/decoded-original/0157-FlgNet.xml",
+    "sources/decoded-original/0158-FlgNet.xml",
+    "sources/decoded-original/0168-FlgNet.xml",
+    "sources/decoded-original/0180-FlgNet.xml",
+    "sources/decoded-original/0195-FlgNet.xml",
+    "sources/decoded-original/0255-FlgNet.xml",
+    "sources/decoded-original/0308-FlgNet.xml",
+    "sources/decoded-original/0335-FlgNet.xml",
+    "sources/decoded-original/0341-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0457-FlgNet.xml",
+    "sources/decoded-original/0458-FlgNet.xml",
+    "sources/decoded-original/0465-FlgNet.xml",
+    "sources/decoded-original/0466-FlgNet.xml",
+    "sources/decoded-original/0476-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0480-FlgNet.xml",
+    "sources/decoded-original/0524-FlgNet.xml",
+    "sources/decoded-original/0542-FlgNet.xml",
+    "sources/decoded-original/0544-FlgNet.xml",
+    "sources/decoded-original/0546-FlgNet.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/identifier-declarations.json",
+    "sources/decoded-original/network-map.json",
+    "sources/electrical-page-text.json",
+    "sources/hmi-windows.csv",
+    "sources/hmi_plc_tags.csv",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "SYS-LEGACY",
+    "signals": [
+      {
+        "name": "Data.SET_PERC_FR01",
+        "addresses": [
+          "DB1.DBW6"
+        ],
+        "refs": [
+          {
+            "network": 1684,
+            "oref": "427",
+            "rid": "43",
+            "nid": "6",
+            "source": "sources/decoded-original/0465-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0662-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "RD01_SP_SPEED",
+        "addresses": [
+          "%QW290"
+        ],
+        "refs": [
+          {
+            "network": 1684,
+            "oref": "437",
+            "rid": "48",
+            "nid": "6",
+            "source": "sources/decoded-original/0465-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0664-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Data.SET_PERC_VT01",
+        "addresses": [
+          "DB1.DBW8"
+        ],
+        "refs": [
+          {
+            "network": 1685,
+            "oref": "478",
+            "rid": "49",
+            "nid": "7",
+            "source": "sources/decoded-original/0466-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0662-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "FN01_SP_SPEED",
+        "addresses": [
+          "%QW292"
+        ],
+        "refs": [
+          {
+            "network": 1685,
+            "oref": "488",
+            "rid": "53",
+            "nid": "7",
+            "source": "sources/decoded-original/0466-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0664-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "OFF call gate",
+        "addresses": [
+          "%M0.1"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "543",
+            "rid": "80",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0582-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Manage_TC1_2.PID_Ref_Temp",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "551",
+            "rid": "242",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0585-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Riduce MN01",
+        "addresses": [
+          "%M1.2"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "553",
+            "rid": "87",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0582-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-LEGACY",
+    "timers": [],
+    "alarms": [],
+    "boundary": "고유 장치 알람의 복제 없이 아래 검토 영역에 공통 Set/Reset·시간·쓰기 근거를 명시합니다."
+  },
+  "control_reference": {
+    "native": [
+      1684,
+      1685,
+      1864
+    ],
+    "chain": [
+      "원본 출력 변환은 과거 이름 Data.SET_PERC_FR01에 272를 곱하여 RD01_SP_SPEED에 전달합니다. 같은 멤버를 5/100으로 제한하는 쓰기 분기가 있습니다. 1684 Part455 ON→W456은 Lt406/Gt414/Mul422를 허가합니다. Lt406 Data ORef427 W439 <상수 5 ORef428 W440→W441 Move409 value 5 ORef429 W443→Data ORef430 W444입니다. Gt414 Data ORef431 W445 >100 ORef432 W446→Move417 value 100 ORef433 W449→Data ORef434 W450입니다. Mul422 in1 Data ORef435 W451, in2 상수 272 ORef436 W452, out ORef437/RD01_SP_SPEED W453입니다. 0662 멤버 RID43, 0661 상수, 0664 출력 RID48을 대조했습니다.",
+      "원본 Data.SET_PERC_VT01도 FN01_SP_SPEED를 구동하지만, 별도 멤버와 네트워크에 속합니다. 1685 Part506 ON/W507→Lt457/Gt465/Mul473입니다. Lt457 W490/Data ORef478 <5 W491/ORef479→Move460 W494의 5/out W495 Data ORef481입니다. Gt465 W496 Data ORef482 >100 W497/ORef483→Move468 W500의 100/out W501 Data ORef485입니다. Mul473 W502 Data ORef486, W503의 272 ORef487→W504 FN01_SP_SPEED ORef488입니다.",
+      "Riduce MN01은 OFF와 ON으로 허가된 원본의 히스테리시스 형태 분기에서 Set/Reset하는 메모리 비트입니다. 허용된 원본 대장에서 이 비트를 사용하는 구동부는 확인하지 못했습니다. 1864 Part577 OFF(반전 없음) W557/ORef543→W578에서 Add517 Data.TC01_SETPOINT+30→Local App02(W558/559/560), Add523 같은 설정값+25→Local App03(W561/562/563), 다음 Part579 ON W564/ORef550→W580입니다. Ge533 Manage_TC1_2.PID_Ref_Temp≥App02 W565/566→W567 SCoil536/ORef553 RiduceMN01 W569입니다. Lt539 같은 PV<App03 W570/571→W572 RCoil542/ORef556 W574입니다. 0582 RiduceMN01 SSD.AO10/SAD.Memory→%M1.2, 0583 App02/App03의 Local 범위, 0585 PV Real32, 0586 상수 30/25를 대조했습니다."
+    ],
+    "repair": [
+      "1684FR01→RD01,1685VT01→FN01각가지의실제출력대조; 그외동일성현장원본필요",
+      "Set≥+30와Reset<+25의원본상수·CurrentWriter대조;효과소유와현재정상온도임의확정금지"
+    ],
+    "pending": [
+      "원본 flag452/coeff1604/data1629의 인터페이스 주석에는 TR01/MN02/MN03/MN04/PC03 등이 있습니다. 평탄화된 주석의 같은 순번만으로 같은 실물 장치라고 대응시키지 않습니다.",
+      "허용된 원본 색인에서 RiduceMN01 이름은 네트워크 한 곳에 있습니다. 구동부의 사용 위치, 현재 CPU와 MN01 실물 동일성 자료는 확보하지 못했습니다.",
+      "과거 이름에 대한 현재 표시·주소·이벤트 대응, 채널·끝점과 승인된 운전 명칭은 미확인입니다.",
+      "OFF 또는 ON의 현재 값과 공유 설정값의 쓰기 순서는 미확인입니다.",
+      "정상 한계값이나 새로운 설비 ID를 임의로 만들지 않습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-LEGACY",
+    "boundary": "complete_with_gaps; document and read-only observations",
+    "existing_notes": [
+      "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "원본 flag452/coeff1604/data1629의 인터페이스 주석에는 TR01/MN02/MN03/MN04/PC03 등이 있습니다. 평탄화된 주석의 같은 순번만으로 같은 실물 장치라고 대응시키지 않습니다.",
+      "허용된 원본 색인에서 RiduceMN01 이름은 네트워크 한 곳에 있습니다. 구동부의 사용 위치, 현재 CPU와 MN01 실물 동일성 자료는 확보하지 못했습니다.",
+      "과거 이름에 대한 현재 표시·주소·이벤트 대응, 채널·끝점과 승인된 운전 명칭은 미확인입니다.",
+      "OFF 또는 ON의 현재 값과 공유 설정값의 쓰기 순서는 미확인입니다.",
+      "정상 한계값이나 새로운 설비 ID를 임의로 만들지 않습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "원본 flag452/coeff1604/data1629의 인터페이스 주석에는 TR01/MN02/MN03/MN04/PC03 등이 있습니다. 평탄화된 주석의 같은 순번만으로 같은 실물 장치라고 대응시키지 않습니다.",
+        "허용된 원본 색인에서 RiduceMN01 이름은 네트워크 한 곳에 있습니다. 구동부의 사용 위치, 현재 CPU와 MN01 실물 동일성 자료는 확보하지 못했습니다.",
+        "과거 이름에 대한 현재 표시·주소·이벤트 대응, 채널·끝점과 승인된 운전 명칭은 미확인입니다.",
+        "OFF 또는 ON의 현재 값과 공유 설정값의 쓰기 순서는 미확인입니다.",
+        "정상 한계값이나 새로운 설비 ID를 임의로 만들지 않습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-LEGACY",
+    "plc_id": "SYS-LEGACY",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "옛태그로기록된값과현재설비값불일치",
+        "observe": "정확한Global멤버/주소/원본장치표현/현재CPU버전",
+        "compare": "1684FR01→RD01,1685VT01→FN01각가지의실제출력대조; 그외동일성현장원본필요",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "MN01감속비트가남음",
+        "observe": "OFF/ONgate/LocalApp02App03/PIDRef/RiduceMN01시각값",
+        "compare": "Set≥+30와Reset<+25의원본상수·CurrentWriter대조;효과소유와현재정상온도임의확정금지",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "1684-427",
+        "name": "Data.SET_PERC_FR01",
+        "role": "requests",
+        "addresses": [
+          "DB1.DBW6"
+        ],
+        "refs": [
+          {
+            "network": 1684,
+            "oref": "427",
+            "rid": "43",
+            "nid": "6",
+            "source": "sources/decoded-original/0465-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0662-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1684-437",
+        "name": "RD01_SP_SPEED",
+        "role": "outputs",
+        "addresses": [
+          "%QW290"
+        ],
+        "refs": [
+          {
+            "network": 1684,
+            "oref": "437",
+            "rid": "48",
+            "nid": "6",
+            "source": "sources/decoded-original/0465-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0664-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1685-478",
+        "name": "Data.SET_PERC_VT01",
+        "role": "requests",
+        "addresses": [
+          "DB1.DBW8"
+        ],
+        "refs": [
+          {
+            "network": 1685,
+            "oref": "478",
+            "rid": "49",
+            "nid": "7",
+            "source": "sources/decoded-original/0466-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0662-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1685-488",
+        "name": "FN01_SP_SPEED",
+        "role": "outputs",
+        "addresses": [
+          "%QW292"
+        ],
+        "refs": [
+          {
+            "network": 1685,
+            "oref": "488",
+            "rid": "53",
+            "nid": "7",
+            "source": "sources/decoded-original/0466-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0664-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1864-543",
+        "name": "OFF call gate",
+        "role": "responses",
+        "addresses": [
+          "%M0.1"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "543",
+            "rid": "80",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0582-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1864-551",
+        "name": "Manage_TC1_2.PID_Ref_Temp",
+        "role": "responses",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "551",
+            "rid": "242",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0585-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1864-553",
+        "name": "Riduce MN01",
+        "role": "responses",
+        "addresses": [
+          "%M1.2"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "553",
+            "rid": "87",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0582-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-LEGACY",
+    "name": "SYS-LEGACY 공통 시스템 근거 관찰",
+    "reference_plc_id": "SYS-LEGACY",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "signals": [
+      {
+        "id": "1684-427",
+        "name": "Data.SET_PERC_FR01",
+        "role": "requests",
+        "addresses": [
+          "DB1.DBW6"
+        ],
+        "refs": [
+          {
+            "network": 1684,
+            "oref": "427",
+            "rid": "43",
+            "nid": "6",
+            "source": "sources/decoded-original/0465-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0662-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1684-437",
+        "name": "RD01_SP_SPEED",
+        "role": "outputs",
+        "addresses": [
+          "%QW290"
+        ],
+        "refs": [
+          {
+            "network": 1684,
+            "oref": "437",
+            "rid": "48",
+            "nid": "6",
+            "source": "sources/decoded-original/0465-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0664-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1685-478",
+        "name": "Data.SET_PERC_VT01",
+        "role": "requests",
+        "addresses": [
+          "DB1.DBW8"
+        ],
+        "refs": [
+          {
+            "network": 1685,
+            "oref": "478",
+            "rid": "49",
+            "nid": "7",
+            "source": "sources/decoded-original/0466-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0662-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1685-488",
+        "name": "FN01_SP_SPEED",
+        "role": "outputs",
+        "addresses": [
+          "%QW292"
+        ],
+        "refs": [
+          {
+            "network": 1685,
+            "oref": "488",
+            "rid": "53",
+            "nid": "7",
+            "source": "sources/decoded-original/0466-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0664-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1864-543",
+        "name": "OFF call gate",
+        "role": "responses",
+        "addresses": [
+          "%M0.1"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "543",
+            "rid": "80",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0582-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1864-551",
+        "name": "Manage_TC1_2.PID_Ref_Temp",
+        "role": "responses",
+        "addresses": [
+          "DB39.DBD2"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "551",
+            "rid": "242",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0585-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1864-553",
+        "name": "Riduce MN01",
+        "role": "responses",
+        "addresses": [
+          "%M1.2"
+        ],
+        "refs": [
+          {
+            "network": 1864,
+            "oref": "553",
+            "rid": "87",
+            "nid": "10",
+            "source": "sources/decoded-original/0180-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0582-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "옛태그로기록된값과현재설비값불일치",
+        "observe": "정확한Global멤버/주소/원본장치표현/현재CPU버전",
+        "compare": "1684FR01→RD01,1685VT01→FN01각가지의실제출력대조; 그외동일성현장원본필요",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "MN01감속비트가남음",
+        "observe": "OFF/ONgate/LocalApp02App03/PIDRef/RiduceMN01시각값",
+        "compare": "Set≥+30와Reset<+25의원본상수·CurrentWriter대조;효과소유와현재정상온도임의확정금지",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-LEGACY 원본 쓰기·주소·공통 기능과 관찰의 분리",
+      "sources": {
+        "draft": "6c8e7da4d0af797ebc2a716bf4398d1ee089f999d7a59826a5077cafe5cd9719"
+      },
+      "circuit_equipment": "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다.",
+      "circuit_distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "circuit_pages": [],
+      "construction_boundary": "전용 시공 연결·현행 준공은 미확정. 공통 소프트웨어를 별도 실물로 세지 않습니다.",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "SYS-LEGACY 원초안",
+            "path": "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 독립 원본 대조",
+            "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "정확한Global멤버/주소/원본장치표현/현재CPU버전"
+            },
+            {
+              "owner": "대조",
+              "work": "1684FR01→RD01,1685VT01→FN01각가지의실제출력대조; 그외동일성현장원본필요"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-LEGACY 원초안",
+              "path": "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "OFF/ONgate/LocalApp02App03/PIDRef/RiduceMN01시각값"
+            },
+            {
+              "owner": "대조",
+              "work": "Set≥+30와Reset<+25의원본상수·CurrentWriter대조;효과소유와현재정상온도임의확정금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-LEGACY 원초안",
+              "path": "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-LEGACY",
+    "plc_id": "SYS-LEGACY",
+    "match": "catalog",
+    "sheets": [],
+    "circuit": {
+      "id": "SYS-LEGACY",
+      "equipment": "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다.",
+      "distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "paths": [],
+      "pending": [
+        "원본 flag452/coeff1604/data1629의 인터페이스 주석에는 TR01/MN02/MN03/MN04/PC03 등이 있습니다. 평탄화된 주석의 같은 순번만으로 같은 실물 장치라고 대응시키지 않습니다.",
+        "허용된 원본 색인에서 RiduceMN01 이름은 네트워크 한 곳에 있습니다. 구동부의 사용 위치, 현재 CPU와 MN01 실물 동일성 자료는 확보하지 못했습니다.",
+        "과거 이름에 대한 현재 표시·주소·이벤트 대응, 채널·끝점과 승인된 운전 명칭은 미확인입니다.",
+        "OFF 또는 ON의 현재 값과 공유 설정값의 쓰기 순서는 미확인입니다.",
+        "정상 한계값이나 새로운 설비 ID를 임의로 만들지 않습니다."
+      ]
+    },
+    "warnings": [
+      "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "Data.SET_PERC_FR01, RD01_SP_SPEED, Data.SET_PERC_VT01, FN01_SP_SPEED, OFF call gate"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FR01名설정→RD01출력",
+        "networks/network-1684.html#gme-sys-legacy-wire-453"
+      ],
+      [
+        "VT01名설정→FN01출력",
+        "networks/network-1685.html#gme-sys-legacy-wire-504"
+      ],
+      [
+        "RiduceMN01 memory Set",
+        "networks/network-1864.html#gme-sys-legacy-wire-569"
+      ]
+    ],
+    "io": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FR01名설정→RD01출력",
+        "networks/network-1684.html#gme-sys-legacy-wire-453"
+      ],
+      [
+        "VT01名설정→FN01출력",
+        "networks/network-1685.html#gme-sys-legacy-wire-504"
+      ],
+      [
+        "RiduceMN01 memory Set",
+        "networks/network-1864.html#gme-sys-legacy-wire-569"
+      ]
+    ],
+    "control": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FR01名설정→RD01출력",
+        "networks/network-1684.html#gme-sys-legacy-wire-453"
+      ],
+      [
+        "VT01名설정→FN01출력",
+        "networks/network-1685.html#gme-sys-legacy-wire-504"
+      ],
+      [
+        "RiduceMN01 memory Set",
+        "networks/network-1864.html#gme-sys-legacy-wire-569"
+      ]
+    ],
+    "circuits": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ]
+    ],
+    "alarms": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FR01名설정→RD01출력",
+        "networks/network-1684.html#gme-sys-legacy-wire-453"
+      ],
+      [
+        "VT01名설정→FN01출력",
+        "networks/network-1685.html#gme-sys-legacy-wire-504"
+      ],
+      [
+        "RiduceMN01 memory Set",
+        "networks/network-1864.html#gme-sys-legacy-wire-569"
+      ]
+    ],
+    "repair": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FR01名설정→RD01출력",
+        "networks/network-1684.html#gme-sys-legacy-wire-453"
+      ],
+      [
+        "VT01名설정→FN01출력",
+        "networks/network-1685.html#gme-sys-legacy-wire-504"
+      ],
+      [
+        "RiduceMN01 memory Set",
+        "networks/network-1864.html#gme-sys-legacy-wire-569"
+      ]
+    ],
+    "completion": [
+      [
+        "SYS-LEGACY 원초안",
+        "catalog-sources/SYS-LEGACY-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FR01名설정→RD01출력",
+        "networks/network-1684.html#gme-sys-legacy-wire-453"
+      ],
+      [
+        "VT01名설정→FN01출력",
+        "networks/network-1685.html#gme-sys-legacy-wire-504"
+      ],
+      [
+        "RiduceMN01 memory Set",
+        "networks/network-1864.html#gme-sys-legacy-wire-569"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "type": "reviewed",
+        "id": "current-native-review",
+        "title": "현재 원본 독립 대조와 소유 경계",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "과거 이름은 프로그램 명명과 원본 인터페이스 주석의 근거이며, 독립된 실물 설비로 분류하지 않습니다. FR01 멤버는 RD01 출력 변환에, VT01 멤버는 FN01 출력 변환에 사용됩니다. 이 대응 근거는 해당 원본 분기에 한정합니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "현재 2차 대상은 실제 대장129개입니다. 원초안의 v1.12.0·133개·과거 게시 상태는 당시 조사 이력입니다."
+            },
+            {
+              "type": "list",
+              "items": [
+                "원본 출력 변환은 과거 이름 Data.SET_PERC_FR01에 272를 곱하여 RD01_SP_SPEED에 전달합니다. 같은 멤버를 5/100으로 제한하는 쓰기 분기가 있습니다. 1684 Part455 ON→W456은 Lt406/Gt414/Mul422를 허가합니다. Lt406 Data ORef427 W439 <상수 5 ORef428 W440→W441 Move409 value 5 ORef429 W443→Data ORef430 W444입니다. Gt414 Data ORef431 W445 >100 ORef432 W446→Move417 value 100 ORef433 W449→Data ORef434 W450입니다. Mul422 in1 Data ORef435 W451, in2 상수 272 ORef436 W452, out ORef437/RD01_SP_SPEED W453입니다. 0662 멤버 RID43, 0661 상수, 0664 출력 RID48을 대조했습니다. 프로그램 자료 흐름의 근거입니다. FR01의 실물 동일성, 허용 운전 설정값이나 실제 최종값을 증명하지 않습니다. 별도 쓰기 위치·호출을 확인해야 합니다.",
+                "원본 Data.SET_PERC_VT01도 FN01_SP_SPEED를 구동하지만, 별도 멤버와 네트워크에 속합니다. 1685 Part506 ON/W507→Lt457/Gt465/Mul473입니다. Lt457 W490/Data ORef478 <5 W491/ORef479→Move460 W494의 5/out W495 Data ORef481입니다. Gt465 W496 Data ORef482 >100 W497/ORef483→Move468 W500의 100/out W501 Data ORef485입니다. Mul473 W502 Data ORef486, W503의 272 ORef487→W504 FN01_SP_SPEED ORef488입니다. FR01/RD01 필드를 VT01/FN01에 복사하거나 과거 이름을 독립 설비로 취급하지 않습니다.",
+                "Riduce MN01은 OFF와 ON으로 허가된 원본의 히스테리시스 형태 분기에서 Set/Reset하는 메모리 비트입니다. 허용된 원본 대장에서 이 비트를 사용하는 구동부는 확인하지 못했습니다. 1864 Part577 OFF(반전 없음) W557/ORef543→W578에서 Add517 Data.TC01_SETPOINT+30→Local App02(W558/559/560), Add523 같은 설정값+25→Local App03(W561/562/563), 다음 Part579 ON W564/ORef550→W580입니다. Ge533 Manage_TC1_2.PID_Ref_Temp≥App02 W565/566→W567 SCoil536/ORef553 RiduceMN01 W569입니다. Lt539 같은 PV<App03 W570/571→W572 RCoil542/ORef556 W574입니다. 0582 RiduceMN01 SSD.AO10/SAD.Memory→%M1.2, 0583 App02/App03의 Local 범위, 0585 PV Real32, 0586 상수 30/25를 대조했습니다. 원본 제목은 >30°C이지만 Ge 명령은 ≥입니다. 상수 30/25를 현재 실물의 °C 한계로 확정하지 않습니다. OFF %M0.1은 비트이며 컴파일 시점의 false로 치환하지 않습니다. 현재 MN01 실물이나 실제 속도 감소 효과의 직접 근거는 없습니다."
+              ]
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

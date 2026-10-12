@@ -267,6 +267,7 @@
     const {p,d,name}=selection();
     const profile=drawingMap.get(p?.key||state.selected);
     if(!profile) return renderReferenceDrawings();
+    if(!profile.sheets.length) return panel(name+' · 전용 도면 확인 대기','<p>'+esc(profile.circuit?.distinction||'고유 전기 전달 경로는 확보되지 않았습니다.')+'</p><p>전용 도면·실물 연결은 확인 전입니다. 다른 설비의 도면을 자동으로 배정하지 않습니다.</p><div class="inline-actions">'+button('매뉴얼 근거','manual',profile.key)+button('관찰 기록','repair-record',profile.key)+'</div>');
     const sheet=profile.sheets.find(s=>s.id===state.drawing) || profile.sheets[0];
     state.drawing=sheet.id;
     drawingLastByKind.set(profile.key+':'+sheet.kind,sheet.id);
@@ -275,8 +276,8 @@
     const source=sheet.source+(sheet.page?'#page='+sheet.page:'');
     const groups=[sheet.kind];
     const guideLinks=d?`${validDoc('circuit-guides/'+d.id+'.html')?docButton('단자·전체 경로','circuit-guides/'+d.id+'.html'):''}${validDoc('construction-guides/'+d.id+'.html')?docButton('케이블·접속함 근거','construction-guides/'+d.id+'.html'):''}`:'';
-    return `<div class="drawing-heading"><div><span class="eyebrow">DRAWING / SOURCE EVIDENCE</span><h2>${esc(name)} · 도면 작업실</h2><p>도면을 선택하고 단자·케이블·PLC 근거를 함께 확인하세요.</p></div>${button('배치도·설비카드','priority',p.key)}</div>
-      <p class="drawing-boundary">${esc(matchText(p))}. 관련 도면의 공유 참조이며 현재 CPU·실제 접속·복구 상태는 확인 전입니다.</p>
+    return `<div class="drawing-heading"><div><span class="eyebrow">DRAWING / SOURCE EVIDENCE</span><h2>${esc(name)} · 도면 작업실</h2><p>도면을 선택하고 단자·케이블·PLC 근거를 함께 확인하세요.</p></div>${button('배치도·설비카드','priority',profile.key)}</div>
+      <p class="drawing-boundary">${esc(matchText(p||profile))}. 관련 도면의 공유 참조이며 현재 CPU·실제 접속·복구 상태는 확인 전입니다.</p>
       <div class="drawing-kind-tabs" role="group" aria-label="도면 종류">${drawingKinds.map(([kind,label])=>{const count=profile.sheets.filter(s=>s.kind===kind).length;return `<button type="button" data-drawing-kind="${esc(kind)}" aria-pressed="${sheet.kind===kind}" ${count?'':'disabled'}><strong>${esc(label)}</strong><span>${count}개 참조</span></button>`;}).join('')}</div><p class="drawing-kind-help">선택한 종류의 도면만 표시합니다. 공유 참고 페이지를 포함한 목록입니다.</p>
       <div class="drawing-workspace ${state.drawingWide?'drawing-wide':''}"><nav class="drawing-library" aria-label="설비 관련 도면 목록">${groups.map(kind=>`<section><h3>${esc(kind)}</h3>${profile.sheets.filter(s=>s.kind===kind).map(s=>`<button type="button" data-drawing="${esc(s.id)}" aria-pressed="${s.id===sheet.id}">${s.image?`<img src="${esc(s.image)}" alt="" loading="lazy">`:''}<span><strong>${esc(s.title)}</strong><small>${esc(s.extent)}</small></span></button>`).join('')}</section>`).join('')}</nav>
       <section class="drawing-main" aria-label="선택한 도면"><div class="drawing-title"><span class="eyebrow">${esc(sheet.kind)}</span><h3>${esc(sheet.title)}</h3><p>${esc(sheet.source.split('/').pop())} · ${esc(sheet.revision)}</p></div>
@@ -286,7 +287,7 @@
       ${profile.warnings.length?`<div class="drawing-warnings"><strong>원본 대조 · 추가 확인</strong>${profile.warnings.map(w=>`<p>${esc(w)}</p>`).join('')}</div>`:''}</section>
       <aside class="drawing-evidence" aria-label="선택 도면의 관련 근거"><h3>도면과 신호 경로</h3>${circuit?`<p>${esc(circuit.equipment)}</p><p class="drawing-evidence-boundary">${esc(circuit.distinction)}</p>`:'<p>본체·주변 설비 참고 또는 식별 자료입니다. 직접 I/O 대응을 새로 배정하지 않습니다.</p>'}
       ${paths.length?paths.map(r=>`<details class="drawing-signal" open><summary>${esc(r.signal)} · ${esc(r.drawing)}</summary><p class="drawing-address">${esc(r.backup)}</p><ol>${r.nodes.map(n=>`<li>${esc(n)}</li>`).join('')}</ol><p>${esc(r.destination)}</p><p class="muted">${esc(r.check)}</p><div class="inline-actions">${(r.native_symbol_references || []).map(n=>docButton('LAD '+n.network+' · UID '+n.uid,'networks/network-'+n.network+'.html')).join('')}</div></details>`).join(''):`<p class="muted">${sheet.kind==='OEM 전기'?'이 페이지의 직접 신호 경로 요약은 기존 작업지에서 확인합니다. 인접 페이지 경로는 전체 회로 근거로 이동하세요.':sheet.kind==='시공·케이블'?'공유 배치·케이블 페이지입니다. 보이는 행과 가림 행의 경계는 케이블·접속함 근거에서 확인하세요.':'공정 위치와 주변 관계를 확인하는 참고 화면입니다.'}</p>`}
-      <div class="drawing-guide-links">${guideLinks}${docButton('미완료 항목·완료 기준','requirements-audit.html#open-'+p.key)}${button(d?'증상별 수리':'식별·점검 작업지','repair',p.key)}${d?button('원본 래더','ladder',p.key):''}${d&&validDoc('alarm-guides/'+d.id+'.html')?docButton('알람·리셋 근거','alarm-guides/'+d.id+'.html'):['CC01','AB01','HE01'].includes(d?.id)?docButton('본체·알람 근거','body-manual.html#body-'+d.id):d?.id==='BR01'?docButton('버너 연동 근거','burner-interface.html'):''}</div>
+      <div class="drawing-guide-links">${guideLinks}${docButton('미완료 항목·완료 기준',p?'requirements-audit.html#open-'+profile.key:'catalog-guides/'+profile.key+'.html#completion')}${button(d?'증상별 수리':'식별·점검 작업지','repair',profile.key)}${d?button('원본 래더','ladder',profile.key):''}${d&&validDoc('alarm-guides/'+d.id+'.html')?docButton('알람·리셋 근거','alarm-guides/'+d.id+'.html'):['CC01','AB01','HE01'].includes(d?.id)?docButton('본체·알람 근거','body-manual.html#body-'+d.id):d?.id==='BR01'?docButton('버너 연동 근거','burner-interface.html'):''}</div>
       ${circuit?`<details class="drawing-pending"><summary>원본 작업지의 확인 대기 ${circuit.pending.length}항목</summary><ul>${circuit.pending.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></details>`:''}</aside></div>`;
   }
   function closePhotoViewer() {

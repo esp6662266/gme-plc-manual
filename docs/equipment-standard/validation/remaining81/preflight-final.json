@@ -1,0 +1,26 @@
+{
+  "inventory_matches": true,
+  "counts": {
+    "catalog": 248,
+    "root_assets": 108,
+    "child_assets": 140,
+    "priority_rows": 23,
+    "priority_excluded": 2,
+    "priority_in_scope": 21,
+    "priority_mapped": 18,
+    "priority_tag": 14,
+    "priority_candidate": 4,
+    "priority_unmapped": 5,
+    "catalog_excluded": 94,
+    "excluded_parent_hold": 7,
+    "phase1_catalog": 18,
+    "phase2_candidates": 129,
+    "symptom_reference_assets": 15,
+    "remaining_without_symptom_reference": 233
+  },
+  "source_byte_changes": [
+    "all-in-one/registers/requirements-audit.json",
+    "all-in-one/registers/all-in-one-data.json"
+  ],
+  "meaning": "queue consistency only; no document, UI, TIA or field acceptance"
+}

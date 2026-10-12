@@ -1,0 +1,1729 @@
+{
+  "catalog_id": "SYS-POWER",
+  "selection_key": "SYS-POWER",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-POWER-DOTS-DRAFT.md",
+  "draft_sha256": "e1fe08e0095e794a02b075b1d4472f26c9859093278ec3875d0bc291e441d8d2",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1823,
+      "part",
+      "23"
+    ],
+    [
+      1823,
+      "part",
+      "27"
+    ],
+    [
+      1823,
+      "part",
+      "35"
+    ],
+    [
+      1823,
+      "part",
+      "36"
+    ],
+    [
+      1823,
+      "part",
+      "37"
+    ],
+    [
+      1823,
+      "wire",
+      "22"
+    ],
+    [
+      1823,
+      "wire",
+      "41"
+    ],
+    [
+      1823,
+      "wire",
+      "47"
+    ],
+    [
+      1823,
+      "wire",
+      "42"
+    ],
+    [
+      1823,
+      "wire",
+      "43"
+    ],
+    [
+      1823,
+      "wire",
+      "44"
+    ],
+    [
+      1823,
+      "wire",
+      "45"
+    ],
+    [
+      1823,
+      "wire",
+      "46"
+    ],
+    [
+      1070,
+      "part",
+      "78"
+    ],
+    [
+      1070,
+      "part",
+      "79"
+    ],
+    [
+      1070,
+      "wire",
+      "21"
+    ],
+    [
+      1070,
+      "wire",
+      "88"
+    ],
+    [
+      1070,
+      "wire",
+      "89"
+    ],
+    [
+      1070,
+      "wire",
+      "90"
+    ],
+    [
+      1070,
+      "wire",
+      "91"
+    ],
+    [
+      1070,
+      "wire",
+      "93"
+    ],
+    [
+      1953,
+      "part",
+      "767"
+    ],
+    [
+      1953,
+      "part",
+      "23"
+    ],
+    [
+      1953,
+      "part",
+      "769"
+    ],
+    [
+      1953,
+      "part",
+      "729"
+    ],
+    [
+      1953,
+      "part",
+      "771"
+    ],
+    [
+      1953,
+      "part",
+      "736"
+    ],
+    [
+      1953,
+      "part",
+      "739"
+    ],
+    [
+      1953,
+      "part",
+      "773"
+    ],
+    [
+      1953,
+      "part",
+      "744"
+    ],
+    [
+      1953,
+      "wire",
+      "754"
+    ],
+    [
+      1953,
+      "wire",
+      "21"
+    ],
+    [
+      1953,
+      "wire",
+      "22"
+    ],
+    [
+      1953,
+      "wire",
+      "768"
+    ],
+    [
+      1953,
+      "wire",
+      "755"
+    ],
+    [
+      1953,
+      "wire",
+      "770"
+    ],
+    [
+      1953,
+      "wire",
+      "757"
+    ],
+    [
+      1953,
+      "wire",
+      "758"
+    ],
+    [
+      1953,
+      "wire",
+      "772"
+    ],
+    [
+      1953,
+      "wire",
+      "759"
+    ],
+    [
+      1953,
+      "wire",
+      "760"
+    ],
+    [
+      1953,
+      "wire",
+      "761"
+    ],
+    [
+      1953,
+      "wire",
+      "762"
+    ],
+    [
+      1953,
+      "wire",
+      "774"
+    ],
+    [
+      1953,
+      "wire",
+      "764"
+    ]
+  ],
+  "internal_names": [
+    "presence110v raw source declaration",
+    "Inputs.Presenza_110V",
+    "Allarm.110V_Fault",
+    "Flag.RESET_ALLARM",
+    "raw input Word18",
+    "absolute Inputs Word18 transfer",
+    "ServiceBit sharedgate",
+    "Start CH01 Q3.1",
+    "Enable start chiller Q6.0"
+  ],
+  "source_pairs": [
+    {
+      "signal": "NOT처리Presenza→SCoil27",
+      "network": 1823,
+      "kind": "wire",
+      "uid": "41",
+      "label": "NOT처리Presenza→SCoil27",
+      "boundary": "원본 IW18→DB13.DBW18 워드 복사를 확인했습니다. 처리 Bool 단독 쓰기·현재 최종 Writer·실제 전압·정상 극성은 별도입니다."
+    },
+    {
+      "signal": "RESET AND latched alarm→RCoil37",
+      "network": 1823,
+      "kind": "wire",
+      "uid": "45",
+      "label": "RESET AND latched alarm→RCoil37",
+      "boundary": "오류래치 해제와 원인전원복구/재기동 별도"
+    },
+    {
+      "signal": "IW18→DB13.DBW18공통Wordcopy",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "90",
+      "label": "IW18→DB13.DBW18공통Wordcopy",
+      "boundary": "전원/EM/Resetbyte범위가겹치는정적복사;개별Boolwrite·실제실행/최종Writer·극성미확정"
+    },
+    {
+      "signal": "CH01서비스허가Q6.0",
+      "network": 1953,
+      "kind": "wire",
+      "uid": "764",
+      "label": "CH01서비스허가Q6.0",
+      "boundary": "sharedserviceexample;Q3.1StartCH01·전원Presence와별도"
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Rev2-P007.png",
+    "assets/catalog-circuits/Electrical_Rev2-P008.png",
+    "assets/catalog-circuits/Electrical_Rev2-P009.png",
+    "assets/catalog-circuits/Electrical_Rev2-P010.png",
+    "assets/catalog-circuits/Electrical_Rev2-P011.png",
+    "assets/catalog-circuits/Electrical_Rev2-P012.png",
+    "assets/catalog-circuits/Electrical_Rev2-P017.png",
+    "assets/catalog-circuits/Electrical_Rev2-P085.png",
+    "assets/catalog-circuits/Electrical_Rev2-P136.png",
+    "assets/catalog-circuits/Electrical_Rev2-P143.png",
+    "catalog-sources/DOTS-REMAINING-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json",
+    "sources/Electrical_Rev2.pdf",
+    "sources/block_summary.json",
+    "sources/decoded-original/0000-FlgNet.xml",
+    "sources/decoded-original/0001-FlgNet.xml",
+    "sources/decoded-original/0002-FlgNet.xml",
+    "sources/decoded-original/0003-FlgNet.xml",
+    "sources/decoded-original/0004-FlgNet.xml",
+    "sources/decoded-original/0019-FlgNet.xml",
+    "sources/decoded-original/0030-FlgNet.xml",
+    "sources/decoded-original/0033-FlgNet.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0151-FlgNet.xml",
+    "sources/decoded-original/0152-FlgNet.xml",
+    "sources/decoded-original/0153-FlgNet.xml",
+    "sources/decoded-original/0154-FlgNet.xml",
+    "sources/decoded-original/0155-FlgNet.xml",
+    "sources/decoded-original/0156-FlgNet.xml",
+    "sources/decoded-original/0157-FlgNet.xml",
+    "sources/decoded-original/0158-FlgNet.xml",
+    "sources/decoded-original/0168-FlgNet.xml",
+    "sources/decoded-original/0180-FlgNet.xml",
+    "sources/decoded-original/0195-FlgNet.xml",
+    "sources/decoded-original/0255-FlgNet.xml",
+    "sources/decoded-original/0308-FlgNet.xml",
+    "sources/decoded-original/0335-FlgNet.xml",
+    "sources/decoded-original/0341-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0457-FlgNet.xml",
+    "sources/decoded-original/0458-FlgNet.xml",
+    "sources/decoded-original/0465-FlgNet.xml",
+    "sources/decoded-original/0466-FlgNet.xml",
+    "sources/decoded-original/0476-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0480-FlgNet.xml",
+    "sources/decoded-original/0524-FlgNet.xml",
+    "sources/decoded-original/0542-FlgNet.xml",
+    "sources/decoded-original/0544-FlgNet.xml",
+    "sources/decoded-original/0546-FlgNet.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/identifier-declarations.json",
+    "sources/decoded-original/network-map.json",
+    "sources/electrical-page-text.json",
+    "sources/hmi-windows.csv",
+    "sources/hmi_plc_tags.csv",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "SYS-POWER",
+    "signals": [
+      {
+        "name": "presence110v raw source declaration",
+        "addresses": [
+          "%I19.5"
+        ],
+        "refs": [],
+        "usages": []
+      },
+      {
+        "name": "Inputs.Presenza_110V",
+        "addresses": [
+          "DB13.DBX19.5"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "24",
+            "rid": "248",
+            "nid": "50",
+            "part": "23",
+            "wire": "22",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Allarm.110V_Fault",
+        "addresses": [
+          "DB3.DBX11.4"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "48",
+            "rid": "252",
+            "nid": "50",
+            "part": "27",
+            "wire": "47",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Flag.RESET_ALLARM",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "38",
+            "rid": "13",
+            "nid": "50",
+            "part": "35",
+            "wire": "42",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "raw input Word18",
+        "addresses": [
+          "%IW18"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "81",
+            "rid": "25",
+            "nid": "1",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0627-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "absolute Inputs Word18 transfer",
+        "addresses": [
+          "DB13.DBW18"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "82",
+            "rid": "26",
+            "nid": "1",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0629-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "ServiceBit sharedgate",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "24",
+            "rid": "264",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Start CH01 Q3.1",
+        "addresses": [
+          "%Q3.1"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "749",
+            "rid": "124",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Enable start chiller Q6.0",
+        "addresses": [
+          "%Q6.0"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "753",
+            "rid": "127",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-POWER",
+    "timers": [],
+    "alarms": [],
+    "boundary": "고유 장치 알람의 복제 없이 아래 검토 영역에 공통 Set/Reset·시간·쓰기 근거를 명시합니다."
+  },
+  "control_reference": {
+    "native": [
+      1823,
+      1070,
+      1953
+    ],
+    "chain": [
+      "처리 신호 Inputs.Presenza_110V를 반전한 조건에서 Allarm.110V_Fault를 Set합니다. 원본 1823에는 타이머가 없습니다. 0457의 Part23 Contact에 Negated operand가 있습니다. Wire22→ORef24 RID248, Wire41 Part23.out→Part27(SCoil).in, Wire47→ORef48 RID252입니다. Ident0657의 C NID50 UID24/48과 대응합니다.",
+      "RESET_ALLARM AND 현재 Allarm.110V_Fault 조건에서 같은 래치를 Reset합니다. Reset 분기에는 Presenza 복귀를 요구하는 접점이 명시되어 있지 않습니다. Part35 Contact→Wire43→Part36 Contact→Wire45→Part37 RCoil입니다. Wire42→ORef38 RID13/RESET, Wire44→ORef39 RID252/alarm, Wire46→ORef40 RID252/alarm입니다. 원인이 계속 참이면 실제 호출·순서에 따라 다시 Set될 수 있으며, 이 분기는 복구 완료의 근거가 아닙니다.",
+      "백업의 DB·멤버 주소는 확인한 부모 TOD와 멤버의 비트 오프셋으로 도출할 수 있습니다. 0655 DepDBBlock Inputs RID247의 TOD N13과 C NID50 UID24, 0657 GlobalAccess RID248의 AOS Inputs.Presenza_110V BO157 BS1은 DB13.DBX19.5에 대응합니다. Allarm RID10 TOD3 + RID252 BO92 BS1은 DB3.DBX11.4, Flag RID12 TOD2 + RID13 BO48 BS1은 DB2.DBX6.0에 대응합니다. 이는 백업의 선언이며 현재 CPU를 확인한 결과는 아닙니다.",
+      "OEM 전원 존재 도면은 110V 표시와 24V CPU 표시 경로를 구분합니다. E19.5 입력은 +24Vdc10.7 분기의 9QF2 보조 접점에 연결되며, 16HL1의 110Vac 표시 경로와 별개입니다. Electrical_Rev2.pdf FG16/PDF17의 기존 렌더 assets/catalog-circuits/Electrical_Rev2-P017.png를 시각 확인했습니다. 제목·날짜는 27.05.2024입니다. 9QF2 교차 참조 9/1→E19.5→135/5, 16HL1의 X20:2010/2011은 110Vac9.8/0Vac9.9 사이, 16HL2의 X20:2012는 +24Vdc10.10→0Vdc10.6입니다.",
+      "원본의 IW18→DB13.DBW18 워드 복사는 byte19의 비상·전원 존재 처리 멤버 범위와 겹칩니다. 확인한 것은 워드 전체 복사이며, 개별 Boolean 코일 쓰기나 현재 실행을 증명하지 않습니다. 1070/0397 Part78 Move는 DisableENO=true이며, en은 W21 Powerrail, in은 W88/ORef81 RID25, out1은 W90/ORef82 RID26, eno는 W89→Move79.en입니다. 0627 SimpleAccess Tag276 RID25의 C NID1 UID81, OD Word16/SSD.AO144/SAD Input은 IW18에 대응합니다. 0629 GlobalAccess RID26 IS268435456의 C NID1 UID82 AK Write, OD Word16/SSD.AO144/BAD BIRID4와 0628 DepDBBlock Inputs RID4의 C NID1 UID82/TOD13은 절대 주소 DB13.DBW18에 대응합니다. 목적지 AOS 이름과 선언 색인 항목이 없어 원본 XML을 직접 대조했습니다.",
+      "CH01 서비스 분기는 지연 전 StartCH01 Q3.1과 지연 후 EnableStartChiller Q6.0을 구분합니다. 이는 공유 서비스 맥락이며, 전원 존재 출력이나 현장 대기 시간 지침으로 해석하지 않습니다. 1953/0255 Part767 ON→W21 Part23 ServiceBit→W768입니다. Part769 CH_01_FAULT→W770 RCoil729 M_CH_01, Part771 M_CH_01→W772의 병렬 분기는 Coil736 StartCH01/W759 ORef749 Q3.1, SdCoil739 value W760 ORef750 S5T#10S/operand W761 ORef751 Tag123, Contact773 Tag123/W762→W774 Coil744 EnableStartChiller/W764 ORef753 Q6.0입니다. 0602는 ServiceBit·출력·타이머, 0604는 알람·요청, 0606은 S5T#10S 선언입니다. OEM FG84/PDF85 원문에는 A6.0→84KA1 코일 A1/A2와 별도 접점 5–9→X1:232233이 있습니다. 현재 현장 대기 시간·피드백은 미확인입니다."
+    ],
+    "repair": [
+      "9QF2접점/E19.5, 원시→DB전달, 호출/다른쓰기, Reset발생시각을대조. 표시등 하나로 모든전원정상판정하지 않음",
+      "1823Reset분기에는원인복구접점이별도없음; 현재원인이계속되거나다른쓰기일가능성; 실제보호값/접점변경하지않음"
+    ],
+    "pending": [
+      "1070에서 정적 워드 전체 복사 IW18→DB13.DBW18은 확인했습니다. 개별 Presenza110V Boolean 쓰기, 실제 호출, DisableENO 해석, 현재 최종 쓰기 위치와 원시 입력 극성은 미확인입니다.",
+      "현재 전원 전압, 보호기기의 형식·정정값, 단자와 시공 준공·승인 개정은 미확인입니다.",
+      "현재 OB 호출, Set/Reset 우선순위, 외부 쓰기와 Retain 상태는 미확인입니다.",
+      "HMI의 동일 주소 Allarmi 별칭에 대한 실제 표시 문구·위젯·이벤트는 미확인입니다.",
+      "현재 CPU 확인, TIA 컴파일과 현장 복구 확인은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-POWER",
+    "boundary": "complete_with_gaps; document and read-only observations",
+    "existing_notes": [
+      "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "1070에서 정적 워드 전체 복사 IW18→DB13.DBW18은 확인했습니다. 개별 Presenza110V Boolean 쓰기, 실제 호출, DisableENO 해석, 현재 최종 쓰기 위치와 원시 입력 극성은 미확인입니다.",
+      "현재 전원 전압, 보호기기의 형식·정정값, 단자와 시공 준공·승인 개정은 미확인입니다.",
+      "현재 OB 호출, Set/Reset 우선순위, 외부 쓰기와 Retain 상태는 미확인입니다.",
+      "HMI의 동일 주소 Allarmi 별칭에 대한 실제 표시 문구·위젯·이벤트는 미확인입니다.",
+      "현재 CPU 확인, TIA 컴파일과 현장 복구 확인은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "1070에서 정적 워드 전체 복사 IW18→DB13.DBW18은 확인했습니다. 개별 Presenza110V Boolean 쓰기, 실제 호출, DisableENO 해석, 현재 최종 쓰기 위치와 원시 입력 극성은 미확인입니다.",
+        "현재 전원 전압, 보호기기의 형식·정정값, 단자와 시공 준공·승인 개정은 미확인입니다.",
+        "현재 OB 호출, Set/Reset 우선순위, 외부 쓰기와 Retain 상태는 미확인입니다.",
+        "HMI의 동일 주소 Allarmi 별칭에 대한 실제 표시 문구·위젯·이벤트는 미확인입니다.",
+        "현재 CPU 확인, TIA 컴파일과 현장 복구 확인은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-POWER",
+    "plc_id": "SYS-POWER",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "전원 표시등과 소프트웨어 알람이 불일치",
+        "observe": "16HL1/16HL2 표시, 현재승인된 측정값, rawI19.5, processedDB13X19.5, alarmDB3X11.4를같은시각기록",
+        "compare": "9QF2접점/E19.5, 원시→DB전달, 호출/다른쓰기, Reset발생시각을대조. 표시등 하나로 모든전원정상판정하지 않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "Reset후다시110V알람",
+        "observe": "Reset요청과 내부Reset, processedPresenza, 알람래치의시각별전후",
+        "compare": "1823Reset분기에는원인복구접점이별도없음; 현재원인이계속되거나다른쓰기일가능성; 실제보호값/접점변경하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "raw-presence",
+        "name": "presence110v raw source declaration",
+        "role": "responses",
+        "addresses": [
+          "%I19.5"
+        ],
+        "refs": [],
+        "boundary": "원본 색인의 원시 I19.5 선언과 OEM E19.5 끝점이 있습니다. 원본 IW18→DB13.DBW18 워드 전체 복사는 byte19 범위와 겹칩니다. 개별 Boolean 쓰기, 현재 값, 극성과 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "processed-presence",
+        "name": "Inputs.Presenza_110V",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBX19.5"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "24",
+            "rid": "248",
+            "nid": "50",
+            "part": "23",
+            "wire": "22",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "boundary": "처리된 DB 비트입니다. byte·bit 번호가 일치하더라도 원시 I19.5와 구분합니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "power-alarm",
+        "name": "Allarm.110V_Fault",
+        "role": "responses",
+        "addresses": [
+          "DB3.DBX11.4"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "48",
+            "rid": "252",
+            "nid": "50",
+            "part": "27",
+            "wire": "47",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "boundary": "유지되는 소프트웨어 알람 래치입니다. 램프 상태, 전압 측정과 현장 전원 복구는 별도로 확인합니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "internal-reset",
+        "name": "Flag.RESET_ALLARM",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "38",
+            "rid": "13",
+            "nid": "50",
+            "part": "35",
+            "wire": "42",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "boundary": "공유 내부 Reset입니다. DB2,X13.4의 HMI ResetAlarms 요청과 구분합니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1070-81",
+        "name": "raw input Word18",
+        "role": "responses",
+        "addresses": [
+          "%IW18"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "81",
+            "rid": "25",
+            "nid": "1",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0627-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1070-82",
+        "name": "absolute Inputs Word18 transfer",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBW18"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "82",
+            "rid": "26",
+            "nid": "1",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0629-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1953-24",
+        "name": "ServiceBit sharedgate",
+        "role": "requests",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "24",
+            "rid": "264",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1953-749",
+        "name": "Start CH01 Q3.1",
+        "role": "outputs",
+        "addresses": [
+          "%Q3.1"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "749",
+            "rid": "124",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1953-753",
+        "name": "Enable start chiller Q6.0",
+        "role": "outputs",
+        "addresses": [
+          "%Q6.0"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "753",
+            "rid": "127",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-POWER",
+    "name": "SYS-POWER 공통 시스템 근거 관찰",
+    "reference_plc_id": "SYS-POWER",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "signals": [
+      {
+        "id": "raw-presence",
+        "name": "presence110v raw source declaration",
+        "role": "responses",
+        "addresses": [
+          "%I19.5"
+        ],
+        "refs": [],
+        "boundary": "원본 색인의 원시 I19.5 선언과 OEM E19.5 끝점이 있습니다. 원본 IW18→DB13.DBW18 워드 전체 복사는 byte19 범위와 겹칩니다. 개별 Boolean 쓰기, 현재 값, 극성과 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "processed-presence",
+        "name": "Inputs.Presenza_110V",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBX19.5"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "24",
+            "rid": "248",
+            "nid": "50",
+            "part": "23",
+            "wire": "22",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "boundary": "처리된 DB 비트입니다. byte·bit 번호가 일치하더라도 원시 I19.5와 구분합니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "power-alarm",
+        "name": "Allarm.110V_Fault",
+        "role": "responses",
+        "addresses": [
+          "DB3.DBX11.4"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "48",
+            "rid": "252",
+            "nid": "50",
+            "part": "27",
+            "wire": "47",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "boundary": "유지되는 소프트웨어 알람 래치입니다. 램프 상태, 전압 측정과 현장 전원 복구는 별도로 확인합니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "internal-reset",
+        "name": "Flag.RESET_ALLARM",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "38",
+            "rid": "13",
+            "nid": "50",
+            "part": "35",
+            "wire": "42",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "boundary": "공유 내부 Reset입니다. DB2,X13.4의 HMI ResetAlarms 요청과 구분합니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1070-81",
+        "name": "raw input Word18",
+        "role": "responses",
+        "addresses": [
+          "%IW18"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "81",
+            "rid": "25",
+            "nid": "1",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0627-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1070-82",
+        "name": "absolute Inputs Word18 transfer",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBW18"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "82",
+            "rid": "26",
+            "nid": "1",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0629-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1953-24",
+        "name": "ServiceBit sharedgate",
+        "role": "requests",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "24",
+            "rid": "264",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1953-749",
+        "name": "Start CH01 Q3.1",
+        "role": "outputs",
+        "addresses": [
+          "%Q3.1"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "749",
+            "rid": "124",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1953-753",
+        "name": "Enable start chiller Q6.0",
+        "role": "outputs",
+        "addresses": [
+          "%Q6.0"
+        ],
+        "refs": [
+          {
+            "network": 1953,
+            "oref": "753",
+            "rid": "127",
+            "nid": "24",
+            "source": "sources/decoded-original/0255-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0602-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "전원 표시등과 소프트웨어 알람이 불일치",
+        "observe": "16HL1/16HL2 표시, 현재승인된 측정값, rawI19.5, processedDB13X19.5, alarmDB3X11.4를같은시각기록",
+        "compare": "9QF2접점/E19.5, 원시→DB전달, 호출/다른쓰기, Reset발생시각을대조. 표시등 하나로 모든전원정상판정하지 않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "Reset후다시110V알람",
+        "observe": "Reset요청과 내부Reset, processedPresenza, 알람래치의시각별전후",
+        "compare": "1823Reset분기에는원인복구접점이별도없음; 현재원인이계속되거나다른쓰기일가능성; 실제보호값/접점변경하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-POWER 원본 쓰기·주소·공통 기능과 관찰의 분리",
+      "sources": {
+        "draft": "e1fe08e0095e794a02b075b1d4472f26c9859093278ec3875d0bc291e441d8d2"
+      },
+      "circuit_equipment": "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다.",
+      "circuit_distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG6 · PDF7 · MAIN POWER",
+          "path": "sources/Electrical_Rev2.pdf#page=7"
+        },
+        {
+          "label": "FG7 · PDF8 · MAIN MEASUREMENT",
+          "path": "sources/Electrical_Rev2.pdf#page=8"
+        },
+        {
+          "label": "FG8 · PDF9 · MOTOR POWER",
+          "path": "sources/Electrical_Rev2.pdf#page=9"
+        },
+        {
+          "label": "FG9 · PDF10 · 110Vac AUXILIARY",
+          "path": "sources/Electrical_Rev2.pdf#page=10"
+        },
+        {
+          "label": "FG10 · PDF11 · 24Vdc AUXILIARY",
+          "path": "sources/Electrical_Rev2.pdf#page=11"
+        },
+        {
+          "label": "FG11 · PDF12 · BOARD COOLING",
+          "path": "sources/Electrical_Rev2.pdf#page=12"
+        },
+        {
+          "label": "FG16 · PDF17 · PRESENCE VOLTAGE",
+          "path": "sources/Electrical_Rev2.pdf#page=17"
+        },
+        {
+          "label": "FG84 · PDF85 · SERVICE RELAYS",
+          "path": "sources/Electrical_Rev2.pdf#page=85"
+        },
+        {
+          "label": "FG135 · PDF136 · DIGITAL INPUTS",
+          "path": "sources/Electrical_Rev2.pdf#page=136"
+        },
+        {
+          "label": "FG142 · PDF143 · DIGITAL OUTPUTS",
+          "path": "sources/Electrical_Rev2.pdf#page=143"
+        }
+      ],
+      "construction_boundary": "전용 시공 연결·현행 준공은 미확정. 공통 소프트웨어를 별도 실물로 세지 않습니다.",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "SYS-POWER 원초안",
+            "path": "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 독립 원본 대조",
+            "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "FG6 · PDF7 · MAIN POWER",
+            "path": "sources/Electrical_Rev2.pdf#page=7"
+          },
+          {
+            "label": "FG7 · PDF8 · MAIN MEASUREMENT",
+            "path": "sources/Electrical_Rev2.pdf#page=8"
+          },
+          {
+            "label": "FG8 · PDF9 · MOTOR POWER",
+            "path": "sources/Electrical_Rev2.pdf#page=9"
+          },
+          {
+            "label": "FG9 · PDF10 · 110Vac AUXILIARY",
+            "path": "sources/Electrical_Rev2.pdf#page=10"
+          },
+          {
+            "label": "FG10 · PDF11 · 24Vdc AUXILIARY",
+            "path": "sources/Electrical_Rev2.pdf#page=11"
+          },
+          {
+            "label": "FG11 · PDF12 · BOARD COOLING",
+            "path": "sources/Electrical_Rev2.pdf#page=12"
+          },
+          {
+            "label": "FG16 · PDF17 · PRESENCE VOLTAGE",
+            "path": "sources/Electrical_Rev2.pdf#page=17"
+          },
+          {
+            "label": "FG84 · PDF85 · SERVICE RELAYS",
+            "path": "sources/Electrical_Rev2.pdf#page=85"
+          },
+          {
+            "label": "FG135 · PDF136 · DIGITAL INPUTS",
+            "path": "sources/Electrical_Rev2.pdf#page=136"
+          },
+          {
+            "label": "FG142 · PDF143 · DIGITAL OUTPUTS",
+            "path": "sources/Electrical_Rev2.pdf#page=143"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "16HL1/16HL2 표시, 현재승인된 측정값, rawI19.5, processedDB13X19.5, alarmDB3X11.4를같은시각기록"
+            },
+            {
+              "owner": "대조",
+              "work": "9QF2접점/E19.5, 원시→DB전달, 호출/다른쓰기, Reset발생시각을대조. 표시등 하나로 모든전원정상판정하지 않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-POWER 원초안",
+              "path": "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG6 · PDF7 · MAIN POWER",
+              "path": "sources/Electrical_Rev2.pdf#page=7"
+            },
+            {
+              "label": "FG7 · PDF8 · MAIN MEASUREMENT",
+              "path": "sources/Electrical_Rev2.pdf#page=8"
+            },
+            {
+              "label": "FG8 · PDF9 · MOTOR POWER",
+              "path": "sources/Electrical_Rev2.pdf#page=9"
+            },
+            {
+              "label": "FG9 · PDF10 · 110Vac AUXILIARY",
+              "path": "sources/Electrical_Rev2.pdf#page=10"
+            },
+            {
+              "label": "FG10 · PDF11 · 24Vdc AUXILIARY",
+              "path": "sources/Electrical_Rev2.pdf#page=11"
+            },
+            {
+              "label": "FG11 · PDF12 · BOARD COOLING",
+              "path": "sources/Electrical_Rev2.pdf#page=12"
+            },
+            {
+              "label": "FG16 · PDF17 · PRESENCE VOLTAGE",
+              "path": "sources/Electrical_Rev2.pdf#page=17"
+            },
+            {
+              "label": "FG84 · PDF85 · SERVICE RELAYS",
+              "path": "sources/Electrical_Rev2.pdf#page=85"
+            },
+            {
+              "label": "FG135 · PDF136 · DIGITAL INPUTS",
+              "path": "sources/Electrical_Rev2.pdf#page=136"
+            },
+            {
+              "label": "FG142 · PDF143 · DIGITAL OUTPUTS",
+              "path": "sources/Electrical_Rev2.pdf#page=143"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "Reset요청과 내부Reset, processedPresenza, 알람래치의시각별전후"
+            },
+            {
+              "owner": "대조",
+              "work": "1823Reset분기에는원인복구접점이별도없음; 현재원인이계속되거나다른쓰기일가능성; 실제보호값/접점변경하지않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-POWER 원초안",
+              "path": "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG6 · PDF7 · MAIN POWER",
+              "path": "sources/Electrical_Rev2.pdf#page=7"
+            },
+            {
+              "label": "FG7 · PDF8 · MAIN MEASUREMENT",
+              "path": "sources/Electrical_Rev2.pdf#page=8"
+            },
+            {
+              "label": "FG8 · PDF9 · MOTOR POWER",
+              "path": "sources/Electrical_Rev2.pdf#page=9"
+            },
+            {
+              "label": "FG9 · PDF10 · 110Vac AUXILIARY",
+              "path": "sources/Electrical_Rev2.pdf#page=10"
+            },
+            {
+              "label": "FG10 · PDF11 · 24Vdc AUXILIARY",
+              "path": "sources/Electrical_Rev2.pdf#page=11"
+            },
+            {
+              "label": "FG11 · PDF12 · BOARD COOLING",
+              "path": "sources/Electrical_Rev2.pdf#page=12"
+            },
+            {
+              "label": "FG16 · PDF17 · PRESENCE VOLTAGE",
+              "path": "sources/Electrical_Rev2.pdf#page=17"
+            },
+            {
+              "label": "FG84 · PDF85 · SERVICE RELAYS",
+              "path": "sources/Electrical_Rev2.pdf#page=85"
+            },
+            {
+              "label": "FG135 · PDF136 · DIGITAL INPUTS",
+              "path": "sources/Electrical_Rev2.pdf#page=136"
+            },
+            {
+              "label": "FG142 · PDF143 · DIGITAL OUTPUTS",
+              "path": "sources/Electrical_Rev2.pdf#page=143"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-POWER",
+    "plc_id": "SYS-POWER",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-7",
+        "kind": "OEM 전기",
+        "title": "FG6 · PDF7 · MAIN POWER",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 7,
+        "fg": 6,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P007.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-8",
+        "kind": "OEM 전기",
+        "title": "FG7 · PDF8 · MAIN MEASUREMENT",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 8,
+        "fg": 7,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P008.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-9",
+        "kind": "OEM 전기",
+        "title": "FG8 · PDF9 · MOTOR POWER",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 9,
+        "fg": 8,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P009.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-10",
+        "kind": "OEM 전기",
+        "title": "FG9 · PDF10 · 110Vac AUXILIARY",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 10,
+        "fg": 9,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P010.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-11",
+        "kind": "OEM 전기",
+        "title": "FG10 · PDF11 · 24Vdc AUXILIARY",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 11,
+        "fg": 10,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P011.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-12",
+        "kind": "OEM 전기",
+        "title": "FG11 · PDF12 · BOARD COOLING",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 12,
+        "fg": 11,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P012.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-17",
+        "kind": "OEM 전기",
+        "title": "FG16 · PDF17 · PRESENCE VOLTAGE",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 17,
+        "fg": 16,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P017.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-85",
+        "kind": "OEM 전기",
+        "title": "FG84 · PDF85 · SERVICE RELAYS",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 85,
+        "fg": 84,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P085.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-136",
+        "kind": "OEM 전기",
+        "title": "FG135 · PDF136 · DIGITAL INPUTS",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 136,
+        "fg": 135,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P136.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      },
+      {
+        "id": "oem-143",
+        "kind": "OEM 전기",
+        "title": "FG142 · PDF143 · DIGITAL OUTPUTS",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 143,
+        "fg": 142,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P143.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "원본 페이지 개정란 기준; 파일명으로 개정 추정 안 함"
+      }
+    ],
+    "circuit": {
+      "id": "SYS-POWER",
+      "equipment": "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다.",
+      "distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "paths": [
+        {
+          "signal": "IW18→DB13.DBW18공통Wordcopy",
+          "backup": "%I19.5 / %IW18 → DB13.DBW18",
+          "drawing": "E19.5 · 상태접점/Word 복사",
+          "fg": 16,
+          "nodes": [
+            "+24Vdc10.7 → 9QF2 보조접점",
+            "E19.5 → FG135/5 MOD12 단자36",
+            "원본 IW18 → DB13.DBW18 Word 복사; byte19 처리 Bool 범위가 겹침"
+          ],
+          "destination": "도면 상태접점·원시 Word·처리 Bool·알람 래치는 다른 관찰 대상",
+          "check": "전원/EM/Resetbyte범위가겹치는정적복사;개별Boolwrite·실제실행/최종Writer·극성미확정",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "81"
+            },
+            {
+              "network": 1070,
+              "uid": "82"
+            }
+          ],
+          "sheet_id": "oem-17"
+        },
+        {
+          "signal": "CH01서비스허가Q6.0",
+          "backup": "%Q6.0",
+          "drawing": "A6.0 · CH01 서비스 허가",
+          "fg": 84,
+          "nodes": [
+            "FG142 A6.0 단자21 → 84KA1 A1",
+            "84KA1 A2 → 0Vdc10.6",
+            "84KA1 부하접점5–9 → X1:232/233 외부 CHILLER"
+          ],
+          "destination": "원격 허가 인터페이스; Q3.1 Start CH01 및 외부 실제 가동/냉각과 별도",
+          "check": "sharedserviceexample;Q3.1StartCH01·전원Presence와별도",
+          "native_symbol_references": [
+            {
+              "network": 1953,
+              "uid": "753"
+            }
+          ],
+          "sheet_id": "oem-85"
+        }
+      ],
+      "pending": [
+        "1070에서 정적 워드 전체 복사 IW18→DB13.DBW18은 확인했습니다. 개별 Presenza110V Boolean 쓰기, 실제 호출, DisableENO 해석, 현재 최종 쓰기 위치와 원시 입력 극성은 미확인입니다.",
+        "현재 전원 전압, 보호기기의 형식·정정값, 단자와 시공 준공·승인 개정은 미확인입니다.",
+        "현재 OB 호출, Set/Reset 우선순위, 외부 쓰기와 Retain 상태는 미확인입니다.",
+        "HMI의 동일 주소 Allarmi 별칭에 대한 실제 표시 문구·위젯·이벤트는 미확인입니다.",
+        "현재 CPU 확인, TIA 컴파일과 현장 복구 확인은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "presence110v raw source declaration, Inputs.Presenza_110V, Allarm.110V_Fault, Flag.RESET_ALLARM, raw input Word18"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT처리Presenza→SCoil27",
+        "networks/network-1823.html#gme-sys-power-wire-41"
+      ],
+      [
+        "RESET AND latched alarm→RCoil37",
+        "networks/network-1823.html#gme-sys-power-wire-45"
+      ],
+      [
+        "IW18→DB13.DBW18공통Wordcopy",
+        "networks/network-1070.html#gme-sys-power-wire-90"
+      ],
+      [
+        "CH01서비스허가Q6.0",
+        "networks/network-1953.html#gme-sys-power-wire-764"
+      ]
+    ],
+    "io": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT처리Presenza→SCoil27",
+        "networks/network-1823.html#gme-sys-power-wire-41"
+      ],
+      [
+        "RESET AND latched alarm→RCoil37",
+        "networks/network-1823.html#gme-sys-power-wire-45"
+      ],
+      [
+        "IW18→DB13.DBW18공통Wordcopy",
+        "networks/network-1070.html#gme-sys-power-wire-90"
+      ],
+      [
+        "CH01서비스허가Q6.0",
+        "networks/network-1953.html#gme-sys-power-wire-764"
+      ]
+    ],
+    "control": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT처리Presenza→SCoil27",
+        "networks/network-1823.html#gme-sys-power-wire-41"
+      ],
+      [
+        "RESET AND latched alarm→RCoil37",
+        "networks/network-1823.html#gme-sys-power-wire-45"
+      ],
+      [
+        "IW18→DB13.DBW18공통Wordcopy",
+        "networks/network-1070.html#gme-sys-power-wire-90"
+      ],
+      [
+        "CH01서비스허가Q6.0",
+        "networks/network-1953.html#gme-sys-power-wire-764"
+      ]
+    ],
+    "circuits": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG6 · PDF7 · MAIN POWER",
+        "sources/Electrical_Rev2.pdf#page=7"
+      ],
+      [
+        "FG7 · PDF8 · MAIN MEASUREMENT",
+        "sources/Electrical_Rev2.pdf#page=8"
+      ],
+      [
+        "FG8 · PDF9 · MOTOR POWER",
+        "sources/Electrical_Rev2.pdf#page=9"
+      ],
+      [
+        "FG9 · PDF10 · 110Vac AUXILIARY",
+        "sources/Electrical_Rev2.pdf#page=10"
+      ],
+      [
+        "FG10 · PDF11 · 24Vdc AUXILIARY",
+        "sources/Electrical_Rev2.pdf#page=11"
+      ],
+      [
+        "FG11 · PDF12 · BOARD COOLING",
+        "sources/Electrical_Rev2.pdf#page=12"
+      ],
+      [
+        "FG16 · PDF17 · PRESENCE VOLTAGE",
+        "sources/Electrical_Rev2.pdf#page=17"
+      ],
+      [
+        "FG84 · PDF85 · SERVICE RELAYS",
+        "sources/Electrical_Rev2.pdf#page=85"
+      ],
+      [
+        "FG135 · PDF136 · DIGITAL INPUTS",
+        "sources/Electrical_Rev2.pdf#page=136"
+      ],
+      [
+        "FG142 · PDF143 · DIGITAL OUTPUTS",
+        "sources/Electrical_Rev2.pdf#page=143"
+      ]
+    ],
+    "alarms": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT처리Presenza→SCoil27",
+        "networks/network-1823.html#gme-sys-power-wire-41"
+      ],
+      [
+        "RESET AND latched alarm→RCoil37",
+        "networks/network-1823.html#gme-sys-power-wire-45"
+      ],
+      [
+        "IW18→DB13.DBW18공통Wordcopy",
+        "networks/network-1070.html#gme-sys-power-wire-90"
+      ],
+      [
+        "CH01서비스허가Q6.0",
+        "networks/network-1953.html#gme-sys-power-wire-764"
+      ]
+    ],
+    "repair": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT처리Presenza→SCoil27",
+        "networks/network-1823.html#gme-sys-power-wire-41"
+      ],
+      [
+        "RESET AND latched alarm→RCoil37",
+        "networks/network-1823.html#gme-sys-power-wire-45"
+      ],
+      [
+        "IW18→DB13.DBW18공통Wordcopy",
+        "networks/network-1070.html#gme-sys-power-wire-90"
+      ],
+      [
+        "CH01서비스허가Q6.0",
+        "networks/network-1953.html#gme-sys-power-wire-764"
+      ]
+    ],
+    "completion": [
+      [
+        "SYS-POWER 원초안",
+        "catalog-sources/SYS-POWER-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "NOT처리Presenza→SCoil27",
+        "networks/network-1823.html#gme-sys-power-wire-41"
+      ],
+      [
+        "RESET AND latched alarm→RCoil37",
+        "networks/network-1823.html#gme-sys-power-wire-45"
+      ],
+      [
+        "IW18→DB13.DBW18공통Wordcopy",
+        "networks/network-1070.html#gme-sys-power-wire-90"
+      ],
+      [
+        "CH01서비스허가Q6.0",
+        "networks/network-1953.html#gme-sys-power-wire-764"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "type": "reviewed",
+        "id": "current-native-review",
+        "title": "현재 원본 독립 대조와 소유 경계",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "SYS-POWER는 공통 시스템의 문서 범위입니다. 독립 모터나 안전 제어기로 분류하지 않습니다. Reset과 알람 래치는 공유 기능이며, OEM 전원 회로는 관련 시스템 근거로 적용합니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "현재 2차 대상은 실제 대장129개입니다. 원초안의 v1.12.0·133개·과거 게시 상태는 당시 조사 이력입니다."
+            },
+            {
+              "type": "list",
+              "items": [
+                "처리 신호 Inputs.Presenza_110V를 반전한 조건에서 Allarm.110V_Fault를 Set합니다. 원본 1823에는 타이머가 없습니다. 0457의 Part23 Contact에 Negated operand가 있습니다. Wire22→ORef24 RID248, Wire41 Part23.out→Part27(SCoil).in, Wire47→ORef48 RID252입니다. Ident0657의 C NID50 UID24/48과 대응합니다. ",
+                "RESET_ALLARM AND 현재 Allarm.110V_Fault 조건에서 같은 래치를 Reset합니다. Reset 분기에는 Presenza 복귀를 요구하는 접점이 명시되어 있지 않습니다. Part35 Contact→Wire43→Part36 Contact→Wire45→Part37 RCoil입니다. Wire42→ORef38 RID13/RESET, Wire44→ORef39 RID252/alarm, Wire46→ORef40 RID252/alarm입니다. 원인이 계속 참이면 실제 호출·순서에 따라 다시 Set될 수 있으며, 이 분기는 복구 완료의 근거가 아닙니다. ",
+                "백업의 DB·멤버 주소는 확인한 부모 TOD와 멤버의 비트 오프셋으로 도출할 수 있습니다. 0655 DepDBBlock Inputs RID247의 TOD N13과 C NID50 UID24, 0657 GlobalAccess RID248의 AOS Inputs.Presenza_110V BO157 BS1은 DB13.DBX19.5에 대응합니다. Allarm RID10 TOD3 + RID252 BO92 BS1은 DB3.DBX11.4, Flag RID12 TOD2 + RID13 BO48 BS1은 DB2.DBX6.0에 대응합니다. 이는 백업의 선언이며 현재 CPU를 확인한 결과는 아닙니다. ",
+                "OEM 전원 존재 도면은 110V 표시와 24V CPU 표시 경로를 구분합니다. E19.5 입력은 +24Vdc10.7 분기의 9QF2 보조 접점에 연결되며, 16HL1의 110Vac 표시 경로와 별개입니다. Electrical_Rev2.pdf FG16/PDF17의 기존 렌더 assets/catalog-circuits/Electrical_Rev2-P017.png를 시각 확인했습니다. 제목·날짜는 27.05.2024입니다. 9QF2 교차 참조 9/1→E19.5→135/5, 16HL1의 X20:2010/2011은 110Vac9.8/0Vac9.9 사이, 16HL2의 X20:2012는 +24Vdc10.10→0Vdc10.6입니다. ",
+                "원본의 IW18→DB13.DBW18 워드 복사는 byte19의 비상·전원 존재 처리 멤버 범위와 겹칩니다. 확인한 것은 워드 전체 복사이며, 개별 Boolean 코일 쓰기나 현재 실행을 증명하지 않습니다. 1070/0397 Part78 Move는 DisableENO=true이며, en은 W21 Powerrail, in은 W88/ORef81 RID25, out1은 W90/ORef82 RID26, eno는 W89→Move79.en입니다. 0627 SimpleAccess Tag276 RID25의 C NID1 UID81, OD Word16/SSD.AO144/SAD Input은 IW18에 대응합니다. 0629 GlobalAccess RID26 IS268435456의 C NID1 UID82 AK Write, OD Word16/SSD.AO144/BAD BIRID4와 0628 DepDBBlock Inputs RID4의 C NID1 UID82/TOD13은 절대 주소 DB13.DBW18에 대응합니다. 목적지 AOS 이름과 선언 색인 항목이 없어 원본 XML을 직접 대조했습니다. ",
+                "CH01 서비스 분기는 지연 전 StartCH01 Q3.1과 지연 후 EnableStartChiller Q6.0을 구분합니다. 이는 공유 서비스 맥락이며, 전원 존재 출력이나 현장 대기 시간 지침으로 해석하지 않습니다. 1953/0255 Part767 ON→W21 Part23 ServiceBit→W768입니다. Part769 CH_01_FAULT→W770 RCoil729 M_CH_01, Part771 M_CH_01→W772의 병렬 분기는 Coil736 StartCH01/W759 ORef749 Q3.1, SdCoil739 value W760 ORef750 S5T#10S/operand W761 ORef751 Tag123, Contact773 Tag123/W762→W774 Coil744 EnableStartChiller/W764 ORef753 Q6.0입니다. 0602는 ServiceBit·출력·타이머, 0604는 알람·요청, 0606은 S5T#10S 선언입니다. OEM FG84/PDF85 원문에는 A6.0→84KA1 코일 A1/A2와 별도 접점 5–9→X1:232233이 있습니다. 현재 현장 대기 시간·피드백은 미확인입니다. "
+              ]
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

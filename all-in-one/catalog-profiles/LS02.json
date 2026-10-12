@@ -1,0 +1,906 @@
+{
+  "catalog_id": "LS02",
+  "selection_key": "LS02",
+  "priority_key": null,
+  "type": "wire",
+  "draft": "catalog-sources/LS02-CODEX-REVIEW.md",
+  "draft_sha256": "0c1a7750cff9da8dfc3ebe366df2c3f1eab9b03a9d4cb0e1f5fea31fd7dc69fb",
+  "draft_provenance": "Codex 현재 원본 대조 기준 93fa00c447229202bbffc4096c2fe004f12a83ae / v1.22.0. Dots와 자료/상충을 상담하고 기존 원문을 별도 보존했습니다. 해시 대조와 현재 CPU·실물 검증은 별개입니다.",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1921,
+      "part",
+      "30"
+    ],
+    [
+      1921,
+      "wire",
+      "65"
+    ]
+  ],
+  "internal_names": [
+    "ev01_close",
+    "LS02 현재 자료 판본·실물 동일성·관찰 시각",
+    "PV01 관련 경보 원문·원래 소유·발생/해제 시각"
+  ],
+  "source_pairs": [
+    {
+      "signal": "ev01_close",
+      "network": 1921,
+      "kind": "wire",
+      "uid": "65",
+      "label": "원본 1921 · ev01_close · Contact.operand",
+      "boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P019.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P021.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P053.png",
+    "assets/catalog-circuits/Electrical_Rev2-P070.png",
+    "assets/catalog-circuits/Electrical_Rev2-P071.png",
+    "assets/catalog-circuits/PID_1684n002I-P001.png",
+    "catalog-sources/DOTS-ASSET-62-HANDOFF-20261012.json",
+    "catalog-sources/LS02-DOTS-DRAFT.md",
+    "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json",
+    "sources/decoded-original/0286-FlgNet.xml",
+    "sources/decoded-original/0607-IdentXmlPart.xml",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "LS02",
+    "signals": [
+      {
+        "name": "ev01_close",
+        "addresses": [
+          "%i8.7"
+        ],
+        "refs": [
+          {
+            "network": 1921,
+            "oref": "44",
+            "source": "sources/decoded-original/0286-FlgNet.xml",
+            "part": "30",
+            "wire": "65"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "LS02 현재 자료 판본·실물 동일성·관찰 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      },
+      {
+        "name": "PV01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "LS02",
+    "timers": [],
+    "alarms": [],
+    "boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다."
+  },
+  "control_reference": {
+    "native": [
+      1921
+    ],
+    "chain": [
+      "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.\n\nPV01의 구동 명령과 LS02의 실제 끝위치를 구분하여 읽습니다. 원시 접점·처리 비트·열림/닫힘 기억은 같은 실물 신호로 합치지 않습니다.\n\n- 원시 이름의 핀 참조를 확인한 네트워크: 1921. 읽기·쓰기·호출은 원본 Part/Wire/ORef 표로 구분합니다.\n\n| 고유/관련 원문 이름 | 원본 네트워크 | 명령 UID·Gate·Pin | Wire·ORef | 소유 경계 |\n| --- | --- | --- | --- | --- |\n| EV01_Close | 1921 | 30 Contact.operand | 65 / 44 | LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. |"
+    ],
+    "repair": [
+      "OEM FG69/PDF70, FG70/PDF71와 현재 명판·태그·배선 끝점을 비교합니다.",
+      "원시 핀 네트워크 1921 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+      "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다."
+    ],
+    "pending": [
+      "P&ID PV01 상세도는 위쪽 CL01/02를 GATE B, 아래쪽 CL03/04를 GATE A로 표시하지만 OEM·백업 주석은 EV01=A, EV02=B입니다. 연결 구조와 양쪽 이름을 보존하며 현재 실물의 Gate A/B 대응은 확정하지 않습니다.",
+      "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "LS02",
+    "boundary": "complete_with_gaps; source-linked documentation only",
+    "existing_notes": [
+      "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "P&ID PV01 상세도는 위쪽 CL01/02를 GATE B, 아래쪽 CL03/04를 GATE A로 표시하지만 OEM·백업 주석은 EV01=A, EV02=B입니다. 연결 구조와 양쪽 이름을 보존하며 현재 실물의 Gate A/B 대응은 확정하지 않습니다.",
+      "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "LS02의 문서·정적 검토 결과와 다음에 필요한 증거를 구분하여 인계합니다.\n\n- P&ID PV01 상세도는 위쪽 CL01/02를 GATE B, 아래쪽 CL03/04를 GATE A로 표시하지만 OEM·백업 주석은 EV01=A, EV02=B입니다. 연결 구조와 양쪽 이름을 보존하며 현재 실물의 Gate A/B 대응은 확정하지 않습니다.\n- LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.\n- 이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.\n- 시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    },
+    {
+      "type": "paragraph",
+      "text": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "P&ID PV01 상세도는 위쪽 CL01/02를 GATE B, 아래쪽 CL03/04를 GATE A로 표시하지만 OEM·백업 주석은 EV01=A, EV02=B입니다. 연결 구조와 양쪽 이름을 보존하며 현재 실물의 Gate A/B 대응은 확정하지 않습니다.",
+        "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "LS02",
+    "plc_id": "LS02",
+    "boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "LS02 식별·연결 관찰",
+        "observe": "LS02 접점·X1:132/133와 원시 PLC 입력 E8.7의 대응",
+        "compare": "OEM FG69/PDF70, FG70/PDF71와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "LS02 상태·반응 분리",
+        "observe": "실제 기계 끝위치와 전기 접점·처리 비트·기억 비트의 별도 상태",
+        "compare": "원시 핀 네트워크 1921 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "LS02 미확정 범위 인계",
+        "observe": "PV01 명령·출력·끝위치 접점의 시각차; 고장·Reset 로직은 부모 소유로 유지",
+        "compare": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "ev01_close",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i8.7"
+        ],
+        "refs": [
+          {
+            "network": 1921,
+            "oref": "44",
+            "source": "sources/decoded-original/0286-FlgNet.xml",
+            "part": "30",
+            "wire": "65"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "LS02 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      },
+      {
+        "id": "parent-event",
+        "name": "PV01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "부모 경보의 관찰 기록이며 LS02 전용 알람으로 재분류하지 않습니다.",
+        "source_class": "parent_observation"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "LS02",
+    "name": "LS02 밸브 위치 리미트 스위치 근거 관찰",
+    "reference_plc_id": "LS02",
+    "boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "ev01_close",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i8.7"
+        ],
+        "refs": [
+          {
+            "network": 1921,
+            "oref": "44",
+            "source": "sources/decoded-original/0286-FlgNet.xml",
+            "part": "30",
+            "wire": "65"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "LS02 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      },
+      {
+        "id": "parent-event",
+        "name": "PV01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "부모 경보의 관찰 기록이며 LS02 전용 알람으로 재분류하지 않습니다.",
+        "source_class": "parent_observation"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "LS02 식별·연결 관찰",
+        "observe": "LS02 접점·X1:132/133와 원시 PLC 입력 E8.7의 대응",
+        "compare": "OEM FG69/PDF70, FG70/PDF71와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "LS02 상태·반응 분리",
+        "observe": "실제 기계 끝위치와 전기 접점·처리 비트·기억 비트의 별도 상태",
+        "compare": "원시 핀 네트워크 1921 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "LS02 미확정 범위 인계",
+        "observe": "PV01 명령·출력·끝위치 접점의 시각차; 고장·Reset 로직은 부모 소유로 유지",
+        "compare": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "LS02 고유 근거·관련 부모/외부 장치 소유 대조",
+      "sources": {
+        "draft": "0c1a7750cff9da8dfc3ebe366df2c3f1eab9b03a9d4cb0e1f5fea31fd7dc69fb"
+      },
+      "circuit_equipment": "LS02",
+      "circuit_distinction": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "circuit_pages": [
+        {
+          "label": "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+          "path": "sources/Electrical_Rev2.pdf#page=70"
+        },
+        {
+          "label": "FG70 · PDF71 · X1131E8.6124/6",
+          "path": "sources/Electrical_Rev2.pdf#page=71"
+        },
+        {
+          "label": "P&ID · PDF1 · LS-02",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "FOR APPROVAL / first draft design와 현행 준공·단자·실물 동일성 별도",
+      "construction_pages": [
+        {
+          "label": "시공 원본 PDF19",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+        },
+        {
+          "label": "시공 원본 PDF21",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+        },
+        {
+          "label": "시공 원본 PDF53",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "현재 검토 원문",
+            "path": "catalog-sources/LS02-CODEX-REVIEW.md"
+          },
+          {
+            "label": "Dots 보존 원초안",
+            "path": "catalog-sources/LS02-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 원본 독립 조사",
+            "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "PV01 관련 명세",
+            "path": "control-specs/PV01.html"
+          },
+          {
+            "label": "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+            "path": "sources/Electrical_Rev2.pdf#page=70"
+          },
+          {
+            "label": "FG70 · PDF71 · X1131E8.6124/6",
+            "path": "sources/Electrical_Rev2.pdf#page=71"
+          },
+          {
+            "label": "시공 원본 PDF19",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+          },
+          {
+            "label": "시공 원본 PDF21",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+          },
+          {
+            "label": "시공 원본 PDF53",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+          },
+          {
+            "label": "P&ID · PDF1 · LS-02",
+            "path": "sources/PID_1684n002I.pdf#page=1"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "LS02 접점·X1:132/133와 원시 PLC 입력 E8.7의 대응"
+            },
+            {
+              "owner": "대조",
+              "work": "OEM FG69/PDF70, FG70/PDF71와 현재 명판·태그·배선 끝점을 비교합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LS02-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LS02-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "PV01 관련 명세",
+              "path": "control-specs/PV01.html"
+            },
+            {
+              "label": "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=70"
+            },
+            {
+              "label": "FG70 · PDF71 · X1131E8.6124/6",
+              "path": "sources/Electrical_Rev2.pdf#page=71"
+            },
+            {
+              "label": "시공 원본 PDF19",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+            },
+            {
+              "label": "시공 원본 PDF21",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+            },
+            {
+              "label": "시공 원본 PDF53",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+            },
+            {
+              "label": "P&ID · PDF1 · LS-02",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "실제 기계 끝위치와 전기 접점·처리 비트·기억 비트의 별도 상태"
+            },
+            {
+              "owner": "대조",
+              "work": "원시 핀 네트워크 1921 및 부모 처리·명령·알람을 같은 시각에 구분합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LS02-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LS02-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "PV01 관련 명세",
+              "path": "control-specs/PV01.html"
+            },
+            {
+              "label": "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=70"
+            },
+            {
+              "label": "FG70 · PDF71 · X1131E8.6124/6",
+              "path": "sources/Electrical_Rev2.pdf#page=71"
+            },
+            {
+              "label": "시공 원본 PDF19",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+            },
+            {
+              "label": "시공 원본 PDF21",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+            },
+            {
+              "label": "시공 원본 PDF53",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+            },
+            {
+              "label": "P&ID · PDF1 · LS-02",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "PV01 명령·출력·끝위치 접점의 시각차; 고장·Reset 로직은 부모 소유로 유지"
+            },
+            {
+              "owner": "대조",
+              "work": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LS02-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LS02-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "PV01 관련 명세",
+              "path": "control-specs/PV01.html"
+            },
+            {
+              "label": "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+              "path": "sources/Electrical_Rev2.pdf#page=70"
+            },
+            {
+              "label": "FG70 · PDF71 · X1131E8.6124/6",
+              "path": "sources/Electrical_Rev2.pdf#page=71"
+            },
+            {
+              "label": "시공 원본 PDF19",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+            },
+            {
+              "label": "시공 원본 PDF21",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+            },
+            {
+              "label": "시공 원본 PDF53",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+            },
+            {
+              "label": "P&ID · PDF1 · LS-02",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "LS02",
+    "plc_id": "LS02",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-70",
+        "kind": "OEM 전기",
+        "title": "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 70,
+        "fg": 69,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P070.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      },
+      {
+        "id": "oem-71",
+        "kind": "OEM 전기",
+        "title": "FG70 · PDF71 · X1131E8.6124/6",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 71,
+        "fg": 70,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P071.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      },
+      {
+        "id": "construction-19",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF19",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 19,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P019.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "construction-21",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF21",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 21,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P021.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "construction-53",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF53",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 53,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P053.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1 · LS-02",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "2013 보존 공정 도식; 현행 실물 미확정",
+        "revision": "I 15/01/2013; 최초06/04/2011"
+      }
+    ],
+    "circuit": {
+      "id": "LS02",
+      "equipment": "LS02 고유·관련 도면 소유 구분",
+      "distinction": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "paths": [
+        {
+          "signal": "ev01_close",
+          "backup": "%i8.7",
+          "drawing": "E8.7",
+          "fg": 70,
+          "sheet_id": "oem-71",
+          "nodes": [
+            "Electrical_Rev2 FG70 / PDF71 원문 E8.7",
+            "백업 원문 신호 ev01_close / %i8.7"
+          ],
+          "destination": "원문 도면과 백업 선언을 대조하는 경로; 현재 배선·전달·실제 응답은 별도",
+          "check": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+          "native_symbol_references": [
+            {
+              "network": 1921,
+              "uid": "44"
+            }
+          ]
+        }
+      ],
+      "pending": [
+        "P&ID PV01 상세도는 위쪽 CL01/02를 GATE B, 아래쪽 CL03/04를 GATE A로 표시하지만 OEM·백업 주석은 EV01=A, EV02=B입니다. 연결 구조와 양쪽 이름을 보존하며 현재 실물의 Gate A/B 대응은 확정하지 않습니다.",
+        "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "LS02는 PV01의 끝위치 구성품입니다. 인용한 원시 입력은 구성품 근거로 다루지만 부모 액추에이터 출력·PID·알람을 새 독립 기능으로 복제하지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "LS02, PV01, ev01_close, LS02 현재 자료 판본·실물 동일성·관찰 시각, PV01 관련 경보 원문·원래 소유·발생/해제 시각"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+        "sources/Electrical_Rev2.pdf#page=70"
+      ],
+      [
+        "FG70 · PDF71 · X1131E8.6124/6",
+        "sources/Electrical_Rev2.pdf#page=71"
+      ],
+      [
+        "시공 원본 PDF19",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+      ],
+      [
+        "시공 원본 PDF21",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+      ],
+      [
+        "시공 원본 PDF53",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+      ],
+      [
+        "P&ID · PDF1 · LS-02",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "io": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "원본 1921 · ev01_close · Contact.operand",
+        "networks/network-1921.html#gme-ls02-wire-65"
+      ]
+    ],
+    "control": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "원본 1921 · ev01_close · Contact.operand",
+        "networks/network-1921.html#gme-ls02-wire-65"
+      ]
+    ],
+    "circuits": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+        "sources/Electrical_Rev2.pdf#page=70"
+      ],
+      [
+        "FG70 · PDF71 · X1131E8.6124/6",
+        "sources/Electrical_Rev2.pdf#page=71"
+      ],
+      [
+        "시공 원본 PDF19",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+      ],
+      [
+        "시공 원본 PDF21",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+      ],
+      [
+        "시공 원본 PDF53",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+      ],
+      [
+        "P&ID · PDF1 · LS-02",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "alarms": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "원본 1921 · ev01_close · Contact.operand",
+        "networks/network-1921.html#gme-ls02-wire-65"
+      ]
+    ],
+    "repair": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+        "sources/Electrical_Rev2.pdf#page=70"
+      ],
+      [
+        "FG70 · PDF71 · X1131E8.6124/6",
+        "sources/Electrical_Rev2.pdf#page=71"
+      ],
+      [
+        "시공 원본 PDF19",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+      ],
+      [
+        "시공 원본 PDF21",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+      ],
+      [
+        "시공 원본 PDF53",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+      ],
+      [
+        "P&ID · PDF1 · LS-02",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "completion": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LS02-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LS02-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "PV01 관련 명세",
+        "control-specs/PV01.html"
+      ],
+      [
+        "FG69 · PDF70 · LOAD DRUM CLAPPE VALVE PV-01",
+        "sources/Electrical_Rev2.pdf#page=70"
+      ],
+      [
+        "FG70 · PDF71 · X1131E8.6124/6",
+        "sources/Electrical_Rev2.pdf#page=71"
+      ],
+      [
+        "시공 원본 PDF19",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=19"
+      ],
+      [
+        "시공 원본 PDF21",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=21"
+      ],
+      [
+        "시공 원본 PDF53",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=53"
+      ],
+      [
+        "P&ID · PDF1 · LS-02",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ]
+  }
+}

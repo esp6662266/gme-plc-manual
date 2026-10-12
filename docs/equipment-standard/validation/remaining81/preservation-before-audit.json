@@ -1,0 +1,14 @@
+{
+  "status": "passed_before_audit_header_refresh",
+  "baseline": "93fa00c447229202bbffc4096c2fe004f12a83ae",
+  "original_sources": 712,
+  "old_manual_profiles": 68,
+  "old_schemas": 73,
+  "old_images": 237,
+  "old_catalog_files": 107,
+  "changed_registers": [
+    "registers/all-in-one-data.json"
+  ],
+  "stopped_assets_preserved": 5,
+  "source_backup_sha256": "0829195396edfcda4909faf407b65ad93dd7ab7341d5889f528142f0f5834729"
+}

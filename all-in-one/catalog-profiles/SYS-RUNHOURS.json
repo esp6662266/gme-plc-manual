@@ -1,0 +1,1279 @@
+{
+  "catalog_id": "SYS-RUNHOURS",
+  "selection_key": "SYS-RUNHOURS",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md",
+  "draft_sha256": "aa3a248f04d888378aef3bb484ad58dbec7596a79e17c73143e60470ad0025ea",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1018,
+      "part",
+      "1154"
+    ],
+    [
+      1018,
+      "part",
+      "1156"
+    ],
+    [
+      1018,
+      "part",
+      "1108"
+    ],
+    [
+      1018,
+      "part",
+      "1115"
+    ],
+    [
+      1018,
+      "part",
+      "1118"
+    ],
+    [
+      1018,
+      "part",
+      "1121"
+    ],
+    [
+      1018,
+      "part",
+      "1124"
+    ],
+    [
+      1018,
+      "wire",
+      "1137"
+    ],
+    [
+      1018,
+      "wire",
+      "1138"
+    ],
+    [
+      1018,
+      "wire",
+      "1157"
+    ],
+    [
+      1018,
+      "wire",
+      "1139"
+    ],
+    [
+      1018,
+      "wire",
+      "1140"
+    ],
+    [
+      1018,
+      "wire",
+      "1141"
+    ],
+    [
+      1018,
+      "wire",
+      "1142"
+    ],
+    [
+      1018,
+      "wire",
+      "1143"
+    ],
+    [
+      1018,
+      "wire",
+      "1144"
+    ],
+    [
+      1018,
+      "wire",
+      "1146"
+    ],
+    [
+      1018,
+      "wire",
+      "1147"
+    ],
+    [
+      1018,
+      "wire",
+      "1148"
+    ],
+    [
+      1018,
+      "wire",
+      "1149"
+    ],
+    [
+      1018,
+      "wire",
+      "1150"
+    ],
+    [
+      1018,
+      "wire",
+      "1151"
+    ],
+    [
+      1018,
+      "wire",
+      "1152"
+    ],
+    [
+      1056,
+      "part",
+      "3120"
+    ],
+    [
+      1056,
+      "part",
+      "3112"
+    ],
+    [
+      1056,
+      "wire",
+      "3118"
+    ],
+    [
+      1056,
+      "wire",
+      "3121"
+    ],
+    [
+      1056,
+      "wire",
+      "3117"
+    ],
+    [
+      1056,
+      "wire",
+      "3119"
+    ],
+    [
+      1055,
+      "part",
+      "3147"
+    ],
+    [
+      1055,
+      "part",
+      "3149"
+    ],
+    [
+      1055,
+      "part",
+      "3110"
+    ],
+    [
+      1055,
+      "part",
+      "3151"
+    ],
+    [
+      1055,
+      "part",
+      "3153"
+    ],
+    [
+      1055,
+      "part",
+      "3118"
+    ],
+    [
+      1055,
+      "part",
+      "3155"
+    ],
+    [
+      1055,
+      "part",
+      "3123"
+    ],
+    [
+      1055,
+      "wire",
+      "3133"
+    ],
+    [
+      1055,
+      "wire",
+      "3134"
+    ],
+    [
+      1055,
+      "wire",
+      "3150"
+    ],
+    [
+      1055,
+      "wire",
+      "3136"
+    ],
+    [
+      1055,
+      "wire",
+      "3137"
+    ],
+    [
+      1055,
+      "wire",
+      "3139"
+    ],
+    [
+      1055,
+      "wire",
+      "3154"
+    ],
+    [
+      1055,
+      "wire",
+      "3138"
+    ],
+    [
+      1055,
+      "wire",
+      "3141"
+    ],
+    [
+      1055,
+      "wire",
+      "3142"
+    ],
+    [
+      1055,
+      "wire",
+      "3156"
+    ],
+    [
+      1055,
+      "wire",
+      "3144"
+    ],
+    [
+      1048,
+      "part",
+      "2801"
+    ],
+    [
+      1048,
+      "part",
+      "2772"
+    ],
+    [
+      1048,
+      "wire",
+      "2786"
+    ],
+    [
+      1048,
+      "wire",
+      "2802"
+    ],
+    [
+      1048,
+      "wire",
+      "2799"
+    ],
+    [
+      1048,
+      "wire",
+      "2800"
+    ]
+  ],
+  "internal_names": [
+    "Tag_47",
+    "대표BC01 Fbk · 공통시간예시",
+    "hours motors.BC_01_MIN",
+    "BC01 HOUR token/Move1",
+    "Flag_Aggiorna_DB",
+    "MEM2_0",
+    "Tag_48"
+  ],
+  "source_pairs": [
+    {
+      "signal": "대표BC01 hour Move1",
+      "network": 1018,
+      "kind": "wire",
+      "uid": "1147",
+      "label": "대표BC01 hour Move1",
+      "boundary": "누적덧셈/영구시간대장으로추정하지않음"
+    },
+    {
+      "signal": "공통SD1min원문",
+      "network": 1056,
+      "kind": "wire",
+      "uid": "3117",
+      "label": "공통SD1min원문",
+      "boundary": "현재주기/분단위실측은미확정"
+    },
+    {
+      "signal": "NOT updateflag→SD5s",
+      "network": 1055,
+      "kind": "wire",
+      "uid": "3154",
+      "label": "NOT updateflag→SD5s",
+      "boundary": "외부저장완료acknowledgement근거별도"
+    }
+  ],
+  "extra_sources": [
+    "catalog-sources/DOTS-REMAINING-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json",
+    "sources/Electrical_Rev2.pdf",
+    "sources/block_summary.json",
+    "sources/decoded-original/0000-FlgNet.xml",
+    "sources/decoded-original/0001-FlgNet.xml",
+    "sources/decoded-original/0002-FlgNet.xml",
+    "sources/decoded-original/0003-FlgNet.xml",
+    "sources/decoded-original/0004-FlgNet.xml",
+    "sources/decoded-original/0019-FlgNet.xml",
+    "sources/decoded-original/0030-FlgNet.xml",
+    "sources/decoded-original/0033-FlgNet.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0151-FlgNet.xml",
+    "sources/decoded-original/0152-FlgNet.xml",
+    "sources/decoded-original/0153-FlgNet.xml",
+    "sources/decoded-original/0154-FlgNet.xml",
+    "sources/decoded-original/0155-FlgNet.xml",
+    "sources/decoded-original/0156-FlgNet.xml",
+    "sources/decoded-original/0157-FlgNet.xml",
+    "sources/decoded-original/0158-FlgNet.xml",
+    "sources/decoded-original/0168-FlgNet.xml",
+    "sources/decoded-original/0180-FlgNet.xml",
+    "sources/decoded-original/0195-FlgNet.xml",
+    "sources/decoded-original/0255-FlgNet.xml",
+    "sources/decoded-original/0308-FlgNet.xml",
+    "sources/decoded-original/0335-FlgNet.xml",
+    "sources/decoded-original/0341-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0457-FlgNet.xml",
+    "sources/decoded-original/0458-FlgNet.xml",
+    "sources/decoded-original/0465-FlgNet.xml",
+    "sources/decoded-original/0466-FlgNet.xml",
+    "sources/decoded-original/0476-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0480-FlgNet.xml",
+    "sources/decoded-original/0524-FlgNet.xml",
+    "sources/decoded-original/0542-FlgNet.xml",
+    "sources/decoded-original/0544-FlgNet.xml",
+    "sources/decoded-original/0546-FlgNet.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/identifier-declarations.json",
+    "sources/decoded-original/network-map.json",
+    "sources/electrical-page-text.json",
+    "sources/hmi-windows.csv",
+    "sources/hmi_plc_tags.csv",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "SYS-RUNHOURS",
+    "signals": [
+      {
+        "name": "Tag_47",
+        "addresses": [
+          "%T13"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1125",
+            "rid": "1",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "대표BC01 Fbk · 공통시간예시",
+        "addresses": [
+          "%I0.0"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1126",
+            "rid": "122",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "hours motors.BC_01_MIN",
+        "addresses": [
+          "DB9.DBW76"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1127",
+            "rid": "124",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0615-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "BC01 HOUR token/Move1",
+        "addresses": [
+          "DB9.DBW78"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1133",
+            "rid": "126",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0615-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Flag_Aggiorna_DB",
+        "addresses": [
+          "%M1.7"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1136",
+            "rid": "13",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "MEM2_0",
+        "addresses": [
+          "%M2.0"
+        ],
+        "refs": [
+          {
+            "network": 1055,
+            "oref": "3126",
+            "rid": "332",
+            "nid": "57",
+            "source": "sources/decoded-original/0341-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Tag_48",
+        "addresses": [
+          "%T17"
+        ],
+        "refs": [
+          {
+            "network": 1055,
+            "oref": "3130",
+            "rid": "284",
+            "nid": "57",
+            "source": "sources/decoded-original/0341-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-RUNHOURS",
+    "timers": [],
+    "alarms": [],
+    "boundary": "고유 장치 알람의 복제 없이 아래 검토 영역에 공통 Set/Reset·시간·쓰기 근거를 명시합니다."
+  },
+  "control_reference": {
+    "native": [
+      1018,
+      1056,
+      1055,
+      1048
+    ],
+    "chain": [
+      "대표 BC01 분기는 공유 Tag47 타이머 AND 원시 BC01Fbk를 읽습니다. MIN에 1을 더하고 MIN>=60을 비교한 뒤 HOUR에 상수 1, MIN에 0을 쓰고 ENO 연결을 거쳐 갱신 플래그를 Set합니다. 1018 원본 0308 Part1154 Tag47(T13)/Part1156 BC01Fbk I0.0→W1157 en Add1108/pre Ge1115입니다. Add in1 W1139/ORef1127 hours motors.BC_01_MIN DB9W76, 상수 1 W1140/ORef1128, out W1141/ORef1129 같은 MIN입니다. Ge1115 W1142 MIN>=W1143/ORef1131 상수 60→W1144 Move1118.en입니다. in W1146/ORef1132 상수 1→out1 W1147/ORef1133 BC_01_HOUR DB9W78, eno W1148→Move1121의 0 W1149/ORef1134→MIN W1150/ORef1135, eno W1151→SCoil1124 갱신 플래그 M1.7 W1152/ORef1136입니다. 0614 부모 TOD9, 0615 멤버 BO608/624와 0616 상수를 대조했습니다.",
+      "공유 분 기준은 NOT Tag47 접점으로 제어되는 자기 재설정 형태의 SD 1min입니다. 실제 블록 호출 확인 없이 현재 발생 주기를 확정할 수 없습니다. 1056 원본 0019 Part3120 Negated Tag47 operand W3118/ORef3115→W3121 SdCoil3112입니다. value W3117/ORef3114 S5T#1M, operand W3119/ORef3116 같은 Tag47 T13입니다.",
+      "갱신 플래그는 MEM2_0을 Set합니다. MEM2_0 AND NOT 갱신 플래그는 SD 5s Tag48을 허가하고, Tag48은 MEM2_0을 Reset합니다. HOUR 토큰은 뒤의 Tag48 분기에서 Reset되며, 운전자 Reset으로 확인된 경로가 아닙니다. 1055 원본 0341 Part3147 ON→Part3149 갱신 플래그→W3150 SCoil3110 MEM2_0입니다. 병렬 Part3151 MEM2_0→Part3153 Negated 갱신 플래그→W3154 SdCoil3118(value S5T#5S W3138/ORef3128; operand Tag48 T17 W3141/ORef3130), Part3155 Tag48→W3156 RCoil3123 MEM2_0입니다. 1048 원본 0335 Tag48 Contact2801 W2786/ORef2775→W2802 Move2760과 ENO 직렬 Move 4개, 마지막 Move2772 value 0 W2799/ORef2784→out W2800/ORef2785 BC_01_HOUR입니다."
+    ],
+    "repair": [
+      "1018HOURliteral1및1048zeroreset과실제archive전달대조; 누적값정상여부임의판정금지",
+      "1055title만으로저장성공판정하지않고외부consumer증거필요;PLC변경/시험명령미수행"
+    ],
+    "pending": [
+      "외부 기록·갱신 사용 주체와 절차, 성공적인 저장 완료 응답 및 Flag_Aggiorna_DB 해제는 미확인입니다.",
+      "HOUR의 Move 1 토큰 의미와 누적 시간은 구분합니다. MIN의 0 Reset이나 다른 모터 HOUR Reset만으로 전체 수명 이력 삭제를 증명하지 않습니다.",
+      "Time work motor의 현재 호출, 실제 타이머 주기, Retain·전원 복귀, 오버플로와 현재 피드백의 실제 상태는 미확인입니다.",
+      "782개 태그의 원본 CSV 검색에서 HMI 운전시간 쓰기 위치나 정비 Reset 태그를 확인하지 못했습니다. AbilitaMaintenance 모드는 별도입니다.",
+      "모터별 피드백 대응은 해당 원본 분기로 확인해야 합니다. BC01 예시를 모든 모터에 배정하지 않습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-RUNHOURS",
+    "boundary": "complete_with_gaps; document and read-only observations",
+    "existing_notes": [
+      "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "외부 기록·갱신 사용 주체와 절차, 성공적인 저장 완료 응답 및 Flag_Aggiorna_DB 해제는 미확인입니다.",
+      "HOUR의 Move 1 토큰 의미와 누적 시간은 구분합니다. MIN의 0 Reset이나 다른 모터 HOUR Reset만으로 전체 수명 이력 삭제를 증명하지 않습니다.",
+      "Time work motor의 현재 호출, 실제 타이머 주기, Retain·전원 복귀, 오버플로와 현재 피드백의 실제 상태는 미확인입니다.",
+      "782개 태그의 원본 CSV 검색에서 HMI 운전시간 쓰기 위치나 정비 Reset 태그를 확인하지 못했습니다. AbilitaMaintenance 모드는 별도입니다.",
+      "모터별 피드백 대응은 해당 원본 분기로 확인해야 합니다. BC01 예시를 모든 모터에 배정하지 않습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "외부 기록·갱신 사용 주체와 절차, 성공적인 저장 완료 응답 및 Flag_Aggiorna_DB 해제는 미확인입니다.",
+        "HOUR의 Move 1 토큰 의미와 누적 시간은 구분합니다. MIN의 0 Reset이나 다른 모터 HOUR Reset만으로 전체 수명 이력 삭제를 증명하지 않습니다.",
+        "Time work motor의 현재 호출, 실제 타이머 주기, Retain·전원 복귀, 오버플로와 현재 피드백의 실제 상태는 미확인입니다.",
+        "782개 태그의 원본 CSV 검색에서 HMI 운전시간 쓰기 위치나 정비 Reset 태그를 확인하지 못했습니다. AbilitaMaintenance 모드는 별도입니다.",
+        "모터별 피드백 대응은 해당 원본 분기로 확인해야 합니다. BC01 예시를 모든 모터에 배정하지 않습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-RUNHOURS",
+    "plc_id": "SYS-RUNHOURS",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "운전시간이1 또는0으로보임",
+        "observe": "rawfeedback/Tag47/MIN/HOUR/FlagUpdate/MEM2_0/Tag48/외부대장전후시각",
+        "compare": "1018HOURliteral1및1048zeroreset과실제archive전달대조; 누적값정상여부임의판정금지",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "정비이력이저장되지않음",
+        "observe": "updateflag발생/해제/외부프로그램응답/시간대/기록파일",
+        "compare": "1055title만으로저장성공판정하지않고외부consumer증거필요;PLC변경/시험명령미수행",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "1018-1125",
+        "name": "Tag_47",
+        "role": "responses",
+        "addresses": [
+          "%T13"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1125",
+            "rid": "1",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1126",
+        "name": "대표BC01 Fbk · 공통시간예시",
+        "role": "responses",
+        "addresses": [
+          "%I0.0"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1126",
+            "rid": "122",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1127",
+        "name": "hours motors.BC_01_MIN",
+        "role": "responses",
+        "addresses": [
+          "DB9.DBW76"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1127",
+            "rid": "124",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0615-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1133",
+        "name": "BC01 HOUR token/Move1",
+        "role": "responses",
+        "addresses": [
+          "DB9.DBW78"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1133",
+            "rid": "126",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0615-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1136",
+        "name": "Flag_Aggiorna_DB",
+        "role": "requests",
+        "addresses": [
+          "%M1.7"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1136",
+            "rid": "13",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1055-3126",
+        "name": "MEM2_0",
+        "role": "responses",
+        "addresses": [
+          "%M2.0"
+        ],
+        "refs": [
+          {
+            "network": 1055,
+            "oref": "3126",
+            "rid": "332",
+            "nid": "57",
+            "source": "sources/decoded-original/0341-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1055-3130",
+        "name": "Tag_48",
+        "role": "responses",
+        "addresses": [
+          "%T17"
+        ],
+        "refs": [
+          {
+            "network": 1055,
+            "oref": "3130",
+            "rid": "284",
+            "nid": "57",
+            "source": "sources/decoded-original/0341-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-RUNHOURS",
+    "name": "SYS-RUNHOURS 공통 시스템 근거 관찰",
+    "reference_plc_id": "SYS-RUNHOURS",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "signals": [
+      {
+        "id": "1018-1125",
+        "name": "Tag_47",
+        "role": "responses",
+        "addresses": [
+          "%T13"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1125",
+            "rid": "1",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1126",
+        "name": "대표BC01 Fbk · 공통시간예시",
+        "role": "responses",
+        "addresses": [
+          "%I0.0"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1126",
+            "rid": "122",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1127",
+        "name": "hours motors.BC_01_MIN",
+        "role": "responses",
+        "addresses": [
+          "DB9.DBW76"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1127",
+            "rid": "124",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0615-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1133",
+        "name": "BC01 HOUR token/Move1",
+        "role": "responses",
+        "addresses": [
+          "DB9.DBW78"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1133",
+            "rid": "126",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0615-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1018-1136",
+        "name": "Flag_Aggiorna_DB",
+        "role": "requests",
+        "addresses": [
+          "%M1.7"
+        ],
+        "refs": [
+          {
+            "network": 1018,
+            "oref": "1136",
+            "rid": "13",
+            "nid": "20",
+            "source": "sources/decoded-original/0308-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1055-3126",
+        "name": "MEM2_0",
+        "role": "responses",
+        "addresses": [
+          "%M2.0"
+        ],
+        "refs": [
+          {
+            "network": 1055,
+            "oref": "3126",
+            "rid": "332",
+            "nid": "57",
+            "source": "sources/decoded-original/0341-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "1055-3130",
+        "name": "Tag_48",
+        "role": "responses",
+        "addresses": [
+          "%T17"
+        ],
+        "refs": [
+          {
+            "network": 1055,
+            "oref": "3130",
+            "rid": "284",
+            "nid": "57",
+            "source": "sources/decoded-original/0341-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0613-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "운전시간이1 또는0으로보임",
+        "observe": "rawfeedback/Tag47/MIN/HOUR/FlagUpdate/MEM2_0/Tag48/외부대장전후시각",
+        "compare": "1018HOURliteral1및1048zeroreset과실제archive전달대조; 누적값정상여부임의판정금지",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "정비이력이저장되지않음",
+        "observe": "updateflag발생/해제/외부프로그램응답/시간대/기록파일",
+        "compare": "1055title만으로저장성공판정하지않고외부consumer증거필요;PLC변경/시험명령미수행",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-RUNHOURS 원본 쓰기·주소·공통 기능과 관찰의 분리",
+      "sources": {
+        "draft": "aa3a248f04d888378aef3bb484ad58dbec7596a79e17c73143e60470ad0025ea"
+      },
+      "circuit_equipment": "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다.",
+      "circuit_distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "circuit_pages": [],
+      "construction_boundary": "전용 시공 연결·현행 준공은 미확정. 공통 소프트웨어를 별도 실물로 세지 않습니다.",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "SYS-RUNHOURS 원초안",
+            "path": "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 독립 원본 대조",
+            "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "rawfeedback/Tag47/MIN/HOUR/FlagUpdate/MEM2_0/Tag48/외부대장전후시각"
+            },
+            {
+              "owner": "대조",
+              "work": "1018HOURliteral1및1048zeroreset과실제archive전달대조; 누적값정상여부임의판정금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-RUNHOURS 원초안",
+              "path": "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "updateflag발생/해제/외부프로그램응답/시간대/기록파일"
+            },
+            {
+              "owner": "대조",
+              "work": "1055title만으로저장성공판정하지않고외부consumer증거필요;PLC변경/시험명령미수행"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-RUNHOURS 원초안",
+              "path": "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-RUNHOURS",
+    "plc_id": "SYS-RUNHOURS",
+    "match": "catalog",
+    "sheets": [],
+    "circuit": {
+      "id": "SYS-RUNHOURS",
+      "equipment": "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다.",
+      "distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "paths": [],
+      "pending": [
+        "외부 기록·갱신 사용 주체와 절차, 성공적인 저장 완료 응답 및 Flag_Aggiorna_DB 해제는 미확인입니다.",
+        "HOUR의 Move 1 토큰 의미와 누적 시간은 구분합니다. MIN의 0 Reset이나 다른 모터 HOUR Reset만으로 전체 수명 이력 삭제를 증명하지 않습니다.",
+        "Time work motor의 현재 호출, 실제 타이머 주기, Retain·전원 복귀, 오버플로와 현재 피드백의 실제 상태는 미확인입니다.",
+        "782개 태그의 원본 CSV 검색에서 HMI 운전시간 쓰기 위치나 정비 Reset 태그를 확인하지 못했습니다. AbilitaMaintenance 모드는 별도입니다.",
+        "모터별 피드백 대응은 해당 원본 분기로 확인해야 합니다. BC01 예시를 모든 모터에 배정하지 않습니다."
+      ]
+    },
+    "warnings": [
+      "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "Tag_47, 대표BC01 Fbk · 공통시간예시, hours motors.BC_01_MIN, BC01 HOUR token/Move1, Flag_Aggiorna_DB"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "대표BC01 hour Move1",
+        "networks/network-1018.html#gme-sys-runhours-wire-1147"
+      ],
+      [
+        "공통SD1min원문",
+        "networks/network-1056.html#gme-sys-runhours-wire-3117"
+      ],
+      [
+        "NOT updateflag→SD5s",
+        "networks/network-1055.html#gme-sys-runhours-wire-3154"
+      ]
+    ],
+    "io": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "대표BC01 hour Move1",
+        "networks/network-1018.html#gme-sys-runhours-wire-1147"
+      ],
+      [
+        "공통SD1min원문",
+        "networks/network-1056.html#gme-sys-runhours-wire-3117"
+      ],
+      [
+        "NOT updateflag→SD5s",
+        "networks/network-1055.html#gme-sys-runhours-wire-3154"
+      ]
+    ],
+    "control": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "대표BC01 hour Move1",
+        "networks/network-1018.html#gme-sys-runhours-wire-1147"
+      ],
+      [
+        "공통SD1min원문",
+        "networks/network-1056.html#gme-sys-runhours-wire-3117"
+      ],
+      [
+        "NOT updateflag→SD5s",
+        "networks/network-1055.html#gme-sys-runhours-wire-3154"
+      ]
+    ],
+    "circuits": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ]
+    ],
+    "alarms": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "대표BC01 hour Move1",
+        "networks/network-1018.html#gme-sys-runhours-wire-1147"
+      ],
+      [
+        "공통SD1min원문",
+        "networks/network-1056.html#gme-sys-runhours-wire-3117"
+      ],
+      [
+        "NOT updateflag→SD5s",
+        "networks/network-1055.html#gme-sys-runhours-wire-3154"
+      ]
+    ],
+    "repair": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "대표BC01 hour Move1",
+        "networks/network-1018.html#gme-sys-runhours-wire-1147"
+      ],
+      [
+        "공통SD1min원문",
+        "networks/network-1056.html#gme-sys-runhours-wire-3117"
+      ],
+      [
+        "NOT updateflag→SD5s",
+        "networks/network-1055.html#gme-sys-runhours-wire-3154"
+      ]
+    ],
+    "completion": [
+      [
+        "SYS-RUNHOURS 원초안",
+        "catalog-sources/SYS-RUNHOURS-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "대표BC01 hour Move1",
+        "networks/network-1018.html#gme-sys-runhours-wire-1147"
+      ],
+      [
+        "공통SD1min원문",
+        "networks/network-1056.html#gme-sys-runhours-wire-3117"
+      ],
+      [
+        "NOT updateflag→SD5s",
+        "networks/network-1055.html#gme-sys-runhours-wire-3154"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "type": "reviewed",
+        "id": "current-native-review",
+        "title": "현재 원본 독립 대조와 소유 경계",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "공통 Time work motor 프로그램은 각기 다른 피드백과 hours motors 멤버를 사용합니다. 대표 BC01 분기는 관련 예시이며 모든 모터의 피드백을 소유하지 않습니다. HOUR 토큰과 외부 기록·갱신 절차를 구분하며 정비 완료로 표시하지 않습니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "현재 2차 대상은 실제 대장129개입니다. 원초안의 v1.12.0·133개·과거 게시 상태는 당시 조사 이력입니다."
+            },
+            {
+              "type": "list",
+              "items": [
+                "대표 BC01 분기는 공유 Tag47 타이머 AND 원시 BC01Fbk를 읽습니다. MIN에 1을 더하고 MIN>=60을 비교한 뒤 HOUR에 상수 1, MIN에 0을 쓰고 ENO 연결을 거쳐 갱신 플래그를 Set합니다. 1018 원본 0308 Part1154 Tag47(T13)/Part1156 BC01Fbk I0.0→W1157 en Add1108/pre Ge1115입니다. Add in1 W1139/ORef1127 hours motors.BC_01_MIN DB9W76, 상수 1 W1140/ORef1128, out W1141/ORef1129 같은 MIN입니다. Ge1115 W1142 MIN>=W1143/ORef1131 상수 60→W1144 Move1118.en입니다. in W1146/ORef1132 상수 1→out1 W1147/ORef1133 BC_01_HOUR DB9W78, eno W1148→Move1121의 0 W1149/ORef1134→MIN W1150/ORef1135, eno W1151→SCoil1124 갱신 플래그 M1.7 W1152/ORef1136입니다. 0614 부모 TOD9, 0615 멤버 BO608/624와 0616 상수를 대조했습니다. HOUR 쓰기는 Move 1이며 경과 시간 누계에 Add하는 구조가 아닙니다. MIN 증가가 정확한 실제 시계 기준 1분인지, 외부 기록이 저장되었는지, 피드백만으로 현장 모터가 실제 운전 중인지 확인하지 않았습니다.",
+                "공유 분 기준은 NOT Tag47 접점으로 제어되는 자기 재설정 형태의 SD 1min입니다. 실제 블록 호출 확인 없이 현재 발생 주기를 확정할 수 없습니다. 1056 원본 0019 Part3120 Negated Tag47 operand W3118/ORef3115→W3121 SdCoil3112입니다. value W3117/ORef3114 S5T#1M, operand W3119/ORef3116 같은 Tag47 T13입니다. 원본의 1min은 SD 설정값입니다. 현재 OB 호출·스캔과 타이머 에지 지속 시간을 측정하지 않았으므로 정확한 경과 시간 누적으로 표시하지 않습니다.",
+                "갱신 플래그는 MEM2_0을 Set합니다. MEM2_0 AND NOT 갱신 플래그는 SD 5s Tag48을 허가하고, Tag48은 MEM2_0을 Reset합니다. HOUR 토큰은 뒤의 Tag48 분기에서 Reset되며, 운전자 Reset으로 확인된 경로가 아닙니다. 1055 원본 0341 Part3147 ON→Part3149 갱신 플래그→W3150 SCoil3110 MEM2_0입니다. 병렬 Part3151 MEM2_0→Part3153 Negated 갱신 플래그→W3154 SdCoil3118(value S5T#5S W3138/ORef3128; operand Tag48 T17 W3141/ORef3130), Part3155 Tag48→W3156 RCoil3123 MEM2_0입니다. 1048 원본 0335 Tag48 Contact2801 W2786/ORef2775→W2802 Move2760과 ENO 직렬 Move 4개, 마지막 Move2772 value 0 W2799/ORef2784→out W2800/ORef2785 BC_01_HOUR입니다. Flag_Aggiorna_DB를 해제하는 쓰기 위치나 실제 외부 기록 완료 응답은 여기서 확인하지 못했습니다. 허용된 원본 대장에는 해당 플래그의 Set·읽기만 있습니다. 타이머·Reset 의도는 기록 성공의 증거가 아닙니다."
+              ]
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,939 @@
+{
+  "catalog_id": "LT01",
+  "selection_key": "LT01",
+  "priority_key": null,
+  "type": "part",
+  "draft": "catalog-sources/LT01-CODEX-REVIEW.md",
+  "draft_sha256": "a3913b81337258256f6db510add18189c66f7e67cec57577a27319afe6b7e864",
+  "draft_provenance": "Codex 현재 원본 대조 기준 93fa00c447229202bbffc4096c2fe004f12a83ae / v1.22.0. Dots와 자료/상충을 상담하고 기존 원문을 별도 보존했습니다. 해시 대조와 현재 CPU·실물 검증은 별개입니다.",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1070,
+      "part",
+      "130"
+    ],
+    [
+      1070,
+      "part",
+      "94"
+    ],
+    [
+      1070,
+      "wire",
+      "133"
+    ],
+    [
+      1070,
+      "wire",
+      "92"
+    ],
+    [
+      1228,
+      "part",
+      "308"
+    ],
+    [
+      1228,
+      "part",
+      "314"
+    ],
+    [
+      1228,
+      "wire",
+      "29"
+    ],
+    [
+      1228,
+      "wire",
+      "33"
+    ]
+  ],
+  "internal_names": [
+    "ll_ld01",
+    "LT01 현재 자료 판본·실물 동일성·관찰 시각",
+    "LD01 관련 경보 원문·원래 소유·발생/해제 시각"
+  ],
+  "source_pairs": [
+    {
+      "signal": "ll_ld01",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "92",
+      "label": "원본 1070 · ll_ld01 · Contact.operand",
+      "boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P003.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P005.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P036.png",
+    "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P060.png",
+    "assets/catalog-circuits/Electrical_Rev2-P171.png",
+    "assets/catalog-circuits/PID_1684n002I-P001.png",
+    "catalog-sources/DOTS-ASSET-62-HANDOFF-20261012.json",
+    "catalog-sources/LT01-DOTS-DRAFT.md",
+    "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json",
+    "sources/decoded-original/0052-IdentXmlPart.xml",
+    "sources/decoded-original/0161-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0570-IdentXmlPart.xml",
+    "sources/decoded-original/0573-IdentXmlPart.xml",
+    "sources/decoded-original/0574-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "LT01",
+    "signals": [
+      {
+        "name": "ll_ld01",
+        "addresses": [
+          "%i28.5"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "95",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "part": "94",
+            "wire": "92"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "LT01 현재 자료 판본·실물 동일성·관찰 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      },
+      {
+        "name": "LD01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "addresses": [],
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "LT01",
+    "timers": [],
+    "alarms": [],
+    "boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다."
+  },
+  "control_reference": {
+    "native": [
+      1070,
+      1228
+    ],
+    "chain": [
+      "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.\n\nLL_LD01은 Bool·I28.5이며 hmi inputs 네트워크1070에서 읽힙니다. 알람1228은 가공된 Inputs.LD-01 Minimo를 사용합니다.\n\n- 원시 이름의 핀 참조를 확인한 네트워크: 1070. 읽기·쓰기·호출은 원본 Part/Wire/ORef 표로 구분합니다.\n- 관련 처리·부모 신호: Inputs.LD-01 Minimo, Allarm.LD_01_MIN. 관련 신호를 새로운 구성품 전용 제어로 복제하지 않습니다.\n\n| 고유/관련 원문 이름 | 원본 네트워크 | 명령 UID·Gate·Pin | Wire·ORef | 소유 경계 |\n| --- | --- | --- | --- | --- |\n| LL_LD01 | 1070 | 94 Contact.operand | 92 / 95 | P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. |\n| Inputs.LD-01 Minimo | 1070 | 130 Coil.operand | 133 / 131 | P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. |\n| Inputs.LD-01 Minimo | 1228 | 308 Contact.operand | 29 / 30 | P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. |\n| Inputs.LD-01 Minimo | 1228 | 314 Contact.operand | 33 / 34 | P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. |"
+    ],
+    "repair": [
+      "OEM FG170/PDF171와 현재 명판·태그·배선 끝점을 비교합니다.",
+      "원시 핀 네트워크 1070 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+      "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다."
+    ],
+    "pending": [
+      "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "LT01",
+    "boundary": "complete_with_gaps; source-linked documentation only",
+    "existing_notes": [
+      "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+      "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+      "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "LT01의 문서·정적 검토 결과와 다음에 필요한 증거를 구분하여 인계합니다.\n\n- P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.\n- 이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.\n- 시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+    },
+    {
+      "type": "paragraph",
+      "text": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "LT01",
+    "plc_id": "LT01",
+    "boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "LT01 식별·연결 관찰",
+        "observe": "이산 레벨 접점·퓨즈·단자 X3:109/110 및 E28.5의 실제 배선",
+        "compare": "OEM FG170/PDF171와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "LT01 상태·반응 분리",
+        "observe": "원시 LL_LD01·가공 Inputs.LD-01 Minimo·Allarm.LD_01_MIN의 별도 값과 시각",
+        "compare": "원시 핀 네트워크 1070 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "LT01 미확정 범위 인계",
+        "observe": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+        "compare": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "ll_ld01",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i28.5"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "95",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "part": "94",
+            "wire": "92"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "LT01 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      },
+      {
+        "id": "parent-event",
+        "name": "LD01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "부모 경보의 관찰 기록이며 LT01 전용 알람으로 재분류하지 않습니다.",
+        "source_class": "parent_observation"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "LT01",
+    "name": "LT01 석회 사일로 레벨 근거 관찰",
+    "reference_plc_id": "LT01",
+    "boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+    "signals": [
+      {
+        "id": "signal-1",
+        "name": "ll_ld01",
+        "role": "raw_inputs",
+        "addresses": [
+          "%i28.5"
+        ],
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "95",
+            "source": "sources/decoded-original/0397-FlgNet.xml",
+            "part": "94",
+            "wire": "92"
+          }
+        ],
+        "boundary": "원본 XML 선언·주소 대조 일치. P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "own_backup_io"
+      },
+      {
+        "id": "source-identity",
+        "name": "LT01 현재 자료 판본·실물 동일성·관찰 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+        "source_class": "physical_observation"
+      },
+      {
+        "id": "parent-event",
+        "name": "LD01 관련 경보 원문·원래 소유·발생/해제 시각",
+        "role": "responses",
+        "addresses": [],
+        "refs": [],
+        "boundary": "부모 경보의 관찰 기록이며 LT01 전용 알람으로 재분류하지 않습니다.",
+        "source_class": "parent_observation"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "LT01 식별·연결 관찰",
+        "observe": "이산 레벨 접점·퓨즈·단자 X3:109/110 및 E28.5의 실제 배선",
+        "compare": "OEM FG170/PDF171와 현재 명판·태그·배선 끝점을 비교합니다.",
+        "next": "상충하는 이름·단자·연결은 별도 기록하고 현재 동일성 증거를 확보합니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "LT01 상태·반응 분리",
+        "observe": "원시 LL_LD01·가공 Inputs.LD-01 Minimo·Allarm.LD_01_MIN의 별도 값과 시각",
+        "compare": "원시 핀 네트워크 1070 및 부모 처리·명령·알람을 같은 시각에 구분합니다.",
+        "next": "현재 값·시각·실제 반응을 분리하여 기록하고 미확보 전달·극성을 확정하지 않습니다."
+      },
+      {
+        "id": "symptom-3",
+        "common": "step-symptom-3",
+        "title": "LT01 미확정 범위 인계",
+        "observe": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+        "compare": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+        "next": "수집한 관찰과 원본 대조 결과를 인계하며 문서 검토·TIA·현재 CPU·현장 복구 상태를 따로 기록합니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "LT01 고유 근거·관련 부모/외부 장치 소유 대조",
+      "sources": {
+        "draft": "a3913b81337258256f6db510add18189c66f7e67cec57577a27319afe6b7e864"
+      },
+      "circuit_equipment": "LT01",
+      "circuit_distinction": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+      "circuit_pages": [
+        {
+          "label": "FG170 · PDF171 · E28.5177/5",
+          "path": "sources/Electrical_Rev2.pdf#page=171"
+        },
+        {
+          "label": "P&ID · PDF1 · LT-01",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "FOR APPROVAL / first draft design와 현행 준공·단자·실물 동일성 별도",
+      "construction_pages": [
+        {
+          "label": "시공 원본 PDF3",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+        },
+        {
+          "label": "시공 원본 PDF5",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+        },
+        {
+          "label": "시공 원본 PDF36",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+        },
+        {
+          "label": "시공 원본 PDF60",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "현재 검토 원문",
+            "path": "catalog-sources/LT01-CODEX-REVIEW.md"
+          },
+          {
+            "label": "Dots 보존 원초안",
+            "path": "catalog-sources/LT01-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 원본 독립 조사",
+            "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "LD01 부모 근거 · 전용 소유 유지",
+            "path": "catalog-guides/LD01.html"
+          },
+          {
+            "label": "FG170 · PDF171 · E28.5177/5",
+            "path": "sources/Electrical_Rev2.pdf#page=171"
+          },
+          {
+            "label": "시공 원본 PDF3",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+          },
+          {
+            "label": "시공 원본 PDF5",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+          },
+          {
+            "label": "시공 원본 PDF36",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+          },
+          {
+            "label": "시공 원본 PDF60",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+          },
+          {
+            "label": "P&ID · PDF1 · LT-01",
+            "path": "sources/PID_1684n002I.pdf#page=1"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "이산 레벨 접점·퓨즈·단자 X3:109/110 및 E28.5의 실제 배선"
+            },
+            {
+              "owner": "대조",
+              "work": "OEM FG170/PDF171와 현재 명판·태그·배선 끝점을 비교합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LT01-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LT01-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "LD01 부모 근거 · 전용 소유 유지",
+              "path": "catalog-guides/LD01.html"
+            },
+            {
+              "label": "FG170 · PDF171 · E28.5177/5",
+              "path": "sources/Electrical_Rev2.pdf#page=171"
+            },
+            {
+              "label": "시공 원본 PDF3",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 원본 PDF5",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 원본 PDF36",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+            },
+            {
+              "label": "시공 원본 PDF60",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+            },
+            {
+              "label": "P&ID · PDF1 · LT-01",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "원시 LL_LD01·가공 Inputs.LD-01 Minimo·Allarm.LD_01_MIN의 별도 값과 시각"
+            },
+            {
+              "owner": "대조",
+              "work": "원시 핀 네트워크 1070 및 부모 처리·명령·알람을 같은 시각에 구분합니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LT01-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LT01-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "LD01 부모 근거 · 전용 소유 유지",
+              "path": "catalog-guides/LD01.html"
+            },
+            {
+              "label": "FG170 · PDF171 · E28.5177/5",
+              "path": "sources/Electrical_Rev2.pdf#page=171"
+            },
+            {
+              "label": "시공 원본 PDF3",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 원본 PDF5",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 원본 PDF36",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+            },
+            {
+              "label": "시공 원본 PDF60",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+            },
+            {
+              "label": "P&ID · PDF1 · LT-01",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다."
+            },
+            {
+              "owner": "대조",
+              "work": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다."
+            }
+          ],
+          "source_links": [
+            {
+              "label": "현재 검토 원문",
+              "path": "catalog-sources/LT01-CODEX-REVIEW.md"
+            },
+            {
+              "label": "Dots 보존 원초안",
+              "path": "catalog-sources/LT01-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 원본 독립 조사",
+              "path": "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "LD01 부모 근거 · 전용 소유 유지",
+              "path": "catalog-guides/LD01.html"
+            },
+            {
+              "label": "FG170 · PDF171 · E28.5177/5",
+              "path": "sources/Electrical_Rev2.pdf#page=171"
+            },
+            {
+              "label": "시공 원본 PDF3",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 원본 PDF5",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 원본 PDF36",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+            },
+            {
+              "label": "시공 원본 PDF60",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+            },
+            {
+              "label": "P&ID · PDF1 · LT-01",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "LT01",
+    "plc_id": "LT01",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-171",
+        "kind": "OEM 전기",
+        "title": "FG170 · PDF171 · E28.5177/5",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 171,
+        "fg": 170,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P171.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "페이지 원문 개정란 기준; 파일명으로 추정 안 함"
+      },
+      {
+        "id": "construction-3",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF3",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 3,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P003.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "construction-5",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF5",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 5,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P005.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "construction-36",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF36",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 36,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P036.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "construction-60",
+        "kind": "시공·케이블",
+        "title": "시공 원본 PDF60",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 60,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P060.png",
+        "extent": "원본 전체 페이지",
+        "status": "FOR APPROVAL / first draft design; 현재 승인·준공 미확정",
+        "revision": "18.11.2024 자료; 행별 원문/개정 확인 필요"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1 · LT-01",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "2013 보존 공정 도식; 현행 실물 미확정",
+        "revision": "I 15/01/2013; 최초06/04/2011"
+      }
+    ],
+    "circuit": {
+      "id": "LT01",
+      "equipment": "LT01 고유·관련 도면 소유 구분",
+      "distinction": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+      "paths": [
+        {
+          "signal": "ll_ld01",
+          "backup": "%i28.5",
+          "drawing": "E28.5",
+          "fg": 170,
+          "sheet_id": "oem-171",
+          "nodes": [
+            "Electrical_Rev2 FG170 / PDF171 원문 E28.5",
+            "백업 원문 신호 ll_ld01 / %i28.5"
+          ],
+          "destination": "원문 도면과 백업 선언을 대조하는 경로; 현재 배선·전달·실제 응답은 별도",
+          "check": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "95"
+            }
+          ]
+        }
+      ],
+      "pending": [
+        "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+        "이번 범위는 원본 정적 문서 검토입니다. TIA에서 현재 프로젝트·호출·복수 쓰기·컴파일을 확인하는 작업, 현재 CPU 비교, 실제 현장 시험·복구는 미수행·미확정입니다.",
+        "시뮬레이터는 영구 중지입니다. 이전 대장의 오프라인 실행·시험 설계 문구를 시뮬레이터 생성·실행 재개 지시로 사용하지 않습니다. 실제 PLC·현장·보호값 변경은 수행하지 않았습니다."
+      ]
+    },
+    "warnings": [
+      "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다.",
+      "현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "P&ID LT-01과 OEM 이산 저레벨 접점의 현재 실물 동일성 및 정상 극성은 확인 전입니다. 아날로그 환산이나 사일로 백분율을 만들지 않습니다. 현재 CPU·호출/최종쓰기·실물·정상 극성·현재 승인 설정·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "LT01, LD01, ll_ld01, LT01 현재 자료 판본·실물 동일성·관찰 시각, LD01 관련 경보 원문·원래 소유·발생/해제 시각"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "FG170 · PDF171 · E28.5177/5",
+        "sources/Electrical_Rev2.pdf#page=171"
+      ],
+      [
+        "시공 원본 PDF3",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 원본 PDF5",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 원본 PDF36",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+      ],
+      [
+        "시공 원본 PDF60",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+      ],
+      [
+        "P&ID · PDF1 · LT-01",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "io": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "원본 1070 · ll_ld01 · Contact.operand",
+        "networks/network-1070.html#gme-lt01-wire-92"
+      ]
+    ],
+    "control": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "원본 1070 · ll_ld01 · Contact.operand",
+        "networks/network-1070.html#gme-lt01-wire-92"
+      ]
+    ],
+    "circuits": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "FG170 · PDF171 · E28.5177/5",
+        "sources/Electrical_Rev2.pdf#page=171"
+      ],
+      [
+        "시공 원본 PDF3",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 원본 PDF5",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 원본 PDF36",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+      ],
+      [
+        "시공 원본 PDF60",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+      ],
+      [
+        "P&ID · PDF1 · LT-01",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "alarms": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "원본 1070 · ll_ld01 · Contact.operand",
+        "networks/network-1070.html#gme-lt01-wire-92"
+      ]
+    ],
+    "repair": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "FG170 · PDF171 · E28.5177/5",
+        "sources/Electrical_Rev2.pdf#page=171"
+      ],
+      [
+        "시공 원본 PDF3",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 원본 PDF5",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 원본 PDF36",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+      ],
+      [
+        "시공 원본 PDF60",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+      ],
+      [
+        "P&ID · PDF1 · LT-01",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ],
+    "completion": [
+      [
+        "현재 검토 원문",
+        "catalog-sources/LT01-CODEX-REVIEW.md"
+      ],
+      [
+        "Dots 보존 원초안",
+        "catalog-sources/LT01-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 원본 독립 조사",
+        "catalog-sources/REMAINING-ASSETS-NATIVE-REVIEW.json"
+      ],
+      [
+        "LD01 부모 근거 · 전용 소유 유지",
+        "catalog-guides/LD01.html"
+      ],
+      [
+        "FG170 · PDF171 · E28.5177/5",
+        "sources/Electrical_Rev2.pdf#page=171"
+      ],
+      [
+        "시공 원본 PDF3",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 원본 PDF5",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 원본 PDF36",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=36"
+      ],
+      [
+        "시공 원본 PDF60",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+      ],
+      [
+        "P&ID · PDF1 · LT-01",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ]
+  }
+}

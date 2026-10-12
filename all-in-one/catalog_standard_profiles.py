@@ -134,7 +134,7 @@ def add_catalog_profiles(root,data,source_rows):
         cfg={**config,'reviewed_sections':sections,'extra_sources':config['extra_sources']+[str(definition.relative_to(root)),config['draft']], 'reviewed_native_only':True}
         profile=build_static_profile(root,data,source_rows,cfg)
         sections['overview'].append(dict(id='review-source-hashes',title='검토 원본·해시와 자료 기준',type='reviewed',value=dict(blocks=[
-            dict(type='paragraph',text='Dots 조사 기준 abcf31c5030bc7ef8749ed8e869a857f2387a28a / v1.12.0. 아래 해시는 현재 통합에 사용한 보존 원본·초안·검토 정의·도면 이미지의 전체 바이트 기준입니다. 원본 대응과 현재 CPU·현장 확인은 별개입니다.'),
+            dict(type='paragraph',text=config.get('draft_provenance','Dots 조사 기준 abcf31c5030bc7ef8749ed8e869a857f2387a28a / v1.12.0. 아래 해시는 현재 통합에 사용한 보존 원본·초안·검토 정의·도면 이미지의 전체 바이트 기준입니다. 원본 대응과 현재 CPU·현장 확인은 별개입니다.')),
             dict(type='table',headers=['파일','SHA-256'],rows=[[path,digest]for path,digest in profile['source_hashes'].items()]),
             dict(type='paragraph',text='자료 묶음 SHA-256: '+profile['source_bundle_sha256'])]),links=[]))
         # Link each reviewed section to its actual original scope and PDF sheets.

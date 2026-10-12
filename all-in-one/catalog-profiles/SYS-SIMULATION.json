@@ -1,0 +1,934 @@
+{
+  "catalog_id": "SYS-SIMULATION",
+  "selection_key": "SYS-SIMULATION",
+  "priority_key": null,
+  "type": "software_reference_only",
+  "draft": "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md",
+  "draft_sha256": "6516d691840bf874f700c579f10ee15595fcad7695e457ceaf4d52301678b514",
+  "draft_provenance": "Codex 현재 원본 대조 기준 93fa00c447229202bbffc4096c2fe004f12a83ae / v1.22.0. Dots와 영구중지 경계를 상담한 정적 참조 문서이며 새 시뮬레이터가 아닙니다.",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [],
+  "internal_names": [
+    "Simulation(1)",
+    "UNDER TESTING"
+  ],
+  "source_pairs": [],
+  "extra_sources": [
+    "catalog-sources/SYS-SIMULATION-DECLARATION-REVIEW.json",
+    "sources/decoded-original/0402-FlgNet.xml",
+    "sources/decoded-original/0403-FlgNet.xml",
+    "sources/decoded-original/0404-FlgNet.xml",
+    "sources/decoded-original/0405-FlgNet.xml",
+    "sources/decoded-original/0406-FlgNet.xml",
+    "sources/decoded-original/0407-FlgNet.xml",
+    "sources/decoded-original/0408-FlgNet.xml",
+    "sources/decoded-original/0409-FlgNet.xml",
+    "sources/decoded-original/0410-FlgNet.xml",
+    "sources/decoded-original/0411-FlgNet.xml",
+    "sources/decoded-original/0412-FlgNet.xml",
+    "sources/decoded-original/0413-FlgNet.xml",
+    "sources/decoded-original/0414-FlgNet.xml",
+    "sources/decoded-original/0415-FlgNet.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0607-IdentXmlPart.xml",
+    "sources/decoded-original/0617-IdentXmlPart.xml",
+    "sources/decoded-original/0658-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "SYS-SIMULATION",
+    "signals": [
+      {
+        "name": "Simulation(1) · 보존 선언 관찰",
+        "addresses": [
+          "%M180.0"
+        ],
+        "usages": []
+      },
+      {
+        "name": "UNDER TESTING · 보존 선언 관찰",
+        "addresses": [
+          "%M5.5"
+        ],
+        "usages": []
+      },
+      {
+        "name": "영구중지 상태·자료 판본·원본 해시 기록",
+        "addresses": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-SIMULATION",
+    "timers": [],
+    "alarms": []
+  },
+  "control_reference": {
+    "native": [
+      1079,
+      1080,
+      1081,
+      1082,
+      1083,
+      1084,
+      1085,
+      1086,
+      1087,
+      1088,
+      1089,
+      1090,
+      1091,
+      1092
+    ],
+    "chain": [
+      "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+    ],
+    "repair": [
+      "해당 설비의 전용 원본과 보존 Simulation 참조를 구분합니다. 이 문서의 목록을 실제 입력 전달 증거로 사용하지 않습니다.",
+      "백업 Memory 선언과 현재 실행을 분리합니다. 비트 전환·가상 시나리오·실행 시험은 하지 않습니다."
+    ],
+    "pending": [
+      "현재 승인 엔지니어링 프로젝트에서 해당 블록의 호출·조건·다른 Writer 및 실제 온라인 상태 대조 필요",
+      "원시 물리 입력·처리 Inputs·시험 비트는 서로 다른 근거이며 보존 Simulation의 쓰기 후보로 실물 전달을 확정하지 않음",
+      "개별 설비의 정상 극성·실물·보호 설정·재기동·복구는 별도 담당 자료 필요",
+      "신규 시뮬레이터 개발·실행 재개 대상에서 영구 제외; 중지5자산 해시 보존"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-SIMULATION",
+    "boundary": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+    "existing_notes": [
+      "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+    ],
+    "existing_pending": [
+      "현재 승인 엔지니어링 프로젝트에서 해당 블록의 호출·조건·다른 Writer 및 실제 온라인 상태 대조 필요",
+      "원시 물리 입력·처리 Inputs·시험 비트는 서로 다른 근거이며 보존 Simulation의 쓰기 후보로 실물 전달을 확정하지 않음",
+      "개별 설비의 정상 극성·실물·보호 설정·재기동·복구는 별도 담당 자료 필요",
+      "신규 시뮬레이터 개발·실행 재개 대상에서 영구 제외; 중지5자산 해시 보존"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "현재 승인 엔지니어링 프로젝트에서 해당 블록의 호출·조건·다른 Writer 및 실제 온라인 상태 대조 필요",
+        "원시 물리 입력·처리 Inputs·시험 비트는 서로 다른 근거이며 보존 Simulation의 쓰기 후보로 실물 전달을 확정하지 않음",
+        "개별 설비의 정상 극성·실물·보호 설정·재기동·복구는 별도 담당 자료 필요",
+        "신규 시뮬레이터 개발·실행 재개 대상에서 영구 제외; 중지5자산 해시 보존"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-SIMULATION",
+    "plc_id": "SYS-SIMULATION",
+    "boundary": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "실물 응답과 문서의 처리 응답이 다름",
+        "observe": "기존 관찰 시각·원시 입력·처리 입력·프로젝트 판본 및 실제 설비 명칭",
+        "compare": "해당 설비의 전용 원본과 보존 Simulation 참조를 구분합니다. 이 문서의 목록을 실제 입력 전달 증거로 사용하지 않습니다.",
+        "next": "현재 승인 엔지니어링 프로젝트에서 해당 블록의 호출·조건·다른 Writer 및 실제 온라인 상태 대조 필요"
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "시험 비트의 의미 또는 현재 적용 여부가 불명확함",
+        "observe": "담당자가 제공한 현재 승인 프로젝트의 호출·교차참조 자료와 판본",
+        "compare": "백업 Memory 선언과 현재 실행을 분리합니다. 비트 전환·가상 시나리오·실행 시험은 하지 않습니다.",
+        "next": "신규 시뮬레이터 개발·실행 재개 대상에서 영구 제외; 중지5자산 해시 보존"
+      }
+    ],
+    "signals": [
+      {
+        "id": "preserved-mode-declaration",
+        "role": "responses",
+        "name": "Simulation(1) · 보존 선언 관찰",
+        "addresses": [
+          "%M180.0"
+        ],
+        "refs": [],
+        "boundary": "0692 RID140/SAD Memory/AO1440 및 0658·0678 동일 명칭 선언을 대조한 백업 주소입니다. 실행 허가나 현재 모드가 아닙니다."
+      },
+      {
+        "id": "preserved-testing-declaration",
+        "role": "responses",
+        "name": "UNDER TESTING · 보존 선언 관찰",
+        "addresses": [
+          "%M5.5"
+        ],
+        "refs": [],
+        "boundary": "0602/0607/0617/0670의 SAD Memory/AO45 선언입니다. 현재값·설정·호출을 읽거나 쓰지 않았습니다."
+      },
+      {
+        "id": "stop-policy",
+        "role": "responses",
+        "name": "영구중지 상태·자료 판본·원본 해시 기록",
+        "addresses": [],
+        "refs": [],
+        "boundary": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-SIMULATION",
+    "name": "SYS-SIMULATION 보존 원본·중지 상태 관찰",
+    "reference_plc_id": "SYS-SIMULATION",
+    "boundary": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+    "signals": [
+      {
+        "id": "preserved-mode-declaration",
+        "role": "responses",
+        "name": "Simulation(1) · 보존 선언 관찰",
+        "addresses": [
+          "%M180.0"
+        ],
+        "refs": [],
+        "boundary": "0692 RID140/SAD Memory/AO1440 및 0658·0678 동일 명칭 선언을 대조한 백업 주소입니다. 실행 허가나 현재 모드가 아닙니다."
+      },
+      {
+        "id": "preserved-testing-declaration",
+        "role": "responses",
+        "name": "UNDER TESTING · 보존 선언 관찰",
+        "addresses": [
+          "%M5.5"
+        ],
+        "refs": [],
+        "boundary": "0602/0607/0617/0670의 SAD Memory/AO45 선언입니다. 현재값·설정·호출을 읽거나 쓰지 않았습니다."
+      },
+      {
+        "id": "stop-policy",
+        "role": "responses",
+        "name": "영구중지 상태·자료 판본·원본 해시 기록",
+        "addresses": [],
+        "refs": [],
+        "boundary": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "실물 응답과 문서의 처리 응답이 다름",
+        "observe": "기존 관찰 시각·원시 입력·처리 입력·프로젝트 판본 및 실제 설비 명칭",
+        "compare": "해당 설비의 전용 원본과 보존 Simulation 참조를 구분합니다. 이 문서의 목록을 실제 입력 전달 증거로 사용하지 않습니다.",
+        "next": "현재 승인 엔지니어링 프로젝트에서 해당 블록의 호출·조건·다른 Writer 및 실제 온라인 상태 대조 필요"
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "시험 비트의 의미 또는 현재 적용 여부가 불명확함",
+        "observe": "담당자가 제공한 현재 승인 프로젝트의 호출·교차참조 자료와 판본",
+        "compare": "백업 Memory 선언과 현재 실행을 분리합니다. 비트 전환·가상 시나리오·실행 시험은 하지 않습니다.",
+        "next": "신규 시뮬레이터 개발·실행 재개 대상에서 영구 제외; 중지5자산 해시 보존"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+      "sources": {
+        "draft": "6516d691840bf874f700c579f10ee15595fcad7695e457ceaf4d52301678b514"
+      },
+      "circuit_equipment": "전용 전기 경로 배정 안 함",
+      "circuit_distinction": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+      "circuit_pages": [],
+      "construction_boundary": "해당 실물의 도면 소유 유지",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "보존 참조 원문",
+            "path": "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+          },
+          {
+            "label": "보존 Simulation 1079",
+            "path": "networks/network-1079.html"
+          },
+          {
+            "label": "보존 Simulation 1080",
+            "path": "networks/network-1080.html"
+          },
+          {
+            "label": "보존 Simulation 1081",
+            "path": "networks/network-1081.html"
+          },
+          {
+            "label": "보존 Simulation 1082",
+            "path": "networks/network-1082.html"
+          },
+          {
+            "label": "보존 Simulation 1083",
+            "path": "networks/network-1083.html"
+          },
+          {
+            "label": "보존 Simulation 1084",
+            "path": "networks/network-1084.html"
+          },
+          {
+            "label": "보존 Simulation 1085",
+            "path": "networks/network-1085.html"
+          },
+          {
+            "label": "보존 Simulation 1086",
+            "path": "networks/network-1086.html"
+          },
+          {
+            "label": "보존 Simulation 1087",
+            "path": "networks/network-1087.html"
+          },
+          {
+            "label": "보존 Simulation 1088",
+            "path": "networks/network-1088.html"
+          },
+          {
+            "label": "보존 Simulation 1089",
+            "path": "networks/network-1089.html"
+          },
+          {
+            "label": "보존 Simulation 1090",
+            "path": "networks/network-1090.html"
+          },
+          {
+            "label": "보존 Simulation 1091",
+            "path": "networks/network-1091.html"
+          },
+          {
+            "label": "보존 Simulation 1092",
+            "path": "networks/network-1092.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "기존 관찰 시각·원시 입력·처리 입력·프로젝트 판본 및 실제 설비 명칭"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "보존 참조 원문",
+              "path": "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+            },
+            {
+              "label": "보존 Simulation 1079",
+              "path": "networks/network-1079.html"
+            },
+            {
+              "label": "보존 Simulation 1080",
+              "path": "networks/network-1080.html"
+            },
+            {
+              "label": "보존 Simulation 1081",
+              "path": "networks/network-1081.html"
+            },
+            {
+              "label": "보존 Simulation 1082",
+              "path": "networks/network-1082.html"
+            },
+            {
+              "label": "보존 Simulation 1083",
+              "path": "networks/network-1083.html"
+            },
+            {
+              "label": "보존 Simulation 1084",
+              "path": "networks/network-1084.html"
+            },
+            {
+              "label": "보존 Simulation 1085",
+              "path": "networks/network-1085.html"
+            },
+            {
+              "label": "보존 Simulation 1086",
+              "path": "networks/network-1086.html"
+            },
+            {
+              "label": "보존 Simulation 1087",
+              "path": "networks/network-1087.html"
+            },
+            {
+              "label": "보존 Simulation 1088",
+              "path": "networks/network-1088.html"
+            },
+            {
+              "label": "보존 Simulation 1089",
+              "path": "networks/network-1089.html"
+            },
+            {
+              "label": "보존 Simulation 1090",
+              "path": "networks/network-1090.html"
+            },
+            {
+              "label": "보존 Simulation 1091",
+              "path": "networks/network-1091.html"
+            },
+            {
+              "label": "보존 Simulation 1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "담당자가 제공한 현재 승인 프로젝트의 호출·교차참조 자료와 판본"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "보존 참조 원문",
+              "path": "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+            },
+            {
+              "label": "보존 Simulation 1079",
+              "path": "networks/network-1079.html"
+            },
+            {
+              "label": "보존 Simulation 1080",
+              "path": "networks/network-1080.html"
+            },
+            {
+              "label": "보존 Simulation 1081",
+              "path": "networks/network-1081.html"
+            },
+            {
+              "label": "보존 Simulation 1082",
+              "path": "networks/network-1082.html"
+            },
+            {
+              "label": "보존 Simulation 1083",
+              "path": "networks/network-1083.html"
+            },
+            {
+              "label": "보존 Simulation 1084",
+              "path": "networks/network-1084.html"
+            },
+            {
+              "label": "보존 Simulation 1085",
+              "path": "networks/network-1085.html"
+            },
+            {
+              "label": "보존 Simulation 1086",
+              "path": "networks/network-1086.html"
+            },
+            {
+              "label": "보존 Simulation 1087",
+              "path": "networks/network-1087.html"
+            },
+            {
+              "label": "보존 Simulation 1088",
+              "path": "networks/network-1088.html"
+            },
+            {
+              "label": "보존 Simulation 1089",
+              "path": "networks/network-1089.html"
+            },
+            {
+              "label": "보존 Simulation 1090",
+              "path": "networks/network-1090.html"
+            },
+            {
+              "label": "보존 Simulation 1091",
+              "path": "networks/network-1091.html"
+            },
+            {
+              "label": "보존 Simulation 1092",
+              "path": "networks/network-1092.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-SIMULATION",
+    "plc_id": "SYS-SIMULATION",
+    "match": "catalog",
+    "sheets": [],
+    "circuit": {
+      "id": "SYS-SIMULATION",
+      "equipment": "전용 물리 경로 없음",
+      "distinction": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+      "paths": [],
+      "pending": [
+        "현재 승인 엔지니어링 프로젝트에서 해당 블록의 호출·조건·다른 Writer 및 실제 온라인 상태 대조 필요",
+        "원시 물리 입력·처리 Inputs·시험 비트는 서로 다른 근거이며 보존 Simulation의 쓰기 후보로 실물 전달을 확정하지 않음",
+        "개별 설비의 정상 극성·실물·보호 설정·재기동·복구는 별도 담당 자료 필요",
+        "신규 시뮬레이터 개발·실행 재개 대상에서 영구 제외; 중지5자산 해시 보존"
+      ]
+    },
+    "warnings": [
+      "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다."
+    ]
+  },
+  "related_alarm_boundary": "기존 백업 Simulation 블록의 목록·선언과 영구중지 정책을 설명하는 정적 참조 문서입니다. 시뮬레이터 작성·수정·생성·실행·행동 시험은 하지 않습니다. 현재 CPU 실행·실제 입력 대체·현장 효과는 미확정입니다.",
+  "presentation": {
+    "search_examples": "Simulation(1), UNDER TESTING, 영구중지"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "io": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "control": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "alarms": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "repair": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ],
+    "completion": [
+      [
+        "보존 참조 원문",
+        "catalog-sources/SYS-SIMULATION-CODEX-REFERENCE.md"
+      ],
+      [
+        "보존 Simulation 1079",
+        "networks/network-1079.html"
+      ],
+      [
+        "보존 Simulation 1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "보존 Simulation 1081",
+        "networks/network-1081.html"
+      ],
+      [
+        "보존 Simulation 1082",
+        "networks/network-1082.html"
+      ],
+      [
+        "보존 Simulation 1083",
+        "networks/network-1083.html"
+      ],
+      [
+        "보존 Simulation 1084",
+        "networks/network-1084.html"
+      ],
+      [
+        "보존 Simulation 1085",
+        "networks/network-1085.html"
+      ],
+      [
+        "보존 Simulation 1086",
+        "networks/network-1086.html"
+      ],
+      [
+        "보존 Simulation 1087",
+        "networks/network-1087.html"
+      ],
+      [
+        "보존 Simulation 1088",
+        "networks/network-1088.html"
+      ],
+      [
+        "보존 Simulation 1089",
+        "networks/network-1089.html"
+      ],
+      [
+        "보존 Simulation 1090",
+        "networks/network-1090.html"
+      ],
+      [
+        "보존 Simulation 1091",
+        "networks/network-1091.html"
+      ],
+      [
+        "보존 Simulation 1092",
+        "networks/network-1092.html"
+      ]
+    ]
+  }
+}

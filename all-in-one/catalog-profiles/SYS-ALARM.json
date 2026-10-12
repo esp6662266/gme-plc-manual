@@ -1,0 +1,1568 @@
+{
+  "catalog_id": "SYS-ALARM",
+  "selection_key": "SYS-ALARM",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-ALARM-DOTS-DRAFT.md",
+  "draft_sha256": "601bb47c72bb87274b6278739fd094d11a0946e1f95cbefbf2b7c24b11f1035f",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      930,
+      "part",
+      "23"
+    ],
+    [
+      930,
+      "part",
+      "26"
+    ],
+    [
+      930,
+      "part",
+      "28"
+    ],
+    [
+      930,
+      "part",
+      "33"
+    ],
+    [
+      930,
+      "part",
+      "40"
+    ],
+    [
+      930,
+      "part",
+      "48"
+    ],
+    [
+      930,
+      "part",
+      "60"
+    ],
+    [
+      930,
+      "wire",
+      "22"
+    ],
+    [
+      930,
+      "wire",
+      "25"
+    ],
+    [
+      930,
+      "wire",
+      "38"
+    ],
+    [
+      930,
+      "wire",
+      "36"
+    ],
+    [
+      930,
+      "wire",
+      "42"
+    ],
+    [
+      930,
+      "wire",
+      "67"
+    ],
+    [
+      930,
+      "wire",
+      "68"
+    ],
+    [
+      930,
+      "wire",
+      "62"
+    ],
+    [
+      930,
+      "wire",
+      "77"
+    ],
+    [
+      930,
+      "wire",
+      "78"
+    ],
+    [
+      930,
+      "wire",
+      "51"
+    ],
+    [
+      933,
+      "part",
+      "296"
+    ],
+    [
+      933,
+      "part",
+      "298"
+    ],
+    [
+      933,
+      "part",
+      "256"
+    ],
+    [
+      933,
+      "part",
+      "261"
+    ],
+    [
+      933,
+      "part",
+      "265"
+    ],
+    [
+      933,
+      "part",
+      "268"
+    ],
+    [
+      933,
+      "part",
+      "270"
+    ],
+    [
+      933,
+      "part",
+      "300"
+    ],
+    [
+      933,
+      "part",
+      "274"
+    ],
+    [
+      933,
+      "wire",
+      "284"
+    ],
+    [
+      933,
+      "wire",
+      "285"
+    ],
+    [
+      933,
+      "wire",
+      "295"
+    ],
+    [
+      933,
+      "wire",
+      "286"
+    ],
+    [
+      933,
+      "wire",
+      "287"
+    ],
+    [
+      933,
+      "wire",
+      "288"
+    ],
+    [
+      933,
+      "wire",
+      "289"
+    ],
+    [
+      933,
+      "wire",
+      "290"
+    ],
+    [
+      933,
+      "wire",
+      "291"
+    ],
+    [
+      933,
+      "wire",
+      "292"
+    ],
+    [
+      933,
+      "wire",
+      "301"
+    ],
+    [
+      933,
+      "wire",
+      "294"
+    ],
+    [
+      929,
+      "part",
+      "219"
+    ],
+    [
+      929,
+      "part",
+      "221"
+    ],
+    [
+      929,
+      "part",
+      "223"
+    ],
+    [
+      929,
+      "part",
+      "204"
+    ],
+    [
+      929,
+      "part",
+      "206"
+    ],
+    [
+      929,
+      "wire",
+      "213"
+    ],
+    [
+      929,
+      "wire",
+      "214"
+    ],
+    [
+      929,
+      "wire",
+      "215"
+    ],
+    [
+      929,
+      "wire",
+      "224"
+    ],
+    [
+      929,
+      "wire",
+      "216"
+    ],
+    [
+      929,
+      "wire",
+      "217"
+    ],
+    [
+      931,
+      "part",
+      "224"
+    ],
+    [
+      931,
+      "part",
+      "229"
+    ],
+    [
+      931,
+      "part",
+      "263"
+    ],
+    [
+      931,
+      "part",
+      "235"
+    ],
+    [
+      931,
+      "part",
+      "237"
+    ],
+    [
+      931,
+      "part",
+      "239"
+    ],
+    [
+      931,
+      "wire",
+      "258"
+    ],
+    [
+      931,
+      "wire",
+      "251"
+    ],
+    [
+      931,
+      "wire",
+      "252"
+    ],
+    [
+      931,
+      "wire",
+      "253"
+    ],
+    [
+      931,
+      "wire",
+      "264"
+    ],
+    [
+      931,
+      "wire",
+      "254"
+    ],
+    [
+      931,
+      "wire",
+      "255"
+    ],
+    [
+      931,
+      "wire",
+      "256"
+    ],
+    [
+      1622,
+      "part",
+      "352"
+    ],
+    [
+      1622,
+      "wire",
+      "351"
+    ],
+    [
+      1622,
+      "wire",
+      "353"
+    ]
+  ],
+  "internal_names": [
+    "HMI Reset_Allarms_HMI",
+    "처리 Reset_allarmi",
+    "내부 RESET_ALLARM",
+    "103A7",
+    "Reset_Inverter",
+    "Flag.RUN_HORN",
+    "Flag.M_HORN",
+    "Siren",
+    "Blinking Ligh",
+    "Tag_161"
+  ],
+  "source_pairs": [
+    {
+      "signal": "Reset OR→공통Set/HMI소비/TOF IN",
+      "network": 930,
+      "kind": "wire",
+      "uid": "38",
+      "label": "Reset OR→공통Set/HMI소비/TOF IN",
+      "boundary": "FG17/PDF18 조작/출력 관련대조; HMI전기회로/원인복구와별도"
+    },
+    {
+      "signal": "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+      "network": 933,
+      "kind": "wire",
+      "uid": "295",
+      "label": "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+      "boundary": "공통경광·사이렌 출력과 전용장치복구를 구분"
+    },
+    {
+      "signal": "경보 출력 Q7.6",
+      "network": 933,
+      "kind": "wire",
+      "uid": "288",
+      "label": "Coil265 operand · Siren Q7.6",
+      "boundary": "원문 PLC 이름 Siren과 도면17HL2/lampalarm2 표기를 모두 보존합니다. 실제 사이렌/램프 명판·배선·정상 동작은 확인 전입니다."
+    }
+  ],
+  "extra_sources": [
+    "assets/catalog-circuits/Electrical_Rev2-P018.png",
+    "catalog-sources/DOTS-REMAINING-HANDOFF-20261012.json",
+    "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json",
+    "sources/Electrical_Rev2.pdf",
+    "sources/block_summary.json",
+    "sources/decoded-original/0000-FlgNet.xml",
+    "sources/decoded-original/0001-FlgNet.xml",
+    "sources/decoded-original/0002-FlgNet.xml",
+    "sources/decoded-original/0003-FlgNet.xml",
+    "sources/decoded-original/0004-FlgNet.xml",
+    "sources/decoded-original/0019-FlgNet.xml",
+    "sources/decoded-original/0030-FlgNet.xml",
+    "sources/decoded-original/0033-FlgNet.xml",
+    "sources/decoded-original/0043-IdentXmlPart.xml",
+    "sources/decoded-original/0044-IdentXmlPart.xml",
+    "sources/decoded-original/0045-IdentXmlPart.xml",
+    "sources/decoded-original/0046-IdentXmlPart.xml",
+    "sources/decoded-original/0049-IdentXmlPart.xml",
+    "sources/decoded-original/0055-IdentXmlPart.xml",
+    "sources/decoded-original/0151-FlgNet.xml",
+    "sources/decoded-original/0152-FlgNet.xml",
+    "sources/decoded-original/0153-FlgNet.xml",
+    "sources/decoded-original/0154-FlgNet.xml",
+    "sources/decoded-original/0155-FlgNet.xml",
+    "sources/decoded-original/0156-FlgNet.xml",
+    "sources/decoded-original/0157-FlgNet.xml",
+    "sources/decoded-original/0158-FlgNet.xml",
+    "sources/decoded-original/0168-FlgNet.xml",
+    "sources/decoded-original/0180-FlgNet.xml",
+    "sources/decoded-original/0195-FlgNet.xml",
+    "sources/decoded-original/0255-FlgNet.xml",
+    "sources/decoded-original/0308-FlgNet.xml",
+    "sources/decoded-original/0335-FlgNet.xml",
+    "sources/decoded-original/0341-FlgNet.xml",
+    "sources/decoded-original/0397-FlgNet.xml",
+    "sources/decoded-original/0457-FlgNet.xml",
+    "sources/decoded-original/0458-FlgNet.xml",
+    "sources/decoded-original/0465-FlgNet.xml",
+    "sources/decoded-original/0466-FlgNet.xml",
+    "sources/decoded-original/0476-FlgNet.xml",
+    "sources/decoded-original/0477-FlgNet.xml",
+    "sources/decoded-original/0480-FlgNet.xml",
+    "sources/decoded-original/0524-FlgNet.xml",
+    "sources/decoded-original/0542-FlgNet.xml",
+    "sources/decoded-original/0544-FlgNet.xml",
+    "sources/decoded-original/0546-FlgNet.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0582-IdentXmlPart.xml",
+    "sources/decoded-original/0583-IdentXmlPart.xml",
+    "sources/decoded-original/0584-IdentXmlPart.xml",
+    "sources/decoded-original/0585-IdentXmlPart.xml",
+    "sources/decoded-original/0586-IdentXmlPart.xml",
+    "sources/decoded-original/0588-IdentXmlPart.xml",
+    "sources/decoded-original/0589-IdentXmlPart.xml",
+    "sources/decoded-original/0590-IdentXmlPart.xml",
+    "sources/decoded-original/0591-IdentXmlPart.xml",
+    "sources/decoded-original/0592-IdentXmlPart.xml",
+    "sources/decoded-original/0593-IdentXmlPart.xml",
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0613-IdentXmlPart.xml",
+    "sources/decoded-original/0614-IdentXmlPart.xml",
+    "sources/decoded-original/0615-IdentXmlPart.xml",
+    "sources/decoded-original/0616-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0660-IdentXmlPart.xml",
+    "sources/decoded-original/0661-IdentXmlPart.xml",
+    "sources/decoded-original/0662-IdentXmlPart.xml",
+    "sources/decoded-original/0664-IdentXmlPart.xml",
+    "sources/decoded-original/0665-IdentXmlPart.xml",
+    "sources/decoded-original/0666-IdentXmlPart.xml",
+    "sources/decoded-original/0667-IdentXmlPart.xml",
+    "sources/decoded-original/0668-IdentXmlPart.xml",
+    "sources/decoded-original/0669-IdentXmlPart.xml",
+    "sources/decoded-original/0670-IdentXmlPart.xml",
+    "sources/decoded-original/0671-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0675-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0688-IdentXmlPart.xml",
+    "sources/decoded-original/0689-IdentXmlPart.xml",
+    "sources/decoded-original/0690-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/identifier-declarations.json",
+    "sources/decoded-original/network-map.json",
+    "sources/electrical-page-text.json",
+    "sources/hmi-windows.csv",
+    "sources/hmi_plc_tags.csv",
+    "sources/live_index.json"
+  ],
+  "signal_reference": {
+    "id": "SYS-ALARM",
+    "signals": [
+      {
+        "name": "HMI Reset_Allarms_HMI",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "27",
+            "rid": "61",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "처리 Reset_allarmi",
+        "addresses": [
+          "DB13.DBX19.7"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "24",
+            "rid": "57",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "내부 RESET_ALLARM",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "37",
+            "rid": "2",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "103A7",
+        "addresses": [
+          "%Q7.4"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "63",
+            "rid": "76",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Reset_Inverter",
+        "addresses": [
+          "%Q7.5"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "55",
+            "rid": "74",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Flag.RUN_HORN",
+        "addresses": [
+          "DB2.DBX6.1"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "275",
+            "rid": "3",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Flag.M_HORN",
+        "addresses": [
+          "DB2.DBX6.4"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "276",
+            "rid": "40",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Siren",
+        "addresses": [
+          "%Q7.6"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "279",
+            "rid": "44",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Blinking Ligh",
+        "addresses": [
+          "%Q7.7"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "281",
+            "rid": "39",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      },
+      {
+        "name": "Tag_161",
+        "addresses": [
+          "%T48"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "278",
+            "rid": "43",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-ALARM",
+    "timers": [],
+    "alarms": [],
+    "boundary": "고유 장치 알람의 복제 없이 아래 검토 영역에 공통 Set/Reset·시간·쓰기 근거를 명시합니다."
+  },
+  "control_reference": {
+    "native": [
+      930,
+      933,
+      929,
+      931,
+      1622,
+      927,
+      928
+    ],
+    "chain": [
+      "Reset 입력 OR HMI Reset 요청은 공유 RESET_ALLARM을 Set하고 소비한 HMI 요청을 Reset합니다. 같은 OR 출력은 별도 3s TOF 2개의 IN에도 전달됩니다. 930 Part23/26→O28입니다. W22 ORef24 Inputs.Reset_allarmi, W25 ORef27 Flag.Reset_Allarms_HMI, W38→SCoil33/RCoil40/LRef64.IN/LRef73.IN, W36 ORef37 RESET_ALLARM, W42 ORef43 HMI Reset입니다. LRef64/73 RefId77의 TOF 선언은 0568, instance72/RID78 및 instance74/RID84 선언은 0569입니다. PT W68/ORef70와 W78/ORef75의 RID79/T#3s 선언은 0566입니다. Q W67→Coil48→W62/ORef63 103A7, Q W77→Coil60→W51/ORef55 Reset_Inverter입니다.",
+      "Siren 출력 코일은 RUN_HORN OR M_HORN이 직접 구동합니다. SD 타이머는 병렬 분기에 있으며, Siren 코일 앞에 직렬로 배치된 지연 조건이 아닙니다. 933 Part296 RUN_HORN/Part298 M_HORN→O256→W295에서 SdCoil261/Coil265/PBox268/Contact300으로 분기합니다. Coil265 operand W288 ORef279는 Siren Q7.6입니다. SdCoil261 value W286 ORef277/Data.SIREN_WORK_TIME, operand W287 ORef278/Tag161 T48입니다. Contact300 Tag161 W292→W301→RCoil274 RUN_HORN ORef283, PBox268 W289/PLSM50.2→W290 SCoil270 BlinkingLigh Q7.7입니다.",
+      "NEW_ALLARM AND NOT RESET_ALLARM AND NOT STOP_HORN 조건은 RUN_HORN을 Set하고 NEW_ALLARM을 Reset합니다. Reset/Stop horn은 별도의 공유 SD 1s 경로를 거쳐 해제됩니다. 929 Part219/Part221 Negated/Part223 Negated의 직렬 W220/222/224→SCoil204 W216/ORef211 RUN_HORN 및 RCoil206 W217/ORef212 NEW_ALLARM입니다. 931 O224의 Reset/StopHorn OR→W258 SdCoil229(S5T#1S W251 ORef243; Tag160 T47 W252 ORef244)와 Contact263, W264→RCoil235/237/239는 RESET_ALLARM/STOP_HORN/BlinkingLigh를 해제합니다.",
+      "main은 ON 접점의 허가와 실제 en 배선으로 공통 Allarm manager를 호출합니다. 1622 원본 0033 Part352 ON ORef349/W351→W353 CRef347.en입니다. CodeBlock350 RID91의 Allarm manager 선언은 0688이며, 호출 데이터 CRef RID92를 대조했습니다."
+    ],
+    "repair": [
+      "930요청소거와TOF Q, 개별알람발생식을별도대조; 원인복구/재기동으로판정하지않음",
+      "933OR직접Coil 및931공통Reset, FG17퓨즈/단자/현재실물확인; M_HORN다른Writer확인"
+    ],
+    "pending": [
+      "927/928의 절대 DB3 워드 참조는 원본 0565 GlobalAccess + 0564 부모 TOD3으로 확인했습니다. AOS가 비어 있어 검색 색인의 이름은 UNRESOLVED로 남아 있습니다. 부모의 판단 없이 기존 색인 표기를 바꾸지 않으며, 현재 HMI 알람 대응은 미확인입니다.",
+      "원본 HMI ResetAlarms DB2,X13.4는 같은 백업 배치의 참고입니다. 실제 화면의 누름·해제·알람 확인 이벤트는 확보하지 못했습니다.",
+      "현재 Allarm manager와 설비별 Set/Reset의 실행 순서, 외부 쓰기, Retain 및 현재 타이머 동작은 미확인입니다.",
+      "OEM의 lampalarm2 심볼과 PLC의 Siren 이름을 대조해야 합니다. 현재 실물·접점·케이블은 미확인입니다.",
+      "알람 확인은 원인 제거나 검증된 재기동 완료를 뜻하지 않습니다."
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-ALARM",
+    "boundary": "complete_with_gaps; document and read-only observations",
+    "existing_notes": [
+      "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ],
+    "existing_pending": [
+      "927/928의 절대 DB3 워드 참조는 원본 0565 GlobalAccess + 0564 부모 TOD3으로 확인했습니다. AOS가 비어 있어 검색 색인의 이름은 UNRESOLVED로 남아 있습니다. 부모의 판단 없이 기존 색인 표기를 바꾸지 않으며, 현재 HMI 알람 대응은 미확인입니다.",
+      "원본 HMI ResetAlarms DB2,X13.4는 같은 백업 배치의 참고입니다. 실제 화면의 누름·해제·알람 확인 이벤트는 확보하지 못했습니다.",
+      "현재 Allarm manager와 설비별 Set/Reset의 실행 순서, 외부 쓰기, Retain 및 현재 타이머 동작은 미확인입니다.",
+      "OEM의 lampalarm2 심볼과 PLC의 Siren 이름을 대조해야 합니다. 현재 실물·접점·케이블은 미확인입니다.",
+      "알람 확인은 원인 제거나 검증된 재기동 완료를 뜻하지 않습니다."
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "927/928의 절대 DB3 워드 참조는 원본 0565 GlobalAccess + 0564 부모 TOD3으로 확인했습니다. AOS가 비어 있어 검색 색인의 이름은 UNRESOLVED로 남아 있습니다. 부모의 판단 없이 기존 색인 표기를 바꾸지 않으며, 현재 HMI 알람 대응은 미확인입니다.",
+        "원본 HMI ResetAlarms DB2,X13.4는 같은 백업 배치의 참고입니다. 실제 화면의 누름·해제·알람 확인 이벤트는 확보하지 못했습니다.",
+        "현재 Allarm manager와 설비별 Set/Reset의 실행 순서, 외부 쓰기, Retain 및 현재 타이머 동작은 미확인입니다.",
+        "OEM의 lampalarm2 심볼과 PLC의 Siren 이름을 대조해야 합니다. 현재 실물·접점·케이블은 미확인입니다.",
+        "알람 확인은 원인 제거나 검증된 재기동 완료를 뜻하지 않습니다."
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-ALARM",
+    "plc_id": "SYS-ALARM",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "Reset눌러도알람이재발",
+        "observe": "HMI요청/내부Reset/개별원인/SetReset현재호출시각",
+        "compare": "930요청소거와TOF Q, 개별알람발생식을별도대조; 원인복구/재기동으로판정하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "사이렌또는등이계속됨",
+        "observe": "RUN_HORN/M_HORN/Tag161/STOP_HORN/물리Q7.6Q7.7시각값",
+        "compare": "933OR직접Coil 및931공통Reset, FG17퓨즈/단자/현재실물확인; M_HORN다른Writer확인",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "signals": [
+      {
+        "id": "930-27",
+        "name": "HMI Reset_Allarms_HMI",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "27",
+            "rid": "61",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-24",
+        "name": "처리 Reset_allarmi",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBX19.7"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "24",
+            "rid": "57",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-37",
+        "name": "내부 RESET_ALLARM",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "37",
+            "rid": "2",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-63",
+        "name": "103A7",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.4"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "63",
+            "rid": "76",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-55",
+        "name": "Reset_Inverter",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.5"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "55",
+            "rid": "74",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-275",
+        "name": "Flag.RUN_HORN",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.1"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "275",
+            "rid": "3",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-276",
+        "name": "Flag.M_HORN",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.4"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "276",
+            "rid": "40",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-279",
+        "name": "Siren",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.6"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "279",
+            "rid": "44",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-281",
+        "name": "Blinking Ligh",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.7"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "281",
+            "rid": "39",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-278",
+        "name": "Tag_161",
+        "role": "responses",
+        "addresses": [
+          "%T48"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "278",
+            "rid": "43",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-ALARM",
+    "name": "SYS-ALARM 공통 시스템 근거 관찰",
+    "reference_plc_id": "SYS-ALARM",
+    "boundary": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+    "signals": [
+      {
+        "id": "930-27",
+        "name": "HMI Reset_Allarms_HMI",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "27",
+            "rid": "61",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-24",
+        "name": "처리 Reset_allarmi",
+        "role": "responses",
+        "addresses": [
+          "DB13.DBX19.7"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "24",
+            "rid": "57",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-37",
+        "name": "내부 RESET_ALLARM",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "37",
+            "rid": "2",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-63",
+        "name": "103A7",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.4"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "63",
+            "rid": "76",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "930-55",
+        "name": "Reset_Inverter",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.5"
+        ],
+        "refs": [
+          {
+            "network": 930,
+            "oref": "55",
+            "rid": "74",
+            "nid": "9",
+            "source": "sources/decoded-original/0158-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-275",
+        "name": "Flag.RUN_HORN",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.1"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "275",
+            "rid": "3",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-276",
+        "name": "Flag.M_HORN",
+        "role": "requests",
+        "addresses": [
+          "DB2.DBX6.4"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "276",
+            "rid": "40",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0565-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-279",
+        "name": "Siren",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.6"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "279",
+            "rid": "44",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-281",
+        "name": "Blinking Ligh",
+        "role": "outputs",
+        "addresses": [
+          "%Q7.7"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "281",
+            "rid": "39",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      },
+      {
+        "id": "933-278",
+        "name": "Tag_161",
+        "role": "responses",
+        "addresses": [
+          "%T48"
+        ],
+        "refs": [
+          {
+            "network": 933,
+            "oref": "278",
+            "rid": "43",
+            "nid": "5",
+            "source": "sources/decoded-original/0155-FlgNet.xml",
+            "declarations": [
+              "sources/decoded-original/0567-IdentXmlPart.xml"
+            ]
+          }
+        ],
+        "boundary": "백업의 선언과 선택한 원본 참조에 근거한 항목입니다. 현재 값, 현재 CPU와 다른 쓰기 위치는 미확인입니다.",
+        "source_class": "backup_reference"
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "common": "step-symptom-1",
+        "title": "Reset눌러도알람이재발",
+        "observe": "HMI요청/내부Reset/개별원인/SetReset현재호출시각",
+        "compare": "930요청소거와TOF Q, 개별알람발생식을별도대조; 원인복구/재기동으로판정하지않음",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      },
+      {
+        "id": "symptom-2",
+        "common": "step-symptom-2",
+        "title": "사이렌또는등이계속됨",
+        "observe": "RUN_HORN/M_HORN/Tag161/STOP_HORN/물리Q7.6Q7.7시각값",
+        "compare": "933OR직접Coil 및931공통Reset, FG17퓨즈/단자/현재실물확인; M_HORN다른Writer확인",
+        "next": "같은 시각·자료 판본·관찰 위치를 기록하고 해당 근거 공백을 담당자 자료와 대조합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-ALARM 원본 쓰기·주소·공통 기능과 관찰의 분리",
+      "sources": {
+        "draft": "601bb47c72bb87274b6278739fd094d11a0946e1f95cbefbf2b7c24b11f1035f"
+      },
+      "circuit_equipment": "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다.",
+      "circuit_distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG17 · PDF18 · 원본 회로",
+          "path": "sources/Electrical_Rev2.pdf#page=18"
+        }
+      ],
+      "construction_boundary": "전용 시공 연결·현행 준공은 미확정. 공통 소프트웨어를 별도 실물로 세지 않습니다.",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "자료 담당",
+            "work": "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+          }
+        ],
+        "source_links": [
+          {
+            "label": "SYS-ALARM 원초안",
+            "path": "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+          },
+          {
+            "label": "현재 독립 원본 대조",
+            "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+          },
+          {
+            "label": "FG17 · PDF18 · 원본 회로",
+            "path": "sources/Electrical_Rev2.pdf#page=18"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "HMI요청/내부Reset/개별원인/SetReset현재호출시각"
+            },
+            {
+              "owner": "대조",
+              "work": "930요청소거와TOF Q, 개별알람발생식을별도대조; 원인복구/재기동으로판정하지않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-ALARM 원초안",
+              "path": "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG17 · PDF18 · 원본 회로",
+              "path": "sources/Electrical_Rev2.pdf#page=18"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "RUN_HORN/M_HORN/Tag161/STOP_HORN/물리Q7.6Q7.7시각값"
+            },
+            {
+              "owner": "대조",
+              "work": "933OR직접Coil 및931공통Reset, FG17퓨즈/단자/현재실물확인; M_HORN다른Writer확인"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "SYS-ALARM 원초안",
+              "path": "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+            },
+            {
+              "label": "현재 독립 원본 대조",
+              "path": "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+            },
+            {
+              "label": "FG17 · PDF18 · 원본 회로",
+              "path": "sources/Electrical_Rev2.pdf#page=18"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-ALARM",
+    "plc_id": "SYS-ALARM",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-18",
+        "kind": "OEM 전기",
+        "title": "FG17 · PDF18 · 원본 회로",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 18,
+        "fg": 17,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P018.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면; 현행 승인·실물 미확정",
+        "revision": "Rev2 17.03.2025"
+      }
+    ],
+    "circuit": {
+      "id": "SYS-ALARM",
+      "equipment": "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다.",
+      "distinction": "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+      "paths": [
+        {
+          "signal": "경보 출력 Q7.6",
+          "backup": "%Q7.6",
+          "drawing": "A7.6 · 17HL2/lampalarm2",
+          "fg": 17,
+          "nodes": [
+            "원본 RUN_HORN OR M_HORN → 일반 Coil265 (SD 타이머와 병렬)",
+            "FG17 A7.6 → X1:41 · 2A 5×20 퓨즈",
+            "17HL2/lampalarm2 → X1:43 공통0V"
+          ],
+          "destination": "PLC Siren 이름과 도면 램프 표기 차이 보존; Reset·Stop horn·원인 복구와 별도",
+          "check": "원문 PLC 이름 Siren과 도면17HL2/lampalarm2 표기를 모두 보존합니다. 실제 사이렌/램프 명판·배선·정상 동작은 확인 전입니다.",
+          "native_symbol_references": [
+            {
+              "network": 933,
+              "uid": "279"
+            }
+          ],
+          "sheet_id": "oem-18"
+        }
+      ],
+      "pending": [
+        "927/928의 절대 DB3 워드 참조는 원본 0565 GlobalAccess + 0564 부모 TOD3으로 확인했습니다. AOS가 비어 있어 검색 색인의 이름은 UNRESOLVED로 남아 있습니다. 부모의 판단 없이 기존 색인 표기를 바꾸지 않으며, 현재 HMI 알람 대응은 미확인입니다.",
+        "원본 HMI ResetAlarms DB2,X13.4는 같은 백업 배치의 참고입니다. 실제 화면의 누름·해제·알람 확인 이벤트는 확보하지 못했습니다.",
+        "현재 Allarm manager와 설비별 Set/Reset의 실행 순서, 외부 쓰기, Retain 및 현재 타이머 동작은 미확인입니다.",
+        "OEM의 lampalarm2 심볼과 PLC의 Siren 이름을 대조해야 합니다. 현재 실물·접점·케이블은 미확인입니다.",
+        "알람 확인은 원인 제거나 검증된 재기동 완료를 뜻하지 않습니다."
+      ]
+    },
+    "warnings": [
+      "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다.",
+      "보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다."
+    ]
+  },
+  "related_alarm_boundary": "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다. 보존 백업의 문서·정적 참조입니다. 현재 호출·최종 Writer·HMI 이벤트·실물·정상 극성·TIA 컴파일·현장 복구는 확인 전입니다.",
+  "presentation": {
+    "search_examples": "HMI Reset_Allarms_HMI, 처리 Reset_allarmi, 내부 RESET_ALLARM, 103A7, Reset_Inverter"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "Reset OR→공통Set/HMI소비/TOF IN",
+        "networks/network-930.html#gme-sys-alarm-wire-38"
+      ],
+      [
+        "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+        "networks/network-933.html#gme-sys-alarm-wire-295"
+      ]
+    ],
+    "io": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "Reset OR→공통Set/HMI소비/TOF IN",
+        "networks/network-930.html#gme-sys-alarm-wire-38"
+      ],
+      [
+        "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+        "networks/network-933.html#gme-sys-alarm-wire-295"
+      ]
+    ],
+    "control": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "Reset OR→공통Set/HMI소비/TOF IN",
+        "networks/network-930.html#gme-sys-alarm-wire-38"
+      ],
+      [
+        "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+        "networks/network-933.html#gme-sys-alarm-wire-295"
+      ]
+    ],
+    "circuits": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "FG17 · PDF18 · 원본 회로",
+        "sources/Electrical_Rev2.pdf#page=18"
+      ]
+    ],
+    "alarms": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "Reset OR→공통Set/HMI소비/TOF IN",
+        "networks/network-930.html#gme-sys-alarm-wire-38"
+      ],
+      [
+        "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+        "networks/network-933.html#gme-sys-alarm-wire-295"
+      ]
+    ],
+    "repair": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "Reset OR→공통Set/HMI소비/TOF IN",
+        "networks/network-930.html#gme-sys-alarm-wire-38"
+      ],
+      [
+        "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+        "networks/network-933.html#gme-sys-alarm-wire-295"
+      ]
+    ],
+    "completion": [
+      [
+        "SYS-ALARM 원초안",
+        "catalog-sources/SYS-ALARM-DOTS-DRAFT.md"
+      ],
+      [
+        "현재 독립 원본 대조",
+        "catalog-sources/REMAINING-SOFTWARE-NATIVE-REVIEW.json"
+      ],
+      [
+        "Reset OR→공통Set/HMI소비/TOF IN",
+        "networks/network-930.html#gme-sys-alarm-wire-38"
+      ],
+      [
+        "RUN_HORN OR M_HORN→직접Coil·SD병렬",
+        "networks/network-933.html#gme-sys-alarm-wire-295"
+      ]
+    ]
+  },
+  "supplements": {
+    "control": [
+      {
+        "type": "reviewed",
+        "id": "current-native-review",
+        "title": "현재 원본 독립 대조와 소유 경계",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Allarm manager는 공통 소프트웨어입니다. Reset/Stop horn의 공통 플래그와 출력은 여러 설비가 공유하며, 설비별 원인 래치는 각 설비의 네트워크에 속합니다. HMI 요청과 내부 Reset을 구분합니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "현재 2차 대상은 실제 대장129개입니다. 원초안의 v1.12.0·133개·과거 게시 상태는 당시 조사 이력입니다."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Reset 입력 OR HMI Reset 요청은 공유 RESET_ALLARM을 Set하고 소비한 HMI 요청을 Reset합니다. 같은 OR 출력은 별도 3s TOF 2개의 IN에도 전달됩니다. 930 Part23/26→O28입니다. W22 ORef24 Inputs.Reset_allarmi, W25 ORef27 Flag.Reset_Allarms_HMI, W38→SCoil33/RCoil40/LRef64.IN/LRef73.IN, W36 ORef37 RESET_ALLARM, W42 ORef43 HMI Reset입니다. LRef64/73 RefId77의 TOF 선언은 0568, instance72/RID78 및 instance74/RID84 선언은 0569입니다. PT W68/ORef70와 W78/ORef75의 RID79/T#3s 선언은 0566입니다. Q W67→Coil48→W62/ORef63 103A7, Q W77→Coil60→W51/ORef55 Reset_Inverter입니다. ET ORef71/76에는 RefId가 없어 미해석 상태를 유지합니다. Reset 출력은 타이머 Q이며, 인버터나 현장 복구 완료를 증명하지 않습니다.",
+                "Siren 출력 코일은 RUN_HORN OR M_HORN이 직접 구동합니다. SD 타이머는 병렬 분기에 있으며, Siren 코일 앞에 직렬로 배치된 지연 조건이 아닙니다. 933 Part296 RUN_HORN/Part298 M_HORN→O256→W295에서 SdCoil261/Coil265/PBox268/Contact300으로 분기합니다. Coil265 operand W288 ORef279는 Siren Q7.6입니다. SdCoil261 value W286 ORef277/Data.SIREN_WORK_TIME, operand W287 ORef278/Tag161 T48입니다. Contact300 Tag161 W292→W301→RCoil274 RUN_HORN ORef283, PBox268 W289/PLSM50.2→W290 SCoil270 BlinkingLigh Q7.7입니다. RUN_HORN이 Reset되어도 수동 M_HORN이 OR을 구동할 수 있습니다. 현재 HMI·수동 쓰기 위치와 타이머 변환은 현재 소스로 확인해야 합니다. Data.SIREN_WORK_TIME을 고정 수치로 설명하지 않습니다.",
+                "NEW_ALLARM AND NOT RESET_ALLARM AND NOT STOP_HORN 조건은 RUN_HORN을 Set하고 NEW_ALLARM을 Reset합니다. Reset/Stop horn은 별도의 공유 SD 1s 경로를 거쳐 해제됩니다. 929 Part219/Part221 Negated/Part223 Negated의 직렬 W220/222/224→SCoil204 W216/ORef211 RUN_HORN 및 RCoil206 W217/ORef212 NEW_ALLARM입니다. 931 O224의 Reset/StopHorn OR→W258 SdCoil229(S5T#1S W251 ORef243; Tag160 T47 W252 ORef244)와 Contact263, W264→RCoil235/237/239는 RESET_ALLARM/STOP_HORN/BlinkingLigh를 해제합니다. 알람 확인, 소리 정지, 원인 Reset과 실제 복구는 구분합니다. 선언 색인에서 빠졌던 928의 절대 DB3 워드 참조는 0565의 이름 없는 GlobalAccess와 0564 부모 TOD3으로 원본에서 직접 확인했습니다. 빈 심볼 표기는 보존합니다. 현재 순서와 값 변경 범위는 미확인입니다.",
+                "main은 ON 접점의 허가와 실제 en 배선으로 공통 Allarm manager를 호출합니다. 1622 원본 0033 Part352 ON ORef349/W351→W353 CRef347.en입니다. CodeBlock350 RID91의 Allarm manager 선언은 0688이며, 호출 데이터 CRef RID92를 대조했습니다. ON은 메모리 %M0.0이며 상수로 가정하지 않습니다. 현재 OB 호출·복귀 상태는 미확인입니다."
+              ]
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

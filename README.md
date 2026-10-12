@@ -1,20 +1,24 @@
+## v1.23.0 로컬 검증 완료 · 실제 게시 대기
+
+남은81개 문서를 추가했습니다. 현재2차129개·전체147개 문서와 RO01/02 과거문서2개를 보존하여 총149개이며 식별보고서3개는 별도입니다. Dots 원초안71개를 보존/독립검증했고, 원초안 없는9개와 영구중지 참조1개를 현재 원본으로 작성했습니다. [검증 기록](REMAINING81-VERIFICATION.md)과 [실제 게시 상태](PUBLICATION_STATUS.md)를 확인합니다. 현재 CPU·실물·TIA·현장 복구는 확인 전입니다.
+
 ## v1.22.0 실제 게시 완료
 
 PV05·ZT01·PV06·CM01·CM02·UC01·PV14·CR01·SYS-AUTO·SYS-HMI 문서10개(설비8/소프트웨어2)를 추가했습니다. 총68 보존문서, 현재대상66+식별3보고서입니다. 실제게시 여부는 [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md), 검증은 [READY10-05-VERIFICATION.md](READY10-05-VERIFICATION.md)를 확인합니다.
 
-## 현재 게시 v1.21.0 · 온도계10개와 RO 미사용 예외
+## 이전 게시 v1.21.0 · 온도계10개와 RO 미사용 예외
 
 총58보존매뉴얼(RO01/02포함)·현재대상56+식별3. TC11 PLC/HMI/알람/타이머 미식별 상태와 자료요청을 명시했습니다. 실제게시는 [게시상태](PUBLICATION_STATUS.md)에서 확인합니다.
 
-## 현재 게시 v1.20.0 · 세 번째10 catalog 설비
+## 이전 게시 v1.20.0 · 세 번째10 catalog 설비
 
 총48매뉴얼+식별3보고서. 실제게시는 [게시상태](PUBLICATION_STATUS.md)에서 확인합니다.
 
-## 현재 게시 v1.19.0 · 두 번째10 catalog 설비
+## 이전 게시 v1.19.0 · 두 번째10 catalog 설비
 
 총38매뉴얼+식별3보고서. 실제게시는 [게시상태](PUBLICATION_STATUS.md)와 검증기록으로 확인합니다.
 
-## 현재 게시 v1.18.0 · 첫10 catalog 설비
+## 이전 게시 v1.18.0 · 첫10 catalog 설비
 
 기존18매뉴얼과미확정식별3보고서를보존하고10매뉴얼을추가했습니다. [검증](READY10-01-VERIFICATION.md)과 [실제게시상태](PUBLICATION_STATUS.md)를구분합니다. CC01현재실물·전용자료미확보, TIA/CPU/현장복구미확정.
 
@@ -24,7 +28,7 @@ PV05·ZT01·PV06·CM01·CM02·UC01·PV14·CR01·SYS-AUTO·SYS-HMI 문서10개(�
 
 [BC01 기반 작업표준](docs/equipment-standard/WORK-STANDARD.md) · [GPT-6.1 Sol / Ultra 시작](docs/equipment-standard/START-GPT61.md) · [현재 진행/다음 작업](EXPANSION-WORK.md) · [공유 스킬](.agents/skills/gme-equipment-rollout/SKILL.md). 우선23행과 전체248 ID를 대조하고 기존 제외와 사용자 RO미사용 예외를 반영한 현재2차129개 후보를 관리합니다. 표준 준비와 실제 설비 구현 완료는 구분합니다.
 
-## 현재 작성 소스: GME All-in-One v1.17.0 · HE01와 식별 보고서 3건
+## 초기 v1.17.0 작성 범위: GME All-in-One v1.17.0 · HE01와 식별 보고서 3건
 
 [다른 컴퓨터에서 재개](WORKSPACE-HANDOFF.md) · [작업 지침](AGENTS.md) · [현재 작업](all-in-one/ACTIVE-WORK.md) · [v1.3 보완 안내](all-in-one/BC01-PRESERVATION-20261011.md) · [네 도구 안내](all-in-one/BC01-RECORD-TOOLS-20261011.md) · [버전](VERSION.json). 프로그램과 원본·MD·생성기·검증 파일은 이 저장소에서 함께 관리합니다.
 
