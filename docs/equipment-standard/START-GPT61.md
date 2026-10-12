@@ -1,6 +1,6 @@
 # GPT-6.1 Sol / Ultra 실행·재개 안내
 
-표준 GME-STD-1.0.0 · 확인일 2026-10-11.
+표준 GME-STD-1.0.1 · 확인일 2026-10-12.
 
 ## 모델과 스킬
 
@@ -38,7 +38,7 @@ Windows:
 
 다음을 GPT-6.1 Sol / Ultra로 설정한 채팅에 전달한다.
 
-> $gme-equipment-rollout 이 저장소의 .agents/skills/gme-equipment-rollout/SKILL.md, AGENTS.md, EXPANSION-WORK.md와 docs/equipment-standard/WORK-STANDARD.md·INVENTORY.json·WORK-ITEM-TEMPLATE.md를 읽고 현재 Git 상태부터 확인해. 사용자가 승인한 실제 대장 중복 정리·기존 제외 유지 기준으로 BC01 기반 확장을 시작해. 먼저 PREP-01 공통화·금지 생성기 호출 분리·BC01 회귀를 완료하고, FN04(P02) 한 설비를 시범으로 작성·검증해. 그 뒤 표준의 1차 순서와 현재2차129개 후보(RO01~04 사용자미사용예외·이력보존)를 설비 한 개씩 진행해. 원본·기존 완료 자료·브라우저 기록을 보존하고 최대2개 읽기 전용 조사자와 병행하되 부모만 공통 파일을 편집해. 시뮬레이터와 실제 PLC/현장/보호값 및 SEJIN 변경은 하지 마. 미확정 자료는 남기고 문서·화면·TIA/CPU·현장 상태를 나눠 기록해. 매 작업의 검증·버전·GitHub 인계 상태와 다음 작업을 저장해.
+> $gme-equipment-rollout 이 저장소의 .agents/skills/gme-equipment-rollout/SKILL.md, AGENTS.md, EXPANSION-WORK.md와 docs/equipment-standard/WORK-STANDARD.md·INVENTORY.json·WORK-ITEM-TEMPLATE.md를 읽고 현재 Git 상태부터 확인해. 사용자가 승인한 실제 대장 중복 정리·기존 제외 유지 기준으로 BC01 기반 확장을 시작해. 먼저 PREP-01 공통화·금지 생성기 호출 분리·BC01 회귀를 완료하고, FN04(P02) 한 설비를 시범으로 작성·검증해. 그 뒤 표준의 1차 순서와 현재2차125개 대상(RO01~04미사용 및 CC01/TC11/CM01/CM02/UC01철거 제외·이력보존)를 설비 한 개씩 진행해. 원본·기존 완료 자료·브라우저 기록을 보존하고 최대2개 읽기 전용 조사자와 병행하되 부모만 공통 파일을 편집해. 시뮬레이터와 실제 PLC/현장/보호값 및 SEJIN 변경은 하지 마. 미확정 자료는 남기고 문서·화면·TIA/CPU·현장 상태를 나눠 기록해. 매 작업의 검증·버전·GitHub 인계 상태와 다음 작업을 저장해.
 
 ## 중단 후 이어갈 문장
 

@@ -15,6 +15,8 @@ INPUTS = (
     'all-in-one/registers/all-in-one-data.json',
 )
 SNAPSHOT = 'docs/equipment-standard/INVENTORY.json'
+SCOPE_OVERRIDES = 'docs/equipment-standard/SCOPE-OVERRIDES.json'
+STANDARD_VERSION = '1.0.1'
 
 
 def unique(rows, key, label):
@@ -90,6 +92,24 @@ def read_inventory(root):
                 if ident not in excluded:
                     raise ValueError(f'exclusion range missing status note: {ident}')
     excluded_priority = set(app['excluded_priority'])
+    # Apply explicit user scope decisions without changing historical source registers.
+    override_file = root / SCOPE_OVERRIDES
+    if override_file.exists():
+        if override_file.is_symlink() or not override_file.is_file():
+            raise ValueError('invalid user scope override file')
+        overrides = json.loads(override_file.read_text(encoding='utf-8'))
+        if overrides.get('schema_version') != 1:
+            raise ValueError('unsupported user scope override schema')
+        rows = unique(overrides['equipment'], 'catalog_id', 'user scope overrides')
+        for ident, decision in rows.items():
+            if ident not in by_id or decision.get('status') != 'removed_by_user':
+                raise ValueError(f'unknown equipment or scope decision: {ident}')
+            if not decision.get('reason') or not decision.get('user_statement'):
+                raise ValueError(f'user scope decision missing evidence: {ident}')
+            excluded.add(ident)
+            notes[ident] = {'label': decision['reason']}
+        excluded_priority.update(p['key'] for p in priority if p['plc_id'] in rows)
+        hashes[SCOPE_OVERRIDES] = hashlib.sha256(override_file.read_bytes()).hexdigest()
     if not excluded_priority.issubset({p['key'] for p in priority}):
         raise ValueError('excluded priority key absent from register')
     matched = {}
@@ -119,7 +139,7 @@ def read_inventory(root):
         priority_rows.append({
             'priority_key': p['key'], 'name': p['name'], 'catalog_id': p['plc_id'] or None,
             'mapping': p['match'], 'identity_verified': identity_flag(p['identity_verified']),
-            'queue_state': state, 'note': p['note'],
+            'queue_state': state, 'note': notes[p['plc_id']]['label'] if p['plc_id'] in excluded else p['note'],
         })
     catalog_rows = []
     for row in sorted(equipment, key=lambda x: (rank[x['id']], x['group'], x['id'])):
@@ -152,7 +172,7 @@ def read_inventory(root):
     )
     if sum(Counter(r['phase'] for r in catalog_rows).values()) != len(by_id):
         raise ValueError('catalog partition mismatch')
-    return {'schema_version': 1, 'standard_version': '1.0.0',
+    return {'schema_version': 1, 'standard_version': STANDARD_VERSION,
             'policy': 'deduplicate_actual_ids_keep_existing_exclusions',
             'source_sha256': hashes, 'counts': counts,
             'priority': priority_rows, 'catalog': catalog_rows}

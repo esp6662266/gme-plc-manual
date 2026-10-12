@@ -1,12 +1,12 @@
 {
   "standard": "GME equipment rollout",
-  "version": "1.0.0",
-  "label": "GME-STD-1.0.0",
-  "date": "2026-10-11",
+  "version": "1.0.1",
+  "label": "GME-STD-1.0.1",
+  "date": "2026-10-12",
   "application_baseline": "1.3.0",
   "baseline_commit": "0253c7a5694e6f406c2414813fa2f19ed80ec32f",
   "requested_model": "gpt-6.1-sol",
   "requested_reasoning_effort": "ultra",
-  "scope_decision": "deduplicate_actual_ids_keep_existing_exclusions",
+  "scope_decision": "deduplicate_actual_ids_keep_existing_exclusions_and_user_removed_equipment",
   "scope_confirmed_by_user": true
 }

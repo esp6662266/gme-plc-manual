@@ -4,6 +4,7 @@
 
 | 확인할 내용 | 원본/구현 |
 |---|---|
+| 사용자 철거/검토 제외 결정 | docs/equipment-standard/SCOPE-OVERRIDES.json; preflight에서 원본 대장에 적용 |
 | 실제 설비/우선 목록 | all-in-one/registers/equipment.json, priority-equipment.csv |
 | 작성 수준/범위 | registers/requirements-audit.json, registers/all-in-one-data.json의 equipment_status_notes/excluded_priority |
 | BC01 기준 | registers/all-in-one-data.json의 bc01_standard |

@@ -1,3 +1,7 @@
+## 최신 검토 범위: 철거5개 제외 · 2026-10-12
+
+CC01·TC11·CM01·CM02·UC01은 사용자 확인 철거 설비로 추가 검토에서 제외합니다. 현재 대상142개, 기존149문서·원본·기록은 보존합니다. [현재 범위](docs/equipment-standard/SCOPE-OVERRIDES.json)와 [인계 기록](WORKSPACE-HANDOFF.md)을 따릅니다. 아래 게시 당시 집계와 구분합니다.
+
 ## v1.23.0 남은81개 문서 게시·검증·정리 완료
 
 현재147개·과거RO01/02 포함149개 문서를 보존합니다. [실제 사이트](https://gme-plc-manual.netlify.app/all-in-one/) · [고정 ZIP](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.23.0) · [검증/정리 기록](REMAINING81-VERIFICATION.md). 실물·TIA·현재CPU·현장복구는 미확정입니다. 아래 이전 항목은 당시 상태입니다.

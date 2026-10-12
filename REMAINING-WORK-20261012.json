@@ -3,7 +3,7 @@
   "baseline": "93fa00c447229202bbffc4096c2fe004f12a83ae",
   "starting_version": "1.22.0",
   "previously_published_current_phase2": 48,
-  "phase2_candidates": 129,
+  "phase2_candidates": 125,
   "remaining_initial": 81,
   "groups": [
     {
@@ -177,15 +177,16 @@
     "old_images": 237,
     "final_manuals": 149,
     "final_schemas": 154,
-    "current_phase2": 129,
-    "current_total": 147,
+    "current_phase2": 125,
+    "current_total": 142,
     "identity_reports": 3,
     "original_dots_drafts": 71,
-    "stopped_assets": 5
+    "stopped_assets": 5,
+    "removed_equipment": 5
   },
   "consultation_originals_verified": 71,
-  "current_phase2_published": 129,
-  "current_total_published": 147,
+  "current_phase2_published": 125,
+  "current_total_published": 142,
   "feature_commit": "abaac9281913ab3688a6e21ca01023c0cff66f09",
   "release": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.23.0",
   "netlify_deploy": "6acce5dd7dc51de049cdb6a5",
@@ -193,5 +194,19 @@
   "cleanup": "completed",
   "tia_compile": "not_performed",
   "live_cpu": "not_performed",
-  "field_recovery": "not_performed"
+  "field_recovery": "not_performed",
+  "release_scope_before_retirement": {
+    "phase2": 129,
+    "current_total": 147,
+    "preserved_manuals": 149
+  },
+  "current_removed_equipment": [
+    "CC01",
+    "TC11",
+    "CM01",
+    "CM02",
+    "UC01"
+  ],
+  "scope_adjustment_authority": "user confirmed removed; no further review required",
+  "preserved_historical_manuals": 7
 }
