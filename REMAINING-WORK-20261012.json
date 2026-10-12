@@ -208,5 +208,22 @@
     "UC01"
   ],
   "scope_adjustment_authority": "user confirmed removed; no further review required",
-  "preserved_historical_manuals": 7
+  "preserved_historical_manuals": 7,
+  "review_deferrals": [
+    {
+      "id": "drawing_conflicts",
+      "status": "deferred_by_user",
+      "date": "2026-10-12",
+      "user_statement": "2번도 당분간 패스",
+      "items": [
+        "LS34/35 ↔ LS40/41",
+        "PV01 Gate A/B",
+        "ZT05/06",
+        "SS11 케이블",
+        "LD01A 정격"
+      ],
+      "resume_rule": "explicit_user_instruction",
+      "preserve_originals_and_uncertainties": true
+    }
+  ]
 }
