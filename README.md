@@ -1,3 +1,7 @@
+## v1.22.0 작성·로컬 검증 완료
+
+PV05·ZT01·PV06·CM01·CM02·UC01·PV14·CR01·SYS-AUTO·SYS-HMI 문서10개(설비8/소프트웨어2)를 추가했습니다. 총68 보존문서, 현재대상66+식별3보고서입니다. 실제게시 여부는 [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md), 검증은 [READY10-05-VERIFICATION.md](READY10-05-VERIFICATION.md)를 확인합니다.
+
 ## 현재 게시 v1.21.0 · 온도계10개와 RO 미사용 예외
 
 총58보존매뉴얼(RO01/02포함)·현재대상56+식별3. TC11 PLC/HMI/알람/타이머 미식별 상태와 자료요청을 명시했습니다. 실제게시는 [게시상태](PUBLICATION_STATUS.md)에서 확인합니다.

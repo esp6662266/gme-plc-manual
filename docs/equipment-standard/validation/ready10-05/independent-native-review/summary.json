@@ -1,0 +1,192 @@
+{
+  "reviewed_at_utc": "2026-10-12T11:22:07.661759+00:00",
+  "status": "no_new_important_source_defects_found_in_reviewed_native_scope",
+  "scope": "Read-only independent XML/IdentXmlPart/HMI-config review. Official verifiers, generators, build, UI/PDF and runtime tests not run.",
+  "selected_348_all_exact_native": true,
+  "unique_native_locations": 307,
+  "unique_native_location_count_is_not_PLC_signal_count": true,
+  "signal_refs_78_all_RID_UID_NID_and_addresses_match": true,
+  "observation_fields_not_unique_PLC_signals": 95,
+  "electrical_related_or_direct_paths": 21,
+  "per_asset": [
+    {
+      "catalog_id": "PV05",
+      "draft_sha_matches_profile": true,
+      "observations": 9,
+      "electrical_related_or_direct_paths": 6,
+      "native_selections": 37
+    },
+    {
+      "catalog_id": "ZT01",
+      "draft_sha_matches_profile": true,
+      "observations": 16,
+      "electrical_related_or_direct_paths": 4,
+      "native_selections": 58
+    },
+    {
+      "catalog_id": "PV06",
+      "draft_sha_matches_profile": true,
+      "observations": 11,
+      "electrical_related_or_direct_paths": 6,
+      "native_selections": 41
+    },
+    {
+      "catalog_id": "CM01",
+      "draft_sha_matches_profile": true,
+      "observations": 3,
+      "electrical_related_or_direct_paths": 0,
+      "native_selections": 0
+    },
+    {
+      "catalog_id": "CM02",
+      "draft_sha_matches_profile": true,
+      "observations": 3,
+      "electrical_related_or_direct_paths": 0,
+      "native_selections": 0
+    },
+    {
+      "catalog_id": "UC01",
+      "draft_sha_matches_profile": true,
+      "observations": 3,
+      "electrical_related_or_direct_paths": 0,
+      "native_selections": 0
+    },
+    {
+      "catalog_id": "PV14",
+      "draft_sha_matches_profile": true,
+      "observations": 17,
+      "electrical_related_or_direct_paths": 5,
+      "native_selections": 60
+    },
+    {
+      "catalog_id": "CR01",
+      "draft_sha_matches_profile": true,
+      "observations": 5,
+      "electrical_related_or_direct_paths": 0,
+      "native_selections": 13
+    },
+    {
+      "catalog_id": "SYS-AUTO",
+      "draft_sha_matches_profile": true,
+      "observations": 12,
+      "electrical_related_or_direct_paths": 0,
+      "native_selections": 79
+    },
+    {
+      "catalog_id": "SYS-HMI",
+      "draft_sha_matches_profile": true,
+      "observations": 16,
+      "electrical_related_or_direct_paths": 0,
+      "native_selections": 60
+    }
+  ],
+  "critical_native_evidence": [
+    {
+      "asset": "PV05/PV06",
+      "conclusion": "Q6.4 Monitor; Ready is tank readiness",
+      "native_evidence": "0555 RID53 AO52 Output; CS NID=-2147483648 UID126 AK=Monitor. No direct Writer established."
+    },
+    {
+      "asset": "PV05/PV06",
+      "conclusion": "Set/Reset upstream gates preserved",
+      "native_evidence": "0538 P953(ON)→P955(NOT Ready)→P27(ServiceBit)→S929; Reset P953→P957(RESET_ALLARM)→P959(existingFault)→[P961(Ready) OR P964(NOT ServiceBit)]→OR31 W33→R935."
+    },
+    {
+      "asset": "PV05/PV06",
+      "conclusion": "Other retained Ready Writer read only",
+      "native_evidence": "0415 Coil39 W38→O40/RID352; 0635 RID352 AO135 BAD5 CS NID18 UID40 Write; 0634 DepDBBlock RID5 TOD13. No stopped material executed."
+    },
+    {
+      "asset": "PV06",
+      "conclusion": "QW6→DB14W6 output mirror",
+      "native_evidence": "0401 O39/RID32→W64 Move25.in; W66 out1→O40/RID52. 0632 Output AO48 Word; 0633 RID52 AO48 BAD26; 0631 RID26 TOD14."
+    },
+    {
+      "asset": "ZT01",
+      "conclusion": "Peripheral/ordinary raw and converted values separated",
+      "native_evidence": "0494 W29 OFF→P435, W28→CRef416.en; W430 ON→IN0; W431 O424→Analog_input; W434 OutValue→O427. 0678 RID91 AO2256 Input Peripherie; 0676 RID94 AO1536 DB1W192; 0398/0627/0629 ordinary IW282→DB13W46."
+    },
+    {
+      "asset": "ZT01",
+      "conclusion": "T123/T130, low overlap, ordinary Coil roles",
+      "native_evidence": "0536 OFF P904; >400 or <-800→Sd857/T123→S862; existingFault→Lt866 <380→R869. 0683 RID90 S5T#10S; 0686 RID91 Timer123. 0252 OR707 W683→Coil653+Sd656; 0606 RID112 S5T#1H_30M, 0602 RID113 Timer130; 0605 RID114 Local Stop. 0291 Move193.eno W21→ordinary Coil23."
+    },
+    {
+      "asset": "CM01/CM02/UC01",
+      "conclusion": "Three document observations each; no dedicated PLC ownership",
+      "native_evidence": "extra_locations=[], each addresses=[]/refs=[], alarm timers/alarms and direct paths empty. Related fans/valves/TC are not assigned body ownership. Graphical identity remains parent review."
+    },
+    {
+      "asset": "PV14",
+      "conclusion": "Fault resets only manual request; five OR output preserved",
+      "native_evidence": "0216 ON→Fault P2037→R2004 M_PV14; parallel five contacts→OR2007→Coil2012 Q17.0. 0215 mismatch OR→Sd1986 T20→S1991; ON→RESET P2040→existingFault P2042→R1996, no normal-position reset gate. 0594 RID273 Timer20; 0597 RID317 S5T#20S."
+    },
+    {
+      "asset": "PV14",
+      "conclusion": "HMI/processed positions and reset remain unbound",
+      "native_evidence": "CSV PV_14\\LS_Open/Close DB11X74.0/1 versus 0629 DB13X22.0/1; ResetAlarms DB2X13.4 versus 0596 internal Reset DB2X6.0."
+    },
+    {
+      "asset": "CR01",
+      "conclusion": "Related common ownership only; no invented Presence reset",
+      "native_evidence": "0397 IW18→Move78→DB13W18. 0457 NOT Presence P23→S27; RESET P35→existingFault P36→R37 without restored Presence. 0657 RID248 DB13X19.5/RID252 DB3X11.4/RID13 DB2X6.0."
+    },
+    {
+      "asset": "SYS-AUTO",
+      "conclusion": "Int count, D37 direction, scheduling conflict",
+      "native_evidence": "0024 ON Contact188 W189→CRef183.en; 0067 FCBlock TOD30. 0162 ON+Auto→Add59(+1); ON+NOTAuto→Move66(0). 0163 NOTAuto P115→Move87 Tipo→D37; Auto P117→Move93(-1)→D37. live_index titles 1s/1ms disagree."
+    },
+    {
+      "asset": "SYS-AUTO",
+      "conclusion": "DisableENO plus actual wires; ordinary maintenance state",
+      "native_evidence": "0168 Move22/23 DisableENO=true and W35 Move22.eno→Move23.en, W38 Move23.eno→S24. 0237 ON→Maintenance→W50 ordinary Coil34/36; M5.5 and DB3X7.5."
+    },
+    {
+      "asset": "SYS-AUTO",
+      "conclusion": "TON instances and Q wires correct; LRef preserved",
+      "native_evidence": "0164 LRef835/Instance836 DB38, TON, PT T#1M, Q W851. 0169 LRef58/63/68/72/76 Instances59/64/69/73/77→DB43/44/45/46/42; PT 0578 RID161 T#10s; Q W126/137/148/156/164."
+    },
+    {
+      "asset": "SYS-HMI",
+      "conclusion": "Local interface and unresolved caller preserved",
+      "native_evidence": "0355 W25→ordinary Coil27; OR41 W57→ordinary Coil59. 0621 Local RID16/17/22; 0622 duplicate Local RID22 IAD PN13 versus 0621 PN7 does not establish global address. 0357 data ORefs25/29/31/33/35/44/37/41 remain NID/address unbound."
+    },
+    {
+      "asset": "SYS-HMI",
+      "conclusion": "HMI request/internal reset/TOF separation correct",
+      "native_evidence": "0158 OR28 W38→S33 internalReset, R40 HMIrequest, LRef64.IN/73.IN. 0565 RID61 DB2X13.4/RID2 DB2X6.0/RID57 DB13X19.7; 0568 RID77 TOF; 0569 RID78/84 DB36/37; 0566 RID79 T#3s; Q W67/W77→Q7.4/Q7.5 Coil."
+    },
+    {
+      "asset": "SYS-HMI",
+      "conclusion": "Config counts and duplicate addresses correct",
+      "native_evidence": "hmi_plc_tags.csv 782 rows and hmi-windows.csv 17 rows. I_W20/O_W20 both DB14W20; I_W22/O_W22 both DB14W22; StatusPLC=$SYS$Status. Counts do not establish full meaning or live communication/events."
+    }
+  ],
+  "new_actionable_findings": [],
+  "existing_gaps_preserved": [
+    "Dedicated body PLC ownership for CM01/CM02/UC01 missing; CR01 shared related ownership only",
+    "Q6.4 direct Writer missing; Ready other retained Writer and scan order unverified",
+    "ZT01 physical identity/unit/calibration/current values unknown; low Set/Reset overlap unresolved",
+    "PV14 HMI binding, OEM110Vac/constructionDC and current field identity unresolved",
+    "SYS-AUTO 1s/1ms scheduling/current runtime/Writer order/protection values unresolved",
+    "SYS-HMI caller8data binding, original HMI events/access/drivers missing"
+  ],
+  "independent_limit": "Native source scope only. Parent owns original PDF/new PNG visual review, UI/PDF/report tests, preservation of old799/frozen5 and publication. 10 drafts match their declared SHA; no prior preservation claims assumed verified here.",
+  "generated_native_source_locations": 349,
+  "generated_additional_to_selected": [
+    {
+      "catalog_id": "ZT01",
+      "network": 1658,
+      "kind": "part",
+      "uid": "23",
+      "path": "networks/network-1658.html#gme-mc04-part-23",
+      "xml": "sources/decoded-original/0291-FlgNet.xml",
+      "exists_exact_native_type": true,
+      "native_element": "<Part UId=\"23\" Gate=\"Coil\" />\n    ",
+      "reason": "generator default alarm action adds shared conversion-function ordinary Coil23; this is Local Out_of_range, not a new dedicated PLC signal",
+      "native_declaration": "0611-IdentXmlPart.xml InterfaceAccess RID26 S=Local NID1 UID24 AK=Write; SSD S=O AO=0; IAD PN=1; name Out_of_range"
+    }
+  ],
+  "generated_unique_native_locations": 308,
+  "generated_additional_all_exact_native": true
+}

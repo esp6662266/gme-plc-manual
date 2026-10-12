@@ -1,0 +1,2141 @@
+{
+  "catalog_id": "PV14",
+  "selection_key": "PV14",
+  "priority_key": null,
+  "type": "pneumatic_cold_air_valve",
+  "draft": "catalog-sources/PV14-DOTS-DRAFT.md",
+  "draft_sha256": "d6bf4ab3c186d9859fd4d4ebc33f992217741cf444d81b3ea8bc6f7f89f942a0",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1902,
+      "part",
+      "2028"
+    ],
+    [
+      1902,
+      "part",
+      "2030"
+    ],
+    [
+      1902,
+      "part",
+      "2032"
+    ],
+    [
+      1902,
+      "part",
+      "2034"
+    ],
+    [
+      1902,
+      "part",
+      "2036"
+    ],
+    [
+      1902,
+      "part",
+      "1979"
+    ],
+    [
+      1902,
+      "part",
+      "1986"
+    ],
+    [
+      1902,
+      "part",
+      "2038"
+    ],
+    [
+      1902,
+      "part",
+      "1991"
+    ],
+    [
+      1902,
+      "part",
+      "2040"
+    ],
+    [
+      1902,
+      "part",
+      "2042"
+    ],
+    [
+      1902,
+      "part",
+      "1996"
+    ],
+    [
+      1902,
+      "wire",
+      "2010"
+    ],
+    [
+      1902,
+      "wire",
+      "2011"
+    ],
+    [
+      1902,
+      "wire",
+      "2013"
+    ],
+    [
+      1902,
+      "wire",
+      "23"
+    ],
+    [
+      1902,
+      "wire",
+      "2016"
+    ],
+    [
+      1902,
+      "wire",
+      "2017"
+    ],
+    [
+      1902,
+      "wire",
+      "2018"
+    ],
+    [
+      1902,
+      "wire",
+      "2039"
+    ],
+    [
+      1902,
+      "wire",
+      "2023"
+    ],
+    [
+      1902,
+      "wire",
+      "2024"
+    ],
+    [
+      1902,
+      "wire",
+      "2043"
+    ],
+    [
+      1903,
+      "part",
+      "2035"
+    ],
+    [
+      1903,
+      "part",
+      "2037"
+    ],
+    [
+      1903,
+      "part",
+      "2004"
+    ],
+    [
+      1903,
+      "part",
+      "2041"
+    ],
+    [
+      1903,
+      "part",
+      "2043"
+    ],
+    [
+      1903,
+      "part",
+      "2045"
+    ],
+    [
+      1903,
+      "part",
+      "2047"
+    ],
+    [
+      1903,
+      "part",
+      "22"
+    ],
+    [
+      1903,
+      "part",
+      "2007"
+    ],
+    [
+      1903,
+      "part",
+      "2012"
+    ],
+    [
+      1903,
+      "wire",
+      "25"
+    ],
+    [
+      1903,
+      "wire",
+      "2026"
+    ],
+    [
+      1903,
+      "wire",
+      "2042"
+    ],
+    [
+      1903,
+      "wire",
+      "2044"
+    ],
+    [
+      1903,
+      "wire",
+      "2046"
+    ],
+    [
+      1903,
+      "wire",
+      "2048"
+    ],
+    [
+      1903,
+      "wire",
+      "24"
+    ],
+    [
+      1903,
+      "wire",
+      "2031"
+    ],
+    [
+      1903,
+      "wire",
+      "2033"
+    ],
+    [
+      1070,
+      "part",
+      "101"
+    ],
+    [
+      1070,
+      "part",
+      "105"
+    ],
+    [
+      1070,
+      "part",
+      "108"
+    ],
+    [
+      1070,
+      "part",
+      "112"
+    ],
+    [
+      1070,
+      "wire",
+      "100"
+    ],
+    [
+      1070,
+      "wire",
+      "103"
+    ],
+    [
+      1070,
+      "wire",
+      "104"
+    ],
+    [
+      1070,
+      "wire",
+      "107"
+    ],
+    [
+      1070,
+      "wire",
+      "110"
+    ],
+    [
+      1070,
+      "wire",
+      "111"
+    ],
+    [
+      402,
+      "part",
+      "161"
+    ],
+    [
+      402,
+      "wire",
+      "201"
+    ],
+    [
+      402,
+      "wire",
+      "202"
+    ],
+    [
+      402,
+      "wire",
+      "203"
+    ],
+    [
+      403,
+      "part",
+      "273"
+    ],
+    [
+      403,
+      "wire",
+      "320"
+    ],
+    [
+      403,
+      "wire",
+      "321"
+    ],
+    [
+      403,
+      "wire",
+      "322"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "출력",
+      "network": 1903,
+      "kind": "wire",
+      "uid": "2033",
+      "label": "Coil2012→Q17.0",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "밸브 부하",
+      "network": 1903,
+      "kind": "wire",
+      "uid": "2033",
+      "label": "Q17.0 요청과 OEM 부하 대응",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "OPEN 원시",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "107",
+      "label": "I28.0→Contact108",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "CLOSE 원시",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "100",
+      "label": "I28.1→Contact101",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "위치 고장 Set",
+      "network": 1902,
+      "kind": "wire",
+      "uid": "2039",
+      "label": "T20 접점→SCoil1991",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "위치 고장 Reset",
+      "network": 1902,
+      "kind": "wire",
+      "uid": "2043",
+      "label": "Reset·기존Fault→RCoil1996",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "수동요청 Reset",
+      "network": 1903,
+      "kind": "wire",
+      "uid": "25",
+      "label": "Fault 접점→M_PV14 Reset",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "Flag 시작 Word",
+      "network": 402,
+      "kind": "wire",
+      "uid": "203",
+      "label": "Move161→DB2W12",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "signal": "Alarm 시작 Word",
+      "network": 403,
+      "kind": "wire",
+      "uid": "322",
+      "label": "Move273→DB3W12",
+      "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0048-IdentXmlPart.xml",
+    "sources/decoded-original/0562-IdentXmlPart.xml",
+    "sources/decoded-original/0563-IdentXmlPart.xml",
+    "sources/decoded-original/0594-IdentXmlPart.xml",
+    "sources/decoded-original/0595-IdentXmlPart.xml",
+    "sources/decoded-original/0596-IdentXmlPart.xml",
+    "sources/decoded-original/0597-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "PV14",
+    "signals": [
+      {
+        "id": "output",
+        "role": "outputs",
+        "name": "PV14 출력 요청",
+        "addresses": [
+          "%Q17.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2021",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "open-raw",
+        "role": "raw_inputs",
+        "name": "PV14 OPEN 원시",
+        "addresses": [
+          "%I28.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "109",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "close-raw",
+        "role": "raw_inputs",
+        "name": "PV14 CLOSE 원시",
+        "addresses": [
+          "%I28.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "102",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "open",
+        "role": "responses",
+        "name": "PV14 OPEN 처리",
+        "addresses": [
+          "DB13.DBX22.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "113",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "close",
+        "role": "responses",
+        "name": "PV14 CLOSE 처리",
+        "addresses": [
+          "DB13.DBX22.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "106",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Fault_PV14 위치불일치",
+        "addresses": [
+          "DB3.DBX13.4"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2005",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "timer",
+        "role": "timers",
+        "name": "Tag_134 고유20초",
+        "addresses": [
+          "%T20"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2003",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "manual",
+        "role": "requests",
+        "name": "M_PV14 수동 요청",
+        "addresses": [
+          "DB2.DBX13.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2017",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM PLC 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2006",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "cold-air",
+        "role": "requests",
+        "name": "Open false air · TC09 소유",
+        "addresses": [
+          "%M2.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2018",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "max",
+        "role": "alarms",
+        "name": "MAX_TC09 · 관련 소유",
+        "addresses": [
+          "DB3.DBX8.6"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2019",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "max-max",
+        "role": "alarms",
+        "name": "MAX_MAX_TC09 · 관련 소유",
+        "addresses": [
+          "DB3.DBX8.7"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2020",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "emergency",
+        "role": "responses",
+        "name": "Emergency_module_fault · 관련 소유",
+        "addresses": [
+          "DB3.DBX16.6"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "23",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2013",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "hmi-open",
+        "role": "responses",
+        "name": "HMI LS_Open · PLC 처리입력 미결속",
+        "addresses": [
+          "DB11.DBX74.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "hmi-close",
+        "role": "responses",
+        "name": "HMI LS_Close · PLC 처리입력 미결속",
+        "addresses": [
+          "DB11.DBX74.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "hmi-reset",
+        "role": "requests",
+        "name": "HMI ResetAlarms · PLC Reset 미결속",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "PV14",
+    "timers": [
+      {
+        "network": 1902,
+        "uid": "1986",
+        "name": "Tag_134 · PV14 위치불일치",
+        "address": "%T20",
+        "preset": "S5T#20S",
+        "condition": "ON AND ((Q AND NOT OPEN) OR (NOT Q AND NOT CLOSE))"
+      }
+    ],
+    "alarms": [
+      {
+        "name": "Fault_PV14",
+        "address": "DB3.DBX13.4",
+        "actions": [
+          {
+            "network": 1902,
+            "uid": "1991",
+            "gate": "SCoil",
+            "condition": "불일치 AND T20"
+          },
+          {
+            "network": 1902,
+            "uid": "1996",
+            "gate": "RCoil",
+            "condition": "ON AND RESET_ALLARM AND 기존Fault; 위치정상 조건 없음"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1902,
+      1903,
+      1070,
+      402,
+      403
+    ],
+    "chain": [
+      "ON AND 다섯 요청 OR→Q17.0",
+      "Fault→수동 M_PV14만 Reset",
+      "원시 위치→처리 위치→고유20초 경보",
+      "HMI 위치/Reset 주소 미결속"
+    ],
+    "repair": [
+      "M_PV14·Fault·ON·HMI 이벤트·startup",
+      "M2.1·MAX/MAX_MAX·비상모듈·Q17.0",
+      "Q17.0·I28.0/1·DB13X22.0/1·T20·Fault 시각",
+      "DB11X74.0/1·DB13X22.0/1·원시입력",
+      "두 입력·명판·DI 형번·도면 판본",
+      "TC09 값·M2.1·MAX/MAX_MAX·다른 OR 요청"
+    ],
+    "pending": [
+      "OEM110Vac 위치접점 대 시공DC 분류와 현재 DI 모듈 전압/형번",
+      "X3:84~89와 DUS1TB1/2 심선별 준공 결속",
+      "HMI DB11X74.0/1 대 DB13X22.0/1 및 ResetAlarms DB2X13.4 대 DB2X6.0 결속",
+      "공압 복귀·fail-position·현재 실제 개방/폐쇄 및 유량",
+      "T20 20초와 TC09 무타이머 온도 래치 소유 구분",
+      "Fault는 수동 요청만 Reset; 다른 네 OR 가지·동시참 미검출 경계",
+      "startup Word12 및 다른 정적 Writer/전체 실행 순서",
+      "P&ID170/160·백업180/200·코드히스테리시스2와 현재 승인값 구분",
+      "현재 TIA/CPU/현장복구 미수행; 시공 마스킹/삭제행 보존"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "PV14",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "정적 원본과 현재 동작/현장복구 구분"
+    ],
+    "existing_pending": [
+      "OEM110Vac 위치접점 대 시공DC 분류와 현재 DI 모듈 전압/형번",
+      "X3:84~89와 DUS1TB1/2 심선별 준공 결속",
+      "HMI DB11X74.0/1 대 DB13X22.0/1 및 ResetAlarms DB2X13.4 대 DB2X6.0 결속",
+      "공압 복귀·fail-position·현재 실제 개방/폐쇄 및 유량",
+      "T20 20초와 TC09 무타이머 온도 래치 소유 구분",
+      "Fault는 수동 요청만 Reset; 다른 네 OR 가지·동시참 미검출 경계",
+      "startup Word12 및 다른 정적 Writer/전체 실행 순서",
+      "P&ID170/160·백업180/200·코드히스테리시스2와 현재 승인값 구분",
+      "현재 TIA/CPU/현장복구 미수행; 시공 마스킹/삭제행 보존"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "OEM110Vac 위치접점 대 시공DC 분류와 현재 DI 모듈 전압/형번",
+        "X3:84~89와 DUS1TB1/2 심선별 준공 결속",
+        "HMI DB11X74.0/1 대 DB13X22.0/1 및 ResetAlarms DB2X13.4 대 DB2X6.0 결속",
+        "공압 복귀·fail-position·현재 실제 개방/폐쇄 및 유량",
+        "T20 20초와 TC09 무타이머 온도 래치 소유 구분",
+        "Fault는 수동 요청만 Reset; 다른 네 OR 가지·동시참 미검출 경계",
+        "startup Word12 및 다른 정적 Writer/전체 실행 순서",
+        "P&ID170/160·백업180/200·코드히스테리시스2와 현재 승인값 구분",
+        "현재 TIA/CPU/현장복구 미수행; 시공 마스킹/삭제행 보존"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "PV14",
+    "plc_id": "PV14",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "수동요청 꺼짐",
+        "observe": "M_PV14·Fault·ON·HMI 이벤트·startup",
+        "compare": "고장에 의한 수동요청 Reset과 전체출력 차단 구분",
+        "next": "현재 프로젝트/이벤트 근거",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "수동0인데 출력참",
+        "observe": "M2.1·MAX/MAX_MAX·비상모듈·Q17.0",
+        "compare": "다섯 OR 소유 및 현재 요청 구분",
+        "next": "실제밸브 위치·승인 관찰자료",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "출력/위치 불일치",
+        "observe": "Q17.0·I28.0/1·DB13X22.0/1·T20·Fault 시각",
+        "compare": "전달·센서·기구 상태와 타이머 구분",
+        "next": "준공도/공압기구/승인 관찰",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "HMI 표시 불일치",
+        "observe": "DB11X74.0/1·DB13X22.0/1·원시입력",
+        "compare": "이름만으로 주소를 합치지 않음",
+        "next": "HMI 실제 태그/통신 자료",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "양위치참 또는 전압 상충",
+        "observe": "두 입력·명판·DI 형번·도면 판본",
+        "compare": "전용 동시참 경보 미확보·OEM/시공 상충",
+        "next": "현재 승인 전기자료",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "온도 내려왔으나 출력유지",
+        "observe": "TC09 값·M2.1·MAX/MAX_MAX·다른 OR 요청",
+        "compare": "과거설정·래치Reset·현재값 분리",
+        "next": "TC09 소유 원본과 승인 이력",
+        "common": "step-symptom-6"
+      }
+    ],
+    "signals": [
+      {
+        "id": "output",
+        "role": "outputs",
+        "name": "PV14 출력 요청",
+        "addresses": [
+          "%Q17.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2021",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "open-raw",
+        "role": "raw_inputs",
+        "name": "PV14 OPEN 원시",
+        "addresses": [
+          "%I28.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "109",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "close-raw",
+        "role": "raw_inputs",
+        "name": "PV14 CLOSE 원시",
+        "addresses": [
+          "%I28.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "102",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "open",
+        "role": "responses",
+        "name": "PV14 OPEN 처리",
+        "addresses": [
+          "DB13.DBX22.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "113",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "close",
+        "role": "responses",
+        "name": "PV14 CLOSE 처리",
+        "addresses": [
+          "DB13.DBX22.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "106",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Fault_PV14 위치불일치",
+        "addresses": [
+          "DB3.DBX13.4"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2005",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "timer",
+        "role": "timers",
+        "name": "Tag_134 고유20초",
+        "addresses": [
+          "%T20"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2003",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "manual",
+        "role": "requests",
+        "name": "M_PV14 수동 요청",
+        "addresses": [
+          "DB2.DBX13.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2017",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM PLC 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2006",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "cold-air",
+        "role": "requests",
+        "name": "Open false air · TC09 소유",
+        "addresses": [
+          "%M2.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2018",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max",
+        "role": "alarms",
+        "name": "MAX_TC09 · 관련 소유",
+        "addresses": [
+          "DB3.DBX8.6"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2019",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max-max",
+        "role": "alarms",
+        "name": "MAX_MAX_TC09 · 관련 소유",
+        "addresses": [
+          "DB3.DBX8.7"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2020",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "emergency",
+        "role": "responses",
+        "name": "Emergency_module_fault · 관련 소유",
+        "addresses": [
+          "DB3.DBX16.6"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "23",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2013",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "hmi-open",
+        "role": "responses",
+        "name": "HMI LS_Open · PLC 처리입력 미결속",
+        "addresses": [
+          "DB11.DBX74.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "hmi-close",
+        "role": "responses",
+        "name": "HMI LS_Close · PLC 처리입력 미결속",
+        "addresses": [
+          "DB11.DBX74.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "hmi-reset",
+        "role": "requests",
+        "name": "HMI ResetAlarms · PLC Reset 미결속",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": []
+      }
+    ]
+  },
+  "record_form": {
+    "key": "PV14",
+    "name": "PV14 냉풍 유입 밸브 관찰",
+    "reference_plc_id": "PV14",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "output",
+        "role": "outputs",
+        "name": "PV14 출력 요청",
+        "addresses": [
+          "%Q17.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2021",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "open-raw",
+        "role": "raw_inputs",
+        "name": "PV14 OPEN 원시",
+        "addresses": [
+          "%I28.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "109",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "close-raw",
+        "role": "raw_inputs",
+        "name": "PV14 CLOSE 원시",
+        "addresses": [
+          "%I28.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "102",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "open",
+        "role": "responses",
+        "name": "PV14 OPEN 처리",
+        "addresses": [
+          "DB13.DBX22.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "113",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "close",
+        "role": "responses",
+        "name": "PV14 CLOSE 처리",
+        "addresses": [
+          "DB13.DBX22.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "106",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Fault_PV14 위치불일치",
+        "addresses": [
+          "DB3.DBX13.4"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2005",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "timer",
+        "role": "timers",
+        "name": "Tag_134 고유20초",
+        "addresses": [
+          "%T20"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2003",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "manual",
+        "role": "requests",
+        "name": "M_PV14 수동 요청",
+        "addresses": [
+          "DB2.DBX13.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2017",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "RESET_ALLARM PLC 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1902,
+            "oref": "2006",
+            "source": "sources/decoded-original/0215-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "cold-air",
+        "role": "requests",
+        "name": "Open false air · TC09 소유",
+        "addresses": [
+          "%M2.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2018",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max",
+        "role": "alarms",
+        "name": "MAX_TC09 · 관련 소유",
+        "addresses": [
+          "DB3.DBX8.6"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2019",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "max-max",
+        "role": "alarms",
+        "name": "MAX_MAX_TC09 · 관련 소유",
+        "addresses": [
+          "DB3.DBX8.7"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2020",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "emergency",
+        "role": "responses",
+        "name": "Emergency_module_fault · 관련 소유",
+        "addresses": [
+          "DB3.DBX16.6"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "23",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1903,
+            "oref": "2013",
+            "source": "sources/decoded-original/0216-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "hmi-open",
+        "role": "responses",
+        "name": "HMI LS_Open · PLC 처리입력 미결속",
+        "addresses": [
+          "DB11.DBX74.0"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "hmi-close",
+        "role": "responses",
+        "name": "HMI LS_Close · PLC 처리입력 미결속",
+        "addresses": [
+          "DB11.DBX74.1"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "hmi-reset",
+        "role": "requests",
+        "name": "HMI ResetAlarms · PLC Reset 미결속",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+        "refs": []
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "수동요청 꺼짐",
+        "observe": "M_PV14·Fault·ON·HMI 이벤트·startup",
+        "compare": "고장에 의한 수동요청 Reset과 전체출력 차단 구분",
+        "next": "현재 프로젝트/이벤트 근거",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "수동0인데 출력참",
+        "observe": "M2.1·MAX/MAX_MAX·비상모듈·Q17.0",
+        "compare": "다섯 OR 소유 및 현재 요청 구분",
+        "next": "실제밸브 위치·승인 관찰자료",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "출력/위치 불일치",
+        "observe": "Q17.0·I28.0/1·DB13X22.0/1·T20·Fault 시각",
+        "compare": "전달·센서·기구 상태와 타이머 구분",
+        "next": "준공도/공압기구/승인 관찰",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "HMI 표시 불일치",
+        "observe": "DB11X74.0/1·DB13X22.0/1·원시입력",
+        "compare": "이름만으로 주소를 합치지 않음",
+        "next": "HMI 실제 태그/통신 자료",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "양위치참 또는 전압 상충",
+        "observe": "두 입력·명판·DI 형번·도면 판본",
+        "compare": "전용 동시참 경보 미확보·OEM/시공 상충",
+        "next": "현재 승인 전기자료",
+        "common": "step-symptom-5"
+      },
+      {
+        "id": "symptom-6",
+        "title": "온도 내려왔으나 출력유지",
+        "observe": "TC09 값·M2.1·MAX/MAX_MAX·다른 OR 요청",
+        "compare": "과거설정·래치Reset·현재값 분리",
+        "next": "TC09 소유 원본과 승인 이력",
+        "common": "step-symptom-6"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "PV14 고유 출력·위치불일치와 TC09 관련 소유 분리",
+      "sources": {
+        "catalog-sources/PV14-DOTS-DRAFT.md": "d6bf4ab3c186d9859fd4d4ebc33f992217741cf444d81b3ea8bc6f7f89f942a0"
+      },
+      "circuit_equipment": "PV14 냉풍 유입 밸브",
+      "circuit_distinction": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG168 · PDF169",
+          "path": "sources/Electrical_Rev2.pdf#page=169"
+        },
+        {
+          "label": "FG177 · PDF178",
+          "path": "sources/Electrical_Rev2.pdf#page=178"
+        },
+        {
+          "label": "FG180 · PDF181",
+          "path": "sources/Electrical_Rev2.pdf#page=181"
+        },
+        {
+          "label": "P&ID · PDF1",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "OEM110Vac/시공DC 상충 · 심선 결속 미확보",
+      "construction_pages": [
+        {
+          "label": "시공·케이블 · PDF35",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=35"
+        },
+        {
+          "label": "시공·케이블 · PDF60",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "OEM110Vac 위치접점 대 시공DC 분류와 현재 DI 모듈 전압/형번"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1902",
+            "path": "networks/network-1902.html"
+          },
+          {
+            "label": "1903",
+            "path": "networks/network-1903.html"
+          },
+          {
+            "label": "1070",
+            "path": "networks/network-1070.html"
+          },
+          {
+            "label": "402",
+            "path": "networks/network-402.html"
+          },
+          {
+            "label": "403",
+            "path": "networks/network-403.html"
+          },
+          {
+            "label": "1991",
+            "path": "networks/network-1991.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "M_PV14·Fault·ON·HMI 이벤트·startup"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 프로젝트/이벤트 근거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1902",
+              "path": "networks/network-1902.html"
+            },
+            {
+              "label": "1903",
+              "path": "networks/network-1903.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "402",
+              "path": "networks/network-402.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            },
+            {
+              "label": "1991",
+              "path": "networks/network-1991.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "M2.1·MAX/MAX_MAX·비상모듈·Q17.0"
+            },
+            {
+              "owner": "현재자료",
+              "work": "실제밸브 위치·승인 관찰자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1902",
+              "path": "networks/network-1902.html"
+            },
+            {
+              "label": "1903",
+              "path": "networks/network-1903.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "402",
+              "path": "networks/network-402.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            },
+            {
+              "label": "1991",
+              "path": "networks/network-1991.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "Q17.0·I28.0/1·DB13X22.0/1·T20·Fault 시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "준공도/공압기구/승인 관찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1902",
+              "path": "networks/network-1902.html"
+            },
+            {
+              "label": "1903",
+              "path": "networks/network-1903.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "402",
+              "path": "networks/network-402.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            },
+            {
+              "label": "1991",
+              "path": "networks/network-1991.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DB11X74.0/1·DB13X22.0/1·원시입력"
+            },
+            {
+              "owner": "현재자료",
+              "work": "HMI 실제 태그/통신 자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1902",
+              "path": "networks/network-1902.html"
+            },
+            {
+              "label": "1903",
+              "path": "networks/network-1903.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "402",
+              "path": "networks/network-402.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            },
+            {
+              "label": "1991",
+              "path": "networks/network-1991.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "두 입력·명판·DI 형번·도면 판본"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 승인 전기자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1902",
+              "path": "networks/network-1902.html"
+            },
+            {
+              "label": "1903",
+              "path": "networks/network-1903.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "402",
+              "path": "networks/network-402.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            },
+            {
+              "label": "1991",
+              "path": "networks/network-1991.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-6",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "TC09 값·M2.1·MAX/MAX_MAX·다른 OR 요청"
+            },
+            {
+              "owner": "현재자료",
+              "work": "TC09 소유 원본과 승인 이력"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1902",
+              "path": "networks/network-1902.html"
+            },
+            {
+              "label": "1903",
+              "path": "networks/network-1903.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "402",
+              "path": "networks/network-402.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            },
+            {
+              "label": "1991",
+              "path": "networks/network-1991.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "PV14",
+    "plc_id": "PV14",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-168",
+        "kind": "OEM 전기",
+        "title": "FG168 · PDF169",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 169,
+        "fg": 168,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P169.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/전압 미확정",
+        "revision": "27.05.2024 · 별도개정 기입 미관찰"
+      },
+      {
+        "id": "oem-177",
+        "kind": "OEM 전기",
+        "title": "FG177 · PDF178",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 178,
+        "fg": 177,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P178.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/전압 미확정",
+        "revision": "27.05.2024 · 별도개정 기입 미관찰"
+      },
+      {
+        "id": "oem-180",
+        "kind": "OEM 전기",
+        "title": "FG180 · PDF181",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 181,
+        "fg": 180,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P181.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/전압 미확정",
+        "revision": "27.05.2024 · 별도개정 기입 미관찰"
+      },
+      {
+        "id": "construction-35",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF35",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 35,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P035.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/전압 미확정",
+        "revision": "Rev1 24.11.11 first draft · DESIGNED J.W.Lee / CHECKED J.H.Kim / APPROVED 공란"
+      },
+      {
+        "id": "construction-60",
+        "kind": "시공·케이블",
+        "title": "시공·케이블 · PDF60",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 60,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P060.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/전압 미확정",
+        "revision": "Rev1 24.11.11 first draft · DESIGNED J.W.Lee / CHECKED J.H.Kim / APPROVED 공란"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물/전압 미확정",
+        "revision": "I 15/01/2013"
+      }
+    ],
+    "circuit": {
+      "id": "PV14",
+      "equipment": "PV14 냉풍 유입 밸브",
+      "distinction": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+      "paths": [
+        {
+          "signal": "출력",
+          "fg": 180,
+          "sheet_id": "oem-180",
+          "drawing": "A17.0 단자31→168KA1 A1; A2→−0Vdc152.4. 모듈 공급 +24Vdc152.5→X22:4027→39 3L+; 별도 리턴40 3M→−0Vdc152.4",
+          "backup": "PV14 보존 원본",
+          "nodes": [
+            "MOD4 단자31 A17.0→168/3→168KA1 A1",
+            "168KA1 A2→−0Vdc152.4",
+            "+24Vdc152.5→X22:4027 4A IST→180.1→단자39 3L+",
+            "별도 리턴: 단자40 3M→−0Vdc152.4"
+          ],
+          "destination": "보존 끝점 · 현행 미확정",
+          "native_symbol_references": [
+            {
+              "network": 1903,
+              "uid": "2021"
+            }
+          ],
+          "check": "Q17.0 출력과 실제 개방 구분"
+        },
+        {
+          "signal": "밸브 부하",
+          "fg": 168,
+          "sheet_id": "oem-168",
+          "drawing": "110Vac152.8→168KA1 접점5–9→168.1 → X3:84 2AF→168.2→PV14 A1 → PV14 A2→X3:85→0Vac9.9",
+          "backup": "PV14 보존 원본",
+          "nodes": [
+            "110Vac152.8→168KA1 접점5–9→168.1",
+            "X3:84 2AF→168.2→PV14 A1",
+            "PV14 A2→X3:85→0Vac9.9"
+          ],
+          "destination": "보존 끝점 · 현행 미확정",
+          "native_symbol_references": [
+            {
+              "network": 1903,
+              "uid": "2021"
+            }
+          ],
+          "check": "하단 접점표1/5/9와 실제5–9 구분; 전기 부하 대응"
+        },
+        {
+          "signal": "OPEN 원시",
+          "fg": 168,
+          "sheet_id": "oem-168",
+          "drawing": "110Vac152.8→X3:86 2AF→168.3 → ZS.O 접점13/14→X3:87→E28.0 → FG177 MOD4 단자1",
+          "backup": "PV14 보존 원본",
+          "nodes": [
+            "110Vac152.8→X3:86 2AF→168.3",
+            "ZS.O 접점13/14→X3:87→E28.0",
+            "FG177 MOD4 단자1"
+          ],
+          "destination": "보존 끝점 · 현행 미확정",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "109"
+            }
+          ],
+          "check": "시공DC 분류와 상충; 극성 미확정"
+        },
+        {
+          "signal": "CLOSE 원시",
+          "fg": 177,
+          "sheet_id": "oem-177",
+          "drawing": "110Vac152.8→X3:88 2AF→168.4 → ZS.C 접점13/14→X3:89→E28.1 → FG177 MOD4 단자2",
+          "backup": "PV14 보존 원본",
+          "nodes": [
+            "110Vac152.8→X3:88 2AF→168.4",
+            "ZS.C 접점13/14→X3:89→E28.1",
+            "FG177 MOD4 단자2"
+          ],
+          "destination": "보존 끝점 · 현행 미확정",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "102"
+            }
+          ],
+          "check": "전압/모듈 정격 현행 자료 필요"
+        },
+        {
+          "signal": "시공 배선",
+          "fg": null,
+          "sheet_id": "construction-60",
+          "drawing": "BF01/JB01→SC01/DUS1TB1→PV14/DUS1TB2 → 10_10/11 DC ZS.O/C;10_12 AC PV14 → 10_6 마스킹/삭제 보존 · OEM X3 심선 매핑 미확보",
+          "backup": "PV14 보존 원본",
+          "nodes": [
+            "BF01/JB01→SC01/DUS1TB1→PV14/DUS1TB2",
+            "10_10/11 DC ZS.O/C;10_12 AC PV14",
+            "10_6 마스킹/삭제 보존 · OEM X3 심선 매핑 미확보"
+          ],
+          "destination": "보존 끝점 · 현행 미확정",
+          "native_symbol_references": [],
+          "check": "본체 전기 장치 관련 시공 경유; 정확한 핀 대응 미확보",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "본체 전기 장치 관련 시공 경유; 정확한 핀 대응 미확보"
+        }
+      ],
+      "pending": [
+        "OEM110Vac 위치접점 대 시공DC 분류와 현재 DI 모듈 전압/형번",
+        "X3:84~89와 DUS1TB1/2 심선별 준공 결속",
+        "HMI DB11X74.0/1 대 DB13X22.0/1 및 ResetAlarms DB2X13.4 대 DB2X6.0 결속",
+        "공압 복귀·fail-position·현재 실제 개방/폐쇄 및 유량",
+        "T20 20초와 TC09 무타이머 온도 래치 소유 구분",
+        "Fault는 수동 요청만 Reset; 다른 네 OR 가지·동시참 미검출 경계",
+        "startup Word12 및 다른 정적 Writer/전체 실행 순서",
+        "P&ID170/160·백업180/200·코드히스테리시스2와 현재 승인값 구분",
+        "현재 TIA/CPU/현장복구 미수행; 시공 마스킹/삭제행 보존"
+      ]
+    },
+    "warnings": [
+      "OEM110Vac/시공DC 상충",
+      "HMI/PLC 위치 주소 미결속",
+      "Fault가 전체출력 차단이 아님"
+    ]
+  },
+  "related_alarm_boundary": "PV14의 Q17.0은 다섯 요청의 OR 출력이고 Fault는 수동 M_PV14만 Reset합니다. T20 20초는 고유 위치불일치 경보이며 TC09 온도 경보와 소유가 다릅니다. HMI DB11X74.0/1과 처리 DB13X22.0/1, HMI ResetAlarms와 RESET_ALLARM은 미결속입니다. OEM 위치접점110Vac/시공DC 상충, 현재 CPU·실물·극성·복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "PV14, Q17.0, I28.0, T20, Fault_PV14"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "1902",
+        "networks/network-1902.html"
+      ],
+      [
+        "1903",
+        "networks/network-1903.html"
+      ],
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "402",
+        "networks/network-402.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1991",
+        "networks/network-1991.html"
+      ]
+    ],
+    "io": [
+      [
+        "1902",
+        "networks/network-1902.html"
+      ],
+      [
+        "1903",
+        "networks/network-1903.html"
+      ],
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "402",
+        "networks/network-402.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1991",
+        "networks/network-1991.html"
+      ]
+    ],
+    "control": [
+      [
+        "1902",
+        "networks/network-1902.html"
+      ],
+      [
+        "1903",
+        "networks/network-1903.html"
+      ],
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "402",
+        "networks/network-402.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1991",
+        "networks/network-1991.html"
+      ]
+    ],
+    "alarms": [
+      [
+        "1902",
+        "networks/network-1902.html"
+      ],
+      [
+        "1903",
+        "networks/network-1903.html"
+      ],
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "402",
+        "networks/network-402.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1991",
+        "networks/network-1991.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1902",
+        "networks/network-1902.html"
+      ],
+      [
+        "1903",
+        "networks/network-1903.html"
+      ],
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "402",
+        "networks/network-402.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1991",
+        "networks/network-1991.html"
+      ]
+    ],
+    "completion": [
+      [
+        "1902",
+        "networks/network-1902.html"
+      ],
+      [
+        "1903",
+        "networks/network-1903.html"
+      ],
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "402",
+        "networks/network-402.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ],
+      [
+        "1991",
+        "networks/network-1991.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG168 · PDF169",
+        "sources/Electrical_Rev2.pdf#page=169"
+      ],
+      [
+        "FG177 · PDF178",
+        "sources/Electrical_Rev2.pdf#page=178"
+      ],
+      [
+        "FG180 · PDF181",
+        "sources/Electrical_Rev2.pdf#page=181"
+      ],
+      [
+        "시공·케이블 · PDF35",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=35"
+      ],
+      [
+        "시공·케이블 · PDF60",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+      ],
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ]
+  },
+  "supplements": {
+    "circuits": [
+      {
+        "id": "review-pv14-checked-footer",
+        "title": "시공35/60 검토란 정정",
+        "type": "reviewed",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "시공 실제 PDF35/60은 DESIGNED J.W.Lee, CHECKED J.H.Kim, APPROVED 공란입니다. 원초안의 CHECKED/APPROVED 모두 공란 서술을 정정하고 원초안 바이트는 보존합니다. Rev1 24.11.11 first draft design은 유지하며 현재 승인 준공도로 취급하지 않습니다."
+            }
+          ]
+        },
+        "links": [
+          [
+            "시공35",
+            "sources/Electrical_Can_Decoating_20241118.pdf#page=35"
+          ],
+          [
+            "시공60",
+            "sources/Electrical_Can_Decoating_20241118.pdf#page=60"
+          ]
+        ]
+      }
+    ]
+  }
+}

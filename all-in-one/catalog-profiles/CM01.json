@@ -1,0 +1,484 @@
+{
+  "catalog_id": "CM01",
+  "selection_key": "CM01",
+  "priority_key": null,
+  "type": "passive_stack",
+  "draft": "catalog-sources/CM01-DOTS-DRAFT.md",
+  "draft_sha256": "2755852ef71fb8152f53e3b090e2fb275ab8614a9693d36482927f82e0ccd86c",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [],
+  "internal_names": [],
+  "source_pairs": [],
+  "extra_sources": [],
+  "signal_reference": {
+    "id": "CM01",
+    "signals": []
+  },
+  "alarm_reference": {
+    "id": "CM01",
+    "timers": [],
+    "alarms": []
+  },
+  "control_reference": {
+    "native": [],
+    "chain": [
+      "P&ID BF01/BF02→FN04→CM01 배출 연결",
+      "공정 배관 연결은 PLC Wire나 전기 전달 경로가 아님",
+      "FN04 팬·BF01/BF02 필터 소유 유지"
+    ],
+    "repair": [
+      "기존 전체사진·태그·준공 배치도·시각",
+      "보고 위치·시각·기존 팬/밸브 상태와 승인 계측 기록",
+      "기존 안전거리 사진·부위·시각·승인 검사기록",
+      "최초 경보 원문·태그·발생/해제시각"
+    ],
+    "pending": [
+      "CM01 현재 태그·명판·설치 위치와 최신 승인 P&ID/배치도",
+      "본체 제작·치수·재질·지지·접지·등전위 및 승인 검사자료",
+      "부속 계측·댐퍼·로컬 제어기 목록과 고유 루프/단자도",
+      "별칭/현행 프로젝트·HMI 교차참조; 이름 검색0은 부재 증거 아님",
+      "FN04 팬·BF01/BF02 필터와 본체 소유 경계",
+      "현재 안전값·정상극성·재운전/복구 판정 미수행",
+      "신규 자료 전 부재 전검색 반복 안 함; 해시 수와 의미검토 수 구분"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "CM01",
+    "boundary": "source_linked; PLC evidence unavailable; physical identity unverified",
+    "existing_notes": [
+      "문서 및 관찰양식 대상 · 고유 PLC 기능판정 보류"
+    ],
+    "existing_pending": [
+      "CM01 현재 태그·명판·설치 위치와 최신 승인 P&ID/배치도",
+      "본체 제작·치수·재질·지지·접지·등전위 및 승인 검사자료",
+      "부속 계측·댐퍼·로컬 제어기 목록과 고유 루프/단자도",
+      "별칭/현행 프로젝트·HMI 교차참조; 이름 검색0은 부재 증거 아님",
+      "FN04 팬·BF01/BF02 필터와 본체 소유 경계",
+      "현재 안전값·정상극성·재운전/복구 판정 미수행",
+      "신규 자료 전 부재 전검색 반복 안 함; 해시 수와 의미검토 수 구분"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "CM01 현재 태그·명판·설치 위치와 최신 승인 P&ID/배치도",
+        "본체 제작·치수·재질·지지·접지·등전위 및 승인 검사자료",
+        "부속 계측·댐퍼·로컬 제어기 목록과 고유 루프/단자도",
+        "별칭/현행 프로젝트·HMI 교차참조; 이름 검색0은 부재 증거 아님",
+        "FN04 팬·BF01/BF02 필터와 본체 소유 경계",
+        "현재 안전값·정상극성·재운전/복구 판정 미수행",
+        "신규 자료 전 부재 전검색 반복 안 함; 해시 수와 의미검토 수 구분"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "CM01",
+    "plc_id": "CM01",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "본체 식별",
+        "observe": "기존 전체사진·태그·준공 배치도·시각",
+        "compare": "P&ID BF01/BF02→FN04→CM01 배출 연결",
+        "next": "현재 동일실물 여부",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "배출 이상 보고",
+        "observe": "보고 위치·시각·기존 팬/밸브 상태와 승인 계측 기록",
+        "compare": "연관 장치 상태와 본체 배출 관찰을 분리",
+        "next": "정상값·원인·실제 유량 미확정",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "외관 손상/누설 의심",
+        "observe": "기존 안전거리 사진·부위·시각·승인 검사기록",
+        "compare": "과거 자료 및 제조사도면",
+        "next": "안전성·수리완료 미판정",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "연관 경보 발생",
+        "observe": "최초 경보 원문·태그·발생/해제시각",
+        "compare": "원래 소유장치와 동시간 관찰",
+        "next": "본체 직접알람으로 바꾸지 않음",
+        "common": "step-symptom-4"
+      }
+    ],
+    "signals": [
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "CM01 태그·위치·자료 판본 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+      },
+      {
+        "id": "appearance",
+        "role": "responses",
+        "name": "CM01 외관·배출 관련 보고 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+      },
+      {
+        "id": "related-event",
+        "role": "responses",
+        "name": "관련 장치 경보 원문·소유·시각 · 자료 기록",
+        "addresses": [],
+        "refs": [],
+        "boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+      }
+    ]
+  },
+  "record_form": {
+    "key": "CM01",
+    "name": "CM01 집진 배기 스택 자료 관찰",
+    "reference_plc_id": "CM01",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "CM01 태그·위치·자료 판본 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+      },
+      {
+        "id": "appearance",
+        "role": "responses",
+        "name": "CM01 외관·배출 관련 보고 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+      },
+      {
+        "id": "related-event",
+        "role": "responses",
+        "name": "관련 장치 경보 원문·소유·시각 · 자료 기록",
+        "addresses": [],
+        "refs": [],
+        "boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다."
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "본체 식별",
+        "observe": "기존 전체사진·태그·준공 배치도·시각",
+        "compare": "P&ID BF01/BF02→FN04→CM01 배출 연결",
+        "next": "현재 동일실물 여부",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "배출 이상 보고",
+        "observe": "보고 위치·시각·기존 팬/밸브 상태와 승인 계측 기록",
+        "compare": "연관 장치 상태와 본체 배출 관찰을 분리",
+        "next": "정상값·원인·실제 유량 미확정",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "외관 손상/누설 의심",
+        "observe": "기존 안전거리 사진·부위·시각·승인 검사기록",
+        "compare": "과거 자료 및 제조사도면",
+        "next": "안전성·수리완료 미판정",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "연관 경보 발생",
+        "observe": "최초 경보 원문·태그·발생/해제시각",
+        "compare": "원래 소유장치와 동시간 관찰",
+        "next": "본체 직접알람으로 바꾸지 않음",
+        "common": "step-symptom-4"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "CM01 도면 식별·자료 관찰; PLC 고유 신호0",
+      "sources": {
+        "catalog-sources/CM01-DOTS-DRAFT.md": "2755852ef71fb8152f53e3b090e2fb275ab8614a9693d36482927f82e0ccd86c"
+      },
+      "circuit_equipment": "CM01 전용 전기 끝점 미확보",
+      "circuit_distinction": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "P&ID · PDF1",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        },
+        {
+          "label": "FN04 FG59 · PDF60 · CM01 전용 아님",
+          "path": "sources/Electrical_Rev2.pdf#page=60"
+        }
+      ],
+      "construction_boundary": "본체 고유 시공/결선 미확보",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "CM01 현재 태그·명판·설치 위치와 최신 승인 P&ID/배치도"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "P&ID · PDF1",
+            "path": "sources/PID_1684n002I.pdf#page=1"
+          },
+          {
+            "label": "FN04 FG59 · PDF60 · CM01 전용 아님",
+            "path": "sources/Electrical_Rev2.pdf#page=60"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "기존 전체사진·태그·준공 배치도·시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 동일실물 여부"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "FN04 FG59 · PDF60 · CM01 전용 아님",
+              "path": "sources/Electrical_Rev2.pdf#page=60"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "보고 위치·시각·기존 팬/밸브 상태와 승인 계측 기록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "정상값·원인·실제 유량 미확정"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "FN04 FG59 · PDF60 · CM01 전용 아님",
+              "path": "sources/Electrical_Rev2.pdf#page=60"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "기존 안전거리 사진·부위·시각·승인 검사기록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "안전성·수리완료 미판정"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "FN04 FG59 · PDF60 · CM01 전용 아님",
+              "path": "sources/Electrical_Rev2.pdf#page=60"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "최초 경보 원문·태그·발생/해제시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "본체 직접알람으로 바꾸지 않음"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "FN04 FG59 · PDF60 · CM01 전용 아님",
+              "path": "sources/Electrical_Rev2.pdf#page=60"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "CM01",
+    "plc_id": "CM01",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 공정 도식 · 현행 실물 미확정",
+        "revision": "I 15/01/2013 · 최초06/04/2011 · FG 없음"
+      },
+      {
+        "id": "related-fn04-oem59",
+        "kind": "관련 팬 OEM · FN04 소유",
+        "title": "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 60,
+        "fg": 59,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P060.png",
+        "extent": "원본 전체 페이지",
+        "status": "FN04 팬 관련 회로 · CM01 소유 아님",
+        "revision": "Rev2 17.03.2025"
+      }
+    ],
+    "circuit": {
+      "id": "CM01",
+      "equipment": "CM01 본체 고유 전기경로 미확보",
+      "distinction": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다.",
+      "paths": [],
+      "pending": [
+        "CM01 현재 태그·명판·설치 위치와 최신 승인 P&ID/배치도",
+        "본체 제작·치수·재질·지지·접지·등전위 및 승인 검사자료",
+        "부속 계측·댐퍼·로컬 제어기 목록과 고유 루프/단자도",
+        "별칭/현행 프로젝트·HMI 교차참조; 이름 검색0은 부재 증거 아님",
+        "FN04 팬·BF01/BF02 필터와 본체 소유 경계",
+        "현재 안전값·정상극성·재운전/복구 판정 미수행",
+        "신규 자료 전 부재 전검색 반복 안 함; 해시 수와 의미검토 수 구분"
+      ]
+    },
+    "warnings": [
+      "고유 PLC 원본/전기 경로 미확보",
+      "관련 설비 소유를 본체로 배정하지 않음",
+      "현행 실물/사용 및 복구 미확정"
+    ]
+  },
+  "related_alarm_boundary": "CM01는 P&ID BF01/BF02→FN04→CM01 배출 연결을 문서에서 확인했습니다. 고유 PLC/HMI 주소·선언·래더·알람·타이머·직접 전기 끝점은 미확보입니다. FN04 팬·BF01/BF02 필터의 신호와 정격은 본체 소유로 배정하지 않습니다. 아래 관찰 항목은 PLC 신호가 아닙니다. 현재 실물·철거·무계측 여부·현장복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "CM01, 집진 배기 스택, 자료 미확보"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ],
+    "io": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ],
+    "control": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ],
+    "circuits": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ],
+    "alarms": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ],
+    "repair": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ],
+    "completion": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "FN04 FG59 · PDF60 · CM01 전용 아님",
+        "sources/Electrical_Rev2.pdf#page=60"
+      ]
+    ]
+  }
+}

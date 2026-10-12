@@ -1,0 +1,1577 @@
+{
+  "catalog_id": "PV06",
+  "selection_key": "PV06",
+  "priority_key": null,
+  "type": "pneumatic_nitrogen_valve",
+  "draft": "catalog-sources/PV06-DOTS-DRAFT.md",
+  "draft_sha256": "f07123ef8c0ab2d8c53f84fac8704841eec0c30f87d64a4250b5123c92ab1305",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1990,
+      "part",
+      "953"
+    ],
+    [
+      1990,
+      "part",
+      "955"
+    ],
+    [
+      1990,
+      "part",
+      "27"
+    ],
+    [
+      1990,
+      "part",
+      "929"
+    ],
+    [
+      1990,
+      "part",
+      "957"
+    ],
+    [
+      1990,
+      "part",
+      "959"
+    ],
+    [
+      1990,
+      "part",
+      "961"
+    ],
+    [
+      1990,
+      "part",
+      "964"
+    ],
+    [
+      1990,
+      "part",
+      "31"
+    ],
+    [
+      1990,
+      "part",
+      "935"
+    ],
+    [
+      1990,
+      "wire",
+      "943"
+    ],
+    [
+      1990,
+      "wire",
+      "944"
+    ],
+    [
+      1990,
+      "wire",
+      "26"
+    ],
+    [
+      1990,
+      "wire",
+      "29"
+    ],
+    [
+      1990,
+      "wire",
+      "946"
+    ],
+    [
+      1990,
+      "wire",
+      "947"
+    ],
+    [
+      1990,
+      "wire",
+      "948"
+    ],
+    [
+      1990,
+      "wire",
+      "949"
+    ],
+    [
+      1990,
+      "wire",
+      "35"
+    ],
+    [
+      1990,
+      "wire",
+      "33"
+    ],
+    [
+      1990,
+      "wire",
+      "951"
+    ],
+    [
+      1070,
+      "part",
+      "60"
+    ],
+    [
+      1070,
+      "part",
+      "61"
+    ],
+    [
+      1070,
+      "part",
+      "62"
+    ],
+    [
+      1070,
+      "wire",
+      "21"
+    ],
+    [
+      1070,
+      "wire",
+      "71"
+    ],
+    [
+      1070,
+      "wire",
+      "74"
+    ],
+    [
+      1070,
+      "wire",
+      "76"
+    ],
+    [
+      1070,
+      "wire",
+      "77"
+    ],
+    [
+      1613,
+      "part",
+      "37"
+    ],
+    [
+      1613,
+      "wire",
+      "42"
+    ],
+    [
+      1613,
+      "wire",
+      "43"
+    ],
+    [
+      1613,
+      "wire",
+      "44"
+    ],
+    [
+      1080,
+      "part",
+      "23"
+    ],
+    [
+      1080,
+      "part",
+      "39"
+    ],
+    [
+      1080,
+      "wire",
+      "29"
+    ],
+    [
+      1080,
+      "wire",
+      "38"
+    ],
+    [
+      356,
+      "part",
+      "25"
+    ],
+    [
+      356,
+      "wire",
+      "64"
+    ],
+    [
+      356,
+      "wire",
+      "66"
+    ],
+    [
+      356,
+      "wire",
+      "65"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "준비 입력",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "76",
+      "label": "IW16→Move62.in",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "Word 전달",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "77",
+      "label": "Move62.out→DB13W16",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "탱크 준비",
+      "network": 1990,
+      "kind": "wire",
+      "uid": "944",
+      "label": "Ready→반전 Contact955",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "경보 Set",
+      "network": 1990,
+      "kind": "wire",
+      "uid": "29",
+      "label": "ServiceBit 접점→SCoil929",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "경보 Reset",
+      "network": 1990,
+      "kind": "wire",
+      "uid": "33",
+      "label": "OR31.out→RCoil935.in · 상위 ON/RESET_ALLARM/기존Fault 필요",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "공통 호출",
+      "network": 1613,
+      "kind": "wire",
+      "uid": "43",
+      "label": "NOT Simulation(1)→hmi inputs.en",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "다른 정적 Writer",
+      "network": 1080,
+      "kind": "wire",
+      "uid": "38",
+      "label": "기존 Coil39→Ready · 실행 금지",
+      "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "출력 미러",
+      "network": 356,
+      "kind": "wire",
+      "uid": "66",
+      "label": "QW6→Move25→DB14W6",
+      "boundary": "출력 상태 읽기 미러이며 DB14에서 Q6.4로의 명령 아님. PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0555-IdentXmlPart.xml",
+    "sources/decoded-original/0557-IdentXmlPart.xml",
+    "sources/decoded-original/0558-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0634-IdentXmlPart.xml",
+    "sources/decoded-original/0635-IdentXmlPart.xml",
+    "sources/decoded-original/0636-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/0694-IdentXmlPart.xml",
+    "sources/decoded-original/0632-IdentXmlPart.xml",
+    "sources/decoded-original/0633-IdentXmlPart.xml",
+    "sources/decoded-original/0064-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "PV06",
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Start Nitrogen · 공통 요청/Monitor 선언만 확인",
+        "addresses": [
+          "%Q6.4"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "ready-raw",
+        "role": "raw_inputs",
+        "name": "탱크 Ready 원시 · OEM 도면 신호",
+        "addresses": [
+          "%I16.7"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "iw16",
+        "role": "raw_inputs",
+        "name": "Tag_275 · SAM=None 원시 Word",
+        "addresses": [
+          "%IW16"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "67",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "word16",
+        "role": "responses",
+        "name": "Inputs Word16 · 원시 Word 전달",
+        "addresses": [
+          "DB13.DBW16"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "68",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ready",
+        "role": "responses",
+        "name": "Inputs.NITROGEN TANK READY · 처리 Bool",
+        "addresses": [
+          "DB13.DBX16.7"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "937",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.HYDROGEN_BOX_FAULT · 질소 박스 공통 경보",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "938",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 경보 Reset 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "939",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "936",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 보호정책/현재상태 미확정",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "28",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "output-word",
+        "role": "responses",
+        "name": "Tag_283 · 출력 Word 읽기",
+        "addresses": [
+          "%QW6"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "39",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "output-mirror",
+        "role": "responses",
+        "name": "Output Word6 · HMI 미러",
+        "addresses": [
+          "DB14.DBW6"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "40",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "PV06",
+    "timers": [],
+    "alarms": [
+      {
+        "name": "HYDROGEN_BOX_FAULT",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "actions": [
+          {
+            "network": 1990,
+            "location_kind": "part",
+            "uid": "929"
+          },
+          {
+            "network": 1990,
+            "location_kind": "part",
+            "uid": "935"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1070,
+      1990,
+      1613,
+      1080,
+      356
+    ],
+    "chain": [
+      "공통 Q6.4→96KA3 및 외부96KA1 공급→96.12",
+      "96KT1 18–15→X2:15 2AF→PV06→X2:16",
+      "IW16→DB13 Word16; 탱크준비 공통 S/R 경보",
+      "QW6→DB14 Word6 출력 미러; 역방향 명령 아님"
+    ],
+    "repair": [
+      "Q6.4·96KA3·96.12와 타이머 접점/코일 식별",
+      "X2:13/14 대 X2:15/16 및96KT1 표찰",
+      "I16.7·Word16·처리bit·ServiceBit·Reset 시각",
+      "QW6·DB14W6·HMI 설정/시각"
+    ],
+    "pending": [
+      "PV06 명판·실물·X2:15/16·96KT1 18–15의 현재 배선",
+      "외부96KT1 현행 모델·설정시간·재기동 및 전원상실 동작",
+      "Q6.4 직접 Writer·HMI 실제 명령/Reset 이벤트",
+      "탱크 준비 I16.7 정상극성·외부 판정과 다른 정적 Writer",
+      "현재 CPU·호출/마지막 Writer 순서·실제 열림/유량",
+      "공유 질소 계통과 BR01/RD01/FN01 소비자 소유 구분",
+      "RO01~04 미사용 예외와 PV06 실물·사용 여부 별도"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "PV06",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "문서/화면과현재CPU/현장복구별도"
+    ],
+    "existing_pending": [
+      "PV06 명판·실물·X2:15/16·96KT1 18–15의 현재 배선",
+      "외부96KT1 현행 모델·설정시간·재기동 및 전원상실 동작",
+      "Q6.4 직접 Writer·HMI 실제 명령/Reset 이벤트",
+      "탱크 준비 I16.7 정상극성·외부 판정과 다른 정적 Writer",
+      "현재 CPU·호출/마지막 Writer 순서·실제 열림/유량",
+      "공유 질소 계통과 BR01/RD01/FN01 소비자 소유 구분",
+      "RO01~04 미사용 예외와 PV06 실물·사용 여부 별도"
+    ],
+    "existing_review": []
+  },
+  "repair": {
+    "key": "PV06",
+    "plc_id": "PV06",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "공통 요청은 있으나 PV06 상태 불명",
+        "observe": "Q6.4·96KA3·96.12와 타이머 접점/코일 식별",
+        "compare": "PLC 요청·96KT1 접점·실제열림을 분리",
+        "next": "현행 배선·명판 및 승인된 관찰자료",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "PV05와 반응 차이",
+        "observe": "X2:13/14 대 X2:15/16 및96KT1 표찰",
+        "compare": "직접 가지와 시간접점 가지를 구분",
+        "next": "타이머 현행 자료; 설정 추정 금지",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "탱크 준비경보",
+        "observe": "I16.7·Word16·처리bit·ServiceBit·Reset 시각",
+        "compare": "공통 탱크 준비와 PV06 개방을 구분",
+        "next": "현재 외부준비 판정과 프로젝트",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "HMI 출력 표시 불일치",
+        "observe": "QW6·DB14W6·HMI 설정/시각",
+        "compare": "출력 미러 방향과 실제 제어 이벤트 별도",
+        "next": "HMI 이벤트 및 통신 근거",
+        "common": "step-symptom-4"
+      }
+    ],
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Start Nitrogen · 공통 요청/Monitor 선언만 확인",
+        "addresses": [
+          "%Q6.4"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "ready-raw",
+        "role": "raw_inputs",
+        "name": "탱크 Ready 원시 · OEM 도면 신호",
+        "addresses": [
+          "%I16.7"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "iw16",
+        "role": "raw_inputs",
+        "name": "Tag_275 · SAM=None 원시 Word",
+        "addresses": [
+          "%IW16"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "67",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "word16",
+        "role": "responses",
+        "name": "Inputs Word16 · 원시 Word 전달",
+        "addresses": [
+          "DB13.DBW16"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "68",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ready",
+        "role": "responses",
+        "name": "Inputs.NITROGEN TANK READY · 처리 Bool",
+        "addresses": [
+          "DB13.DBX16.7"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "937",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.HYDROGEN_BOX_FAULT · 질소 박스 공통 경보",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "938",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 경보 Reset 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "939",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "936",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 보호정책/현재상태 미확정",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "28",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "output-word",
+        "role": "responses",
+        "name": "Tag_283 · 출력 Word 읽기",
+        "addresses": [
+          "%QW6"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "39",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "output-mirror",
+        "role": "responses",
+        "name": "Output Word6 · HMI 미러",
+        "addresses": [
+          "DB14.DBW6"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "40",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "PV06",
+    "name": "PV06 질소 시간접점 밸브 관찰",
+    "reference_plc_id": "PV06",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Start Nitrogen · 공통 요청/Monitor 선언만 확인",
+        "addresses": [
+          "%Q6.4"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "ready-raw",
+        "role": "raw_inputs",
+        "name": "탱크 Ready 원시 · OEM 도면 신호",
+        "addresses": [
+          "%I16.7"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "iw16",
+        "role": "raw_inputs",
+        "name": "Tag_275 · SAM=None 원시 Word",
+        "addresses": [
+          "%IW16"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "67",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "word16",
+        "role": "responses",
+        "name": "Inputs Word16 · 원시 Word 전달",
+        "addresses": [
+          "DB13.DBW16"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "68",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ready",
+        "role": "responses",
+        "name": "Inputs.NITROGEN TANK READY · 처리 Bool",
+        "addresses": [
+          "DB13.DBX16.7"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "937",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.HYDROGEN_BOX_FAULT · 질소 박스 공통 경보",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "938",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 경보 Reset 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "939",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "936",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 보호정책/현재상태 미확정",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "28",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "output-word",
+        "role": "responses",
+        "name": "Tag_283 · 출력 Word 읽기",
+        "addresses": [
+          "%QW6"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "39",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "output-mirror",
+        "role": "responses",
+        "name": "Output Word6 · HMI 미러",
+        "addresses": [
+          "DB14.DBW6"
+        ],
+        "boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "40",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "공통 요청은 있으나 PV06 상태 불명",
+        "observe": "Q6.4·96KA3·96.12와 타이머 접점/코일 식별",
+        "compare": "PLC 요청·96KT1 접점·실제열림을 분리",
+        "next": "현행 배선·명판 및 승인된 관찰자료",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "PV05와 반응 차이",
+        "observe": "X2:13/14 대 X2:15/16 및96KT1 표찰",
+        "compare": "직접 가지와 시간접점 가지를 구분",
+        "next": "타이머 현행 자료; 설정 추정 금지",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "탱크 준비경보",
+        "observe": "I16.7·Word16·처리bit·ServiceBit·Reset 시각",
+        "compare": "공통 탱크 준비와 PV06 개방을 구분",
+        "next": "현재 외부준비 판정과 프로젝트",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "HMI 출력 표시 불일치",
+        "observe": "QW6·DB14W6·HMI 설정/시각",
+        "compare": "출력 미러 방향과 실제 제어 이벤트 별도",
+        "next": "HMI 이벤트 및 통신 근거",
+        "common": "step-symptom-4"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "PV06 고유 외부 타이머 접점 및 공통 질소 논리 독립 대조",
+      "sources": {
+        "catalog-sources/PV06-DOTS-DRAFT.md": "f07123ef8c0ab2d8c53f84fac8704841eec0c30f87d64a4250b5123c92ab1305"
+      },
+      "circuit_equipment": "PV06 질소 밸브 · 실물 미확정",
+      "circuit_distinction": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG96 · PDF97",
+          "path": "sources/Electrical_Rev2.pdf#page=97"
+        },
+        {
+          "label": "FG132 · PDF133",
+          "path": "sources/Electrical_Rev2.pdf#page=133"
+        },
+        {
+          "label": "FG142 · PDF143",
+          "path": "sources/Electrical_Rev2.pdf#page=143"
+        },
+        {
+          "label": "P&ID · PDF1",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "현행 시공/배관 주입점/실물 미확보",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "PV06 명판·실물·X2:15/16·96KT1 18–15의 현재 배선"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1990",
+            "path": "networks/network-1990.html"
+          },
+          {
+            "label": "1070",
+            "path": "networks/network-1070.html"
+          },
+          {
+            "label": "356",
+            "path": "networks/network-356.html"
+          },
+          {
+            "label": "1080",
+            "path": "networks/network-1080.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "Q6.4·96KA3·96.12와 타이머 접점/코일 식별"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현행 배선·명판 및 승인된 관찰자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "X2:13/14 대 X2:15/16 및96KT1 표찰"
+            },
+            {
+              "owner": "현재자료",
+              "work": "타이머 현행 자료; 설정 추정 금지"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "I16.7·Word16·처리bit·ServiceBit·Reset 시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 외부준비 판정과 프로젝트"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "QW6·DB14W6·HMI 설정/시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "HMI 이벤트 및 통신 근거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "PV06",
+    "plc_id": "PV06",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-96",
+        "kind": "OEM 전기",
+        "title": "FG96 · PDF97",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 97,
+        "fg": 96,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P097.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면 · 현행 실물/보호 설정 미확정",
+        "revision": "27.05.2024 · 개정란 별도 기재 미관찰"
+      },
+      {
+        "id": "oem-132",
+        "kind": "OEM 전기",
+        "title": "FG132 · PDF133",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 133,
+        "fg": 132,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P133.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면 · 현행 실물/보호 설정 미확정",
+        "revision": "Rev2 17.03.2025"
+      },
+      {
+        "id": "oem-142",
+        "kind": "OEM 전기",
+        "title": "FG142 · PDF143",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 143,
+        "fg": 142,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P143.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면 · 현행 실물/보호 설정 미확정",
+        "revision": "27.05.2024 · 개정란 별도 기재 미관찰"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 배관 설계 · 현재 설치/가스 목적지 미확정",
+        "revision": "I 15/01/2013"
+      }
+    ],
+    "circuit": {
+      "id": "PV06",
+      "equipment": "PV06 외부 타이머 접점 가지",
+      "distinction": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+      "paths": [
+        {
+          "signal": "박스 전원",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "CLIENT220V60Hz→X2:1/2 → 96QF1 0.22–0.32A→96T1 220/110V63VA → 96QF2 1A→96.8/96.9",
+          "backup": "질소 박스 공통 공급",
+          "nodes": [
+            "CLIENT220V60Hz→X2:1/2",
+            "96QF1 0.22–0.32A→96T1 220/110V63VA",
+            "96QF2 1A→96.8/96.9"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "도면값이며 현행 보호설정 아님",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "공통 요청",
+          "fg": 142,
+          "sheet_id": "oem-142",
+          "drawing": "A6.4 단자25 MOD15→96/9 → 96KA3 A1/A2→−0Vdc10.6 → 공급29=+24Vdc10.9/X21:3034 4AF, 30=−0Vdc10.6",
+          "backup": "Q6.4 · Monitor 선언",
+          "nodes": [
+            "A6.4 단자25 MOD15→96/9",
+            "96KA3 A1/A2→−0Vdc10.6",
+            "공급29=+24Vdc10.9/X21:3034 4AF, 30=−0Vdc10.6"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "직접PLC Writer 미확보",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "자동 부하",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "96.9→X2:11→X1:368 → 96KA3 접점5–9 → X1:369→X2:12→96.12",
+          "backup": "공통 요청 후 공급",
+          "nodes": [
+            "96.9→X2:11→X1:368",
+            "96KA3 접점5–9",
+            "X1:369→X2:12→96.12"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "접점표1/5/9와 실제부하5/9 구별",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "PV06 시간접점 가지",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "96.12→96KT1 18–15→96.13→X2:15→96.15→PV06→X2:16→96.8",
+          "backup": "PV06 고유 외부 시간접점 부하",
+          "nodes": [
+            "96.12→96KT1 접점18–15→96.13",
+            "X2:15 5×20 2AF→96.15→PV06 A1",
+            "PV06 A2→X2:16→96.8"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "타이머 시간/현행 모델 미확보 · PV05 X2:13/14와 별도",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "PV06 외부 접점/코일 고유 경로이며 직접 PLC Writer 미확보"
+        },
+        {
+          "signal": "탱크 준비",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "공급→X2:9→외부Ready회로→X2:10 → 96.11→96KA2 A1/A2→96.8 → +24Vdc10.7→X1:370→X2:17→96KA2 5–9→X2:18→X1:371→E16.7",
+          "backup": "탱크 준비와개별밸브응답구분",
+          "nodes": [
+            "공급→X2:9→외부Ready회로→X2:10",
+            "96.11→96KA2 A1/A2→96.8",
+            "+24Vdc10.7→X1:370→X2:17→96KA2 5–9→X2:18→X1:371→E16.7"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [
+            {
+              "network": 1990,
+              "uid": "937"
+            }
+          ],
+          "check": "외부 탱크 Ready 내부회로 미제공; 개별 PV06 열림 아님"
+        },
+        {
+          "signal": "준비 입력",
+          "fg": 132,
+          "sheet_id": "oem-132",
+          "drawing": "96/8 E16.7→MOD12 단자8 → 원시 IW16의 I16.7 → Word16 전달과 처리 DB13.X16.7 구분",
+          "backup": "IW16→DB13.DBW16",
+          "nodes": [
+            "96/8 E16.7→MOD12 단자8",
+            "원시 IW16의 I16.7",
+            "Word16 전달과 처리 DB13.X16.7 구분"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "67"
+            },
+            {
+              "network": 1070,
+              "uid": "68"
+            }
+          ],
+          "check": "실물/정상극성/현재갱신 별도"
+        }
+      ],
+      "pending": [
+        "PV06 명판·실물·X2:15/16·96KT1 18–15의 현재 배선",
+        "외부96KT1 현행 모델·설정시간·재기동 및 전원상실 동작",
+        "Q6.4 직접 Writer·HMI 실제 명령/Reset 이벤트",
+        "탱크 준비 I16.7 정상극성·외부 판정과 다른 정적 Writer",
+        "현재 CPU·호출/마지막 Writer 순서·실제 열림/유량",
+        "공유 질소 계통과 BR01/RD01/FN01 소비자 소유 구분",
+        "RO01~04 미사용 예외와 PV06 실물·사용 여부 별도"
+      ]
+    },
+    "warnings": [
+      "외부96KT1 시간 미확정 · PLC 경보 타이머0과 구분",
+      "NITROGEN/HYDROGEN 별칭 보존",
+      "Q6.4 요청과 실제 개방·유량 별도"
+    ]
+  },
+  "related_alarm_boundary": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "PV06, Q6.4, I16.7, DB13.DBX16.7, HYDROGEN_BOX_FAULT, 96KA3"
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "PV06 명판·실물·X2:15/16·96KT1 18–15의 현재 배선",
+        "외부96KT1 현행 모델·설정시간·재기동 및 전원상실 동작",
+        "Q6.4 직접 Writer·HMI 실제 명령/Reset 이벤트",
+        "탱크 준비 I16.7 정상극성·외부 판정과 다른 정적 Writer",
+        "현재 CPU·호출/마지막 Writer 순서·실제 열림/유량",
+        "공유 질소 계통과 BR01/RD01/FN01 소비자 소유 구분",
+        "RO01~04 미사용 예외와 PV06 실물·사용 여부 별도"
+      ]
+    }
+  ],
+  "section_sources": {
+    "overview": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ],
+      [
+        "출력 미러",
+        "networks/network-356.html"
+      ]
+    ],
+    "io": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ],
+      [
+        "출력 미러",
+        "networks/network-356.html"
+      ]
+    ],
+    "control": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ],
+      [
+        "출력 미러",
+        "networks/network-356.html"
+      ]
+    ],
+    "alarms": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ],
+      [
+        "출력 미러",
+        "networks/network-356.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ],
+      [
+        "출력 미러",
+        "networks/network-356.html"
+      ]
+    ],
+    "completion": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ],
+      [
+        "출력 미러",
+        "networks/network-356.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG96 · PDF97",
+        "sources/Electrical_Rev2.pdf#page=97"
+      ],
+      [
+        "FG132 · PDF133",
+        "sources/Electrical_Rev2.pdf#page=133"
+      ],
+      [
+        "FG142 · PDF143",
+        "sources/Electrical_Rev2.pdf#page=143"
+      ],
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ]
+  },
+  "supplements": {
+    "circuits": [
+      {
+        "id": "review-power-terminal-clarification",
+        "title": "FG142 공급·리턴 단자 구분",
+        "type": "reviewed",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FG142/PDF143 단자29는 +24Vdc10.9/X21:3034 4A F 공급, 단자30은 −0Vdc10.6 리턴입니다. 두 단자를 모두 양전원으로 해석하지 않습니다. 원초안 전체 바이트는 보존했습니다."
+            }
+          ]
+        },
+        "links": []
+      },
+      {
+        "id": "review-pv06-time-contact",
+        "title": "PV06 고유 시간접점과 현재 사용 경계",
+        "type": "reviewed",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "PV06 고유 부하는 96KT1 접점18–15를 거쳐 X2:15/16에 연결됩니다. PV05 직접 가지 X2:13/14와 구분합니다. Q6.4 요청·I16.7 탱크 준비·HYDROGEN_BOX_FAULT는 공통 계통 소유이고 밸브 열림 피드백이 아닙니다. 외부 타이머 시간·직접 Q6.4 Writer·현재 CPU·실물·유량·현장복구는 미확정입니다. 원초안의 과거 후보 집계는 보존하되 RO01~04는 최신 사용자 미사용 예외입니다."
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

@@ -12,7 +12,7 @@ for(const key of keys){
  assert.equal(p.field_verified,false);assert.equal(p.tia_verified,false);assert.equal(p.repairs_completed,0);
  for(const [file,hash]of Object.entries(p.source_hashes))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(__dirname+'/'+file)).digest('hex'),hash,file);
  for(const [section]of standard.sections){const items=standard.items(data,key,section);assert.ok(items.length);for(const item of items){const h=standard.render(data,key,{bc01Section:section,bc01Item:item.id,bc01Text:'large',bc01Find:''});assert.ok(h.includes('standard-content-title'));assert.ok(!h.includes('undefined'));for(const [label,url]of item.links){assert.ok(data.resources.includes(url.split('#')[0]),key+':'+label);const [path,anchor]=url.split('#');if(anchor&&path.endsWith('.html'))assert.ok(fs.readFileSync(__dirname+'/'+path,'utf8').includes('id="'+anchor+'"'),key+':'+url);}}}
- for(const path of data.drawing_workspace.profiles.find(x=>x.key===key).circuit.paths)assert.ok(p.source_pairs.some(pair=>pair.signal===path.signal),key+':missing path source pair '+path.signal);
+ for(const path of data.drawing_workspace.profiles.find(x=>x.key===key).circuit.paths){const matched=p.source_pairs.filter(pair=>pair.signal===path.signal);if(path.source_pair_status==='not_identified'){assert.equal(matched.length,0,key+':no invented direct PLC pair');assert.ok(path.source_pair_boundary&&path.check);assert.equal(path.native_symbol_references.length,0);}else assert.equal(matched.length,1,key+':missing path source pair '+path.signal);}
  const note={id:'qa-'+key,equipment:key,title:'QA only',text:'',updated:'2026-10-11T13:00:00Z',future:{zero:0,blank:'',flag:false},repair_observation:clone(repair.collect(schema,{first_symptom:'QA only',[schema.signals[0].id+'_value']:'0'}))};
  note.repair_observation.future={zero:0,blank:'',flag:false};
  note.repair_observation.observations.push({id:'unknown-new-signal',value:'',future:{retained:false}});
@@ -349,3 +349,162 @@ assert.equal(tc11.source_pairs.length,0);assert.equal(tc11.alarm.timers.length,0
 assert.ok(tc11form.signals.every(x=>x.addresses.length===0&&x.refs.length===0));
 assert.equal(data.drawing_workspace.profiles.find(x=>x.key==='TC11').circuit.paths.length,0);
 console.log(JSON.stringify({status:'passed',catalog_profiles:keys,scope:'catalog identity, original hashes, native call and alarm branches, temperature gate differences, TC10 external endpoints and TC11 PLC evidence unavailable, safe rendering and record preservation; no PLC execution'}));
+
+// PV05: preserved tank-ready logic and external valve circuit, never PLC behavior execution.
+if(keys.includes('PV05')) {
+ const nitrogen=standard.profile(data,'PV05'),nx=xml('0538');
+ assert.equal(nitrogen.alarm.timers.length,0);
+ assert.equal(nitrogen.signal_trace.signals.length,9);
+ for(const uid of ['955','964'])assert.match(nx,new RegExp('<Part UId="'+uid+'" Gate="Contact"><Negated PinName="operand" />'));
+ assert.match(nx,/<Part UId="27" Gate="Contact" \/>/);
+ wire(nx,'29',['<PCon UId="27" PinName="out" />','<PCon UId="929" PinName="in" />']);
+ wire(nx,'33',['<PCon UId="31" PinName="out" />','<PCon UId="935" PinName="in" />']);
+ wire(nx,'34',['<PCon UId="964" PinName="out" />','<PCon UId="31" PinName="in2" />']);
+ assert.equal((nx.match(/<Part /g)||[]).length,10);assert.equal((nx.match(/<Wire /g)||[]).length,18);
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/PV05.json'));
+ assert.equal(cfg.drawing.circuit.paths.length,6);
+ assert.deepEqual(cfg.drawing.circuit.paths.filter(p=>p.source_pair_status==='not_identified').map(p=>p.signal),['박스 전원','공통 요청','자동 부하','PV05 직접 가지']);
+ assert.equal(cfg.draft_sha256,'2c4b9395ce65cedf795f2b3277f9ffc60df93826edccf322e602353ad98ce17f');
+ const branch=cfg.drawing.circuit.paths.find(p=>p.signal==='PV05 직접 가지');assert.ok(branch.nodes.some(s=>s.includes('X2:13')));assert.ok(branch.nodes.some(s=>s.includes('X2:14')));assert.ok(!branch.nodes.some(s=>s.includes('96KT1')));
+ assert.ok(cfg.extra_sources.includes('sources/decoded-original/0634-IdentXmlPart.xml'));
+ console.log(JSON.stringify({status:'passed',scope:'PV05 exact original pins, original draft, unavailable direct PLC pairs, 6 electrical paths; static only'}));
+}
+
+// ZT01: own channel, S/R overlap, and FN01-owned downstream timing. Static evidence only.
+if(keys.includes('ZT01')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/ZT01.json'));
+ const form=data.repair_record_forms.profiles.find(x=>x.key==='ZT01');
+ for(const [id,addr] of [['raw-p','%IW282:P'],['raw-i','%IW282'],['mirror','DB13.DBW46'],['value','DB1.DBW192'],['ofr','DB3.DBX21.7'],['vibration','DB3.DBX9.0']]) assert.deepEqual(Array.from(form.signals.find(s=>s.id===id).addresses),[addr]);
+ assert.deepEqual(Array.from(form.signals.find(s=>s.id==='local-stop').addresses),[]);
+ const zx=xml('0494'), za=xml('0536'), zf=xml('0252'), zs=xml('0253');
+ wire(zx,'28',['<PCon UId="435" PinName="out" />','<PCon UId="416" PinName="en" />']);
+ wire(zx,'430',['<OCon UId="423" />','<PCon UId="416" PinName="IN0" />']);
+ wire(zx,'431',['<OCon UId="424" />','<PCon UId="416" PinName="Analog_input" />']);
+ wire(zx,'434',['<OCon UId="427" />','<PCon UId="416" PinName="OutValue" />']);
+ wire(xml('0398'),'94',['<OCon UId="82" />','<PCon UId="75" PinName="in" />']);
+ wire(xml('0398'),'95',['<OCon UId="83" />','<PCon UId="75" PinName="out1" />']);
+ wire(za,'907',['<PCon UId="906" PinName="out" />','<PCon UId="862" PinName="in" />']);
+ wire(za,'900',['<PCon UId="866" PinName="out" />','<PCon UId="869" PinName="in" />']);
+ assert.match(za,/<Part UId="848" Gate="Gt">/);assert.match(za,/<Part UId="851" Gate="Lt">/);assert.match(za,/<Part UId="866" Gate="Lt">/);
+ wire(zf,'698',['<PCon UId="697" PinName="out" />','<PCon UId="707" PinName="in3" />']);
+ wire(zf,'27',['<PCon UId="705" PinName="out" />','<PCon UId="661" PinName="in" />']);
+ wire(zs,'721',['<PCon UId="720" PinName="out" />','<PCon UId="676" PinName="in4" />']);
+ assert.equal(cfg.alarm_reference.timers.find(t=>t.address==='%T123').preset,'S5T#10S');
+ assert.equal(cfg.alarm_reference.timers.find(t=>t.address==='%T130').preset,'S5T#1H_30M');
+ assert.equal(cfg.draft_sha256,'c3fabd9f9a34ad5433610642f11ad6703bee2065d89703c73865ffa433e761fb');
+ assert.equal(cfg.drawing.circuit.paths.find(p=>p.signal==='시공 후보').sheet_id,'construction-58');
+ assert.ok(cfg.drawing.circuit.paths.find(p=>p.signal==='모듈 원시 입력').nodes.some(s=>s.includes('26 I5+')));
+ console.log(JSON.stringify({status:'passed',scope:'ZT01 native channel/gates, own 10s versus shared FN01 90min, S/R overlap preserved, construction sheet selection; no execution'}));
+}
+
+// PV06 keeps its external timed branch, separate from PV05 direct branch.
+if(keys.includes('PV06')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/PV06.json'));
+ assert.equal(cfg.draft_sha256,'f07123ef8c0ab2d8c53f84fac8704841eec0c30f87d64a4250b5123c92ab1305');
+ assert.equal(cfg.alarm_reference.timers.length,0);
+ const path=cfg.drawing.circuit.paths.find(p=>p.signal==='PV06 시간접점 가지');
+ for(const text of ['96KT1 접점18–15','X2:15','X2:16'])assert.ok(path.nodes.some(n=>n.includes(text)));
+ assert.ok(!path.nodes.some(n=>n.includes('X2:13')||n.includes('X2:14')));
+ assert.equal(path.source_pair_status,'not_identified');assert.equal(path.native_symbol_references.length,0);
+ const out=xml('0401');
+ wire(out,'64',['<OCon UId="39" />','<PCon UId="25" PinName="in" />']);
+ wire(out,'66',['<PCon UId="25" PinName="out1" />','<OCon UId="40" />']);
+ const form=data.repair_record_forms.profiles.find(x=>x.key==='PV06');
+ assert.deepEqual(Array.from(form.signals.find(s=>s.id==='output-word').addresses),['%QW6']);
+ assert.deepEqual(Array.from(form.signals.find(s=>s.id==='output-mirror').addresses),['DB14.DBW6']);
+ assert.ok(cfg.extra_sources.includes('sources/decoded-original/0634-IdentXmlPart.xml'));
+ assert.ok(cfg.drawing.sheets.some(s=>s.id==='pid'&&s.page===1));
+ console.log(JSON.stringify({status:'passed',scope:'PV06 external timed branch and output-word mirror direction; PLC timer count0 not external timer absence'}));
+}
+
+// Passive stack records are observations, never imported nearby PLC signals.
+for(const [key,hash] of [['CM01','2755852ef71fb8152f53e3b090e2fb275ab8614a9693d36482927f82e0ccd86c'],['CM02','50678774825f2a19c684b68b701432ecb8f57b796a0fe7b3b9d240e6a430fc7b']])if(keys.includes(key)){
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/'+key+'.json'));
+ assert.equal(cfg.draft_sha256,hash);assert.equal(cfg.signal_reference.signals.length,0);
+ assert.equal(cfg.extra_locations.length,0);assert.equal(cfg.source_pairs.length,0);
+ assert.equal(cfg.alarm_reference.alarms.length,0);assert.equal(cfg.alarm_reference.timers.length,0);
+ assert.equal(cfg.drawing.circuit.paths.length,0);
+ assert.ok(cfg.record_form.signals.length>0&&cfg.record_form.signals.every(s=>s.addresses.length===0&&s.refs.length===0));
+ assert.equal(cfg.drawing.sheets.find(s=>s.id==='pid').fg,null);
+ console.log(JSON.stringify({status:'passed',scope:key+' passive identity and observation records, own PLC/paths unverified; related ownership not imported'}));
+}
+
+if(keys.includes('UC01')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/UC01.json'));
+ assert.equal(cfg.draft_sha256,'ab5809bcf9b27971ef2bf0a2c208973f00f67537481fe8aeb3e511aaa2f9666a');
+ assert.equal(cfg.signal_reference.signals.length,0);assert.equal(cfg.source_pairs.length,0);assert.equal(cfg.drawing.circuit.paths.length,0);
+ assert.ok(cfg.record_form.signals.every(s=>!s.addresses.length&&!s.refs.length));
+ for(const page of [3,5,32,58])assert.ok(cfg.drawing.sheets.find(s=>s.page===page).revision.includes('CHECKED J.H.Kim'));
+ assert.ok(JSON.stringify(cfg.supplements).includes('core2'));assert.ok(JSON.stringify(cfg.supplements).includes('core4S'));
+ console.log(JSON.stringify({status:'passed',scope:'UC01 location versus ownership, masked rows/cores unresolved, checked versus approved footer correction'}));
+}
+if(keys.includes('PV14')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/PV14.json')), output=xml('0216'), alarm=xml('0215');
+ assert.equal(cfg.draft_sha256,'d6bf4ab3c186d9859fd4d4ebc33f992217741cf444d81b3ea8bc6f7f89f942a0');
+ wire(output,'25',['<PCon UId="2037" PinName="out" />','<PCon UId="2004" PinName="in" />']);
+ wire(output,'2031',['<PCon UId="2007" PinName="out" />','<PCon UId="2012" PinName="in" />']);
+ wire(output,'24',['<PCon UId="22" PinName="out" />','<PCon UId="2007" PinName="in5" />']);
+ for(const uid of ['2032','2034','2036'])assert.match(alarm,new RegExp('<Part UId="'+uid+'" Gate="Contact">\\s*<Negated PinName="operand" />'));
+ wire(alarm,'2016',['<PCon UId="1979" PinName="out" />','<PCon UId="1986" PinName="in" />','<PCon UId="2038" PinName="in" />']);
+ wire(alarm,'2039',['<PCon UId="2038" PinName="out" />','<PCon UId="1991" PinName="in" />']);
+ wire(alarm,'2043',['<PCon UId="2042" PinName="out" />','<PCon UId="1996" PinName="in" />']);
+ wire(xml('0397'),'111',['<PCon UId="112" PinName="operand" />','<OCon UId="113" />']);
+ wire(xml('0397'),'104',['<PCon UId="105" PinName="operand" />','<OCon UId="106" />']);
+ assert.equal(cfg.alarm_reference.timers.length,1);assert.equal(cfg.alarm_reference.timers[0].preset,'S5T#20S');
+ for(const [id,addr]of [['output','%Q17.0'],['open','DB13.DBX22.0'],['hmi-open','DB11.DBX74.0'],['reset','DB2.DBX6.0'],['hmi-reset','DB2.DBX13.4']])assert.deepEqual(cfg.record_form.signals.find(s=>s.id===id).addresses,[addr]);
+ for(const id of ['hmi-open','hmi-close','hmi-reset'])assert.equal(cfg.record_form.signals.find(s=>s.id===id).refs.length,0);
+ assert.ok(cfg.drawing.circuit.paths.find(p=>p.signal==='밸브 부하').nodes.some(s=>s.includes('5–9')));
+ for(const p of [35,60])assert.ok(cfg.drawing.sheets.find(s=>s.page===p).revision.includes('CHECKED J.H.Kim'));
+ console.log(JSON.stringify({status:'passed',scope:'PV14 five-request OR, fault clears manual only, own20s alarm, HMI mismatches and source footer correction'}));
+}
+
+if(keys.includes('CR01')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/CR01.json'));
+ assert.equal(cfg.drawing.circuit.paths.length,0);assert.equal(cfg.alarm_reference.alarms.length,0);
+ const x=xml('0457');assert.match(x,/<Part UId="23" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+ wire(x,'41',['<PCon UId="23" PinName="out" />','<PCon UId="27" PinName="in" />']);
+ wire(x,'45',['<PCon UId="36" PinName="out" />','<PCon UId="37" PinName="in" />']);
+ wire(xml('0397'),'90',['<PCon UId="78" PinName="out1" />','<OCon UId="82" />']);
+ assert.ok(cfg.record_form.signals.every(s=>s.boundary.includes('공통 계통')));
+ console.log(JSON.stringify({status:'passed',scope:'CR01 cabinet identity and related common110V evidence, no exclusive ownership assigned'}));
+}
+if(keys.includes('SYS-AUTO')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/SYS-AUTO.json'));
+ assert.equal(cfg.type,'software');assert.equal(cfg.drawing.sheets.length,0);assert.equal(cfg.drawing.circuit.paths.length,0);assert.equal(cfg.record_form.signals.length,12);
+ assert.equal(cfg.alarm_reference.timers.length,6);
+ const display=xml('0163');assert.match(display,/<Part UId="115" Gate="Contact">\s*<Negated PinName="operand" \/>/);
+ wire(display,'107',['<PCon UId="87" PinName="out1" />','<OCon UId="99" />']);
+ wire(display,'111',['<PCon UId="93" PinName="out1" />','<OCon UId="102" />']);
+ wire(xml('0164'),'851',['<PCon UId="835" PinName="Q" />','<PCon UId="837" PinName="in" />']);
+ wire(xml('0168'),'35',['<PCon UId="22" PinName="eno" />','<PCon UId="23" PinName="en" />']);
+ wire(xml('0237'),'50',['<PCon UId="49" PinName="out" />','<PCon UId="34" PinName="in" />','<PCon UId="36" PinName="in" />']);
+ for(const [lr,w,m]of [['58','126','60'],['63','137','65'],['68','148','70'],['72','156','74'],['76','164','78']])wire(xml('0169'),w,[`<PCon UId="${lr}" PinName="Q" />`,`<PCon UId="${m}" PinName="en" />`]);
+ console.log(JSON.stringify({status:'passed',scope:'SYS-AUTO software signals, display branch direction, request versus safety/output, TON LRef boundaries'}));
+}
+if(keys.includes('SYS-HMI')) {
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/SYS-HMI.json'));
+ assert.equal(cfg.type,'software');assert.equal(cfg.drawing.circuit.paths.length,0);
+ for(const id of ['local-run','local-response','local-alarm','status'])assert.deepEqual(cfg.record_form.signals.find(s=>s.id===id).addresses,[]);
+ wire(xml('0355'),'57',['<PCon UId="41" PinName="out" />','<PCon UId="59" PinName="in" />']);
+ wire(xml('0401'),'84',['<PCon UId="32" PinName="out1" />','<OCon UId="54" />']);
+ wire(xml('0401'),'88',['<PCon UId="85" PinName="out1" />','<OCon UId="90" />']);
+ wire(xml('0158'),'38',['<PCon UId="28" PinName="out" />','<PCon UId="33" PinName="in" />','<PCon UId="40" PinName="in" />','<PCon UId="64" PinName="IN" />','<PCon UId="73" PinName="IN" />']);
+ for(const [lr,w,coil]of [['64','67','48'],['73','77','60']])wire(xml('0158'),w,[`<PCon UId="${lr}" PinName="Q" />`,`<PCon UId="${coil}" PinName="in" />`]);
+ const map=JSON.parse(fs.readFileSync(__dirname+'/sources/decoded-original/network-map.json')),caller=map.find(n=>n.document_id===1178);
+ assert.equal(caller.inferred_original_nid,null);assert.equal(Object.keys(caller.resolved_operands).length,0);
+ console.log(JSON.stringify({status:'passed',scope:'SYS-HMI local/global separation, QW mirror direction, separate Reset requests and TOF, unresolved caller retained'}));
+}
+if(keys.includes('PV14')){
+ const cfg=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/PV14.json')),p=cfg.drawing.circuit.paths.find(p=>p.signal==='출력');
+ assert.ok(p.nodes.some(n=>n.includes('단자39 3L+')&&!/단자\s*40(?:\s|$)|\b3M\b/.test(n)));
+ assert.ok(p.nodes.some(n=>n.includes('단자40 3M→−0Vdc152.4')));
+}
+// UI role labels must not turn ordinary Coil/processed data into latch/raw-input claims.
+if(keys.includes('SYS-HMI')){
+ const c=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/SYS-HMI.json'));
+ for(const id of ['physical-reset','local-alarm','local-run','out0','out20','out22'])assert.equal(c.record_form.signals.find(s=>s.id===id).role,'responses');
+}
+if(keys.includes('ZT01')){
+ const c=JSON.parse(fs.readFileSync(__dirname+'/catalog-profiles/ZT01.json'));
+ for(const id of ['ofr','prealarm'])assert.equal(c.record_form.signals.find(s=>s.id===id).role,'responses');
+}

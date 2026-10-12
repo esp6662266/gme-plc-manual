@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "common_UI_implementation_unchanged": true,
+  "records_written": 0,
+  "rows": [
+    {
+      "key": "전기도면·원본 래더 나란히 보기\n닫기\n\nBC01 보존 자료와 사용자 기록 · 현재 CPU·실물·현장 복구 확인 전\n\n좌측은 보존 도면, 우측은 원본 XML의 Part·Wire 연결",
+      "areas": 7,
+      "paths": 5,
+      "lad": 56,
+      "disabled": false,
+      "frameHidden": false,
+      "frameSrc": "http://127.0.0.1:18515/networks/network-1935.html",
+      "sourceHash": "bc01-part-202",
+      "imageSrc": "assets/circuits/FG19.png",
+      "selection_key": "P01"
+    },
+    {
+      "key": "전기도면·원본 래더 나란히 보기\n닫기\n\nTC10 보존 자료와 사용자 기록 · 현재 CPU·실물·현장 복구 확인 전\n\n좌측은 보존 도면, 우측은 원본 XML의 Part·Wire 연결",
+      "areas": 7,
+      "paths": 1,
+      "lad": 79,
+      "disabled": false,
+      "frameHidden": false,
+      "frameSrc": "http://127.0.0.1:18515/networks/network-1734.html",
+      "sourceHash": "gme-tc10-wire-126",
+      "imageSrc": "assets/catalog-circuits/Electrical_Rev2-P172.png",
+      "selection_key": "TC10"
+    },
+    {
+      "key": "전기도면·원본 래더 나란히 보기\n닫기\n\nTC11 보존 자료와 사용자 기록 · 현재 CPU·실물·현장 복구 확인 전\n\n좌측은 보존 도면, 우측은 원본 XML의 Part·Wire 연결",
+      "areas": 7,
+      "paths": 1,
+      "lad": 0,
+      "disabled": true,
+      "frameHidden": true,
+      "frameSrc": null,
+      "sourceHash": null,
+      "imageSrc": "assets/catalog-circuits/PID_1684n002I-P001.png",
+      "selection_key": "TC11"
+    }
+  ]
+}

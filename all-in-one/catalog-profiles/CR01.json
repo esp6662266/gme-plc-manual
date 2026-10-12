@@ -1,0 +1,896 @@
+{
+  "catalog_id": "CR01",
+  "selection_key": "CR01",
+  "priority_key": null,
+  "type": "operating_cabinet_identity_unverified",
+  "draft": "catalog-sources/CR01-DOTS-DRAFT.md",
+  "draft_sha256": "dbb2337fc09add19060bb62b0a68f2b8f2edb1577c05e2e28d966e83e996603c",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1070,
+      "part",
+      "78"
+    ],
+    [
+      1070,
+      "wire",
+      "88"
+    ],
+    [
+      1070,
+      "wire",
+      "90"
+    ],
+    [
+      1070,
+      "wire",
+      "89"
+    ],
+    [
+      1823,
+      "part",
+      "23"
+    ],
+    [
+      1823,
+      "part",
+      "27"
+    ],
+    [
+      1823,
+      "part",
+      "35"
+    ],
+    [
+      1823,
+      "part",
+      "36"
+    ],
+    [
+      1823,
+      "part",
+      "37"
+    ],
+    [
+      1823,
+      "wire",
+      "41"
+    ],
+    [
+      1823,
+      "wire",
+      "45"
+    ],
+    [
+      1823,
+      "wire",
+      "47"
+    ],
+    [
+      1823,
+      "wire",
+      "46"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "관련 공통 Word 전달",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "90",
+      "label": "IW18→DB13W18",
+      "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다."
+    },
+    {
+      "signal": "관련 공통 고장 Set",
+      "network": 1823,
+      "kind": "wire",
+      "uid": "41",
+      "label": "NOT Presence→SCoil27",
+      "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다."
+    },
+    {
+      "signal": "관련 공통 고장 Reset",
+      "network": 1823,
+      "kind": "wire",
+      "uid": "45",
+      "label": "Reset AND Fault→RCoil37",
+      "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다."
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0655-IdentXmlPart.xml",
+    "sources/decoded-original/0657-IdentXmlPart.xml",
+    "sources/decoded-original/0635-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "CR01",
+    "signals": [
+      {
+        "id": "word-raw",
+        "role": "raw_inputs",
+        "name": "관련 공통 IW18 Word",
+        "addresses": [
+          "%IW18"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "81",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "word-mirror",
+        "role": "responses",
+        "name": "관련 공통 Inputs Word18",
+        "addresses": [
+          "DB13.DBW18"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "82",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "presence",
+        "role": "responses",
+        "name": "관련 공통 Presenza_110V",
+        "addresses": [
+          "DB13.DBX19.5"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "24",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "관련 공통110V_Fault · 본체 전용 아님",
+        "addresses": [
+          "DB3.DBX11.4"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "48",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "관련 공통 RESET_ALLARM",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "38",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "CR01",
+    "timers": [],
+    "alarms": []
+  },
+  "control_reference": {
+    "native": [],
+    "chain": [
+      "P&ID CR01 운전 캐비닛 표시",
+      "관련 공통 IW18→DB13W18→Presence",
+      "관련 공통110V Fault S/R · 본체 전용 알람으로 배정 안 함"
+    ],
+    "repair": [
+      "기존16HL1/16HL2 표시·UPS/전원 점검기록",
+      "9QF2상태·E19.5·처리bit·Fault 동시간 기록",
+      "17SB2·E19.7·내부Reset·S/R 시각",
+      "P&ID CR01/QG/JB01 명판·배치도"
+    ],
+    "pending": [
+      "CR01 명판·설치 사진과 승인 배치도; QG/JB01/CONTROL BOARD 동일성",
+      "고유 PLC/HMI·단자·버튼 이벤트와 현행 프로젝트",
+      "전원존재 입력 극성·현재110V/24V 및 보호 설정",
+      "17SB2/공통 RESET_ALLARM/HMI 요청 전체 Writer 결속",
+      "별도 정적 Writer·전체 호출/스캔 및 Set/Reset 동시조건 우선",
+      "현재 TIA/CPU/실물/현장복구 미수행; 부재 검색 반복 안 함"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "CR01",
+    "boundary": "source_linked; dedicated ownership and physical identity unverified",
+    "existing_notes": [
+      "관련 공통 회로와 고유 제어 소유 구분"
+    ],
+    "existing_pending": [
+      "CR01 명판·설치 사진과 승인 배치도; QG/JB01/CONTROL BOARD 동일성",
+      "고유 PLC/HMI·단자·버튼 이벤트와 현행 프로젝트",
+      "전원존재 입력 극성·현재110V/24V 및 보호 설정",
+      "17SB2/공통 RESET_ALLARM/HMI 요청 전체 Writer 결속",
+      "별도 정적 Writer·전체 호출/스캔 및 Set/Reset 동시조건 우선",
+      "현재 TIA/CPU/실물/현장복구 미수행; 부재 검색 반복 안 함"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "CR01 명판·설치 사진과 승인 배치도; QG/JB01/CONTROL BOARD 동일성",
+        "고유 PLC/HMI·단자·버튼 이벤트와 현행 프로젝트",
+        "전원존재 입력 극성·현재110V/24V 및 보호 설정",
+        "17SB2/공통 RESET_ALLARM/HMI 요청 전체 Writer 결속",
+        "별도 정적 Writer·전체 호출/스캔 및 Set/Reset 동시조건 우선",
+        "현재 TIA/CPU/실물/현장복구 미수행; 부재 검색 반복 안 함"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "CR01",
+    "plc_id": "CR01",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "화면/운전반 꺼짐",
+        "observe": "기존16HL1/16HL2 표시·UPS/전원 점검기록",
+        "compare": "110V 표시와 CPU24V 및 실제 화면 전원 분리",
+        "next": "명판/현행 전원도",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "110V 알람 유지",
+        "observe": "9QF2상태·E19.5·처리bit·Fault 동시간 기록",
+        "compare": "접점·Word전달·기억알람을 구별",
+        "next": "현행 프로젝트·승인 관찰",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "Reset 후 재발",
+        "observe": "17SB2·E19.7·내부Reset·S/R 시각",
+        "compare": "Reset과 전압복귀/복구완료 구분",
+        "next": "원인 및 Writer/이벤트 자료",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "캐비닛 명칭 상충",
+        "observe": "P&ID CR01/QG/JB01 명판·배치도",
+        "compare": "팬반과 전체운전반 소유 구분",
+        "next": "동일실물 증거",
+        "common": "step-symptom-4"
+      }
+    ],
+    "signals": [
+      {
+        "id": "word-raw",
+        "role": "raw_inputs",
+        "name": "관련 공통 IW18 Word",
+        "addresses": [
+          "%IW18"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "81",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "word-mirror",
+        "role": "responses",
+        "name": "관련 공통 Inputs Word18",
+        "addresses": [
+          "DB13.DBW18"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "82",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "presence",
+        "role": "responses",
+        "name": "관련 공통 Presenza_110V",
+        "addresses": [
+          "DB13.DBX19.5"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "24",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "관련 공통110V_Fault · 본체 전용 아님",
+        "addresses": [
+          "DB3.DBX11.4"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "48",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "관련 공통 RESET_ALLARM",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "38",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "CR01",
+    "name": "CR01 운전반 관련 공통 자료 관찰",
+    "reference_plc_id": "CR01",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "word-raw",
+        "role": "raw_inputs",
+        "name": "관련 공통 IW18 Word",
+        "addresses": [
+          "%IW18"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "81",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "word-mirror",
+        "role": "responses",
+        "name": "관련 공통 Inputs Word18",
+        "addresses": [
+          "DB13.DBW18"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "82",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "presence",
+        "role": "responses",
+        "name": "관련 공통 Presenza_110V",
+        "addresses": [
+          "DB13.DBX19.5"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "24",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "관련 공통110V_Fault · 본체 전용 아님",
+        "addresses": [
+          "DB3.DBX11.4"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "48",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "관련 공통 RESET_ALLARM",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+        "refs": [
+          {
+            "network": 1823,
+            "oref": "38",
+            "source": "sources/decoded-original/0457-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "화면/운전반 꺼짐",
+        "observe": "기존16HL1/16HL2 표시·UPS/전원 점검기록",
+        "compare": "110V 표시와 CPU24V 및 실제 화면 전원 분리",
+        "next": "명판/현행 전원도",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "110V 알람 유지",
+        "observe": "9QF2상태·E19.5·처리bit·Fault 동시간 기록",
+        "compare": "접점·Word전달·기억알람을 구별",
+        "next": "현행 프로젝트·승인 관찰",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "Reset 후 재발",
+        "observe": "17SB2·E19.7·내부Reset·S/R 시각",
+        "compare": "Reset과 전압복귀/복구완료 구분",
+        "next": "원인 및 Writer/이벤트 자료",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "캐비닛 명칭 상충",
+        "observe": "P&ID CR01/QG/JB01 명판·배치도",
+        "compare": "팬반과 전체운전반 소유 구분",
+        "next": "동일실물 증거",
+        "common": "step-symptom-4"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "CR01 식별 및 관련 공통 전원 관찰 · 고유 PLC 소유 미확정",
+      "sources": {
+        "catalog-sources/CR01-DOTS-DRAFT.md": "dbb2337fc09add19060bb62b0a68f2b8f2edb1577c05e2e28d966e83e996603c"
+      },
+      "circuit_equipment": "CR01↔공통 전원/캐비닛 동일성 미확정",
+      "circuit_distinction": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+      "circuit_pages": [
+        {
+          "label": "FG9 · PDF10",
+          "path": "sources/Electrical_Rev2.pdf#page=10"
+        },
+        {
+          "label": "FG10 · PDF11",
+          "path": "sources/Electrical_Rev2.pdf#page=11"
+        },
+        {
+          "label": "FG16 · PDF17",
+          "path": "sources/Electrical_Rev2.pdf#page=17"
+        },
+        {
+          "label": "FG17 · PDF18",
+          "path": "sources/Electrical_Rev2.pdf#page=18"
+        },
+        {
+          "label": "FG135 · PDF136",
+          "path": "sources/Electrical_Rev2.pdf#page=136"
+        },
+        {
+          "label": "FG235 · PDF238",
+          "path": "sources/Electrical_Rev2.pdf#page=238"
+        },
+        {
+          "label": "FG237 · PDF240",
+          "path": "sources/Electrical_Rev2.pdf#page=240"
+        },
+        {
+          "label": "CR01 P&ID · PDF1",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "현행 준공/실물 대응 미확보",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "CR01 명판·설치 사진과 승인 배치도; QG/JB01/CONTROL BOARD 동일성"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1070 · 공통 소유",
+            "path": "networks/network-1070.html"
+          },
+          {
+            "label": "1823 · 공통 소유",
+            "path": "networks/network-1823.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "기존16HL1/16HL2 표시·UPS/전원 점검기록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "명판/현행 전원도"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070 · 공통 소유",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1823 · 공통 소유",
+              "path": "networks/network-1823.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "9QF2상태·E19.5·처리bit·Fault 동시간 기록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현행 프로젝트·승인 관찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070 · 공통 소유",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1823 · 공통 소유",
+              "path": "networks/network-1823.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "17SB2·E19.7·내부Reset·S/R 시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "원인 및 Writer/이벤트 자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070 · 공통 소유",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1823 · 공통 소유",
+              "path": "networks/network-1823.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "P&ID CR01/QG/JB01 명판·배치도"
+            },
+            {
+              "owner": "현재자료",
+              "work": "동일실물 증거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070 · 공통 소유",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1823 · 공통 소유",
+              "path": "networks/network-1823.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "CR01",
+    "plc_id": "CR01",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-9",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG9 · PDF10",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 10,
+        "fg": 9,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P010.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-10",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG10 · PDF11",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 11,
+        "fg": 10,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P011.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-16",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG16 · PDF17",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 17,
+        "fg": 16,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P017.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-17",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG17 · PDF18",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 18,
+        "fg": 17,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P018.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "Rev2 17.03.2025"
+      },
+      {
+        "id": "oem-135",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG135 · PDF136",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 136,
+        "fg": 135,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P136.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-235",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG235 · PDF238",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 238,
+        "fg": 235,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P238.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "oem-237",
+        "kind": "관련 공통 OEM · 본체 동일성 미확정",
+        "title": "FG237 · PDF240",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 240,
+        "fg": 237,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P240.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 전원/반 관련 자료 · CR01 독점 소유 아님",
+        "revision": "27.05.2024 · 개정란 공란"
+      },
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "CR01 P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "운전 캐비닛 명칭 · 실물 미확정",
+        "revision": "I 15/01/2013"
+      }
+    ],
+    "circuit": {
+      "id": "CR01",
+      "equipment": "CR01 고유 직접경로 미확보",
+      "distinction": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+      "paths": [],
+      "pending": [
+        "CR01 명판·설치 사진과 승인 배치도; QG/JB01/CONTROL BOARD 동일성",
+        "고유 PLC/HMI·단자·버튼 이벤트와 현행 프로젝트",
+        "전원존재 입력 극성·현재110V/24V 및 보호 설정",
+        "17SB2/공통 RESET_ALLARM/HMI 요청 전체 Writer 결속",
+        "별도 정적 Writer·전체 호출/스캔 및 Set/Reset 동시조건 우선",
+        "현재 TIA/CPU/실물/현장복구 미수행; 부재 검색 반복 안 함"
+      ]
+    },
+    "warnings": [
+      "CR01=JB01 병합 금지",
+      "모든 페이지는 공통/관련 소유",
+      "고유 PLC·전기 결속 미확보"
+    ]
+  },
+  "related_alarm_boundary": "CR01는 P&ID 운전 캐비닛 문서명입니다. 아래 전원/110V 알람은 관련 공통 계통이며 CR01 독점 소유가 아닙니다. CR01↔QG/JB01/CONTROL BOARD 실물 동일성은 미확정이고 FN04 반을 병합하지 않습니다. 전압존재 접점·Word 전달·기억 알람·실제 전압/복구를 분리합니다.",
+  "presentation": {
+    "search_examples": "CR01, 운전 제어반, 110V, Presenza"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "1070 · 공통 소유",
+        "networks/network-1070.html"
+      ],
+      [
+        "1823 · 공통 소유",
+        "networks/network-1823.html"
+      ]
+    ],
+    "io": [
+      [
+        "1070 · 공통 소유",
+        "networks/network-1070.html"
+      ],
+      [
+        "1823 · 공통 소유",
+        "networks/network-1823.html"
+      ]
+    ],
+    "control": [
+      [
+        "1070 · 공통 소유",
+        "networks/network-1070.html"
+      ],
+      [
+        "1823 · 공통 소유",
+        "networks/network-1823.html"
+      ]
+    ],
+    "alarms": [
+      [
+        "1070 · 공통 소유",
+        "networks/network-1070.html"
+      ],
+      [
+        "1823 · 공통 소유",
+        "networks/network-1823.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1070 · 공통 소유",
+        "networks/network-1070.html"
+      ],
+      [
+        "1823 · 공통 소유",
+        "networks/network-1823.html"
+      ]
+    ],
+    "completion": [
+      [
+        "1070 · 공통 소유",
+        "networks/network-1070.html"
+      ],
+      [
+        "1823 · 공통 소유",
+        "networks/network-1823.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG9 · PDF10",
+        "sources/Electrical_Rev2.pdf#page=10"
+      ],
+      [
+        "FG10 · PDF11",
+        "sources/Electrical_Rev2.pdf#page=11"
+      ],
+      [
+        "FG16 · PDF17",
+        "sources/Electrical_Rev2.pdf#page=17"
+      ],
+      [
+        "FG17 · PDF18",
+        "sources/Electrical_Rev2.pdf#page=18"
+      ],
+      [
+        "FG135 · PDF136",
+        "sources/Electrical_Rev2.pdf#page=136"
+      ],
+      [
+        "FG235 · PDF238",
+        "sources/Electrical_Rev2.pdf#page=238"
+      ],
+      [
+        "FG237 · PDF240",
+        "sources/Electrical_Rev2.pdf#page=240"
+      ],
+      [
+        "CR01 P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ]
+    ]
+  }
+}

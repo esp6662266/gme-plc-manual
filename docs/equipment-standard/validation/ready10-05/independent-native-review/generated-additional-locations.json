@@ -1,0 +1,18 @@
+{
+  "count": 1,
+  "all_exact_native": true,
+  "additions": [
+    {
+      "catalog_id": "ZT01",
+      "network": 1658,
+      "kind": "part",
+      "uid": "23",
+      "path": "networks/network-1658.html#gme-mc04-part-23",
+      "xml": "sources/decoded-original/0291-FlgNet.xml",
+      "exists_exact_native_type": true,
+      "native_element": "<Part UId=\"23\" Gate=\"Coil\" />\n    ",
+      "reason": "generator default alarm action adds shared conversion-function ordinary Coil23; this is Local Out_of_range, not a new dedicated PLC signal",
+      "native_declaration": "0611-IdentXmlPart.xml InterfaceAccess RID26 S=Local NID1 UID24 AK=Write; SSD S=O AO=0; IAD PN=1; name Out_of_range"
+    }
+  ]
+}

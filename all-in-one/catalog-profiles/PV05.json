@@ -1,0 +1,1436 @@
+{
+  "catalog_id": "PV05",
+  "selection_key": "PV05",
+  "priority_key": null,
+  "type": "pneumatic_nitrogen_valve",
+  "draft": "catalog-sources/PV05-DOTS-DRAFT.md",
+  "draft_sha256": "2c4b9395ce65cedf795f2b3277f9ffc60df93826edccf322e602353ad98ce17f",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1990,
+      "part",
+      "953"
+    ],
+    [
+      1990,
+      "part",
+      "955"
+    ],
+    [
+      1990,
+      "part",
+      "27"
+    ],
+    [
+      1990,
+      "part",
+      "929"
+    ],
+    [
+      1990,
+      "part",
+      "957"
+    ],
+    [
+      1990,
+      "part",
+      "959"
+    ],
+    [
+      1990,
+      "part",
+      "961"
+    ],
+    [
+      1990,
+      "part",
+      "964"
+    ],
+    [
+      1990,
+      "part",
+      "31"
+    ],
+    [
+      1990,
+      "part",
+      "935"
+    ],
+    [
+      1990,
+      "wire",
+      "943"
+    ],
+    [
+      1990,
+      "wire",
+      "944"
+    ],
+    [
+      1990,
+      "wire",
+      "26"
+    ],
+    [
+      1990,
+      "wire",
+      "29"
+    ],
+    [
+      1990,
+      "wire",
+      "946"
+    ],
+    [
+      1990,
+      "wire",
+      "947"
+    ],
+    [
+      1990,
+      "wire",
+      "948"
+    ],
+    [
+      1990,
+      "wire",
+      "949"
+    ],
+    [
+      1990,
+      "wire",
+      "35"
+    ],
+    [
+      1990,
+      "wire",
+      "33"
+    ],
+    [
+      1990,
+      "wire",
+      "951"
+    ],
+    [
+      1070,
+      "part",
+      "60"
+    ],
+    [
+      1070,
+      "part",
+      "61"
+    ],
+    [
+      1070,
+      "part",
+      "62"
+    ],
+    [
+      1070,
+      "wire",
+      "21"
+    ],
+    [
+      1070,
+      "wire",
+      "71"
+    ],
+    [
+      1070,
+      "wire",
+      "74"
+    ],
+    [
+      1070,
+      "wire",
+      "76"
+    ],
+    [
+      1070,
+      "wire",
+      "77"
+    ],
+    [
+      1613,
+      "part",
+      "37"
+    ],
+    [
+      1613,
+      "wire",
+      "42"
+    ],
+    [
+      1613,
+      "wire",
+      "43"
+    ],
+    [
+      1613,
+      "wire",
+      "44"
+    ],
+    [
+      1080,
+      "part",
+      "23"
+    ],
+    [
+      1080,
+      "part",
+      "39"
+    ],
+    [
+      1080,
+      "wire",
+      "29"
+    ],
+    [
+      1080,
+      "wire",
+      "38"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "준비 입력",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "76",
+      "label": "IW16→Move62.in",
+      "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "Word 전달",
+      "network": 1070,
+      "kind": "wire",
+      "uid": "77",
+      "label": "Move62.out→DB13W16",
+      "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "탱크 준비",
+      "network": 1990,
+      "kind": "wire",
+      "uid": "944",
+      "label": "Ready→반전 Contact955",
+      "boundary": "탱크 준비 처리 논리 참고이며 외부 코일/접점의 실행 대응을 확인한 것이 아닙니다. PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "경보 Set",
+      "network": 1990,
+      "kind": "wire",
+      "uid": "29",
+      "label": "ServiceBit 접점→SCoil929",
+      "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "경보 Reset",
+      "network": 1990,
+      "kind": "wire",
+      "uid": "33",
+      "label": "OR31.out→RCoil935.in · 상위 ON/RESET_ALLARM/기존Fault 필요",
+      "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "공통 호출",
+      "network": 1613,
+      "kind": "wire",
+      "uid": "43",
+      "label": "NOT Simulation(1)→hmi inputs.en",
+      "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "다른 정적 Writer",
+      "network": 1080,
+      "kind": "wire",
+      "uid": "38",
+      "label": "기존 Coil39→Ready · 실행 금지",
+      "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0555-IdentXmlPart.xml",
+    "sources/decoded-original/0557-IdentXmlPart.xml",
+    "sources/decoded-original/0558-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0634-IdentXmlPart.xml",
+    "sources/decoded-original/0635-IdentXmlPart.xml",
+    "sources/decoded-original/0636-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml",
+    "sources/decoded-original/0692-IdentXmlPart.xml",
+    "sources/decoded-original/0694-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "PV05",
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Start Nitrogen · 공통 요청/Monitor 선언만 확인",
+        "addresses": [
+          "%Q6.4"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "ready-raw",
+        "role": "raw_inputs",
+        "name": "탱크 Ready 원시 · OEM 도면 신호",
+        "addresses": [
+          "%I16.7"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      },
+      {
+        "id": "iw16",
+        "role": "raw_inputs",
+        "name": "Tag_275 · SAM=None 원시 Word",
+        "addresses": [
+          "%IW16"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "67",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "word16",
+        "role": "responses",
+        "name": "Inputs Word16 · 원시 Word 전달",
+        "addresses": [
+          "DB13.DBW16"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "68",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ready",
+        "role": "responses",
+        "name": "Inputs.NITROGEN TANK READY · 처리 Bool",
+        "addresses": [
+          "DB13.DBX16.7"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "937",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.HYDROGEN_BOX_FAULT · 질소 박스 공통 경보",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "938",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 경보 Reset 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "939",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "936",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 보호정책/현재상태 미확정",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "28",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "PV05",
+    "timers": [],
+    "alarms": [
+      {
+        "name": "HYDROGEN_BOX_FAULT",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "actions": [
+          {
+            "network": 1990,
+            "location_kind": "part",
+            "uid": "929"
+          },
+          {
+            "network": 1990,
+            "location_kind": "part",
+            "uid": "935"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1070,
+      1990,
+      1613,
+      1080
+    ],
+    "chain": [
+      "공통 Q6.4 선언→96KA3→96.12→PV05 X2:13/14",
+      "IW16 Word→DB13 Word16→Ready 처리 bit",
+      "ON AND NOT Ready AND ServiceBit Set; ON AND Reset AND Fault AND (Ready OR NOT ServiceBit) Reset"
+    ],
+    "repair": [
+      "I16.7·DB13.X16.7·DB3.X7.1·ServiceBit·Reset 시각",
+      "Q6.4·96KA3·96.12·X2:13/14 식별 자료",
+      "각 태그·단자·동시 관찰 시각·96KT1 자료",
+      "ON·ServiceBit·처리bit·마지막Reset·프로젝트",
+      "EB16·AB6·Allarmi_58 주소·화면·시각"
+    ],
+    "pending": [
+      "Start Nitrogen Q6.4 직접 Writer와 HMI 실제 명령 이벤트",
+      "PV05 명판·실물 밸브·가스 주입점·현행 배선 및 정상극성",
+      "탱크 준비 외부회로 내부 판정·압력/용량 승인자료",
+      "원시 IW16/처리 Word16/다른 정적 Writer의 현재 실행순서",
+      "ServiceBit 및 Reset과 실제 준비/복구의 구분",
+      "PV06 96KT1 접점 소유·시간설정과 PV05 직접 가지 구분",
+      "현재 CPU·TIA·실물·현장복구 미수행; RO 미사용만으로 PV05 미사용을 추정하지 않음"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "PV05",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "문서/화면과현재CPU/현장복구별도"
+    ],
+    "existing_pending": [
+      "Start Nitrogen Q6.4 직접 Writer와 HMI 실제 명령 이벤트",
+      "PV05 명판·실물 밸브·가스 주입점·현행 배선 및 정상극성",
+      "탱크 준비 외부회로 내부 판정·압력/용량 승인자료",
+      "원시 IW16/처리 Word16/다른 정적 Writer의 현재 실행순서",
+      "ServiceBit 및 Reset과 실제 준비/복구의 구분",
+      "PV06 96KT1 접점 소유·시간설정과 PV05 직접 가지 구분",
+      "현재 CPU·TIA·실물·현장복구 미수행; RO 미사용만으로 PV05 미사용을 추정하지 않음"
+    ],
+    "existing_review": []
+  },
+  "repair": {
+    "key": "PV05",
+    "plc_id": "PV05",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "준비 안 됨 경보",
+        "observe": "I16.7·DB13.X16.7·DB3.X7.1·ServiceBit·Reset 시각",
+        "compare": "raw/Word/처리 bit/별도 Writer를 분리",
+        "next": "탱크측 승인 점검 결과와 현행 프로젝트",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "요청이 있으나 PV05 상태 불명",
+        "observe": "Q6.4·96KA3·96.12·X2:13/14 식별 자료",
+        "compare": "요청·릴레이·코일·실제 유량을 분리",
+        "next": "명판·현행 배선·밸브 및 유량 관찰자료",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "PV05/PV06 반응 차이",
+        "observe": "각 태그·단자·동시 관찰 시각·96KT1 자료",
+        "compare": "PV05 직접 가지와 PV06 타이머 접점 가지 비교",
+        "next": "PV06 소유 타이머 승인자료·실물 대응",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "무경보인데 Ready 원시0",
+        "observe": "ON·ServiceBit·처리bit·마지막Reset·프로젝트",
+        "compare": "Set 서비스 조건/별도 Writer/표시 누락을 분리",
+        "next": "비트 강제 없이 승인된 기존 관찰자료",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "HMI/현장 불일치",
+        "observe": "EB16·AB6·Allarmi_58 주소·화면·시각",
+        "compare": "바이트 설정과 비트 경보/실제 열림 구분",
+        "next": "HMI 태그·이벤트·통신 및 실물 표찰",
+        "common": "step-symptom-5"
+      }
+    ],
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Start Nitrogen · 공통 요청/Monitor 선언만 확인",
+        "addresses": [
+          "%Q6.4"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "ready-raw",
+        "role": "raw_inputs",
+        "name": "탱크 Ready 원시 · OEM 도면 신호",
+        "addresses": [
+          "%I16.7"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "iw16",
+        "role": "raw_inputs",
+        "name": "Tag_275 · SAM=None 원시 Word",
+        "addresses": [
+          "%IW16"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "67",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "word16",
+        "role": "responses",
+        "name": "Inputs Word16 · 원시 Word 전달",
+        "addresses": [
+          "DB13.DBW16"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "68",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ready",
+        "role": "responses",
+        "name": "Inputs.NITROGEN TANK READY · 처리 Bool",
+        "addresses": [
+          "DB13.DBX16.7"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "937",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.HYDROGEN_BOX_FAULT · 질소 박스 공통 경보",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "938",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 경보 Reset 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "939",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "936",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 보호정책/현재상태 미확정",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "28",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "PV05",
+    "name": "PV05 질소 밸브 관찰",
+    "reference_plc_id": "PV05",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "request",
+        "role": "requests",
+        "name": "Start Nitrogen · 공통 요청/Monitor 선언만 확인",
+        "addresses": [
+          "%Q6.4"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "ready-raw",
+        "role": "raw_inputs",
+        "name": "탱크 Ready 원시 · OEM 도면 신호",
+        "addresses": [
+          "%I16.7"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": []
+      },
+      {
+        "id": "iw16",
+        "role": "raw_inputs",
+        "name": "Tag_275 · SAM=None 원시 Word",
+        "addresses": [
+          "%IW16"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "67",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "word16",
+        "role": "responses",
+        "name": "Inputs Word16 · 원시 Word 전달",
+        "addresses": [
+          "DB13.DBW16"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1070,
+            "oref": "68",
+            "source": "sources/decoded-original/0397-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ready",
+        "role": "responses",
+        "name": "Inputs.NITROGEN TANK READY · 처리 Bool",
+        "addresses": [
+          "DB13.DBX16.7"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "937",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fault",
+        "role": "alarms",
+        "name": "Allarm.HYDROGEN_BOX_FAULT · 질소 박스 공통 경보",
+        "addresses": [
+          "DB3.DBX7.1"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "938",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset",
+        "role": "requests",
+        "name": "Flag.RESET_ALLARM · 경보 Reset 조건",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "939",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 현재 상태 미확정",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "936",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "service",
+        "role": "requests",
+        "name": "ServiceBit · 보호정책/현재상태 미확정",
+        "addresses": [
+          "%M1000.0"
+        ],
+        "boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1990,
+            "oref": "28",
+            "source": "sources/decoded-original/0538-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "준비 안 됨 경보",
+        "observe": "I16.7·DB13.X16.7·DB3.X7.1·ServiceBit·Reset 시각",
+        "compare": "raw/Word/처리 bit/별도 Writer를 분리",
+        "next": "탱크측 승인 점검 결과와 현행 프로젝트",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "요청이 있으나 PV05 상태 불명",
+        "observe": "Q6.4·96KA3·96.12·X2:13/14 식별 자료",
+        "compare": "요청·릴레이·코일·실제 유량을 분리",
+        "next": "명판·현행 배선·밸브 및 유량 관찰자료",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "PV05/PV06 반응 차이",
+        "observe": "각 태그·단자·동시 관찰 시각·96KT1 자료",
+        "compare": "PV05 직접 가지와 PV06 타이머 접점 가지 비교",
+        "next": "PV06 소유 타이머 승인자료·실물 대응",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "무경보인데 Ready 원시0",
+        "observe": "ON·ServiceBit·처리bit·마지막Reset·프로젝트",
+        "compare": "Set 서비스 조건/별도 Writer/표시 누락을 분리",
+        "next": "비트 강제 없이 승인된 기존 관찰자료",
+        "common": "step-symptom-4"
+      },
+      {
+        "id": "symptom-5",
+        "title": "HMI/현장 불일치",
+        "observe": "EB16·AB6·Allarmi_58 주소·화면·시각",
+        "compare": "바이트 설정과 비트 경보/실제 열림 구분",
+        "next": "HMI 태그·이벤트·통신 및 실물 표찰",
+        "common": "step-symptom-5"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "PV05 고유 원본·독립 관찰",
+      "sources": {
+        "catalog-sources/PV05-DOTS-DRAFT.md": "2c4b9395ce65cedf795f2b3277f9ffc60df93826edccf322e602353ad98ce17f"
+      },
+      "circuit_equipment": "PV05 질소 주입 밸브 · 실물 미확정",
+      "circuit_distinction": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG96 · PDF97",
+          "path": "sources/Electrical_Rev2.pdf#page=97"
+        },
+        {
+          "label": "FG132 · PDF133",
+          "path": "sources/Electrical_Rev2.pdf#page=133"
+        },
+        {
+          "label": "FG142 · PDF143",
+          "path": "sources/Electrical_Rev2.pdf#page=143"
+        }
+      ],
+      "construction_boundary": "현행 시공/배관 주입점/실물 미확보",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "Start Nitrogen Q6.4 직접 Writer와 HMI 실제 명령 이벤트"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1070",
+            "path": "networks/network-1070.html"
+          },
+          {
+            "label": "1990",
+            "path": "networks/network-1990.html"
+          },
+          {
+            "label": "1613",
+            "path": "networks/network-1613.html"
+          },
+          {
+            "label": "1080",
+            "path": "networks/network-1080.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "I16.7·DB13.X16.7·DB3.X7.1·ServiceBit·Reset 시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "탱크측 승인 점검 결과와 현행 프로젝트"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1613",
+              "path": "networks/network-1613.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "Q6.4·96KA3·96.12·X2:13/14 식별 자료"
+            },
+            {
+              "owner": "현재자료",
+              "work": "명판·현행 배선·밸브 및 유량 관찰자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1613",
+              "path": "networks/network-1613.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "각 태그·단자·동시 관찰 시각·96KT1 자료"
+            },
+            {
+              "owner": "현재자료",
+              "work": "PV06 소유 타이머 승인자료·실물 대응"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1613",
+              "path": "networks/network-1613.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "ON·ServiceBit·처리bit·마지막Reset·프로젝트"
+            },
+            {
+              "owner": "현재자료",
+              "work": "비트 강제 없이 승인된 기존 관찰자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1613",
+              "path": "networks/network-1613.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-5",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "EB16·AB6·Allarmi_58 주소·화면·시각"
+            },
+            {
+              "owner": "현재자료",
+              "work": "HMI 태그·이벤트·통신 및 실물 표찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1070",
+              "path": "networks/network-1070.html"
+            },
+            {
+              "label": "1990",
+              "path": "networks/network-1990.html"
+            },
+            {
+              "label": "1613",
+              "path": "networks/network-1613.html"
+            },
+            {
+              "label": "1080",
+              "path": "networks/network-1080.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "PV05",
+    "plc_id": "PV05",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-96",
+        "kind": "OEM 전기",
+        "title": "FG96 · PDF97",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 97,
+        "fg": 96,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P097.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면 · 현행 실물/보호 설정 미확정",
+        "revision": "27.05.2024 · 개정란 별도 기재 미관찰"
+      },
+      {
+        "id": "oem-132",
+        "kind": "OEM 전기",
+        "title": "FG132 · PDF133",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 133,
+        "fg": 132,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P133.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면 · 현행 실물/보호 설정 미확정",
+        "revision": "Rev2 17.03.2025"
+      },
+      {
+        "id": "oem-142",
+        "kind": "OEM 전기",
+        "title": "FG142 · PDF143",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 143,
+        "fg": 142,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P143.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 도면 · 현행 실물/보호 설정 미확정",
+        "revision": "27.05.2024 · 개정란 별도 기재 미관찰"
+      }
+    ],
+    "circuit": {
+      "id": "PV05",
+      "equipment": "PV05 질소 밸브 · 공통박스 소유 분리",
+      "distinction": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+      "paths": [
+        {
+          "signal": "박스 전원",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "CLIENT220V60Hz→X2:1/2 → 96QF1 0.22–0.32A→96T1 220/110V63VA → 96QF2 1A→96.8/96.9",
+          "backup": "질소 박스 공통 공급",
+          "nodes": [
+            "CLIENT220V60Hz→X2:1/2",
+            "96QF1 0.22–0.32A→96T1 220/110V63VA",
+            "96QF2 1A→96.8/96.9"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "도면값이며 현행 보호설정 아님",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "공통 요청",
+          "fg": 142,
+          "sheet_id": "oem-142",
+          "drawing": "A6.4 단자25 MOD15→96/9 → 96KA3 A1/A2→−0Vdc10.6 → 공급29=+24Vdc10.9/X21:3034 4AF, 30=−0Vdc10.6",
+          "backup": "Q6.4 · Monitor 선언",
+          "nodes": [
+            "A6.4 단자25 MOD15→96/9",
+            "96KA3 A1/A2→−0Vdc10.6",
+            "공급29=+24Vdc10.9/X21:3034 4AF, 30=−0Vdc10.6"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "직접PLC Writer 미확보",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "자동 부하",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "96.9→X2:11→X1:368 → 96KA3 접점5–9 → X1:369→X2:12→96.12",
+          "backup": "공통 요청 후 공급",
+          "nodes": [
+            "96.9→X2:11→X1:368",
+            "96KA3 접점5–9",
+            "X1:369→X2:12→96.12"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "접점표1/5/9와 실제부하5/9 구별",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "PV05 직접 가지",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "96.12→X2:13 5×20 2AF → 96.14→PV05 A1 → PV05 A2→X2:14→96.8",
+          "backup": "PV05 고유 코일 가지",
+          "nodes": [
+            "96.12→X2:13 5×20 2AF",
+            "96.14→PV05 A1",
+            "PV05 A2→X2:14→96.8"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [],
+          "check": "96KT1 접점은 PV06 소유; 실제열림피드백 미확보",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "이 보존 전기 경로에 직접 대응하는 고유 PLC Part/Wire를 확보하지 못했습니다. 도면 경로를 삭제하거나 임의 LAD를 배정하지 않습니다."
+        },
+        {
+          "signal": "탱크 준비",
+          "fg": 96,
+          "sheet_id": "oem-96",
+          "drawing": "공급→X2:9→외부Ready회로→X2:10 → 96.11→96KA2 A1/A2→96.8 → +24Vdc10.7→X1:370→X2:17→96KA2 5–9→X2:18→X1:371→E16.7",
+          "backup": "탱크 준비와개별밸브응답구분",
+          "nodes": [
+            "공급→X2:9→외부Ready회로→X2:10",
+            "96.11→96KA2 A1/A2→96.8",
+            "+24Vdc10.7→X1:370→X2:17→96KA2 5–9→X2:18→X1:371→E16.7"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [
+            {
+              "network": 1990,
+              "uid": "937"
+            }
+          ],
+          "check": "외부Ready 내부회로 미제공"
+        },
+        {
+          "signal": "준비 입력",
+          "fg": 132,
+          "sheet_id": "oem-132",
+          "drawing": "96/8 E16.7→MOD12 단자8 → 원시 IW16의 I16.7 → Word16 전달과 처리 DB13.X16.7 구분",
+          "backup": "IW16→DB13.DBW16",
+          "nodes": [
+            "96/8 E16.7→MOD12 단자8",
+            "원시 IW16의 I16.7",
+            "Word16 전달과 처리 DB13.X16.7 구분"
+          ],
+          "destination": "보존 끝점 · 현행 확인 전",
+          "native_symbol_references": [
+            {
+              "network": 1070,
+              "uid": "67"
+            },
+            {
+              "network": 1070,
+              "uid": "68"
+            }
+          ],
+          "check": "실물/정상극성/현재갱신 별도"
+        }
+      ],
+      "pending": [
+        "Start Nitrogen Q6.4 직접 Writer와 HMI 실제 명령 이벤트",
+        "PV05 명판·실물 밸브·가스 주입점·현행 배선 및 정상극성",
+        "탱크 준비 외부회로 내부 판정·압력/용량 승인자료",
+        "원시 IW16/처리 Word16/다른 정적 Writer의 현재 실행순서",
+        "ServiceBit 및 Reset과 실제 준비/복구의 구분",
+        "PV06 96KT1 접점 소유·시간설정과 PV05 직접 가지 구분",
+        "현재 CPU·TIA·실물·현장복구 미수행; RO 미사용만으로 PV05 미사용을 추정하지 않음"
+      ]
+    },
+    "warnings": [
+      "질소 준비 알람 원문 HYDROGEN 표기 보존",
+      "Q6.4 직접 Writer와실제밸브개방 미확보"
+    ]
+  },
+  "related_alarm_boundary": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "PV05, Q6.4, I16.7, DB13.DBX16.7, HYDROGEN_BOX_FAULT, 96KA3"
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "PV05는 질소 박스 공통 Q6.4 요청의 X2:13/14 직접 코일 가지입니다. 탱크 준비 I16.7/처리 DB13.X16.7은 개별 밸브 개방 피드백이 아닙니다. 0538 경보는 무타이머이며 ServiceBit 조건을 보존합니다. 직접 Q6.4 Writer·현재 CPU·정상극성·실물 개방/질소 주입·현장복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Start Nitrogen Q6.4 직접 Writer와 HMI 실제 명령 이벤트",
+        "PV05 명판·실물 밸브·가스 주입점·현행 배선 및 정상극성",
+        "탱크 준비 외부회로 내부 판정·압력/용량 승인자료",
+        "원시 IW16/처리 Word16/다른 정적 Writer의 현재 실행순서",
+        "ServiceBit 및 Reset과 실제 준비/복구의 구분",
+        "PV06 96KT1 접점 소유·시간설정과 PV05 직접 가지 구분",
+        "현재 CPU·TIA·실물·현장복구 미수행; RO 미사용만으로 PV05 미사용을 추정하지 않음"
+      ]
+    }
+  ],
+  "section_sources": {
+    "overview": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ]
+    ],
+    "io": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ]
+    ],
+    "control": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ]
+    ],
+    "alarms": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ]
+    ],
+    "repair": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ]
+    ],
+    "completion": [
+      [
+        "1070",
+        "networks/network-1070.html"
+      ],
+      [
+        "1990",
+        "networks/network-1990.html"
+      ],
+      [
+        "1613",
+        "networks/network-1613.html"
+      ],
+      [
+        "1080",
+        "networks/network-1080.html"
+      ],
+      [
+        "Q6.4 선언",
+        "sources/decoded-original/0555-IdentXmlPart.xml"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG96 · PDF97",
+        "sources/Electrical_Rev2.pdf#page=97"
+      ],
+      [
+        "FG132 · PDF133",
+        "sources/Electrical_Rev2.pdf#page=133"
+      ],
+      [
+        "FG142 · PDF143",
+        "sources/Electrical_Rev2.pdf#page=143"
+      ]
+    ]
+  },
+  "supplements": {
+    "circuits": [
+      {
+        "id": "review-power-terminal-clarification",
+        "title": "FG142 공급·리턴 단자 구분",
+        "type": "reviewed",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "FG142/PDF143 단자29는 +24Vdc10.9/X21:3034 4A F 공급, 단자30은 −0Vdc10.6 리턴입니다. 두 단자를 모두 양전원으로 해석하지 않습니다. 원초안 전체 바이트는 보존했습니다."
+            }
+          ]
+        },
+        "links": []
+      }
+    ]
+  }
+}

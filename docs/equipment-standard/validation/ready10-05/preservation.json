@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "baseline": "5d0459ca099451354353bc0df906159b675f13fb",
+  "previous_manual_semantics": 58,
+  "current_manuals": 68,
+  "previous_embedded_schemas": 63,
+  "current_embedded_schemas": 73,
+  "original_sources": 712,
+  "existing_images": 113,
+  "existing_catalog_profiles": 40,
+  "existing_drafts": 40,
+  "raw_registers_unchanged": 91,
+  "changed_registers": [
+    "all-in-one/registers/all-in-one-data.json",
+    "all-in-one/registers/requirements-audit.json"
+  ],
+  "stopped_assets_hashes_unchanged": 5,
+  "base23_integrated_links_preserved": true,
+  "body_and_identification_reports_byte_exact": true,
+  "allowed_old_profile_change": "requirements-audit provenance hash and derived bundle hash only",
+  "new_PDF_checked_before_audit_header_refresh": true
+}

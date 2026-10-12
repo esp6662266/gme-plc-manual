@@ -1,0 +1,715 @@
+{
+  "catalog_id": "UC01",
+  "selection_key": "UC01",
+  "priority_key": null,
+  "type": "passive_chamber",
+  "draft": "catalog-sources/UC01-DOTS-DRAFT.md",
+  "draft_sha256": "ab5809bcf9b27971ef2bf0a2c208973f00f67537481fe8aeb3e511aaa2f9666a",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [],
+  "internal_names": [],
+  "source_pairs": [],
+  "extra_sources": [],
+  "signal_reference": {
+    "id": "UC01",
+    "signals": []
+  },
+  "alarm_reference": {
+    "id": "UC01",
+    "timers": [],
+    "alarms": []
+  },
+  "control_reference": {
+    "native": [],
+    "chain": [
+      "P&ID RD01 출구→UC01→PV02/MC04 관련 공정",
+      "시공 FLOW_B UC01은 위치코드이며 제어 소유 증거 아님",
+      "TC03 고유 채널과 본체 소유 구분"
+    ],
+    "repair": [
+      "기존 UC01/RD01/PV02/MC04 위치·명판·동시간 기록",
+      "TC03/PSH02 태그·위치·단위·시각·기존 기록",
+      "PV05/06·NVBOX 개별 태그와 승인된 경보 원문",
+      "시공32 행10/58 행8_18·8_4 및 가려진 행"
+    ],
+    "pending": [
+      "현재 UC01 명판·RD01/PV02/MC04 접속 및 승인 기계도",
+      "전용/별칭 PLC·HMI 교차참조 및 현행 프로젝트",
+      "TC03 시공32 FN01 대 시공58 UC01 위치 상충",
+      "8_4 CORE12/9G 상충과 8_5/8_7/8_8 가려진 행 개정자료",
+      "접속함·케이블 심선·양끝단자/현행 준공 자료",
+      "본체 재질·씰·검사 및 승인된 관찰/복구 근거",
+      "RO01~04 최신 미사용 예외 적용; 보존 도면 RO03 위치를 현행 사용으로 단정 안 함",
+      "현재 TIA/CPU/실물/현장복구 미수행; 새 근거 전 반복 검색 안 함",
+      "PSH02 시공32 core2 대 시공58 core4S 상충"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "UC01",
+    "boundary": "source_linked; PLC evidence unavailable; physical identity unverified",
+    "existing_notes": [
+      "문서 및 관찰양식 대상 · 고유 PLC 기능판정 보류"
+    ],
+    "existing_pending": [
+      "현재 UC01 명판·RD01/PV02/MC04 접속 및 승인 기계도",
+      "전용/별칭 PLC·HMI 교차참조 및 현행 프로젝트",
+      "TC03 시공32 FN01 대 시공58 UC01 위치 상충",
+      "8_4 CORE12/9G 상충과 8_5/8_7/8_8 가려진 행 개정자료",
+      "접속함·케이블 심선·양끝단자/현행 준공 자료",
+      "본체 재질·씰·검사 및 승인된 관찰/복구 근거",
+      "RO01~04 최신 미사용 예외 적용; 보존 도면 RO03 위치를 현행 사용으로 단정 안 함",
+      "현재 TIA/CPU/실물/현장복구 미수행; 새 근거 전 반복 검색 안 함",
+      "PSH02 시공32 core2 대 시공58 core4S 상충"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "현재 UC01 명판·RD01/PV02/MC04 접속 및 승인 기계도",
+        "전용/별칭 PLC·HMI 교차참조 및 현행 프로젝트",
+        "TC03 시공32 FN01 대 시공58 UC01 위치 상충",
+        "8_4 CORE12/9G 상충과 8_5/8_7/8_8 가려진 행 개정자료",
+        "접속함·케이블 심선·양끝단자/현행 준공 자료",
+        "본체 재질·씰·검사 및 승인된 관찰/복구 근거",
+        "RO01~04 최신 미사용 예외 적용; 보존 도면 RO03 위치를 현행 사용으로 단정 안 함",
+        "현재 TIA/CPU/실물/현장복구 미수행; 새 근거 전 반복 검색 안 함"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "UC01",
+    "plc_id": "UC01",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "배출 정체 의심",
+        "observe": "기존 UC01/RD01/PV02/MC04 위치·명판·동시간 기록",
+        "compare": "챔버·게이트·후단을 별개 후보로 구분",
+        "next": "현재 승인 기계도와 관찰 근거",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "온도/압력 관련 보고",
+        "observe": "TC03/PSH02 태그·위치·단위·시각·기존 기록",
+        "compare": "계측 소유와 본체 상태를 구분",
+        "next": "현재 단위·보호값·원인 미확정",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "질소 계통 관련 보고",
+        "observe": "PV05/06·NVBOX 개별 태그와 승인된 경보 원문",
+        "compare": "질소 도식이 자동 복구시퀀스 증거는 아님",
+        "next": "현재 승인 원인대응 자료",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "도면 위치/심수 상충",
+        "observe": "시공32 행10/58 행8_18·8_4 및 가려진 행",
+        "compare": "위치·CORE12/9G·표시된 삭제/마스킹 구분",
+        "next": "현행 승인 배선도와 표찰",
+        "common": "step-symptom-4"
+      }
+    ],
+    "signals": [
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "UC01 태그·위치·자료 판본 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+      },
+      {
+        "id": "appearance",
+        "role": "responses",
+        "name": "UC01 배출실 외관·배출 관련 보고 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+      },
+      {
+        "id": "related-event",
+        "role": "responses",
+        "name": "관련 장치 경보 원문·소유·시각 · 자료 기록",
+        "addresses": [],
+        "refs": [],
+        "boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+      }
+    ]
+  },
+  "record_form": {
+    "key": "UC01",
+    "name": "UC01 드럼 배출실 자료 관찰",
+    "reference_plc_id": "UC01",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "identity",
+        "role": "requests",
+        "name": "UC01 태그·위치·자료 판본 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+      },
+      {
+        "id": "appearance",
+        "role": "responses",
+        "name": "UC01 배출실 외관·배출 관련 보고 · 관찰",
+        "addresses": [],
+        "refs": [],
+        "boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+      },
+      {
+        "id": "related-event",
+        "role": "responses",
+        "name": "관련 장치 경보 원문·소유·시각 · 자료 기록",
+        "addresses": [],
+        "refs": [],
+        "boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다."
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "배출 정체 의심",
+        "observe": "기존 UC01/RD01/PV02/MC04 위치·명판·동시간 기록",
+        "compare": "챔버·게이트·후단을 별개 후보로 구분",
+        "next": "현재 승인 기계도와 관찰 근거",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "온도/압력 관련 보고",
+        "observe": "TC03/PSH02 태그·위치·단위·시각·기존 기록",
+        "compare": "계측 소유와 본체 상태를 구분",
+        "next": "현재 단위·보호값·원인 미확정",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "질소 계통 관련 보고",
+        "observe": "PV05/06·NVBOX 개별 태그와 승인된 경보 원문",
+        "compare": "질소 도식이 자동 복구시퀀스 증거는 아님",
+        "next": "현재 승인 원인대응 자료",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "도면 위치/심수 상충",
+        "observe": "시공32 행10/58 행8_18·8_4 및 가려진 행",
+        "compare": "위치·CORE12/9G·표시된 삭제/마스킹 구분",
+        "next": "현행 승인 배선도와 표찰",
+        "common": "step-symptom-4"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "UC01 위치·공정 자료; 고유 PLC 신호0",
+      "sources": {
+        "catalog-sources/UC01-DOTS-DRAFT.md": "ab5809bcf9b27971ef2bf0a2c208973f00f67537481fe8aeb3e511aaa2f9666a"
+      },
+      "circuit_equipment": "UC01 본체 고유 전기 끝점 미확보",
+      "circuit_distinction": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "P&ID · PDF1",
+          "path": "sources/PID_1684n002I.pdf#page=1"
+        }
+      ],
+      "construction_boundary": "위치별 관련 케이블이며 본체 소유/심선/현재 사용 미확정",
+      "construction_pages": [
+        {
+          "label": "시공 · PDF3 · UC01 위치",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+        },
+        {
+          "label": "시공 · PDF5 · UC01 위치",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+        },
+        {
+          "label": "시공 · PDF32 · UC01 위치",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+        },
+        {
+          "label": "시공 · PDF58 · UC01 위치",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "현재 UC01 명판·RD01/PV02/MC04 접속 및 승인 기계도"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "P&ID · PDF1",
+            "path": "sources/PID_1684n002I.pdf#page=1"
+          },
+          {
+            "label": "시공 · PDF3 · UC01 위치",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+          },
+          {
+            "label": "시공 · PDF5 · UC01 위치",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+          },
+          {
+            "label": "시공 · PDF32 · UC01 위치",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+          },
+          {
+            "label": "시공 · PDF58 · UC01 위치",
+            "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "기존 UC01/RD01/PV02/MC04 위치·명판·동시간 기록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 승인 기계도와 관찰 근거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "시공 · PDF3 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 · PDF5 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 · PDF32 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+            },
+            {
+              "label": "시공 · PDF58 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "TC03/PSH02 태그·위치·단위·시각·기존 기록"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 단위·보호값·원인 미확정"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "시공 · PDF3 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 · PDF5 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 · PDF32 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+            },
+            {
+              "label": "시공 · PDF58 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "PV05/06·NVBOX 개별 태그와 승인된 경보 원문"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 승인 원인대응 자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "시공 · PDF3 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 · PDF5 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 · PDF32 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+            },
+            {
+              "label": "시공 · PDF58 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "시공32 행10/58 행8_18·8_4 및 가려진 행"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현행 승인 배선도와 표찰"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "P&ID · PDF1",
+              "path": "sources/PID_1684n002I.pdf#page=1"
+            },
+            {
+              "label": "시공 · PDF3 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+            },
+            {
+              "label": "시공 · PDF5 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+            },
+            {
+              "label": "시공 · PDF32 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+            },
+            {
+              "label": "시공 · PDF58 · UC01 위치",
+              "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "UC01",
+    "plc_id": "UC01",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "pid",
+        "kind": "P&ID",
+        "title": "P&ID · PDF1",
+        "source": "sources/PID_1684n002I.pdf",
+        "page": 1,
+        "fg": null,
+        "image": "assets/catalog-circuits/PID_1684n002I-P001.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 공정 도식 · 현행 실물 미확정",
+        "revision": "I 15/01/2013 · 최초06/04/2011 · FG 없음"
+      },
+      {
+        "id": "construction-3",
+        "kind": "관련 시공 위치 자료",
+        "title": "시공 · PDF3 · UC01 위치",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 3,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P003.png",
+        "extent": "원본 전체 페이지",
+        "status": "관련 위치 자료 · 본체 고유 결선 아님",
+        "revision": "Rev1 24.11.11 first draft · DESIGNED J.W.Lee / CHECKED J.H.Kim / APPROVED 공란"
+      },
+      {
+        "id": "construction-5",
+        "kind": "관련 시공 위치 자료",
+        "title": "시공 · PDF5 · UC01 위치",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 5,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P005.png",
+        "extent": "원본 전체 페이지",
+        "status": "관련 위치 자료 · 본체 고유 결선 아님",
+        "revision": "Rev1 24.11.11 first draft · DESIGNED J.W.Lee / CHECKED J.H.Kim / APPROVED 공란"
+      },
+      {
+        "id": "construction-32",
+        "kind": "관련 시공 위치 자료",
+        "title": "시공 · PDF32 · UC01 위치",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 32,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P032.png",
+        "extent": "원본 전체 페이지",
+        "status": "관련 위치 자료 · 본체 고유 결선 아님",
+        "revision": "Rev1 24.11.11 first draft · DESIGNED J.W.Lee / CHECKED J.H.Kim / APPROVED 공란"
+      },
+      {
+        "id": "construction-58",
+        "kind": "관련 시공 위치 자료",
+        "title": "시공 · PDF58 · UC01 위치",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 58,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P058.png",
+        "extent": "원본 전체 페이지",
+        "status": "관련 위치 자료 · 본체 고유 결선 아님",
+        "revision": "Rev1 24.11.11 first draft · DESIGNED J.W.Lee / CHECKED J.H.Kim / APPROVED 공란"
+      }
+    ],
+    "circuit": {
+      "id": "UC01",
+      "equipment": "UC01 본체 고유 전기경로 미확보",
+      "distinction": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다.",
+      "paths": [],
+      "pending": [
+        "현재 UC01 명판·RD01/PV02/MC04 접속 및 승인 기계도",
+        "전용/별칭 PLC·HMI 교차참조 및 현행 프로젝트",
+        "TC03 시공32 FN01 대 시공58 UC01 위치 상충",
+        "8_4 CORE12/9G 상충과 8_5/8_7/8_8 가려진 행 개정자료",
+        "접속함·케이블 심선·양끝단자/현행 준공 자료",
+        "본체 재질·씰·검사 및 승인된 관찰/복구 근거",
+        "RO01~04 최신 미사용 예외 적용; 보존 도면 RO03 위치를 현행 사용으로 단정 안 함",
+        "현재 TIA/CPU/실물/현장복구 미수행; 새 근거 전 반복 검색 안 함",
+        "PSH02 시공32 core2 대 시공58 core4S 상충"
+      ]
+    },
+    "warnings": [
+      "시공 위치와 제어 소유 구분",
+      "위치·심수 상충 및 마스킹 보존",
+      "고유 PLC/전기 경로 미확보"
+    ]
+  },
+  "related_alarm_boundary": "UC01 드럼 배출실의 P&ID 위치와 시공 위치코드를 확인했습니다. 고유 PLC/HMI·알람·타이머·직접 전기 끝점은 미확보입니다. TC03/PSH02/PV02/PV05/PV06 등 주변 설비의 소유를 배정하지 않습니다. 시공32 FN01 대 시공58 UC01 위치·8_4 심수12/9G 상충과 가려진 행을 보존합니다. 관찰 항목은 PLC 신호가 아니며 현재 실물·복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "UC01, 드럼 배출실, 위치 상충, 시공32, 시공58"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "io": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "control": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "circuits": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "alarms": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "repair": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ],
+    "completion": [
+      [
+        "P&ID · PDF1",
+        "sources/PID_1684n002I.pdf#page=1"
+      ],
+      [
+        "시공 · PDF3 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=3"
+      ],
+      [
+        "시공 · PDF5 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=5"
+      ],
+      [
+        "시공 · PDF32 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+      ],
+      [
+        "시공 · PDF58 · UC01 위치",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ]
+  },
+  "supplements": {
+    "circuits": [
+      {
+        "id": "review-uc01-checked-core",
+        "title": "시공58 검토란과 PSH02 심수 상충 보강",
+        "type": "reviewed",
+        "value": {
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "현재 원본 실제 시공 PDF3/5/32/58의 표제란은 DESIGNED J.W.Lee, CHECKED J.H.Kim, APPROVED 공란입니다. 원초안의 CHECKED/APPROVED 모두 공란 서술을 정정하며 원문 바이트는 보존합니다. 검토자 표기는 승인·준공·현재 실물 확인을 뜻하지 않습니다."
+            },
+            {
+              "type": "paragraph",
+              "text": "시공 PDF32 PSH02 행8 core2와 PDF58 케이블8_10 core4S도 상충합니다. TC03 위치 및 8_4 CORE12/9G와 별개로 유지하며 현행 심수를 선정하지 않습니다."
+            }
+          ]
+        },
+        "links": [
+          [
+            "시공58 원본",
+            "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+          ],
+          [
+            "시공32 원본",
+            "sources/Electrical_Can_Decoating_20241118.pdf#page=32"
+          ]
+        ]
+      }
+    ]
+  }
+}

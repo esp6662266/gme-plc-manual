@@ -1,0 +1,11 @@
+{"status":"passed","catalog_profiles":["BF01","BF02","CH01","CM01","CM02","CR01","DP01","DP02","ER01","FN05","LD01","MC03","MC05","MV02","MV05","PC01","PC02","PSH01","PSH02","PSH03","PSL05","PV03","PV05","PV06","PV14","RO01","RO02","SC01","SC10","SC11","SYS-AUTO","SYS-HMI","TC01","TC02","TC03","TC04","TC05","TC06","TC07","TC09","TC10","TC11","UC01","VR01","VR02","VR03","VR04","VR05","VR06","ZT01"],"scope":"catalog identity, original hashes, native call and alarm branches, temperature gate differences, TC10 external endpoints and TC11 PLC evidence unavailable, safe rendering and record preservation; no PLC execution"}
+{"status":"passed","scope":"PV05 exact original pins, original draft, unavailable direct PLC pairs, 6 electrical paths; static only"}
+{"status":"passed","scope":"ZT01 native channel/gates, own 10s versus shared FN01 90min, S/R overlap preserved, construction sheet selection; no execution"}
+{"status":"passed","scope":"PV06 external timed branch and output-word mirror direction; PLC timer count0 not external timer absence"}
+{"status":"passed","scope":"CM01 passive identity and observation records, own PLC/paths unverified; related ownership not imported"}
+{"status":"passed","scope":"CM02 passive identity and observation records, own PLC/paths unverified; related ownership not imported"}
+{"status":"passed","scope":"UC01 location versus ownership, masked rows/cores unresolved, checked versus approved footer correction"}
+{"status":"passed","scope":"PV14 five-request OR, fault clears manual only, own20s alarm, HMI mismatches and source footer correction"}
+{"status":"passed","scope":"CR01 cabinet identity and related common110V evidence, no exclusive ownership assigned"}
+{"status":"passed","scope":"SYS-AUTO software signals, display branch direction, request versus safety/output, TON LRef boundaries"}
+{"status":"passed","scope":"SYS-HMI local/global separation, QW mirror direction, separate Reset requests and TOF, unresolved caller retained"}

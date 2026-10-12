@@ -1,0 +1,2025 @@
+{
+  "catalog_id": "ZT01",
+  "selection_key": "ZT01",
+  "priority_key": null,
+  "type": "vibration_sensor",
+  "draft": "catalog-sources/ZT01-DOTS-DRAFT.md",
+  "draft_sha256": "c3fabd9f9a34ad5433610642f11ad6703bee2065d89703c73865ffa433e761fb",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      1744,
+      "part",
+      "435"
+    ],
+    [
+      1744,
+      "wire",
+      "437"
+    ],
+    [
+      1744,
+      "wire",
+      "29"
+    ],
+    [
+      1744,
+      "wire",
+      "28"
+    ],
+    [
+      1744,
+      "wire",
+      "430"
+    ],
+    [
+      1744,
+      "wire",
+      "431"
+    ],
+    [
+      1744,
+      "wire",
+      "432"
+    ],
+    [
+      1744,
+      "wire",
+      "433"
+    ],
+    [
+      1744,
+      "wire",
+      "434"
+    ],
+    [
+      1744,
+      "wire",
+      "24"
+    ],
+    [
+      1071,
+      "part",
+      "75"
+    ],
+    [
+      1071,
+      "wire",
+      "92"
+    ],
+    [
+      1071,
+      "wire",
+      "94"
+    ],
+    [
+      1071,
+      "wire",
+      "95"
+    ],
+    [
+      1988,
+      "part",
+      "904"
+    ],
+    [
+      1988,
+      "part",
+      "848"
+    ],
+    [
+      1988,
+      "part",
+      "851"
+    ],
+    [
+      1988,
+      "part",
+      "847"
+    ],
+    [
+      1988,
+      "part",
+      "857"
+    ],
+    [
+      1988,
+      "part",
+      "906"
+    ],
+    [
+      1988,
+      "part",
+      "862"
+    ],
+    [
+      1988,
+      "part",
+      "908"
+    ],
+    [
+      1988,
+      "part",
+      "866"
+    ],
+    [
+      1988,
+      "part",
+      "869"
+    ],
+    [
+      1988,
+      "wire",
+      "883"
+    ],
+    [
+      1988,
+      "wire",
+      "905"
+    ],
+    [
+      1988,
+      "wire",
+      "890"
+    ],
+    [
+      1988,
+      "wire",
+      "891"
+    ],
+    [
+      1988,
+      "wire",
+      "892"
+    ],
+    [
+      1988,
+      "wire",
+      "893"
+    ],
+    [
+      1988,
+      "wire",
+      "907"
+    ],
+    [
+      1988,
+      "wire",
+      "909"
+    ],
+    [
+      1988,
+      "wire",
+      "900"
+    ],
+    [
+      1950,
+      "part",
+      "697"
+    ],
+    [
+      1950,
+      "part",
+      "707"
+    ],
+    [
+      1950,
+      "part",
+      "653"
+    ],
+    [
+      1950,
+      "part",
+      "656"
+    ],
+    [
+      1950,
+      "part",
+      "705"
+    ],
+    [
+      1950,
+      "part",
+      "661"
+    ],
+    [
+      1950,
+      "wire",
+      "677"
+    ],
+    [
+      1950,
+      "wire",
+      "698"
+    ],
+    [
+      1950,
+      "wire",
+      "683"
+    ],
+    [
+      1950,
+      "wire",
+      "685"
+    ],
+    [
+      1950,
+      "wire",
+      "686"
+    ],
+    [
+      1950,
+      "wire",
+      "687"
+    ],
+    [
+      1950,
+      "wire",
+      "27"
+    ],
+    [
+      1950,
+      "wire",
+      "689"
+    ],
+    [
+      1951,
+      "part",
+      "720"
+    ],
+    [
+      1951,
+      "part",
+      "676"
+    ],
+    [
+      1951,
+      "part",
+      "685"
+    ],
+    [
+      1951,
+      "part",
+      "726"
+    ],
+    [
+      1951,
+      "part",
+      "689"
+    ],
+    [
+      1951,
+      "wire",
+      "705"
+    ],
+    [
+      1951,
+      "wire",
+      "721"
+    ],
+    [
+      1951,
+      "wire",
+      "709"
+    ],
+    [
+      1951,
+      "wire",
+      "711"
+    ],
+    [
+      1951,
+      "wire",
+      "727"
+    ],
+    [
+      1951,
+      "wire",
+      "714"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "원시 입력",
+      "network": 1744,
+      "kind": "wire",
+      "uid": "431",
+      "label": "IW282:P→Analog_input",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "환산 결과",
+      "network": 1744,
+      "kind": "wire",
+      "uid": "434",
+      "label": "OutValue→DB1W192",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "원시 미러",
+      "network": 1071,
+      "kind": "wire",
+      "uid": "95",
+      "label": "Move75→DB13W46",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "경보 Set",
+      "network": 1988,
+      "kind": "wire",
+      "uid": "907",
+      "label": "T123→Set862",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "경보 Reset",
+      "network": 1988,
+      "kind": "wire",
+      "uid": "900",
+      "label": "W192<380→Reset869",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "FN01 공유 예경보",
+      "network": 1950,
+      "kind": "wire",
+      "uid": "683",
+      "label": "OR707→공통 예경보/타이머",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "FN01 요청 Reset",
+      "network": 1951,
+      "kind": "wire",
+      "uid": "709",
+      "label": "OR676→RCoil685",
+      "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "signal": "모듈 원시 입력",
+      "network": 1744,
+      "kind": "wire",
+      "uid": "431",
+      "label": "PEW282 채널→IW282:P 원시 Analog_input",
+      "boundary": "전기 단자는 원시 입력이고 DB1W192는 함수의 별도 소프트웨어 환산 출력입니다."
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0602-IdentXmlPart.xml",
+    "sources/decoded-original/0603-IdentXmlPart.xml",
+    "sources/decoded-original/0604-IdentXmlPart.xml",
+    "sources/decoded-original/0605-IdentXmlPart.xml",
+    "sources/decoded-original/0606-IdentXmlPart.xml",
+    "sources/decoded-original/0627-IdentXmlPart.xml",
+    "sources/decoded-original/0628-IdentXmlPart.xml",
+    "sources/decoded-original/0629-IdentXmlPart.xml",
+    "sources/decoded-original/0672-IdentXmlPart.xml",
+    "sources/decoded-original/0674-IdentXmlPart.xml",
+    "sources/decoded-original/0676-IdentXmlPart.xml",
+    "sources/decoded-original/0678-IdentXmlPart.xml",
+    "sources/decoded-original/0680-IdentXmlPart.xml",
+    "sources/decoded-original/0682-IdentXmlPart.xml",
+    "sources/decoded-original/0684-IdentXmlPart.xml",
+    "sources/decoded-original/0686-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "ZT01",
+    "signals": [
+      {
+        "id": "raw-p",
+        "role": "raw_inputs",
+        "name": "ZT01 주변장치 Int",
+        "addresses": [
+          "%IW282:P"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "424",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "raw-i",
+        "role": "raw_inputs",
+        "name": "ZT01 일반 Int",
+        "addresses": [
+          "%IW282"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "82",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.ZT_01 Word 미러",
+        "addresses": [
+          "DB13.DBW46"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "83",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "value",
+        "role": "responses",
+        "name": "Data.ZT_01 환산 Int",
+        "addresses": [
+          "DB1.DBW192"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "427",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "ZERO_ZT01 · 현행 미확정",
+        "addresses": [
+          "DB4.DBW32"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "426",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "COEFF_ZT01 · 현행 미확정",
+        "addresses": [
+          "DB4.DBW34"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "425",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 호출 EN",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "30",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 내부 IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "423",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "ofr",
+        "role": "responses",
+        "name": "ZT01_OFR · 일반 Coil",
+        "addresses": [
+          "DB3.DBX21.7"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "23",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "vibration",
+        "role": "alarms",
+        "name": "ZT01_FN01_Vibration",
+        "addresses": [
+          "DB3.DBX9.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1988,
+            "oref": "878",
+            "source": "sources/decoded-original/0536-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t123",
+        "role": "timers",
+        "name": "Tag_110 · 고유10초",
+        "addresses": [
+          "%T123"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1988,
+            "oref": "876",
+            "source": "sources/decoded-original/0536-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "prealarm",
+        "role": "responses",
+        "name": "FN01 공유 예경보",
+        "addresses": [
+          "DB3.DBX17.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "669",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "t130",
+        "role": "timers",
+        "name": "Tag_122 · FN01 공유90분",
+        "addresses": [
+          "%T130"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "671",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "local-stop",
+        "role": "responses",
+        "name": "Stop_Fan_FN01 · Local Bool BO2 (전역 주소 없음)",
+        "addresses": [],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "673",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "fn-request",
+        "role": "requests",
+        "name": "Flag.M_FN_01 · FN01 소유",
+        "addresses": [
+          "DB2.DBX1.2"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1951,
+            "oref": "697",
+            "source": "sources/decoded-original/0253-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "fn-output",
+        "role": "outputs",
+        "name": "Start FN01 · FN01 소유",
+        "addresses": [
+          "%Q2.7"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1951,
+            "oref": "699",
+            "source": "sources/decoded-original/0253-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "ZT01",
+    "timers": [
+      {
+        "network": 1988,
+        "uid": "857",
+        "name": "Tag_110 · ZT01",
+        "address": "%T123",
+        "preset": "S5T#10S",
+        "condition": "OFF AND (Data>400 OR Data<−800)"
+      },
+      {
+        "network": 1950,
+        "uid": "656",
+        "name": "Tag_122 · FN01 공유",
+        "address": "%T130",
+        "preset": "S5T#1H_30M",
+        "condition": "ON AND FN01 공통 예경보 OR"
+      }
+    ],
+    "alarms": [
+      {
+        "name": "ZT01_FN01_Vibration",
+        "address": "DB3.DBX9.0",
+        "actions": [
+          {
+            "network": 1988,
+            "uid": "862",
+            "gate": "SCoil",
+            "condition": "OFF AND 범위조건 AND T123"
+          },
+          {
+            "network": 1988,
+            "uid": "869",
+            "gate": "RCoil",
+            "condition": "OFF AND 기존경보 AND 값<380; 저값에서 Set과 중첩"
+          }
+        ]
+      },
+      {
+        "name": "ZT01_OFR",
+        "address": "DB3.DBX21.7",
+        "actions": [
+          {
+            "network": 1658,
+            "uid": "23",
+            "gate": "Coil",
+            "condition": "범위외 Move193.eno · 현재 결과 미확정"
+          }
+        ]
+      }
+    ]
+  },
+  "control_reference": {
+    "native": [
+      1744,
+      1071,
+      1988,
+      1950,
+      1951
+    ],
+    "chain": [
+      "OFF 외부 EN / ON 내부 IN0 → Int 환산 → DB1W192",
+      "일반 IW282 → Word46 미러",
+      "고유 T123 경보 → FN01 공유 OR/T130 → Local Stop → FN01 요청 Reset"
+    ],
+    "repair": [
+      "IW282:P·IW282·Word46·W192 시각과 값",
+      "OFF·W192·T123·X9.0의 동일시각 관찰",
+      "ZT 경보·FN01 예경보·T130·Local Stop·Flag·Q2.7",
+      "명판·X1:229~231·26/28·8_9/8_24 표찰"
+    ],
+    "pending": [
+      "OEM FG82/107 SPARE와 시공 FN01/UC01 현재 설치·사용 대응",
+      "X1:229/230/231와 단자26/28의 현행 배선 및 심선 대응",
+      "4–20mA·0/1000Hz 인쇄와 PLC 환산 공학단위·교정 자료",
+      "OFF/ON 현재 값·최종 Writer·호출 순서 및 ENO 결과",
+      "T123 고유10초와 FN01 공유90분 정지 경로의 현재 적용",
+      "저값 영역 Set/Reset 동시 성립과 실제 알람 상태",
+      "HMI 설정6행과 실제 화면/쓰기 권한·OFR 표시",
+      "현재 CPU·TIA·실물·현장복구 미수행"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "ZT01",
+    "boundary": "source_linked; physical identity unverified",
+    "existing_notes": [
+      "문서와 현재 실물·CPU·현장복구 구분"
+    ],
+    "existing_pending": [
+      "OEM FG82/107 SPARE와 시공 FN01/UC01 현재 설치·사용 대응",
+      "X1:229/230/231와 단자26/28의 현행 배선 및 심선 대응",
+      "4–20mA·0/1000Hz 인쇄와 PLC 환산 공학단위·교정 자료",
+      "OFF/ON 현재 값·최종 Writer·호출 순서 및 ENO 결과",
+      "T123 고유10초와 FN01 공유90분 정지 경로의 현재 적용",
+      "저값 영역 Set/Reset 동시 성립과 실제 알람 상태",
+      "HMI 설정6행과 실제 화면/쓰기 권한·OFR 표시",
+      "현재 CPU·TIA·실물·현장복구 미수행"
+    ],
+    "existing_review": []
+  },
+  "repair": {
+    "key": "ZT01",
+    "plc_id": "ZT01",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "원시/환산 불일치",
+        "observe": "IW282:P·IW282·Word46·W192 시각과 값",
+        "compare": "접근 방식·Word/Int·계수·ENO를 분리",
+        "next": "현행 프로젝트와 교정 자료",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "진동 경보 상태 불일치",
+        "observe": "OFF·W192·T123·X9.0의 동일시각 관찰",
+        "compare": ">400 또는 <-800 Set 및 <380 Reset 중첩",
+        "next": "승인된 기존 관찰자료",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "팬 정지 원인 구분",
+        "observe": "ZT 경보·FN01 예경보·T130·Local Stop·Flag·Q2.7",
+        "compare": "다른 예경보 OR와 고유10초/공통90분 구분",
+        "next": "FN01 원본 및 현재 실행 자료",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "SPARE/시공 위치 상충",
+        "observe": "명판·X1:229~231·26/28·8_9/8_24 표찰",
+        "compare": "OEM SPARE·UC01·FN01을 임의 동일시하지 않음",
+        "next": "현물 식별과 준공 도면",
+        "common": "step-symptom-4"
+      }
+    ],
+    "signals": [
+      {
+        "id": "raw-p",
+        "role": "raw_inputs",
+        "name": "ZT01 주변장치 Int",
+        "addresses": [
+          "%IW282:P"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "424",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "raw-i",
+        "role": "raw_inputs",
+        "name": "ZT01 일반 Int",
+        "addresses": [
+          "%IW282"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "82",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.ZT_01 Word 미러",
+        "addresses": [
+          "DB13.DBW46"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "83",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "value",
+        "role": "responses",
+        "name": "Data.ZT_01 환산 Int",
+        "addresses": [
+          "DB1.DBW192"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "427",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "ZERO_ZT01 · 현행 미확정",
+        "addresses": [
+          "DB4.DBW32"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "426",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "COEFF_ZT01 · 현행 미확정",
+        "addresses": [
+          "DB4.DBW34"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "425",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 호출 EN",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "30",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 내부 IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "423",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "responses",
+        "name": "ZT01_OFR · 일반 Coil",
+        "addresses": [
+          "DB3.DBX21.7"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "23",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "vibration",
+        "role": "alarms",
+        "name": "ZT01_FN01_Vibration",
+        "addresses": [
+          "DB3.DBX9.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1988,
+            "oref": "878",
+            "source": "sources/decoded-original/0536-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t123",
+        "role": "timers",
+        "name": "Tag_110 · 고유10초",
+        "addresses": [
+          "%T123"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1988,
+            "oref": "876",
+            "source": "sources/decoded-original/0536-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "prealarm",
+        "role": "responses",
+        "name": "FN01 공유 예경보",
+        "addresses": [
+          "DB3.DBX17.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "669",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t130",
+        "role": "timers",
+        "name": "Tag_122 · FN01 공유90분",
+        "addresses": [
+          "%T130"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "671",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-stop",
+        "role": "responses",
+        "name": "Stop_Fan_FN01 · Local Bool BO2 (전역 주소 없음)",
+        "addresses": [],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "673",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fn-request",
+        "role": "requests",
+        "name": "Flag.M_FN_01 · FN01 소유",
+        "addresses": [
+          "DB2.DBX1.2"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1951,
+            "oref": "697",
+            "source": "sources/decoded-original/0253-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fn-output",
+        "role": "outputs",
+        "name": "Start FN01 · FN01 소유",
+        "addresses": [
+          "%Q2.7"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1951,
+            "oref": "699",
+            "source": "sources/decoded-original/0253-FlgNet.xml"
+          }
+        ]
+      }
+    ]
+  },
+  "record_form": {
+    "key": "ZT01",
+    "name": "ZT01 진동 계측 관찰",
+    "reference_plc_id": "ZT01",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "raw-p",
+        "role": "raw_inputs",
+        "name": "ZT01 주변장치 Int",
+        "addresses": [
+          "%IW282:P"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "424",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "raw-i",
+        "role": "raw_inputs",
+        "name": "ZT01 일반 Int",
+        "addresses": [
+          "%IW282"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "82",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror",
+        "role": "responses",
+        "name": "Inputs.ZT_01 Word 미러",
+        "addresses": [
+          "DB13.DBW46"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1071,
+            "oref": "83",
+            "source": "sources/decoded-original/0398-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "value",
+        "role": "responses",
+        "name": "Data.ZT_01 환산 Int",
+        "addresses": [
+          "DB1.DBW192"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "427",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "role": "requests",
+        "name": "ZERO_ZT01 · 현행 미확정",
+        "addresses": [
+          "DB4.DBW32"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "426",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "coeff",
+        "role": "requests",
+        "name": "COEFF_ZT01 · 현행 미확정",
+        "addresses": [
+          "DB4.DBW34"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "425",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "role": "requests",
+        "name": "OFF · 호출 EN",
+        "addresses": [
+          "%M0.1"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "30",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "role": "requests",
+        "name": "ON · 내부 IN0",
+        "addresses": [
+          "%M0.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "423",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "ofr",
+        "role": "responses",
+        "name": "ZT01_OFR · 일반 Coil",
+        "addresses": [
+          "DB3.DBX21.7"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1744,
+            "oref": "23",
+            "source": "sources/decoded-original/0494-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "vibration",
+        "role": "alarms",
+        "name": "ZT01_FN01_Vibration",
+        "addresses": [
+          "DB3.DBX9.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1988,
+            "oref": "878",
+            "source": "sources/decoded-original/0536-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t123",
+        "role": "timers",
+        "name": "Tag_110 · 고유10초",
+        "addresses": [
+          "%T123"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1988,
+            "oref": "876",
+            "source": "sources/decoded-original/0536-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "prealarm",
+        "role": "responses",
+        "name": "FN01 공유 예경보",
+        "addresses": [
+          "DB3.DBX17.0"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "669",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "t130",
+        "role": "timers",
+        "name": "Tag_122 · FN01 공유90분",
+        "addresses": [
+          "%T130"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "671",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-stop",
+        "role": "responses",
+        "name": "Stop_Fan_FN01 · Local Bool BO2 (전역 주소 없음)",
+        "addresses": [],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1950,
+            "oref": "673",
+            "source": "sources/decoded-original/0252-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fn-request",
+        "role": "requests",
+        "name": "Flag.M_FN_01 · FN01 소유",
+        "addresses": [
+          "DB2.DBX1.2"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1951,
+            "oref": "697",
+            "source": "sources/decoded-original/0253-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "fn-output",
+        "role": "outputs",
+        "name": "Start FN01 · FN01 소유",
+        "addresses": [
+          "%Q2.7"
+        ],
+        "boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1951,
+            "oref": "699",
+            "source": "sources/decoded-original/0253-FlgNet.xml"
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "원시/환산 불일치",
+        "observe": "IW282:P·IW282·Word46·W192 시각과 값",
+        "compare": "접근 방식·Word/Int·계수·ENO를 분리",
+        "next": "현행 프로젝트와 교정 자료",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "진동 경보 상태 불일치",
+        "observe": "OFF·W192·T123·X9.0의 동일시각 관찰",
+        "compare": ">400 또는 <-800 Set 및 <380 Reset 중첩",
+        "next": "승인된 기존 관찰자료",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "팬 정지 원인 구분",
+        "observe": "ZT 경보·FN01 예경보·T130·Local Stop·Flag·Q2.7",
+        "compare": "다른 예경보 OR와 고유10초/공통90분 구분",
+        "next": "FN01 원본 및 현재 실행 자료",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "SPARE/시공 위치 상충",
+        "observe": "명판·X1:229~231·26/28·8_9/8_24 표찰",
+        "compare": "OEM SPARE·UC01·FN01을 임의 동일시하지 않음",
+        "next": "현물 식별과 준공 도면",
+        "common": "step-symptom-4"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "ZT01 고유 원본과 FN01 공유 소유 구분",
+      "sources": {
+        "catalog-sources/ZT01-DOTS-DRAFT.md": "c3fabd9f9a34ad5433610642f11ad6703bee2065d89703c73865ffa433e761fb"
+      },
+      "circuit_equipment": "ZT01 진동 계측 · 실물 미확정",
+      "circuit_distinction": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG82 · PDF83",
+          "path": "sources/Electrical_Rev2.pdf#page=83"
+        },
+        {
+          "label": "FG107 · PDF108",
+          "path": "sources/Electrical_Rev2.pdf#page=108"
+        }
+      ],
+      "construction_boundary": "OEM SPARE/시공 UC01·FN01 및 심선 대응 미확정",
+      "construction_pages": [
+        {
+          "label": "시공 · PDF33",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=33"
+        },
+        {
+          "label": "시공 · PDF58",
+          "path": "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+        }
+      ],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "OEM FG82/107 SPARE와 시공 FN01/UC01 현재 설치·사용 대응"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "1744",
+            "path": "networks/network-1744.html"
+          },
+          {
+            "label": "1071",
+            "path": "networks/network-1071.html"
+          },
+          {
+            "label": "1988",
+            "path": "networks/network-1988.html"
+          },
+          {
+            "label": "1950",
+            "path": "networks/network-1950.html"
+          },
+          {
+            "label": "1951",
+            "path": "networks/network-1951.html"
+          },
+          {
+            "label": "1658",
+            "path": "networks/network-1658.html"
+          },
+          {
+            "label": "1659",
+            "path": "networks/network-1659.html"
+          },
+          {
+            "label": "403",
+            "path": "networks/network-403.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "IW282:P·IW282·Word46·W192 시각과 값"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현행 프로젝트와 교정 자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1744",
+              "path": "networks/network-1744.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1988",
+              "path": "networks/network-1988.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1951",
+              "path": "networks/network-1951.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "OFF·W192·T123·X9.0의 동일시각 관찰"
+            },
+            {
+              "owner": "현재자료",
+              "work": "승인된 기존 관찰자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1744",
+              "path": "networks/network-1744.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1988",
+              "path": "networks/network-1988.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1951",
+              "path": "networks/network-1951.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "ZT 경보·FN01 예경보·T130·Local Stop·Flag·Q2.7"
+            },
+            {
+              "owner": "현재자료",
+              "work": "FN01 원본 및 현재 실행 자료"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1744",
+              "path": "networks/network-1744.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1988",
+              "path": "networks/network-1988.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1951",
+              "path": "networks/network-1951.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "명판·X1:229~231·26/28·8_9/8_24 표찰"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현물 식별과 준공 도면"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "1744",
+              "path": "networks/network-1744.html"
+            },
+            {
+              "label": "1071",
+              "path": "networks/network-1071.html"
+            },
+            {
+              "label": "1988",
+              "path": "networks/network-1988.html"
+            },
+            {
+              "label": "1950",
+              "path": "networks/network-1950.html"
+            },
+            {
+              "label": "1951",
+              "path": "networks/network-1951.html"
+            },
+            {
+              "label": "1658",
+              "path": "networks/network-1658.html"
+            },
+            {
+              "label": "1659",
+              "path": "networks/network-1659.html"
+            },
+            {
+              "label": "403",
+              "path": "networks/network-403.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "ZT01",
+    "plc_id": "ZT01",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "oem-82",
+        "kind": "OEM 전기",
+        "title": "FG82 · PDF83",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 83,
+        "fg": 82,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P083.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물 미확정",
+        "revision": "Rev2 17.03.2025"
+      },
+      {
+        "id": "oem-107",
+        "kind": "OEM 전기",
+        "title": "FG107 · PDF108",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 108,
+        "fg": 107,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P108.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물 미확정",
+        "revision": "Rev2 17.03.2025"
+      },
+      {
+        "id": "construction-33",
+        "kind": "시공·케이블",
+        "title": "시공 · PDF33",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 33,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P033.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물 미확정",
+        "revision": "Rev1 24.11.11 first draft"
+      },
+      {
+        "id": "construction-58",
+        "kind": "시공·케이블",
+        "title": "시공 · PDF58",
+        "source": "sources/Electrical_Can_Decoating_20241118.pdf",
+        "page": 58,
+        "fg": null,
+        "image": "assets/catalog-circuits/Electrical_Can_Decoating_20241118-P058.png",
+        "extent": "원본 전체 페이지",
+        "status": "보존 설계 · 현행 실물 미확정",
+        "revision": "Rev1 24.11.11 first draft"
+      }
+    ],
+    "circuit": {
+      "id": "ZT01",
+      "equipment": "ZT01 · SPARE/시공 상충",
+      "distinction": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+      "paths": [
+        {
+          "signal": "원시 입력",
+          "fg": 82,
+          "sheet_id": "oem-82",
+          "drawing": "+24Vdc10.7(79/9)→X1:229 50mAF→82.1→ZT01+ → ZT01−→X1:230→PEW282 107/2 → SLD723C 4–20mA/0..1000Hz 인쇄",
+          "backup": "ZT01 독립 원본",
+          "nodes": [
+            "+24Vdc10.7(79/9)→X1:229 50mAF→82.1→ZT01+",
+            "ZT01−→X1:230→PEW282 107/2",
+            "SLD723C 4–20mA/0..1000Hz 인쇄"
+          ],
+          "destination": "보존 끝점 · 현행 자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1744,
+              "uid": "424"
+            }
+          ],
+          "check": "SPARE · 현행 사용/공학단위 미확정"
+        },
+        {
+          "signal": "모듈 원시 입력",
+          "fg": 107,
+          "sheet_id": "oem-107",
+          "drawing": "82/2 PEW282→단자26 I5+ → 단자28 U5−/I5−→0Vdc10.6 → 25/27 해당 신호 미연결 · MOD3 공급41 L+/44 M",
+          "backup": "ZT01 독립 원본",
+          "nodes": [
+            "82/2 PEW282→단자26 I5+",
+            "단자28 U5−/I5−→0Vdc10.6",
+            "25/27 해당 신호 미연결 · MOD3 공급41 L+/44 M"
+          ],
+          "destination": "보존 끝점 · 현행 자료 별도",
+          "native_symbol_references": [
+            {
+              "network": 1744,
+              "uid": "424"
+            }
+          ],
+          "check": "OEM 모듈 표기는 현행 모델 증거 아님"
+        },
+        {
+          "signal": "차폐",
+          "fg": 82,
+          "sheet_id": "oem-82",
+          "drawing": "센서 shield→X1:231 → 82SCH1→FG107 차폐기호",
+          "backup": "ZT01 독립 원본",
+          "nodes": [
+            "센서 shield→X1:231",
+            "82SCH1→FG107 차폐기호"
+          ],
+          "destination": "보존 끝점 · 현행 자료 별도",
+          "native_symbol_references": [],
+          "check": "차폐와 신호 음극 분리 · PLC 직접 결속 대상 아님",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "차폐와 신호 음극 분리 · PLC 직접 결속 대상 아님"
+        },
+        {
+          "signal": "시공 후보",
+          "fg": null,
+          "sheet_id": "construction-58",
+          "drawing": "8_9 CR→UC01/FLO4TB1 · ZT01 · CVV-S4S1.0 → 8_24 FN01/FLO4TB1→FN01/ZT01 · CVV-S4S1.0 → 시공33 18번 Pipe16 루트",
+          "backup": "ZT01 독립 원본",
+          "nodes": [
+            "8_9 CR→UC01/FLO4TB1 · ZT01 · CVV-S4S1.0",
+            "8_24 FN01/FLO4TB1→FN01/ZT01 · CVV-S4S1.0",
+            "시공33 18번 Pipe16 루트"
+          ],
+          "destination": "보존 끝점 · 현행 자료 별도",
+          "native_symbol_references": [],
+          "check": "OEM 심선 대응 미확보 · 위치 상충 유지",
+          "source_pair_status": "not_identified",
+          "source_pair_boundary": "OEM 심선 대응 미확보 · 위치 상충 유지"
+        }
+      ],
+      "pending": [
+        "OEM FG82/107 SPARE와 시공 FN01/UC01 현재 설치·사용 대응",
+        "X1:229/230/231와 단자26/28의 현행 배선 및 심선 대응",
+        "4–20mA·0/1000Hz 인쇄와 PLC 환산 공학단위·교정 자료",
+        "OFF/ON 현재 값·최종 Writer·호출 순서 및 ENO 결과",
+        "T123 고유10초와 FN01 공유90분 정지 경로의 현재 적용",
+        "저값 영역 Set/Reset 동시 성립과 실제 알람 상태",
+        "HMI 설정6행과 실제 화면/쓰기 권한·OFR 표시",
+        "현재 CPU·TIA·실물·현장복구 미수행"
+      ]
+    },
+    "warnings": [
+      "OEM SPARE와 시공 위치 상충",
+      "T130은 FN01 공유 소유",
+      "저값 Set/Reset 중첩"
+    ]
+  },
+  "related_alarm_boundary": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "ZT01, IW282, DB1.DBW192, T123, T130, FN01"
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "ZT01는 OEM SPARE와 시공 FN01/UC01 위치가 상충합니다. IW282:P 환산과 일반 IW282→DB13 Word46을 분리하고, OFF 호출 EN과 ON IN0를 상수로 보지 않습니다. 고유 T123 10초와 FN01 공통 T130 90분을 구분합니다. 저값 Set/Reset 조건은 겹치며 현재 단위·계수·CPU·실물·현장복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "OEM FG82/107 SPARE와 시공 FN01/UC01 현재 설치·사용 대응",
+        "X1:229/230/231와 단자26/28의 현행 배선 및 심선 대응",
+        "4–20mA·0/1000Hz 인쇄와 PLC 환산 공학단위·교정 자료",
+        "OFF/ON 현재 값·최종 Writer·호출 순서 및 ENO 결과",
+        "T123 고유10초와 FN01 공유90분 정지 경로의 현재 적용",
+        "저값 영역 Set/Reset 동시 성립과 실제 알람 상태",
+        "HMI 설정6행과 실제 화면/쓰기 권한·OFR 표시",
+        "현재 CPU·TIA·실물·현장복구 미수행"
+      ]
+    }
+  ],
+  "section_sources": {
+    "overview": [
+      [
+        "1744",
+        "networks/network-1744.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1988",
+        "networks/network-1988.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1951",
+        "networks/network-1951.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "io": [
+      [
+        "1744",
+        "networks/network-1744.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1988",
+        "networks/network-1988.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1951",
+        "networks/network-1951.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "control": [
+      [
+        "1744",
+        "networks/network-1744.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1988",
+        "networks/network-1988.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1951",
+        "networks/network-1951.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "alarms": [
+      [
+        "1744",
+        "networks/network-1744.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1988",
+        "networks/network-1988.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1951",
+        "networks/network-1951.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "repair": [
+      [
+        "1744",
+        "networks/network-1744.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1988",
+        "networks/network-1988.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1951",
+        "networks/network-1951.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "completion": [
+      [
+        "1744",
+        "networks/network-1744.html"
+      ],
+      [
+        "1071",
+        "networks/network-1071.html"
+      ],
+      [
+        "1988",
+        "networks/network-1988.html"
+      ],
+      [
+        "1950",
+        "networks/network-1950.html"
+      ],
+      [
+        "1951",
+        "networks/network-1951.html"
+      ],
+      [
+        "1658",
+        "networks/network-1658.html"
+      ],
+      [
+        "1659",
+        "networks/network-1659.html"
+      ],
+      [
+        "403",
+        "networks/network-403.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG82 · PDF83",
+        "sources/Electrical_Rev2.pdf#page=83"
+      ],
+      [
+        "FG107 · PDF108",
+        "sources/Electrical_Rev2.pdf#page=108"
+      ],
+      [
+        "시공 · PDF33",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=33"
+      ],
+      [
+        "시공 · PDF58",
+        "sources/Electrical_Can_Decoating_20241118.pdf#page=58"
+      ]
+    ]
+  }
+}

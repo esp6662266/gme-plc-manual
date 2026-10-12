@@ -1,0 +1,1703 @@
+{
+  "catalog_id": "SYS-HMI",
+  "selection_key": "SYS-HMI",
+  "priority_key": null,
+  "type": "software",
+  "draft": "catalog-sources/SYS-HMI-DOTS-DRAFT.md",
+  "draft_sha256": "7a8a3180682d8a4fc62ec8b8f41bfed7797e99133d34e909601b0eec15dba1f2",
+  "section_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "extra_locations": [
+    [
+      331,
+      "part",
+      "23"
+    ],
+    [
+      331,
+      "part",
+      "27"
+    ],
+    [
+      331,
+      "part",
+      "33"
+    ],
+    [
+      331,
+      "part",
+      "36"
+    ],
+    [
+      331,
+      "part",
+      "39"
+    ],
+    [
+      331,
+      "part",
+      "46"
+    ],
+    [
+      331,
+      "part",
+      "30"
+    ],
+    [
+      331,
+      "part",
+      "41"
+    ],
+    [
+      331,
+      "part",
+      "59"
+    ],
+    [
+      331,
+      "wire",
+      "22"
+    ],
+    [
+      331,
+      "wire",
+      "25"
+    ],
+    [
+      331,
+      "wire",
+      "26"
+    ],
+    [
+      331,
+      "wire",
+      "42"
+    ],
+    [
+      331,
+      "wire",
+      "43"
+    ],
+    [
+      331,
+      "wire",
+      "44"
+    ],
+    [
+      331,
+      "wire",
+      "48"
+    ],
+    [
+      331,
+      "wire",
+      "49"
+    ],
+    [
+      331,
+      "wire",
+      "57"
+    ],
+    [
+      331,
+      "wire",
+      "58"
+    ],
+    [
+      1178,
+      "wire",
+      "21"
+    ],
+    [
+      1178,
+      "wire",
+      "24"
+    ],
+    [
+      1178,
+      "wire",
+      "28"
+    ],
+    [
+      1178,
+      "wire",
+      "30"
+    ],
+    [
+      1178,
+      "wire",
+      "32"
+    ],
+    [
+      1178,
+      "wire",
+      "34"
+    ],
+    [
+      1178,
+      "wire",
+      "45"
+    ],
+    [
+      1178,
+      "wire",
+      "36"
+    ],
+    [
+      1178,
+      "wire",
+      "40"
+    ],
+    [
+      356,
+      "part",
+      "22"
+    ],
+    [
+      356,
+      "part",
+      "32"
+    ],
+    [
+      356,
+      "part",
+      "85"
+    ],
+    [
+      356,
+      "wire",
+      "56"
+    ],
+    [
+      356,
+      "wire",
+      "58"
+    ],
+    [
+      356,
+      "wire",
+      "57"
+    ],
+    [
+      356,
+      "wire",
+      "83"
+    ],
+    [
+      356,
+      "wire",
+      "84"
+    ],
+    [
+      356,
+      "wire",
+      "87"
+    ],
+    [
+      356,
+      "wire",
+      "88"
+    ],
+    [
+      930,
+      "part",
+      "23"
+    ],
+    [
+      930,
+      "part",
+      "26"
+    ],
+    [
+      930,
+      "part",
+      "28"
+    ],
+    [
+      930,
+      "part",
+      "33"
+    ],
+    [
+      930,
+      "part",
+      "40"
+    ],
+    [
+      930,
+      "part",
+      "48"
+    ],
+    [
+      930,
+      "part",
+      "60"
+    ],
+    [
+      930,
+      "wire",
+      "22"
+    ],
+    [
+      930,
+      "wire",
+      "25"
+    ],
+    [
+      930,
+      "wire",
+      "29"
+    ],
+    [
+      930,
+      "wire",
+      "30"
+    ],
+    [
+      930,
+      "wire",
+      "38"
+    ],
+    [
+      930,
+      "wire",
+      "36"
+    ],
+    [
+      930,
+      "wire",
+      "42"
+    ],
+    [
+      930,
+      "wire",
+      "67"
+    ],
+    [
+      930,
+      "wire",
+      "77"
+    ],
+    [
+      930,
+      "wire",
+      "68"
+    ],
+    [
+      930,
+      "wire",
+      "78"
+    ],
+    [
+      1841,
+      "part",
+      "90"
+    ],
+    [
+      1841,
+      "part",
+      "92"
+    ],
+    [
+      1841,
+      "wire",
+      "91"
+    ],
+    [
+      1841,
+      "wire",
+      "93"
+    ]
+  ],
+  "internal_names": [],
+  "source_pairs": [
+    {
+      "signal": "Local 응답",
+      "network": 331,
+      "kind": "wire",
+      "uid": "25",
+      "label": "입력 접점→Local 응답 Coil",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "Local 누적표시",
+      "network": 331,
+      "kind": "wire",
+      "uid": "57",
+      "label": "다섯 알람 OR→Coil59",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "호출 미결속 경계",
+      "network": 1178,
+      "kind": "wire",
+      "uid": "36",
+      "label": "Risposta→ORef37 미결속",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "출력 Word20 미러",
+      "network": 356,
+      "kind": "wire",
+      "uid": "84",
+      "label": "QW20→DB14W20",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "출력 Word22 미러",
+      "network": 356,
+      "kind": "wire",
+      "uid": "88",
+      "label": "QW22→DB14W22",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "HMI Reset 소비",
+      "network": 930,
+      "kind": "wire",
+      "uid": "38",
+      "label": "OR→내부S/HMI요청R/TOF IN",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "TOF DB36",
+      "network": 930,
+      "kind": "wire",
+      "uid": "67",
+      "label": "LRef64.Q→Q7.4 Coil",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "signal": "TOF DB37",
+      "network": 930,
+      "kind": "wire",
+      "uid": "77",
+      "label": "LRef73.Q→Q7.5 Coil",
+      "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    }
+  ],
+  "extra_sources": [
+    "sources/decoded-original/0064-IdentXmlPart.xml",
+    "sources/decoded-original/0564-IdentXmlPart.xml",
+    "sources/decoded-original/0565-IdentXmlPart.xml",
+    "sources/decoded-original/0566-IdentXmlPart.xml",
+    "sources/decoded-original/0567-IdentXmlPart.xml",
+    "sources/decoded-original/0568-IdentXmlPart.xml",
+    "sources/decoded-original/0569-IdentXmlPart.xml",
+    "sources/decoded-original/0575-IdentXmlPart.xml",
+    "sources/decoded-original/0576-IdentXmlPart.xml",
+    "sources/decoded-original/0577-IdentXmlPart.xml",
+    "sources/decoded-original/0578-IdentXmlPart.xml",
+    "sources/decoded-original/0621-IdentXmlPart.xml",
+    "sources/decoded-original/0623-IdentXmlPart.xml",
+    "sources/decoded-original/0624-IdentXmlPart.xml",
+    "sources/decoded-original/0632-IdentXmlPart.xml",
+    "sources/decoded-original/0633-IdentXmlPart.xml"
+  ],
+  "signal_reference": {
+    "id": "SYS-HMI",
+    "signals": [
+      {
+        "id": "hmi-reset",
+        "role": "requests",
+        "name": "Reset_Allarms_HMI",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "27",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "internal-reset",
+        "role": "requests",
+        "name": "RESET_ALLARM 내부",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "37",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "physical-reset",
+        "role": "responses",
+        "name": "처리 Reset_allarmi 입력",
+        "addresses": [
+          "DB13.DBX19.7"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "24",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset-out1",
+        "role": "outputs",
+        "name": "공통 Reset 출력103A7",
+        "addresses": [
+          "%Q7.4"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "63",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "reset-out2",
+        "role": "outputs",
+        "name": "Reset_Inverter 공통 출력",
+        "addresses": [
+          "%Q7.5"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "55",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "out0",
+        "role": "responses",
+        "name": "출력 프로세스 이미지 Word0",
+        "addresses": [
+          "%QW0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "33",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror0",
+        "role": "responses",
+        "name": "Output Word0",
+        "addresses": [
+          "DB14.DBW0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "34",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "out20",
+        "role": "responses",
+        "name": "출력 Word20",
+        "addresses": [
+          "%QW20"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "53",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror20",
+        "role": "responses",
+        "name": "I_W20/O_W20 공통주소",
+        "addresses": [
+          "DB14.DBW20"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "54",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "out22",
+        "role": "responses",
+        "name": "출력 Word22",
+        "addresses": [
+          "%QW22"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "89",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "mirror22",
+        "role": "responses",
+        "name": "I_W22/O_W22 공통주소",
+        "addresses": [
+          "DB14.DBW22"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "90",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "local-run",
+        "role": "responses",
+        "name": "Local Ingresso_run · 호출자 주소 미결속",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "24",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "local-response",
+        "role": "responses",
+        "name": "Local Risposta",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "28",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "local-alarm",
+        "role": "responses",
+        "name": "Local Comulativo_allarmi",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "60",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "auto",
+        "role": "requests",
+        "name": "AbilitaAuto 설정/Auto_ON1",
+        "addresses": [
+          "DB2.DBX7.3"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1841,
+            "oref": "70",
+            "source": "sources/decoded-original/0162-FlgNet.xml"
+          }
+        ],
+        "usages": []
+      },
+      {
+        "id": "status",
+        "role": "responses",
+        "name": "$SYS$Status 드라이버 문자열 · 물리주소 없음",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [],
+        "usages": []
+      }
+    ]
+  },
+  "alarm_reference": {
+    "id": "SYS-HMI",
+    "timers": [
+      {
+        "network": 930,
+        "uid": "67",
+        "location_kind": "wire",
+        "name": "IEC_Timer_0_DB · TOF LRef64",
+        "address": "DB36",
+        "preset": "T#3s",
+        "condition": "원시처리Reset OR HMI요청"
+      },
+      {
+        "network": 930,
+        "uid": "77",
+        "location_kind": "wire",
+        "name": "IEC_Timer_1_DB · TOF LRef73",
+        "address": "DB37",
+        "preset": "T#3s",
+        "condition": "원시처리Reset OR HMI요청"
+      }
+    ],
+    "alarms": []
+  },
+  "control_reference": {
+    "native": [
+      331,
+      356,
+      930,
+      1178,
+      1841
+    ],
+    "chain": [
+      "보존CSV 설정→선택 PLC 입력/가공/출력 미러",
+      "Local 함수와 Caller 미결속8데이터핀 구분",
+      "HMI요청 OR 처리입력→내부Reset S/HMI요청 R/두TOF",
+      "실제 HMI 위젯/통신/현장복구 별도"
+    ],
+    "repair": [
+      "화면·값·품질·갱신시각·드라이버 로그",
+      "I_W20/O_W20 및 위젯 바인딩",
+      "원시·처리·Local·호출출력·위젯 동시간값",
+      "DB2X13.4·DB2X6.0·DB13X19.7·Q7.4/5·원인알람"
+    ],
+    "pending": [
+      "원본 HMI 위젯/OnPress·OnRelease 이벤트·권한·쓰기 로그",
+      "782태그/17화면 계수와 전수 의미검토 별도",
+      "I_W20/O_W20 및 I_W22/O_W22 동일 DB14 주소",
+      "0357 호출데이터8개 원본 NID/주소 미결속",
+      "Local Ingresso_run/Risposta/5알람OR와 실제 물리 응답 구분",
+      "HMI Reset요청 소거·내부Reset·TOF·원인복구 별도",
+      "PC↔스위치↔PLC 통신 끝점/IP/Rack/Slot/현재 상태 미확보",
+      "현재 TIA/CPU/현장복구 미수행; 드라이버 Status 문자열은 정상통신 증거 아님"
+    ],
+    "native_refs": []
+  },
+  "completion": {
+    "key": "SYS-HMI",
+    "boundary": "source_linked; software selected evidence; live runtime unverified",
+    "existing_notes": [
+      "소프트웨어 문서 한 ID · 하위 실물 설비 완료 상속 없음"
+    ],
+    "existing_pending": [
+      "원본 HMI 위젯/OnPress·OnRelease 이벤트·권한·쓰기 로그",
+      "782태그/17화면 계수와 전수 의미검토 별도",
+      "I_W20/O_W20 및 I_W22/O_W22 동일 DB14 주소",
+      "0357 호출데이터8개 원본 NID/주소 미결속",
+      "Local Ingresso_run/Risposta/5알람OR와 실제 물리 응답 구분",
+      "HMI Reset요청 소거·내부Reset·TOF·원인복구 별도",
+      "PC↔스위치↔PLC 통신 끝점/IP/Rack/Slot/현재 상태 미확보",
+      "현재 TIA/CPU/현장복구 미수행; 드라이버 Status 문자열은 정상통신 증거 아님"
+    ],
+    "existing_review": []
+  },
+  "completion_blocks": [
+    {
+      "type": "paragraph",
+      "text": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다."
+    },
+    {
+      "type": "list",
+      "items": [
+        "원본 HMI 위젯/OnPress·OnRelease 이벤트·권한·쓰기 로그",
+        "782태그/17화면 계수와 전수 의미검토 별도",
+        "I_W20/O_W20 및 I_W22/O_W22 동일 DB14 주소",
+        "0357 호출데이터8개 원본 NID/주소 미결속",
+        "Local Ingresso_run/Risposta/5알람OR와 실제 물리 응답 구분",
+        "HMI Reset요청 소거·내부Reset·TOF·원인복구 별도",
+        "PC↔스위치↔PLC 통신 끝점/IP/Rack/Slot/현재 상태 미확보",
+        "현재 TIA/CPU/현장복구 미수행; 드라이버 Status 문자열은 정상통신 증거 아님"
+      ]
+    }
+  ],
+  "repair": {
+    "key": "SYS-HMI",
+    "plc_id": "SYS-HMI",
+    "boundary": "source_linked",
+    "decisions": [
+      {
+        "id": "symptom-1",
+        "title": "전체 표시값 고정",
+        "observe": "화면·값·품질·갱신시각·드라이버 로그",
+        "compare": "Status 설정 존재와 현재 통신 구분",
+        "next": "현행 드라이버/프로젝트",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "입출력 태그 값 동일",
+        "observe": "I_W20/O_W20 및 위젯 바인딩",
+        "compare": "같은 DB14 주소를 별개 I/O로 해석하지 않음",
+        "next": "실제 위젯/쓰기권한",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "운전 표시 불일치",
+        "observe": "원시·처리·Local·호출출력·위젯 동시간값",
+        "compare": "미결속 Caller/현재순서 분리",
+        "next": "현재 호출/태그 맵",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "Reset 반응 의문",
+        "observe": "DB2X13.4·DB2X6.0·DB13X19.7·Q7.4/5·원인알람",
+        "compare": "요청소거·TOF·실제복구 구분",
+        "next": "이벤트·원인 소유 근거",
+        "common": "step-symptom-4"
+      }
+    ],
+    "signals": [
+      {
+        "id": "hmi-reset",
+        "role": "requests",
+        "name": "Reset_Allarms_HMI",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "27",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "internal-reset",
+        "role": "requests",
+        "name": "RESET_ALLARM 내부",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "37",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "physical-reset",
+        "role": "responses",
+        "name": "처리 Reset_allarmi 입력",
+        "addresses": [
+          "DB13.DBX19.7"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "24",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset-out1",
+        "role": "outputs",
+        "name": "공통 Reset 출력103A7",
+        "addresses": [
+          "%Q7.4"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "63",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset-out2",
+        "role": "outputs",
+        "name": "Reset_Inverter 공통 출력",
+        "addresses": [
+          "%Q7.5"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "55",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "out0",
+        "role": "responses",
+        "name": "출력 프로세스 이미지 Word0",
+        "addresses": [
+          "%QW0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "33",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror0",
+        "role": "responses",
+        "name": "Output Word0",
+        "addresses": [
+          "DB14.DBW0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "34",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "out20",
+        "role": "responses",
+        "name": "출력 Word20",
+        "addresses": [
+          "%QW20"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "53",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror20",
+        "role": "responses",
+        "name": "I_W20/O_W20 공통주소",
+        "addresses": [
+          "DB14.DBW20"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "54",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "out22",
+        "role": "responses",
+        "name": "출력 Word22",
+        "addresses": [
+          "%QW22"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "89",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror22",
+        "role": "responses",
+        "name": "I_W22/O_W22 공통주소",
+        "addresses": [
+          "DB14.DBW22"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "90",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-run",
+        "role": "responses",
+        "name": "Local Ingresso_run · 호출자 주소 미결속",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "24",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-response",
+        "role": "responses",
+        "name": "Local Risposta",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "28",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-alarm",
+        "role": "responses",
+        "name": "Local Comulativo_allarmi",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "60",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "auto",
+        "role": "requests",
+        "name": "AbilitaAuto 설정/Auto_ON1",
+        "addresses": [
+          "DB2.DBX7.3"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1841,
+            "oref": "70",
+            "source": "sources/decoded-original/0162-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "status",
+        "role": "responses",
+        "name": "$SYS$Status 드라이버 문자열 · 물리주소 없음",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": []
+      }
+    ]
+  },
+  "record_form": {
+    "key": "SYS-HMI",
+    "name": "HMI·통신·가공 상태 관찰",
+    "reference_plc_id": "SYS-HMI",
+    "boundary": "source_linked",
+    "signals": [
+      {
+        "id": "hmi-reset",
+        "role": "requests",
+        "name": "Reset_Allarms_HMI",
+        "addresses": [
+          "DB2.DBX13.4"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "27",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "internal-reset",
+        "role": "requests",
+        "name": "RESET_ALLARM 내부",
+        "addresses": [
+          "DB2.DBX6.0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "37",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "physical-reset",
+        "role": "responses",
+        "name": "처리 Reset_allarmi 입력",
+        "addresses": [
+          "DB13.DBX19.7"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "24",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset-out1",
+        "role": "outputs",
+        "name": "공통 Reset 출력103A7",
+        "addresses": [
+          "%Q7.4"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "63",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "reset-out2",
+        "role": "outputs",
+        "name": "Reset_Inverter 공통 출력",
+        "addresses": [
+          "%Q7.5"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 930,
+            "oref": "55",
+            "source": "sources/decoded-original/0158-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "out0",
+        "role": "responses",
+        "name": "출력 프로세스 이미지 Word0",
+        "addresses": [
+          "%QW0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "33",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror0",
+        "role": "responses",
+        "name": "Output Word0",
+        "addresses": [
+          "DB14.DBW0"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "34",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "out20",
+        "role": "responses",
+        "name": "출력 Word20",
+        "addresses": [
+          "%QW20"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "53",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror20",
+        "role": "responses",
+        "name": "I_W20/O_W20 공통주소",
+        "addresses": [
+          "DB14.DBW20"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "54",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "out22",
+        "role": "responses",
+        "name": "출력 Word22",
+        "addresses": [
+          "%QW22"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "89",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "mirror22",
+        "role": "responses",
+        "name": "I_W22/O_W22 공통주소",
+        "addresses": [
+          "DB14.DBW22"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 356,
+            "oref": "90",
+            "source": "sources/decoded-original/0401-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-run",
+        "role": "responses",
+        "name": "Local Ingresso_run · 호출자 주소 미결속",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "24",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-response",
+        "role": "responses",
+        "name": "Local Risposta",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "28",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "local-alarm",
+        "role": "responses",
+        "name": "Local Comulativo_allarmi",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 331,
+            "oref": "60",
+            "source": "sources/decoded-original/0355-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "auto",
+        "role": "requests",
+        "name": "AbilitaAuto 설정/Auto_ON1",
+        "addresses": [
+          "DB2.DBX7.3"
+        ],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": [
+          {
+            "network": 1841,
+            "oref": "70",
+            "source": "sources/decoded-original/0162-FlgNet.xml"
+          }
+        ]
+      },
+      {
+        "id": "status",
+        "role": "responses",
+        "name": "$SYS$Status 드라이버 문자열 · 물리주소 없음",
+        "addresses": [],
+        "boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+        "refs": []
+      }
+    ],
+    "steps": [
+      {
+        "id": "symptom-1",
+        "title": "전체 표시값 고정",
+        "observe": "화면·값·품질·갱신시각·드라이버 로그",
+        "compare": "Status 설정 존재와 현재 통신 구분",
+        "next": "현행 드라이버/프로젝트",
+        "common": "step-symptom-1"
+      },
+      {
+        "id": "symptom-2",
+        "title": "입출력 태그 값 동일",
+        "observe": "I_W20/O_W20 및 위젯 바인딩",
+        "compare": "같은 DB14 주소를 별개 I/O로 해석하지 않음",
+        "next": "실제 위젯/쓰기권한",
+        "common": "step-symptom-2"
+      },
+      {
+        "id": "symptom-3",
+        "title": "운전 표시 불일치",
+        "observe": "원시·처리·Local·호출출력·위젯 동시간값",
+        "compare": "미결속 Caller/현재순서 분리",
+        "next": "현재 호출/태그 맵",
+        "common": "step-symptom-3"
+      },
+      {
+        "id": "symptom-4",
+        "title": "Reset 반응 의문",
+        "observe": "DB2X13.4·DB2X6.0·DB13X19.7·Q7.4/5·원인알람",
+        "compare": "요청소거·TOF·실제복구 구분",
+        "next": "이벤트·원인 소유 근거",
+        "common": "step-symptom-4"
+      }
+    ],
+    "evidence_plan": {
+      "scope": "SYS-HMI 소프트웨어 고유 선택 근거 · 현행 실행 미확정",
+      "sources": {
+        "catalog-sources/SYS-HMI-DOTS-DRAFT.md": "7a8a3180682d8a4fc62ec8b8f41bfed7797e99133d34e909601b0eec15dba1f2"
+      },
+      "circuit_equipment": "독립 물리 설비가 아닌 소프트웨어 문서",
+      "circuit_distinction": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+      "circuit_pages": [
+        {
+          "label": "FG17 · PDF18 · HMI 통신 배선 아님",
+          "path": "sources/Electrical_Rev2.pdf#page=18"
+        }
+      ],
+      "construction_boundary": "현행 통신/하위 설비 끝점 미확보",
+      "construction_pages": [],
+      "preflight": {
+        "requirements": [
+          {
+            "owner": "현재자료",
+            "work": "원본 HMI 위젯/OnPress·OnRelease 이벤트·권한·쓰기 로그"
+          }
+        ],
+        "source_links": [
+          {
+            "label": "331",
+            "path": "networks/network-331.html"
+          },
+          {
+            "label": "356",
+            "path": "networks/network-356.html"
+          },
+          {
+            "label": "930",
+            "path": "networks/network-930.html"
+          },
+          {
+            "label": "1178",
+            "path": "networks/network-1178.html"
+          },
+          {
+            "label": "1841",
+            "path": "networks/network-1841.html"
+          }
+        ],
+        "reviews": []
+      },
+      "steps": [
+        {
+          "step_id": "symptom-1",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "화면·값·품질·갱신시각·드라이버 로그"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현행 드라이버/프로젝트"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "331",
+              "path": "networks/network-331.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "930",
+              "path": "networks/network-930.html"
+            },
+            {
+              "label": "1178",
+              "path": "networks/network-1178.html"
+            },
+            {
+              "label": "1841",
+              "path": "networks/network-1841.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-2",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "I_W20/O_W20 및 위젯 바인딩"
+            },
+            {
+              "owner": "현재자료",
+              "work": "실제 위젯/쓰기권한"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "331",
+              "path": "networks/network-331.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "930",
+              "path": "networks/network-930.html"
+            },
+            {
+              "label": "1178",
+              "path": "networks/network-1178.html"
+            },
+            {
+              "label": "1841",
+              "path": "networks/network-1841.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-3",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "원시·처리·Local·호출출력·위젯 동시간값"
+            },
+            {
+              "owner": "현재자료",
+              "work": "현재 호출/태그 맵"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "331",
+              "path": "networks/network-331.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "930",
+              "path": "networks/network-930.html"
+            },
+            {
+              "label": "1178",
+              "path": "networks/network-1178.html"
+            },
+            {
+              "label": "1841",
+              "path": "networks/network-1841.html"
+            }
+          ],
+          "reviews": []
+        },
+        {
+          "step_id": "symptom-4",
+          "requirements": [
+            {
+              "owner": "관찰",
+              "work": "DB2X13.4·DB2X6.0·DB13X19.7·Q7.4/5·원인알람"
+            },
+            {
+              "owner": "현재자료",
+              "work": "이벤트·원인 소유 근거"
+            }
+          ],
+          "source_links": [
+            {
+              "label": "331",
+              "path": "networks/network-331.html"
+            },
+            {
+              "label": "356",
+              "path": "networks/network-356.html"
+            },
+            {
+              "label": "930",
+              "path": "networks/network-930.html"
+            },
+            {
+              "label": "1178",
+              "path": "networks/network-1178.html"
+            },
+            {
+              "label": "1841",
+              "path": "networks/network-1841.html"
+            }
+          ],
+          "reviews": []
+        }
+      ]
+    }
+  },
+  "drawing": {
+    "key": "SYS-HMI",
+    "plc_id": "SYS-HMI",
+    "match": "catalog",
+    "sheets": [
+      {
+        "id": "related-oem17",
+        "kind": "관련 공통 Reset 회로",
+        "title": "FG17 · PDF18 · HMI 통신 배선 아님",
+        "source": "sources/Electrical_Rev2.pdf",
+        "page": 18,
+        "fg": 17,
+        "image": "assets/catalog-circuits/Electrical_Rev2-P018.png",
+        "extent": "원본 전체 페이지",
+        "status": "공통 조작/Reset 관련 회로",
+        "revision": "Rev2 17.03.2025"
+      }
+    ],
+    "circuit": {
+      "id": "SYS-HMI",
+      "equipment": "SYS-HMI 소프트웨어 · 직접 물리경로 없음",
+      "distinction": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+      "paths": [],
+      "pending": [
+        "원본 HMI 위젯/OnPress·OnRelease 이벤트·권한·쓰기 로그",
+        "782태그/17화면 계수와 전수 의미검토 별도",
+        "I_W20/O_W20 및 I_W22/O_W22 동일 DB14 주소",
+        "0357 호출데이터8개 원본 NID/주소 미결속",
+        "Local Ingresso_run/Risposta/5알람OR와 실제 물리 응답 구분",
+        "HMI Reset요청 소거·내부Reset·TOF·원인복구 별도",
+        "PC↔스위치↔PLC 통신 끝점/IP/Rack/Slot/현재 상태 미확보",
+        "현재 TIA/CPU/현장복구 미수행; 드라이버 Status 문자열은 정상통신 증거 아님"
+      ]
+    },
+    "warnings": [
+      "소프트웨어 기능과 실물 설비 별도",
+      "현재 CPU/통신/권한/호출순서 미확정"
+    ]
+  },
+  "related_alarm_boundary": "SYS-HMI는 보존 태그/화면 설정과 선택 PLC 처리의 소프트웨어 문서입니다. 782태그·17화면 계수는 전체 의미/실제 이벤트 검증이 아닙니다. 출력 QW→DB14 미러, HMI Reset DB2X13.4와 내부 DB2X6.0, Local 함수와 미결속 호출자를 구분합니다. 현재 통신·권한·CPU·복구는 미확정입니다.",
+  "presentation": {
+    "search_examples": "SYS-HMI, HMI·통신·가공 상태"
+  },
+  "section_sources": {
+    "overview": [
+      [
+        "331",
+        "networks/network-331.html"
+      ],
+      [
+        "356",
+        "networks/network-356.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ],
+      [
+        "1178",
+        "networks/network-1178.html"
+      ],
+      [
+        "1841",
+        "networks/network-1841.html"
+      ]
+    ],
+    "io": [
+      [
+        "331",
+        "networks/network-331.html"
+      ],
+      [
+        "356",
+        "networks/network-356.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ],
+      [
+        "1178",
+        "networks/network-1178.html"
+      ],
+      [
+        "1841",
+        "networks/network-1841.html"
+      ]
+    ],
+    "control": [
+      [
+        "331",
+        "networks/network-331.html"
+      ],
+      [
+        "356",
+        "networks/network-356.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ],
+      [
+        "1178",
+        "networks/network-1178.html"
+      ],
+      [
+        "1841",
+        "networks/network-1841.html"
+      ]
+    ],
+    "alarms": [
+      [
+        "331",
+        "networks/network-331.html"
+      ],
+      [
+        "356",
+        "networks/network-356.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ],
+      [
+        "1178",
+        "networks/network-1178.html"
+      ],
+      [
+        "1841",
+        "networks/network-1841.html"
+      ]
+    ],
+    "repair": [
+      [
+        "331",
+        "networks/network-331.html"
+      ],
+      [
+        "356",
+        "networks/network-356.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ],
+      [
+        "1178",
+        "networks/network-1178.html"
+      ],
+      [
+        "1841",
+        "networks/network-1841.html"
+      ]
+    ],
+    "completion": [
+      [
+        "331",
+        "networks/network-331.html"
+      ],
+      [
+        "356",
+        "networks/network-356.html"
+      ],
+      [
+        "930",
+        "networks/network-930.html"
+      ],
+      [
+        "1178",
+        "networks/network-1178.html"
+      ],
+      [
+        "1841",
+        "networks/network-1841.html"
+      ]
+    ],
+    "circuits": [
+      [
+        "FG17 · PDF18 · HMI 통신 배선 아님",
+        "sources/Electrical_Rev2.pdf#page=18"
+      ]
+    ]
+  }
+}
