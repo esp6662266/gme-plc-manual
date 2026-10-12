@@ -1,0 +1,5946 @@
+{
+  "status": "passed_with_external_host_badge_CSP_errors",
+  "background": true,
+  "user_profile_access": false,
+  "version": "1.23.0",
+  "areas": [
+    {
+      "key": "SYS-ALARM",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비와 자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O와 HMI 요청 및 저장 범위",
+            "알람 스냅샷 Word의 정확한 범위"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "호출과 순서 경계",
+            "스냅샷과 변화 판별",
+            "Reset 요청과 ACK 소비",
+            "혼 시간과 출력",
+            "복수 쓰기와 초기화 경계",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 양 끝점과 도면 상충"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "원인과 유지의 대표 직접 확인",
+            "통합 경보와 HMI 가공의 구별",
+            "복구 판정에 필요한 독립 증거"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰과 필요한 기록"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-COUNTERS",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "펄스 보고누적: 0524 / 문서1776 / NID43",
+            "보고 종료계수 Reset: 0157 / 문서935 / NID7",
+            "생산량 Real 적산: 0170 / 문서1849 / NID13",
+            "유량 환산·가공값 복수쓰기",
+            "가스량: 색인 STL와 원본 선언의 증거등급 분리",
+            "다른 소유자의 부분값0쓰기·타이머",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·Reset·복구 경계"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상 관찰·필요 증거"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-LEGACY",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준 — 적용",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI — 적용, 이벤트/실물 결속 미확보"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조 — 대표 고유 핵심 원본 직접 검토",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로 — 관련 출력만 적용, SYS-LEGACY 독립 실물은 비해당"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구 — 관련 소유 경계 적용, 전용 현장 복구 미확보"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰 — 수리 실행 없이 기록 설계"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-PID",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI — Global, Local, Word, bit 구분"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "OB와 호출 경계",
+            "TC 선택과 버너 PID: 색인 근거의 명확한 한계",
+            "버너 결과→공기 설정의 복수쓰기",
+            "Control_stechio 고유 핵심",
+            "산소·압력·TC03 PID 대표 대조와 공유 소유",
+            "아날로그 출력과 ENO",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 끝점 — 대표 버너 AO만 직접 렌더"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구 경계"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰 설계 — 실행한 현장시험 아님"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-PLC-IO",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "원시·Word·Bool·환산을 분리한 대표 주소",
+            "HMI 설정 대표"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "입력 미러와 개별 재쓰기",
+            "출력 관찰 미러",
+            "공통 선형화와 대표 TC04",
+            "엔코더·TM 대표와 미결속 경계",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 끝점·구성·실제 PDF"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "이벤트 기억과 집계는 다른 층",
+            "0542 집계·Reset"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상 관찰·자료 수집"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-POWER",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "공통 전압 상태의 입력·내부·표시 구분",
+            "서비스 출력의 선언 독립 대조"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "공통 Word 전달",
+            "CH 서비스 릴레이 대표 고유 경로",
+            "반 냉각 및 안전회로의 소유",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰·원인 분리"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-RECIPES",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "DB26 제어 멤버와 HMI 설정",
+            "Recipe 구조·8필드 적용"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "선택·편집·저장·취소·적용의 정적 경로",
+            "FC21 호출과 ENO",
+            "대표 복수 Writer·형식·범위",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 끝점·실제 PDF 범위"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰: 변경 없이 확보할 자료"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-RUNHOURS",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준 — 적용",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "핵심 선언",
+            "HMI 검색 범위와 부재"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "호출: 0549 / doc1620 / Main NID7",
+            "분 간격 후보: 0019 / doc1056 / FC2 NID58",
+            "대표 MIN/HOUR: 0308 / doc1018 / BC01 NID20",
+            "HOUR 초기화와 핸드셰이크",
+            "별도 정비값·날짜·알람 경계",
+            "채널 범위·빠진 계수와 남아 있는 Reset",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로 — 기능 자체 비해당, 입력 실물 대응은 근거 미확보"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구 — 적용 일부, 현장 복구 근거 미확보"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰 — 적용, 조치·복구는 미수행"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-SAFETY",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "원시 EM_OK의 Word 전달",
+            "비상 모듈 알람 기억",
+            "비상 알람의 일반 자동 정지 요청",
+            "버너 온도 허가 출력",
+            "177T1 입력과 ER01 출력",
+            "EM_OK의 부수 사용과 조사 경계",
+            "현재 원본 독립 대조와 소유 경계"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰·수리 경계"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SYS-SIMULATION",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "BWF01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "BWF02",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL02",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL03",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL04",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL05",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL06",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL07",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL08",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL09",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL10",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL13",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL14",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL15",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL16",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL17",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL18",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CLIENT-CL19",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LIW",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CY01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CY02",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CY03",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CY04",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CY05",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LT01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SS01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SS09",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SS10",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SS11",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ZT02",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ZT03",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ZT04",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ZT05",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ZT06",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FN01-FAN",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "RD01-FAN",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LD01A",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL02",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL03",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL04",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL05",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL06",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL07",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL08",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL09",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL10",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CYL-CL12",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS01",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS02",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS05",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS06",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS09",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS10",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS15",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS16",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS17",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS18",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS19",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS20",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS23",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS24",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS25",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS26",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS29",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS30",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS34",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS35",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS40",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LS41",
+      "sections": [
+        {
+          "section": "overview",
+          "items": [
+            "설비·자료 기준",
+            "검토 원본·해시와 자료 기준"
+          ]
+        },
+        {
+          "section": "io",
+          "items": [
+            "I/O·HMI"
+          ]
+        },
+        {
+          "section": "control",
+          "items": [
+            "제어 구조"
+          ]
+        },
+        {
+          "section": "circuits",
+          "items": [
+            "전기 전달 경로"
+          ]
+        },
+        {
+          "section": "alarms",
+          "items": [
+            "알람·복구"
+          ]
+        },
+        {
+          "section": "repair",
+          "items": [
+            "증상별 관찰"
+          ]
+        },
+        {
+          "section": "completion",
+          "items": [
+            "현재 근거 공백과 판정 기준"
+          ]
+        }
+      ]
+    }
+  ],
+  "source_comparisons": [
+    {
+      "key": "SYS-ALARM",
+      "paths": [
+        {
+          "signal": "경보 출력 Q7.6",
+          "source_pair": "networks/network-933.html#gme-sys-alarm-wire-288",
+          "sheet": "oem-18"
+        }
+      ],
+      "native_locations": 67
+    },
+    {
+      "key": "SYS-COUNTERS",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": "networks/network-1776.html#gme-sys-counters-wire-1756",
+          "sheet": null
+        }
+      ],
+      "native_locations": 52
+    },
+    {
+      "key": "SYS-LEGACY",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": "networks/network-1684.html#gme-rd01-wire-453",
+          "sheet": null
+        }
+      ],
+      "native_locations": 68
+    },
+    {
+      "key": "SYS-PID",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": "networks/network-11.html#gme-mv01-wire-457",
+          "sheet": null
+        }
+      ],
+      "native_locations": 97
+    },
+    {
+      "key": "SYS-PLC-IO",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": "networks/network-1614.html#gme-mc05-wire-93",
+          "sheet": "oem-103"
+        }
+      ],
+      "native_locations": 66
+    },
+    {
+      "key": "SYS-POWER",
+      "paths": [
+        {
+          "signal": "IW18→DB13.DBW18공통Wordcopy",
+          "source_pair": "networks/network-1070.html#gme-rd01-wire-90",
+          "sheet": "oem-17"
+        },
+        {
+          "signal": "CH01서비스허가Q6.0",
+          "source_pair": "networks/network-1953.html#gme-ch01-wire-764",
+          "sheet": "oem-85"
+        }
+      ],
+      "native_locations": 45
+    },
+    {
+      "key": "SYS-RECIPES",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": "networks/network-1613.html#gme-fn06-wire-32",
+          "sheet": null
+        }
+      ],
+      "native_locations": 15
+    },
+    {
+      "key": "SYS-RUNHOURS",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": "networks/network-1018.html#gme-sys-runhours-wire-1147",
+          "sheet": null
+        }
+      ],
+      "native_locations": 55
+    },
+    {
+      "key": "SYS-SAFETY",
+      "paths": [
+        {
+          "signal": "비상 입력 관련 Word 복사",
+          "source_pair": "networks/network-1070.html#gme-rd01-wire-90",
+          "sheet": "oem-14"
+        }
+      ],
+      "native_locations": 33
+    },
+    {
+      "key": "SYS-SIMULATION",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": null
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "BWF01",
+      "paths": [
+        {
+          "signal": "bwf1_inverter_high_speed",
+          "source_pair": null,
+          "sheet": "oem-92"
+        },
+        {
+          "signal": "bwf01 ok",
+          "source_pair": null,
+          "sheet": "oem-87"
+        },
+        {
+          "signal": "bwf01 fault",
+          "source_pair": null,
+          "sheet": "oem-87"
+        },
+        {
+          "signal": "min lev bwf01",
+          "source_pair": null,
+          "sheet": "oem-87"
+        },
+        {
+          "signal": "max lev bwf01",
+          "source_pair": null,
+          "sheet": "oem-87"
+        },
+        {
+          "signal": "bwf 01 run",
+          "source_pair": "networks/network-1735.html#gme-bwf01-wire-241",
+          "sheet": "oem-87"
+        },
+        {
+          "signal": "consent start bwf01",
+          "source_pair": "networks/network-1781.html#gme-bwf01-wire-100",
+          "sheet": "oem-85"
+        }
+      ],
+      "native_locations": 43
+    },
+    {
+      "key": "BWF02",
+      "paths": [
+        {
+          "signal": "bwf2_inverter_high_speed",
+          "source_pair": null,
+          "sheet": "oem-92"
+        },
+        {
+          "signal": "bwf02 ok",
+          "source_pair": null,
+          "sheet": "oem-88"
+        },
+        {
+          "signal": "bwf02 fault",
+          "source_pair": null,
+          "sheet": "oem-88"
+        },
+        {
+          "signal": "min lev bwf02",
+          "source_pair": null,
+          "sheet": "oem-88"
+        },
+        {
+          "signal": "max lev bwf02",
+          "source_pair": null,
+          "sheet": "oem-88"
+        },
+        {
+          "signal": "bwf 02 run",
+          "source_pair": "networks/network-1736.html#gme-bwf02-wire-316",
+          "sheet": "oem-88"
+        },
+        {
+          "signal": "consent start bwf02",
+          "source_pair": "networks/network-1783.html#gme-bwf02-wire-176",
+          "sheet": "oem-85"
+        }
+      ],
+      "native_locations": 43
+    },
+    {
+      "key": "CLIENT-CL01",
+      "paths": [
+        {
+          "signal": "apron conveyor a fault",
+          "source_pair": "networks/network-410.html#gme-client-cl01-wire-59",
+          "sheet": "oem-92"
+        },
+        {
+          "signal": "apron conveyor a run",
+          "source_pair": "networks/network-1002.html#gme-client-cl01-wire-112",
+          "sheet": "oem-89"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL02",
+      "paths": [
+        {
+          "signal": "impactor fault",
+          "source_pair": "networks/network-411.html#gme-client-cl02-wire-77",
+          "sheet": "oem-93"
+        },
+        {
+          "signal": "impactor run",
+          "source_pair": "networks/network-1003.html#gme-client-cl02-wire-166",
+          "sheet": "oem-89"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL03",
+      "paths": [
+        {
+          "signal": "impact vibrationfeeder fault",
+          "source_pair": "networks/network-412.html#gme-client-cl03-wire-95",
+          "sheet": "oem-93"
+        },
+        {
+          "signal": "impact vibrationfeeder run",
+          "source_pair": "networks/network-1004.html#gme-client-cl03-wire-220",
+          "sheet": "oem-89"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL04",
+      "paths": [
+        {
+          "signal": "belt conveyor a fault",
+          "source_pair": null,
+          "sheet": "oem-93"
+        },
+        {
+          "signal": "belt conveyor a run",
+          "source_pair": "networks/network-1005.html#gme-client-cl04-wire-274",
+          "sheet": "oem-89"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "CLIENT-CL05",
+      "paths": [
+        {
+          "signal": "air knife fault",
+          "source_pair": "networks/network-414.html#gme-client-cl05-wire-131",
+          "sheet": "oem-93"
+        },
+        {
+          "signal": "air knife run",
+          "source_pair": "networks/network-1006.html#gme-client-cl05-wire-328",
+          "sheet": "oem-89"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL06",
+      "paths": [
+        {
+          "signal": "belt conveyor b run",
+          "source_pair": "networks/network-1007.html#gme-client-cl06-wire-382",
+          "sheet": "oem-90"
+        },
+        {
+          "signal": "belt conveyor b fault",
+          "source_pair": "networks/network-415.html#gme-client-cl06-wire-149",
+          "sheet": "oem-93"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL07",
+      "paths": [
+        {
+          "signal": "shredder 1 run",
+          "source_pair": "networks/network-1008.html#gme-client-cl07-wire-436",
+          "sheet": "oem-90"
+        },
+        {
+          "signal": "shredder 1 fault",
+          "source_pair": "networks/network-416.html#gme-client-cl07-wire-167",
+          "sheet": "oem-94"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL08",
+      "paths": [
+        {
+          "signal": "shredder vibrationfeeder run",
+          "source_pair": "networks/network-1009.html#gme-client-cl08-wire-490",
+          "sheet": "oem-90"
+        },
+        {
+          "signal": "shredder vibrationfeeder fault",
+          "source_pair": "networks/network-417.html#gme-client-cl08-wire-185",
+          "sheet": "oem-94"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL09",
+      "paths": [
+        {
+          "signal": "belt conveyor c run",
+          "source_pair": null,
+          "sheet": "oem-90"
+        },
+        {
+          "signal": "belt conveyor c fault",
+          "source_pair": "networks/network-418.html#gme-client-cl09-wire-203",
+          "sheet": "oem-94"
+        },
+        {
+          "signal": "belt conveyor c fault_doppio!",
+          "source_pair": null,
+          "sheet": "oem-96"
+        }
+      ],
+      "native_locations": 4
+    },
+    {
+      "key": "CLIENT-CL10",
+      "paths": [
+        {
+          "signal": "rotex screen run",
+          "source_pair": "networks/network-1011.html#gme-client-cl10-wire-598",
+          "sheet": "oem-90"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "CLIENT-CL13",
+      "paths": [
+        {
+          "signal": "apron conveyor b run",
+          "source_pair": "networks/network-1012.html#gme-client-cl13-wire-760",
+          "sheet": "oem-91"
+        },
+        {
+          "signal": "apron conveyor b fault",
+          "source_pair": "networks/network-420.html#gme-client-cl13-wire-275",
+          "sheet": "oem-94"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "CLIENT-CL14",
+      "paths": [
+        {
+          "signal": "shredder 2 run",
+          "source_pair": "networks/network-1013.html#gme-client-cl14-wire-814",
+          "sheet": "oem-91"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "CLIENT-CL15",
+      "paths": [
+        {
+          "signal": "belt coveyor d fault",
+          "source_pair": null,
+          "sheet": "oem-95"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CLIENT-CL16",
+      "paths": [
+        {
+          "signal": "belt conveyor e run",
+          "source_pair": "networks/network-1015.html#gme-client-cl16-wire-922",
+          "sheet": "oem-91"
+        },
+        {
+          "signal": "belt conveyor e fault",
+          "source_pair": null,
+          "sheet": "oem-95"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "CLIENT-CL17",
+      "paths": [
+        {
+          "signal": "weighting hopper 2fault",
+          "source_pair": "networks/network-424.html#gme-client-cl17-wire-347",
+          "sheet": "oem-95"
+        }
+      ],
+      "native_locations": 4
+    },
+    {
+      "key": "CLIENT-CL18",
+      "paths": [
+        {
+          "signal": "hopper conveyor 2fault",
+          "source_pair": "networks/network-425.html#gme-client-cl18-wire-365",
+          "sheet": "oem-95"
+        }
+      ],
+      "native_locations": 4
+    },
+    {
+      "key": "CLIENT-CL19",
+      "paths": [
+        {
+          "signal": "primaryshredder run",
+          "source_pair": "networks/network-426.html#gme-client-cl19-wire-383",
+          "sheet": "oem-92"
+        }
+      ],
+      "native_locations": 6
+    },
+    {
+      "key": "LIW",
+      "paths": [
+        {
+          "signal": "liw systemautoreader",
+          "source_pair": "networks/network-1016.html#gme-liw-wire-976",
+          "sheet": "oem-91"
+        },
+        {
+          "signal": "start liw feeder",
+          "source_pair": "networks/network-1973.html#gme-pv03-wire-1238",
+          "sheet": "oem-85"
+        }
+      ],
+      "native_locations": 10
+    },
+    {
+      "key": "CY01",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CY02",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "construction-3"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CY03",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CY04",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CY05",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LT01",
+      "paths": [
+        {
+          "signal": "ll_ld01",
+          "source_pair": "networks/network-1070.html#gme-rd01-wire-92",
+          "sheet": "oem-171"
+        }
+      ],
+      "native_locations": 8
+    },
+    {
+      "key": "SS01",
+      "paths": [
+        {
+          "signal": "bc01_tripwire",
+          "source_pair": null,
+          "sheet": "oem-20"
+        },
+        {
+          "signal": "bc01_prox",
+          "source_pair": null,
+          "sheet": "oem-20"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "SS09",
+      "paths": [
+        {
+          "signal": "mc03_torque",
+          "source_pair": null,
+          "sheet": "oem-24"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "SS10",
+      "paths": [
+        {
+          "signal": "mc04_torque",
+          "source_pair": null,
+          "sheet": "oem-26"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "SS11",
+      "paths": [
+        {
+          "signal": "mc05_torque",
+          "source_pair": null,
+          "sheet": "oem-27"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "ZT02",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-46"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "ZT03",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-38"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "ZT04",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-40"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "ZT05",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-36"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "ZT06",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-34"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "FN01-FAN",
+      "paths": [
+        {
+          "signal": "fn01f_fbk",
+          "source_pair": null,
+          "sheet": "oem-55"
+        },
+        {
+          "signal": "star fan fn01",
+          "source_pair": null,
+          "sheet": "oem-55"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "RD01-FAN",
+      "paths": [
+        {
+          "signal": "rd01f_fbk",
+          "source_pair": "networks/network-1020.html#gme-rd01-wire-1246",
+          "sheet": "oem-23"
+        },
+        {
+          "signal": "start fan rd01",
+          "source_pair": "networks/network-1788.html#gme-rd01-wire-372",
+          "sheet": "oem-23"
+        }
+      ],
+      "native_locations": 35
+    },
+    {
+      "key": "LD01A",
+      "paths": [
+        {
+          "signal": "ld-01a_fbk",
+          "source_pair": "networks/network-1036.html#gme-ld01-wire-2110",
+          "sheet": "oem-57"
+        },
+        {
+          "signal": "start vibrator ld-01",
+          "source_pair": "networks/network-1806.html#gme-ld01-wire-976",
+          "sheet": "oem-57"
+        }
+      ],
+      "native_locations": 26
+    },
+    {
+      "key": "CYL-CL01",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL02",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL03",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL04",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL05",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL06",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL07",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL08",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL09",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL10",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "CYL-CL12",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "pid"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS01",
+      "paths": [
+        {
+          "signal": "ev01_open",
+          "source_pair": "networks/network-1921.html#gme-pv01-wire-54",
+          "sheet": "oem-71"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS02",
+      "paths": [
+        {
+          "signal": "ev01_close",
+          "source_pair": "networks/network-1921.html#gme-pv01-wire-65",
+          "sheet": "oem-71"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS05",
+      "paths": [
+        {
+          "signal": "ev02_open",
+          "source_pair": "networks/network-1922.html#gme-pv01-wire-58",
+          "sheet": "oem-71"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS06",
+      "paths": [
+        {
+          "signal": "ev02_close",
+          "source_pair": "networks/network-1922.html#gme-pv01-wire-62",
+          "sheet": "oem-71"
+        }
+      ],
+      "native_locations": 4
+    },
+    {
+      "key": "LS09",
+      "paths": [
+        {
+          "signal": "deviator open pv-03",
+          "source_pair": "networks/network-1925.html#gme-pv03-wire-48",
+          "sheet": "oem-74"
+        }
+      ],
+      "native_locations": 4
+    },
+    {
+      "key": "LS10",
+      "paths": [
+        {
+          "signal": "deviator close pv-03",
+          "source_pair": "networks/network-1925.html#gme-pv03-wire-56",
+          "sheet": "oem-74"
+        }
+      ],
+      "native_locations": 4
+    },
+    {
+      "key": "LS15",
+      "paths": [
+        {
+          "signal": "mv05_open",
+          "source_pair": null,
+          "sheet": "oem-36"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS16",
+      "paths": [
+        {
+          "signal": "mv05_close",
+          "source_pair": "networks/network-1765.html#gme-mv05-wire-21",
+          "sheet": "oem-36"
+        }
+      ],
+      "native_locations": 8
+    },
+    {
+      "key": "LS17",
+      "paths": [
+        {
+          "signal": "mv02_open",
+          "source_pair": null,
+          "sheet": "oem-38"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS18",
+      "paths": [
+        {
+          "signal": "mv02_close",
+          "source_pair": "networks/network-1763.html#gme-mv02-wire-33",
+          "sheet": "oem-38"
+        }
+      ],
+      "native_locations": 8
+    },
+    {
+      "key": "LS19",
+      "paths": [
+        {
+          "signal": "mv03_open",
+          "source_pair": "networks/network-1070.html#gme-mv03-wire-122",
+          "sheet": "oem-40"
+        }
+      ],
+      "native_locations": 12
+    },
+    {
+      "key": "LS20",
+      "paths": [
+        {
+          "signal": "mv03_close",
+          "source_pair": "networks/network-1070.html#gme-mv03-wire-155",
+          "sheet": "oem-40"
+        }
+      ],
+      "native_locations": 22
+    },
+    {
+      "key": "LS23",
+      "paths": [
+        {
+          "signal": "mv01_open",
+          "source_pair": null,
+          "sheet": "oem-46"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS24",
+      "paths": [
+        {
+          "signal": "mv01_close",
+          "source_pair": "networks/network-1762.html#gme-mv01-wire-1088",
+          "sheet": "oem-46"
+        }
+      ],
+      "native_locations": 10
+    },
+    {
+      "key": "LS25",
+      "paths": [
+        {
+          "signal": "ev04_open",
+          "source_pair": "networks/network-1923.html#gme-pv02-wire-54",
+          "sheet": "oem-73"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS26",
+      "paths": [
+        {
+          "signal": "ev04_close",
+          "source_pair": "networks/network-1923.html#gme-pv02-wire-65",
+          "sheet": "oem-73"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS29",
+      "paths": [
+        {
+          "signal": "ev05_open",
+          "source_pair": "networks/network-1924.html#gme-pv02-wire-54",
+          "sheet": "oem-73"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS30",
+      "paths": [
+        {
+          "signal": "ev05_close",
+          "source_pair": "networks/network-1924.html#gme-pv02-wire-65",
+          "sheet": "oem-73"
+        }
+      ],
+      "native_locations": 2
+    },
+    {
+      "key": "LS34",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-31"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS35",
+      "paths": [
+        {
+          "signal": "independent source reference",
+          "source_pair": null,
+          "sheet": "oem-31"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS40",
+      "paths": [
+        {
+          "signal": "mv06_open",
+          "source_pair": null,
+          "sheet": "oem-34"
+        }
+      ],
+      "native_locations": 0
+    },
+    {
+      "key": "LS41",
+      "paths": [
+        {
+          "signal": "mv06_close",
+          "source_pair": "networks/network-1766.html#gme-mv06-wire-1504",
+          "sheet": "oem-34"
+        }
+      ],
+      "native_locations": 6
+    }
+  ],
+  "drawings": [
+    {
+      "key": "SYS-ALARM",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "SYS-COUNTERS",
+      "sheets": 0,
+      "empty_expected": true
+    },
+    {
+      "key": "SYS-LEGACY",
+      "sheets": 0,
+      "empty_expected": true
+    },
+    {
+      "key": "SYS-PID",
+      "sheets": 0,
+      "empty_expected": true
+    },
+    {
+      "key": "SYS-PLC-IO",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "SYS-POWER",
+      "sheets": 10,
+      "empty_expected": false
+    },
+    {
+      "key": "SYS-RECIPES",
+      "sheets": 0,
+      "empty_expected": true
+    },
+    {
+      "key": "SYS-RUNHOURS",
+      "sheets": 0,
+      "empty_expected": true
+    },
+    {
+      "key": "SYS-SAFETY",
+      "sheets": 3,
+      "empty_expected": false
+    },
+    {
+      "key": "SYS-SIMULATION",
+      "sheets": 0,
+      "empty_expected": true
+    },
+    {
+      "key": "BWF01",
+      "sheets": 4,
+      "empty_expected": false
+    },
+    {
+      "key": "BWF02",
+      "sheets": 4,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL01",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL02",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL03",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL04",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL05",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL06",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL07",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL08",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL09",
+      "sheets": 3,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL10",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL13",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL14",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL15",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL16",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL17",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL18",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CLIENT-CL19",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "LIW",
+      "sheets": 3,
+      "empty_expected": false
+    },
+    {
+      "key": "CY01",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CY02",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "CY03",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CY04",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CY05",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "LT01",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "SS01",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "SS09",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "SS10",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "SS11",
+      "sheets": 5,
+      "empty_expected": false
+    },
+    {
+      "key": "ZT02",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "ZT03",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "ZT04",
+      "sheets": 8,
+      "empty_expected": false
+    },
+    {
+      "key": "ZT05",
+      "sheets": 5,
+      "empty_expected": false
+    },
+    {
+      "key": "ZT06",
+      "sheets": 9,
+      "empty_expected": false
+    },
+    {
+      "key": "FN01-FAN",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "RD01-FAN",
+      "sheets": 2,
+      "empty_expected": false
+    },
+    {
+      "key": "LD01A",
+      "sheets": 4,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL01",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL02",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL03",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL04",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL05",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL06",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL07",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL08",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL09",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL10",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "CYL-CL12",
+      "sheets": 1,
+      "empty_expected": false
+    },
+    {
+      "key": "LS01",
+      "sheets": 8,
+      "empty_expected": false
+    },
+    {
+      "key": "LS02",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "LS05",
+      "sheets": 5,
+      "empty_expected": false
+    },
+    {
+      "key": "LS06",
+      "sheets": 5,
+      "empty_expected": false
+    },
+    {
+      "key": "LS09",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "LS10",
+      "sheets": 4,
+      "empty_expected": false
+    },
+    {
+      "key": "LS15",
+      "sheets": 9,
+      "empty_expected": false
+    },
+    {
+      "key": "LS16",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "LS17",
+      "sheets": 9,
+      "empty_expected": false
+    },
+    {
+      "key": "LS18",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "LS19",
+      "sheets": 8,
+      "empty_expected": false
+    },
+    {
+      "key": "LS20",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "LS23",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "LS24",
+      "sheets": 5,
+      "empty_expected": false
+    },
+    {
+      "key": "LS25",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "LS26",
+      "sheets": 5,
+      "empty_expected": false
+    },
+    {
+      "key": "LS29",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "LS30",
+      "sheets": 6,
+      "empty_expected": false
+    },
+    {
+      "key": "LS34",
+      "sheets": 9,
+      "empty_expected": false
+    },
+    {
+      "key": "LS35",
+      "sheets": 7,
+      "empty_expected": false
+    },
+    {
+      "key": "LS40",
+      "sheets": 4,
+      "empty_expected": false
+    },
+    {
+      "key": "LS41",
+      "sheets": 4,
+      "empty_expected": false
+    }
+  ],
+  "record_forms": [
+    {
+      "key": "SYS-ALARM",
+      "fields": 10,
+      "public_records": 0,
+      "expected_bundle": "d7858b6dbceb50bee335c67ead8e943ea1b744123233fe9d4b116f99a90e89fa"
+    },
+    {
+      "key": "SYS-COUNTERS",
+      "fields": 6,
+      "public_records": 0,
+      "expected_bundle": "16647daf744ec7d88614a982bd48649d96c0e65def922d229fcaa84ea26de521"
+    },
+    {
+      "key": "SYS-LEGACY",
+      "fields": 7,
+      "public_records": 0,
+      "expected_bundle": "34931a6b8c402b205b92c11ab49072d239ce7eb9ce03f594e2b79b5a4e754b4f"
+    },
+    {
+      "key": "SYS-PID",
+      "fields": 12,
+      "public_records": 0,
+      "expected_bundle": "fa9bfa3d31c40dce589ecf0d17dd3be749d29211776ef4ee4ed3cf58d45335c5"
+    },
+    {
+      "key": "SYS-PLC-IO",
+      "fields": 11,
+      "public_records": 0,
+      "expected_bundle": "f701d432aa69896bb5b24d2df9a464d2b507ad5aed2e2e422991c70ece746700"
+    },
+    {
+      "key": "SYS-POWER",
+      "fields": 9,
+      "public_records": 0,
+      "expected_bundle": "147383828ab9b3568ef06b1e9bfefe03a7d87cd2169c2f1c32b46bbd22b806e4"
+    },
+    {
+      "key": "SYS-RECIPES",
+      "fields": 5,
+      "public_records": 0,
+      "expected_bundle": "52860e47da96812a6f783648eb8163654687ab8bd6e14f9d37112cd3279e6526"
+    },
+    {
+      "key": "SYS-RUNHOURS",
+      "fields": 7,
+      "public_records": 0,
+      "expected_bundle": "d9f07b84175744ae163508c11d5fdd27448e37cb329db58067f4a568dd299a29"
+    },
+    {
+      "key": "SYS-SAFETY",
+      "fields": 8,
+      "public_records": 0,
+      "expected_bundle": "2a4335e30c2ca1bf45645f51abf8a81cf858af97054fe1fcab0bb90fa89ce374"
+    },
+    {
+      "key": "SYS-SIMULATION",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "79d7ed3a3ce1d217978e5775af23a34a8c50bc2bd510fa770b2e5cacbb65390d"
+    },
+    {
+      "key": "BWF01",
+      "fields": 12,
+      "public_records": 0,
+      "expected_bundle": "232df4759294a557ff2a663c34802f222187a4ec8941ea24a20f30019982ad50"
+    },
+    {
+      "key": "BWF02",
+      "fields": 12,
+      "public_records": 0,
+      "expected_bundle": "4753b0e118783ecd6fee6d08e1c7b0a8a32bdbc168b56023a2027da58ff4a1ce"
+    },
+    {
+      "key": "CLIENT-CL01",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "63c8e1635bc5e04cdcb8743bf3a8281cc54755b7bbf44865396acf0d60403c83"
+    },
+    {
+      "key": "CLIENT-CL02",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "66f4202bf624b7e455549579fee2706f0ca8d8d92f0bc9445eb7316d9b30fc5f"
+    },
+    {
+      "key": "CLIENT-CL03",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "51aac34647c86b3ce21b3683a8eb32f53e16e221476c813afbedc97ee289a689"
+    },
+    {
+      "key": "CLIENT-CL04",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "697568cf946291fd814947724f4fb17334f78d052331185c308e480ef642dc81"
+    },
+    {
+      "key": "CLIENT-CL05",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "7bff0451297809f1952bb7c268a7fa71aa31035e4986a324c1735f577288f1c3"
+    },
+    {
+      "key": "CLIENT-CL06",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "6e004bf092b97a72744aca6ce8842c78fe19eb5de9404370abe81fe62b418aca"
+    },
+    {
+      "key": "CLIENT-CL07",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "f7226140b0ee03ae0ff5b380bb39d9fdc52813000d15f8e176fc7b9d98497b18"
+    },
+    {
+      "key": "CLIENT-CL08",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "bc9c676e19a1cc1b5211d39f774ce13850d98c431e2b4895ae55009dc9cf230b"
+    },
+    {
+      "key": "CLIENT-CL09",
+      "fields": 5,
+      "public_records": 0,
+      "expected_bundle": "18d7a3a2bf893a0257b33113965a67405354f62bee9a698a659f6d82e6b8de5a"
+    },
+    {
+      "key": "CLIENT-CL10",
+      "fields": 2,
+      "public_records": 0,
+      "expected_bundle": "a4e09751b11572d9fe6401ef79b3e640e75aa3f8ba1e35a519a8cb8428a5ab07"
+    },
+    {
+      "key": "CLIENT-CL13",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "f2f323b199709f72da11f29cf5b6a70840284e58ab06e0f37acce587751959a2"
+    },
+    {
+      "key": "CLIENT-CL14",
+      "fields": 2,
+      "public_records": 0,
+      "expected_bundle": "79bc9959bf8649041285b38a8ee4ec345ec1c7c2a3a3eb93f5d3c94a05b455fb"
+    },
+    {
+      "key": "CLIENT-CL15",
+      "fields": 2,
+      "public_records": 0,
+      "expected_bundle": "22f9bc60703a07916d6bfd4e337ad2ac4b04a9f2ac305b24a95d8252c68811a4"
+    },
+    {
+      "key": "CLIENT-CL16",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "7af4a791c1b13abcf435a1fe014e9e1a41127739d0070dac1d94f0ff28b54aaa"
+    },
+    {
+      "key": "CLIENT-CL17",
+      "fields": 2,
+      "public_records": 0,
+      "expected_bundle": "1596052b62f7cacdca4acc1ea6801ed56eb31d832c0a6978d5cd118c117cd32d"
+    },
+    {
+      "key": "CLIENT-CL18",
+      "fields": 2,
+      "public_records": 0,
+      "expected_bundle": "92d298152ea1e4d110d7fb8788b20176a9bdeb9963c2e9b3500f8af6cd713272"
+    },
+    {
+      "key": "CLIENT-CL19",
+      "fields": 2,
+      "public_records": 0,
+      "expected_bundle": "be1f9242ff839fec6892537f1c852d2e277f83a13b2aa7e6601e0935b069d30e"
+    },
+    {
+      "key": "LIW",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "e873cec1eaf5a2f80d96f263e858b4b12f39c4036778178b4bed02107986df04"
+    },
+    {
+      "key": "CY01",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "614546a952d825d3a7a72902f271306e34327b3cf0186ef520a0f290f1a42c54"
+    },
+    {
+      "key": "CY02",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "8d48128f43422d713c7987499927146aea1cfbcd00522956c1bb599addad5940"
+    },
+    {
+      "key": "CY03",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "744ccf0af9cec8cd0caae3428c54106c00470ebf18498ae80aae1737feb7dd13"
+    },
+    {
+      "key": "CY04",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "7a7190f6da7ea986c0627b7d7a34683c8eed5c59518f4efe3dee418d00961f8f"
+    },
+    {
+      "key": "CY05",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "c68840ea0c76cc756f34fd351201accab03dd94e80ceff70c5522987c20a35fc"
+    },
+    {
+      "key": "LT01",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "e60337a95cf8ced151beea597a8be4c553d349ea803c09b25ddcba14d26484b2"
+    },
+    {
+      "key": "SS01",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "b74e17d47e132c88c15babdb16c05b4debcdd1cbcffe0bf51ab07099255daf28"
+    },
+    {
+      "key": "SS09",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "8a3ec953811e4a954967be5656e30113c8745a29330d68917cf9546a7ce343b2"
+    },
+    {
+      "key": "SS10",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "3e9b2431b567c914243b8730196c8ff7151715d14b2ca7e631833caf43a7c933"
+    },
+    {
+      "key": "SS11",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "b6b08f570d33e268f5ea3ef4636267f59d81232501f70ccd405e6a543ce72d6e"
+    },
+    {
+      "key": "ZT02",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "f1d1ec84933b3301aead92596ce40b6cf6e506e76c1d3ffd9c0c675c60d58d56"
+    },
+    {
+      "key": "ZT03",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "e4229522be7d4f2ae147bf2fd6203cb6d38404803c99507c0385d4ddefeb09be"
+    },
+    {
+      "key": "ZT04",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "28d8cbf583db12b7fda3eb17edd0838c1b9fc6bb10ee4d8bf2679445fa02e1d8"
+    },
+    {
+      "key": "ZT05",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "e78c8e0ee10521d802f7f92af9a0e71f323e743464f765107f7a1d7b9c810cc7"
+    },
+    {
+      "key": "ZT06",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "564528f01e67f6484a10d38d2397df7c263b1112936bd3aa407d6b92549833f3"
+    },
+    {
+      "key": "FN01-FAN",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "e5a111588ba78c49a0e30dd3f7909cf22d37200f712b7663cc438a5dce97c06f"
+    },
+    {
+      "key": "RD01-FAN",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "9c568f12a92f2d89d09c7614a5b5d7ba9f0d1f7b9a7be4e59af612727d8eefa5"
+    },
+    {
+      "key": "LD01A",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "d19efd81ec6eb5e6a193a155adcb4d461d332ed9e0ada5f8233ef214ad198f14"
+    },
+    {
+      "key": "CYL-CL01",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "2dde2868bdd097331b547943108e4a4067e5e6fd5d559cde441da8b518f6c171"
+    },
+    {
+      "key": "CYL-CL02",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "17ed5eac92c5a73290a01882cdf6ad375186f6908c972c2851aad7fb0fa88aa4"
+    },
+    {
+      "key": "CYL-CL03",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "39003eb158ee54b2c2a67601e3bce816d297fb1cb271edd154e8fc4556a11afe"
+    },
+    {
+      "key": "CYL-CL04",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "c410854db35d13e4093f0c2e81661dad7bcb7863777cb804ece626e897212f2c"
+    },
+    {
+      "key": "CYL-CL05",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "060255b9255004e4bec3f801ade468d736ff1ff7252b39461cdb15837afebf80"
+    },
+    {
+      "key": "CYL-CL06",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "1375047c9b87a213a5c74d2d76b4fb38649629428f9b734e7608d1c06682bab3"
+    },
+    {
+      "key": "CYL-CL07",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "a348351fd66a8f668b9c1b566268d20ed91e7d9ea79df81fe3df7001db0727aa"
+    },
+    {
+      "key": "CYL-CL08",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "336a1e5113d4f55dba7b33726fb06a36f424c5d666b66859ba16f078fd2b2564"
+    },
+    {
+      "key": "CYL-CL09",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "8057bbbf9276009a9f931abc336e79abc5ad6da5592f6abaa47997b25071e2c0"
+    },
+    {
+      "key": "CYL-CL10",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "4f9da764e6c6c7b2eeb357853c99b81900d4465e4434ad515d61d6e379849cbd"
+    },
+    {
+      "key": "CYL-CL12",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "31756260470071eb3c2bbcc924a81afff4a9292b8389abe0375cc024daa34187"
+    },
+    {
+      "key": "LS01",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "7d9ad9ff9632a7a560c69338fd0dce725092689463e482b1a010087b68e69647"
+    },
+    {
+      "key": "LS02",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "79a6e02526ec9c4172f21a7b929d4f35684f946869f7f2923f4f12be7e5e7408"
+    },
+    {
+      "key": "LS05",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "8c2929afaa919c981b6bb74574839e0bc21718581d30c4b11bea2fec66a8ec34"
+    },
+    {
+      "key": "LS06",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "be0314b9a3d2aabb0fe965e0db553b42dd66fa471ca970d2fea81d868419ad45"
+    },
+    {
+      "key": "LS09",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "8c8fd3fb89896232a50303c46f5184e1bdcc843fe583fb70787f7a7d65d94b23"
+    },
+    {
+      "key": "LS10",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "4f0d20d748be95d95ba64ce199c7ebdeefba4e9ae7f338c45c0c45c9b8dd3a04"
+    },
+    {
+      "key": "LS15",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "6b9a58af5d6883cd5275cf2f5a7969a229707af54ace174611ee5ab5d6292056"
+    },
+    {
+      "key": "LS16",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "b18dbf305b6e047e0802c78d88c332cb9f5ece8c4163a8f1027a4209970b77b9"
+    },
+    {
+      "key": "LS17",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "0826cebdf0472ba942b6848e221b24b3b90858c1d998c0f2341a1d47596e5d66"
+    },
+    {
+      "key": "LS18",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "33f7e243f4a7d2c0fcf33189b9ebdb0578ac61e5a994b22696e9dad8e9197788"
+    },
+    {
+      "key": "LS19",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "ca66bdb5c983a1595650706377b42b4efde9b029cb0007d83562a0bd3ef00030"
+    },
+    {
+      "key": "LS20",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "c4c535e9f0a3cd524b7746fa2bc876af09f2fa48f0bddfe5081e8e3a0ef1e2d0"
+    },
+    {
+      "key": "LS23",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "4f6143eec545bbd200ec0c5942e15c6c0da7794143e9cf91a52e206fb03b5e06"
+    },
+    {
+      "key": "LS24",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "e826cce9127744429b05a449de4ed59890c93606e4299d2299694eec7ea08ab3"
+    },
+    {
+      "key": "LS25",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "b16b876889db575a4a1cae9db7cfc7741b42c06af5e4be177bb0d6df5cd7264e"
+    },
+    {
+      "key": "LS26",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "82b6ff4757b41200f9854ed0cb8d3b099136cf025def666c2ca7c60212b488a7"
+    },
+    {
+      "key": "LS29",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "ff7c0f259a664d447bcb81022854030cf973a962eb9c733e753000f3a627a844"
+    },
+    {
+      "key": "LS30",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "86d134643a4559fc902104534690af6556b9ef594fbf885feb102242e96b7e15"
+    },
+    {
+      "key": "LS34",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "7e2ae458e2c0bf4e5a901d29ce8431b7a45ebfedaf841142b54aa544909295bd"
+    },
+    {
+      "key": "LS35",
+      "fields": 4,
+      "public_records": 0,
+      "expected_bundle": "02fd8f2880cac08c6bebee4658478c21fb99062aa6448a3b7cd27364995b49f3"
+    },
+    {
+      "key": "LS40",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "387d53ddd75870623d6acc0a20a0e4c2e8cc266822d43fcfbe17eb64624de685"
+    },
+    {
+      "key": "LS41",
+      "fields": 3,
+      "public_records": 0,
+      "expected_bundle": "9c8f78ab0bb4524dc62c307379001c9570830758bac842a64741140d6664b7e4"
+    }
+  ],
+  "page_errors": [],
+  "console_product": [],
+  "external_badge_CSP_count": 891,
+  "external_samples": [
+    {
+      "type": "error",
+      "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ=''. Either the 'unsafe-inline' keyword, a hash ('sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+      "location": {
+        "url": "about:srcdoc",
+        "line": 84,
+        "column": 0,
+        "lineNumber": 84,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "error",
+      "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ=''. Either the 'unsafe-inline' keyword, a hash ('sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+      "location": {
+        "url": "about:srcdoc",
+        "line": 84,
+        "column": 0,
+        "lineNumber": 84,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "error",
+      "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ=''. Either the 'unsafe-inline' keyword, a hash ('sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+      "location": {
+        "url": "about:srcdoc",
+        "line": 84,
+        "column": 0,
+        "lineNumber": 84,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "error",
+      "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ=''. Either the 'unsafe-inline' keyword, a hash ('sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+      "location": {
+        "url": "about:srcdoc",
+        "line": 84,
+        "column": 0,
+        "lineNumber": 84,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "error",
+      "text": "Executing inline script violates the following Content Security Policy directive 'script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ=''. Either the 'unsafe-inline' keyword, a hash ('sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+      "location": {
+        "url": "about:srcdoc",
+        "line": 84,
+        "column": 0,
+        "lineNumber": 84,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "network_failures": [],
+  "badge_script_hashes": [
+    "mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY="
+  ]
+}

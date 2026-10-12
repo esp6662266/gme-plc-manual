@@ -39,7 +39,7 @@
 | documentation | complete_with_gaps | 원본·7영역·누락/비해당·소유 명시 |
 | static_review | passed; unavailable refs explicit | 원본 critical/설비/catalog 및 최종14검사 공통 로그 |
 | ui_records | passed | validation/remaining81/headless-verification.json |
-| publication | pending | 실제 ready/commit/공개 검증 전; PUBLICATION_STATUS 최신 증거 참조 |
+| publication | verified v1.23.0 | exact feature commit abaac928 / Netlify ready / 공개81 / freshclone; PUBLICATION_STATUS 최신 증거 참조 |
 | tia_compile | not_performed | 현재 TIA 환경·프로젝트 필요 |
 | live_cpu | not_performed | 온라인 PLC 읽기/쓰기 미수행 |
 | field_recovery | not_performed | 실제 관찰·조치·복구 자료 필요 |
@@ -53,3 +53,5 @@
 - RO01~04는 상세 확대 대상에서 계속 제외합니다. 산소 제어 루프가 현재 활성화되었다고 표시하지 않습니다.
 
 명령/종료코드·Netlify/Release/freshclone/ZIP/CSP·정리는 공통 REMAINING81-VERIFICATION.md를 확인합니다. 다음 작업은 새 증거에 따른 현재 프로젝트/TIA·실물·현장 대조이며 시뮬레이터 개발/실행은 영구중지입니다.
+
+최종: v1.23.0 실제게시·공개UI·freshclone·합성테스트파일 정리 완료. 자료 공백·TIA·현재CPU·실물·현장 복구는 계속 미확정입니다.

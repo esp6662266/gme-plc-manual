@@ -1,4 +1,8 @@
-## v1.23.0 로컬 검증 완료 · 실제 게시 대기
+## v1.23.0 남은81개 문서 게시·검증·정리 완료
+
+현재147개·과거RO01/02 포함149개 문서를 보존합니다. [실제 사이트](https://gme-plc-manual.netlify.app/all-in-one/) · [고정 ZIP](https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.23.0) · [검증/정리 기록](REMAINING81-VERIFICATION.md). 실물·TIA·현재CPU·현장복구는 미확정입니다. 아래 이전 항목은 당시 상태입니다.
+
+## v1.23.0 게시 전 로컬 검증 기록
 
 남은81개 문서를 추가했습니다. 현재2차129개·전체147개 문서와 RO01/02 과거문서2개를 보존하여 총149개이며 식별보고서3개는 별도입니다. Dots 원초안71개를 보존/독립검증했고, 원초안 없는9개와 영구중지 참조1개를 현재 원본으로 작성했습니다. [검증 기록](REMAINING81-VERIFICATION.md)과 [실제 게시 상태](PUBLICATION_STATUS.md)를 확인합니다. 현재 CPU·실물·TIA·현장 복구는 확인 전입니다.
 

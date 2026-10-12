@@ -1,5 +1,5 @@
 {
-  "status": "local_verified_publication_pending",
+  "status": "documentation_published_verified_with_gaps",
   "baseline": "93fa00c447229202bbffc4096c2fe004f12a83ae",
   "starting_version": "1.22.0",
   "previously_published_current_phase2": 48,
@@ -19,7 +19,7 @@
         "SYS-RUNHOURS",
         "SYS-SAFETY"
       ],
-      "status": "local_verified_publication_pending"
+      "status": "documentation_published_verified_with_gaps"
     },
     {
       "name": "sensors-motors",
@@ -38,7 +38,7 @@
         "RD01-FAN",
         "LD01A"
       ],
-      "status": "local_verified_publication_pending"
+      "status": "documentation_published_verified_with_gaps"
     },
     {
       "name": "external-passive",
@@ -69,7 +69,7 @@
         "CY04",
         "CY05"
       ],
-      "status": "local_verified_publication_pending"
+      "status": "documentation_published_verified_with_gaps"
     },
     {
       "name": "components",
@@ -108,14 +108,14 @@
         "LS40",
         "LS41"
       ],
-      "status": "local_verified_publication_pending"
+      "status": "documentation_published_verified_with_gaps"
     },
     {
       "name": "stopped-block-reference",
       "keys": [
         "SYS-SIMULATION"
       ],
-      "status": "local_verified_publication_pending"
+      "status": "documentation_published_verified_with_gaps"
     }
   ],
   "actual_new_published": 0,
@@ -149,7 +149,7 @@
   ],
   "documentation_authored": 81,
   "ui_verified": 81,
-  "newly_published": 0,
+  "newly_published": 81,
   "static_verified": 81,
   "pdf_verified": 81,
   "pdf_pages": 169,
@@ -183,5 +183,15 @@
     "original_dots_drafts": 71,
     "stopped_assets": 5
   },
-  "consultation_originals_verified": 71
+  "consultation_originals_verified": 71,
+  "current_phase2_published": 129,
+  "current_total_published": 147,
+  "feature_commit": "abaac9281913ab3688a6e21ca01023c0cff66f09",
+  "release": "https://github.com/esp6662266/gme-plc-manual/releases/tag/v1.23.0",
+  "netlify_deploy": "6acce5dd7dc51de049cdb6a5",
+  "publication_verified": true,
+  "cleanup": "completed",
+  "tia_compile": "not_performed",
+  "live_cpu": "not_performed",
+  "field_recovery": "not_performed"
 }

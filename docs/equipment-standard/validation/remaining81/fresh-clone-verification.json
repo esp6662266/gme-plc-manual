@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "commit": "abaac9281913ab3688a6e21ca01023c0cff66f09",
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "check:python"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "verify:bc01"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "verify:equipment"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "all-in-one/verify-catalog-standards.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "all-in-one/verify-remaining-standards.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "tests": 8,
+  "equipment_profiles": 149,
+  "catalog_profiles": 131,
+  "critical_new_profiles": 81,
+  "NETLIFY_build": "passed",
+  "git_changes": 0,
+  "python": "explicit supported GME_PYTHON"
+}
