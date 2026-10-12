@@ -1,0 +1,446 @@
+{
+  "equipment": [
+    {
+      "key": "TC01",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "선언과 주소",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "TC01 환산 고유 결속",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM 실제 PDF 렌더",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "TC01 고유 범위고장",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰안",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 26,
+      "paths": 3
+    },
+    {
+      "key": "TC02",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "IO/HMI와 정확한 선언",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "TC02 환산 고유 결속",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 전달 경로와 실제 PDF",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "TC02_OFR",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰 설계",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 23,
+      "paths": 3
+    },
+    {
+      "key": "TC06",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "선언과 저장부",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "TC06 고유 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 끝점·실제 PDF 판독",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "고유 경보·타이머·복구",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 읽기 전용 관찰 계획",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 12,
+      "paths": 3
+    },
+    {
+      "key": "TC05",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "선언·주소·쓰기",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "고유 호출 조건",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "OEM FG79 = PDF80",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "TC05 온도경보 고유 회로",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·수리 기록 지침",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 23,
+      "paths": 3
+    },
+    {
+      "key": "TC07",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "원본 선언·주소",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "고유 호출 전체 핀",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 끝점·실제 PDF",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·복구",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 14,
+      "paths": 3
+    },
+    {
+      "key": "TC09",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "선언 결속",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "고유 환산 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 끝점·실제 PDF 확인",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "고유 알람·복구·Word 겹침",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 읽기 전용 관찰 계획",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 26,
+      "paths": 3
+    },
+    {
+      "key": "TC04",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "I/O·HMI",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "고유 환산 호출",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 끝점·실제 PDF",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·복구",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 관찰·수리 기록 설계",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 19,
+      "paths": 3
+    },
+    {
+      "key": "TC10",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "I/O·HMI·백업 저장값",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "제어 구조·호출·환산",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 전달 경로·실제 PDF",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·복구·쓰기 범위",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 읽기전용 관찰 계획",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 11,
+      "paths": 0
+    },
+    {
+      "key": "TC11",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "I/O·HMI와 부재 검색의 한계",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "제어 구조와 소유 경계",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "TC11 고유 끝점",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "알람·복구",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 비조작 관찰 계획",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 0,
+      "paths": 0
+    },
+    {
+      "key": "TC03",
+      "sections": [
+        {
+          "area": 0,
+          "title": "설비·자료 기준",
+          "invalid": false
+        },
+        {
+          "area": 1,
+          "title": "고유 선언·주소",
+          "invalid": false
+        },
+        {
+          "area": 2,
+          "title": "TC03 환산의 직접 핀",
+          "invalid": false
+        },
+        {
+          "area": 3,
+          "title": "전기 끝점·실제 PDF",
+          "invalid": false
+        },
+        {
+          "area": 4,
+          "title": "고유 경보·복구",
+          "invalid": false
+        },
+        {
+          "area": 5,
+          "title": "증상별 읽기 전용 관찰",
+          "invalid": false
+        },
+        {
+          "area": 6,
+          "title": "현재 근거 공백과 판정 기준",
+          "invalid": false
+        }
+      ],
+      "positions": 32,
+      "paths": 3
+    }
+  ],
+  "version": "1.21.0",
+  "TC10_no_path": "전기도면·원본 래더 나란히 보기\n닫기\n\nTC10 보존 자료와 사용자 기록 · 현재 CPU·실물·현장 복구 확인 전\n\n좌측은 보존 도면, 우측은 원본 XML의 Part·Wire 연결 자료입니다. TIA 화면 배치·실행 재현은 별도 확인입니다.\n\n전기 전달 경로\n직접 전기 전달 경로 미확보\n\n직접 전기 전달 경로는 미확보입니다. 보존 도면과 원본 위치를 각각 비교하며 실제 배선 대응을 확정하지 않습니다. 현행OFF/실행별도\n\n보존 도면\n축소\n맞추기\n확대\n원본 PDF ↗\n원본 PLC 연결 자료\n비교할 원본 위치\nLAD1619 · Part 282\nLAD1619 · Wire 280\nLAD1619 · Wire 283\nLAD1619 · Wire 284\nLAD1658 · Part 161\nLAD1658 · Part 164\nLAD1658 · Part 167\nLAD1658 · Part 170\nLAD1658 · Part 174\nLAD1658 · Part 177\nLAD1658 · Part 181\nLAD1658 · Part 185\nLAD1658 · Part 190\nLAD1658 · Part 193\nLAD1658 · Part 23\nLAD1658 · Part 255\nLAD1658 · Part 258\nLAD1658 · Part 259\nLAD1658 · Part 47\nLAD1658 · Wire 21\nLAD1658 · Wire 22\nLAD1658 · Wire 220\nLAD1658 · Wire 225\nLAD1658 · Wire 226\nLAD1658 · Wire 227\nLAD1658 · Wire 228\nLAD1658 · Wire 229\nLAD1658 · Wire 230\nLAD1658 · Wire 231\nLAD1658 · Wire 232\nLAD1658 · Wire 233\nLAD1658 · Wire 234\nLAD1658 · Wire 235\nLAD1658 · Wire 236\nLAD1658 · Wire 237\nLAD1658 · Wire 238\nLAD1658 · Wire 239\nLAD1658 · Wire 240\nLAD1658 · Wire 241\nLAD1658 · Wire 242\nLAD1658 · Wire 243\nLAD1658 · Wire 244\nLAD1658 · Wire 245\nLAD1658 · Wire 246\nLAD1658 · Wire 247\nLAD1658 · Wire 25\nLAD1658 · Wire 252\nLAD1658 · Wire 253\nLAD1658 · Wire 256\nLAD1658 · Wire 257\nLAD1658 · Wire 26\nLAD1658 · Wire 27\nLAD1658 · Wire 28\nLAD1658 · Wire 30\nLAD1658 · Wire 31\nLAD1658 · Wire 35\nLAD1658 · Wire 36\nLAD1658 · Wire 37\nLAD1658 · Wire 38\nLAD1658 · Wire 39\nLAD1658 · Wire 48\nLAD1658 · Wire 49\nLAD1659 · Part 162\nLAD1659 · Part 171\nLAD1659 · Wire 168\nLAD1659 · Wire 169\nLAD1659 · Wire 170\nLAD1659 · Wire 172\nLAD1659 · Wire 173\nLAD1734 · Part 125\nLAD1734 · Wire 119\nLAD1734 · Wire 120\nLAD1734 · Wire 121\nLAD1734 · Wire 122\nLAD1734 · Wire 123\nLAD1734 · Wire 124\nOFF→CRef106.en · LAD1734 · Wire 126\nLAD1734 · Wire 127\nLAD1734 · Wire 24\n원본 따로 열기 ↗",
+  "TC11_unavailable": {
+    "disabled": true,
+    "frame_hidden": true,
+    "frame_src": null,
+    "image": "https://gme-plc-manual.netlify.app/all-in-one/assets/catalog-circuits/PID_1684n002I-P001.png",
+    "image_width": 2924,
+    "source_hash": null,
+    "text": "전기도면·원본 래더 나란히 보기\n닫기\n\nTC11 보존 자료와 사용자 기록 · 현재 CPU·실물·현장 복구 확인 전\n\n좌측은 보존 도면, 우측은 원본 XML의 Part·Wire 연결 자료입니다. TIA 화면 배치·실행 재현은 별도 확인입니다.\n\n전기 전달 경로\n직접 전기 전달 경로 미확보\n\n직접 전기 전달 경로는 미확보입니다. 보존 도면과 원본 위치를 각각 비교하며 실제 배선 대응을 확정하지 않습니다. 직접 대응·실물 연결은 미확정입니다.\n\n보존 도면\n축소\n맞추기\n확대\n원본 PDF ↗\n원본 PLC 연결 자료\n비교할 원본 위치\n\n이 설비의 고유 원본 PLC 연결 자료는 확보되지 않았습니다. 자동으로 배정하지 않습니다.",
+    "image_render_checked": true
+  },
+  "backup": "모든 설비 통합 백업·복원\n닫기\n\n이 브라우저에 저장한 모든 설비의 메모·수리 기록을 JSON 파일 하나로 보관하고 옮깁니다. 작성 중인 초안은 현재 브라우저에 유지합니다.\n\n1. 전체 기록을 한 파일로 백업\n\n0개 설비 · 0건 · 설비 선택과 관계없이 전체를 포함합니다.\n\n모든 설비 통합 JSON 다운로드\n2. 통합 파일 가져오기\n\n기존 전체 백업과 개별 JSON도 가져올 수 있습니다. 미리보기에서 충돌 선택 후 저장합니다. 기존에만 있는 기록과 추가 항목은 보존하며, 저장할 기록을 삭제하지 않습니다.\n\n통합 JSON 백업 파일\n\n최대64MB / 50,000건. 복원은 저장한 메모·수리 기록에 적용합니다.",
+  "unused_RO": {
+    "RO01": "- link \"본문으로 이동\":\n  - /url: \"#workspace\"\n- complementary \"통합 메뉴와 설비 선택\":\n  - link \"G GME ALL-IN-ONE 설비 매뉴얼 · PLC 작업실\":\n    - /url: \"#overview\"\n    - generic: G\n    - text: GME ALL-IN-ONE\n    - generic: 설비 매뉴얼 · PLC 작업실\n  - navigation \"프로그램 메뉴\":\n    - button \"통합 현황\"\n    - button \"공정 배치도·설비카드\"\n    - button \"시뮬레이터 · 영구 중지\"\n    - button \"PLC 호출·신호 구조\"\n    - button \"시험·검증\"\n    - button \"근거 검토·확인\"\n    - button \"개선·작업 메모\"\n    - button \"전체 자료\"\n    - button \"모든 설비 통합 백업·복원\"\n  - region \"설비 선택\":\n    - heading \"설비 선택\" [level=2]\n    - generic: 2 / 248\n    - group \"설비 목록 범위\":\n      - button \"우선 23\"\n      - button \"전체 248\" [pressed]\n    - generic: 설비·주소 검색\n    - searchbox \"설비·주소 검색\": RO01\n    - generic: 설비 영역\n    - combobox \"설비 영역\":\n      - option \"전체 영역\" [selected]\n      - option \"원료 이송\"\n      - option \"공정 본체\"\n      - option \"연소·열회수\"\n      - option \"집진·석회\"\n      - option \"제어 밸브\"\n      - option \"공압 밸브\"\n      - option \"외부 연동\"\n      - option \"계측\"\n      - option \"하위 구성품\"\n      - option \"필터 세정 밸브\"\n      - option \"공통 시스템\"\n    - generic \"설비 목록\":\n      - button \"MV05 · 모터 구동 밸브 제어 밸브\":\n        - text: MV05 · 모터 구동 밸브\n        - generic: 제어 밸브\n      - button \"RO01 · 산소 분석 채널 미사용 산소농도계 · 사용자 제공\" [pressed]:\n        - text: RO01 · 산소 분석 채널\n        - generic: 미사용 산소농도계 · 사용자 제공\n  - paragraph:\n    - text: v1.21.0 · 매뉴얼·수리·구조 분석\n    - text: 시뮬레이터 영구 중지\n- banner:\n  - generic: 매뉴얼 · 수리 · 구조 분석 · 개선\n  - strong: 하나의 화면, 같은 설비 기준\n  - text: 매뉴얼 작성 중\n  - generic: 시뮬레이터 영구 중지\n- region \"산소 분석 채널\":\n  - generic: 계측 · RO01\n  - heading \"산소 분석 채널\" [level=1]\n  - paragraph: 미사용 산소농도계 · 사용자 제공 · 과거 자료 보존\n  - button \"설비 요약\"\n- navigation \"선택 설비 작업\":\n  - button \"설비 요약\"\n  - button \"매뉴얼\"\n  - button \"진단·수리\"\n  - button \"수리 기록\"\n  - button \"I/O·HMI\"\n  - button \"제어 명세\"\n  - button \"래더\"\n  - button \"호출·신호 구조\"\n  - button \"도면\"\n  - button \"시뮬레이터 · 영구 중지\"\n  - button \"시험\"\n  - button \"확인 대장\"\n- main:\n  - region \"RO01 자료 비교와 기록 보존\":\n    - strong: RO01 자료·기록 도구\n    - button \"도면·래더 나란히\"\n    - button \"통합 백업·복원\"\n    - button \"점검 전후 비교\"\n    - button \"관찰 결과 보고서\"\n  - paragraph: RO01 / GME-STD-1.0.0\n  - heading \"RO01 · 표준 매뉴얼 작업실\" [level=2]\n  - paragraph: 검토한 원본과 초안을7영역으로 연결합니다. 현재 CPU·실물·현장 복구는 확인 전입니다.\n  - button \"기본 글자\" [pressed]\n  - button \"큰 글자\"\n  - button \"본문 넓게 보기\"\n  - button \"도면 작업실\"\n  - text: RO01 매뉴얼 내부 검색\n  - searchbox \"RO01 매뉴얼 내부 검색\"\n  - button \"찾기\"\n  - button \"지우기\"\n  - paragraph: \"이 설비의 원본 태그·주소·조건·수리 내용을 찾습니다. 예: RO01, IW352, Oxigen_RO01, 상태77, T68, T117, OFF, MV05\"\n  - group \"RO01 매뉴얼 종류\":\n    - button \"설비·자료 기준 2개 세부 항목\" [pressed]:\n      - strong: 설비·자료 기준\n      - generic: 2개 세부 항목\n    - button \"I/O·HMI 3개 세부 항목\":\n      - strong: I/O·HMI\n      - generic: 3개 세부 항목\n    - button \"제어 구조 5개 세부 항목\":\n      - strong: 제어 구조\n      - generic: 5개 세부 항목\n    - button \"전기 전달 경로 1개 세부 항목\":\n      - strong: 전기 전달 경로\n      - generic: 1개 세부 항목\n    - button \"알람·복구 1개 세부 항목\":\n      - strong: 알람·복구\n      - generic: 1개 세부 항목\n    - button \"증상별 수리 1개 세부 항목\":\n      - strong: 증상별 수리\n      - generic: 1개 세부 항목\n    - button \"완료 기준 1개 세부 항목\":\n      - strong: 완료 기준\n      - generic: 1개 세부 항목\n  - navigation \"RO01 세부 항목\":\n    - heading \"설비·자료 기준\" [level=3]\n    - button \"설비·자료 기준\" [pressed]\n    - button \"검토 원본·해시와 자료 기준\"\n  - generic: 1 / 2\n  - button \"이전 항목\" [disabled]\n  - button \"다음 항목\"\n  - heading \"설비·자료 기준\" [level=3]\n  - list:\n    - listitem: catalog_id RO01, 이름 산소 분석 채널, kind sensor, group 계측, parent 없음/depth0, priority_key 없음. INVENTORY catalog[8], equipment[86], phase2/planned. 별칭 r0-01/r001/r0_01. 같은 이름의 RO02~04는 별도 ID다.\n    - text: 범위는\n    - code: progress/TASK3-BATCH06-SCOPE.json\n    - text: 및\n    - code: GME-CATALOG-OVERLAP-REVIEW.json\n    - text: RO01 행. 고유 ID·현장 동일성 미확정을 유지한다. 자체 문서 조사 허용이며 로컬2차133 통합 제외는 유지한다.\n    - text: 기준 저장소\n    - code: source-mv06\n    - text: \", Git\"\n    - code: abcf31c5030bc7ef8749ed8e869a857f2387a28a\n    - text: \", VERSION v1.12.0. 저장소 URL https://github.com/esp6662266/gme-plc-manual . 현재 main/현재 CPU/현장 최신 도면을 의미하지 않는다.\"\n    - listitem: AGENTS, EXPANSION-WORK, VERSION/WORKSPACE-HANDOFF/PUBLICATION_STATUS/ACTIVE-WORK 최신 항목, 스킬/source-map, WORK-STANDARD/WORK-ITEM-TEMPLATE/INVENTORY/START-GPT61을 읽었다. 배치의 최신 병렬·읽기 전용 지시를 적용했다. 원본 생성기·preflight/test/build 실행 없이 자체 XML파서·해시 대조·PDF렌더만 수행했다.\n    - text: 쓰기 범위는\n    - code: drafts/RO01-DOTS-DRAFT.md\n    - text: \",\"\n    - code: extracts/RO01/\n    - text: 뿐이다. 원본·코드·대장·버전·배포·운영기록·SEJIN 변경0. 시뮬레이터 작성/수정/생성/실행/행동시험0. PLC/현장/보호값 변경0. 새 Work/Codex/하위 재위임/사용자 Mac 접근0.\n    - listitem: 모델·추론 수준의 런타임 증명은 미확인이다. 로컬 TIA 추가 접근권한 없음. 문서에 모델을 적는 것으로 선택 확인을 대신하지 않는다.\n  - paragraph:\n    - text: 이하 원본 경로 기본은\n    - code: source-mv06/all-in-one/\n    - text: 다.\n    - code: \"0498\"\n    - text: 등의 약칭은\n    - code: sources/decoded-original/0498-FlgNet.xml\n    - text: ; 선언 약칭은\n    - code: NNNN-IdentXmlPart.xml\n    - text: 이다. LAD 문서번호와 NID를 구분한다. 자동 refs 추출은 RID/UID/NID 후보를 모두 보존하여 동명이 참조가 섞일 수 있으므로, 아래 주장은 해당 블록 선언 파일을 직접 확인한 것만 사용했다.\n  - table:\n    - rowgroup:\n      - row \"7영역 상태 확보 범위 미확정\":\n        - columnheader \"7영역\"\n        - columnheader \"상태\"\n        - columnheader \"확보 범위\"\n        - columnheader \"미확정\"\n    - rowgroup:\n      - row \"설비·자료 기준 적용 고유 채널·판본·소유·상충 현행 실물/프로브 동일성\":\n        - cell \"설비·자료 기준\"\n        - cell \"적용\"\n        - cell \"고유 채널·판본·소유·상충\"\n        - cell \"현행 실물/프로브 동일성\"\n      - row \"I/O·HMI 적용/일부 미확보 IW352:P, DB1/4/13, DB3 bits, HMI 설정 주소 현재 화면/단위/쓰기/값\":\n        - cell \"I/O·HMI\"\n        - cell \"적용/일부 미확보\"\n        - cell \"IW352:P, DB1/4/13, DB3 bits, HMI 설정 주소\"\n        - cell \"현재 화면/단위/쓰기/값\"\n      - row \"제어 적용 선형화·호출·소비 블록·NOT·S/R CPU 실행순서·활성·외부 Writer\":\n        - cell \"제어\"\n        - cell \"적용\"\n        - cell \"선형화·호출·소비 블록·NOT·S/R\"\n        - cell \"CPU 실행순서·활성·외부 Writer\"\n      - row \"전기 끝점 적용 송신기/프로브/단자/AI·시공케이블, 질소 경계 현행 설치·승인 준공·교정\":\n        - cell \"전기 끝점\"\n        - cell \"적용\"\n        - cell \"송신기/프로브/단자/AI·시공케이블, 질소 경계\"\n        - cell \"현행 설치·승인 준공·교정\"\n      - row \"알람·복구 적용/복구 미확보 4개 알람식+OFR, BR01/MV05 영향 승인 복구절차·현장 결과\":\n        - cell \"알람·복구\"\n        - cell \"적용/복구 미확보\"\n        - cell \"4개 알람식+OFR, BR01/MV05 영향\"\n        - cell \"승인 복구절차·현장 결과\"\n      - row \"증상 관찰 적용 읽기 전용 비교점·기록 틀 실제 측정/조치 없음\":\n        - cell \"증상 관찰\"\n        - cell \"적용\"\n        - cell \"읽기 전용 비교점·기록 틀\"\n        - cell \"실제 측정/조치 없음\"\n      - row \"완료·누락 적용 상태 분리·다음 자료 통합/UI/독립 검토/TIA/현장\":\n        - cell \"완료·누락\"\n        - cell \"적용\"\n        - cell \"상태 분리·다음 자료\"\n        - cell \"통합/UI/독립 검토/TIA/현장\"\n  - button \"RO01 자료\"\n  - generic: 1 / 2\n  - button \"이전 항목\" [disabled]\n  - button \"다음 항목\"\n  - complementary:\n    - heading \"이 설비의 근거·기록\" [level=3]\n    - button \"기본 자료\"\n    - button \"제어 명세\"\n    - button \"알람 분석\"\n    - button \"자료 대기\"\n    - button \"관찰 기록\"\n    - heading \"확인 경계\" [level=3]\n    - paragraph: RO01 고유 IW352:P→Int W130·SAM=None 원시미러 W68·OFF 호출/ON IN0를 구분합니다. 산소단위/현재계수·CPU·실물·현장복구 미확정. 버너상태77·MV05·투입억제·질소는 관련 별도소유이며 RO01→Q6.4 직접Writer 미확보입니다. OEM80 vs 시공81 태그·AB01 vs MV03/HE01 위치 상충을 유지합니다.\n    - paragraph: 문서·정적 근거·화면/저장·게시·TIA·현재CPU·현장복구 상태를 나누어 확인합니다.\n- contentinfo:\n  - text: 원본·정적 해석·실행 결과·현장 확인을 구분하여 관리합니다.\n  - status\n- iframe [id=\"nl-badge-frame\"]:\n  - button \"Powered by Netlify — build your own site\":\n    - generic: Powered by Netlify",
+    "RO02": "- link \"본문으로 이동\":\n  - /url: \"#workspace\"\n- complementary \"통합 메뉴와 설비 선택\":\n  - link \"G GME ALL-IN-ONE 설비 매뉴얼 · PLC 작업실\":\n    - /url: \"#overview\"\n    - generic: G\n    - text: GME ALL-IN-ONE\n    - generic: 설비 매뉴얼 · PLC 작업실\n  - navigation \"프로그램 메뉴\":\n    - button \"통합 현황\"\n    - button \"공정 배치도·설비카드\"\n    - button \"시뮬레이터 · 영구 중지\"\n    - button \"PLC 호출·신호 구조\"\n    - button \"시험·검증\"\n    - button \"근거 검토·확인\"\n    - button \"개선·작업 메모\"\n    - button \"전체 자료\"\n    - button \"모든 설비 통합 백업·복원\"\n  - region \"설비 선택\":\n    - heading \"설비 선택\" [level=2]\n    - generic: 2 / 248\n    - group \"설비 목록 범위\":\n      - button \"우선 23\"\n      - button \"전체 248\" [pressed]\n    - generic: 설비·주소 검색\n    - searchbox \"설비·주소 검색\": RO02\n    - generic: 설비 영역\n    - combobox \"설비 영역\":\n      - option \"전체 영역\" [selected]\n      - option \"원료 이송\"\n      - option \"공정 본체\"\n      - option \"연소·열회수\"\n      - option \"집진·석회\"\n      - option \"제어 밸브\"\n      - option \"공압 밸브\"\n      - option \"외부 연동\"\n      - option \"계측\"\n      - option \"하위 구성품\"\n      - option \"필터 세정 밸브\"\n      - option \"공통 시스템\"\n    - generic \"설비 목록\":\n      - button \"RO01 · 산소 분석 채널 미사용 산소농도계 · 사용자 제공\":\n        - text: RO01 · 산소 분석 채널\n        - generic: 미사용 산소농도계 · 사용자 제공\n      - button \"RO02 · 산소 분석 채널 미사용 산소농도계 · 사용자 제공\" [pressed]:\n        - text: RO02 · 산소 분석 채널\n        - generic: 미사용 산소농도계 · 사용자 제공\n  - paragraph:\n    - text: v1.21.0 · 매뉴얼·수리·구조 분석\n    - text: 시뮬레이터 영구 중지\n- banner:\n  - generic: 매뉴얼 · 수리 · 구조 분석 · 개선\n  - strong: 하나의 화면, 같은 설비 기준\n  - text: 매뉴얼 작성 중\n  - generic: 시뮬레이터 영구 중지\n- region \"산소 분석 채널\":\n  - generic: 계측 · RO02\n  - heading \"산소 분석 채널\" [level=1]\n  - paragraph: 미사용 산소농도계 · 사용자 제공 · 과거 자료 보존\n  - button \"설비 요약\"\n- navigation \"선택 설비 작업\":\n  - button \"설비 요약\"\n  - button \"매뉴얼\"\n  - button \"진단·수리\"\n  - button \"수리 기록\"\n  - button \"I/O·HMI\"\n  - button \"제어 명세\"\n  - button \"래더\"\n  - button \"호출·신호 구조\"\n  - button \"도면\"\n  - button \"시뮬레이터 · 영구 중지\"\n  - button \"시험\"\n  - button \"확인 대장\"\n- main:\n  - region \"RO02 자료 비교와 기록 보존\":\n    - strong: RO02 자료·기록 도구\n    - button \"도면·래더 나란히\"\n    - button \"통합 백업·복원\"\n    - button \"점검 전후 비교\"\n    - button \"관찰 결과 보고서\"\n  - paragraph: RO02 / GME-STD-1.0.0\n  - heading \"RO02 · 표준 매뉴얼 작업실\" [level=2]\n  - paragraph: 검토한 원본과 초안을7영역으로 연결합니다. 현재 CPU·실물·현장 복구는 확인 전입니다.\n  - button \"기본 글자\" [pressed]\n  - button \"큰 글자\"\n  - button \"본문 넓게 보기\"\n  - button \"도면 작업실\"\n  - text: RO02 매뉴얼 내부 검색\n  - searchbox \"RO02 매뉴얼 내부 검색\"\n  - button \"찾기\"\n  - button \"지우기\"\n  - paragraph: \"이 설비의 원본 태그·주소·조건·수리 내용을 찾습니다. 예: RO02, R002, IW354, DB13.DBW70, DB1.DBW128, H705, T117, 0533\"\n  - group \"RO02 매뉴얼 종류\":\n    - button \"설비·자료 기준 2개 세부 항목\" [pressed]:\n      - strong: 설비·자료 기준\n      - generic: 2개 세부 항목\n    - button \"I/O·HMI 2개 세부 항목\":\n      - strong: I/O·HMI\n      - generic: 2개 세부 항목\n    - button \"제어 구조 3개 세부 항목\":\n      - strong: 제어 구조\n      - generic: 3개 세부 항목\n    - button \"전기 전달 경로 3개 세부 항목\":\n      - strong: 전기 전달 경로\n      - generic: 3개 세부 항목\n    - button \"알람·복구 3개 세부 항목\":\n      - strong: 알람·복구\n      - generic: 3개 세부 항목\n    - button \"증상별 수리 1개 세부 항목\":\n      - strong: 증상별 수리\n      - generic: 1개 세부 항목\n    - button \"완료 기준 1개 세부 항목\":\n      - strong: 완료 기준\n      - generic: 1개 세부 항목\n  - navigation \"RO02 세부 항목\":\n    - heading \"설비·자료 기준\" [level=3]\n    - button \"설비·자료 기준\" [pressed]\n    - button \"검토 원본·해시와 자료 기준\"\n  - generic: 1 / 2\n  - button \"이전 항목\" [disabled]\n  - button \"다음 항목\"\n  - heading \"설비·자료 기준\" [level=3]\n  - table:\n    - rowgroup:\n      - row \"항목 적용과 원본 근거 미확정 경계\":\n        - columnheader \"항목\"\n        - columnheader \"적용과 원본 근거\"\n        - columnheader \"미확정 경계\"\n    - rowgroup:\n      - row \"식별 INVENTORY catalog[9] RO02, sensor/계측, parent=null, phase2 planned. 별칭 r0-02/r002/r0_02는 배정 scope 및 equipment 자료의 탐색 키 동일 이름 RO01/RO03/RO04는 별도 ID. 실물 일치 완료 아님\":\n        - cell \"식별\"\n        - cell \"INVENTORY catalog[9] RO02, sensor/계측, parent=null, phase2 planned. 별칭 r0-02/r002/r0_02는 배정 scope 및 equipment 자료의 탐색 키\"\n        - cell \"동일 이름 RO01/RO03/RO04는 별도 ID. 실물 일치 완료 아님\"\n      - row \"소유 센서소자→80RO-02 H705→PEW354→PLC 환산·비교 경로. BR01과 질소밸브는 관련 소비자/별도 소유 RO02 자체 구동 Q·밸브 동작·버너 내부 안전시퀀스 발명 금지\":\n        - cell \"소유\"\n        - cell \"센서소자→80RO-02 H705→PEW354→PLC 환산·비교 경로. BR01과 질소밸브는 관련 소비자/별도 소유\"\n        - cell \"RO02 자체 구동 Q·밸브 동작·버너 내부 안전시퀀스 발명 금지\"\n      - row \"원본 시점 전기 시트 27.05.2024, 시공24.11.11 first draft design, PLC GME_20250506.zap18 고정 백업 최신 설치/운전 프로젝트임을 증명하지 않음\":\n        - cell \"원본 시점\"\n        - cell \"전기 시트 27.05.2024, 시공24.11.11 first draft design, PLC GME_20250506.zap18 고정 백업\"\n        - cell \"최신 설치/운전 프로젝트임을 증명하지 않음\"\n      - row \"작성 경계 RO02 문서·선언·핀·전기 원문 정적 검토 및 누락 인계 기존 코드·대장·버전·게시·운영기록·SEJIN 자료 변경 없음\":\n        - cell \"작성 경계\"\n        - cell \"RO02 문서·선언·핀·전기 원문 정적 검토 및 누락 인계\"\n        - cell \"기존 코드·대장·버전·게시·운영기록·SEJIN 자료 변경 없음\"\n  - paragraph: 이 초안은 7영역 모두 적용하되 관찰·기능·현장 검증은 별도 미수행이다. BC01의36항목 등 수량을 목표로 삼지 않았다.\n  - button \"RO02 자료\"\n  - generic: 1 / 2\n  - button \"이전 항목\" [disabled]\n  - button \"다음 항목\"\n  - complementary:\n    - heading \"이 설비의 근거·기록\" [level=3]\n    - button \"기본 자료\"\n    - button \"제어 명세\"\n    - button \"알람 분석\"\n    - button \"자료 대기\"\n    - button \"관찰 기록\"\n    - heading \"확인 경계\" [level=3]\n    - paragraph: RO02 고유 IW354 Peripherie 환산과 SAM=None HMI 미러를 분리합니다. OFF 호출 en과 ON IN0는 다릅니다. RO01−RO02 Int 차이알람은 RO01_Signal_Fault에 쓰며 RO02_OFR와 별도입니다. OEM AB01/80RO02와 시공 MV03·HE01/81RO02 상충, 질소 외부회로 별도소유, 현재 CPU/실물/복구 미확정을 보존합니다.\n    - paragraph: 문서·정적 근거·화면/저장·게시·TIA·현재CPU·현장복구 상태를 나누어 확인합니다.\n- contentinfo:\n  - text: 원본·정적 해석·실행 결과·현장 확인을 구분하여 관리합니다.\n  - status\n- iframe [id=\"nl-badge-frame\"]:\n  - button \"Powered by Netlify — build your own site\":\n    - generic: Powered by Netlify"
+  },
+  "status": "passed",
+  "areas": 70,
+  "source_locations": 186,
+  "direct_related_paths": 24,
+  "operational_record_writes": 0
+}

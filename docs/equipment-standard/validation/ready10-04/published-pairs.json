@@ -1,0 +1,1490 @@
+[
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "396",
+    "path": "networks/network-1742.html#gme-cc01-wire-396",
+    "target": "396Part 395.out ↔ Part 376.en",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "390",
+    "path": "networks/network-1742.html#gme-cc01-wire-390",
+    "target": "390ORef 383 (ON) ↔ Part 376.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "391",
+    "path": "networks/network-1742.html#gme-cc01-wire-391",
+    "target": "391ORef 384 (TC06) ↔ Part 376.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "392",
+    "path": "networks/network-1742.html#gme-cc01-wire-392",
+    "target": "392ORef 385 (Coeff.COEFF_TC06) ↔ Part 376.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "393",
+    "path": "networks/network-1742.html#gme-cc01-wire-393",
+    "target": "393ORef 386 (Coeff.ZERO_TC06) ↔ Part 376.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "394",
+    "path": "networks/network-1742.html#gme-cc01-wire-394",
+    "target": "394Part 376.OutValue ↔ ORef 387 (Data.Temp_T6)",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1742,
+    "uid": "24",
+    "path": "networks/network-1742.html#gme-cc01-wire-24",
+    "target": "24Part 376.Out_of_range ↔ ORef 23 (Allarm.TC06_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1071,
+    "uid": "86",
+    "path": "networks/network-1071.html#gme-cc01-wire-86",
+    "target": "86Part 72.eno ↔ Part 73.en",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1071,
+    "uid": "88",
+    "path": "networks/network-1071.html#gme-cc01-wire-88",
+    "target": "88ORef 78 (TC06) ↔ Part 73.in",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1071,
+    "uid": "90",
+    "path": "networks/network-1071.html#gme-cc01-wire-90",
+    "target": "90Part 73.out1 ↔ ORef 79 (Inputs.TC_06)",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1658,
+    "uid": "21",
+    "path": "networks/network-1658.html#gme-mc04-wire-21",
+    "target": "21Part 193.eno ↔ Part 23.in",
+    "verified": true
+  },
+  {
+    "key": "TC06",
+    "network": 1659,
+    "uid": "172",
+    "path": "networks/network-1659.html#gme-mv01-wire-172",
+    "target": "172Part 171.out ↔ Part 162.en",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "376",
+    "path": "networks/network-1741.html#gme-he01-wire-376",
+    "target": "376Part 375.out ↔ Part 356.en",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "370",
+    "path": "networks/network-1741.html#gme-he01-wire-370",
+    "target": "370ORef 363 (ON) ↔ Part 356.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "371",
+    "path": "networks/network-1741.html#gme-he01-wire-371",
+    "target": "371ORef 364 (TC03) ↔ Part 356.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "374",
+    "path": "networks/network-1741.html#gme-he01-wire-374",
+    "target": "374Part 356.OutValue ↔ ORef 367 (Data.Temp_TC03)",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1741,
+    "uid": "24",
+    "path": "networks/network-1741.html#gme-he01-wire-24",
+    "target": "24Part 356.Out_of_range ↔ ORef 23 (Allarm.TC03_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1071,
+    "uid": "85",
+    "path": "networks/network-1071.html#gme-ab01-wire-85",
+    "target": "85ORef 76 (TC03) ↔ Part 72.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1071,
+    "uid": "87",
+    "path": "networks/network-1071.html#gme-ab01-wire-87",
+    "target": "87Part 72.out1 ↔ ORef 77 (Inputs.TC_03)",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "476",
+    "path": "networks/network-1980.html#gme-he01-wire-476",
+    "target": "476Part 333.out ↔ Part 336.pre",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "479",
+    "path": "networks/network-1980.html#gme-he01-wire-479",
+    "target": "479Part 336.out ↔ Part 342.in ↔ Part 549.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "550",
+    "path": "networks/network-1980.html#gme-he01-wire-550",
+    "target": "550Part 549.out ↔ Part 347.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "491",
+    "path": "networks/network-1980.html#gme-he01-wire-491",
+    "target": "491Part 352.eno ↔ Part 356.pre",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "494",
+    "path": "networks/network-1980.html#gme-he01-wire-494",
+    "target": "494Part 356.out ↔ Part 360.in ↔ Part 362.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "500",
+    "path": "networks/network-1980.html#gme-he01-wire-500",
+    "target": "500Part 366.out ↔ Part 372.in ↔ Part 553.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "554",
+    "path": "networks/network-1980.html#gme-he01-wire-554",
+    "target": "554Part 553.out ↔ Part 377.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "512",
+    "path": "networks/network-1980.html#gme-he01-wire-512",
+    "target": "512Part 382.eno ↔ Part 386.pre",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "515",
+    "path": "networks/network-1980.html#gme-he01-wire-515",
+    "target": "515Part 386.out ↔ Part 390.in ↔ Part 392.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "409",
+    "path": "networks/network-1980.html#gme-he01-part-409",
+    "target": "409Ltin1 = Data.Temp_TC03; in2 = -60",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "531",
+    "path": "networks/network-1980.html#gme-he01-wire-531",
+    "target": "531Part 402.out ↔ Part 415.in ↔ Part 557.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "558",
+    "path": "networks/network-1980.html#gme-he01-wire-558",
+    "target": "558Part 557.out ↔ Part 420.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "560",
+    "path": "networks/network-1980.html#gme-he01-wire-560",
+    "target": "560Part 559.out ↔ Part 561.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "562",
+    "path": "networks/network-1980.html#gme-he01-wire-562",
+    "target": "562Part 561.out ↔ Part 425.in",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1980,
+    "uid": "30",
+    "path": "networks/network-1980.html#gme-he01-wire-30",
+    "target": "30Part 27.out1 ↔ ORef 32 (Data.TC03_MIN_ALL)",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 8,
+    "uid": "21",
+    "path": "networks/network-8.html#gme-mv01-wire-21",
+    "target": "21Powerrail {} ↔ Part 22.pre",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 8,
+    "uid": "35",
+    "path": "networks/network-8.html#gme-mv01-wire-35",
+    "target": "35Part 32.out1 ↔ ORef 37 (Data.TC03_SETPOINT)",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 11,
+    "uid": "442",
+    "path": "networks/network-11.html#gme-mv01-wire-442",
+    "target": "442ORef 401 (Real_SP_TC03xMV01) ↔ Part 366.SP_INT",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 11,
+    "uid": "443",
+    "path": "networks/network-11.html#gme-mv01-wire-443",
+    "target": "443ORef 402 (Real_TC03xMV01) ↔ Part 366.PV_IN",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 11,
+    "uid": "466",
+    "path": "networks/network-11.html#gme-mv01-wire-466",
+    "target": "466Part 465.out ↔ Part 366.COM_RST",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1931,
+    "uid": "96",
+    "path": "networks/network-1931.html#gme-rd01-wire-96",
+    "target": "96Part 95.out ↔ Part 56.in1",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1931,
+    "uid": "90",
+    "path": "networks/network-1931.html#gme-rd01-wire-90",
+    "target": "90ORef 77 (Disable_Load_RD01) ↔ Part 66.operand",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1858,
+    "uid": "260",
+    "path": "networks/network-1858.html#gme-br01-wire-260",
+    "target": "260ORef 242 (Allarm.MAX_MAX_TC03_TEMP) ↔ Part 291.operand",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1843,
+    "uid": "774",
+    "path": "networks/network-1843.html#gme-sc01-wire-774",
+    "target": "774Part 573.out1 ↔ ORef 662 (Data.TC03_SETPOINT)",
+    "verified": true
+  },
+  {
+    "key": "TC03",
+    "network": 1844,
+    "uid": "1134",
+    "path": "networks/network-1844.html#gme-sc01-wire-1134",
+    "target": "1134Part 917.out1 ↔ ORef 1011 (Data.TC03_SETPOINT)",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "336",
+    "path": "networks/network-1739.html#gme-ab01-wire-336",
+    "target": "336Part 335.out ↔ Part 316.en",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "330",
+    "path": "networks/network-1739.html#gme-ab01-wire-330",
+    "target": "330ORef 323 (ON) ↔ Part 316.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "331",
+    "path": "networks/network-1739.html#gme-ab01-wire-331",
+    "target": "331ORef 324 (TC01) ↔ Part 316.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "334",
+    "path": "networks/network-1739.html#gme-ab01-wire-334",
+    "target": "334Part 316.OutValue ↔ ORef 327 (Data.Temp_TC01)",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1739,
+    "uid": "24",
+    "path": "networks/network-1739.html#gme-ab01-wire-24",
+    "target": "24Part 316.Out_of_range ↔ ORef 23 (Allarm.TC01_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1071,
+    "uid": "65",
+    "path": "networks/network-1071.html#gme-ab01-wire-65",
+    "target": "65Part 49.eno ↔ Part 50.en",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1071,
+    "uid": "69",
+    "path": "networks/network-1071.html#gme-ab01-wire-69",
+    "target": "69Part 50.out1 ↔ ORef 57 (Inputs.TC_01)",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "241",
+    "path": "networks/network-1979.html#gme-ab01-wire-241",
+    "target": "241ORef 210 (Manage_TC1_2.PID_Ref_Temp) ↔ Part 149.in1",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "243",
+    "path": "networks/network-1979.html#gme-ab01-wire-243",
+    "target": "243Part 149.out ↔ Part 155.in ↔ Part 288.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "289",
+    "path": "networks/network-1979.html#gme-ab01-wire-289",
+    "target": "289Part 288.out ↔ Part 160.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "255",
+    "path": "networks/network-1979.html#gme-ab01-wire-255",
+    "target": "255Part 165.eno ↔ Part 169.pre",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "258",
+    "path": "networks/network-1979.html#gme-ab01-wire-258",
+    "target": "258Part 169.out ↔ Part 173.in ↔ Part 175.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "192",
+    "path": "networks/network-1979.html#gme-ab01-part-192",
+    "target": "192Ltin1 = Manage_TC1_2.PID_Ref_Temp; in2 = -60.0",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "293",
+    "path": "networks/network-1979.html#gme-ab01-wire-293",
+    "target": "293Part 292.out ↔ Part 203.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "295",
+    "path": "networks/network-1979.html#gme-ab01-wire-295",
+    "target": "295Part 294.out ↔ Part 296.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1979,
+    "uid": "297",
+    "path": "networks/network-1979.html#gme-ab01-wire-297",
+    "target": "297Part 296.out ↔ Part 208.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "834",
+    "path": "networks/network-1986.html#gme-ab01-part-834",
+    "target": "834Contactoperandoperand = TC01-TC02control disable",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "809",
+    "path": "networks/network-1986.html#gme-ab01-wire-809",
+    "target": "809Part 744.out ↔ Part 754.en ↔ Part 761.pre ↔ Part 764.pre",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "819",
+    "path": "networks/network-1986.html#gme-ab01-wire-819",
+    "target": "819Part 760.out ↔ Part 770.in ↔ Part 836.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "837",
+    "path": "networks/network-1986.html#gme-ab01-wire-837",
+    "target": "837Part 836.out ↔ Part 775.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "833",
+    "path": "networks/network-1986.html#gme-ab01-wire-833",
+    "target": "833Part 832.out ↔ Part 834.in ↔ Part 838.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1986,
+    "uid": "841",
+    "path": "networks/network-1986.html#gme-ab01-wire-841",
+    "target": "841Part 840.out ↔ Part 780.in",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1858,
+    "uid": "294",
+    "path": "networks/network-1858.html#gme-br01-wire-294",
+    "target": "294Part 293.out ↔ Part 219.in6",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1858,
+    "uid": "298",
+    "path": "networks/network-1858.html#gme-br01-wire-298",
+    "target": "298Part 297.out ↔ Part 219.in8",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1092,
+    "uid": "91",
+    "path": "networks/network-1092.html#gme-tc01-wire-91",
+    "target": "91Part 42.out ↔ ORef 60 (Data.Temp_TC01)",
+    "verified": true
+  },
+  {
+    "key": "TC01",
+    "network": 1092,
+    "uid": "99",
+    "path": "networks/network-1092.html#gme-tc01-wire-99",
+    "target": "99Part 45.out ↔ ORef 66 (Data.Temp_TC01)",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "356",
+    "path": "networks/network-1740.html#gme-ab01-wire-356",
+    "target": "356Part 355.out ↔ Part 336.en",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "350",
+    "path": "networks/network-1740.html#gme-ab01-wire-350",
+    "target": "350ORef 343 (ON) ↔ Part 336.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "351",
+    "path": "networks/network-1740.html#gme-ab01-wire-351",
+    "target": "351ORef 344 (TC02) ↔ Part 336.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "352",
+    "path": "networks/network-1740.html#gme-ab01-wire-352",
+    "target": "352ORef 345 (Coeff.COEFF_TC02) ↔ Part 336.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "353",
+    "path": "networks/network-1740.html#gme-ab01-wire-353",
+    "target": "353ORef 346 (Coeff.ZERO_TC02) ↔ Part 336.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "354",
+    "path": "networks/network-1740.html#gme-ab01-wire-354",
+    "target": "354Part 336.OutValue ↔ ORef 347 (Data.Temp_TC02)",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1740,
+    "uid": "24",
+    "path": "networks/network-1740.html#gme-ab01-wire-24",
+    "target": "24Part 336.Out_of_range ↔ ORef 23 (Allarm.TC02_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1071,
+    "uid": "68",
+    "path": "networks/network-1071.html#gme-ab01-wire-68",
+    "target": "68Part 50.eno ↔ Part 51.en",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1071,
+    "uid": "70",
+    "path": "networks/network-1071.html#gme-ab01-wire-70",
+    "target": "70ORef 58 (TC02) ↔ Part 51.in",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1071,
+    "uid": "71",
+    "path": "networks/network-1071.html#gme-ab01-wire-71",
+    "target": "71Part 51.out1 ↔ ORef 59 (Inputs.TC_02)",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "835",
+    "path": "networks/network-1986.html#gme-ab01-wire-835",
+    "target": "835Part 834.out ↔ Part 745.pre ↔ Part 748.pre",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "834",
+    "path": "networks/network-1986.html#gme-ab01-part-834",
+    "target": "834Contactoperandoperand = TC01-TC02control disable",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "809",
+    "path": "networks/network-1986.html#gme-ab01-wire-809",
+    "target": "809Part 744.out ↔ Part 754.en ↔ Part 761.pre ↔ Part 764.pre",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "812",
+    "path": "networks/network-1986.html#gme-ab01-wire-812",
+    "target": "812Part 754.out ↔ ORef 789 (app02)",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "819",
+    "path": "networks/network-1986.html#gme-ab01-wire-819",
+    "target": "819Part 760.out ↔ Part 770.in ↔ Part 836.in",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "820",
+    "path": "networks/network-1986.html#gme-ab01-wire-820",
+    "target": "820ORef 794 (S5T#1M) ↔ Part 770.value",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "837",
+    "path": "networks/network-1986.html#gme-ab01-wire-837",
+    "target": "837Part 836.out ↔ Part 775.in",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1986,
+    "uid": "841",
+    "path": "networks/network-1986.html#gme-ab01-wire-841",
+    "target": "841Part 840.out ↔ Part 780.in",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1979,
+    "uid": "241",
+    "path": "networks/network-1979.html#gme-ab01-wire-241",
+    "target": "241ORef 210 (Manage_TC1_2.PID_Ref_Temp) ↔ Part 149.in1",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1858,
+    "uid": "298",
+    "path": "networks/network-1858.html#gme-br01-wire-298",
+    "target": "298Part 297.out ↔ Part 219.in8",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1613,
+    "uid": "43",
+    "path": "networks/network-1613.html#gme-fn06-wire-43",
+    "target": "43Part 37.out ↔ Part 28.en",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1619,
+    "uid": "283",
+    "path": "networks/network-1619.html#gme-fn06-wire-283",
+    "target": "283Part 282.out ↔ Part 261.en ↔ Part 264.en ↔ Part 267.en ↔ Part 270.en",
+    "verified": true
+  },
+  {
+    "key": "TC02",
+    "network": 1620,
+    "uid": "351",
+    "path": "networks/network-1620.html#gme-fn06-wire-351",
+    "target": "351Part 350.out ↔ Part 319.en ↔ Part 322.en ↔ Part 325.en ↔ Part 328.en ↔ Part 331.en ↔ Part 334.en",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "86",
+    "path": "networks/network-1732.html#gme-tc05-wire-86",
+    "target": "86Part 85.out ↔ Part 66.en",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "80",
+    "path": "networks/network-1732.html#gme-tc05-wire-80",
+    "target": "80ORef 73 (ON) ↔ Part 66.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "81",
+    "path": "networks/network-1732.html#gme-tc05-wire-81",
+    "target": "81ORef 74 (TC05) ↔ Part 66.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "82",
+    "path": "networks/network-1732.html#gme-tc05-wire-82",
+    "target": "82ORef 75 (Coeff.COEFF_TC05) ↔ Part 66.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "83",
+    "path": "networks/network-1732.html#gme-tc05-wire-83",
+    "target": "83ORef 76 (Coeff.ZERO_TC05) ↔ Part 66.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "84",
+    "path": "networks/network-1732.html#gme-tc05-wire-84",
+    "target": "84Part 66.OutValue ↔ ORef 77 (Data.Temp_TC05)",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1732,
+    "uid": "24",
+    "path": "networks/network-1732.html#gme-tc05-wire-24",
+    "target": "24Part 66.Out_of_range ↔ ORef 23 (Allarm.TC05_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1071,
+    "uid": "33",
+    "path": "networks/network-1071.html#gme-ab01-wire-33",
+    "target": "33Part 22.eno ↔ Part 27.en",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1071,
+    "uid": "31",
+    "path": "networks/network-1071.html#gme-ab01-wire-31",
+    "target": "31ORef 28 (TC05) ↔ Part 27.in",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1071,
+    "uid": "32",
+    "path": "networks/network-1071.html#gme-fn01-wire-32",
+    "target": "32Part 27.out1 ↔ ORef 29 (Inputs.TC_05)",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "532",
+    "path": "networks/network-1981.html#gme-tc05-wire-532",
+    "target": "532ORef 500 (Data.Temp_TC05) ↔ Part 459.in1",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "533",
+    "path": "networks/network-1981.html#gme-tc05-wire-533",
+    "target": "533ORef 501 (Data.TC04_TC05_MAX_ALL) ↔ Part 459.in2",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "541",
+    "path": "networks/network-1981.html#gme-tc05-wire-541",
+    "target": "541Part 458.out ↔ Part 471.in ↔ Part 561.in",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "25",
+    "path": "networks/network-1981.html#gme-tc05-wire-25",
+    "target": "25Part 561.out ↔ Part 22.in",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "27",
+    "path": "networks/network-1981.html#gme-tc05-wire-27",
+    "target": "27ORef 28 (ServiceBit) ↔ Part 22.operand",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "26",
+    "path": "networks/network-1981.html#gme-tc05-wire-26",
+    "target": "26Part 22.out ↔ Part 476.in",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1981,
+    "uid": "568",
+    "path": "networks/network-1981.html#gme-tc05-wire-568",
+    "target": "568Part 567.out ↔ Part 488.in",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "676",
+    "path": "networks/network-1950.html#gme-vr01-wire-676",
+    "target": "676ORef 664 (Allarm.MAX_TC05_TEMP) ↔ Part 695.operand",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "25",
+    "path": "networks/network-1950.html#gme-vr01-wire-25",
+    "target": "25Part 695.out ↔ Part 707.in2",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "685",
+    "path": "networks/network-1950.html#gme-vr01-wire-685",
+    "target": "685ORef 670 (S5T#1H_30M) ↔ Part 656.value",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1950,
+    "uid": "27",
+    "path": "networks/network-1950.html#gme-vr01-wire-27",
+    "target": "27Part 705.out ↔ Part 661.in",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1858,
+    "uid": "290",
+    "path": "networks/network-1858.html#gme-br01-wire-290",
+    "target": "290Part 289.out ↔ Part 219.in4",
+    "verified": true
+  },
+  {
+    "key": "TC05",
+    "network": 1658,
+    "uid": "21",
+    "path": "networks/network-1658.html#gme-mc04-wire-21",
+    "target": "21Part 193.eno ↔ Part 23.in",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "416",
+    "path": "networks/network-1743.html#gme-ab01-wire-416",
+    "target": "416Part 415.out ↔ Part 396.en",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "409",
+    "path": "networks/network-1743.html#gme-ab01-wire-409",
+    "target": "409ORef 402 (OFF) ↔ Part 415.operand",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "410",
+    "path": "networks/network-1743.html#gme-ab01-wire-410",
+    "target": "410ORef 403 (ON) ↔ Part 396.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "411",
+    "path": "networks/network-1743.html#gme-ab01-wire-411",
+    "target": "411ORef 404 (TC07) ↔ Part 396.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "412",
+    "path": "networks/network-1743.html#gme-ab01-wire-412",
+    "target": "412ORef 405 (Coeff.COEFF_TC07) ↔ Part 396.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "413",
+    "path": "networks/network-1743.html#gme-ab01-wire-413",
+    "target": "413ORef 406 (Coeff.ZERO_TC07) ↔ Part 396.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "414",
+    "path": "networks/network-1743.html#gme-ab01-wire-414",
+    "target": "414Part 396.OutValue ↔ ORef 407 (Data.TC_07)",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1743,
+    "uid": "24",
+    "path": "networks/network-1743.html#gme-ab01-wire-24",
+    "target": "24Part 396.Out_of_range ↔ ORef 23 (Allarm.TC07_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "89",
+    "path": "networks/network-1071.html#gme-cc01-wire-89",
+    "target": "89Part 73.eno ↔ Part 74.en",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "91",
+    "path": "networks/network-1071.html#gme-ab01-wire-91",
+    "target": "91ORef 80 (TC07) ↔ Part 74.in",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "93",
+    "path": "networks/network-1071.html#gme-ab01-wire-93",
+    "target": "93Part 74.out1 ↔ ORef 81 (Inputs.TC_07)",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1071,
+    "uid": "92",
+    "path": "networks/network-1071.html#gme-ab01-wire-92",
+    "target": "92Part 74.eno ↔ Part 75.en",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1658,
+    "uid": "21",
+    "path": "networks/network-1658.html#gme-mc04-wire-21",
+    "target": "21Part 193.eno ↔ Part 23.in",
+    "verified": true
+  },
+  {
+    "key": "TC07",
+    "network": 1659,
+    "uid": "172",
+    "path": "networks/network-1659.html#gme-mv01-wire-172",
+    "target": "172Part 171.out ↔ Part 162.en",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "106",
+    "path": "networks/network-1733.html#gme-tc09-wire-106",
+    "target": "106Part 105.out ↔ Part 86.en",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "100",
+    "path": "networks/network-1733.html#gme-tc09-wire-100",
+    "target": "100ORef 93 (ON) ↔ Part 86.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "101",
+    "path": "networks/network-1733.html#gme-tc09-wire-101",
+    "target": "101ORef 94 (TC09) ↔ Part 86.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "102",
+    "path": "networks/network-1733.html#gme-tc09-wire-102",
+    "target": "102ORef 95 (Coeff.COEFF_TC09) ↔ Part 86.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "103",
+    "path": "networks/network-1733.html#gme-tc09-wire-103",
+    "target": "103ORef 96 (Coeff.ZERO_TC09) ↔ Part 86.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "104",
+    "path": "networks/network-1733.html#gme-tc09-wire-104",
+    "target": "104Part 86.OutValue ↔ ORef 97 (Data.TC_09)",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1733,
+    "uid": "24",
+    "path": "networks/network-1733.html#gme-tc09-wire-24",
+    "target": "24Part 86.Out_of_range ↔ ORef 23 (Allarm.TC09_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1133",
+    "path": "networks/network-1991.html#gme-tc09-wire-1133",
+    "target": "1133Part 1046.out ↔ Part 1049.in",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1139",
+    "path": "networks/network-1991.html#gme-tc09-wire-1139",
+    "target": "1139Part 1053.eno ↔ Part 1057.pre",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1142",
+    "path": "networks/network-1991.html#gme-tc09-wire-1142",
+    "target": "1142Part 1057.out ↔ Part 1060.in",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1148",
+    "path": "networks/network-1991.html#gme-tc09-wire-1148",
+    "target": "1148Part 1064.eno ↔ Part 1068.pre",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1151",
+    "path": "networks/network-1991.html#gme-tc09-wire-1151",
+    "target": "1151Part 1068.out ↔ Part 1177.in ↔ Part 1082.in",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1178",
+    "path": "networks/network-1991.html#gme-tc09-wire-1178",
+    "target": "1178Part 1177.out ↔ Part 1076.in ↔ Part 1078.in",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1167",
+    "path": "networks/network-1991.html#gme-tc09-wire-1167",
+    "target": "1167Part 1085.out ↔ Part 1095.in",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1991,
+    "uid": "1182",
+    "path": "networks/network-1991.html#gme-tc09-wire-1182",
+    "target": "1182Part 1181.out ↔ Part 1100.in",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2044",
+    "path": "networks/network-1903.html#gme-bf01-wire-2044",
+    "target": "2044Part 2043.out ↔ Part 2007.in2",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2046",
+    "path": "networks/network-1903.html#gme-bf01-wire-2046",
+    "target": "2046Part 2045.out ↔ Part 2007.in3",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2048",
+    "path": "networks/network-1903.html#gme-bf01-wire-2048",
+    "target": "2048Part 2047.out ↔ Part 2007.in4",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1903,
+    "uid": "2033",
+    "path": "networks/network-1903.html#gme-bf01-wire-2033",
+    "target": "2033ORef 2021 (PV-14) ↔ Part 2012.operand",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1965,
+    "uid": "1045",
+    "path": "networks/network-1965.html#gme-sc01-wire-1045",
+    "target": "1045Part 1044.out ↔ Part 1003.in5",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1931,
+    "uid": "104",
+    "path": "networks/network-1931.html#gme-rd01-wire-104",
+    "target": "104Part 103.out ↔ Part 56.in5",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1856,
+    "uid": "162",
+    "path": "networks/network-1856.html#gme-br01-part-162",
+    "target": "162Contactoperandoperand = Allarm.MAX_MAX_TC09",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1857,
+    "uid": "209",
+    "path": "networks/network-1857.html#gme-rd01-part-209",
+    "target": "209Contactoperandoperand = Allarm.MAX_MAX_TC09",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1858,
+    "uid": "278",
+    "path": "networks/network-1858.html#gme-br01-wire-278",
+    "target": "278Part 277.out ↔ Part 213.in2",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 403,
+    "uid": "316",
+    "path": "networks/network-403.html#gme-fn05-wire-316",
+    "target": "316Part 267.out1 ↔ ORef 294 (RefId 32)",
+    "verified": true
+  },
+  {
+    "key": "TC09",
+    "network": 1658,
+    "uid": "21",
+    "path": "networks/network-1658.html#gme-mc04-wire-21",
+    "target": "21Part 193.eno ↔ Part 23.in",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "66",
+    "path": "networks/network-1731.html#gme-tc04-wire-66",
+    "target": "66Part 65.out ↔ Part 46.en",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "60",
+    "path": "networks/network-1731.html#gme-tc04-wire-60",
+    "target": "60ORef 53 (ON) ↔ Part 46.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "61",
+    "path": "networks/network-1731.html#gme-tc04-wire-61",
+    "target": "61ORef 54 (TC04) ↔ Part 46.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "62",
+    "path": "networks/network-1731.html#gme-tc04-wire-62",
+    "target": "62ORef 55 (Coeff.COEFF_TC04) ↔ Part 46.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "63",
+    "path": "networks/network-1731.html#gme-tc04-wire-63",
+    "target": "63ORef 56 (Coeff.ZERO_TC04) ↔ Part 46.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "64",
+    "path": "networks/network-1731.html#gme-tc04-wire-64",
+    "target": "64Part 46.OutValue ↔ ORef 57 (Data.Temp_TC04)",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1731,
+    "uid": "24",
+    "path": "networks/network-1731.html#gme-tc04-wire-24",
+    "target": "24Part 46.Out_of_range ↔ ORef 23 (Allarm.TC04_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1071,
+    "uid": "23",
+    "path": "networks/network-1071.html#gme-ab01-wire-23",
+    "target": "23ORef 25 (TC04) ↔ Part 22.in",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1071,
+    "uid": "24",
+    "path": "networks/network-1071.html#gme-ab01-wire-24",
+    "target": "24Part 22.out1 ↔ ORef 26 (Inputs.TC_04)",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "516",
+    "path": "networks/network-1981.html#gme-tc05-wire-516",
+    "target": "516ORef 490 (Data.Temp_TC04) ↔ Part 438.in1",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "525",
+    "path": "networks/network-1981.html#gme-tc05-wire-525",
+    "target": "525Part 437.out ↔ Part 450.in ↔ Part 559.in",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "560",
+    "path": "networks/network-1981.html#gme-tc05-wire-560",
+    "target": "560Part 559.out ↔ Part 455.in",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "530",
+    "path": "networks/network-1981.html#gme-tc05-wire-530",
+    "target": "530ORef 499 (Allarm.MAX_TC04_TEMP) ↔ Part 455.operand",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1981,
+    "uid": "566",
+    "path": "networks/network-1981.html#gme-tc05-wire-566",
+    "target": "566Part 565.out ↔ Part 484.in",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1950,
+    "uid": "694",
+    "path": "networks/network-1950.html#gme-vr01-wire-694",
+    "target": "694Part 693.out ↔ Part 707.in1",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1950,
+    "uid": "685",
+    "path": "networks/network-1950.html#gme-vr01-wire-685",
+    "target": "685ORef 670 (S5T#1H_30M) ↔ Part 656.value",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1951,
+    "uid": "721",
+    "path": "networks/network-1951.html#gme-vr02-wire-721",
+    "target": "721Part 720.out ↔ Part 676.in4",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1858,
+    "uid": "288",
+    "path": "networks/network-1858.html#gme-br01-wire-288",
+    "target": "288Part 287.out ↔ Part 219.in3",
+    "verified": true
+  },
+  {
+    "key": "TC04",
+    "network": 1658,
+    "uid": "21",
+    "path": "networks/network-1658.html#gme-mc04-wire-21",
+    "target": "21Part 193.eno ↔ Part 23.in",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "126",
+    "path": "networks/network-1734.html#gme-tc10-wire-126",
+    "target": "126Part 125.out ↔ Part 106.en",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "119",
+    "path": "networks/network-1734.html#gme-tc10-wire-119",
+    "target": "119ORef 112 (OFF) ↔ Part 125.operand",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "120",
+    "path": "networks/network-1734.html#gme-tc10-wire-120",
+    "target": "120ORef 113 (ON) ↔ Part 106.IN0",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "121",
+    "path": "networks/network-1734.html#gme-tc10-wire-121",
+    "target": "121ORef 114 (TC-10) ↔ Part 106.Analog_input",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "122",
+    "path": "networks/network-1734.html#gme-tc10-wire-122",
+    "target": "122ORef 115 (Coeff.COEFF_TC10) ↔ Part 106.Coeff",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "123",
+    "path": "networks/network-1734.html#gme-tc10-wire-123",
+    "target": "123ORef 116 (Coeff.ZERO_TC10) ↔ Part 106.Zero",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "124",
+    "path": "networks/network-1734.html#gme-tc10-wire-124",
+    "target": "124Part 106.OutValue ↔ ORef 117 (Data.TC_10)",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1734,
+    "uid": "24",
+    "path": "networks/network-1734.html#gme-tc10-wire-24",
+    "target": "24Part 106.Out_of_range ↔ ORef 23 (Allarm.TC10_OFR)",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1619,
+    "uid": "283",
+    "path": "networks/network-1619.html#gme-fn06-wire-283",
+    "target": "283Part 282.out ↔ Part 261.en ↔ Part 264.en ↔ Part 267.en ↔ Part 270.en",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1658,
+    "uid": "21",
+    "path": "networks/network-1658.html#gme-mc04-wire-21",
+    "target": "21Part 193.eno ↔ Part 23.in",
+    "verified": true
+  },
+  {
+    "key": "TC10",
+    "network": 1659,
+    "uid": "172",
+    "path": "networks/network-1659.html#gme-mv01-wire-172",
+    "target": "172Part 171.out ↔ Part 162.en",
+    "verified": true
+  }
+]
