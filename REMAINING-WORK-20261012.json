@@ -240,7 +240,15 @@
     "status": "reference_review_completed",
     "application_changes": 0,
     "photo_contents_reviewed": false,
-    "completion_check": "passed; actual Dots reply read and four handoff boundaries independently confirmed"
+    "completion_check": "passed; actual Dots reply read and four handoff boundaries independently confirmed",
+    "follow_up_consultation": {
+      "date": "2026-10-13",
+      "actual_reply_read": true,
+      "candidate_rows": 4,
+      "independently_verified_new_rows": 0,
+      "status": "candidate_only",
+      "record": "docs/equipment-standard/SEJIN-ADDITIONAL-CANDIDATES-20261013.json"
+    }
   },
   "completion_consultation_policy": {
     "date": "2026-10-13",

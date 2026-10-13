@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "status": "dots_candidates_not_independently_verified",
+  "user_request": "SEJIN 사이트에서 더 검토할 내용이 없는지 기존 속슬이에게 문의",
+  "source_site": "https://sejin-facility-manager.romancetiger.chatgpt.site/",
+  "consulted_party": "기존 Dots / 속슬이",
+  "actual_reply_read": true,
+  "reply_visible_time_kst": "19:38",
+  "evidence_boundary": "Dots reports previously obtained official work_logs reads. Codex read the actual reply; four candidate source rows have not been independently re-read in this consultation. Not a fresh site, mobile or image review.",
+  "source_reported": "sejin-maintenance-worklog / 자동연동",
+  "candidates": [
+    {
+      "priority": "high",
+      "asset_candidate": "FN04",
+      "facility_id_reported": "1767942318814",
+      "work_log_id_reported": "sync:0bfa104ca95914bf14685df6",
+      "date_reported": "2024-09-27",
+      "summary_reported": "인버터 부하 측~모터 케이블 교체·원격제어 이상에 따른 수동 운전",
+      "reason": "2026년 인버터 교체 전의 정비 배경 참고",
+      "boundary": "현재 제어방식·원인 미확정"
+    },
+    {
+      "priority": "high",
+      "asset_candidate": "FN04",
+      "facility_id_reported": "1767942318814",
+      "work_log_id_reported": "sync:021cadbaf96a37fcdd29e572",
+      "date_reported": "2025-05-08",
+      "summary_reported": "인버터 룸 조작전원 복구",
+      "reason": "조작전원 정비 이력 참고",
+      "boundary": "앞 케이블 작업과 동일 고장·후속 조치라고 연결하지 않음"
+    },
+    {
+      "priority": "conditional",
+      "asset_candidate": "FN04 motor1 / motor2",
+      "facility_id_reported": "manual:facility:aef7f705-12a5-403c-a29c-70f0601fddb1",
+      "work_log_id_reported": "sync:1b2fa1d1a3e6719dcc3eb2a9",
+      "date_reported": "2024-12-16",
+      "summary_reported": "13대 일괄 설치 기록의 SJ20 FN04모터1·SJ21 FN04모터2",
+      "reason": "모터 식별 근거 후보",
+      "boundary": "다른 설비ID; 현재 FN04 모터와 동일성 미확정"
+    },
+    {
+      "priority": "conditional",
+      "asset_candidate": "related panel work",
+      "facility_id_reported": "manual:facility:3647bbde-b361-4ee0-ae67-d1bf40a7b9e3",
+      "work_log_id_reported": "sync:28dc0852f4b0a374add503cc",
+      "date_reported": "2024-10-29",
+      "summary_reported": "버나디룸 DI32·DO16 교체와 FN04 모터 팬·커버 작업",
+      "reason": "관련 정비 이력 후보",
+      "boundary": "다른 설비ID; CPU 식별 없음; 특정 PLC 구성에 배정하지 않음"
+    }
+  ],
+  "sejin_display_suggestion_reported": "날짜 및 카드 설치일/원본 설치시기/현재 장착 확인을 구분하자는 자료 표시 의견. 실제 화면 사용성 또는 데이터 오류를 Codex가 독립 검증한 결과는 아님.",
+  "new_nameplate_or_image_reading": false,
+  "verified_sejin_source_rows_remain": 7,
+  "candidate_rows_not_added_to_verified_count": 4,
+  "application_changes": 0,
+  "operational_data_changes": 0,
+  "backup_restore_pdf_repeat_tests": 0,
+  "simulator_execution": 0,
+  "removed_and_deferred_gme_review_resumed": false
+}
