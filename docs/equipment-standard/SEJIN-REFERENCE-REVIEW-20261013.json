@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "status": "reference_review_completed",
+  "program_version": "1.23.0",
+  "consulted_party": "속슬이 / 기존 Dots",
+  "consultation_verified_in_visible_conversation": true,
+  "source_site": "https://sejin-facility-manager.romancetiger.chatgpt.site/",
+  "source_project_id": "appgprj_6a8ae1d30e08819189b56fadc58d2b48",
+  "source_binding": "DB",
+  "source_table": "work_logs",
+  "method": "Dots source candidates, independently re-read by Codex through official read-only tools using returned next_offset; only source locators and review summaries saved",
+  "read_pages": 124,
+  "read_scope": {
+    "first": {
+      "offset": 0,
+      "next": 22,
+      "rows": 22
+    },
+    "last": {
+      "offset": 1674,
+      "next": 1684,
+      "rows": 10
+    },
+    "complete_database_survey": false,
+    "no_later_record_absence_claim": true
+  },
+  "source_rows_verified": 7,
+  "references": [
+    {
+      "asset": "FN04",
+      "sejin_facility_id": "1767942318814",
+      "source_worklog_id": "legacy:1767942318814:1q3h358",
+      "source_date": "2026-05-06",
+      "source_kind": "worklogBulk",
+      "source_file": "설비관리 전체백업 v17.0",
+      "source_sheet": "FN04",
+      "source_index": 8,
+      "registered_status": "기록",
+      "field_and_content_reread": true,
+      "summary": "FN04 인버터 교체 작업 이력",
+      "boundary": "당시 제조사 변경 기록이며 현재 장착 모델이나 도면상 제조사를 덮어쓰지 않음. 다음 날 시험 계획은 완료 근거가 아님"
+    },
+    {
+      "asset": "FN04",
+      "sejin_facility_id": "1767942318814",
+      "source_worklog_id": "legacy:1767942318814:1un9pze",
+      "source_date": "2026-05-07",
+      "source_kind": "worklogBulk",
+      "source_file": "설비관리 전체백업 v17.0",
+      "source_sheet": "FN04",
+      "source_index": 5,
+      "registered_status": "기록",
+      "field_and_content_reread": true,
+      "summary": "FN04 DC 리액터 설치 후 시험 및 추가 조작 개선 계획 이력",
+      "boundary": "아이솔레이터 구매·조작 개선 계획을 후속 완료로 처리하지 않음. 현재 제어방식 미확정"
+    },
+    {
+      "asset": "FN04",
+      "sejin_facility_id": "1767942318814",
+      "source_worklog_id": "legacy:1767942318814:pbz46g",
+      "source_date": "2026-06-30",
+      "source_kind": "worklogBulk",
+      "source_file": "설비관리 전체백업 v17.0",
+      "source_sheet": "FN04",
+      "source_index": 0,
+      "registered_status": "기록",
+      "field_and_content_reread": true,
+      "summary": "FN04 당시 절연 점검 결과 이력",
+      "boundary": "기록일의 점검 결과이며 현재 절연·보호값 적정성·현장복구 확인으로 확대하지 않음"
+    },
+    {
+      "asset": "PV01",
+      "sejin_facility_id": "1",
+      "source_worklog_id": "legacy:1:13lk18p",
+      "source_date": "2026-06-30",
+      "source_kind": "worklogBulk",
+      "source_file": "설비관리 전체백업 v17.0",
+      "source_sheet": "PV-01",
+      "source_index": 0,
+      "registered_status": "기록",
+      "field_and_content_reread": true,
+      "summary": "PV01 실린더 센서 교체 작업 이력",
+      "boundary": "교체 위치·형번·현재 상태 미확정"
+    },
+    {
+      "asset": "PV01",
+      "sejin_facility_id": "1",
+      "source_worklog_id": "manual:work:48d1942d-cc39-48be-85a8-b806b5f385f6",
+      "source_date": "2026-08-27",
+      "source_kind": "manual-entry",
+      "source_file": "통합관리 직접입력",
+      "source_sheet": "설비 상세",
+      "source_index": 0,
+      "registered_status": "완료",
+      "field_and_content_reread": true,
+      "summary": "PV01 실린더 손상·신호 미수신 기록",
+      "boundary": "상태 필드 완료와 본문 점검중의 상충 유지. 보류된 A/B 도면 대응은 재검토하지 않음"
+    },
+    {
+      "asset": "PV02",
+      "sejin_facility_id": "13",
+      "source_worklog_id": "sync:187149ece9728c0356526a0f",
+      "source_date": "2025-09-16",
+      "source_kind": "external-worklog-sync",
+      "source_file": "sejin-maintenance-worklog",
+      "source_sheet": "자동연동",
+      "source_index": 0,
+      "registered_status": "기록",
+      "field_and_content_reread": true,
+      "summary": "PV02 센서 개선 작업 이력",
+      "boundary": "당시 개선 기록이며 현 결선·고유 PLC 주소·현재 적용 여부는 확정하지 않음"
+    },
+    {
+      "asset": "PV01",
+      "sejin_facility_id": "1",
+      "source_worklog_id": "sync:233d1ea487e695803c40cdb5",
+      "source_date": "2026-08-26",
+      "source_kind": "sejin-maintenance-worklog",
+      "source_file": "팀현장작업일보(2026.08) - 전기.xlsx",
+      "source_sheet": "20260826",
+      "source_index": 0,
+      "registered_status": "후속조치 필요",
+      "field_and_content_reread": true,
+      "summary": "PV01 센서 점검과 임시조치·상태관찰 기록",
+      "boundary": "후속조치 필요 상태; 복구 완료로 해석하지 않음"
+    }
+  ],
+  "asset_matching": "Same tag plus compatible process-role is a reference candidate; physical identity, individual sensor-to-PLC assignment and current model not newly confirmed",
+  "photos": {
+    "registration_read_available": true,
+    "image_contents_reviewed": false,
+    "gme_asset_photo_matching_verified": false
+  },
+  "preservation": {
+    "removed_equipment_review_excluded": [
+      "CC01",
+      "TC11",
+      "CM01",
+      "CM02",
+      "UC01"
+    ],
+    "drawing_conflict_review": "deferred_by_user",
+    "application_profile_changes": 0,
+    "PLC_changes": 0,
+    "SEJIN_operational_changes": 0,
+    "raw_database_or_photo_export": 0,
+    "operational_history_import_or_merge": 0,
+    "backup_or_restore_tests_repeated": 0,
+    "simulator_execution": 0
+  },
+  "application_publication": "No new app version or runtime change; source-reference review and handoff only"
+}
