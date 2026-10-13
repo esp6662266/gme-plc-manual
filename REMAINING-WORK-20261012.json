@@ -239,6 +239,26 @@
     "record": "docs/equipment-standard/SEJIN-REFERENCE-REVIEW-20261013.json",
     "status": "reference_review_completed",
     "application_changes": 0,
-    "photo_contents_reviewed": false
+    "photo_contents_reviewed": false,
+    "completion_check": "passed; actual Dots reply read and four handoff boundaries independently confirmed"
+  },
+  "completion_consultation_policy": {
+    "date": "2026-10-13",
+    "user_statement": "음 작업이 끝나고 나면 항상 속슬이 한테 물어바 더 남은 작업이 없는지",
+    "recipient": "existing Dots / 속슬이",
+    "rule": "Ask at logical GME task completion, read actual reply, resolve required omissions within authorized scope, record exclusions/deferred/evidence-dependent work; do not repeat the same check for its own logging.",
+    "saved_in": "AGENTS.md"
+  },
+  "homepage_review": {
+    "date": "2026-10-13",
+    "status": "read_only_review_completed",
+    "record": "docs/equipment-standard/HOMEPAGE-REVIEW-20261013.json",
+    "completion_check": "actual reply read; no essential omission in review scope",
+    "application_fixes_started": false,
+    "improvements_not_implemented": [
+      "historical full-manual entry warning and permanent-stop context",
+      "current/past removed-equipment labels and count scope dates",
+      "separate detailed operator explanations from existing short guide"
+    ]
   }
 }

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "status": "read_only_review_completed",
+  "site": "https://gme-plc-manual.netlify.app/all-in-one/",
+  "application_version": "1.23.0",
+  "consulted_party": "기존 Dots / 속슬이",
+  "consultation": {
+    "request_visible_time_kst": "19:25",
+    "feedback_visible_time_kst": "19:29",
+    "dots_method_reported": "Actual public HTML and deployment assets: homepage, manual-catalog, operator-guide, PV01/PV02/FN04. No GitHub substitute.",
+    "dots_unverified": ["browser rendering", "mobile layout", "button operation", "save/restore", "PDF"],
+    "codex_method": "Independent public HTTP reads and isolated headless Chrome, read-only rendered desktop pages, no user browser profile.",
+    "codex_rendered_routes": ["overview", "P07", "P05", "P02", "P10", "TC11", "CM01", "CM02", "UC01"],
+    "route_review_boundary": "Historical removed-equipment routes checked only for published current/past labeling; no equipment, drawing, PLC or field investigation resumed.",
+    "desktop_viewport": [1440, 1000],
+    "mobile_layout_reviewed": false,
+    "save_restore_pdf_test_runs": 0
+  },
+  "positive_findings": [
+    "Equipment selection connects manuals, I/O, ladder, drawings and records.",
+    "PV02/PV01/FN04 manual first screens distinguish preserved interpretation from current CPU, physical identity and field recovery.",
+    "Operator guide explicitly describes browser-local records and no automatic sharing."
+  ],
+  "findings": [
+    {
+      "id": "historical_manual_simulator_guidance",
+      "priority": "high",
+      "status": "confirmed_public_content",
+      "url": "https://gme-plc-manual.netlify.app/all-in-one/manual-catalog.html",
+      "observed": "v0.2 · 2026-10-07 · 자료 검토본 retains simulator support, subsequent test-design execution and simulation-layer implementation guidance.",
+      "counterpart": "Published main index states simulator permanently stopped.",
+      "impact": "A user entering the preserved full manual can interpret old plans as current instructions.",
+      "recommendation": "Clearly identify the full manual as historical preserved material at entry, and identify the current permanent-stop rule without altering original source evidence.",
+      "implemented": false
+    },
+    {
+      "id": "scope_and_removed_equipment_labels",
+      "priority": "medium",
+      "status": "confirmed_rendered_desktop",
+      "url": "https://gme-plc-manual.netlify.app/all-in-one/",
+      "observed": "Overview shows 21 currently targeted / original23 / other-process2 excluded, and CC01 as a candidate.",
+      "scope_distinction": "21 is the priority layout subset. 142 is the current overall review register; 149 is preserved manuals. These are different scopes, not an arithmetic count defect.",
+      "impact": "The published historical layout can make a user-removed asset look like a current review candidate.",
+      "recommendation": "Distinguish current scope, historical preserved equipment and the date/scope of each count; retain the five user removals and drawing deferrals.",
+      "implemented": false
+    },
+    {
+      "id": "operator_guide_detail_separation",
+      "priority": "low",
+      "status": "editorial_recommendation",
+      "url": "https://gme-plc-manual.netlify.app/all-in-one/operator-guide.html",
+      "observed": "A short introductory paragraph already exists; subsequent equipment-specific implementation descriptions are long and sometimes lack spacing.",
+      "recommendation": "Keep the existing short start guide prominent and separate detailed implementation/change explanations.",
+      "implemented": false
+    }
+  ],
+  "public_reads": [
+    {"file": "index.html", "bytes": 4823, "sha256": "f06d67c30fcf7a7b06edcb4d4b5d33cfd3d266dd5dd07f76b288638eabd93b97"},
+    {"file": "manual-catalog.html", "bytes": 130816, "sha256": "6527177d8e466816eea34b8302911deda8850929126b85bf9fe3296ed666c863"},
+    {"file": "operator-guide.html", "bytes": 19241, "sha256": "cc8bf0581c1e9f775dca9d5b822bf621314fceab14d7528e99faa8f5c027c84b"}
+  ],
+  "sejin_reference_boundary": "Seven reference rows remain in the independent review record only. This review does not claim app integration, image review or current field identity.",
+  "completion_check": {
+    "asked_visible_time_kst": "19:31",
+    "reply_visible_time_kst": "19:31",
+    "actual_reply_read": true,
+    "reply_summary": "No essential omission within the authorized review. Close review; retain three improvements: current/past removed-equipment labels, historical-manual entry warning, detailed guide separation.",
+    "additional_queries_or_repeat_tests_required": false
+  },
+  "proof_files_owner_local_outside_git": [
+    "output/GME-DOTS-homepage-review-20261013.png",
+    "output/GME-homepage-review-20261013.png"
+  ],
+  "application_changes": 0,
+  "new_release_created": false,
+  "website_fix_or_deployment_performed": false,
+  "plc_field_protection_sejin_changes": 0,
+  "simulator_execution": 0
+}
