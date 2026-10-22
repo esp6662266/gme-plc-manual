@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-10-22T11:13:52.122Z",
+  "site": "https://gme-plc-manual.netlify.app/all-in-one/",
+  "commit": "700d35ea4552a7c3d5219b6c44ea376ed4df4f45",
+  "files": [
+    {
+      "path": "assets/io-search-model.js",
+      "status": 200,
+      "bytes": 2961,
+      "sha256": "9502d7c695b8b55cf69e14a94307b560498aa35c58573bebf43f68da93c36b14"
+    },
+    {
+      "path": "assets/io-search.js",
+      "status": 200,
+      "bytes": 8261,
+      "sha256": "c03bb32f0cbf5111d6971c91b1aed2e68c3ec9c0c9f7b49a077176fc3fc87e37"
+    },
+    {
+      "path": "assets/io-search.css",
+      "status": 200,
+      "bytes": 1934,
+      "sha256": "b1ed41b10819a325a2fb94b4e27f84bb574b9f1828aa03497d51f5b34df6b5e7"
+    },
+    {
+      "path": "registers/io-search-index.json",
+      "status": 200,
+      "bytes": 21445875,
+      "sha256": "bf676b06d9ba685fce82ab8d5180dce3db2f5cf827350d38ee004efd2edcbcd9"
+    },
+    {
+      "path": "registers/document-search-data.json.gz",
+      "status": 200,
+      "bytes": 2341820,
+      "sha256": "93fd408343e90d95e44f5b4ec1a792a8baabd6ca9883b18f21344be2c28669fc"
+    },
+    {
+      "path": "registers/io-search-reference-notes.json",
+      "status": 200,
+      "bytes": 7855,
+      "sha256": "71c72838ca1527904a6ea07d37ac585426fd3f91efaa17b2f97545cb92955e3f"
+    },
+    {
+      "path": "assets/all-in-one.js",
+      "status": 200,
+      "bytes": 188189,
+      "sha256": "f9345dbbab36e4e2fa263d70c666550b3b8bba7a654779ae2c8659c95de0e1b3"
+    },
+    {
+      "path": "assets/all-in-one-data.js",
+      "status": 200,
+      "bytes": 25616619,
+      "sha256": "cf64d456da9351ca30b72abba1a49d178b3e33f7c8cac883c8b8c63f3ef46509"
+    },
+    {
+      "path": "VERSION.json",
+      "status": 200,
+      "bytes": 642,
+      "sha256": "4081beda8e263596f194cd4e20449e723b738d2ec7da310534cdbb701aafa464"
+    },
+    {
+      "path": "all-in-one-package-manifest.json",
+      "status": 200,
+      "bytes": 577648,
+      "sha256": "a603c4745c3e4a99dfc2fdc27bfb8570d80759570bca3a46453bad57a8124fb7"
+    }
+  ],
+  "homepage_menu_version": true,
+  "csp": "default-src 'self'; script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
+}

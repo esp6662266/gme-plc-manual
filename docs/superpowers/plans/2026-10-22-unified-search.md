@@ -1,6 +1,6 @@
 # GME Unified Drawing Search Implementation Plan
 
-> **Execution:** Follow the project instructions and existing user authorization. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **Execution:** Follow the project instructions and existing user authorization. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** 사진에 보이는 부품 태그와 선번을 입력하여 쓰임새·원본 페이지를 찾는다.
 
@@ -38,5 +38,5 @@
 **Files:** versions/package, generated UI/data, package manifest, RELEASES/PUBLICATION_STATUS/WORKSPACE-HANDOFF/ACTIVE-WORK, docs/io-search verification.
 
 - [x] 필수14+2·원본/중지해시·ZIP CRC/전체해시·npm test/build·CSP를 확인한다.
-- [ ] 모든 수정/추가 파일을 sparse 체크아웃 설정까지 고려해 커밋한다.
-- [ ] 실제 Netlify commit_ref/ready·공개 검색/자산 해시를 확인해 기록한다.
+- [x] 모든 수정/추가 파일을 sparse 체크아웃 설정까지 고려해 커밋한다.
+- [x] 실제 Netlify commit_ref/ready·공개 검색/자산 해시를 확인해 기록한다.

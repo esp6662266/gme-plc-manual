@@ -2,7 +2,7 @@
   "schema_version": 1,
   "version": "1.25.0",
   "date": "2026-10-22",
-  "status": "local_complete_publication_pending",
+  "status": "published_verified",
   "counts": {
     "plc": 789,
     "circuit": 104,
@@ -107,6 +107,23 @@
     "reason": "No identifiable Dots target in current connected browser inventory and official chat list; no message sent to unrelated chat"
   },
   "publication": {
-    "status": "pending"
+    "status": "ready_verified",
+    "commit_ref": "700d35ea4552a7c3d5219b6c44ea376ed4df4f45",
+    "deploy_id": "6ad9ef90500f14383429f665",
+    "published_at": "2026-10-22T11:12:40.680Z",
+    "files_sha256_matched": 10,
+    "public_bytes_verified": 50191804,
+    "live_queries": {
+      "14KA6": 10,
+      "14KA8": 10,
+      "14KA10": 10,
+      "8.9": 1,
+      "8.10": 1,
+      "13.6": 13
+    },
+    "sidebar_Enter_verified": true,
+    "wire_8_10_source_pdf_page": 9,
+    "screenshot": "output/gme-unified-search-20261022.png",
+    "old_open_page_requires_reload": true
   }
 }

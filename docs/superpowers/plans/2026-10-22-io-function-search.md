@@ -1,6 +1,6 @@
 # GME I/O Function Search Implementation Plan
 
-> **Execution:** Follow the project instructions and existing user authorization. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **Execution:** Follow the project instructions and existing user authorization. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** I/O 주소·태그·기능으로 검색하여 원본 설명, 설비 참조, 도면·LAD 근거를 바로 연다.
 
@@ -41,5 +41,5 @@
 
 - [x] v1.24.0 버전 일치와 원본/중지자산 보존 확인.
 - [x] 필수14+2 패키지 검사·ZIP CRC/전체해시·npm test/build·Netlify CSP 일치 확인.
-- [ ] GitHub main 게시 후 실제 Netlify commit_ref/ready·공개 자산 해시·검색 UI 확인.
-- [ ] 식별 가능한 기존 Dots 연결로 종료 상담 시도, 미연결이면 실제 상태를 기록.
+- [x] GitHub main 게시 후 실제 Netlify commit_ref/ready·공개 자산 해시·검색 UI 확인.
+- [x] 식별 가능한 기존 Dots 연결로 종료 상담 시도, 미연결이면 실제 상태를 기록.
