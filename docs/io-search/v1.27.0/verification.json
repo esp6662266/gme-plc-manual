@@ -2,7 +2,7 @@
   "schema_version": 1,
   "version": "1.27.0",
   "baseline_commit": "9ee1a80f80926131a09384ff51680a3216b72aee",
-  "status": "local_verified_pending_publish",
+  "status": "published_verified",
   "counts": {
     "plc": 789,
     "circuit": 104,
@@ -91,5 +91,40 @@
     "public_files": 4155,
     "csp_inline_hashes": 6,
     "csp_policies": 39
+  },
+  "publication": {
+    "feature_commit": "286e85189db6ca488c72e7c0bbeca995ce1c7976",
+    "tag": "v1.27.0",
+    "deploy_id": "6ad9fc8c0e7ff9ba103feb61",
+    "state": "ready",
+    "published_at": "2026-10-22T12:08:24.442Z",
+    "asset_verification": "public-assets-verification.json",
+    "matched_assets": 12,
+    "matched_bytes": 48392291,
+    "entry_refs": 15
+  },
+  "public_ui": {
+    "version": "1.27.0",
+    "queries": {
+      "14KA6": 15,
+      "14KA8": 15,
+      "14KA10": 13,
+      "8.9": 2,
+      "8.10": 2,
+      "13.6": 15
+    },
+    "spaced_wire": "8 . 9",
+    "spaced_wire_results": 2,
+    "spaced_tag": "14 KA 10 용도",
+    "spaced_tag_results": 13,
+    "mobile_client_width": 375,
+    "mobile_scroll_width": 375,
+    "mobile_input_top": 464.171875,
+    "ocr_8_9_page": 9,
+    "ocr_hit_count": 1,
+    "pdf_13_6_page": 14,
+    "pdf_hit_count": 1,
+    "close_focus_return": true,
+    "screenshot": "public-mobile-ocr.jpg"
   }
 }
