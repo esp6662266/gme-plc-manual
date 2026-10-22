@@ -29,7 +29,7 @@
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
-  labels['io-search']='I/O·기능 검색';
+  labels['io-search']='통합검색 · I/O·도면';
   const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:'',bc01MediaGroup:'belt',bc01Photo:'photo-01',bc01Find:'',bc01Relation:'request'};
   const manualStateKeys=['bc01Section','bc01Item','bc01AlarmStep','bc01Text','bc01Check','bc01MediaGroup','bc01Photo','bc01Find','bc01Relation','standardWide'];
   const manualDefaults=Object.fromEntries(manualStateKeys.map(k=>[k,state[k]]));
@@ -138,6 +138,11 @@
       else {const sheet=photoViewer.profile.sheets.find(s=>s.id===state.drawing);if(sheet && sheet.id!==photoViewer.sheet.id)showPhoto(sheet);}
     }
   }
+  function routeSearch(query) {
+    const params=new URLSearchParams({view:'io-search',equipment:state.selected,scope:state.scope});
+    const value=String(query||'').trim().slice(0,160);if(value)params.set('q',value);
+    lastRenderedRoute=null;location.hash='#'+params.toString();readRoute();
+  }
   function syncScope() {
     document.querySelectorAll('[data-scope]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.scope === state.scope)));
     const groups = state.scope === 'priority' ? [...new Set(data.priority.map(p => p.phase))] : [...new Set(data.equipment.map(d => d.group))];
@@ -158,7 +163,7 @@
       const name = item.key ? item.name : `${item.id} · ${item.name}`;
       const sub = equipmentStatus(key)?.label || (item.key ? (item.plc_id ? `${item.plc_id} · ${item.match === 'candidate' ? '대응 후보' : '동일성 검토 중'}` : 'PLC 대응 확인 필요') : item.group);
       return `<button type="button" class="equipment-item ${state.selected === key ? 'active' : ''}" data-select="${esc(key)}" aria-pressed="${state.selected === key}">${esc(name)}<small>${esc(sub)}</small></button>`;
-    }).join('') || '<p class="muted">검색 결과가 없습니다.</p>';
+    }).join('') || '<p class="muted">일치하는 설비가 없습니다.</p><button type="button" data-global-search="'+esc(state.listQuery)+'">전체 도면·매뉴얼에서 통합검색</button>';
   }
   function renderContext() {
     const {p, d, name} = selection();
@@ -171,9 +176,9 @@
     document.title = `${labels[state.view]} · ${name} | GME 올인원`;
     if(state.view==='io-search') {
       $('context-kicker').textContent='전체 보존 자료에서 검색';
-      $('context-title').textContent='주소로 기능 찾기';
-      $('context-meta').textContent='PLC 주소 · HMI 태그 · 기능 설명 · 원본 근거';
-      document.title='I/O·기능 검색 | GME 올인원';
+      $('context-title').textContent='태그·선번으로 쓰임새 찾기';
+      $('context-meta').textContent='부품 태그 · 선번 · PLC/HMI 주소 · 도면·매뉴얼 본문';
+      document.title='통합검색 | GME 올인원';
     }
   }
   function unknownPanel() {
@@ -1132,6 +1137,8 @@
       state.layoutZoom=action==='fit'?Math.max(0.15,Math.min(1,viewport.clientWidth/1220)):Math.max(0.2,Math.min(1.4,old+(action==='in'?0.15:-0.15)));
       state.layoutScroll=action==='fit'?[0,0]:[viewport.scrollLeft*state.layoutZoom/old,viewport.scrollTop*state.layoutZoom/old];render();
       document.querySelector(`[data-layout-zoom="${action}"]`)?.focus({preventScroll:true});
+    } else if (b.hasAttribute('data-global-search')) {
+      routeSearch(b.dataset.globalSearch);
     } else if (b.dataset.scope) {
       state.scope = b.dataset.scope; state.group = ''; state.listQuery = ''; $('equipment-search').value = ''; syncScope(); renderList();
       const params = new URLSearchParams({view:state.view,equipment:state.selected,scope:state.scope});
@@ -1180,6 +1187,7 @@
     }
   });
   $('equipment-search').addEventListener('input', e => { state.listQuery = e.target.value; renderList(); });
+  $('equipment-search').addEventListener('keydown', e => { if(e.key==='Enter'&&!e.isComposing){e.preventDefault();routeSearch(e.target.value);} });
   $('equipment-group').addEventListener('change', e => { state.group = e.target.value; renderList(); });
   $('context-summary').addEventListener('click', () => route('summary'));
   document.querySelector('.brand').addEventListener('click', e => { e.preventDefault(); route('overview'); });

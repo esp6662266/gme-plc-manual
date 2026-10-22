@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { gunzipSync } from 'node:zlib';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const inputs = ['registers/all-in-one-data.json','registers/plc-symbols.csv','registers/signal-trace.json','registers/electrical-trace.json','registers/hmi-transfer.json'];
@@ -44,7 +45,17 @@ export async function buildIndex(directory=root) {
   for(const t of hmi.tags){const s=t.source;
     records.push(decorate({id:'hmi-'+t.index,kind:'hmi',address:s['설정 주소'],symbol:s['HMI 태그'],title:s['설정 주소']+' · '+s['HMI 태그'],text:'HMI 태그: '+s['HMI 태그']+'\nAccess Name: '+s['Access Name']+'\n'+s['근거와 한계'],equipment:t.existing_equipment_references||[],source:'dde.cfg 보존 설정 · '+t.anchor,links:[{url:'hmi-transfer.html#'+t.anchor,label:'HMI 주소 근거'},{url:'hmi-tags.html',label:'HMI 태그 원장'}],boundary:'HMI 설정 주소입니다. 현재 PLC 멤버 대응·화면 읽기/쓰기·현재값은 미확인입니다. EW/AW 등은 I/Q 주소와 합치지 않습니다.'}));
   }
-  return {schema_version:1,version:data.version,source_hashes:Object.fromEntries(inputs.map((p,i)=>[p,createHash('sha256').update(contents[i]).digest('hex')])),scope_overrides_sha256:createHash('sha256').update(await readFile(resolve(directory,'docs/equipment-standard/SCOPE-OVERRIDES.json'))).digest('hex'),counts:Object.fromEntries(['plc','circuit','signal','hmi'].map(k=>[k,records.filter(r=>r.kind===k).length])),records};
+  const documentBytes=await readFile(resolve(directory,'all-in-one/registers/document-search-data.json.gz'));
+  const documents=JSON.parse(gunzipSync(documentBytes));
+  const notesBytes=await readFile(resolve(directory,'all-in-one/registers/io-search-reference-notes.json'));
+  const notes=JSON.parse(notesBytes);
+  const digest=x=>createHash('sha256').update(x).digest('hex');
+  await Promise.all(Object.entries({...documents.source_hashes,[notes.source]:notes.source_sha256}).map(async([path,hash])=>{
+    if(!path.startsWith('sources/')&&!data.resources.includes(path))throw new Error('Non-public document source: '+path);
+    if(digest(await readFile(resolve(directory,'all-in-one',path)))!==hash)throw new Error('Document search extraction is stale: '+path);
+  }));
+  records.push(...[...notes.records,...documents.records].map(r=>({...r,status:[r.status,...(r.equipment||[]).map(id=>statuses.get(id))].filter(Boolean).join(' / ')})));
+  return {schema_version:1,version:data.version,source_hashes:{...Object.fromEntries(inputs.map((p,i)=>[p,digest(contents[i])])), 'registers/document-search-data.json.gz':digest(documentBytes),'registers/io-search-reference-notes.json':digest(notesBytes)},document_counts:documents.counts,scope_overrides_sha256:digest(await readFile(resolve(directory,'docs/equipment-standard/SCOPE-OVERRIDES.json'))),counts:Object.fromEntries(['plc','circuit','signal','hmi','reference','source','manual'].map(k=>[k,records.filter(r=>r.kind===k).length])),records};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const index=await buildIndex();await writeFile(resolve(root,'all-in-one/registers/io-search-index.json'),JSON.stringify(index)+'\n');console.log('I/O 검색 색인:',index.counts);

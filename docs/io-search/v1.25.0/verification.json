@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "version": "1.25.0",
+  "date": "2026-10-22",
+  "status": "local_complete_publication_pending",
+  "counts": {
+    "plc": 789,
+    "circuit": 104,
+    "signal": 333,
+    "hmi": 782,
+    "reference": 6,
+    "source": 330,
+    "manual": 1484
+  },
+  "document_extraction": {
+    "method": "pypdf layout + HTMLParser, no OCR",
+    "pdf_sources": 3,
+    "pages": 330,
+    "pages_without_text": 1,
+    "manual_documents": 1484,
+    "manual_records_have_document_ids": true,
+    "operational_records_indexed": 0,
+    "known_limits": [
+      "rotated/vector/scanned labels may be absent",
+      "wire 8.9 and 8.10 transcribed from PDF9 original pixels",
+      "photo component and current drawing/field identity unverified"
+    ]
+  },
+  "ui": {
+    "queries": {
+      "14KA6": 10,
+      "14KA8": 10,
+      "14KA10": 10,
+      "8.9": 1,
+      "8.10": 1,
+      "13.6": 13
+    },
+    "first_result": "reviewed function reference for each of six photo queries",
+    "source_filter_14KA6": 6,
+    "manual_filter_14KA6": 3,
+    "equipment_BC01_manual_BC01": 10,
+    "sidebar_Enter": true,
+    "sidebar_empty_result_unified_button": true,
+    "wire_8_10_pdf_page": 9,
+    "back_restores_query": true,
+    "snippet_bc01_prox_contains_query": true,
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 375,
+      "scrollWidth": 375
+    }
+  },
+  "review": {
+    "read_only_reviewers": 2,
+    "resolved": [
+      "document equipment metadata",
+      "raw-text snippet positions",
+      "simulation range 1079 through1092 only",
+      "historical removed equipment status on new document rows"
+    ]
+  },
+  "automated": {
+    "node_tests": 16,
+    "status": "passed",
+    "package": {
+      "fresh_verifiers": 14,
+      "fresh_equipment_verifiers": 2,
+      "finished_at_utc": "2026-10-22T11:10:05.879590+00:00",
+      "status": "passed",
+      "archive": "GME-All-In-One-v1.25.0.zip",
+      "version": "1.25.0",
+      "files": 3461,
+      "original_files_unchanged": 730,
+      "additional_sources_verified": 3,
+      "simulator_development": "stopped_by_user",
+      "simulator_behavior_tests": "not_rerun",
+      "bytes": 91638153,
+      "sha256": "61fed9df806b5efdec190cfe10976dd31123e25ce1ebb804d6edb767d74fe845",
+      "crc_checked": true,
+      "all_file_hashes_checked": true,
+      "field_verified": false,
+      "tia_verified": false
+    },
+    "build": {
+      "status": "passed",
+      "netlify_mode": true,
+      "files": 3490,
+      "csp_hashes": 6,
+      "csp_scoped_policies": 39
+    }
+  },
+  "preservation": {
+    "plc_changes": 0,
+    "field_changes": 0,
+    "sejin_writes": 0,
+    "operational_record_writes": 0,
+    "simulator_execution": 0,
+    "original_files_unchanged": 730,
+    "frozen_assets_unchanged": 5
+  },
+  "dots_consultation": {
+    "status": "unavailable",
+    "actual_reply_read": false,
+    "reason": "No identifiable Dots target in current connected browser inventory and official chat list; no message sent to unrelated chat"
+  },
+  "publication": {
+    "status": "pending"
+  }
+}

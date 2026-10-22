@@ -1,6 +1,6 @@
 {
   "name": "gme-plc-manual",
-  "version": "1.24.0",
+  "version": "1.25.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -14,7 +14,8 @@
     "verify:manual": "node scripts/python-runner.mjs all-in-one/build-package.py",
     "serve:manual": "node scripts/python-runner.mjs -m http.server 8770 --directory all-in-one",
     "verify:equipment": "node all-in-one/verify-equipment-standards.cjs",
-    "build:io-search": "node scripts/build-io-search-index.mjs"
+    "build:io-search": "node scripts/build-io-search-index.mjs",
+    "build:documents": "node scripts/python-runner.mjs scripts/build-document-search.py"
   },
   "dependencies": {
     "@netlify/blobs": "11.1.3",

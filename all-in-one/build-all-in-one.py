@@ -784,7 +784,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <nav class="primary-nav" aria-label="프로그램 메뉴">
 <button type="button" data-view="overview">통합 현황</button>
 <button type="button" data-view="priority">공정 배치도·설비카드</button>
-<button type="button" data-view="io-search">I/O·기능 검색</button>
+<button type="button" data-view="io-search">통합검색 · I/O·도면</button>
 <button type="button" data-view="simulator">시뮬레이터 · 영구 중지</button>
 <button type="button" data-view="structure">PLC 호출·신호 구조</button>
 <button type="button" data-view="tests">시험·검증</button>
@@ -796,7 +796,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <section class="equipment-picker" aria-labelledby="picker-title">
 <div class="picker-heading"><h2 id="picker-title">설비 선택</h2><span id="equipment-count"></span></div>
 <div class="scope-switch" role="group" aria-label="설비 목록 범위"><button type="button" data-scope="priority" aria-pressed="true">우선 23</button><button type="button" data-scope="all" aria-pressed="false">전체 248</button></div>
-<label class="sr-only" for="equipment-search">설비·주소 검색</label><input id="equipment-search" type="search" placeholder="설비명·태그·I/O 주소 검색" autocomplete="off">
+<label class="sr-only" for="equipment-search">설비·주소 검색</label><input id="equipment-search" type="search" placeholder="설비명·태그 · Enter 통합검색" autocomplete="off">
 <label class="sr-only" for="equipment-group">설비 영역</label><select id="equipment-group"><option value="">전체 영역</option></select>
 <div id="equipment-list" class="equipment-list" aria-label="설비 목록"></div>
 </section><p class="sidebar-foot">v__GME_VERSION__ · 매뉴얼·수리·구조 분석<br>시뮬레이터 영구 중지</p></aside>

@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "source": "sources/Electrical_Rev2.pdf",
+  "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+  "method": "visual comparison of complete original PDF pages; 8.9 and 8.10 manually transcribed because absent from PDF text layer",
+  "records": [
+    {
+      "id": "reviewed-14KA6",
+      "kind": "reference",
+      "address": "14KA6",
+      "symbol": "14KA6",
+      "title": "14KA6 · 드라이브 STO 입력 회로의 접점",
+      "text": "비상회로 접촉기. VS01, MV02/MV05/MV06, FN02 인버터의 STO OUT2→IN2 경로에 접점이 배치됩니다. 반대 채널에는 14KA2가 배치됩니다. 코일 A1은 선번 13.6, A2는 0Vac 9.9에 연결됩니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "도면 시각 대조·전사 · Electrical_Rev2.pdf · PDF 15, 28, 31, 43쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=28",
+          "label": "원본 도면 28쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=31",
+          "label": "원본 도면 31쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=43",
+          "label": "원본 도면 43쪽"
+        }
+      ],
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+    },
+    {
+      "id": "reviewed-14KA8",
+      "kind": "reference",
+      "address": "14KA8",
+      "symbol": "14KA8",
+      "title": "14KA8 · 110Vac 보조전원·주전원 접촉기 허가 회로",
+      "text": "비상회로 접촉기. 14KA4와 직렬로 110Vac 보조전원 선번 9.7을 연결하며, 다른 두 접점은 주전원 접촉기 15KA1·15KA2의 코일 공급 경로에 배치됩니다. 코일은 13.6→A1, A2→0Vac 9.9입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "도면 시각 대조·전사 · Electrical_Rev2.pdf · PDF 10, 15, 16쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=10",
+          "label": "원본 도면 10쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=16",
+          "label": "원본 도면 16쪽"
+        }
+      ],
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+    },
+    {
+      "id": "reviewed-14KA10",
+      "kind": "reference",
+      "address": "14KA10",
+      "symbol": "14KA10",
+      "title": "14KA10 · 버너 제어반 230V 공급 회로",
+      "text": "버너 제어반 230V 공급 회로의 두 선에 14KA9와 직렬로 배치된 비상회로 접촉기입니다. 후단은 X1:419/420, 도면 부하명은 CONTROL BOARD BURNER TYPE BP N 300입니다. 코일은 13.6→A1, A2→0Vac 9.9입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "도면 시각 대조·전사 · Electrical_Rev2.pdf · PDF 9, 15쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽"
+        }
+      ],
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+    },
+    {
+      "id": "reviewed-8.9",
+      "kind": "reference",
+      "address": "8.9",
+      "symbol": "8.9",
+      "title": "8.9 · 버너 제어반 230V 공급의 한쪽 선번",
+      "text": "8T1 변압기 2차측에서 14KA9 접점 1–2를 지난 후 14KA10 접점 1–2 입력까지 이어지는 구간입니다. 후단 선번은 8.11, 단자는 X1:419입니다. 원본 텍스트층에서 누락되어 실제 도면 이미지와 대조하여 전사했습니다. 8.09와 임의로 동일시하지 않습니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "도면 시각 대조·전사 · Electrical_Rev2.pdf · PDF 9쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽"
+        }
+      ],
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+    },
+    {
+      "id": "reviewed-8.10",
+      "kind": "reference",
+      "address": "8.10",
+      "symbol": "8.10",
+      "title": "8.10 · 버너 제어반 230V 공급의 다른 쪽 선번",
+      "text": "14KA9 접점 3–4 후단에서 14KA10 접점 3–4 입력까지 이어지는 구간입니다. 후단 선번은 8.12, 단자는 X1:420입니다. 원본 텍스트층에서 누락되어 실제 도면 이미지와 대조하여 전사했습니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "도면 시각 대조·전사 · Electrical_Rev2.pdf · PDF 9쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽"
+        }
+      ],
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+    },
+    {
+      "id": "reviewed-13.6",
+      "kind": "reference",
+      "address": "13.6",
+      "symbol": "13.6",
+      "title": "13.6 · 안전제어장치 출력 24의 코일 제어선",
+      "text": "공통 안전제어장치 13KA1(도면 모델 3SK1111-1AB30) 출력 단자 24에서 나와 FG14/5로 이어집니다. 14KA5/6/7/8/10의 코일 A1을 병렬 공급하며 각 A2는 0Vac 9.9로 귀환합니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "도면 시각 대조·전사 · Electrical_Rev2.pdf · PDF 14, 15쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽"
+        }
+      ],
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+    }
+  ]
+}
