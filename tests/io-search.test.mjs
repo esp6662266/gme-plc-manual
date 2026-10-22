@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import vm from 'node:vm';
-import { buildIndex, csv } from '../scripts/build-io-search-index.mjs';
+import { buildIndex, partitionIndex, csv } from '../scripts/build-io-search-index.mjs';
 const context=vm.createContext({});vm.runInContext(await readFile(new URL('../all-in-one/assets/io-search-model.js',import.meta.url),'utf8'),context);
 const M=context.GMEIOSearchModel,index=await buildIndex();
 const search=(q,filter)=>M.search(index.records,q,filter);
@@ -37,7 +37,10 @@ test('filters, historical status, original spelling and escaping stay explicit',
   assert.ok(search('DB11,X0.0').filter(r=>r.kind==='hmi').every(r=>r.boundary.includes('미확인')));
 });
 test('index has current sources and every evidence link points to a preserved public file',async()=>{
-  assert.deepEqual(JSON.parse(await readFile(new URL('../all-in-one/registers/io-search-index.json',import.meta.url))),index);
+  const parts=partitionIndex(index);
+  assert.deepEqual(JSON.parse(await readFile(new URL('../all-in-one/registers/io-search-index.json',import.meta.url))),parts.index);
+  assert.deepEqual(JSON.parse(await readFile(new URL('../all-in-one/registers/io-search-manual.json',import.meta.url))),parts.manual);
+  assert.deepEqual([...parts.index.records,...parts.manual.records].sort((a,b)=>a.id.localeCompare(b.id)),index.records.slice().sort((a,b)=>a.id.localeCompare(b.id)));
   const paths=new Set(index.records.flatMap(r=>r.links.map(l=>l.url.split('#')[0])));
   for(const path of paths){assert.ok(!path.includes('..'));await access(new URL('../all-in-one/'+path,import.meta.url));}
 });
@@ -85,6 +88,27 @@ test('equipment selection retains common sources by default and explicitly exclu
   assert.ok(common.some(r=>r.kind==='reference'));
   assert.ok(search('14KA6',{equipment:'BC01',includeCommon:false}).every(r=>r.equipment.includes('BC01')));
   assert.ok(!search('14KA6',{equipment:'BC01',includeCommon:false}).some(r=>r.kind==='reference'));
+});
+test('wire spacing preserves decimal boundaries and visible source notation',()=>{
+  const ids=q=>Array.from(search(q),r=>r.id).sort();
+  for(const q of ['8 . 9','8. 9','8 .9','８ ． ９','8.9 뭐야'])assert.deepEqual(ids(q),ids('8.9'));
+  const records=['8.9','18.9','8.90','8.9.1'].map(address=>({id:address,address,title:address,text:'',source:'',kind:'reference',equipment:[],equipment_names:[]}));
+  assert.deepEqual(Array.from(M.search(records,'8 . 9'),r=>r.address),['8.9']);
+  assert.equal(M.highlight('8 . 9 / 18.9 / 8.90 / 8.9.1','8.9'),'<mark>8 . 9</mark> / 18.9 / 8.90 / 8.9.1');
+  assert.equal(M.normalize('8.9.1'),'8.9.1');
+  for(const compound of ['8 . 9 . 1','8.9 . 1','8 . 9.1']){
+    assert.equal(M.normalize(compound),'8.9.1');
+    assert.deepEqual(Array.from(M.search(records,compound),r=>r.address),['8.9.1']);
+    assert.equal(M.highlight(compound,'8.9'),compound);
+  }
+  assert.equal(M.highlight('1 . 8 . 9','8.9'),'1 . 8 . 9');
+});
+test('drawing locations retain nearby different tags and filter OCR scores independently',()=>{
+  const page={words:[{text:'14KA6',bbox:[.4,.5,.42,.52],method:'pdf-text'},{text:'14KA8',bbox:[.411,.5,.431,.52],method:'pdf-text'}],ocr:[{text:'14KA6',bbox:[.401,.501,.421,.521],method:'vision-ocr',confidence:.95},{text:'14KA6',bbox:[.1,.1,.2,.2],method:'vision-ocr',confidence:.6}]};
+  assert.equal(M.locate(page,'14KA6 14KA8').length,2);
+  assert.equal(M.locate(page,'14KA6',{method:'ocr'}).length,1);
+  assert.equal(M.locate(page,'14KA6',{method:'ocr'})[0].confidence,.95);
+  assert.equal(M.locate(page,'14KA6',{method:'pdf-text'})[0].method,'pdf-text');
 });
 test('330 source-matched page previews include local OCR candidates and safe coordinates',async()=>{
   const pages=JSON.parse(await readFile(new URL('../all-in-one/registers/drawing-search-pages.json',import.meta.url)));

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "version": "1.27.0",
+  "baseline_commit": "9ee1a80f80926131a09384ff51680a3216b72aee",
+  "status": "local_verified_pending_publish",
+  "counts": {
+    "plc": 789,
+    "circuit": 104,
+    "signal": 333,
+    "hmi": 782,
+    "reference": 6,
+    "source": 330,
+    "manual": 1484,
+    "ocr": 286
+  },
+  "loading": {
+    "baseline_bytes": 21901392,
+    "core_bytes": 2278791,
+    "manual_bytes": 19622857,
+    "core_reduction_percent": 89.6,
+    "baseline_gzip_bytes": 2405200,
+    "core_gzip_bytes": 187879,
+    "partial_results": true,
+    "timeout_seconds": 30,
+    "retry_failed_only": true
+  },
+  "automated_tests": {
+    "passed": 25,
+    "failed": 0
+  },
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-22T12:06:26.090112+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.27.0.zip",
+    "version": "1.27.0",
+    "files": 4126,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 129760440,
+    "sha256": "f52852c9e21b8084cf7f8c26485927e67bcb07647b308c38143c69428aa00fa9",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "local_ui": {
+    "mobile_width": 390,
+    "client_width": 375,
+    "scroll_width": 375,
+    "query_top_before": 863.703125,
+    "query_top_after": 464.171875,
+    "spaced_wire": "8 . 9",
+    "wire_results": 2,
+    "spaced_component": "14 KA 10 용도",
+    "component_results": 13,
+    "manual_failure_core_results": 12,
+    "manual_retry_total_results": 15,
+    "ocr_filter_results": 3,
+    "ocr_page9_hits": 2,
+    "method_switch": true,
+    "focus_return": true,
+    "menu_toggle": true
+  },
+  "preserved": {
+    "source_files": 730,
+    "additional_sources": 3,
+    "stopped_assets": 5,
+    "ocr_pages": 330,
+    "ocr_regenerated": false,
+    "operational_record_writes": 0,
+    "plc_field_changes": 0,
+    "simulator_execution": 0,
+    "catalog_guide_updates_hash_only": 131
+  },
+  "dots_consultation": {
+    "status": "unavailable",
+    "reason": "No identifiable existing Dots in official thread list or enabled browser tabs; no unrelated messages sent"
+  },
+  "limits": [
+    "OCR remains an automatic candidate, not verified function/wiring",
+    "Cross-word tag geometry is not merged without source evidence",
+    "Drawing conflict review remains held; excluded equipment scope unchanged"
+  ],
+  "build": {
+    "status": "passed",
+    "netlify_environment": true,
+    "public_files": 4155,
+    "csp_inline_hashes": 6,
+    "csp_policies": 39
+  }
+}

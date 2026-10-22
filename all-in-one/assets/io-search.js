@@ -2,16 +2,16 @@
   'use strict';
   const M=window.GMEIOSearchModel,esc=M.escape;
   const kinds={plc:'PLC 주소·심볼',circuit:'기능·전기 회로',signal:'신호 읽기·쓰기',hmi:'HMI 설정',reference:'도면 대조 설명',source:'도면 원문',manual:'매뉴얼 본문',ocr:'OCR 후보 · 원본 확인 필요'};
-  let cached=null,pending=null,dispose=null;
-  async function load(){
-    if(cached)return cached;
-    if(!pending)pending=fetch('registers/io-search-index.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(x=>{if(x.schema_version!==1||!Array.isArray(x.records))throw new Error('검색 자료 형식 오류');cached=x;return x;}).finally(()=>{pending=null;});
-    return pending;
-  }
+  const loader=window.GMEIOSearchLoader.create();
+  let dispose=null;
   function cleanup(){dispose?.();dispose=null;}
   function attach(host,{data}){
-    cleanup();let active=true,timer=null,index=cached,failed=false,limit=30;
-    dispose=()=>{active=false;clearTimeout(timer);window.GMEIODrawingViewer?.close();};
+    cleanup();let active=true,timer=null,limit=30;
+    const sidebar=document.querySelector('.sidebar'),menu=document.createElement('button');
+    menu.type='button';menu.className='io-mobile-menu';menu.textContent='메뉴·설비 펼치기';menu.setAttribute('aria-expanded','false');
+    menu.addEventListener('click',()=>{const open=sidebar.classList.toggle('io-menu-open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'메뉴·설비 접기':'메뉴·설비 펼치기';});
+    sidebar?.insertBefore(menu,sidebar.querySelector('nav'));
+    dispose=()=>{active=false;clearTimeout(timer);unsubscribe();menu.remove();sidebar?.classList.remove('io-menu-open');window.GMEIODrawingViewer?.close();};
     const params=new URLSearchParams(location.hash.slice(1));
     let query=(params.get('q')||'').slice(0,160),equipment=params.get('search-equipment')||'',kind=params.get('search-kind')||'',includeCommon=params.get('search-common')!=='0';
     const equipmentMap=new Map(data.equipment.map(e=>[e.id,e]));
@@ -23,16 +23,18 @@
     function link(l){const path=String(l.url||'').split('#')[0];if(!allowed.has(path))return '';return (path.endsWith('.pdf')&&/#page=\d+/.test(l.url)?'<button type="button" class="io-location-button" data-io-drawing="'+esc(l.url)+'">'+esc(l.label.replace('원본 도면','도면').replace('전기도면','도면'))+' · 위치 보기</button>':'')+'<button type="button" data-doc="'+esc(l.url)+'">'+esc(l.label)+'</button>'; }
     function draw(){
       if(!active||!host.isConnected)return;
-      $('.io-index-status').innerHTML=failed?'검색 자료를 불러오지 못했습니다. <button type="button" data-io-retry>다시 불러오기</button>':!index?'검색 자료를 불러오는 중입니다.':Object.entries(index.counts).map(([k,n])=>kinds[k]+' '+n.toLocaleString()+'건').join(' · ');
+      const {core,manual}=loader.states,index=core.value,needsManual=!kind||kind==='manual';
+      const unavailable=core.status!=='ready'||(needsManual&&manual.status!=='ready');
+      const loading=core.status==='loading'||(needsManual&&manual.status==='loading');
+      $('.io-index-status').innerHTML=(index?Object.entries(index.counts).filter(([k])=>k!=='manual'||manual.status==='ready').map(([k,n])=>kinds[k]+' '+n.toLocaleString()+'건').join(' · '):'도면·I/O 검색 자료를 준비합니다.')+(needsManual&&manual.status==='loading'?' <strong>매뉴얼 본문을 추가로 불러오는 중입니다. 도착한 결과부터 표시합니다.</strong>':'')+(['core',...(needsManual?['manual']:[])].filter(k=>loader.states[k].status==='error').map(k=>' <span>'+(k==='core'?'도면·I/O':'매뉴얼 본문')+' 자료를 불러오지 못했습니다. '+esc(loader.states[k].error?.message||'')+'</span> <button type="button" data-io-retry="'+k+'">실패한 자료 다시 불러오기</button>').join(''));
       if(!M.terms(query).length){$('.io-result-status').textContent='주소·태그·기능을 2자 이상 입력하거나 위 예시를 누르세요.';$('.io-search-results').innerHTML='';$('.io-search-suggestions').innerHTML='';$('.io-search-more').innerHTML='';return;}
-      if(!index){$('.io-result-status').textContent=failed?'자료를 다시 불러온 뒤 검색할 수 있습니다.':'“'+query+'” 검색 준비 중';return;}
-      const results=M.search(index.records,query,{equipment,kind,includeCommon});
-      const suggestions=(!results.length||/^\d{1,3}[A-Z]{1,4}$/.test(M.normalize(query).trim()))?M.suggest(index.records,query):[];$('.io-search-suggestions').innerHTML=suggestions.length?'<p>등록된 태그 중 찾으시는 번호가 있나요? 번호를 확인하고 선택하세요.</p><div class="io-examples">'+suggestions.map(q=>'<button type="button" data-io-query="'+esc(q)+'">'+esc(q)+'</button>').join('')+'</div>':'';
-      $('.io-result-status').textContent='“'+query+'” 검색 결과 '+results.length.toLocaleString()+'건'+(results.length>limit?' · '+limit+'건 표시':'');
-      $('.io-search-results').innerHTML=results.slice(0,limit).map(r=>`<article class="panel io-search-result"><div class="io-result-meta"><span class="badge">${esc(kinds[r.kind])}</span><span>${esc(r.equipment_names.join(' / ')||'공통·설비 미배정 자료')}</span></div><h3>${M.highlight(r.title,query)}</h3>${r.type?'<p class="io-result-type">자료형: '+esc(r.type)+'</p>':''}<p class="io-result-text">${M.highlight(['source','manual','ocr'].includes(r.kind)?M.snippet(r.text,query):r.text,query)}</p><p class="io-result-source">근거: ${esc(r.source)}</p>${r.status?'<p class="notice">'+esc(r.status)+' · 과거 자료 참조</p>':''}<p class="io-result-boundary">${esc(r.boundary)}</p><div class="inline-actions">${r.links.map(link).join('')}${r.equipment.map(id=>{const p=data.priority.find(p=>p.plc_id===id),key=p?.key||id;return '<button type="button" data-view="io" data-equipment="'+esc(key)+'">'+esc(id)+' I/O·HMI 보기</button>';}).join('')}</div></article>`).join('')||'<section class="panel io-search-empty"><h3>일치하는 자료를 찾지 못했습니다.</h3><p>설비·자료 범위를 전체로 바꾸거나 원본의 번호와 표기를 확인해 주세요. 등록되지 않은 번호의 기능은 추정하지 않습니다.</p></section>';
+      const records=loader.records(kind),results=M.search(records,query,{equipment,kind,includeCommon});
+      const suggestions=(!results.length||/^\d{1,3}[A-Z]{1,4}$/.test(M.normalize(query).trim()))?M.suggest(records,query):[];$('.io-search-suggestions').innerHTML=suggestions.length?'<p>등록된 태그 중 찾으시는 번호가 있나요? 번호를 확인하고 선택하세요.</p><div class="io-examples">'+suggestions.map(q=>'<button type="button" data-io-query="'+esc(q)+'">'+esc(q)+'</button>').join('')+'</div>':'';
+      $('.io-result-status').textContent='“'+query+'” '+(unavailable?'현재 불러온 자료에서 ':'검색 결과 ')+results.length.toLocaleString()+'건'+(results.length>limit?' · '+limit+'건 표시':'')+(unavailable?(loading?' · 추가 자료 확인 중':' · 일부 자료 확인 필요'):'');
+      $('.io-search-results').innerHTML=results.slice(0,limit).map(r=>`<article class="panel io-search-result"><div class="io-result-meta"><span class="badge">${esc(kinds[r.kind])}</span><span>${esc(r.equipment_names.join(' / ')||'공통·설비 미배정 자료')}</span></div><h3>${M.highlight(r.title,query)}</h3>${r.type?'<p class="io-result-type">자료형: '+esc(r.type)+'</p>':''}<p class="io-result-text">${M.highlight(['source','manual','ocr'].includes(r.kind)?M.snippet(r.text,query):r.text,query)}</p><p class="io-result-source">근거: ${esc(r.source)}</p>${r.status?'<p class="notice">'+esc(r.status)+'</p>':''}<p class="io-result-boundary">${esc(r.boundary)}</p><div class="inline-actions">${r.links.map(link).join('')}${r.equipment.map(id=>{const p=data.priority.find(p=>p.plc_id===id),key=p?.key||id;return '<button type="button" data-view="io" data-equipment="'+esc(key)+'">'+esc(id)+' I/O·HMI 보기</button>';}).join('')}</div></article>`).join('')||(unavailable?'<section class="panel io-search-empty"><p>'+(loading?'검색 자료가 도착하면 결과가 이어서 표시됩니다.':'불러오지 못한 자료가 있습니다. 위의 다시 불러오기를 이용하세요.')+'</p></section>':'<section class="panel io-search-empty"><h3>일치하는 자료를 찾지 못했습니다.</h3><p>설비·자료 범위를 전체로 바꾸거나 원본의 번호와 표기를 확인해 주세요. 등록되지 않은 번호의 기능은 추정하지 않습니다.</p></section>');
       $('.io-search-more').innerHTML=results.length>limit?'<button type="button" data-io-more>결과 30건 더 보기</button>':'';
     }
-    function run(){clearTimeout(timer);query=input.value.trim().slice(0,160);equipment=eq.value;kind=type.value;includeCommon=common.checked;common.disabled=!equipment;limit=30;save();draw();}
+    function run(){clearTimeout(timer);query=input.value.trim().slice(0,160);equipment=eq.value;kind=type.value;includeCommon=common.checked;common.disabled=!equipment;limit=30;save();draw();ensure();}
     $('form').addEventListener('submit',e=>{e.preventDefault();run();});
     input.addEventListener('input',e=>{if(e.isComposing)return;clearTimeout(timer);timer=setTimeout(run,180);});
     input.addEventListener('compositionend',()=>{clearTimeout(timer);timer=setTimeout(run,180);});
@@ -40,13 +42,14 @@
     host.addEventListener('click',onClick);
     const priorDispose=dispose;dispose=()=>{priorDispose();host.removeEventListener('click',onClick);};
     function onClick(e){const b=e.target.closest('button');if(!b)return;
-      if(b.hasAttribute('data-io-drawing'))window.GMEIODrawingViewer.open({url:b.dataset.ioDrawing,query,allowed});
+      if(b.hasAttribute('data-io-drawing'))window.GMEIODrawingViewer.open({url:b.dataset.ioDrawing,query,allowed,method:b.closest('article').querySelector('.badge').textContent===kinds.ocr?'ocr':'all'});
       if(b.hasAttribute('data-io-query')){input.value=b.dataset.ioQuery;run();input.focus({preventScroll:true});}
       if(b.hasAttribute('data-io-more')){limit+=30;draw();}
-      if(b.hasAttribute('data-io-retry')){failed=false;draw();fetchIndex();}
+      if(b.hasAttribute('data-io-retry'))loader.load(b.dataset.ioRetry,data.version).catch(()=>{});
     }
-    async function fetchIndex(){try{const value=await load();if(active){index=value;failed=false;draw();}}catch{if(active){failed=true;draw();}}}
-    draw();if(!index)fetchIndex();
+    function ensure(){if(!active)return;if(loader.states.core.status==='idle')loader.load('core',data.version).catch(()=>{});if(M.terms(query).length&&(!kind||kind==='manual')&&loader.states.core.status==='ready'&&loader.states.manual.status==='idle')loader.load('manual',data.version).catch(()=>{});}
+    const unsubscribe=loader.subscribe(()=>{draw();ensure();});
+    draw();ensure();
   }
   window.GMEIOSearch={attach,cleanup};
 })();

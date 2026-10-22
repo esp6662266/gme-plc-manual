@@ -73,6 +73,15 @@ export async function buildIndex(directory=root) {
   records.push(...[...notes.records,...documents.records].map(r=>({...r,status:[r.status,...(r.equipment||[]).map(id=>statuses.get(id))].filter(Boolean).join(' / ')})));
   return {schema_version:1,version:data.version,source_hashes:{...Object.fromEntries(inputs.map((p,i)=>[p,digest(contents[i])])), 'registers/drawing-search-pages.json':digest(drawingBytes),'registers/document-search-data.json.gz':digest(documentBytes),'registers/io-search-reference-notes.json':digest(notesBytes)},document_counts:documents.counts,scope_overrides_sha256:digest(await readFile(resolve(directory,'docs/equipment-standard/SCOPE-OVERRIDES.json'))),counts:Object.fromEntries(['plc','circuit','signal','hmi','reference','source','manual','ocr'].map(k=>[k,records.filter(r=>r.kind===k).length])),records};
 }
+export function partitionIndex(full) {
+  const build_id=createHash('sha256').update(JSON.stringify(full)).digest('hex');
+  const manual={schema_version:1,version:full.version,build_id,records:full.records.filter(r=>r.kind==='manual')};
+  const index={...full,schema_version:2,build_id,manual_path:'registers/io-search-manual.json',records:full.records.filter(r=>r.kind!=='manual')};
+  return {index,manual};
+}
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  const index=await buildIndex();await writeFile(resolve(root,'all-in-one/registers/io-search-index.json'),JSON.stringify(index)+'\n');console.log('I/O 검색 색인:',index.counts);
+  const {index,manual}=partitionIndex(await buildIndex());
+  await writeFile(resolve(root,'all-in-one/registers/io-search-index.json'),JSON.stringify(index)+'\n');
+  await writeFile(resolve(root,'all-in-one/registers/io-search-manual.json'),JSON.stringify(manual)+'\n');
+  console.log('I/O 검색 색인:',index.counts);
 }
