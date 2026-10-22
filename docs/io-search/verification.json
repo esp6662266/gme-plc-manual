@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-22",
   "version": "1.24.0",
-  "status": "local_complete_publication_pending",
+  "status": "published_verified",
   "counts": {
     "plc": 789,
     "circuit": 104,
@@ -88,6 +88,28 @@
     "attempt": "Inspected current browser inventory and official chat list for existing Dots/속슬이. No identifiable connected Dots target; no message sent to an unrelated chat."
   },
   "publication": {
-    "status": "pending"
+    "status": "ready_verified",
+    "commit_ref": "b2d7abff46604d5c33c4ff0a15857babf96dbf78",
+    "deploy_id": "6ad9ebd2a90c6136992b1fad",
+    "published_at": "2026-10-22T10:56:48.596Z",
+    "public_asset_hashes_matched": 8,
+    "public_asset_bytes": 27757794,
+    "live_queries": [
+      "Q0.0",
+      "IW394",
+      "DB11,X0.0",
+      "19KA1"
+    ],
+    "screenshot": "output/gme-io-search-20261022.png",
+    "earlier_incomplete_commit": {
+      "commit": "ecd342c16db92a9981716c56943d5f36b0934f61",
+      "state": "build_failed_no_publish",
+      "resolved_by": "b2d7abff46604d5c33c4ff0a15857babf96dbf78"
+    },
+    "runtime_log": {
+      "messages": 1,
+      "message": "MutationObserver observe parameter is not Node",
+      "source": "unidentified runtime message; no MutationObserver references in authored app assets; no impact observed on checked search flows"
+    }
   }
 }
