@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "version": "1.24.0",
+  "status": "local_complete_publication_pending",
+  "counts": {
+    "plc": 789,
+    "circuit": 104,
+    "signal": 333,
+    "hmi": 782
+  },
+  "local_ui": {
+    "passed": [
+      "Q0.0: BC01 기동 명령",
+      "I0.0: 운전 응답",
+      "IW394: FN04 전류 전달",
+      "DB11.DBX0.0: BC_01\\RispostaA",
+      "선택 % / 공백 정규화",
+      "기능명 검색 / 0건 안내",
+      "설비 필터 / URL 재열기",
+      "전기도면 PDF 20쪽 / 뒤로가기",
+      "설비 I/O 화면 이동",
+      "목록 scope 변경 후 검색조건 유지",
+      "I3.2 / I8.1 정확 주소 기능 우선"
+    ],
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "horizontal_overflow": false
+    },
+    "console_product_errors": 0,
+    "loading_failure_retry_ui": "not_verified: CDP unavailable during embedded document response"
+  },
+  "automated": {
+    "node_tests": 14,
+    "status": "passed",
+    "package": {
+      "fresh_verifiers": 14,
+      "fresh_equipment_verifiers": 2,
+      "finished_at_utc": "2026-10-22T10:54:31.902962+00:00",
+      "status": "passed",
+      "archive": "GME-All-In-One-v1.24.0.zip",
+      "version": "1.24.0",
+      "files": 3459,
+      "original_files_unchanged": 730,
+      "additional_sources_verified": 3,
+      "simulator_development": "stopped_by_user",
+      "simulator_behavior_tests": "not_rerun",
+      "bytes": 87006929,
+      "sha256": "ed2e07bb66740c8fe65f34de964364542b9f622e9783399767cfe33115ec12a2",
+      "crc_checked": true,
+      "all_file_hashes_checked": true,
+      "field_verified": false,
+      "tia_verified": false
+    },
+    "build": {
+      "status": "passed",
+      "public_files": 3488,
+      "csp_hashes": 6,
+      "csp_scoped_policies": 39,
+      "netlify_mode": true
+    }
+  },
+  "review": {
+    "read_only_reviewers": 2,
+    "required_findings_resolved": [
+      "preserve_search_params_on_scope_change",
+      "rank_exact_circuit_address_before_related_mentions"
+    ]
+  },
+  "preservation": {
+    "simulator": "5 frozen assets unchanged; behavior tests not rerun",
+    "plc_changes": 0,
+    "field_changes": 0,
+    "sejin_changes": 0,
+    "operational_record_writes": 0,
+    "save_restore_pdf_retests": 0,
+    "original_files_unchanged": 730,
+    "catalog_guides_hash_metadata_only": 131
+  },
+  "dots_consultation": {
+    "status": "unavailable",
+    "actual_reply_read": false,
+    "attempt": "Inspected current browser inventory and official chat list for existing Dots/속슬이. No identifiable connected Dots target; no message sent to an unrelated chat."
+  },
+  "publication": {
+    "status": "pending"
+  }
+}

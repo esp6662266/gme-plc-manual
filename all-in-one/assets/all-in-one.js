@@ -23,12 +23,13 @@
   const bc01LastItems=new Map();
   const validNoteEquipment = new Set([...deviceMap.keys(),...priorityMap.keys()]);
   const base = new URL('./', location.href);
-  const views = new Set(['overview','priority','summary','manual','repair','repair-record','io','spec','ladder','structure','drawings','simulator','tests','checks','conflicts','notes','resources','doc','review']);
+  const views = new Set(['overview','priority','summary','manual','repair','repair-record','io','io-search','spec','ladder','structure','drawings','simulator','tests','checks','conflicts','notes','resources','doc','review']);
   const deviceViews = new Set(['summary','manual','repair','repair-record','io','spec','ladder','structure','drawings','simulator','tests','checks','review']);
   const tabs = [['summary','설비 요약'],['manual','매뉴얼'],['repair','진단·수리'],['io','I/O·HMI'],['spec','제어 명세'],['ladder','래더'],['drawings','도면'],['simulator','시뮬레이터 · 영구 중지'],['tests','시험'],['checks','확인 대장']];
   tabs.splice(6,0,['structure','호출·신호 구조']);
   tabs.splice(3,0,['repair-record','수리 기록']);
   const labels = Object.fromEntries(tabs.concat([['overview','통합 현황'],['priority','공정 배치도·설비카드'],['notes','개선·작업 메모'],['resources','전체 자료'],['doc','자료 보기'],['conflicts','자료 불일치'],['review','근거 검토·확인']]));
+  labels['io-search']='I/O·기능 검색';
   const state = {view:'overview', selected:'P01', scope:'priority', doc:'', listQuery:'', group:'', tableQuery:'', tableDevice:'', reviewKind:'', layoutMode:'map', layoutZoom:0.85, layoutQuery:'', layoutScroll:[0,0], renderId:0, drawing:'', drawingZoom:1, drawingWide:false, repairSymptom:'', bc01Section:'overview', bc01Item:'', bc01AlarmStep:'set', bc01Text:'standard', bc01Check:'',bc01MediaGroup:'belt',bc01Photo:'photo-01',bc01Find:'',bc01Relation:'request'};
   const manualStateKeys=['bc01Section','bc01Item','bc01AlarmStep','bc01Text','bc01Check','bc01MediaGroup','bc01Photo','bc01Find','bc01Relation','standardWide'];
   const manualDefaults=Object.fromEntries(manualStateKeys.map(k=>[k,state[k]]));
@@ -168,6 +169,12 @@
     $('device-tabs').innerHTML = tabs.map(([v,label]) => button(label,v,state.selected,`class="${state.view === v ? 'active' : ''}" aria-current="${state.view === v ? 'page' : 'false'}"`)).join('');
     document.querySelectorAll('.primary-nav button').forEach(b => b.classList.toggle('active', b.dataset.view === state.view || (b.dataset.view === 'tests' && ['checks','conflicts'].includes(state.view))));
     document.title = `${labels[state.view]} · ${name} | GME 올인원`;
+    if(state.view==='io-search') {
+      $('context-kicker').textContent='전체 보존 자료에서 검색';
+      $('context-title').textContent='주소로 기능 찾기';
+      $('context-meta').textContent='PLC 주소 · HMI 태그 · 기능 설명 · 원본 근거';
+      document.title='I/O·기능 검색 | GME 올인원';
+    }
   }
   function unknownPanel() {
     const {p} = selection();
@@ -937,6 +944,7 @@
     $('document-frame').title = label || '통합 자료 보기';
   }
   function render() {
+    window.GMEIOSearch?.cleanup();
     window.GMEBC01Tools?.close();
     window.GMEUnifiedBackup?.close();
     closeBC01ProofPreview();
@@ -950,7 +958,8 @@
     const host = $('workspace-content');
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
-    if(state.view==='manual' && state.selected==='P01'){host.innerHTML=renderBC01Manual();const rail=host.querySelector('.bc01-library'), selected=rail?.querySelector('[aria-pressed="true"]');if(rail && selected && rail.scrollWidth>rail.clientWidth)rail.scrollLeft=Math.max(0,selected.offsetLeft-rail.offsetLeft-12);}
+    if(state.view==='io-search'){window.GMEIOSearch.attach(host,{data});}
+    else if(state.view==='manual' && state.selected==='P01'){host.innerHTML=renderBC01Manual();const rail=host.querySelector('.bc01-library'), selected=rail?.querySelector('[aria-pressed="true"]');if(rail && selected && rail.scrollWidth>rail.clientWidth)rail.scrollLeft=Math.max(0,selected.offsetLeft-rail.offsetLeft-12);}
     else if(state.view==='manual' && window.GMEEquipmentStandard.profile(data,state.selected)){host.innerHTML=window.GMEEquipmentStandard.render(data,state.selected,state);window.GMEEquipmentStandard.highlight(host,state.bc01Find);}
     else if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();
     else if (funcs[state.view]) { host.innerHTML = funcs[state.view](); if(state.view==='review')renderReviewRows(); if(state.view==='priority')restoreLayoutScroll(); }
@@ -1126,6 +1135,10 @@
     } else if (b.dataset.scope) {
       state.scope = b.dataset.scope; state.group = ''; state.listQuery = ''; $('equipment-search').value = ''; syncScope(); renderList();
       const params = new URLSearchParams({view:state.view,equipment:state.selected,scope:state.scope});
+      if(state.view==='io-search') {
+        const searchParams=new URLSearchParams(location.hash.slice(1));
+        for(const key of ['q','search-equipment','search-kind'])if(searchParams.has(key))params.set(key,searchParams.get(key));
+      }
       if (state.doc) params.set('doc',state.doc);
       if(state.view==='drawings' && drawingMap.get(state.selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);
       history.replaceState(null,'','#'+params.toString());
