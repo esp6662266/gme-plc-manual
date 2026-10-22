@@ -27,6 +27,7 @@ test('complete identifier boundaries preserve address widths and adjacent number
   const records=['I0.0','I10.0','I0.01','IW2','IW20','IB2','8.9','18.9','8.90'].map((address,i)=>({id:String(i),address,title:address,text:'',source:'',kind:'plc',equipment:[],equipment_names:[]}));
   for(const address of ['I0.0','IW2','8.9'])assert.deepEqual(Array.from(M.search(records,address),r=>r.address),[address]);
   assert.equal(search('번호없음987654321').length,0);assert.equal(search('x').length,0);
+  assert.equal(M.normalize('Q0.0 IW20'),'Q0.0 IW20');assert.equal(M.normalize('DB11,X0.0 I0.0'),'DB11.DBX0.0 I0.0');
   const combined=search('I0.0 Q0.0');assert.ok(combined.some(r=>r.address==='%I0.0'));assert.ok(combined.some(r=>r.address==='%Q0.0'));
 });
 test('filters, historical status, original spelling and escaping stay explicit',()=>{
@@ -69,4 +70,36 @@ test('all original drawing pages and public manual text are searchable with boun
   assert.match(M.snippet('z'.repeat(1000)+' DB11,X0.0 tail','DB11.DBX0.0'),/DB11,X0\.0/);
   assert.equal(index.records.find(r=>r.source==='networks/network-1070.html').status,'');
   assert.ok(index.records.find(r=>r.source==='networks/network-1079.html').status.includes('영구 중지'));
+});
+test('component aliases and intent words preserve tag numbers and original highlighting',()=>{
+  const ids=q=>Array.from(search(q),r=>r.id).sort();
+  for(const q of ['14 KA6','14-KA6','１４ ＫＡ６','14 KA 6 용도','14KA6쓰임새'])assert.deepEqual(ids(q),ids('14KA6'));
+  const records=['14KA1','14KA10','14KA6','15KA6','014KA6'].map(address=>({id:address,address,title:address,text:'',source:'',kind:'reference',equipment:[],equipment_names:[]}));
+  assert.deepEqual(Array.from(M.search(records,'14-KA1'),r=>r.address),['14KA1']);
+  assert.equal(M.highlight('14 KA6 / 14-KA6 / 14KA60','14KA6'),'<mark>14 KA6</mark> / <mark>14-KA6</mark> / 14KA60');
+  assert.ok(Array.from(M.suggest(index.records,'14KA')).includes('14KA6'));
+  assert.ok(!search('14KA').some(r=>r.address==='14KA6')); // suggestions never substitute a number
+});
+test('equipment selection retains common sources by default and explicitly excludes them',()=>{
+  const common=search('14KA6',{equipment:'BC01'}).filter(r=>!r.equipment.length);
+  assert.ok(common.some(r=>r.kind==='reference'));
+  assert.ok(search('14KA6',{equipment:'BC01',includeCommon:false}).every(r=>r.equipment.includes('BC01')));
+  assert.ok(!search('14KA6',{equipment:'BC01',includeCommon:false}).some(r=>r.kind==='reference'));
+});
+test('330 source-matched page previews include local OCR candidates and safe coordinates',async()=>{
+  const pages=JSON.parse(await readFile(new URL('../all-in-one/registers/drawing-search-pages.json',import.meta.url)));
+  assert.equal(pages.pages.length,330);assert.equal(new Set(pages.pages.map(p=>p.source+'#'+p.page)).size,330);
+  for(const [number,query]of [[9,'8.9'],[9,'8.10'],[14,'13.6'],[15,'14KA6']]){
+    const entry=pages.pages.find(p=>p.key==='oem-'+String(number).padStart(3,'0'));
+    const page=JSON.parse(await readFile(new URL('../all-in-one/'+entry.data,import.meta.url)));
+    const hits=M.locate(page,query);assert.ok(hits.length,query+' page '+number);
+    assert.ok(hits.every(h=>h.bbox.length===4&&h.bbox[0]<h.bbox[2]&&h.bbox[1]<h.bbox[3]));
+    if(query==='14KA6')assert.equal(hits[0].method,'pdf-text');
+    if(number!==14)assert.ok(search(query,{kind:'ocr'}).some(r=>r.links[0].url==='sources/Electrical_Rev2.pdf#page='+number));
+    else assert.equal(hits[0].method,'pdf-text');
+  }
+  assert.ok(index.counts.ocr>250);
+  assert.ok(index.records.filter(r=>r.kind==='ocr').every(r=>r.status.includes('기능 미확정')&&r.boundary.includes('오인식')));
+  const page={words:[{text:'14KA6',bbox:[.4,.5,.45,.53],method:'pdf-text'},{text:'14KA60',bbox:[.1,.1,.2,.2]}],ocr:[{text:'14KA6',bbox:[.401,.501,.451,.531]},{text:'14KA6',bbox:[-1,.1,.2,.2]}]};
+  assert.equal(M.locate(page,'14 KA6').length,1);assert.equal(M.locate(page,'14 KA6')[0].method,'pdf-text');
 });

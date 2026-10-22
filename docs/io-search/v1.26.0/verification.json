@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "version": "1.26.0",
+  "date": "2026-10-22",
+  "status": "local_verified_publication_pending",
+  "baseline_commit": "1072ebc",
+  "counts": {
+    "plc": 789,
+    "circuit": 104,
+    "signal": 333,
+    "hmi": 782,
+    "reference": 6,
+    "source": 330,
+    "manual": 1484,
+    "ocr": 286
+  },
+  "features": [
+    "canonical component spacing/hyphen and intent-word queries",
+    "explicit registered tag suggestions, no automatic numeric substitution",
+    "selected equipment plus common/unassigned data by default; URL-persisted opt-out",
+    "full-page drawing location dialog with matching boxes, zoom, next/previous, keyboard and original PDF",
+    "local OCR candidates distinct from reviewed functional explanations"
+  ],
+  "drawing_extraction": {
+    "pdf_sources": 3,
+    "pages": 330,
+    "native_words": 39798,
+    "ocr_tokens": 7579,
+    "pages_with_ocr_identifiers": 286,
+    "method": "pdfplumber native words (rotation matrix direction) + local Apple Vision accurate en-US; OCR confidence >= 0.7; no language correction",
+    "coordinates": "normalized top-left [x0,y0,x1,y1]",
+    "external_uploads": 0,
+    "source_hashes": {
+      "sources/Electrical_Rev2.pdf": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+      "sources/Electrical_Can_Decoating_20241118.pdf": "3963f137b7a1a5a8ab6525c9e002046f8aa5ebbdee4799f41b0a0bad664a4dbd",
+      "sources/PID_1684n002I.pdf": "2f873ec59562c244d547f862978f23cdfd44d57cc10db6dbae247c1b27c29c0b"
+    },
+    "rotated_text": "Native matrix direction determines btt/ttb; never reverse numeric identifiers",
+    "known_limits": [
+      "OCR can omit/misread labels and supply approximate boxes",
+      "confidence is an OCR score, not functional verification",
+      "preview is a raster copy; original PDF is preserved",
+      "current photo/drawing/field identity remains unverified"
+    ]
+  },
+  "ui": {
+    "alias_query": "14-KA6 용도",
+    "alias_first_result": "14KA6 · 드라이브 STO 입력 회로의 접점",
+    "common_filter_BC01": {
+      "included": 3,
+      "excluded": 0,
+      "query": "14-KA6 용도"
+    },
+    "prefix_suggestions": [
+      "14KA1",
+      "14KA2",
+      "14KA3",
+      "14KA4",
+      "14KA5",
+      "14KA6"
+    ],
+    "locations": {
+      "wire_8_9": "PDF9, OCR box centered on visible wire 8.9",
+      "wire_13_6": "PDF14, native rotated box centered on visible vertical 13.6",
+      "component_14KA10": "PDF9, two native positions; next selects 2/2"
+    },
+    "keyboard": [
+      "+ zoom",
+      "Escape closes",
+      "close returns focus to invoking location button"
+    ],
+    "whole_page_zoom": true,
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "dialogWidth": 367.5,
+      "initial_zoom_percent": 151,
+      "highlight_height_px": 42.89
+    }
+  },
+  "review": {
+    "read_only_reviewers": 2,
+    "resolved": [
+      "multiple PLC address whitespace regression",
+      "removed equipment status on OCR records",
+      "rotated native text direction and first 13.6 location",
+      "named dialog accessibility",
+      "mobile modal fits content width and readable initial zoom"
+    ]
+  },
+  "automated": {
+    "node_tests": 19,
+    "status": "passed",
+    "package": {
+      "fresh_verifiers": 14,
+      "fresh_equipment_verifiers": 2,
+      "finished_at_utc": "2026-10-22T11:45:09.083795+00:00",
+      "status": "passed",
+      "archive": "GME-All-In-One-v1.26.0.zip",
+      "version": "1.26.0",
+      "files": 4124,
+      "original_files_unchanged": 730,
+      "additional_sources_verified": 3,
+      "simulator_development": "stopped_by_user",
+      "simulator_behavior_tests": "not_rerun",
+      "bytes": 129760028,
+      "sha256": "5a6784fbd09757869db84880fdc968c7a92fc54d302a5a8bdfb5e2f23f3cbc3e",
+      "crc_checked": true,
+      "all_file_hashes_checked": true,
+      "field_verified": false,
+      "tia_verified": false
+    },
+    "build": {
+      "status": "passed",
+      "netlify_mode": true,
+      "files": 4153,
+      "csp_hashes": 6,
+      "csp_scoped_policies": 39
+    }
+  },
+  "preservation": {
+    "plc_changes": 0,
+    "field_changes": 0,
+    "sejin_writes": 0,
+    "operational_record_writes": 0,
+    "simulator_execution": 0,
+    "original_files_unchanged": 730,
+    "frozen_assets_unchanged": 5
+  },
+  "dots_consultation": {
+    "status": "unavailable",
+    "actual_reply_read": false,
+    "reason": "No identifiable Dots target in connected browser inventory and official chat list in this work; no unrelated chat messaged"
+  },
+  "publication": {
+    "status": "pending"
+  }
+}

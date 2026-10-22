@@ -1144,7 +1144,7 @@
       const params = new URLSearchParams({view:state.view,equipment:state.selected,scope:state.scope});
       if(state.view==='io-search') {
         const searchParams=new URLSearchParams(location.hash.slice(1));
-        for(const key of ['q','search-equipment','search-kind'])if(searchParams.has(key))params.set(key,searchParams.get(key));
+        for(const key of ['q','search-equipment','search-kind','search-common'])if(searchParams.has(key))params.set(key,searchParams.get(key));
       }
       if (state.doc) params.set('doc',state.doc);
       if(state.view==='drawings' && drawingMap.get(state.selected)?.sheets.some(s=>s.id===state.drawing)) params.set('drawing',state.drawing);

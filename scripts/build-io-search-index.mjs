@@ -54,8 +54,24 @@ export async function buildIndex(directory=root) {
     if(!path.startsWith('sources/')&&!data.resources.includes(path))throw new Error('Non-public document source: '+path);
     if(digest(await readFile(resolve(directory,'all-in-one',path)))!==hash)throw new Error('Document search extraction is stale: '+path);
   }));
+  const drawingBytes=await readFile(resolve(directory,'all-in-one/registers/drawing-search-pages.json'));
+  const drawing=JSON.parse(drawingBytes);
+  for(const [path,hash]of Object.entries(drawing.source_hashes))if(digest(await readFile(resolve(directory,'all-in-one',path)))!==hash)throw new Error('Drawing source stale: '+path);
+  for(const p of drawing.pages){
+    if(!data.resources.includes(p.image)||!data.resources.includes(p.data))throw new Error('Drawing page not public: '+p.key);
+    const [bytes,imageBytes]=await Promise.all([readFile(resolve(directory,'all-in-one',p.data)),readFile(resolve(directory,'all-in-one',p.image))]);
+    if(digest(bytes)!==p.data_sha256||digest(imageBytes)!==p.image_sha256)throw new Error('Drawing page stale: '+p.key);
+    const page=JSON.parse(bytes);
+    if(page.source!==p.source||page.page!==p.page||page.image!==p.image||page.source_sha256!==drawing.source_hashes[p.source])throw new Error('Drawing source/page mismatch: '+p.key);
+    for(const word of [...page.words,...page.ocr])if(!Array.isArray(word.bbox)||word.bbox.length!==4||word.bbox.some(n=>!Number.isFinite(n)||n<0||n>1.001)||word.bbox[0]>=word.bbox[2]||word.bbox[1]>=word.bbox[3])throw new Error('Invalid drawing bbox: '+p.key);
+    const tokens=[...new Set(page.ocr.filter(w=>w.confidence>=0.7).map(w=>w.text))];
+    const original=documents.records.find(r=>r.kind==='source'&&r.links.some(l=>l.url===p.source+'#page='+p.page));
+    if(original)original.text+='\nPDF 좌표 추출문: '+page.words.map(w=>w.text).join(' ');
+    if(!tokens.length)continue;
+    records.push({id:'ocr-'+p.key,kind:'ocr',address:'',symbol:'',title:'OCR 후보 · '+p.source.split('/').pop()+' · PDF '+p.page+'쪽',text:tokens.join(' · '),equipment:original?.equipment||[],equipment_names:original?.equipment_names||[],status:['OCR 자동 인식 · 기능 미확정',...(original?.equipment||[]).map(id=>statuses.get(id))].filter(Boolean).join(' / '),source:p.source+' · PDF '+p.page+'쪽 · Apple Vision 로컬 OCR · 신뢰도 0.7 이상',links:[{url:p.source+'#page='+p.page,label:'원본 도면 '+p.page+'쪽'}],boundary:'문자인식 후보입니다. 번호·위치를 원본과 대조하기 전 기능 설명이나 확정 배선으로 사용하지 마세요. 글자 누락·오인식이 있을 수 있습니다.'});
+  }
   records.push(...[...notes.records,...documents.records].map(r=>({...r,status:[r.status,...(r.equipment||[]).map(id=>statuses.get(id))].filter(Boolean).join(' / ')})));
-  return {schema_version:1,version:data.version,source_hashes:{...Object.fromEntries(inputs.map((p,i)=>[p,digest(contents[i])])), 'registers/document-search-data.json.gz':digest(documentBytes),'registers/io-search-reference-notes.json':digest(notesBytes)},document_counts:documents.counts,scope_overrides_sha256:digest(await readFile(resolve(directory,'docs/equipment-standard/SCOPE-OVERRIDES.json'))),counts:Object.fromEntries(['plc','circuit','signal','hmi','reference','source','manual'].map(k=>[k,records.filter(r=>r.kind===k).length])),records};
+  return {schema_version:1,version:data.version,source_hashes:{...Object.fromEntries(inputs.map((p,i)=>[p,digest(contents[i])])), 'registers/drawing-search-pages.json':digest(drawingBytes),'registers/document-search-data.json.gz':digest(documentBytes),'registers/io-search-reference-notes.json':digest(notesBytes)},document_counts:documents.counts,scope_overrides_sha256:digest(await readFile(resolve(directory,'docs/equipment-standard/SCOPE-OVERRIDES.json'))),counts:Object.fromEntries(['plc','circuit','signal','hmi','reference','source','manual','ocr'].map(k=>[k,records.filter(r=>r.kind===k).length])),records};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const index=await buildIndex();await writeFile(resolve(root,'all-in-one/registers/io-search-index.json'),JSON.stringify(index)+'\n');console.log('I/O 검색 색인:',index.counts);
