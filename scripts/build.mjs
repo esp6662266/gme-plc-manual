@@ -5,7 +5,10 @@ import { mkdir, cp, readFile, writeFile, readdir, stat, rm } from 'node:fs/promi
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
+import assert from 'node:assert/strict';
+import { buildIndex } from './build-io-search-index.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+assert.deepEqual(JSON.parse(await readFile(resolve(root,'all-in-one/registers/io-search-index.json'),'utf8')),await buildIndex(root),'I/O search index is stale; run npm run build:io-search and verify:manual');
 const manualManifest=await verifyAllInOne(root);
 const source = resolve(root, 'manual');
 const destination = resolve(root, 'dist');
