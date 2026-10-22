@@ -43,5 +43,5 @@ Preserve original PDF hashes, unknown/draft data, stopped simulator assets and e
 **Files:** version files, manifests, release/handoff/publication docs and evidence in `docs/io-search/v1.26.0/`.
 
 - [x] Rebuild static manual/documents/search, run required package checks, original/frozen hashes, ZIP CRC/all hashes, npm tests/build and CSP checks.
-- [ ] Commit complete sparse-checkout changes, push version tag, verify Netlify commit/ready and public files/UI, then record evidence.
-- [ ] Check identifiable Dots availability; record actual result without inventing consultation or field completion.
+- [x] Commit complete sparse-checkout changes, push version tag, verify Netlify commit/ready and public files/UI, then record evidence.
+- [x] Check identifiable Dots availability; record actual result without inventing consultation or field completion.
