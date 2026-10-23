@@ -1,0 +1,105 @@
+{
+  "version": "1.29.0",
+  "date": "2026-10-23",
+  "status": "local_verified_integration_pending",
+  "counts": {
+    "previous_references": 6,
+    "added_references": 13,
+    "reviewed_references": 19
+  },
+  "source_review": {
+    "pdf": "sources/Electrical_Rev2.pdf",
+    "sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "complete_pages": [
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      19,
+      21,
+      25,
+      28,
+      31,
+      43,
+      48,
+      60
+    ],
+    "read_only_reviewers": 2,
+    "old_six_content_sha256_matched": true,
+    "resolved": [
+      "9T1 secondary return 0Vac9.9 does not pass through9QF2"
+    ]
+  },
+  "initial_isolated_verification": {
+    "baseline_commit": "d283760",
+    "node_tests": 27,
+    "status": "passed",
+    "package": {
+      "fresh_verifiers": 14,
+      "fresh_equipment_verifiers": 2,
+      "finished_at_utc": "2026-10-23T12:33:29.286405+00:00",
+      "status": "passed",
+      "archive": "GME-All-In-One-v1.29.0.zip",
+      "version": "1.29.0",
+      "files": 4126,
+      "original_files_unchanged": 730,
+      "additional_sources_verified": 3,
+      "simulator_development": "stopped_by_user",
+      "simulator_behavior_tests": "not_rerun",
+      "bytes": 129771317,
+      "sha256": "2e61510198d5007bc7b0f9889bb1da59d8fdfed52484bde695646ffb396a751f",
+      "crc_checked": true,
+      "all_file_hashes_checked": true,
+      "field_verified": false,
+      "tia_verified": false
+    },
+    "netlify_build": {
+      "status": "passed",
+      "files": 4155,
+      "csp_hashes": 6,
+      "csp_policies": 39
+    },
+    "integration_rerun_required": true
+  },
+  "ui": {
+    "all_19_queries_first_result_is_exact_reviewed_explanation": true,
+    "source_location_14KA1_pdf19": true,
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "cardWidth": 343
+    }
+  },
+  "preservation": {
+    "plc_changes": 0,
+    "field_changes": 0,
+    "protection_setting_changes": 0,
+    "sejin_writes": 0,
+    "operational_record_writes": 0,
+    "simulator_execution": 0,
+    "removed_five_excluded": true,
+    "conflict_review_still_deferred": true
+  },
+  "workspace_coordination": {
+    "other_thread": "01a162dd-8ebc-7f71-bbc1-22d872b0dc27",
+    "other_task": "connection tracing UI v1.28",
+    "isolated_branch": "codex/component-reference-expansion-20261023",
+    "shared_changes_overwritten": false,
+    "messages_sent": 0
+  },
+  "dots_consultation": {
+    "status": "unavailable",
+    "actual_reply_read": false,
+    "reason": "No identifiable Dots target in official chat listing and connected browser inventory"
+  },
+  "publication": {
+    "status": "pending_integration"
+  }
+}
