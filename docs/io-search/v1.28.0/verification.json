@@ -3,7 +3,7 @@
   "version": "1.28.0",
   "date": "2026-10-23",
   "baseline_commit": "d283760fcff73e69592b2023bc935f661b2677fc",
-  "status": "local_verified_pending_publish",
+  "status": "published_verified",
   "source": {
     "file": "sources/Electrical_Rev2.pdf",
     "sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
@@ -123,5 +123,49 @@
     "public_files": 4157,
     "csp_inline_hashes": 6,
     "csp_policies": 39
+  },
+  "publication": {
+    "feature_commit": "a1683795696f440cf22d7c1f1a8db2f9ad4f6b8b",
+    "tag": "v1.28.0",
+    "deploy_id": "6adb5493c650037963f042c7",
+    "state": "ready",
+    "published_at": "2026-10-23T12:36:04.357Z",
+    "matched_assets": 16,
+    "matched_bytes": 48663368,
+    "entry_refs": 17,
+    "asset_verification": "public-assets-verification.json"
+  },
+  "public_ui": {
+    "version": "1.28.0",
+    "queries": {
+      "14KA6": 15,
+      "14KA8": 15,
+      "14KA10": 13,
+      "8.9": 2,
+      "8.10": 2,
+      "13.6": 15
+    },
+    "all_six_single_matching_trace_open": true,
+    "parallel_coils": 5,
+    "desktop_client_width": 1265,
+    "desktop_client_height": 720,
+    "mobile_viewport_width": 390,
+    "mobile_client_width": 375,
+    "mobile_scroll_width": 375,
+    "terminal_419_native_hits": 1,
+    "terminal_419_focus_return": "reviewed-8.9:burner-1:6",
+    "right_contact_14KA10_selected_match": "2 / 2 native positions",
+    "native_related_link_and_back": true,
+    "screenshot": "public-connections.jpg"
+  },
+  "browser_diagnostics": {
+    "application_origin_exception_frames": 0,
+    "browser_injected_exception": "MutationObserver observe target is not a Node",
+    "injected_script_bytes": 535382,
+    "injected_script_prefix": "(function(require, process, exports, module, Buffer, global, setImmediate, clearImmediate)",
+    "last_frame": "node:electron/js2c/sandbox_bundle",
+    "repository_MutationObserver_occurrences": 0,
+    "interpretation": "Electron injected browser script, separate from hosted GME assets",
+    "runtime_debugger_disabled_after_diagnosis": true
   }
 }

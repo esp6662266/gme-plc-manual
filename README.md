@@ -1,3 +1,9 @@
+## 현재 프로그램: v1.28.0 · 부품·선번 연결 추적
+
+[통합검색 열기](https://gme-plc-manual.netlify.app/all-in-one/#view=io-search&q=14KA10)에서 14KA6·14KA8·14KA10·8.9·8.10·13.6을 검색하면 접점·코일·선번·단자대의 도면상 연결을 볼 수 있습니다. 경로를 선택하고 각 항목을 누르면 해당 PDF 페이지의 태그/선번 위치가 열립니다. 관련 번호는 전체 검색으로 이동하며 현재 현장 결선·전압·접점 상태는 미확인입니다.
+
+[현재 버전](VERSION.json) · [게시/검증 상태](PUBLICATION_STATUS.md) · [고정 소스 태그](https://github.com/esp6662266/gme-plc-manual/tree/v1.28.0). 아래 매뉴얼 확장·고정 ZIP 항목은 각 버전 당시의 이력입니다.
+
 ## 최신 검토 범위: 철거5개 제외 · 2026-10-12
 
 CC01·TC11·CM01·CM02·UC01은 사용자 확인 철거 설비로 추가 검토에서 제외합니다. 현재 대상142개, 기존149문서·원본·기록은 보존합니다. [현재 범위](docs/equipment-standard/SCOPE-OVERRIDES.json)와 [인계 기록](WORKSPACE-HANDOFF.md)을 따릅니다. 아래 게시 당시 집계와 구분합니다.
