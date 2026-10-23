@@ -44,5 +44,6 @@
       hits.push(w);
     }return hits.sort((a,b)=>a.bbox[1]-b.bbox[1]||a.bbox[0]-b.bbox[0]);
   }
-  root.GMEIOSearchModel={normalize,escape,terms,search,highlight,snippet,suggest,locate};
+  function nearest(hits,point){if(!Array.isArray(point)||point.length!==2||point.some(n=>!Number.isFinite(n)||n<0||n>1))return 0;let best=Infinity,index=0;hits.forEach((hit,i)=>{const b=hit.bbox,d=((b[0]+b[2])/2-point[0])**2+((b[1]+b[3])/2-point[1])**2;if(d<best){best=d;index=i;}});return index;}
+  root.GMEIOSearchModel={normalize,escape,terms,search,highlight,snippet,suggest,locate,nearest};
 })(globalThis);

@@ -3,6 +3,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
+import { validateConnections } from './validate-io-connections.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const inputs = ['registers/all-in-one-data.json','registers/plc-symbols.csv','registers/signal-trace.json','registers/electrical-trace.json','registers/hmi-transfer.json'];
@@ -56,6 +57,7 @@ export async function buildIndex(directory=root) {
   }));
   const drawingBytes=await readFile(resolve(directory,'all-in-one/registers/drawing-search-pages.json'));
   const drawing=JSON.parse(drawingBytes);
+  validateConnections(notes,{resources:data.resources,pages:drawing.pages});
   for(const [path,hash]of Object.entries(drawing.source_hashes))if(digest(await readFile(resolve(directory,'all-in-one',path)))!==hash)throw new Error('Drawing source stale: '+path);
   for(const p of drawing.pages){
     if(!data.resources.includes(p.image)||!data.resources.includes(p.data))throw new Error('Drawing page not public: '+p.key);

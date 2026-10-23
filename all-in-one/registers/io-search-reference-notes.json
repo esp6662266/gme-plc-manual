@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "source": "sources/Electrical_Rev2.pdf",
   "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
   "method": "visual comparison of complete original PDF pages; 8.9 and 8.10 manually transcribed because absent from PDF text layer",
@@ -36,7 +36,258 @@
           "label": "원본 도면 43쪽"
         }
       ],
-      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다.",
+      "trace": {
+        "kind": "component",
+        "routes": [
+          {
+            "id": "sto-vs01",
+            "title": "VS01 · 14KA6 접점 6→5",
+            "nodes": [
+              {
+                "kind": "terminal",
+                "label": "27AS1 · X1C:2 OUT2",
+                "query": "27AS1",
+                "url": "sources/Electrical_Rev2.pdf#page=28",
+                "page": 28,
+                "fg": 27,
+                "location_label": "장치 태그 위치",
+                "detail": "드라이브 OUT2 도면 단자"
+              },
+              {
+                "kind": "wire",
+                "label": "27.4",
+                "query": "27.4",
+                "url": "sources/Electrical_Rev2.pdf#page=28",
+                "page": 28,
+                "fg": 27,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA6",
+                "query": "14KA6",
+                "url": "sources/Electrical_Rev2.pdf#page=28",
+                "page": 28,
+                "fg": 27,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "6 → 5"
+              },
+              {
+                "kind": "wire",
+                "label": "27.6",
+                "query": "27.6",
+                "url": "sources/Electrical_Rev2.pdf#page=28",
+                "page": 28,
+                "fg": 27,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "27AS1 · X1C:4 IN2",
+                "query": "27AS1",
+                "url": "sources/Electrical_Rev2.pdf#page=28",
+                "page": 28,
+                "fg": 27,
+                "location_label": "장치 태그 위치",
+                "detail": "드라이브 IN2 도면 단자"
+              }
+            ],
+            "description": "드라이브 OUT2에서 IN2로 표시된 접점 경로입니다. 반대 채널의 14KA2는 별도 경로입니다."
+          },
+          {
+            "id": "sto-mv",
+            "title": "MV-2/5/6 · 14KA6 접점 2→1",
+            "nodes": [
+              {
+                "kind": "terminal",
+                "label": "30AS1 · X1C:2 OUT2",
+                "query": "30AS1",
+                "url": "sources/Electrical_Rev2.pdf#page=31",
+                "page": 31,
+                "fg": 30,
+                "location_label": "장치 태그 위치",
+                "detail": "드라이브 OUT2 도면 단자"
+              },
+              {
+                "kind": "wire",
+                "label": "30.4",
+                "query": "30.4",
+                "url": "sources/Electrical_Rev2.pdf#page=31",
+                "page": 31,
+                "fg": 30,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA6",
+                "query": "14KA6",
+                "url": "sources/Electrical_Rev2.pdf#page=31",
+                "page": 31,
+                "fg": 30,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "2 → 1"
+              },
+              {
+                "kind": "wire",
+                "label": "30.6",
+                "query": "30.6",
+                "url": "sources/Electrical_Rev2.pdf#page=31",
+                "page": 31,
+                "fg": 30,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "30AS1 · X1C:4 IN2",
+                "query": "30AS1",
+                "url": "sources/Electrical_Rev2.pdf#page=31",
+                "page": 31,
+                "fg": 30,
+                "location_label": "장치 태그 위치",
+                "detail": "드라이브 IN2 도면 단자"
+              }
+            ],
+            "description": "드라이브 OUT2에서 IN2로 표시된 접점 경로입니다. 반대 채널의 14KA2는 별도 경로입니다."
+          },
+          {
+            "id": "sto-fn02",
+            "title": "FN02 · 14KA6 접점 4→3",
+            "nodes": [
+              {
+                "kind": "terminal",
+                "label": "42AS1 · X4:35 OUT2",
+                "query": "42AS1",
+                "url": "sources/Electrical_Rev2.pdf#page=43",
+                "page": 43,
+                "fg": 42,
+                "location_label": "장치 태그 위치",
+                "detail": "드라이브 OUT2 도면 단자"
+              },
+              {
+                "kind": "wire",
+                "label": "42.4",
+                "query": "42.4",
+                "url": "sources/Electrical_Rev2.pdf#page=43",
+                "page": 43,
+                "fg": 42,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA6",
+                "query": "14KA6",
+                "url": "sources/Electrical_Rev2.pdf#page=43",
+                "page": 43,
+                "fg": 42,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "4 → 3"
+              },
+              {
+                "kind": "wire",
+                "label": "42.6",
+                "query": "42.6",
+                "url": "sources/Electrical_Rev2.pdf#page=43",
+                "page": 43,
+                "fg": 42,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "42AS1 · X4:38 IN2",
+                "query": "42AS1",
+                "url": "sources/Electrical_Rev2.pdf#page=43",
+                "page": 43,
+                "fg": 42,
+                "location_label": "장치 태그 위치",
+                "detail": "드라이브 IN2 도면 단자"
+              }
+            ],
+            "description": "드라이브 OUT2에서 IN2로 표시된 접점 경로입니다. 반대 채널의 14KA2는 별도 경로입니다."
+          },
+          {
+            "id": "coil-14ka6",
+            "title": "코일 A1·A2 연결",
+            "nodes": [
+              {
+                "kind": "contact",
+                "label": "13KA1",
+                "query": "13KA1",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "장치 태그 위치",
+                "detail": "안전제어장치 출력 접점 · 24는 단자 번호",
+                "terminals": "23 → 24"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "표기 위치",
+                "detail": "FG14/5로 이어짐"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치",
+                "detail": "FG13/5에서 이어짐"
+              },
+              {
+                "kind": "coil",
+                "label": "14KA6",
+                "query": "14KA6",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "장치 태그 위치",
+                "detail": "A1=13.6 · A2=0Vac 9.9",
+                "terminals": "A1 → A2"
+              },
+              {
+                "kind": "wire",
+                "label": "0Vac 9.9",
+                "query": "9.9",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치"
+              }
+            ],
+            "description": "선번 13.6의 해당 코일 분기만 표시합니다. 다른 코일도 같은 선번에 병렬로 연결됩니다."
+          }
+        ],
+        "related": [
+          "13.6",
+          "14KA8",
+          "14KA10"
+        ],
+        "schema_version": 1,
+        "reviewed": "2026-10-23",
+        "basis": "original_drawing_visual_comparison",
+        "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "unknowns": [
+          "사진 부품과 보존 도면의 실제 동일성",
+          "현재 결선·실제 전압·접점 상태·정상 극성·안전 기능 상태",
+          "현재 CPU 대응·현장 복구 완료"
+        ],
+        "coil": {
+          "a1": "13.6",
+          "a2": "0Vac 9.9",
+          "page": 15,
+          "fg": 14
+        }
+      }
     },
     {
       "id": "reviewed-14KA8",
@@ -65,7 +316,352 @@
           "label": "원본 도면 16쪽"
         }
       ],
-      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다.",
+      "trace": {
+        "kind": "component",
+        "routes": [
+          {
+            "id": "aux-110",
+            "title": "보조전원 · 14KA8 접점 1→2",
+            "nodes": [
+              {
+                "kind": "wire",
+                "label": "110Vac 9.8",
+                "query": "9.8",
+                "url": "sources/Electrical_Rev2.pdf#page=10",
+                "page": 10,
+                "fg": 9,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA4",
+                "query": "14KA4",
+                "url": "sources/Electrical_Rev2.pdf#page=10",
+                "page": 10,
+                "fg": 9,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "3 → 4"
+              },
+              {
+                "kind": "wire",
+                "label": "9.6",
+                "query": "9.6",
+                "url": "sources/Electrical_Rev2.pdf#page=10",
+                "page": 10,
+                "fg": 9,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA8",
+                "query": "14KA8",
+                "url": "sources/Electrical_Rev2.pdf#page=10",
+                "page": 10,
+                "fg": 9,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "1 → 2"
+              },
+              {
+                "kind": "wire",
+                "label": "110Vac 9.7",
+                "query": "9.7",
+                "url": "sources/Electrical_Rev2.pdf#page=10",
+                "page": 10,
+                "fg": 9,
+                "location_label": "표기 위치",
+                "detail": "다음 도면 참조 FG21/0"
+              }
+            ],
+            "description": ""
+          },
+          {
+            "id": "main-1",
+            "title": "15KA1 코일 공급 · 14KA8 접점 3→4",
+            "nodes": [
+              {
+                "kind": "wire",
+                "label": "110Vac 9.8",
+                "query": "9.8",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "device",
+                "label": "15FU1",
+                "query": "15FU1",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 퓨즈"
+              },
+              {
+                "kind": "wire",
+                "label": "15.1",
+                "query": "15.1",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA4",
+                "query": "14KA4",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "1 → 2",
+                "focus": [
+                  0.148,
+                  0.347
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "15.2",
+                "query": "15.2",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA8",
+                "query": "14KA8",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "3 → 4",
+                "focus": [
+                  0.148,
+                  0.449
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "15.4",
+                "query": "15.4",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "coil",
+                "label": "15KA1",
+                "query": "15KA1",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "A1=15.4 · A2=0Vac 9.9",
+                "terminals": "A1 → A2"
+              },
+              {
+                "kind": "wire",
+                "label": "0Vac 9.9",
+                "query": "9.9",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              }
+            ],
+            "description": "두 주전원 접촉기 코일 공급 경로를 각각 표시합니다."
+          },
+          {
+            "id": "main-2",
+            "title": "15KA2 코일 공급 · 14KA8 접점 5→6",
+            "nodes": [
+              {
+                "kind": "wire",
+                "label": "110Vac 9.8",
+                "query": "9.8",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "device",
+                "label": "15FU1",
+                "query": "15FU1",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 퓨즈"
+              },
+              {
+                "kind": "wire",
+                "label": "15.1",
+                "query": "15.1",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA4",
+                "query": "14KA4",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "5 → 6",
+                "focus": [
+                  0.244,
+                  0.347
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "15.3",
+                "query": "15.3",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA8",
+                "query": "14KA8",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "5 → 6",
+                "focus": [
+                  0.244,
+                  0.449
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "15.5",
+                "query": "15.5",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "coil",
+                "label": "15KA2",
+                "query": "15KA2",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "장치 태그 위치",
+                "detail": "A1=15.5 · A2=0Vac 9.9",
+                "terminals": "A1 → A2"
+              },
+              {
+                "kind": "wire",
+                "label": "0Vac 9.9",
+                "query": "9.9",
+                "url": "sources/Electrical_Rev2.pdf#page=16",
+                "page": 16,
+                "fg": 15,
+                "location_label": "표기 위치"
+              }
+            ],
+            "description": "두 주전원 접촉기 코일 공급 경로를 각각 표시합니다."
+          },
+          {
+            "id": "coil-14ka8",
+            "title": "코일 A1·A2 연결",
+            "nodes": [
+              {
+                "kind": "contact",
+                "label": "13KA1",
+                "query": "13KA1",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "장치 태그 위치",
+                "detail": "안전제어장치 출력 접점 · 24는 단자 번호",
+                "terminals": "23 → 24"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "표기 위치",
+                "detail": "FG14/5로 이어짐"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치",
+                "detail": "FG13/5에서 이어짐"
+              },
+              {
+                "kind": "coil",
+                "label": "14KA8",
+                "query": "14KA8",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "장치 태그 위치",
+                "detail": "A1=13.6 · A2=0Vac 9.9",
+                "terminals": "A1 → A2"
+              },
+              {
+                "kind": "wire",
+                "label": "0Vac 9.9",
+                "query": "9.9",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치"
+              }
+            ],
+            "description": "선번 13.6의 해당 코일 분기만 표시합니다. 다른 코일도 같은 선번에 병렬로 연결됩니다."
+          }
+        ],
+        "related": [
+          "13.6",
+          "14KA10"
+        ],
+        "schema_version": 1,
+        "reviewed": "2026-10-23",
+        "basis": "original_drawing_visual_comparison",
+        "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "unknowns": [
+          "사진 부품과 보존 도면의 실제 동일성",
+          "현재 결선·실제 전압·접점 상태·정상 극성·안전 기능 상태",
+          "현재 CPU 대응·현장 복구 완료"
+        ],
+        "coil": {
+          "a1": "13.6",
+          "a2": "0Vac 9.9",
+          "page": 15,
+          "fg": 14
+        }
+      }
     },
     {
       "id": "reviewed-14KA10",
@@ -90,7 +686,258 @@
           "label": "원본 도면 15쪽"
         }
       ],
-      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다.",
+      "trace": {
+        "kind": "component",
+        "routes": [
+          {
+            "id": "burner-1",
+            "title": "8.9 · 버너 제어반 공급선",
+            "nodes": [
+              {
+                "kind": "device",
+                "label": "8T1",
+                "query": "8T1",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "변압기 2차측 230V 도면 표기"
+              },
+              {
+                "kind": "wire",
+                "label": "8.7",
+                "query": "8.7",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA9",
+                "query": "14KA9",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "1 → 2",
+                "focus": [
+                  0.385,
+                  0.55
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.9",
+                "query": "8.9",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA10",
+                "query": "14KA10",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "1 → 2",
+                "focus": [
+                  0.385,
+                  0.65
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.11",
+                "query": "8.11",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "X1:419",
+                "query": "419",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치",
+                "detail": "단자대 단자"
+              }
+            ],
+            "description": "부하 표기: SUPPLY 230V 60Hz / CONTROL BOARD BURNER TYPE BP N 300"
+          },
+          {
+            "id": "burner-2",
+            "title": "8.10 · 버너 제어반 공급선",
+            "nodes": [
+              {
+                "kind": "device",
+                "label": "8T1",
+                "query": "8T1",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "변압기 2차측 230V 도면 표기"
+              },
+              {
+                "kind": "wire",
+                "label": "8.8",
+                "query": "8.8",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA9",
+                "query": "14KA9",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "3 → 4",
+                "focus": [
+                  0.457,
+                  0.55
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.10",
+                "query": "8.10",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA10",
+                "query": "14KA10",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "3 → 4",
+                "focus": [
+                  0.457,
+                  0.65
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.12",
+                "query": "8.12",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "X1:420",
+                "query": "420",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치",
+                "detail": "단자대 단자"
+              }
+            ],
+            "description": "부하 표기: SUPPLY 230V 60Hz / CONTROL BOARD BURNER TYPE BP N 300"
+          },
+          {
+            "id": "coil-14ka10",
+            "title": "코일 A1·A2 연결",
+            "nodes": [
+              {
+                "kind": "contact",
+                "label": "13KA1",
+                "query": "13KA1",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "장치 태그 위치",
+                "detail": "안전제어장치 출력 접점 · 24는 단자 번호",
+                "terminals": "23 → 24"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "표기 위치",
+                "detail": "FG14/5로 이어짐"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치",
+                "detail": "FG13/5에서 이어짐"
+              },
+              {
+                "kind": "coil",
+                "label": "14KA10",
+                "query": "14KA10",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "장치 태그 위치",
+                "detail": "A1=13.6 · A2=0Vac 9.9",
+                "terminals": "A1 → A2"
+              },
+              {
+                "kind": "wire",
+                "label": "0Vac 9.9",
+                "query": "9.9",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치"
+              }
+            ],
+            "description": "선번 13.6의 해당 코일 분기만 표시합니다. 다른 코일도 같은 선번에 병렬로 연결됩니다."
+          }
+        ],
+        "related": [
+          "8.9",
+          "8.10",
+          "13.6"
+        ],
+        "schema_version": 1,
+        "reviewed": "2026-10-23",
+        "basis": "original_drawing_visual_comparison",
+        "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "unknowns": [
+          "사진 부품과 보존 도면의 실제 동일성",
+          "현재 결선·실제 전압·접점 상태·정상 극성·안전 기능 상태",
+          "현재 CPU 대응·현장 복구 완료"
+        ],
+        "coil": {
+          "a1": "13.6",
+          "a2": "0Vac 9.9",
+          "page": 15,
+          "fg": 14
+        }
+      }
     },
     {
       "id": "reviewed-8.9",
@@ -111,7 +958,109 @@
           "label": "원본 도면 9쪽"
         }
       ],
-      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다.",
+      "trace": {
+        "kind": "wire",
+        "routes": [
+          {
+            "id": "burner-1",
+            "title": "8.9 · 버너 제어반 공급선",
+            "nodes": [
+              {
+                "kind": "device",
+                "label": "8T1",
+                "query": "8T1",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "변압기 2차측 230V 도면 표기"
+              },
+              {
+                "kind": "wire",
+                "label": "8.7",
+                "query": "8.7",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA9",
+                "query": "14KA9",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "1 → 2",
+                "focus": [
+                  0.385,
+                  0.55
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.9",
+                "query": "8.9",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA10",
+                "query": "14KA10",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "1 → 2",
+                "focus": [
+                  0.385,
+                  0.65
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.11",
+                "query": "8.11",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "X1:419",
+                "query": "419",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치",
+                "detail": "단자대 단자"
+              }
+            ],
+            "description": "부하 표기: SUPPLY 230V 60Hz / CONTROL BOARD BURNER TYPE BP N 300"
+          }
+        ],
+        "related": [
+          "14KA10",
+          "8.10"
+        ],
+        "schema_version": 1,
+        "reviewed": "2026-10-23",
+        "basis": "original_drawing_visual_comparison",
+        "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "unknowns": [
+          "사진 부품과 보존 도면의 실제 동일성",
+          "현재 결선·실제 전압·접점 상태·정상 극성·안전 기능 상태",
+          "현재 CPU 대응·현장 복구 완료"
+        ]
+      }
     },
     {
       "id": "reviewed-8.10",
@@ -132,7 +1081,109 @@
           "label": "원본 도면 9쪽"
         }
       ],
-      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다.",
+      "trace": {
+        "kind": "wire",
+        "routes": [
+          {
+            "id": "burner-2",
+            "title": "8.10 · 버너 제어반 공급선",
+            "nodes": [
+              {
+                "kind": "device",
+                "label": "8T1",
+                "query": "8T1",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "변압기 2차측 230V 도면 표기"
+              },
+              {
+                "kind": "wire",
+                "label": "8.8",
+                "query": "8.8",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA9",
+                "query": "14KA9",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "3 → 4",
+                "focus": [
+                  0.457,
+                  0.55
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.10",
+                "query": "8.10",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "14KA10",
+                "query": "14KA10",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 접점",
+                "terminals": "3 → 4",
+                "focus": [
+                  0.457,
+                  0.65
+                ]
+              },
+              {
+                "kind": "wire",
+                "label": "8.12",
+                "query": "8.12",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "terminal",
+                "label": "X1:420",
+                "query": "420",
+                "url": "sources/Electrical_Rev2.pdf#page=9",
+                "page": 9,
+                "fg": 8,
+                "location_label": "표기 위치",
+                "detail": "단자대 단자"
+              }
+            ],
+            "description": "부하 표기: SUPPLY 230V 60Hz / CONTROL BOARD BURNER TYPE BP N 300"
+          }
+        ],
+        "related": [
+          "14KA10",
+          "8.9"
+        ],
+        "schema_version": 1,
+        "reviewed": "2026-10-23",
+        "basis": "original_drawing_visual_comparison",
+        "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "unknowns": [
+          "사진 부품과 보존 도면의 실제 동일성",
+          "현재 결선·실제 전압·접점 상태·정상 극성·안전 기능 상태",
+          "현재 CPU 대응·현장 복구 완료"
+        ]
+      }
     },
     {
       "id": "reviewed-13.6",
@@ -157,7 +1208,188 @@
           "label": "원본 도면 15쪽"
         }
       ],
-      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다."
+      "boundary": "보존 도면상 역할입니다. 사진의 부품과 현재 도면의 실제 동일성·현행 결선·정상 극성·안전 기능 상태는 미확인입니다. 상부 라벨 14KA10과 부품 전면 14KA6은 다른 태그이므로 위치만으로 같은 기능으로 합치지 않습니다.",
+      "trace": {
+        "kind": "wire",
+        "routes": [
+          {
+            "id": "safety-output",
+            "title": "13KA1 출력 24 → 선번 13.6",
+            "nodes": [
+              {
+                "kind": "wire",
+                "label": "110Vac 9.8",
+                "query": "9.8",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "device",
+                "label": "13FU2",
+                "query": "13FU2",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "장치 태그 위치",
+                "detail": "도면 퓨즈 우측 극",
+                "terminals": "3 → 4"
+              },
+              {
+                "kind": "wire",
+                "label": "13.4",
+                "query": "13.4",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "표기 위치"
+              },
+              {
+                "kind": "contact",
+                "label": "13KA1",
+                "query": "13KA1",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "장치 태그 위치",
+                "detail": "안전제어장치 출력 · 24는 단자 번호",
+                "terminals": "23 → 24"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=14",
+                "page": 14,
+                "fg": 13,
+                "location_label": "표기 위치",
+                "detail": "다음 도면 참조 FG14/5"
+              },
+              {
+                "kind": "wire",
+                "label": "13.6",
+                "query": "13.6",
+                "url": "sources/Electrical_Rev2.pdf#page=15",
+                "page": 15,
+                "fg": 14,
+                "location_label": "표기 위치",
+                "detail": "FG13/5에서 이어져 코일들로 분기"
+              }
+            ],
+            "description": "13KA1 자체의 +24Vdc 전원과 출력 접점 공급선은 도면상 별도입니다. 실제 전압은 미확인입니다."
+          }
+        ],
+        "parallel": {
+          "title": "13.6에서 나뉘는 코일 병렬 분기",
+          "nodes": [
+            {
+              "kind": "coil",
+              "label": "14KA5",
+              "query": "14KA5",
+              "url": "sources/Electrical_Rev2.pdf#page=15",
+              "page": 15,
+              "fg": 14,
+              "location_label": "장치 태그 위치",
+              "detail": "A1=13.6 · A2=0Vac 9.9",
+              "terminals": "A1 → A2"
+            },
+            {
+              "kind": "coil",
+              "label": "14KA6",
+              "query": "14KA6",
+              "url": "sources/Electrical_Rev2.pdf#page=15",
+              "page": 15,
+              "fg": 14,
+              "location_label": "장치 태그 위치",
+              "detail": "A1=13.6 · A2=0Vac 9.9",
+              "terminals": "A1 → A2"
+            },
+            {
+              "kind": "coil",
+              "label": "14KA7",
+              "query": "14KA7",
+              "url": "sources/Electrical_Rev2.pdf#page=15",
+              "page": 15,
+              "fg": 14,
+              "location_label": "장치 태그 위치",
+              "detail": "A1=13.6 · A2=0Vac 9.9",
+              "terminals": "A1 → A2"
+            },
+            {
+              "kind": "coil",
+              "label": "14KA8",
+              "query": "14KA8",
+              "url": "sources/Electrical_Rev2.pdf#page=15",
+              "page": 15,
+              "fg": 14,
+              "location_label": "장치 태그 위치",
+              "detail": "A1=13.6 · A2=0Vac 9.9",
+              "terminals": "A1 → A2"
+            },
+            {
+              "kind": "coil",
+              "label": "14KA10",
+              "query": "14KA10",
+              "url": "sources/Electrical_Rev2.pdf#page=15",
+              "page": 15,
+              "fg": 14,
+              "location_label": "장치 태그 위치",
+              "detail": "A1=13.6 · A2=0Vac 9.9",
+              "terminals": "A1 → A2"
+            }
+          ],
+          "return_node": {
+            "kind": "wire",
+            "label": "0Vac 9.9",
+            "query": "9.9",
+            "url": "sources/Electrical_Rev2.pdf#page=15",
+            "page": 15,
+            "fg": 14,
+            "location_label": "표기 위치",
+            "detail": "각 코일 A2의 공통 귀환"
+          }
+        },
+        "related": [
+          "14KA6",
+          "14KA8",
+          "14KA10"
+        ],
+        "schema_version": 1,
+        "reviewed": "2026-10-23",
+        "basis": "original_drawing_visual_comparison",
+        "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+        "unknowns": [
+          "사진 부품과 보존 도면의 실제 동일성",
+          "현재 결선·실제 전압·접점 상태·정상 극성·안전 기능 상태",
+          "현재 CPU 대응·현장 복구 완료"
+        ]
+      }
     }
-  ]
+  ],
+  "trace_review": {
+    "date": "2026-10-23",
+    "pages": [
+      9,
+      10,
+      14,
+      15,
+      16,
+      28,
+      31,
+      43
+    ],
+    "fg": [
+      8,
+      9,
+      13,
+      14,
+      15,
+      27,
+      30,
+      42
+    ],
+    "method": "visual comparison of source-matched full-page previews; native/OCR coordinates used only for navigation; no field verification",
+    "field_verified": false
+  }
 }

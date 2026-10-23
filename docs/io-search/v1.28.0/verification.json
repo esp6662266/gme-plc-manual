@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "version": "1.28.0",
+  "date": "2026-10-23",
+  "baseline_commit": "d283760fcff73e69592b2023bc935f661b2677fc",
+  "status": "local_verified_pending_publish",
+  "source": {
+    "file": "sources/Electrical_Rev2.pdf",
+    "sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
+    "pages": [
+      9,
+      10,
+      14,
+      15,
+      16,
+      28,
+      31,
+      43
+    ],
+    "fg": [
+      8,
+      9,
+      13,
+      14,
+      15,
+      27,
+      30,
+      42
+    ],
+    "method": "visual comparison of source-matched full-page previews; native/OCR coordinates used only for navigation; no field verification"
+  },
+  "connections": {
+    "subjects": [
+      "14KA6",
+      "14KA8",
+      "14KA10",
+      "8.9",
+      "8.10",
+      "13.6"
+    ],
+    "route_entries": 14,
+    "unique_route_ids": 12,
+    "node_entries": 93,
+    "position_hints": 12,
+    "coil_parallel_branches": 5,
+    "original_explanations_preserved": true
+  },
+  "automated_tests": {
+    "passed": 31,
+    "failed": 0
+  },
+  "package": {
+    "fresh_verifiers": 14,
+    "fresh_equipment_verifiers": 2,
+    "finished_at_utc": "2026-10-23T12:33:01.654828+00:00",
+    "status": "passed",
+    "archive": "GME-All-In-One-v1.28.0.zip",
+    "version": "1.28.0",
+    "files": 4128,
+    "original_files_unchanged": 730,
+    "additional_sources_verified": 3,
+    "simulator_development": "stopped_by_user",
+    "simulator_behavior_tests": "not_rerun",
+    "bytes": 129771941,
+    "sha256": "a650c83858406510bbf466f9c9b7e402917181a970cf2b029080d48c4dd9ff1a",
+    "crc_checked": true,
+    "all_file_hashes_checked": true,
+    "field_verified": false,
+    "tia_verified": false
+  },
+  "local_ui": {
+    "queries": {
+      "14KA6": 15,
+      "14KA8": 15,
+      "14KA10": 13,
+      "8.9": 2,
+      "8.10": 2,
+      "13.6": 15
+    },
+    "mobile_client_width": 375,
+    "mobile_scroll_width": 375,
+    "all_six_queries_single_matching_trace_open": true,
+    "selected_contact": "14KA10 3 -> 4",
+    "selected_contact_viewer": "2 / 2 native matches",
+    "independent_terminal_query": "420",
+    "terminal_viewer_matches": 1,
+    "related_filter_reset": true,
+    "native_hash_back_restored_filters": true,
+    "original_query_related_link_regression": true,
+    "manual_delay_seconds": 12,
+    "selected_route_after_delay": "burner-2",
+    "viewer_close_focus_after_delay": "reviewed-14KA10:burner-2:4",
+    "summary_focus_after_delay": "reviewed-14KA10:summary",
+    "keyboard_enter_escape": true,
+    "app_console_errors": 0,
+    "summary_open_after_delay": false,
+    "collapsed_summary_preserved": true
+  },
+  "preserved": {
+    "source_files": 730,
+    "additional_sources": 3,
+    "stopped_assets": 5,
+    "ocr_pages": 330,
+    "ocr_regenerated": false,
+    "operational_record_writes": 0,
+    "plc_field_changes": 0,
+    "simulator_execution": 0,
+    "catalog_guide_updates_hash_only": 131
+  },
+  "dots_consultation": {
+    "status": "unavailable",
+    "reason": "No identifiable existing Dots in official thread list or enabled browser tabs; no unrelated messages sent"
+  },
+  "limits": [
+    "Connections are preserved drawing paths; current field identity and wiring are unverified",
+    "13KA1:24 is an output terminal number, not 24V",
+    "Position links highlight printed device tags or wire numbers; terminal pins may not have text coordinates",
+    "Excluded equipment and held drawing conflicts remain unchanged"
+  ],
+  "build": {
+    "status": "passed",
+    "netlify_environment": true,
+    "public_files": 4157,
+    "csp_inline_hashes": 6,
+    "csp_policies": 39
+  }
+}

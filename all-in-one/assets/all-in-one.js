@@ -963,7 +963,7 @@
     const host = $('workspace-content');
     const {d} = selection();
     const funcs = {overview:renderOverview,priority:renderPriority,summary:renderSummary,io:renderIO,ladder:renderLadder,structure:renderStructure,drawings:renderDrawings,simulator:renderSimulator,conflicts:renderConflicts,notes:renderNotes,resources:renderResources,review:renderReview,'repair-record':renderRepairRecord};
-    if(state.view==='io-search'){window.GMEIOSearch.attach(host,{data});}
+    if(state.view==='io-search'){window.GMEIOSearch.attach(host,{data,onRouteChange:raw=>{lastRenderedRoute=raw;}});}
     else if(state.view==='manual' && state.selected==='P01'){host.innerHTML=renderBC01Manual();const rail=host.querySelector('.bc01-library'), selected=rail?.querySelector('[aria-pressed="true"]');if(rail && selected && rail.scrollWidth>rail.clientWidth)rail.scrollLeft=Math.max(0,selected.offsetLeft-rail.offsetLeft-12);}
     else if(state.view==='manual' && window.GMEEquipmentStandard.profile(data,state.selected)){host.innerHTML=window.GMEEquipmentStandard.render(data,state.selected,state);window.GMEEquipmentStandard.highlight(host,state.bc01Find);}
     else if(state.view==='repair' && repairWorkspaceKeys.has(state.selected)) host.innerHTML=renderRepairWorkspace();

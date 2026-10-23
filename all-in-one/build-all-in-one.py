@@ -777,7 +777,7 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="GME 디코팅 설비 매뉴얼, 수리 진단과 PLC 정적 분석을 한곳에서 사용하는 통합 프로그램. 시뮬레이터 영구 중지.">
 <title>GME 올인원 · 설비 매뉴얼과 PLC 작업실</title>
-<link rel="stylesheet" href="assets/all-in-one.css"><link rel="stylesheet" href="assets/bc01-tools.css"><link rel="stylesheet" href="assets/io-search.css"><link rel="stylesheet" href="assets/io-drawing-viewer.css"></head><body>
+<link rel="stylesheet" href="assets/all-in-one.css"><link rel="stylesheet" href="assets/bc01-tools.css"><link rel="stylesheet" href="assets/io-search.css"><link rel="stylesheet" href="assets/io-connections.css"><link rel="stylesheet" href="assets/io-drawing-viewer.css"></head><body>
 <a class="skip" href="#workspace">본문으로 이동</a>
 <aside class="sidebar" aria-label="통합 메뉴와 설비 선택">
 <a class="brand" href="#overview"><span class="brand-mark">G</span><span>GME <b>ALL-IN-ONE</b><small>설비 매뉴얼 · PLC 작업실</small></span></a>
@@ -807,13 +807,13 @@ with (ROOT / 'registers/priority-equipment.csv').open('w', encoding='utf-8-sig',
 <footer class="app-footer">원본·정적 해석·실행 결과·현장 확인을 구분하여 관리합니다.<span id="app-message" role="status" aria-live="polite"></span></footer></div>
 <noscript><p>통합 탐색에는 JavaScript가 필요합니다. <a href="manual-catalog.html">기존 전체 매뉴얼</a>을 열어 자료를 읽을 수 있습니다.</p></noscript>
 <div hidden aria-hidden="true"><span id="overview"></span><span id="purpose"></span><span id="equipment"></span><span id="scope"></span><span id="method"></span><span id="read"></span><span id="workflow"></span><span id="program"></span><span id="conflicts"></span><span id="drawing"></span></div>
-<script src="assets/all-in-one-data.js"></script><script src="assets/program-model-data.js"></script><script src="assets/note-record-store.js"></script><script src="assets/repair-records.js"></script><script src="assets/equipment-standard.js"></script><script src="assets/bc01-tools.js"></script><script src="assets/unified-backup.js"></script><script src="assets/io-search-model.js"></script><script src="assets/io-drawing-viewer.js"></script><script src="assets/io-search-loader.js"></script><script src="assets/io-search.js"></script><script src="assets/all-in-one.js"></script></body></html>
+<script src="assets/all-in-one-data.js"></script><script src="assets/program-model-data.js"></script><script src="assets/note-record-store.js"></script><script src="assets/repair-records.js"></script><script src="assets/equipment-standard.js"></script><script src="assets/bc01-tools.js"></script><script src="assets/unified-backup.js"></script><script src="assets/io-search-model.js"></script><script src="assets/io-drawing-viewer.js"></script><script src="assets/io-search-loader.js"></script><script src="assets/io-connections.js"></script><script src="assets/io-search.js"></script><script src="assets/all-in-one.js"></script></body></html>
 ''', encoding='utf-8')
 
 # Refresh the manual UI and register bundle after rebuilds without changing
 # the preserved simulator assets or requiring a cache-clearing action.
 entry=(ROOT/'index.html').read_text(encoding='utf-8').replace('__GME_VERSION__',release['version'])
-for resource in ('assets/io-search-loader.js','assets/io-drawing-viewer.js','assets/io-drawing-viewer.css','assets/io-search-model.js','assets/io-search.js','assets/io-search.css','assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css','assets/equipment-standard.js','assets/unified-backup.js'):
+for resource in ('assets/io-connections.js','assets/io-connections.css','assets/io-search-loader.js','assets/io-drawing-viewer.js','assets/io-drawing-viewer.css','assets/io-search-model.js','assets/io-search.js','assets/io-search.css','assets/all-in-one.js','assets/all-in-one-data.js','assets/all-in-one.css','assets/note-record-store.js','assets/repair-records.js','assets/bc01-tools.js','assets/bc01-tools.css','assets/equipment-standard.js','assets/unified-backup.js'):
     digest=hashlib.sha256((ROOT/resource).read_bytes()).hexdigest()[:12]
     entry=entry.replace('"'+resource+'"','"'+resource+'?v='+digest+'"')
 (ROOT/'index.html').write_text(entry,encoding='utf-8')
