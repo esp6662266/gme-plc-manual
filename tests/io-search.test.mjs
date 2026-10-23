@@ -127,3 +127,37 @@ test('330 source-matched page previews include local OCR candidates and safe coo
   const page={words:[{text:'14KA6',bbox:[.4,.5,.45,.53],method:'pdf-text'},{text:'14KA60',bbox:[.1,.1,.2,.2]}],ocr:[{text:'14KA6',bbox:[.401,.501,.451,.531]},{text:'14KA6',bbox:[-1,.1,.2,.2]}]};
   assert.equal(M.locate(page,'14 KA6').length,1);assert.equal(M.locate(page,'14 KA6')[0].method,'pdf-text');
 });
+test('all 14KA pairs and related common power parts have reviewed roles with exact tag ranking',async()=>{
+  const tags=Array.from({length:10},(_,i)=>'14KA'+(i+1)).concat(['13KA1','15KA1','15KA2','8T1','9T1','13.5']);
+  for(const tag of tags){const r=search(tag)[0];assert.equal(r.kind,'reference');assert.equal(r.address,tag);assert.ok(r.boundary.includes('미확인'));assert.equal(r.equipment.length,0);}
+  for(const tag of ['14KA1','14KA5','14KA9','13KA1','9T1'])assert.equal(search(tag,{equipment:'BC01'})[0].address,tag);
+  assert.ok(!search('14KA1',{equipment:'BC01',includeCommon:false}).some(r=>r.kind==='reference'&&r.address==='14KA1'));
+  assert.equal(search('14-KA1 용도')[0].address,'14KA1');assert.equal(search('14 KA 10 기능')[0].address,'14KA10');
+  const get=tag=>search(tag)[0];
+  for(const tag of ['14KA1','14KA2','14KA3','14KA4','14KA9'])assert.ok(get(tag).text.includes('13.5→A1'));
+  for(const tag of ['14KA5','14KA7'])assert.ok(get(tag).text.includes('13.6→A1'));
+  assert.ok(get('14KA1').text.includes('18.3')&&get('14KA1').text.includes('14KA5'));
+  assert.ok(get('14KA5').text.includes('18.4')&&get('14KA5').text.includes('14KA1'));
+  assert.ok(get('14KA3').text.includes('10.9')&&get('14KA3').text.includes('47.3'));
+  assert.ok(get('14KA7').text.includes('10.9')&&get('14KA7').text.includes('47.4'));
+  assert.ok(get('15KA1').text.includes('SUPPLY DIRECT MOTORS AND SOFTSTARTER'));
+  assert.ok(get('8T1').text.includes('535W')&&!get('8T1').text.includes('535VA'));
+  assert.ok(get('9T1').text.includes('110V')&&get('9T1').text.includes('3600VA'));
+  assert.ok(get('9T1').text.includes('반대쪽은 9QF2를 거치지 않고 0Vac 9.9')); // source PDF10: return bypasses breaker
+  for(const r of index.records.filter(r=>r.kind==='reference'&&r.evidence)){
+    assert.ok(r.evidence.length);for(const e of r.evidence){assert.equal(Number(e.fg)+1,e.pdf_page);assert.ok(r.links.some(l=>l.url.endsWith('#page='+e.pdf_page)));}
+    const firstPage=Number(r.links[0].url.split('#page=')[1]);const page=JSON.parse(await readFile(new URL('../all-in-one/registers/drawing-search/oem-'+String(firstPage).padStart(3,'0')+'.json',import.meta.url)));
+    assert.ok(M.locate(page,r.address).length,'First source link must locate '+r.address);
+  }
+});
+test('six previous reviewed references retain their source-backed content',async()=>{
+  const {createHash}=await import('node:crypto');
+  const baseline=JSON.parse(await readFile(new URL('../docs/io-search/v1.29.0/baseline.json',import.meta.url)));
+  const notes=JSON.parse(await readFile(new URL('../all-in-one/registers/io-search-reference-notes.json',import.meta.url)));
+  const keys=['id','kind','address','symbol','title','text','equipment','equipment_names','status','source','links','boundary'];
+  for(const [id,hash]of Object.entries(baseline.reference_record_sha256)){
+    const item=notes.records.find(r=>r.id===id);assert.ok(item);
+    const original=Object.fromEntries(keys.map(k=>[k,item[k]]));
+    assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'),hash,id);
+  }
+});

@@ -3,7 +3,7 @@
   "date": "2026-10-23",
   "source": "sources/Electrical_Rev2.pdf",
   "source_sha256": "5ee22a177bb3feebde85a326ee0272d8b7d8198a2bd7147f8d120ff8858636f6",
-  "method": "visual comparison of complete original PDF pages; 8.9 and 8.10 manually transcribed because absent from PDF text layer",
+  "method": "visual comparison of complete original PDF pages; 8.9 and 8.10 manually transcribed because absent from PDF text layer; 2026-10-23 component-role expansion: complete-page visual review and two read-only source traces",
   "records": [
     {
       "id": "reviewed-14KA6",
@@ -1365,6 +1365,721 @@
           "현재 CPU 대응·현장 복구 완료"
         ]
       }
+    },
+    {
+      "id": "reviewed-14KA1",
+      "kind": "reference",
+      "address": "14KA1",
+      "symbol": "14KA1",
+      "title": "14KA1 · BC01·RD01·MC04 드라이브 STO 첫 번째 채널 접점",
+      "text": "역할: BC01·RD01·MC04 인버터의 STO OUT1→IN1 경로에 배치되는 공통 비상회로 접촉기입니다. 반대 OUT2→IN2 경로는 14KA5입니다.\n코일: 13KA1 출력의 선번 13.5→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n접점 경로: 1–2는 BC01/18AS1의 OUT1:1→18.3→접점→18.5→IN1:3, 3–4는 RD01/20AS1의 OUT1:34→20.3→접점→20.5→IN1:37, 5–6은 MC04/24AS1의 OUT1:1→24.3→접점→24.5→IN1:3입니다.\n보조접점: 31–32는 FG12/PDF13의 공통 직렬 피드백 경로에 포함됩니다. 실제 복귀 상태는 미확인입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 18/PDF 19쪽, FG 20/PDF 21쪽, FG 24/PDF 25쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=19",
+          "label": "원본 도면 19쪽 (FG 18)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=21",
+          "label": "원본 도면 21쪽 (FG 20)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=25",
+          "label": "원본 도면 25쪽 (FG 24)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "코일 A1/A2와 접점 교차참조"
+        },
+        {
+          "pdf_page": 19,
+          "fg": "18",
+          "basis": "BC01 18AS1 STO OUT1/IN1"
+        },
+        {
+          "pdf_page": 21,
+          "fg": "20",
+          "basis": "RD01 20AS1 STO OUT1/IN1"
+        },
+        {
+          "pdf_page": 25,
+          "fg": "24",
+          "basis": "MC04 24AS1 STO OUT1/IN1"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력14→13.5"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-14KA2",
+      "kind": "reference",
+      "address": "14KA2",
+      "symbol": "14KA2",
+      "title": "14KA2 · VS01·MV02/MV05/MV06·FN02 드라이브 STO 첫 번째 채널 접점",
+      "text": "역할: VS01, MV02/MV05/MV06 공용 인버터, FN02의 STO OUT1→IN1 경로에 배치됩니다. 반대 OUT2→IN2 경로는 14KA6입니다.\n코일: 13KA1 출력의 선번 13.5→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n접점 경로: 1–2는 30AS1의 OUT1:1→30.3→접점→30.5→IN1:3, 3–4는 FN02/42AS1의 OUT1:34→42.3→접점→42.5→IN1:37, 5–6은 VS01/27AS1의 OUT1:1→27.3→접점→27.5→IN1:3입니다.\n보조접점: 31–32는 FG12/PDF13의 공통 직렬 피드백 경로에 포함됩니다. 실제 복귀 상태는 미확인입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 27/PDF 28쪽, FG 30/PDF 31쪽, FG 42/PDF 43쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=28",
+          "label": "원본 도면 28쪽 (FG 27)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=31",
+          "label": "원본 도면 31쪽 (FG 30)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=43",
+          "label": "원본 도면 43쪽 (FG 42)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "코일 A1/A2와 접점 교차참조"
+        },
+        {
+          "pdf_page": 28,
+          "fg": "27",
+          "basis": "VS01 27AS1 STO"
+        },
+        {
+          "pdf_page": 31,
+          "fg": "30",
+          "basis": "MV02/MV05/MV06 공용30AS1 STO"
+        },
+        {
+          "pdf_page": 43,
+          "fg": "42",
+          "basis": "FN02 42AS1 STO"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력14→13.5"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-14KA3",
+      "kind": "reference",
+      "address": "14KA3",
+      "symbol": "14KA3",
+      "title": "14KA3 · 비상회로 경유 24Vdc 출력전원·FN01/FN04 STO 첫 번째 채널 접점",
+      "text": "역할: 14KA7과 직렬로 비상회로 경유 출력전원 +24Vdc 10.9를 공급하는 접점과 FN01·FN04 계통 STO OUT1→IN1 접점을 갖습니다.\n코일: 13KA1 출력의 선번 13.5→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n전원 접점 1–2: 10QF3 후단 +24Vdc 10.8→14KA3→10.5→14KA7→+24Vdc 10.9. 도면 부하명은 SUPPLY OUTPUTS UNDER EMERGENCY입니다. 10.7 입력전원·10.8 직접출력전원·10.10 CPU전원과 구분합니다.\nSTO 접점: 3–4는 FN01/47AS1의 47.3→47.5, 5–6은 FN04/FN04A 공용59AS1의 59.3→X5:1/X1:421→접점→X1:423/X5:3→59.5입니다. 두 인버터 모두 OUT1:34→IN1:37이며 반대 경로는 14KA7입니다.\n보조접점: 31–32는 FG12/PDF13의 공통 직렬 피드백 경로에 포함됩니다. 실제 복귀 상태는 미확인입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 10/PDF 11쪽, FG 47/PDF 48쪽, FG 59/PDF 60쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=11",
+          "label": "원본 도면 11쪽 (FG 10)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=48",
+          "label": "원본 도면 48쪽 (FG 47)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=60",
+          "label": "원본 도면 60쪽 (FG 59)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "코일 A1/A2"
+        },
+        {
+          "pdf_page": 11,
+          "fg": "10",
+          "basis": "24Vdc 출력전원10.9"
+        },
+        {
+          "pdf_page": 48,
+          "fg": "47",
+          "basis": "FN01 47AS1 STO"
+        },
+        {
+          "pdf_page": 60,
+          "fg": "59",
+          "basis": "FN04 계통59AS1 STO 및 공용부하 표기"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력14→13.5"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-14KA4",
+      "kind": "reference",
+      "address": "14KA4",
+      "symbol": "14KA4",
+      "title": "14KA4 · 110Vac 보조전원·직접기동 전원버스 접촉기 코일 공급",
+      "text": "역할: 14KA8과 직렬로 110Vac 보조전원 9.7 및 직접기동 모터·소프트스타터 버스 접촉기 15KA1/15KA2의 코일 공급 경로를 구성합니다.\n코일: 13KA1 출력의 선번 13.5→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n보조전원 경로: 110Vac 9.8→14KA4(3–4)→9.6→14KA8(1–2)→110Vac 9.7.\n코일 공급 경로: 110Vac 9.8→15FU1→15.1에서 분기합니다. 14KA4(1–2)→15.2→14KA8(3–4)→15.4→15KA1:A1, 다른 분기는 14KA4(5–6)→15.3→14KA8(5–6)→15.5→15KA2:A1입니다. 두 A2는 0Vac 9.9입니다.\n보조접점: 31–32는 FG12/PDF13의 공통 직렬 피드백 경로에 포함됩니다. 실제 복귀 상태는 미확인입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 9/PDF 10쪽, FG 15/PDF 16쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=10",
+          "label": "원본 도면 10쪽 (FG 9)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=16",
+          "label": "원본 도면 16쪽 (FG 15)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "14KA4 자체 코일"
+        },
+        {
+          "pdf_page": 10,
+          "fg": "9",
+          "basis": "110Vac 9.7 직렬 접점"
+        },
+        {
+          "pdf_page": 16,
+          "fg": "15",
+          "basis": "15KA1/15KA2 코일 분기"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력14→13.5"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-14KA5",
+      "kind": "reference",
+      "address": "14KA5",
+      "symbol": "14KA5",
+      "title": "14KA5 · BC01·RD01·MC04 드라이브 STO 두 번째 채널 접점",
+      "text": "역할: BC01·RD01·MC04 인버터의 STO OUT2→IN2 경로에 배치됩니다. 반대 OUT1→IN1 경로는 14KA1입니다.\n코일: 13KA1 출력의 선번 13.6→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n접점 경로: 1–2는 BC01/18AS1 X1C의 OUT2:2→18.4→접점→18.6→IN2:4, 3–4는 RD01/20AS1 X4의 OUT2:35→20.4→접점→20.6→IN2:38, 5–6은 MC04/24AS1 X1C의 OUT2:2→24.4→접점→24.6→IN2:4입니다.\n보조접점: 31–32는 선번 12.29→12.30의 공통 피드백 경로에 포함됩니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 18/PDF 19쪽, FG 20/PDF 21쪽, FG 24/PDF 25쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=19",
+          "label": "원본 도면 19쪽 (FG 18)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=21",
+          "label": "원본 도면 21쪽 (FG 20)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=25",
+          "label": "원본 도면 25쪽 (FG 24)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "코일 A1/A2"
+        },
+        {
+          "pdf_page": 19,
+          "fg": "18",
+          "basis": "BC01 18AS1 STO OUT2/IN2"
+        },
+        {
+          "pdf_page": 21,
+          "fg": "20",
+          "basis": "RD01 20AS1 STO OUT2/IN2"
+        },
+        {
+          "pdf_page": 25,
+          "fg": "24",
+          "basis": "MC04 24AS1 STO OUT2/IN2"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백12.29/12.30"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력24→13.6"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-14KA7",
+      "kind": "reference",
+      "address": "14KA7",
+      "symbol": "14KA7",
+      "title": "14KA7 · 비상회로 경유 24Vdc 출력전원·FN01/FN04 STO 두 번째 채널 접점",
+      "text": "역할: 14KA3과 직렬로 +24Vdc 출력전원 10.9를 공급하고, FN01 및 FN04/FN04A 공용 인버터의 STO OUT2→IN2 경로에도 접점이 배치됩니다.\n코일: 13KA1 출력의 선번 13.6→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n전원 접점 1–2: 10QF3→10.8→14KA3→10.5→14KA7→10.9. 도면 부하명은 SUPPLY OUTPUTS UNDER EMERGENCY입니다.\nSTO 접점: 3–4는 FN01/47AS1 X4의 OUT2:35→47.4→접점→47.6→IN2:38, 5–6은 59AS1 X4의 OUT2:35→59.4→X5:2/X1:422→접점→X1:424/X5:4→59.6→IN2:38입니다. 반대 경로는 14KA3입니다.\n보조접점: 31–32는 선번 12.32→12.33의 공통 피드백 경로에 포함됩니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 10/PDF 11쪽, FG 47/PDF 48쪽, FG 59/PDF 60쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=11",
+          "label": "원본 도면 11쪽 (FG 10)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=48",
+          "label": "원본 도면 48쪽 (FG 47)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=60",
+          "label": "원본 도면 60쪽 (FG 59)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "코일 A1/A2"
+        },
+        {
+          "pdf_page": 11,
+          "fg": "10",
+          "basis": "24Vdc 출력전원10.9"
+        },
+        {
+          "pdf_page": 48,
+          "fg": "47",
+          "basis": "FN01 47AS1 STO OUT2/IN2"
+        },
+        {
+          "pdf_page": 60,
+          "fg": "59",
+          "basis": "FN04/FN04A 공용59AS1 STO OUT2/IN2"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백12.32/12.33"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력24→13.6"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-14KA9",
+      "kind": "reference",
+      "address": "14KA9",
+      "symbol": "14KA9",
+      "title": "14KA9 · 버너 제어반 230V 두 전원선의 첫 번째 직렬 접촉기",
+      "text": "역할: 8T1 230V 2차측에서 버너 제어반 CONTROL BOARD BURNER TYPE BP N 300으로 가는 두 전원선에 14KA10과 직렬로 배치됩니다.\n코일: 13KA1 출력의 선번 13.5→A1, A2→0Vac 9.9. 반대 코일 공급선과 임의로 합치지 않습니다.\n접점 경로: 8.7→14KA9(1–2)→8.9→14KA10(1–2)→8.11→X1:419, 다른 선은 8.8→14KA9(3–4)→8.10→14KA10(3–4)→8.12→X1:420입니다.\n보조접점: 31–32는 FG12/PDF13의 공통 직렬 피드백 경로에 포함됩니다. 실제 복귀 상태는 미확인입니다.\n이 도면은 외부 공급 경로이며 버너 내부의 연소 안전 시퀀스를 설명하지 않습니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 14/PDF 15쪽, FG 8/PDF 9쪽, FG 12/PDF 13쪽, FG 13/PDF 14쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽 (FG 8)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "코일 A1/A2"
+        },
+        {
+          "pdf_page": 9,
+          "fg": "8",
+          "basis": "8T1/14KA9/14KA10 버너보드 두선"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        },
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 출력14→13.5"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-13KA1",
+      "kind": "reference",
+      "address": "13KA1",
+      "symbol": "13KA1",
+      "title": "13KA1 · 공통 비상입력·접촉기 피드백을 받는 안전제어장치",
+      "text": "역할: 도면 모델 3SK1111-1AB30인 공통 안전제어장치입니다. A1+는 +24Vdc 10.7에서 13FU1과13.1을 경유하고, A2−는 −0Vdc 10.6으로 연결됩니다.\n비상입력: T1=12.1, IN1=12.23, T2=12.2, IN2=12.24. T3–IN3에는 선번 13.2 점퍼가 그려져 있습니다.\n접촉기 피드백: FG12의 31–32 직렬 접점 경로가 T4=12.37, IN F/S=12.38에 연결됩니다.\n코일 제어: 110Vac 9.8→13FU2를 거친 13.3/13.4가 접점 13–14와23–24로 들어갑니다. 출력14/선번13.5는 14KA1·14KA2·14KA3·14KA4·14KA9 코일군, 출력24/선번13.6은 14KA5·14KA6·14KA7·14KA8·14KA10 코일군으로 이어집니다.\n별도 경로: 접점33–34는 +24Vdc 10.7→E19.4, 41–42는13.7→X20:2009→12SH1 청색 표시등으로 연결됩니다. START AUTO/MONITORED 표기만으로 실제 설정이나 현장 재기동 동작을 확정하지 않습니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 13/PDF 14쪽, FG 12/PDF 13쪽, FG 14/PDF 15쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "장치모델/전원/입력/출력/표시등"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "비상입력 및31–32 피드백 직렬경로"
+        },
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "13.5/13.6 코일군"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-15KA1",
+      "kind": "reference",
+      "address": "15KA1",
+      "symbol": "15KA1",
+      "title": "15KA1 · 직접기동 모터·소프트스타터 3상 공급의 첫 번째 직렬 접촉기",
+      "text": "역할: 도면 부하명 SUPPLY DIRECT MOTORS AND SOFTSTARTER의 세 상 공급에 15KA1과15KA2가 직렬로 배치됩니다. 설비 전체 주전원으로 범위를 확대하지 않습니다.\n주접점 경로: 8QF1→8.1L1/L2/L3→15KA1→8.2L1/L2/L3→15KA2→8WB1→8.3L1/L2/L3. 두 접촉기 모두 1–2, 3–4, 5–6을 사용합니다.\n코일 경로: 110Vac 9.8→15FU1→15.1→14KA4(1–2)→15.2→14KA8(3–4)→15.4→A1. A2는 0Vac 9.9로 연결됩니다.\n보조접점: 31–32는 선번 12.34→12.35의 공통 피드백 경로에 포함됩니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 8/PDF 9쪽, FG 15/PDF 16쪽, FG 12/PDF 13쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽 (FG 8)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=16",
+          "label": "원본 도면 16쪽 (FG 15)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 9,
+          "fg": "8",
+          "basis": "3상 버스 직렬 주접점 및 부하명"
+        },
+        {
+          "pdf_page": 16,
+          "fg": "15",
+          "basis": "14KA4/14KA8을 거친 코일 공급"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-15KA2",
+      "kind": "reference",
+      "address": "15KA2",
+      "symbol": "15KA2",
+      "title": "15KA2 · 직접기동 모터·소프트스타터 3상 공급의 두 번째 직렬 접촉기",
+      "text": "역할: 도면 부하명 SUPPLY DIRECT MOTORS AND SOFTSTARTER의 세 상 공급에 15KA1과15KA2가 직렬로 배치됩니다. 설비 전체 주전원으로 범위를 확대하지 않습니다.\n주접점 경로: 8QF1→8.1L1/L2/L3→15KA1→8.2L1/L2/L3→15KA2→8WB1→8.3L1/L2/L3. 두 접촉기 모두 1–2, 3–4, 5–6을 사용합니다.\n코일 경로: 110Vac 9.8→15FU1→15.1→14KA4(5–6)→15.3→14KA8(5–6)→15.5→A1. A2는 0Vac 9.9로 연결됩니다.\n보조접점: 31–32는 선번 12.35→12.36의 공통 피드백 경로에 포함됩니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 8/PDF 9쪽, FG 15/PDF 16쪽, FG 12/PDF 13쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽 (FG 8)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=16",
+          "label": "원본 도면 16쪽 (FG 15)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=13",
+          "label": "원본 도면 13쪽 (FG 12)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 9,
+          "fg": "8",
+          "basis": "3상 버스 직렬 주접점 및 부하명"
+        },
+        {
+          "pdf_page": 16,
+          "fg": "15",
+          "basis": "14KA4/14KA8을 거친 코일 공급"
+        },
+        {
+          "pdf_page": 13,
+          "fg": "12",
+          "basis": "31–32 피드백 접점"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-8T1",
+      "kind": "reference",
+      "address": "8T1",
+      "symbol": "8T1",
+      "title": "8T1 · 버너 제어반 230V 공급용 변압기",
+      "text": "역할: 버너 제어반 공급용 변압기입니다. 도면에는 440V/230V, 535W로 표기되어 있습니다. 원본의 W 표기를 VA로 고쳐 쓰지 않습니다.\n연결: 전단은 8QF2를 거치고, 2차측8.7/8.8은 14KA9→8.9/8.10→14KA10→8.11/8.12→X1:419/420으로 이어집니다.\n도면 부하명은 CONTROL BOARD BURNER TYPE BP N 300입니다. 변압기 전원 공급을 버너 내부 점화·연소 안전 논리와 동일시하지 않습니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 8/PDF 9쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=9",
+          "label": "원본 도면 9쪽 (FG 8)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 9,
+          "fg": "8",
+          "basis": "변압기표기/전단8QF2/버너보드230V공급"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-9T1",
+      "kind": "reference",
+      "address": "9T1",
+      "symbol": "9T1",
+      "title": "9T1 · 110Vac 공통 보조전원 공급용 변압기",
+      "text": "역할: 도면 표기440V/110V, 3600VA의 공통 보조전원 변압기입니다. 실제 태그는 9T1이며 8T1 버너용230V 변압기와 구분됩니다.\n연결: 전단은 9QF1입니다. 2차측 한쪽은 9.4→9QF2→110Vac 9.8이며, 반대쪽은 9QF2를 거치지 않고 0Vac 9.9로 연결됩니다. 110Vac 9.8→14KA4(3–4)→9.6→14KA8(1–2)를 지난 전원은110Vac 9.7입니다.\n관련 분기: JB1의밸브/팬·PLC보조전원은 X1:413/414/415, JB2는 X1:416/417/418로 표기됩니다. 여기의 PLC보조전원을 CPU의24Vdc전원과 합치지 않습니다. 현장 전압·정격·부품 동일성은 미확인입니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 9/PDF 10쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=10",
+          "label": "원본 도면 10쪽 (FG 9)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 10,
+          "fg": "9",
+          "basis": "변압기정격표기/110Vac레일/14KA4·8직렬경로/JB1·JB2분기"
+        }
+      ]
+    },
+    {
+      "id": "reviewed-13.5",
+      "kind": "reference",
+      "address": "13.5",
+      "symbol": "13.5",
+      "title": "13.5 · 안전제어장치 출력14의 첫 번째 코일 제어선",
+      "text": "역할: 13KA1의 출력 단자14에서 나와 FG14/0으로 이어지는 공통 코일 제어선입니다. 입력 측은 110Vac 9.8에서13FU2와13.3을 거쳐 접점13–14로 연결됩니다.\n연결: 14KA1·14KA2·14KA3·14KA4·14KA9의 A1을 병렬 공급하고 각 A2는0Vac 9.9로 귀환합니다.\n구분: 출력24의 선번13.6은 별도 코일군14KA5·14KA6·14KA7·14KA8·14KA10으로 이어집니다. 두 선번을 같은 선이나현재여자상태로 추정하지 않습니다.",
+      "equipment": [],
+      "equipment_names": [
+        "공통 비상·전원 회로"
+      ],
+      "status": "",
+      "source": "원본 도면 시각 대조 · Electrical_Rev2.pdf · FG 13/PDF 14쪽, FG 14/PDF 15쪽",
+      "links": [
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=14",
+          "label": "원본 도면 14쪽 (FG 13)"
+        },
+        {
+          "url": "sources/Electrical_Rev2.pdf#page=15",
+          "label": "원본 도면 15쪽 (FG 14)"
+        }
+      ],
+      "boundary": "보존 도면상 연결과 역할입니다. 공통 부품의 관련 부하이며 특정 설비의 전용 소유 관계를 확정한 것이 아닙니다. 사진 부품의 실제 동일성·현행 결선·현재 CPU 대응·정상 극성·접점 동작·STO 및 안전기능 상태는 미확인입니다. 도면만으로 고장·복구 상태를 판정하지 않습니다.",
+      "evidence": [
+        {
+          "pdf_page": 14,
+          "fg": "13",
+          "basis": "13KA1 접점13–14/출력14/선번13.5"
+        },
+        {
+          "pdf_page": 15,
+          "fg": "14",
+          "basis": "13.5 코일 병렬배선"
+        }
+      ]
     }
   ],
   "trace_review": {
@@ -1391,5 +2106,6 @@
     ],
     "method": "visual comparison of source-matched full-page previews; native/OCR coordinates used only for navigation; no field verification",
     "field_verified": false
-  }
+  },
+  "review_scope": "14KA1-14KA10 and directly relevant 13KA1/15KA1/15KA2/8T1/9T1/13.5 context; no operational or field changes"
 }
