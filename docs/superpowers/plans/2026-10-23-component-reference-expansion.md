@@ -42,9 +42,13 @@ Preserve original PDFs, all six prior references, stopped simulator hashes, oper
 **Files:** v1.29.0 version/package/manifest, ACTIVE-WORK, RELEASES, PUBLICATION_STATUS, WORKSPACE-HANDOFF and validation evidence.
 
 - [x] Rebuild only static manual, documents and search; pass mandatory14+2 checks, original/frozen hashes, ZIP CRC/all file hashes, npm tests/build and CSP checks.
-- [ ] Check scoped search results and drawing opening on desktop/mobile; commit complete sparse-checkout changes, push fixed version tag and verify Netlify commit/ready, public assets and UI.
-- [ ] Consult identifiable existing Dots target if available; record actual reply/unavailability, complete goal only when no required work remains.
+- [x] Check scoped search results and drawing opening on desktop/mobile; commit complete sparse-checkout changes, push fixed version tag and verify Netlify commit/ready, public assets and UI.
+- [x] Consult identifiable existing Dots target if available; record actual reply/unavailability, complete goal only when no required work remains.
 
 ## Workspace coordination
 
 A separately authorized connection-tracing chat is writing v1.28.0 in the shared original checkout. This task uses an isolated Git worktree from d283760 and reserves v1.29.0 for source-backed explanation expansion. Integrate the other published change before final packaging; preserve its additive trace fields.
+
+## Completed evidence
+
+Source/tag v1.29.0: 8e18169c0e4601d00c9a6f5dcbd9239d5261bcfc. Netlify 6adb565898c4c058d67508b8 ready/published 2026-10-23T12:43:34.278Z. Final34 Node checks, mandatory14+2, 4,128-file ZIP/full hashes and CSP passed. Public14 assets/47,909,052B,18 entry references and all19 exact reviewed results, source PDF19 location, legacy14KA10 routes and mobile no-overflow verified. Dots target unavailable; no actual reply claimed. Current field/CPU/safety remains unverified.

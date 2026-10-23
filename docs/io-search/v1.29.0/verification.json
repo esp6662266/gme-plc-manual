@@ -1,7 +1,7 @@
 {
   "version": "1.29.0",
   "date": "2026-10-23",
-  "status": "local_verified_publication_pending",
+  "status": "published_verified",
   "counts": {
     "previous_references": 6,
     "added_references": 13,
@@ -75,7 +75,8 @@
       "clientWidth": 375,
       "scrollWidth": 375,
       "cardWidth": 343
-    }
+    },
+    "verification_target": "initial isolated localhost; final public UI recorded separately"
   },
   "preservation": {
     "plc_changes": 0,
@@ -102,7 +103,32 @@
     "reason": "No identifiable Dots target in official chat listing and connected browser inventory"
   },
   "publication": {
-    "status": "pending"
+    "status": "published_verified",
+    "site": "https://gme-plc-manual.netlify.app/all-in-one/",
+    "source_commit": "8e18169c0e4601d00c9a6f5dcbd9239d5261bcfc",
+    "fixed_source_tag": "v1.29.0",
+    "deploy_id": "6adb565898c4c058d67508b8",
+    "state": "ready",
+    "published_at_utc": "2026-10-23T12:43:34.278Z",
+    "public_assets": {
+      "record": "docs/io-search/v1.29.0/public-assets-verification.json",
+      "files": 14,
+      "bytes": 47909052,
+      "all_sha256_matched": true,
+      "entry_cache_references_matched": 18,
+      "csp_matched": true
+    },
+    "public_ui": {
+      "record": "docs/io-search/v1.29.0/public-ui-verification.json",
+      "all_19_queries_first_exact_reviewed_result": true,
+      "14KA1_pdf19_native_location": true,
+      "existing_14KA10_three_routes_default_expanded": true,
+      "mobile_clientWidth": 375,
+      "mobile_scrollWidth": 375,
+      "viewport_override_reset": true,
+      "screenshot": "docs/io-search/v1.29.0/public-component-explanations.png"
+    },
+    "github_release_asset_uploaded": false
   },
   "automated": {
     "node_tests": 34,
@@ -135,13 +161,19 @@
     }
   },
   "integration": {
-    "source_commit": "a168379",
     "existing_profiles_preserved": 6,
     "existing_routes_preserved": 14,
     "existing_nodes_preserved": 93,
     "trace_full_content_unchanged": true,
     "description_only_records": 13,
     "description_only_records_never_synthesize_route_nodes": true,
-    "all_tests_passed": true
+    "all_tests_passed": true,
+    "v1_28_source_baseline": "a168379"
+  },
+  "final_review": {
+    "read_only_publication_record_review": "passed; 15 complete pages and final/public versus initial/local evidence distinguished",
+    "required_work_remaining": 0,
+    "field_verified": false,
+    "dots_reply_received": false
   }
 }

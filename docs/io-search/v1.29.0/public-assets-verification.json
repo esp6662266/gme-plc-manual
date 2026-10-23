@@ -1,0 +1,86 @@
+{
+  "version": "1.29.0",
+  "site": "https://gme-plc-manual.netlify.app/all-in-one/",
+  "checked_at_utc": "2026-10-23T12:46:22Z",
+  "status": "passed",
+  "files": 14,
+  "total_bytes": 47909052,
+  "all_sha256_matched": true,
+  "html_entry": {
+    "source_asset_references_matched": 18,
+    "csp": "default-src 'self'; script-src 'self' 'sha256-BEkiKfxpAM7Y4HBkN8s00cst/UG5oehGi9LWruGSksI=' 'sha256-BZjoZ7w8EviUcOzgUPzSAoVjDfYKaNYOQlWpMBr+1d0=' 'sha256-LD3hUtbn6tuabrXKUDoT7kzUApy0/6g5DK08lwZdoZ8=' 'sha256-M34iZlIUtfoUilKwPy26h9y3+pXqsujivExgKS0Qq9g=' 'sha256-dUlxDFWBpY7+10E6We5n8ukxuDIUhWhR3Tn7g3QwIP4=' 'sha256-kenDUgL+jmn10O/alWZPVPV05FqVYBlJ2BTdNr+7gFQ='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'",
+    "note": "Netlify hosting comment/HUD and HTML link rewriting mean raw entry SHA is not compared"
+  },
+  "records": [
+    {
+      "file": "VERSION.json",
+      "bytes": 695,
+      "sha256": "a4aa6fda7a26ef70377f8045879d7c3ace6b8046b8fa527f3b62b2310b2ad87c"
+    },
+    {
+      "file": "assets/all-in-one.js",
+      "bytes": 188249,
+      "sha256": "af896130a598bc395cba5f08022f94d6a4c5a11a4ba5342100308144f85148ca"
+    },
+    {
+      "file": "assets/all-in-one-data.js",
+      "bytes": 25643253,
+      "sha256": "e8d2856c7b6cced70f69feb8a58338f848a7a7c1e97aaae64930a1bc9652b42b"
+    },
+    {
+      "file": "assets/io-search-model.js",
+      "bytes": 5834,
+      "sha256": "31cbf8a0566b05533e4f222bbd01332ae42ef4e8513a2f9b2eeda51248ebcda2"
+    },
+    {
+      "file": "assets/io-search-loader.js",
+      "bytes": 2899,
+      "sha256": "adf819faebb579037733decbb712a37192c9927f02264ee1d22407c320ddfbbf"
+    },
+    {
+      "file": "assets/io-search.js",
+      "bytes": 13429,
+      "sha256": "8fc05fed1eea2ba89dd1cf37c9d34a7affc8a9175949f0925f4bac4fb9d3ea2b"
+    },
+    {
+      "file": "assets/io-search.css",
+      "bytes": 2864,
+      "sha256": "487664376bc6dd71735c9493213dc7c26eeab2b2a51fcefd0ae920f5fe25cbbc"
+    },
+    {
+      "file": "assets/io-drawing-viewer.js",
+      "bytes": 8339,
+      "sha256": "c00accc6067ff25dfbe5003545f3080176685e77fec0ae210b20b08a71e10d50"
+    },
+    {
+      "file": "assets/io-drawing-viewer.css",
+      "bytes": 2400,
+      "sha256": "daa8f64120f80caf34dae70f7bea1964169bf2d096390e12ee6972b28d34f1a9"
+    },
+    {
+      "file": "assets/io-connections.js",
+      "bytes": 4549,
+      "sha256": "7060da1093c732fbd85e18e34af9b8137b971fa32c685e71bfdee60ea8a58024"
+    },
+    {
+      "file": "assets/io-connections.css",
+      "bytes": 3537,
+      "sha256": "afe73b0256e7213a0a2b0970640fc2a352a663146de3570f74fb99071a6d57c5"
+    },
+    {
+      "file": "registers/io-search-index.json",
+      "bytes": 2327048,
+      "sha256": "e549c13e16eb936ee1fad8ee2c6ad72007ab14846096a62550c1a9ef2e25483a"
+    },
+    {
+      "file": "registers/io-search-manual.json",
+      "bytes": 19622857,
+      "sha256": "650b060b49f711e1ac111031cc079d2377d39298321c8749316db8f530a42962"
+    },
+    {
+      "file": "registers/io-search-reference-notes.json",
+      "bytes": 83099,
+      "sha256": "51c0af0130024512ebfb37225154f295c1612240de5ec87dcf04bde26d9dabc0"
+    }
+  ]
+}
