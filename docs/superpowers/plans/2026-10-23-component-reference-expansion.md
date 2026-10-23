@@ -41,7 +41,7 @@ Preserve original PDFs, all six prior references, stopped simulator hashes, oper
 
 **Files:** v1.29.0 version/package/manifest, ACTIVE-WORK, RELEASES, PUBLICATION_STATUS, WORKSPACE-HANDOFF and validation evidence.
 
-- [ ] Rebuild only static manual, documents and search; pass mandatory14+2 checks, original/frozen hashes, ZIP CRC/all file hashes, npm tests/build and CSP checks.
+- [x] Rebuild only static manual, documents and search; pass mandatory14+2 checks, original/frozen hashes, ZIP CRC/all file hashes, npm tests/build and CSP checks.
 - [ ] Check scoped search results and drawing opening on desktop/mobile; commit complete sparse-checkout changes, push fixed version tag and verify Netlify commit/ready, public assets and UI.
 - [ ] Consult identifiable existing Dots target if available; record actual reply/unavailability, complete goal only when no required work remains.
 

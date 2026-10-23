@@ -1,7 +1,7 @@
 {
   "version": "1.29.0",
   "date": "2026-10-23",
-  "status": "local_verified_integration_pending",
+  "status": "local_verified_publication_pending",
   "counts": {
     "previous_references": 6,
     "added_references": 13,
@@ -62,7 +62,7 @@
       "csp_hashes": 6,
       "csp_policies": 39
     },
-    "integration_rerun_required": true
+    "integration_rerun_required": false
   },
   "ui": {
     "all_19_queries_first_result_is_exact_reviewed_explanation": true,
@@ -92,7 +92,8 @@
     "other_task": "connection tracing UI v1.28",
     "isolated_branch": "codex/component-reference-expansion-20261023",
     "shared_changes_overwritten": false,
-    "messages_sent": 0
+    "messages_sent": 0,
+    "preserved_other_feature": true
   },
   "dots_consultation": {
     "status": "unavailable",
@@ -100,6 +101,46 @@
     "reason": "No identifiable Dots target in official chat listing and connected browser inventory"
   },
   "publication": {
-    "status": "pending_integration"
+    "status": "pending"
+  },
+  "automated": {
+    "node_tests": 34,
+    "status": "passed",
+    "package": {
+      "fresh_verifiers": 14,
+      "fresh_equipment_verifiers": 2,
+      "finished_at_utc": "2026-10-23T12:39:46.414167+00:00",
+      "status": "passed",
+      "archive": "GME-All-In-One-v1.29.0.zip",
+      "version": "1.29.0",
+      "files": 4128,
+      "original_files_unchanged": 730,
+      "additional_sources_verified": 3,
+      "simulator_development": "stopped_by_user",
+      "simulator_behavior_tests": "not_rerun",
+      "bytes": 129779626,
+      "sha256": "9639b8971872be080f91c56cfb8e2c7c7e85fbc239bb00a939bc69fbead41960",
+      "crc_checked": true,
+      "all_file_hashes_checked": true,
+      "field_verified": false,
+      "tia_verified": false
+    },
+    "build": {
+      "status": "passed",
+      "netlify_mode": true,
+      "files": 4157,
+      "csp_hashes": 6,
+      "csp_scoped_policies": 39
+    }
+  },
+  "integration": {
+    "source_commit": "a168379",
+    "existing_profiles_preserved": 6,
+    "existing_routes_preserved": 14,
+    "existing_nodes_preserved": 93,
+    "trace_full_content_unchanged": true,
+    "description_only_records": 13,
+    "description_only_records_never_synthesize_route_nodes": true,
+    "all_tests_passed": true
   }
 }

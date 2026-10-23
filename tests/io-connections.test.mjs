@@ -10,9 +10,9 @@ for(const path of ['assets/io-search-model.js','assets/io-connections.js'])vm.ru
 const M=context.GMEIOSearchModel,C=context.GMEIOConnections,byAddress=new Map(notes.records.map(r=>[r.address,r]));
 const options={resources:data.resources,pages:pages.pages};
 test('six reviewed connection profiles use original pages with explicit parallel and field boundaries',()=>{
-  assert.deepEqual([...byAddress.keys()].sort(),['13.6','14KA10','14KA6','14KA8','8.10','8.9'].sort());
+  assert.deepEqual(notes.records.filter(r=>r.trace).map(r=>r.address).sort(),['13.6','14KA10','14KA6','14KA8','8.10','8.9'].sort());
   const result=validateConnections(notes,options);assert.equal(result.nodes,93);assert.equal(result.routes,14);
-  for(const r of notes.records){assert.equal(r.trace.basis,'original_drawing_visual_comparison');assert.ok(r.trace.unknowns.some(x=>x.includes('현재')));}
+  for(const r of notes.records.filter(r=>r.trace)){assert.equal(r.trace.basis,'original_drawing_visual_comparison');assert.ok(r.trace.unknowns.some(x=>x.includes('현재')));}
   assert.deepEqual(byAddress.get('13.6').trace.parallel.nodes.map(n=>n.label),['14KA5','14KA6','14KA7','14KA8','14KA10']);
   assert.ok(!byAddress.get('13.6').trace.routes[0].nodes.some(n=>n.kind==='coil'));
 });
@@ -29,7 +29,7 @@ test('wire and contact paths preserve exact terminal numbers, AC source and STO 
 });
 test('every route node has its own located printed token and a source-matched page',async()=>{
   const cache=new Map();
-  for(const r of notes.records){const t=r.trace;for(const node of [...t.routes.flatMap(r=>r.nodes),...(t.parallel?.nodes||[]),...(t.parallel?[t.parallel.return_node]:[])]){
+  for(const r of notes.records.filter(r=>r.trace)){const t=r.trace;for(const node of [...t.routes.flatMap(r=>r.nodes),...(t.parallel?.nodes||[]),...(t.parallel?[t.parallel.return_node]:[])]){
     if(!cache.has(node.page))cache.set(node.page,await read('registers/drawing-search/oem-'+String(node.page).padStart(3,'0')+'.json'));
     const page=cache.get(node.page);assert.equal(page.source_sha256,notes.source_sha256);assert.equal(node.fg,node.page-1);
     const hits=M.locate(page,node.query);assert.ok(hits.length,node.label+' page '+node.page);
@@ -60,4 +60,12 @@ test('invalid source, node geometry and non-reference traces are rejected before
   }
   assert.equal(M.nearest([{bbox:[.1,.1,.2,.2]},{bbox:[.7,.1,.8,.2]}],[.75,.15]),1);
   assert.equal(M.nearest([{bbox:[.1,.1,.2,.2]}],[Infinity,0]),0);
+});
+
+test('reviewed explanations without route profiles stay valid and never invent connection nodes',()=>{
+  assert.ok(notes.records.some(r=>r.kind==='reference'&&!r.trace));
+  const allowed=new Set([notes.source]);
+  for(const r of notes.records.filter(r=>!r.trace))assert.equal(C.render(r,{allowed,query:r.address}),'');
+  const traced={...notes,records:notes.records.filter(r=>r.trace)};
+  assert.deepEqual(validateConnections(notes,options),validateConnections(traced,options));
 });
